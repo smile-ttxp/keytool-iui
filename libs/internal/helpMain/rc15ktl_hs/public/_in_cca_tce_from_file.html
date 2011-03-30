@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Import root CA certificate file as new trusted certificate entry to CA certs store</title>
+</head>
+<body>
+<a name="_top_"></a>
+
+&nbsp;<p>
+    <center><img src="rule_h3_red.gif" border="0"></center>
+
+<h2>Import root CA certificate file as new trusted certificate entry to CA certs store</h2>
+
+    
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+  
+  
+    <a name="_xxx_"></a>
+    <h3>Workflow</h3>
+	
+	<pre>
+	Fill in all required fields
+	  ==> enable action button located at bottom of active window
+	
+	Click action button
+	  ==> new window shows up:
+	    Window displays contents of CA certs store
+	
+	At bottom, enter new alias's entry, then click OK button
+	  ==> that's all!
+	
+	</pre>
+	
+	
+	
+	<h3>Things to know</h3>
+	
+	 <pre>
+	Default root CA certs keystore's password: "changeit"
+	
+	JavaSoft's equivalent keytool command:
+	(using JDK 1.6.0, with default cacerts 'password, under Linux)
+	  keytool
+	    -importcert 
+		-alias myNewAlias 
+		-file [path2RootCACertificateFile]
+		-trustcacerts 
+		-keystore [path2JavaRuntimeEnvironment]/lib/security/cacerts
+		-storepass changeit
+	</pre>
+	
+	<h3>Limitations</h3>
+	
+	<pre>
+	  Rule #1: Input certificate file should only contain one certificate.
+	  Rule #2: Input certificate should be self-signed, meaning certificate issuer same as certificate owner. 	  
+	</pre>
+    
+    
+
+
+
+<p>
+<p>
+</body>
+</html>

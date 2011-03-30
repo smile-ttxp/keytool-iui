@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Import trusted certificate entry from file</title>
+</head>
+<body>
+<a name="_top_"></a>
+
+&nbsp;<p>
+    <center><img src="rule_h3_red.gif" border="0"></center>
+
+<h2>Import trusted certificate entry from file</h2>
+
+    
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+  
+  
+    <a name="_xxx_"></a>
+    <h3>Workflow</h3>
+	
+	<pre>
+	
+	Fill in all required fields
+	  ==> enable action button located at bottom of active window
+	
+	Click action button
+	  ==> new window shows up:
+	    Window displays contents of selected keytore
+	
+	At bottom, enter new alias's entry, then click OK button
+	  ==> that's all!
+	
+	</pre>
+	
+	<h3>Limitations</h3>
+	
+	<pre>
+	  Trusted certificate file should just contain one certificate.
+	</pre>
+	
+	
+	<h3>Note about "Check root CA certs store" checkbox</h3>
+	
+	
+	
+	<pre>
+	
+	If checked, the certificate candidate will be compared with the certificates contained in system's root CA certificates store.
+	
+	Case 1) self signed certificate
+		if certificate candidate already exists in root CA certificates store, you will be warned and asked to
+		confirm the import of the certificate.
+	
+	Case 2) not self signed certificate
+		a message dialog will show up in case the issuer of certificate is listed in root CA certificates store.  
+	
+	</pre>
+	
+
+
+<p>
+<p>
+</body>
+</html>

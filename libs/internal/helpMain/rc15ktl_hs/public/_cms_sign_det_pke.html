@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Sign (detached CMS signature) with private key entry</title>
+</head>
+<body>
+<a name="_top_"></a>
+
+&nbsp;<p>
+    <center><img src="rule_h3_red.gif" border="0"></center>
+
+<h2>Sign (detached CMS signature) with private key entry</h2>
+
+    <p>CMS: Cryptographic Message Syntax
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+  
+  
+    <a name="_xxx_"></a>
+    <h3>Workflow</h3>
+	
+	<pre>
+	
+	Fill in all required fields
+	  ==> enable action button located at bottom of active window
+	
+	Click action button
+	  ==> new window shows up:
+	    Window displays contents of selected keytore
+	    An additional column (first one) displays valid entries.
+	
+	Click on valid row
+	  ==> respective alias is displayed at bottom
+	  
+	Right below, enter respective alias's password, then click OK button
+	
+	Note: case with PKCS12 keystores: no password needed for selected entries.
+	
+	</pre>
+	
+	<h3>Important: about target panel</h3>
+	
+    
+    <pre>
+    Radio-buttons, all in PKCS7 format, with different file extension:
+	. P7M: signature with enveloped data,
+	. P7S: signature only,
+	. P7C: certificate only.
+    </pre>
+	
+	
+	<h3>Limitations</h3>
+    
+    <pre>
+    Keystores type:
+	. PKCS12,
+	. BKS,
+	. UBER.
+    </pre>
+	
+	<pre>
+    Signatures digest:
+	. MD5,
+	. RIPEMD128,
+	. RIPEMD160,
+	. RIPEMD256,
+	. SHA1,
+	. SHA224,
+	. SHA256,
+	. SHA384,
+	. SHA512.
+    </pre>
+<p>
+<p>
+</body>
+</html>

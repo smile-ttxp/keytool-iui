@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE toc
+PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+"http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+ <tocitem text="User's Guide">
+
+   <tocitem text="Welcome to KeyTool IUI" target="_welcome_"/>
+   
+   <tocitem text="About ..." target="_about_"/>
+   
+  <!--tocitem text="How To ..." target="13">
+  
+    <tocitem text="Create">
+  
+	   <tocitem text="Keystore" target="16"/>
+	   <tocitem text="Private key entry:" target="17">
+	    <tocitem text="Self-signed, DSA private key entry" target="18"/>
+	    <tocitem text="Self-signed, RSA private key entry" target="19"/>
+	    <tocitem text="Trusted CA, RSA private key entry" target="20">
+	     <tocitem text="Step 1/3: create RSA private key entry" target="21"/>
+	     <tocitem text="Step 2/3: export CSR file from private key entry" target="22"/>
+	     <tocitem text="Step 3/3: import trusted CA certificate to private key entry" target="23"/>
+	    </tocitem>
+	    <tocitem text="From private key in other keystore" target="24"/>
+	   </tocitem>
+   
+    </tocitem>
+	
+	<tocitem text="Copy, delete, change alias or/and password, ..." target="_manage_"/>
+   
+  </tocitem--> 
+   
+   
+   
+   
+ 
+   <tocitem text="Tasks">
+  
+    <tocitem text="Create">
+      <tocitem text="Create empty keystore" target="_create_kst_"/>
+	  <tocitem text="Create secret key entry" target="_create_ske_"/>
+	  <tocitem text="Create DSA private key entry with V1 cert." target="_create_pke_dsa_v1c_"/>
+	  <tocitem text="Create RSA private key entry with V1 cert." target="_create_pke_rsa_v1c_"/>
+	  <tocitem text="Create EC private key entry with V1 cert." target="_create_pke_ec_v1c_"/>
+	  <tocitem text="Create DSA private key entry with V3 cert." target="_create_pke_dsa_v3c_"/>
+	  <tocitem text="Create RSA private key entry with V3 cert." target="_create_pke_rsa_v3c_"/>
+	  <tocitem text="Create EC private key entry with V3 cert." target="_create_pke_ec_v3c_"/>
+    </tocitem>
+	
+	<tocitem text="Archive files">
+      <tocitem text="Archive directory in JAR format" target="_archive_directory_"/>
+    </tocitem>
+	
+	<tocitem text="Sign file">
+	
+	  <tocitem text="Sign (detached CMS signature) with private key entry" target="_cms_sign_det_pke_"/>
+      <tocitem text="Sign (detached signature) with private key entry" target="_sign_det_pke_"/>
+	  <tocitem text="Sign XML (embedded signature) with private key entry" target="_sign_emb_pke_xml_"/>
+	  <tocitem text="Sign JAR (embedded signature) with private key entry" target="_sign_emb_pke_jar_"/>
+    </tocitem>
+	
+	<tocitem text="Verify signed file">
+	  <tocitem text="Verify signed file with detached CMS signature file" target="_verify_det_cms_"/>
+	  <tocitem text="Verify signed file with trusted certificate entry and detached signature file" target="_verify_det_tce_"/>
+	  <tocitem text="Verify signed XML file with embedded signature" target="_verify_emb_xml_"/>
+	  <tocitem text="Verify signed JAR file with embedded signature" target="_verify_emb_jar_"/>
+    </tocitem>
+	
+	<tocitem text="Encrypt file">
+      <tocitem text="Encrypt file with secret key entry" target="_encrypt_file_ske_"/>
+	  <tocitem text="Encrypt file with RSA trusted certificate entry" target="_encrypt_file_tce_rsa_"/>
+	  <tocitem text="Encrypt file with RSA private key entry" target="_encrypt_file_pke_rsa_"/>
+    </tocitem>
+	
+	<tocitem text="Decrypt file">
+      <tocitem text="Decrypt file with secret key entry" target="_decrypt_file_ske_"/>
+	  <tocitem text="Decrypt file with RSA private key entry" target="_decrypt_file_pke_rsa_"/>
+    </tocitem>
+	
+	<tocitem text="Import">
+      
+	 
+	  <tocitem text="Import secret key entry from file" target="_in_ske_from_file_"/>
+	  <tocitem text="Import private key entry from DER file" target="_in_pke_from_files_der_"/>
+	  <tocitem text="Import private key entry from PEM file" target="_in_pke_from_files_pem_"/>
+	  <tocitem text="Import private key entry from keystore" target="_in_pke_from_kst_"/>
+	  <tocitem text="Import regular trusted certificate entry from file" target="_crt_in_tce_from_file_"/>
+	  <tocitem text="Import CA root trusted certificate entry from file" target="_cca_in_tce_from_file_"/>
+	  <tocitem text="Import certificate to private key entry from C.A. cert. reply file" target="_in_pke_z_crt_from_file_"/>
+    </tocitem>
+	
+	<tocitem text="Export">
+      <tocitem text="Export secret key entry as file" target="_out_ske_to_file_"/>
+	  <tocitem text="Export private key entry as files" target="_out_pke_to_files_"/>
+	  <tocitem text="Export trusted certificate entry as file." target="_out_tce_to_file_crt_"/>
+	  <tocitem text="Export private key entry's certificate as C. S. R. file" target="_out_pke_to_file_csr_"/>
+	  <tocitem text="Export private key entry's certificate as cert. file" target="_out_pke_to_file_crt_"/>
+	  
+    </tocitem>
+	
+  </tocitem>
+  
+  <tocitem text="Supported formats" target="_formats_">
+     <tocitem text="Keystore formats" target="_formats_kst_"/>
+     <tocitem text="Certificate formats" target="_formats_crt_"/>
+   </tocitem>
+  
+  <tocitem text="Support" target="_support_"/>
+  
+ </tocitem>
+    
+</map>
+
+
+</toc>

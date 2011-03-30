@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Create keystore's private key entry of type EC, with certificate version #3</title>
+</head>
+<body>
+<a name="_top_"></a>
+
+&nbsp;<p>
+    <center><img src="rule_h3_red.gif" border="0"></center>
+
+<h2>Create keystore's private key (also called keypair) entry of type EC (Elliptic Curve), with certificate version #3</h2>
+
+    
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+  
+  
+    <a name="_xxx_"></a>
+    <h3>Workflow</h3>
+	
+	<pre>
+	
+	Fill in all required fields
+	  ==> enable action button located at bottom of active window
+	
+	Click action button
+	  ==> new window shows up:
+	    Window displays contents of selected keytore
+	
+	At bottom, enter new alias and password, then click OK button
+	
+	Note: case with PKCS12 keystores: no password needed for new entries.
+	
+	</pre>
+	
+	<h3>About "KeyUsage" Certificate Extension</h3>
+    
+    <pre>
+	
+	Exemple of use:
+	
+	. Top level CA:
+	  . critical,
+	  . keyCertSign,
+	  . cRLSign.
+	  
+	. SSL web server, SSL application server:
+	  . critical,
+	  . digitalSignature,
+	  . keyEncipherment.
+	  
+	. Object-signing SMI, Object-signing partner, People SMI-employee authentication, People partner:
+	  . critical,
+	  . digitalSignature.
+	  
+	. People SMI-employee encryption:
+	  . critical,
+	  . keyEncipherment,
+	  . dataEncipherment.
+
+
+    </pre>
+	
+	<h3>About "ExtKeyUsage" Certificate Extension</h3>
+    
+        <pre>
+	
+	Exemple of use: 
+
+        . Timestamp Tokens:
+          . critical,
+          . timeStamping
+	
+	. SSL web server:
+	  . not critical,
+	  . serverAuth.
+	  
+	. SSL application server:
+	  . not critical,
+	  . serverAuth,
+	  . clientAuth.
+	  
+	. Object-signing SMI, Object-signing Partner:
+	  . not critical,
+	  . codeSigning.
+	  
+	. People SMI employee authentication:
+          . not critical,
+          . clientAuth,
+          . emailProtection.	
+
+        . People SMI employee encryption:
+          . not critical,
+          . emailProtection.
+
+        . People partner:
+          . not critical,
+          . clientAuth.	  
+
+    </pre>
+	
+	<h3>Limitations</h3>
+    
+    
+     <pre>
+	
+	Supported signature algorithms: 
+	. SHA1withECDSA
+	. SHA224withECDSA
+	. SHA256withECDSA
+	. SHA384withECDSA
+	. SHA512withECDSA
+
+
+    </pre>
+
+
+<p>
+<p>
+</body>
+</html>

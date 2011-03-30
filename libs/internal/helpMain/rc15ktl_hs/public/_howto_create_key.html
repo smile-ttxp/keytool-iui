@@ -1,0 +1,279 @@
+<html>
+<head>
+<title>How To ...</title>
+</head>
+<body>
+<a name="_top_"></a>
+
+&nbsp;<p>
+    <center><img src="rule_h3_red.gif" border="0"></center>
+
+<h2>How to create a private key (keypair) entry, then save it in an existing keystore:</h2>
+
+    
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+  
+  
+    <a name="_create_key_dsaself_"></a>
+    <h3>Self-signed, DSA private key (keypair) entry</h3>
+    
+    <!-- BEG CREATE DSA ENTRY SELF -->
+    
+    <ol type="1">
+    <li>Select task <strong>Create DSA private key entry</strong>
+
+  
+
+
+    </li>
+    <p>
+    
+    <li>Fill in the fields
+      <br>==> once all required fields are filled, <strong>Action</strong> button becomes enabled
+    </li>
+    <p>
+
+    <li>Click <strong>Action</strong> button (located at bottom)
+      <br>==> A dialog shows up, displaying the contents (entries if any) of the keystore
+    </li>
+    <p>
+    
+    <li>At the bottom of the dialog, enter new alias, enter password, confirm password
+    </li>
+    <p>
+    
+    <li>Click <strong>OK</strong> button
+	   ==> That's it!
+    </li>
+    
+    </ol>
+  
+  
+ 
+    
+    
+    <!-- END CREATE DSA ENTRY SELF -->
+    
+    
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+    
+  
+  
+    <a name="_create_key_rsaself_"></a>
+    <h3>Self-signed, RSA private key (keypair) entry</h3>
+    
+    <!-- BEG CREATE RSA ENTRY SELF -->
+    
+    <ol type="1">
+    <li>Select task <strong>Create RSA private key entry</strong>
+
+  
+
+
+    </li>
+    <p>
+    
+    <li>Fill in the fields
+      <br>==> once all required fields are filled, <strong>Action</strong> button (located at bottom) becomes enabled
+    </li>
+    <p>
+
+    <li>Click <strong>Action</strong> button
+      <br>==> A dialog shows up, displaying the contents (entries if any) of the keystore
+    </li>
+    <p>
+    
+    <li>At the bottom of the dialog, enter new alias, enter password, confirm password
+    </li>
+    <p>
+    
+    <li>Click <strong>OK</strong> button
+	  ==> Ecco!
+    </li>
+    
+    </ol>  
+  
+  
+    <!-- END CREATE RSA ENTRY SELF -->
+    
+    
+    
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+    
+    
+    <a name="_create_key_rsatrusted_"></a>
+    <h3>Trusted CA, private key (keypair) entry</h3>
+	ie. private key of type RSA.
+	
+    
+    <!-- BEG CREATE RSA ENTRY TRUSTED -->
+    
+    <p>This is done in 3 steps.
+    
+    
+      <!-- BEG STEP 1/3 CREATE RSA ENTRY -->
+      
+      <a name="_create_key_rsatrusted_1_"></a>
+      <h4>Step 1/3: create private key entry</h4>
+      
+      <ol type="1">
+        <li>Select task <strong>Create RSA private key entry</strong>
+  
+        </li>
+        <p>  
+      
+        <li>Fill in the fields
+        <br>==> once all required fields are filled, <strong>Action</strong> button becomes enabled
+        </li>
+        <p>  
+        <li>Click <strong>Action</strong> button
+        <br>==> A dialog shows up, containing the table of all available entries of the selected KeyStore
+        </li>
+        <p>
+        <li>At the bottom of the dialog, enter new alias, enter password, confirm password
+        </li>
+        <p>  
+        <li>Click <strong>OK</strong> button
+        </li>
+        
+        </ol>
+      
+      
+   
+      
+      <!-- END STEP 1/3 CREATE RSA ENTRY -->
+      
+      <!-- BEG STEP 2/3 EXPORT CSR -->
+      
+      <a name="_create_key_rsatrusted_2_"></a>
+      <h4>Step 2/3: export CSR</h4>
+      
+      <ol type="1">
+        <li>Select task <strong>Export certificate from private key entry as CSR file</strong>
+    
+        </li>
+        <p>    
+        <li>Fill in the fields
+        <br>==> once all required fields are filled, <strong>Action</strong> button becomes enabled
+        </li>
+        <p>
+        <li>Click <strong>Action</strong> button
+        <br>==> A dialog shows up, containing the table of all available entries of the selected KeyStore
+        </li>
+        <p>
+        <li>Select the alias pointing to the right private key (the one that was created in step 1/3), enter the respective password
+        </li>
+        <p>
+        <li>Click <strong>OK</strong> button
+          <br>==> This will generate a CSR file in PKCS#10 format. Submit this file to your CA (look for a CA that provides code signing certificate).
+        </li>
+        
+        </ol>
+      
+      
+      
+      <!-- END STEP 2/3 EXPORT CSR -->
+      
+      <!-- BEG STEP 3/3 IMPORT TRUSTED CERT -->
+      
+      <a name="_create_key_rsatrusted_3_"></a>
+      <h4>Step 3/3: import trusted certificate</h4>
+      
+      Once your trusted certificate has been approved by the CA, you should receive it in PKCS#7 format (otherwise convert the one you get).
+      
+      
+      <ol type="1">
+        <li>Select task <strong>Import CA certificate reply to private key entry</strong>
+     
+        </li>
+        <p>   
+        <li>Fill in the fields
+        <br>==> once all required fields are filled, <strong>Action</strong> button becomes enabled
+        </li>
+        <p>
+        <li>Click <strong>Action</strong> button
+        <br>==> A dialog shows up, containing the table of all available entries of the selected KeyStore
+        </li>
+        <p>
+        <li>Select the alias pointing to the right private key entry (the one that was created in step 1/3, and used in step 2/3), enter the respective password
+        </li>
+        <p>
+        <li>Click <strong>OK</strong> button
+          <br>==> This will import your trusted CA in the respective private key entry.
+        </li>
+        
+        </ol>
+        
+       
+        
+      
+      <!-- END STEP 3/3 IMPORT TRUSTED CERT -->
+      
+    
+    <!-- END CREATE RSA ENTRY TRUSTED -->
+    
+    
+    <p>
+    <center><img src="rule_h4_red.gif" border="0"></center>
+    
+    <a name="_create_key_kst2kst_"></a>
+    <h3>From private key located in another keystore</h3>
+    
+    <!-- BEG CREATE ENTRY KST-TO-KST -->
+    
+    <ol type="a">
+        <li>Select task <strong>Import private key entry from private key in other keystore</strong>
+
+        </li>
+        <p>
+
+        <li>Fill in the fields
+        <br>==> once all required fields are filled, <strong>Action</strong> button becomes enabled
+        </li>
+        <p>
+        
+        <li>Click <strong>Action</strong> button
+        <br>==> A dialog shows up, containing the table of all available entries of the selected keystore source
+        </li>
+        <p>
+        
+        <li>Select an alias,
+        </li>
+        <p>
+
+        <li>If keystore source is not of type PKCS12, enter the respective password
+        </li>
+        <p>
+        
+        <li>Click <strong>OK</strong> button
+          <br>==> Another dialog shows up, containing the table of all available entries in the selected keystore target.
+        </li>
+        <p>
+        
+        <li>Enter new alias, 
+        </li>
+        <p>
+
+        <li>If keystore target is not of type PKCS12, enter new password, confirm new password
+        </li>
+        <p>
+        
+         <li>Click <strong>OK</strong> button
+		 <br>  ==> Et voila!
+        
+        </ol>
+      
+     
+    
+    
+    <!-- END CREATE ENTRY KST-TO-KST -->
+
+
+
+<p>
+<p>
+</body>
+</html>
