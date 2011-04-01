@@ -1,12 +1,30 @@
+/*
+ *  Copyright (C) 2001-2011 keyTool IUI Project
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Lesser General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
+ *
+ * @author bantchao
+ *
+ *
+ */
+
+
 package com.google.code.p.keytooliui.ktl;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemListener;
-import java.awt.event.WindowListener;
-import java.util.Locale;
 import javax.swing.UIManager;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.BevelBorder;
@@ -14,11 +32,16 @@ import javax.swing.event.ChangeListener;
 import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.BorderUIResource;
 
+import java.awt.event.*;
+import java.awt.Font;
+import java.util.*;
+
 import com.google.code.p.keytooliui.ktl.swing.frame.FMainUIKtl;
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 import com.google.code.p.keytooliui.ktl.util.changer.ChgLocMainUIToolKtl;
 import com.google.code.p.keytooliui.ktl.util.jarsigner.ChkRegUIKtl;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
+import java.awt.Color;
 
 
 final public class UIKeytool extends AppMainUIAbs
@@ -26,9 +49,9 @@ final public class UIKeytool extends AppMainUIAbs
     // --------------------
     // FINAL STATIC PRIVATE
 
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.UIKeytool.";
+    final static private String _F_STR_CLASS = "com.google.code.p.keytooliui.ktl.UIKeytool.";
     
-    final static public String f_s_strAppliNameShort = "ktl";
+    final static public String _F_STR_NAME_SHORT_APPLI = "ktl";
     
     
     // -------------
@@ -53,7 +76,7 @@ final public class UIKeytool extends AppMainUIAbs
     {
         
         
-        String strMethod = UIKeytool._f_s_strClass + "s_getInstance(strsArg)";
+        String strMethod = UIKeytool._F_STR_CLASS + "s_getInstance(strsArg)";
         
         if(UIKeytool._s_ktlInstance != null) 
             return UIKeytool._s_ktlInstance;
@@ -367,7 +390,7 @@ final public class UIKeytool extends AppMainUIAbs
 
     static public void main(String[] strsArg)
     {
-        String strMethod = UIKeytool._f_s_strClass + "main(strsArg)";
+        String strMethod = UIKeytool._F_STR_CLASS + "main(strsArg)";
         
         // tempo
         //System.setProperty(KTLAbs.F_STR_propKeyPolicyExtended, "true");
@@ -391,7 +414,7 @@ final public class UIKeytool extends AppMainUIAbs
         if (true)
             return true;
         
-        String strMethod = _f_s_strClass + "_s_setLocale(strsArg)";
+        String strMethod = _F_STR_CLASS + "_s_setLocale(strsArg)";
         
         Locale loc = Locale.getDefault();
         
@@ -945,7 +968,7 @@ final public class UIKeytool extends AppMainUIAbs
             false, // blnAllowedCleanUpAllManagerMedia - change to "true" if uncommenting "MyManager.s_loadLibrary()" line
             false, // MEMO: blnParentDirReadOnlyAllowed
             UIKeytool.s_getTitleAppli(), 
-            UIKeytool.f_s_strAppliNameShort, // eg: "ktl"
+            UIKeytool._F_STR_NAME_SHORT_APPLI, // eg: "ktl"
             blnShowDialogExitConfirm,
             false, // blnIsHelpGettingStarted
             // tmp forcing default english language
@@ -977,7 +1000,7 @@ final public class UIKeytool extends AppMainUIAbs
 	    // ----
         
         if (! super._createLastUserPreferences_(
-                    UIKeytool.f_s_strAppliNameShort, 
+                    UIKeytool._F_STR_NAME_SHORT_APPLI,
                     MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion))
 	        MySystem.s_printOutExit(this, strMethod, "failed");
     }
