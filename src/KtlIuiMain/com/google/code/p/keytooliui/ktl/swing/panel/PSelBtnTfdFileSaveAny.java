@@ -53,7 +53,7 @@ final public class PSelBtnTfdFileSaveAny extends PSelBtnTfdFileSaveAbs
     public PSelBtnTfdFileSaveAny(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+      
         ItemListener itmListenerParent,
         String strLabel
         )
@@ -61,7 +61,7 @@ final public class PSelBtnTfdFileSaveAny extends PSelBtnTfdFileSaveAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+      
             strLabel, //PSelBtnTfdFileSaveAny._f_s_strLabel,
             true // blnFieldRequired
             );
@@ -79,7 +79,7 @@ final public class PSelBtnTfdFileSaveAny extends PSelBtnTfdFileSaveAbs
         String strButtonTextOk = "Save file";
             
         File fle = S_FileChooserAbs.s_getSaveFile(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk
                 );
@@ -114,7 +114,7 @@ final public class PSelBtnTfdFileSaveAny extends PSelBtnTfdFileSaveAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\nFile already exists.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }
@@ -126,7 +126,7 @@ final public class PSelBtnTfdFileSaveAny extends PSelBtnTfdFileSaveAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\nFile is a directory.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }*/

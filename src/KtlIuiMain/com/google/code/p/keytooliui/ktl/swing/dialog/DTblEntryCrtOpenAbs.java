@@ -150,14 +150,14 @@ abstract public class DTblEntryCrtOpenAbs extends DTblEntryCrtAbs implements
     
     protected DTblEntryCrtOpenAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         String strTitleThis,
         KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner,
-            strTitleAppli,
+  
             strTitleThis,
             DTblEntryCrtOpenAbs._f_s_strLabelAliasSelected,
             kseLoaded

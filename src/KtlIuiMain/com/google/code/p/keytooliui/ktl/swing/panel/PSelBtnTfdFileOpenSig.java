@@ -123,14 +123,14 @@ final public class PSelBtnTfdFileOpenSig extends PSelBtnTfdFileOpenAbs
     public PSelBtnTfdFileOpenSig(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         ItemListener itmListenerParent
         )
     {
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+
             PSelBtnTfdFileOpenSig.f_s_strLabel,
             true // blnFieldRequired
             );
@@ -181,7 +181,7 @@ final public class PSelBtnTfdFileOpenSig extends PSelBtnTfdFileOpenAbs
         String strButtonTextOk = "Open file";
             
         File fle = S_FileChooserUI.s_getOpenFile(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk,
             strsTypeFileSigCur, 

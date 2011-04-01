@@ -9,15 +9,8 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 **/
 
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 // ----
-import java.security.KeyStore;
-import java.security.cert.X509Certificate;
-import java.security.KeyStoreException;
-import java.security.cert.Certificate;
 // ----
 
 
@@ -33,7 +26,7 @@ abstract public class KTLKprOpenSigEmbAbs extends KTLKprOpenAbs
     
     protected KTLKprOpenSigEmbAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -46,7 +39,7 @@ abstract public class KTLKprOpenSigEmbAbs extends KTLKprOpenAbs
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._strPathAbsFileOpenData_ = strPathAbsFileOpenData;
         this._strPathAbsFileSaveData_ = strPathAbsFileSaveData;

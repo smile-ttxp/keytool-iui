@@ -65,13 +65,11 @@ final public class UtilKstJceks extends UtilKstAbs
     // STATIC PUBLIC
     
     static public void s_manageFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilKstJceks._f_s_strClass + "." + "s_manageFile(...)";
         
         File fleOpenKstJceks = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsKstJceks, 
@@ -96,7 +94,7 @@ final public class UtilKstJceks extends UtilKstAbs
             strBody += fleOpenKstJceks.getAbsolutePath();
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -114,7 +112,7 @@ final public class UtilKstJceks extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -134,7 +132,6 @@ final public class UtilKstJceks extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
             true // blnNoPasswdAllowed
                 );
                     
@@ -173,7 +170,7 @@ final public class UtilKstJceks extends UtilKstAbs
         
         
         KeyStore kstOpen = UtilKstJceks.s_getKeystoreOpen(
-            frmParent, strTitleAppli,
+            frmParent,
             fleOpenKstJceks,
             chrsPasswdKst);
         
@@ -186,8 +183,7 @@ final public class UtilKstJceks extends UtilKstAbs
             return;
         }
         
-        UtilKstAbs._s_manageKstOpen_(
-            strTitleAppli, 
+        UtilKstAbs._s_manageKstOpen_( 
             frmParent, 
             kstOpen,
             fleOpenKstJceks.getAbsolutePath(),
@@ -196,13 +192,11 @@ final public class UtilKstJceks extends UtilKstAbs
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilKstJceks._f_s_strClass + "." + "s_showFile(...)";
         
         File fleOpenKst = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsKstJceks, 
@@ -228,7 +222,7 @@ final public class UtilKstJceks extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -245,61 +239,17 @@ final public class UtilKstJceks extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
         
-        /*
-        // ----
-        // get password
-        
-        char[] chrsPasswdKst = null;
-        
-        
-        
-        // open up a passwordOpen dialog
-                
-        DPasswordOpen dlgPasswordKst = null;
-        
-        // ---
-        
-        dlgPasswordKst = new DPasswordOpen(
-            frmParent, 
-            strTitleAppli);
-                    
-        String strTitleSuffixDlg = " ";
-        strTitleSuffixDlg += "for";
-        strTitleSuffixDlg += " ";
-        strTitleSuffixDlg += UtilKstJceks.f_s_strKeystoreType;
-        strTitleSuffixDlg += " ";
-        strTitleSuffixDlg += "keystore";
-                
-                
-        dlgPasswordKst.setTitle(dlgPasswordKst.getTitle() + strTitleSuffixDlg);
-                    
-        if (! dlgPasswordKst.init())
-            MySystem.s_printOutExit(strMethod, "failed");
-                    
-        dlgPasswordKst.setVisible(true);
-                
-        chrsPasswdKst = dlgPasswordKst.getPassword();
-                
-        if (chrsPasswdKst == null)
-        {
-            MySystem.s_printOutTrace(strMethod, "nil chrsPasswdKst, user canceled");
-            return;
-        }
-                                
-        dlgPasswordKst.destroy();
-        dlgPasswordKst = null;*/
 
         // ----
-        UtilKstJceks._s_showFile_(strTitleAppli, frmParent, fleOpenKst/*, chrsPasswdKst*/);
+        UtilKstJceks._s_showFile_(frmParent, fleOpenKst/*, chrsPasswdKst*/);
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         String strPathAbs/*,
         char[] chrsPasswdKst*/)
@@ -328,18 +278,17 @@ final public class UtilKstJceks extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
         
-        UtilKstJceks._s_showFile_(strTitleAppli, frmParent, fleOpenKst/*, chrsPasswdKst*/); 
+        UtilKstJceks._s_showFile_(frmParent, fleOpenKst/*, chrsPasswdKst*/); 
     }
     
     // ----
     
     static protected void _s_showFile_(
-        String strTitleAppli,
         Frame frmParent,
         File fle/*,
         char[] chrsPassword*/)
@@ -350,7 +299,7 @@ final public class UtilKstJceks extends UtilKstAbs
         {
             MySystem.s_printOutError(strMethod, "nil arg");
             String strBody = "Failed to load file.";            
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
                 
             return;
         }
@@ -367,7 +316,7 @@ final public class UtilKstJceks extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -384,7 +333,7 @@ final public class UtilKstJceks extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -394,7 +343,7 @@ final public class UtilKstJceks extends UtilKstAbs
         
         
         KeyStore kstOpen = UtilKstJceks.s_getKeystoreOpen(
-            frmParent, strTitleAppli,
+            frmParent,
             fle,
             // chrsPassword
             null
@@ -409,58 +358,32 @@ final public class UtilKstJceks extends UtilKstAbs
             return;
         }
         
-        UtilKstAbs._s_showKstOpen_(strTitleAppli, frmParent, kstOpen, fle.getAbsolutePath());
+        UtilKstAbs._s_showKstOpen_(frmParent, kstOpen, fle.getAbsolutePath());
     }                   
     
     static public KeyStore s_getKeystoreOpen(
         Frame frmOwner, 
-        String strTitleAppli,
         File fleOpen,
         char[] chrsPassword // nil value allowed (eg: verify signed jarred file)
         )
     {
         return UtilKstAbs._s_getKeystoreOpen_(
             frmOwner,
-            strTitleAppli,
             fleOpen,
             chrsPassword,
             UtilKstJceks.f_s_strKeystoreType,
             UtilKstJceks.f_s_strKeystoreProvider);
     }
     
-    /**
-        if any code or config error, exiting
-        else if any other type of error, show warning/error dialog, then return null
-        
-        
-    **/
-    /**static public Key s_getKey(
-        Component cmpOwner, 
-        String strTitleAppli,
-        KeyStore kseLoaded,
-        String strAliasKpr,
-        char[] chrsPasswdKpr
-        )
-    {
-        return UtilKstAbs._s_getKey_(
-            cmpOwner, 
-            strTitleAppli,
-            kseLoaded,
-            strAliasKpr,
-            chrsPasswdKpr);
-    }**/
-    
     
     
     
     static public KeyStore s_getKeystoreNew(
-        Frame frmOwner, 
-        String strTitleAppli
+        Frame frmOwner
         )
     {
         return UtilKstAbs._s_getKeystoreNew_(
             frmOwner,
-            strTitleAppli,
             UtilKstJceks.f_s_strKeystoreType,
             UtilKstJceks.f_s_strKeystoreProvider);     
     }

@@ -73,7 +73,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstSave";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstSave" // class name
             ;
         
@@ -126,7 +126,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
         {
             ktl = new KTLKstSaveJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 super._strPathAbsKst_, 
                 chrsPasswdKst
                 );
@@ -137,7 +137,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
         {
             ktl = new KTLKstSaveJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 super._strPathAbsKst_, 
                 chrsPasswdKst
                 );
@@ -148,7 +148,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
         {
             ktl = new KTLKstSavePkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 super._strPathAbsKst_, 
                 chrsPasswdKst
                 );
@@ -159,7 +159,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
         {
             ktl = new KTLKstSaveBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 super._strPathAbsKst_, 
                 chrsPasswdKst
                 );
@@ -170,7 +170,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
         {
             ktl = new KTLKstSaveUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+          
                 super._strPathAbsKst_, 
                 chrsPasswdKst
                 );
@@ -192,7 +192,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
             strBody += super._strPathAbsKst_;
                     
             com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogInfo(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
         }
         
         else
@@ -349,13 +349,12 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
     
     
     public PTabUICmdKtlKstSave(
-        Frame frmOwner, 
-        String strTitleAppli)
+        Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstSave._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+  
             BESPasswordAbs.f_s_intModeSave,
             (String) null,     // String strLabelBorderPanelIn, // nil value allowed
             "Target"          // String strLabelBorderPanelOut // nil value allowed
@@ -364,7 +363,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
         super._pnlSelectFileKst_ = new PSelBtnTfdFileSaveKst(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+      
             (java.awt.event.ItemListener) null,
             true, // blnFieldRequiredKeystore
             true, // blnAllowTypePkcs12

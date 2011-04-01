@@ -167,7 +167,7 @@ final public class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs
     public PSelBtnTfdStrXlsCbxGender(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+ 
         String strLabel,
         Object objDocPropValue,
          boolean blnFieldRequired
@@ -176,7 +176,7 @@ final public class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+      
             strLabel, 
             new TF2x20SelString(),
             objDocPropValue,
@@ -219,7 +219,7 @@ final public class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs
             strBody += "\n\n";
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleCbxGender();
                     
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }
         

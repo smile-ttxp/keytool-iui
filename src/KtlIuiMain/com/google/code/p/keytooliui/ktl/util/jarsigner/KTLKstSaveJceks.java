@@ -61,7 +61,7 @@ final public class KTLKstSaveJceks extends KTLKstSaveAbs
         String strMethod = "doJob()";
         
         
-        KeyStore kstNew = UtilKstJceks.s_getKeystoreNew(super._frmOwner_, super._strTitleAppli_);
+        KeyStore kstNew = UtilKstJceks.s_getKeystoreNew(super._frmOwner_);
         
         if (kstNew == null)
         {
@@ -81,14 +81,14 @@ final public class KTLKstSaveJceks extends KTLKstSaveAbs
     
     public KTLKstSaveJceks(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         String strPathAbs,
         char[] chrsPasswd
         )
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+  
             strPathAbs, 
             chrsPasswd, 
             KTLAbs.f_s_strProviderKstJceks

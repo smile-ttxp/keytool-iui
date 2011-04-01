@@ -37,7 +37,7 @@ abstract public class KTLShkOpenIOOutKPAbs extends KTLShkOpenIOOutAbs
 
     protected KTLShkOpenIOOutKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -50,7 +50,7 @@ abstract public class KTLShkOpenIOOutKPAbs extends KTLShkOpenIOOutAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+     
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -87,7 +87,7 @@ abstract public class KTLShkOpenIOOutKPAbs extends KTLShkOpenIOOutAbs
         
         DTblsKstSelSKOpen dlg = new DTblsKstSelSKOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+
             kstOpen,
             super._strPathAbsKst_,
             "Export secret key entry as secret key file"

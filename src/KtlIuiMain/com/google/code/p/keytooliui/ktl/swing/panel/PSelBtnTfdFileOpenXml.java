@@ -97,7 +97,7 @@ final public class PSelBtnTfdFileOpenXml extends PSelBtnTfdFileOpenAbs
     public PSelBtnTfdFileOpenXml(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+      
         ItemListener itmListenerParent,
         String strLabelPrefix
         )
@@ -105,7 +105,7 @@ final public class PSelBtnTfdFileOpenXml extends PSelBtnTfdFileOpenAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+    
             strLabelPrefix + " " + PSelBtnTfdFileOpenXml.STR_LABELSUFFIX,
             true // blnFieldRequired
             );
@@ -147,7 +147,7 @@ final public class PSelBtnTfdFileOpenXml extends PSelBtnTfdFileOpenAbs
         String strButtonTextOk = "Open file";
             
         File fle = S_FileChooserUI.s_getOpenFile(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk,
             strsTypeFileXmlCur, 

@@ -28,7 +28,7 @@ final public class KTLShkOpenCryptDecBks extends KTLShkOpenCryptDecKPAbs
 
     public KTLShkOpenCryptDecBks(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -40,7 +40,7 @@ final public class KTLShkOpenCryptDecBks extends KTLShkOpenCryptDecKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 
@@ -60,7 +60,7 @@ final public class KTLShkOpenCryptDecBks extends KTLShkOpenCryptDecKPAbs
     {
         return UtilKstBks.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+          
             fleOpen,
             super._chrsPasswdKst_);
     }

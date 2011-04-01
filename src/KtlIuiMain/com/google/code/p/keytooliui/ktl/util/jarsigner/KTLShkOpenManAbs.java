@@ -55,7 +55,7 @@ abstract public class KTLShkOpenManAbs extends KTLShkOpenAbs
             
                 OPAbstract.s_showDialogWarning(
                     super._frmOwner_, 
-                    super._strTitleAppli_, 
+                 
                     strBody);
                 
                 return false;
@@ -71,7 +71,7 @@ abstract public class KTLShkOpenManAbs extends KTLShkOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+       
                 strBody);
                 
                 
@@ -89,7 +89,7 @@ abstract public class KTLShkOpenManAbs extends KTLShkOpenAbs
     
     protected KTLShkOpenManAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -100,7 +100,7 @@ abstract public class KTLShkOpenManAbs extends KTLShkOpenAbs
         String strAlias
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._kstOpen_ = kstOpen;
         this._strAlias_ = strAlias;
@@ -127,7 +127,7 @@ abstract public class KTLShkOpenManAbs extends KTLShkOpenAbs
                 
         DPasswordOpen dlg = new DPasswordOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             false // blnNoPasswdAllowed
                 );
                     

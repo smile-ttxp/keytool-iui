@@ -84,7 +84,7 @@ public class KTLKprSaveNewRsaPkcs12 extends KTLKprSaveNewRsaAbs
         
         // memo: keystore should be of type "PKCS12", provided by?  "BC", or "SunRsaSign
         File fleOpenKstPkcs12 = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKstPkcs12 == null)
         {
@@ -103,7 +103,7 @@ public class KTLKprSaveNewRsaPkcs12 extends KTLKprSaveNewRsaAbs
         }
         
         KeyStore kstOpenPkcs12 = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstPkcs12,
             super._chrsPasswdKst_);
             
@@ -131,7 +131,7 @@ public class KTLKprSaveNewRsaPkcs12 extends KTLKprSaveNewRsaAbs
     
     public KTLKprSaveNewRsaPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -177,7 +177,7 @@ public class KTLKprSaveNewRsaPkcs12 extends KTLKprSaveNewRsaAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
         
             // input
             strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -270,7 +270,7 @@ public class KTLKprSaveNewRsaPkcs12 extends KTLKprSaveNewRsaAbs
         
         DTblsKstViewKeySavePKNoPass dlg = new DTblsKstViewKeySavePKNoPass(
             (Component) super._frmOwner_, 
-            super._strTitleAppli_,
+           
             kstOpen,
             super._strPathAbsKst_,
             "Create RSA private key entry");
@@ -408,7 +408,7 @@ public class KTLKprSaveNewRsaPkcs12 extends KTLKprSaveNewRsaAbs
             
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
                 
             return false;**/
         }
@@ -422,7 +422,7 @@ public class KTLKprSaveNewRsaPkcs12 extends KTLKprSaveNewRsaAbs
             MySystem.s_printOutExit(this, strMethod, "nil pkyKeyPrivate");
         }
         
-        if (! UtilKstPkcs12.s_setKeyEntry(super._frmOwner_, super._strTitleAppli_, 
+        if (! UtilKstPkcs12.s_setKeyEntry(super._frmOwner_, 
             kstOpen, strAliasKpr, pkyKeyPrivate, new X509Certificate[]{ crtX509New }))
         {
             MySystem.s_printOutError(this, strMethod, "failed");

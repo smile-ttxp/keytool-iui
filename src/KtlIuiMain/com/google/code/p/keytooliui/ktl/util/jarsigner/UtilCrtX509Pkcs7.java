@@ -10,21 +10,11 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // ----
-import org.bouncycastle.util.encoders.Base64;
-import org.bouncycastle.asn1.x509.X509Name;
-import org.bouncycastle.asn1.DEROutputStream;
 // ----
 
 
 // ----
-import java.security.PublicKey;
-import java.security.PrivateKey;
-import java.security.NoSuchAlgorithmException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchProviderException;
-import java.security.SignatureException;
 // --
-import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.security.cert.CertificateFactory;
@@ -54,7 +44,6 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
     **/
     static public byte[] s_generateCrt(
         Frame frmOwner, 
-        String strTitleAppli,
         X509Certificate crt, 
         String strProviderSignature
         )
@@ -89,7 +78,7 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -100,7 +89,6 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
     
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         File fleCrt)
     {
@@ -115,7 +103,7 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
         
         // --
         
-        X509Certificate[] crts = UtilCrtX509.s_load(frmParent, strTitleAppli, fleCrt);
+        X509Certificate[] crts = UtilCrtX509.s_load(frmParent, fleCrt);
         
         if (crts == null)
         {
@@ -123,18 +111,16 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
             return;
         }
         
-        UtilCrtX509.s_showChain(frmParent, strTitleAppli, crts);
+        UtilCrtX509.s_showChain(frmParent, crts);
         
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilCrtX509Pkcs7._f_s_strClass + "." + "s_showFile(...)";
         
         File fleCrt = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsCrtX509Pkcs7, 
@@ -160,7 +146,7 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -177,12 +163,12 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
         
-        UtilCrtX509Pkcs7.s_showFile(strTitleAppli, frmParent, fleCrt);
+        UtilCrtX509Pkcs7.s_showFile(frmParent, fleCrt);
     }
     
    

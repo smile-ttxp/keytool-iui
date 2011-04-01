@@ -30,14 +30,14 @@ public class PSelBtnTfdFileOpenAnyCbx extends PSelBtnTfdFileOpenAnyFile
     public PSelBtnTfdFileOpenAnyCbx(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+    
         ItemListener itmListenerParent,
         String strLabel,
         String strLabelCbx,
         String strTipCbx
         )
     {
-        super(docListenerParent, frmParent, strTitleAppli, itmListenerParent, strLabel);
+        super(docListenerParent, frmParent, itmListenerParent, strLabel);
         
         this._cbx = new JCheckBox(strLabelCbx);
         this._cbx.setToolTipText(strTipCbx);

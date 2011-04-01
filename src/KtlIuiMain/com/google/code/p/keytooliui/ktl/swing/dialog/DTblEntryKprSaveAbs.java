@@ -90,7 +90,7 @@ abstract public class DTblEntryKprSaveAbs extends DTblEntryKprAbs
     
     protected DTblEntryKprSaveAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+  
         String strTitleThis,
         java.security.KeyStore kseLoaded,
         boolean blnIsPassword // true for JKS-JCEKS, false for PKCS12
@@ -98,7 +98,7 @@ abstract public class DTblEntryKprSaveAbs extends DTblEntryKprAbs
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+       
             strTitleThis + " in " + kseLoaded.getType() + "keystore",
             DTblEntryKprSaveAbs._f_s_strLabelAliasEnter,
             kseLoaded,
@@ -156,21 +156,21 @@ abstract public class DTblEntryKprSaveAbs extends DTblEntryKprAbs
             
             if (strEnterNew.length() < 1)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter new password");
+                OPAbstract.s_showDialogWarning(this, "Please enter new password");
                 
                 return false;
             }
             
             if (strConfirmNew.length() < 1)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please confirm new password");
+                OPAbstract.s_showDialogWarning(this, "Please confirm new password");
                 
                 return false;
             }
             
             if (strEnterNew.compareTo(strConfirmNew) != 0)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Passwords do not match");
+                OPAbstract.s_showDialogWarning(this, "Passwords do not match");
                 
                 return false;
             }
@@ -187,7 +187,7 @@ abstract public class DTblEntryKprSaveAbs extends DTblEntryKprAbs
                 strBody += "\n\n";
                 strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRulePassword();
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }

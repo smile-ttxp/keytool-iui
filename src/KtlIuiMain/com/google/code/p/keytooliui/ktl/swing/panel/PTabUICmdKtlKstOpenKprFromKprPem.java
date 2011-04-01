@@ -40,7 +40,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenKprFromKprPem";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenKprFromKprPem" // class name
             ;
         
@@ -258,7 +258,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         {
             ktl = new KTLKprOpenKprFromKprPemJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -274,7 +274,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         {
             ktl = new KTLKprOpenKprFromKprPemJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -292,7 +292,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         {
             ktl = new KTLKprOpenKprFromKprPemPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+          
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -308,7 +308,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         {
             ktl = new KTLKprOpenKprFromKprPemBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+       
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -323,7 +323,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         {
             ktl = new KTLKprOpenKprFromKprPemUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -351,12 +351,11 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
     }
     
     
-    public PTabUICmdKtlKstOpenKprFromKprPem(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenKprFromKprPem(Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstOpenKprFromKprPem._s_strHelpID, 
-            frmOwner, 
-            strTitleAppli,
+            frmOwner,
             PSelBtnTfdFileOpenKprKpr.f_s_strDocPropVal,
             PSelBtnTfdFileOpenCrtsKpr.f_s_strDocPropVal,
             false // blnDerVersusPem
@@ -409,7 +408,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
   
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = "Successfully imported private key and certs chain files as private key entry." + "\n" +
@@ -418,7 +417,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return;
             
         // show file
@@ -427,21 +426,21 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJceks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJceks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstPkcs12.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstPkcs12.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     super._strPasswdKst_.toCharArray());
             return;
         }
@@ -449,14 +448,14 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstBks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstBks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstUber.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstUber.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     super._strPasswdKst_.toCharArray());
             return;
         }

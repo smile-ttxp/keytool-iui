@@ -54,7 +54,7 @@ public class PSelBtnTfdFileOpenAnyDir extends PSelBtnTfdFileOpenAbs
     public PSelBtnTfdFileOpenAnyDir(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         ItemListener itmListenerParent,
         String strLabel
         )
@@ -62,7 +62,7 @@ public class PSelBtnTfdFileOpenAnyDir extends PSelBtnTfdFileOpenAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+       
             strLabel, 
             true // blnFieldRequired
             );
@@ -80,7 +80,7 @@ public class PSelBtnTfdFileOpenAnyDir extends PSelBtnTfdFileOpenAbs
         String strButtonTextOk = "Open directory";
             
         File fle = S_FileChooserAbs.s_getOpenDir(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk
                 );
@@ -131,7 +131,7 @@ public class PSelBtnTfdFileOpenAnyDir extends PSelBtnTfdFileOpenAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\nDirectory not found.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }
@@ -143,7 +143,7 @@ public class PSelBtnTfdFileOpenAnyDir extends PSelBtnTfdFileOpenAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\n  not a directory.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }

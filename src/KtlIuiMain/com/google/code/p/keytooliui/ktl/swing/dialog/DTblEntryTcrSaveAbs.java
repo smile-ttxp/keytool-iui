@@ -75,14 +75,14 @@ abstract public class DTblEntryTcrSaveAbs extends DTblEntryTcrAbs
     
     protected DTblEntryTcrSaveAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         String strTitleThis,
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+          
             strTitleThis,
             DTblEntryTcrSaveAbs._f_s_strLabelAliasEnter,
             kseLoaded

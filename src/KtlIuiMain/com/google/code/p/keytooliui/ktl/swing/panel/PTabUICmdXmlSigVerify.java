@@ -96,7 +96,7 @@ final public class PTabUICmdXmlSigVerify extends PTabUICmdXmlAbs
         
         String strMethod = "actionPerformed(evtAction)";
         
-        XmlVerif xvf = new  XmlVerif(super._frmOwner_,  super._strTitleAppli_, super._strPathAbsXmlSigned_);
+        XmlVerif xvf = new  XmlVerif(super._frmOwner_,  super._strPathAbsXmlSigned_);
         
         if (! xvf.doJob())
         {
@@ -255,11 +255,11 @@ final public class PTabUICmdXmlSigVerify extends PTabUICmdXmlAbs
     }
     
     
-    public PTabUICmdXmlSigVerify(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdXmlSigVerify(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+        
             PTabUICmdXmlSigVerify._s_strHelpID, 
             false // blnFieldRequiredKeystore
             );

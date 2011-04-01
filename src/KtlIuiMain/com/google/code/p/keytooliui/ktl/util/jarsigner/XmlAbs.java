@@ -13,16 +13,13 @@ abstract public class XmlAbs extends Object
     // protected
    
     protected Frame _frmOwner_ = null;
-    protected String _strTitleAppli_ = null;
     protected String _strPathAbsFile_ = null;
     
     protected XmlAbs(
             Frame frmOwner, 
-            String strTitleAppli,
             String strPathAbsFile)
     {
         this._frmOwner_ = frmOwner;
-        this._strTitleAppli_ = strTitleAppli;
         this._strPathAbsFile_ = strPathAbsFile;
     }
     

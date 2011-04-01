@@ -53,7 +53,7 @@ final public class PSelBtnTfdStrXlsLengthMin extends PSelBtnTfdStrXlsAbs
     public PSelBtnTfdStrXlsLengthMin(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+
         String strLabel,
         Object objDocPropValue,
         int intNbCharMin,
@@ -63,7 +63,7 @@ final public class PSelBtnTfdStrXlsLengthMin extends PSelBtnTfdStrXlsAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+       
             strLabel,
             new TF10x20SelString(),
             objDocPropValue, 
@@ -98,7 +98,7 @@ final public class PSelBtnTfdStrXlsLengthMin extends PSelBtnTfdStrXlsAbs
             MySystem.s_printOutWarning(this, strMethod, "str.indexOf(' ') != -1");
                     
             String strBody = "No spaces allowed in this string value.";
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }
                 
@@ -111,7 +111,7 @@ final public class PSelBtnTfdStrXlsLengthMin extends PSelBtnTfdStrXlsAbs
             strBody += Integer.toString(this._intNbCharMin);
             strBody += " chars.";
                     
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }
 

@@ -41,14 +41,14 @@ abstract public class DTblEntryKprAbs extends DTblEntryAbs
     
     protected DTblEntryKprAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+
         String strTitleThis,
         String strLabelAlias,
         KeyStore kseLoaded,
         boolean blnIsPassword
         )
     {
-        super(cmpFrameOwner, strTitleAppli, strTitleThis, strLabelAlias, kseLoaded); 
+        super(cmpFrameOwner, strTitleThis, strLabelAlias, kseLoaded); 
             
         this._blnIsPassword_ = blnIsPassword;
     }

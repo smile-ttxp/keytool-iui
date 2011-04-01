@@ -36,7 +36,7 @@ abstract public class KTLShkOpenCryptAbs extends KTLShkOpenAbs
     
     protected KTLShkOpenCryptAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+ 
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -48,7 +48,7 @@ abstract public class KTLShkOpenCryptAbs extends KTLShkOpenAbs
         String strProviderKst // eg "SUN"
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._strPathAbsFileDataOpen_ = strPathAbsFileDataOpen;
         this._strPathAbsFileDataSave_ = strPathAbsFileDataSave;

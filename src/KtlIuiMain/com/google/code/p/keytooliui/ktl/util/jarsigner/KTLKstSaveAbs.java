@@ -61,14 +61,14 @@ abstract public class KTLKstSaveAbs extends KTLKstAbs
     
     protected KTLKstSaveAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         String strPathAbs,
         char[] chrsPasswd,
         
         String strProvider
         )
     {
-        super(frmOwner, strTitleAppli,
+        super(frmOwner, 
         strPathAbs, // existing keystore
         chrsPasswd,
         strProvider
@@ -92,7 +92,7 @@ abstract public class KTLKstSaveAbs extends KTLKstAbs
         }
         
         File fleSaveNew = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_,
+            super._frmOwner_,  super._strPathAbsKst_,
             true // blnShowDlgOverwrite
             );
         

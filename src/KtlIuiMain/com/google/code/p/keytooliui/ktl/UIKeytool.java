@@ -51,7 +51,33 @@ final public class UIKeytool extends AppMainUIAbs
 
     final static private String _F_STR_CLASS = "com.google.code.p.keytooliui.ktl.UIKeytool.";
     
-    final static public String _F_STR_NAME_SHORT_APPLI = "ktl";
+    //final static public String _F_STR_NAME_SHORT_APPLI = "ktl";
+
+    static
+    {
+        // begin: prerequisites, java -D[key]="[value]"
+
+        if (System.getProperty("_appli.title") == null)
+        {
+                System.err.println("missing property: _appli.title, exiting");
+                System.exit(1);
+        }
+
+        if (System.getProperty("_appli.version") == null)
+        {
+                System.err.println("missing property: _appli.version, exiting");
+                System.exit(1);
+        }
+
+        if (System.getProperty("_appli.name.short") == null)
+        {
+                System.err.println("missing property: _appli.name.short, exiting");
+                System.exit(1);
+        }
+
+
+        // end: prerequisites, java -D[key]="[value]"
+    }
     
     
     // -------------
@@ -154,7 +180,7 @@ final public class UIKeytool extends AppMainUIAbs
         // ----
         try
         {
-            if (AppMainUIAbs._f_s_blnSetLAFSwing_)
+            if (AppMainUIAbs._F_BLN_SET_LAF_SWING_)
             {
                 UIManager.put("swing.boldMetal", Boolean.FALSE);
                 UIManager.put("TitledBorder.font", UIManager.getFont("TitledBorder.font").deriveFont(Font.BOLD));
@@ -218,7 +244,7 @@ final public class UIKeytool extends AppMainUIAbs
         }
         // ----
         
-        if (! MySystem.s_checkJvmVersion(UIKeytool.s_getTitleAppli()))
+        if (! MySystem.s_checkJvmVersion())
         {
             MySystem.s_printOutError(strMethod, "failed");
             return null;
@@ -247,27 +273,18 @@ final public class UIKeytool extends AppMainUIAbs
         return UIKeytool._s_ktlInstance;
    }
     
-    static public String s_getTitleAppli()
+    /*static public String s_getTitleAppli()
     {
-        if (UIKeytool._s_strTitleAppli != null)
-            return UIKeytool._s_strTitleAppli;
-            
-        // assign title
-        
-        UIKeytool._s_strTitleAppli = new String("KeyTool IUI");
-        
-        //if (KTLAbs.s_isPolicyExtended())
-          //  UIKeytool._s_strTitleAppli += " Plus";
+
            
            
-        return UIKeytool._s_strTitleAppli;
-    }
+        return "UIKeytool._s_strTitleAppli";
+    }*/
     
     // ----
     
     static private UIKeytool _s_ktlInstance = null;
-    static private String _s_strTitleAppli = null;
-    //static private Boolean _s_booPolicyExtended = null;
+    //static private String _s_strTitleAppli = null;
     
     
     
@@ -966,8 +983,8 @@ final public class UIKeytool extends AppMainUIAbs
         super(
             blnShowDialogExitConfirm, // this field used for "blnExitNormally"
             false, // MEMO: blnParentDirReadOnlyAllowed
-            UIKeytool.s_getTitleAppli(), 
-            UIKeytool._F_STR_NAME_SHORT_APPLI, // eg: "ktl"
+            //UIKeytool.s_getTitleAppli(),
+            //UIKeytool._F_STR_NAME_SHORT_APPLI, // eg: "ktl"
             blnShowDialogExitConfirm,
             false, // blnIsHelpGettingStarted
             // tmp forcing default english language
@@ -980,7 +997,7 @@ final public class UIKeytool extends AppMainUIAbs
         // construct children
         
         super._fmaFrame_ = new FMainUIKtl(
-            UIKeytool.s_getTitleAppli(),
+            //UIKeytool.s_getTitleAppli(),
             (WindowListener) this,
             (ActionListener) this,
             (ItemListener) this,
@@ -999,7 +1016,7 @@ final public class UIKeytool extends AppMainUIAbs
 	    // ----
         
         if (! super._createLastUserPreferences_(
-                    UIKeytool._F_STR_NAME_SHORT_APPLI,
+                    //UIKeytool._F_STR_NAME_SHORT_APPLI,
                     MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion))
 	        MySystem.s_printOutExit(this, strMethod, "failed");
     }
@@ -1045,7 +1062,7 @@ final public class UIKeytool extends AppMainUIAbs
         
         // end
         
-        ChkRegUIKtl crg = new ChkRegUIKtl(UIKeytool.s_getTitleAppli());
+        ChkRegUIKtl crg = new ChkRegUIKtl();
         
         if (! crg.doJob())
             MySystem.s_printOutExit(strMethod, "failed");

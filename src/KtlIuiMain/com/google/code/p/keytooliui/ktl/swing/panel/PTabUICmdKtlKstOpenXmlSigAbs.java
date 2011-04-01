@@ -289,7 +289,7 @@ abstract public class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAb
     protected PTabUICmdKtlKstOpenXmlSigAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+   
         //String strPropValFileData, // ie document file to sign or verify
         String strPropValFileDataOut // eg: select_file_xxx, ie. digital signature resulting from signing, or as input to verify
         )
@@ -297,7 +297,7 @@ abstract public class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAb
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+        
             true, // blnAllowTypeJks
             true, // blnAllowTypeJceks
             true, // blnAllowTypePkcs12 ==> ?allowed for CSR or cert reply?
@@ -312,7 +312,7 @@ abstract public class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAb
         this._pnlSelectFileDataIn_ = new PSelBtnTfdFileOpenXml(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli, 
+  
             (java.awt.event.ItemListener) null,
              "Unsigned" // strLabelPrefix
                 );
@@ -321,7 +321,7 @@ abstract public class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAb
          *PSelBtnTfdFileSaveXml(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+      
         ItemListener itmListenerParent
          */
     }

@@ -6,11 +6,11 @@ import com.google.code.p.keytooliui.ktl.swing.panel.*;
 
 public class IFCmsSigVerify extends IFAbs
 {
-    public IFCmsSigVerify(Frame frmParent, String strTitleAppli)
+    public IFCmsSigVerify(Frame frmParent)
     {
         super();
         
-        super._pnl_ = new PTabUICmdCmsSigVerify(frmParent, strTitleAppli);
+        super._pnl_ = new PTabUICmdCmsSigVerify(frmParent);
         setTitle(PTabUICmdCmsSigVerify.STR_TITLETASK);
     }
 

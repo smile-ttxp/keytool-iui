@@ -40,7 +40,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenKprFromKprKst";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenKprFromKprKst" // class name
             ;
         
@@ -307,7 +307,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             strBody += "Please change one keystore file.";
             
             com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return;
         }
@@ -364,7 +364,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJksToKPJks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -380,7 +380,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJksToKPJceks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -396,7 +396,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJksToPkcs12(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+             
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -411,7 +411,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJksToKPBks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                  
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -426,7 +426,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJksToKPUber(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+         
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -451,7 +451,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJceksToKPJks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                 
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -467,7 +467,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJceksToKPJceks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+               
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -483,7 +483,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJceksToPkcs12(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                    
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -498,7 +498,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJceksToKPBks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                  
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -513,7 +513,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromJceksToKPUber(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                 
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -537,7 +537,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromBksToKPJks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+               
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -553,7 +553,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromBksToKPJceks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+             
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -569,7 +569,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromBksToPkcs12(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+            
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -584,7 +584,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromBksToKPBks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+             
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -599,7 +599,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromBksToKPUber(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+            
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -623,7 +623,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromUberToKPJks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+           
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -639,7 +639,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromUberToKPJceks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                 
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -655,7 +655,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromUberToPkcs12(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                 
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -670,7 +670,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromUberToKPBks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                   
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -685,7 +685,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromUberToKPUber(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+               
                     // input
                     super._strPathAbsKst_, // target
                     chrsPasswdKstTarget,
@@ -712,7 +712,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromPkcs12ToKPJks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                   
                     // input
                     super._strPathAbsKst_, 
                     chrsPasswdKstTarget,
@@ -727,7 +727,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromPkcs12ToKPJceks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                   
                     // input
                     super._strPathAbsKst_, 
                     chrsPasswdKstTarget,
@@ -742,7 +742,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromPkcs12ToPkcs12(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+              
                     // input
                     super._strPathAbsKst_, 
                     chrsPasswdKstTarget,
@@ -757,7 +757,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromPkcs12ToKPBks(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                
                     // input
                     super._strPathAbsKst_, 
                     chrsPasswdKstTarget,
@@ -772,7 +772,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
             {
                 ktl = new KTLKprSaveFromPkcs12ToKPUber(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+                   
                     // input
                     super._strPathAbsKst_, 
                     chrsPasswdKstTarget,
@@ -810,15 +810,14 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
     }
     
     public PTabUICmdKtlKstOpenKprFromKprKst(
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
         )
     {
             
         super(
             PTabUICmdKtlKstOpenKprFromKprKst._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+     
             true, // blnAllowTypeJks
             true, // blnAllowTypeJceks
             true, // blnAllowTypePkcs12
@@ -829,7 +828,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
         this._pnlSelectFileKstSource = new PSelBtnTfdFileOpenKst(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+     
             (java.awt.event.ItemListener) null,
             true, // blnFieldRequiredKeystore
             true, // blnAllowTypeJks,
@@ -843,7 +842,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
         this._pnlSelectPasswdKstSource = new PSelBtnTfdPasswdXlsKstAny(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli, 
+       
             BESPasswordAbs.f_s_intModeOpen,
             PTabUICmdKtlKstOpenKprFromKprKst._f_s_strSuffixDocPropValSource
             );
@@ -982,7 +981,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
     private void _doneJob(String strFormatKstTarget)
     {        
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+       // String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = "Successfully imported keypair." + "\n" +
@@ -991,7 +990,7 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return;
             
         // show file
@@ -1000,21 +999,21 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJceks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJceks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstPkcs12.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstPkcs12.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     super._strPasswdKst_.toCharArray());
             return;
         }
@@ -1022,14 +1021,14 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstBks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstBks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstUber.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstUber.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     super._strPasswdKst_.toCharArray());
             return;
         }

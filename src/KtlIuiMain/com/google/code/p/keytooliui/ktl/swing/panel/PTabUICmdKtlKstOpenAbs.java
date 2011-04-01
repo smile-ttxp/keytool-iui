@@ -47,7 +47,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
         String strLabelPasswd,
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+  
             
         String strTextLabelFile,
         boolean blnAllowTypeJks,
@@ -61,7 +61,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
             strLabelPasswd,
             strHelpID, 
             frmOwner, 
-            strTitleAppli, 
+    
             BESPasswordAbs.f_s_intModeOpen, // password for KeyStore of type [JKS-JCEKS-BKS-UBER]
             "Source", // String strLabelBorderPanelIn, // nil value allowed
             "Target"  // String strLabelBorderPanelOut // nil value allowed
@@ -73,7 +73,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
          super._pnlSelectFileKst_ = new PSelBtnTfdFileOpenKst(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+    
             (java.awt.event.ItemListener) null,
             strTextLabelFile,
             true, // blnFieldRequiredKeystore,
@@ -89,7 +89,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
     protected PTabUICmdKtlKstOpenAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+      
             
         String strTextLabelFile,
         boolean blnAllowTypeJks,
@@ -102,7 +102,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli, 
+         
             BESPasswordAbs.f_s_intModeOpen, // password for KeyStore of type [JKS-JCEKS-BKS-UBER]
             "Source", // String strLabelBorderPanelIn, // nil value allowed
             "Target"  // String strLabelBorderPanelOut // nil value allowed
@@ -114,7 +114,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
          super._pnlSelectFileKst_ = new PSelBtnTfdFileOpenKst(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+      
             (java.awt.event.ItemListener) null,
             strTextLabelFile,
             true, // blnFieldRequiredKeystore,
@@ -131,7 +131,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
         //String strTitleTab,
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+ 
             
         boolean blnAllowTypeJks,
         boolean blnAllowTypeJceks,
@@ -143,7 +143,7 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
         this(
            strHelpID,
             frmOwner,
-            strTitleAppli,
+     
             
             PSelBtnTfdFileOpenKst.f_s_strLabel,
             blnAllowTypeJks,

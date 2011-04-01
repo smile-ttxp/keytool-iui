@@ -92,7 +92,7 @@ final public class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigEx
         {
             ktl = new KTLKprOpenSigDetOutJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+         
                 
                 // input
                 super._strPathAbsKst_, 
@@ -113,7 +113,7 @@ final public class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigEx
         {
             ktl = new KTLKprOpenSigDetOutJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+      
                 
                 // input
                 super._strPathAbsKst_, 
@@ -134,7 +134,7 @@ final public class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigEx
         {
             ktl = new KTLKprOpenSigDetOutPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+       
                 
                 // input
                 super._strPathAbsKst_, 
@@ -155,7 +155,7 @@ final public class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigEx
         {
             ktl = new KTLKprOpenSigDetOutBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+           
                 
                 // input
                 super._strPathAbsKst_, 
@@ -176,7 +176,7 @@ final public class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigEx
         {
             ktl = new KTLKprOpenSigDetOutUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+      
                 
                 // input
                 super._strPathAbsKst_, 
@@ -207,11 +207,11 @@ final public class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigEx
        
     }
     
-    public PTabUICmdKtlKstOpenSigExpKpr(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenSigExpKpr(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+    
             PTabUICmdKtlKstOpenSigExpKpr._s_strHelpID
             );
     }

@@ -97,7 +97,7 @@ final public class TMEntryKprSel extends TMEntryKprAbs
         
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".TMEntryKprSel" // class name
             ;
         

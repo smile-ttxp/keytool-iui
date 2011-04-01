@@ -147,14 +147,14 @@ abstract public class DTblEntryKprOpenAbs extends DTblEntryKprAbs implements
     
     protected DTblEntryKprOpenAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+       
         String strTitleThis,
         KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner,
-            strTitleAppli,
+           
             strTitleThis,
             DTblEntryKprOpenAbs._f_s_strLabelAliasSelected,
             kseLoaded,

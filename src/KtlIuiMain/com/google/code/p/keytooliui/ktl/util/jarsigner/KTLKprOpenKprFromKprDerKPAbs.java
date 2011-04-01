@@ -37,7 +37,7 @@ abstract public class KTLKprOpenKprFromKprDerKPAbs extends KTLKprOpenKprFromKprD
 
     protected KTLKprOpenKprFromKprDerKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -51,7 +51,7 @@ abstract public class KTLKprOpenKprFromKprDerKPAbs extends KTLKprOpenKprFromKprD
     {
         super(
             frmOwner, 
-            strTitleAppli,
+ 
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -90,7 +90,7 @@ abstract public class KTLKprOpenKprFromKprDerKPAbs extends KTLKprOpenKprFromKprD
         
         DTblsKstViewKeySavePK dlg = new DTblsKstViewKeySavePK(
             super._frmOwner_, 
-            super._strTitleAppli_,
+           
             kstOpen,
            super._strPathAbsKst_,
             "Import private key and associated certificates chain DER files as new private key entry"

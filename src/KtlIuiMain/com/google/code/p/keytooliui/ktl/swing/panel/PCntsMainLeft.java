@@ -88,11 +88,11 @@ public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener
     
     public PCntsMainLeft(
             Frame frmOwner, 
-            String strTitleAppli,
+  
             TreeSelectionListener lsrTreeSelectionParent)
     {
        this._frmOwner = frmOwner;
-       this._strTitleAppli = strTitleAppli;
+     
        
        // -----
        
@@ -117,7 +117,7 @@ public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener
        
        // ----
        this._tbr = new TBSubTreeKtl(
-               strTitleAppli,
+       
                this._tre, // expand/collapse folders
                this // print
                ); 
@@ -420,7 +420,7 @@ public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener
     private JScrollPane _spe = null;
     private TipOnLeafTree _tre = null;
 
-    private String _strTitleAppli;
+  
 
     private Frame _frmOwner;
     
@@ -581,7 +581,8 @@ public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener
         // private key, version #3 certificate
         TipOnLeafNode mtnPKV3C = new TipOnLeafNode(STR_NODE_KW_PK_V3C);
         mtnEnt.add(mtnPKV3C);
-        
+
+        /* TODO in comments coz conflicts
         // DSA
         mtnChild = new TipOnLeafNode(PCntsMainLeft.STR_NODE_CRENTPKDSA, PTabUICmdKtlKstOpenCrKprV3CDsa.STR_TITLETASK);
         mtnPKV3C.add(mtnChild);
@@ -593,6 +594,7 @@ public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener
         // EC
         mtnChild = new TipOnLeafNode(PCntsMainLeft.STR_NODE_CRENTPKEC, PTabUICmdKtlKstOpenCrKprV3CEc.STR_TITLETASK);
         mtnPKV3C.add(mtnChild);
+        */
         
         
         

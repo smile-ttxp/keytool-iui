@@ -48,7 +48,7 @@ abstract public class BESHelpOnlineAbs extends BEnabledState
     {
 
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".BESViewAbs" // class name
             ;
 
@@ -79,7 +79,7 @@ abstract public class BESHelpOnlineAbs extends BEnabledState
 
     protected BESHelpOnlineAbs(
         final java.awt.Component f_cmpFrameOwner,
-        final String f_strTitleApplication,
+     
         String strImage,
         String strToolTipText,
         int intDim,
@@ -119,7 +119,7 @@ abstract public class BESHelpOnlineAbs extends BEnabledState
                         + f_strUrl;
 
                     com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(
-                            f_cmpFrameOwner, f_strTitleApplication, strBody);
+                            f_cmpFrameOwner, strBody);
                 }
 
             }

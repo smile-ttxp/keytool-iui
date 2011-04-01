@@ -40,7 +40,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenKprExpKpr";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenKprExpKpr" // class name
             ;
         
@@ -93,7 +93,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         {
             ktl = new KTLKprOpenKprOutJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 
                 // input
                 super._strPathAbsKst_, 
@@ -113,7 +113,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         {
             ktl = new KTLKprOpenKprOutJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 
                 // input
                 super._strPathAbsKst_, 
@@ -133,7 +133,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         {
             ktl = new KTLKprOpenKprOutPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 
                 // input
                 super._strPathAbsKst_, 
@@ -153,7 +153,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         {
             ktl = new KTLKprOpenKprOutBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+        
                 
                 // input
                 super._strPathAbsKst_, 
@@ -173,7 +173,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         {
             ktl = new KTLKprOpenKprOutUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+               
                 
                 // input
                 super._strPathAbsKst_, 
@@ -214,11 +214,11 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
     
     
     
-    public PTabUICmdKtlKstOpenKprExpKpr(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenKprExpKpr(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
             PTabUICmdKtlKstOpenKprExpKpr._s_strHelpID
             );
             
@@ -240,7 +240,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
              strDlgBody += "\n" + " . certificates chain file:"+ super._strPathAbsFileCrts_;
              
              com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogInfo(
-                super._frmOwner_, super._strTitleAppli_, strDlgBody);
+                super._frmOwner_, strDlgBody);
              
              return true;
          }
@@ -251,7 +251,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = _s_strDlgInfoActionBodyBeg + "\n" +
@@ -260,7 +260,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return true;
         
         
@@ -308,7 +308,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
             
             // launch dialog
             
-            UtilPemKeyPrivate.s_showFile(super._strTitleAppli_, super._frmOwner_, fle);
+            UtilPemKeyPrivate.s_showFile(super._frmOwner_, fle);
         }        
        
         
@@ -338,12 +338,12 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
         
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         String strDlgBody = "View saved certificates chain file?";
 
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return true;
         
         
@@ -391,7 +391,7 @@ final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprEx
             
             // launch dialog
             
-            UtilCrtX509Pem.s_showFile(super._strTitleAppli_, super._frmOwner_, fle);
+            UtilCrtX509Pem.s_showFile(super._frmOwner_, fle);
         }        
        
         

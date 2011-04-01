@@ -1,8 +1,36 @@
+/*
+ *  Copyright (C) 2011 geoForge Project
+ * 
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Lesser General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ * 
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Lesser General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU Lesser General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+
+/**
+ *
+ * @author bantchao
+ *
+ * email: bantchao_AT_gmail.com
+ * ... please remove "_AT_" from the above string to get the right email address
+ *
+ */
+
 package com.google.code.p.keytooliui.ktl.swing.panel;
 
 /**
     MEMO: usage:
-    
+
     * keytool
         -genkey
         ...
@@ -16,7 +44,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
         o = organization
         ou = organizational unit
         c = country (first two letters)
-        
+
         memo: in a batch:
         CN: first & last name
         OU: organizational unit
@@ -41,60 +69,60 @@ import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrKprV3CAbs 
-{        
+final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrKprV3CAbs
+{
     // ---------------------------
     // final static private String
-    
+
     final static public String STR_TITLETASK = "Create DSA private key entry, with vers. #3 cert";
-    
-    
+
+
     // ---------------------
     // STATIC PRIVATE STRING
-    
+
     static private String _s_strHelpID = null;
 
     // ------------------
     // STATIC INITIALIZER
-    
+
     static
     {
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenCrKprV3CDsa";
-        
+
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenCrKprV3CDsa" // class name
             ;
-        
+
         String strBundleFileLong = strBundleFileShort + ".properties";
-        
+
         try
         {
-            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
+            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort,
                 java.util.Locale.getDefault());
-                
+
             _s_strHelpID = rbeResources.getString("helpID");
         }
-        
+
         catch (java.util.MissingResourceException excMissingResource)
         {
             excMissingResource.printStackTrace();
             MySystem.s_printOutExit(strWhere, "excMissingResource caught, " + strBundleFileLong + " not found");
         }
     }
-    
+
     // ------
     // PUBLIC
 
     public void actionPerformed(ActionEvent evtAction)
     {
         String strMethod = "actionPerformed(evtAction)";
-        
-        
+
+
         /*if (super._strOU_==null || super._strO_==null || super._strL_==null || super._strST_==null)
         {
             // show dialog warning: process, abort, process and don't ask me again
-            
+
             if (PTabUICmdKtlKstOpenCrKprAbs._blnShowDlgWarnOptDnameMiss_)
             {
                 if (! super._showDlgWarnOptDnameMiss_())
@@ -104,73 +132,73 @@ final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrK
                 }
             }
         }*/
-        
+
         String strFormatKst = ((PSelBtnTfdFileOpenKst) super._pnlSelectFileKst_).getSelectedFormatFile();
-        
+
         if (strFormatKst == null)
             MySystem.s_printOutExit(this, strMethod, "nil strFormatKst");
-        
+
         Integer itgSizeKpr = (Integer) ((PSelCmbAbs) super._pnlSelectSizeKeypair_).getSelectedItemCmb();
         int intSizeKpr = itgSizeKpr.intValue();
-        
+
         //Integer itgCertX509Version = (Integer) ((PSelCmbAbs) super._pnlSelectVersionCert_).getSelectedItemCmb();
         //int intCertX509Version = itgCertX509Version.intValue();
 
         String strCertAlgoSignType = (String) ((PSelCmbAbs) super._pnlSelectSigAlgoCert_).getSelectedItemCmb();
-        
+
         char[] chrsPasswdKstTarget = null;
-        
+
         if (super._strPasswdKst_ != null)
             chrsPasswdKstTarget = super._strPasswdKst_.toCharArray();
         else
             chrsPasswdKstTarget = "".toCharArray();
-        
+
         // ----
         // keyUsage cert's extension
         boolean blnCrtExtKeyUsage = super._cbxCrtExtKUEnabled_.isSelected();
         boolean blnCrtExtKeyUsageCritical = super._cbxCrtExtKUCritical_.isSelected();
         int intCrtExtKeyUsageValue = super._getCrtExtKUValue_();
-        
+
         // ----
         // extKeyUsage cert's extension
         boolean blnCrtExtExtKeyUsageCritical = false;
         Vector<DERObjectIdentifier> vecCrtExtExtKeyUsage = null;
-        
+
         if (super._cbxCrtExtEKUEnabled_.isSelected())
         {
             blnCrtExtExtKeyUsageCritical = super._cbxCrtExtEKUCritical_.isSelected();
             vecCrtExtExtKeyUsage = super._getCrtExtEKUValue_();
         }
         // ----
-        
+
         KTLKprSaveNewDsaAbs ktl = null;
-        
+
         if (strFormatKst.toLowerCase().compareTo(
             com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
             ktl = new KTLKprSaveNewDsaJksV3C(
-                super._frmOwner_, 
-                super._strTitleAppli_,
+                super._frmOwner_,
+
                 // input
-                super._strPathAbsKst_, 
+                super._strPathAbsKst_,
                 chrsPasswdKstTarget,
                 // output
                 intSizeKpr,
                 //intCertX509Version,
                 strCertAlgoSignType,
-            
-            
+
+
                 super._intValidityKpr_,
-                
+
                 // --
-                super._strCN_, 
-                super._strOU_, 
-                super._strO_, 
-                super._strL_, 
-                super._strST_, 
+                super._strCN_,
+                super._strOU_,
+                super._strO_,
+                super._strL_,
+                super._strST_,
                 super._strC_,
                 super._strEMAIL_,
-                    
+
                 super._strCrtX500DNM_T_, // "DN" for "Distinguished Name", "M" for "More""
                 super._strCrtX500DNM_SN_,
                 super._strCrtX500DNM_STREET_,
@@ -191,43 +219,43 @@ final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrK
                 super._strCrtX520N_INITIALS_,
                 super._strCrtX520N_GENERATION_,
                 super._strCrtX520N_UNIQUE_IDENTIFIER_,
-                    
+
                 blnCrtExtKeyUsage,
                 blnCrtExtKeyUsageCritical,
                 intCrtExtKeyUsageValue,
-                    
+
                 blnCrtExtExtKeyUsageCritical,
                 vecCrtExtExtKeyUsage
             );
         }
-        
+
         else if (strFormatKst.toLowerCase().compareTo(
             com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            
+
             ktl = new KTLKprSaveNewDsaJceksV3C(
-                super._frmOwner_, 
-                super._strTitleAppli_,
+                super._frmOwner_,
+      
                 // input
-                super._strPathAbsKst_, 
+                super._strPathAbsKst_,
                 chrsPasswdKstTarget,
                 // output
                 intSizeKpr,
                 //intCertX509Version,
                 strCertAlgoSignType,
-            
-            
+
+
                 super._intValidityKpr_,
-                
+
                 // --
-                super._strCN_, 
-                super._strOU_, 
-                super._strO_, 
-                super._strL_, 
-                super._strST_, 
+                super._strCN_,
+                super._strOU_,
+                super._strO_,
+                super._strL_,
+                super._strST_,
                 super._strC_,
                 super._strEMAIL_,
-                    
+
                 super._strCrtX500DNM_T_, // "DN" for "Distinguished Name", "M" for "More""
                 super._strCrtX500DNM_SN_,
                 super._strCrtX500DNM_STREET_,
@@ -248,45 +276,45 @@ final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrK
                 super._strCrtX520N_INITIALS_,
                 super._strCrtX520N_GENERATION_,
                 super._strCrtX520N_UNIQUE_IDENTIFIER_,
-                    
+
                 blnCrtExtKeyUsage,
                 blnCrtExtKeyUsageCritical,
                 intCrtExtKeyUsageValue,
-                    
+
                 blnCrtExtExtKeyUsageCritical,
                 vecCrtExtExtKeyUsage
             );
         }
-        
+
         // NOT SUPPORTED: PKCS12
-        
+
         else if (strFormatKst.toLowerCase().compareTo(
             com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            
+
             ktl = new KTLKprSaveNewDsaPkcs12V3C(
-                super._frmOwner_, 
-                super._strTitleAppli_,
+                super._frmOwner_,
+           
                 // input
-                super._strPathAbsKst_, 
+                super._strPathAbsKst_,
                 chrsPasswdKstTarget,
                 // output
                 intSizeKpr,
                 //intCertX509Version,
                 strCertAlgoSignType,
-            
-            
+
+
                 super._intValidityKpr_,
-                
+
                 // --
-                super._strCN_, 
-                super._strOU_, 
-                super._strO_, 
-                super._strL_, 
-                super._strST_, 
+                super._strCN_,
+                super._strOU_,
+                super._strO_,
+                super._strL_,
+                super._strST_,
                 super._strC_,
                 super._strEMAIL_,
-                    
+
                 super._strCrtX500DNM_T_, // "DN" for "Distinguished Name", "M" for "More""
                 super._strCrtX500DNM_SN_,
                 super._strCrtX500DNM_STREET_,
@@ -307,43 +335,43 @@ final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrK
                 super._strCrtX520N_INITIALS_,
                 super._strCrtX520N_GENERATION_,
                 super._strCrtX520N_UNIQUE_IDENTIFIER_,
-                    
+
                 blnCrtExtKeyUsage,
                 blnCrtExtKeyUsageCritical,
                 intCrtExtKeyUsageValue,
-                    
+
                 blnCrtExtExtKeyUsageCritical,
                 vecCrtExtExtKeyUsage
             );
         }
-        
+
         else if (strFormatKst.toLowerCase().compareTo(
             com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            
+
             ktl = new KTLKprSaveNewDsaBksV3C(
-                super._frmOwner_, 
-                super._strTitleAppli_,
+                super._frmOwner_,
+              
                 // input
-                super._strPathAbsKst_, 
+                super._strPathAbsKst_,
                 chrsPasswdKstTarget,
                 // output
                 intSizeKpr,
                 //intCertX509Version,
                 strCertAlgoSignType,
-            
-            
+
+
                 super._intValidityKpr_,
-                
+
                 // --
-                super._strCN_, 
-                super._strOU_, 
-                super._strO_, 
-                super._strL_, 
-                super._strST_, 
+                super._strCN_,
+                super._strOU_,
+                super._strO_,
+                super._strL_,
+                super._strST_,
                 super._strC_,
                 super._strEMAIL_,
-                    
+
                 super._strCrtX500DNM_T_, // "DN" for "Distinguished Name", "M" for "More""
                 super._strCrtX500DNM_SN_,
                 super._strCrtX500DNM_STREET_,
@@ -364,43 +392,43 @@ final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrK
                 super._strCrtX520N_INITIALS_,
                 super._strCrtX520N_GENERATION_,
                 super._strCrtX520N_UNIQUE_IDENTIFIER_,
-                    
+
                 blnCrtExtKeyUsage,
                 blnCrtExtKeyUsageCritical,
                 intCrtExtKeyUsageValue,
-                    
+
                 blnCrtExtExtKeyUsageCritical,
                 vecCrtExtExtKeyUsage
             );
         }
-        
+
         else if (strFormatKst.toLowerCase().compareTo(
             com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            
+
             ktl = new KTLKprSaveNewDsaUberV3C(
-                super._frmOwner_, 
-                super._strTitleAppli_,
+                super._frmOwner_,
+           
                 // input
-                super._strPathAbsKst_, 
+                super._strPathAbsKst_,
                 chrsPasswdKstTarget,
                 // output
                 intSizeKpr,
                 //intCertX509Version,
                 strCertAlgoSignType,
-            
-            
+
+
                 super._intValidityKpr_,
-                
+
                 // --
-                super._strCN_, 
-                super._strOU_, 
-                super._strO_, 
-                super._strL_, 
-                super._strST_, 
+                super._strCN_,
+                super._strOU_,
+                super._strO_,
+                super._strL_,
+                super._strST_,
                 super._strC_,
                 super._strEMAIL_,
-                    
+
                 super._strCrtX500DNM_T_, // "DN" for "Distinguished Name", "M" for "More""
                 super._strCrtX500DNM_SN_,
                 super._strCrtX500DNM_STREET_,
@@ -421,56 +449,56 @@ final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrK
                 super._strCrtX520N_INITIALS_,
                 super._strCrtX520N_GENERATION_,
                 super._strCrtX520N_UNIQUE_IDENTIFIER_,
-                    
+
                 blnCrtExtKeyUsage,
                 blnCrtExtKeyUsageCritical,
                 intCrtExtKeyUsageValue,
-                    
+
                 blnCrtExtExtKeyUsageCritical,
                 vecCrtExtExtKeyUsage
             );
         }
-        
+
         else
         {
             MySystem.s_printOutExit(this, strMethod, "uncaught value, strFormatKst=" + strFormatKst);
         }
-        
+
         // --
-        
+
         if (ktl.doJob())
         {
             MySystem.s_printOutTrace(this, strMethod, "OK!");
-            
+
             super._doneJob_(
                 strFormatKst,
                 com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs.f_s_strTypeKeypairDsa);
         }
-        
+
         else
             MySystem.s_printOutTrace(this, strMethod, "either aborted by user or failed");
     }
 
-   
-    
-    
-    public PTabUICmdKtlKstOpenCrKprV3CDsa(Frame frmOwner, String strTitleAppli)
+
+
+
+    public PTabUICmdKtlKstOpenCrKprV3CDsa(Frame frmOwner)
     {
         super(
-            PTabUICmdKtlKstOpenCrKprV3CDsa._s_strHelpID, 
-            frmOwner, 
-            strTitleAppli,
+            PTabUICmdKtlKstOpenCrKprV3CDsa._s_strHelpID,
+            frmOwner,
+      
             com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs.s_getItgsListSizeKprDsa(),
             true, // blnAllowTypePkcs12
             true, // blnAllowTypeBks
             true // blnAllowTypeUber
             );
-        
+
         super._pnlSelectSizeKeypair_ = new PSelCmbItgSizeKprDsa();
         super._pnlSelectSigAlgoCert_ = new PSelCmbStrCertSigAlgoDsa();
     }
-    
+
     // -------
     // PRIVATE
-    
+
 }

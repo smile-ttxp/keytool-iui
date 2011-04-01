@@ -38,7 +38,7 @@ final public class KTLKprOpenCrtReqPkcs12 extends KTLKprOpenCrtReqAbs
 
     public KTLKprOpenCrtReqPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -51,7 +51,7 @@ final public class KTLKprOpenCrtReqPkcs12 extends KTLKprOpenCrtReqAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -72,7 +72,7 @@ final public class KTLKprOpenCrtReqPkcs12 extends KTLKprOpenCrtReqAbs
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+   
             fleOpen,
             super._chrsPasswdKst_);
     }
@@ -115,7 +115,7 @@ final public class KTLKprOpenCrtReqPkcs12 extends KTLKprOpenCrtReqAbs
         //DTblEntryKprOpenAbs dlg = new DTblEntryKprOpenPkcs12Any(
         DTblsKstSelPKOpenNoPass dlg = new DTblsKstSelPKOpenNoPass(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             kstOpen,
             super._strPathAbsKst_,
             "Export certificate from private key entry as CSR file"

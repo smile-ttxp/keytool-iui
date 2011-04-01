@@ -6,17 +6,14 @@ import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.security.KeyStore;
 import java.security.cert.X509Certificate;
-import java.util.Date;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JTable;
@@ -153,7 +150,7 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
                 
                 strBody += this._strBodyButtonUsage;
                 
-                OPAbstract.s_showDialogInfo(this, this._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogInfo(this, strBody);
                  return;
             }
 
@@ -195,7 +192,6 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
         this._strsAliasPKTC_ = null;
         this._strsAliasSK_ = null;
         this._kstOpen_ = null;
-        this._strTitleAppli_ = null;
     }
     
     public boolean init()
@@ -259,7 +255,6 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
     // protected
     
     protected KeyStore _kstOpen_ = null;
-    protected String _strTitleAppli_ = null;
     protected PTblEntPKTCAbs _pnlTablePKTC_ = null;
     protected PTblEntSKAbs _pnlTableSK_ = null;
 
@@ -278,7 +273,6 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
     
     protected DTblsKstAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
         String strTitleThis,
         KeyStore kseLoaded,
         String strPathAbs,
@@ -286,11 +280,10 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
     {
         super(
             (Frame) cmpFrameOwner, 
-            strTitleAppli + " - " + strTitleThis, // title
+            System.getProperty("_appli.title") + " - " + strTitleThis, // title
             true // true ==> modal=true
                 );
         
-        this._strTitleAppli_ = strTitleAppli;
         this._kstOpen_ = kseLoaded;
         this._strPathAbs_ = strPathAbs;
         
@@ -307,7 +300,7 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
         
         // --
         
-        this._tbr_ = new JToolBar(strTitleAppli);
+        this._tbr_ = new JToolBar(System.getProperty("_appli.title"));
         
         
         
@@ -474,7 +467,7 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
             return false;
         }
         
-        UtilCrtX509.s_showChain((Frame) getOwner(), this._strTitleAppli_, crtsX509);
+        UtilCrtX509.s_showChain((Frame) getOwner(), crtsX509);
         
         // ending
         return true;
@@ -505,7 +498,8 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
         }
         
         
-        com.google.code.p.keytooliui.shared.util.jarsigner.UtilSK.s_show((Frame) this.getOwner(), this._strTitleAppli_, this._kstOpen_, strEntryAlias, chrsPasswdEntry);
+        com.google.code.p.keytooliui.shared.util.jarsigner.UtilSK.s_show(
+                (Frame) this.getOwner(), this._kstOpen_, strEntryAlias, chrsPasswdEntry);
         
         
         // ending
@@ -543,7 +537,7 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
         }
         
         
-        UtilCrtX509.s_show((Frame) getOwner(), this._strTitleAppli_, crtX509);
+        UtilCrtX509.s_show((Frame) getOwner(), crtX509);
         
         // ending
         return true;
@@ -632,7 +626,6 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
                 
         DPasswordOpen dlg = new DPasswordOpen(
             (Frame) super.getOwner(), 
-            this._strTitleAppli_,
             false // blnNoPasswdAllowed
                 );
                     

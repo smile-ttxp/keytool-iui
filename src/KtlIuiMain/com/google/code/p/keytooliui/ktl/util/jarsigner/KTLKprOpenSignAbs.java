@@ -12,8 +12,6 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import java.security.PublicKey;
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
@@ -28,12 +26,8 @@ import sun.security.util.ManifestDigester;
 import java.security.KeyStore;
 import java.security.PrivateKey;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.InvalidKeyException;
-import java.security.SignatureException;
 // --
 import java.security.cert.X509Certificate;
-import java.security.cert.CertificateException;
 // ----
 
 import java.awt.*;
@@ -170,7 +164,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
     // write it to another jar stream
     static private boolean _s_writeJarEntry(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         JarEntry jey, 
         JarFile jfeInput, 
         JarOutputStream josOutput
@@ -182,14 +176,14 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
             MySystem.s_printOutExit(strMethod, "nil arg");
 
         if (! com.google.code.p.keytooliui.shared.util.jar.S_JarOutputStream.s_writeEntry(
-            josOutput, jey, jfeInput, frmOwner, strTitleAppli))
+            josOutput, jey, jfeInput, frmOwner))
         {
             MySystem.s_printOutError(
                 strMethod, 
                 "failed, jey.getName()=" + jey.getName() + ", jfeInput.getName()=" + jfeInput.getName());
  
             String strBody = "Failed to sign jar file!"; 
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             
             return false;
         }
@@ -396,7 +390,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
 			String strBody = "Failed to sign JAR."; 
             strBody += "\n  " + fleSaveJarSigned.getAbsolutePath();
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_, strBody);
             
 			return false;
 		}
@@ -433,7 +427,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
     
     protected KTLKprOpenSignAbs(
         Frame frmOwner,
-        String strTitleAppli, 
+
         String strPathAbsOpenKst, 
         char[] chrsPasswdOpenKst,
         
@@ -446,7 +440,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+       
             strPathAbsOpenKst, 
             chrsPasswdOpenKst,
             strProviderKst
@@ -489,7 +483,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
                 
                 String strBody = "Failed to sign jar file!"; 
             
-                OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
                 
                 return false;
             }
@@ -503,7 +497,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
                 
                 String strBody = "Failed to sign jar file!"; 
             
-                OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
                 
                 return false;
             }
@@ -519,7 +513,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
                 MySystem.s_printOutError(this, strMethod, "! _s_updateManifestDigest(manManifest, jfeInput, mdtMessageDigest, mapEntries)");
                 String strBody = "Failed to sign jar file!"; 
             
-                OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             
                 return false;
             }
@@ -532,7 +526,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
             {
                 MySystem.s_printOutError(this, strMethod, "nil sfeSignatureFile");
                 String strBody = "Failed to sign jar file!"; 
-                OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
                 return false;
             }
             
@@ -553,7 +547,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
             // start writing out the signed JAR file
             
             if (! com.google.code.p.keytooliui.shared.util.jar.S_JarOutputStream.s_writeManifest(
-                jos, manManifest, super._frmOwner_, super._strTitleAppli_))
+                jos, manManifest, super._frmOwner_))
             {
                 MySystem.s_printOutError(this, strMethod, "failed");
                 return false;
@@ -562,7 +556,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
 
             // write out the signature file -- the signatureFile 
             if (! com.google.code.p.keytooliui.shared.util.jar.S_JarOutputStream.s_writeEntry(
-                jos, sfeSignatureFile, super._frmOwner_, super._strTitleAppli_))
+                jos, sfeSignatureFile, super._frmOwner_))
             {
                 MySystem.s_printOutError(this, strMethod, "failed");
                 return false;
@@ -572,7 +566,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
 
             // write out the signature block file -- again, the block
             if (! com.google.code.p.keytooliui.shared.util.jar.S_JarOutputStream.s_writeEntry(
-                jos, blkSignatureFileBlock, super._frmOwner_, super._strTitleAppli_))
+                jos, blkSignatureFileBlock, super._frmOwner_))
             {
                 MySystem.s_printOutError(this, strMethod, "failed");
                 return false;
@@ -599,7 +593,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
                     strMetaNameSigFileBlock.equalsIgnoreCase(jeyMetaInf.getName() ) ) )
                 {
                     
-                    if (! _s_writeJarEntry(super._frmOwner_, super._strTitleAppli_, jeyMetaInf, jfeInput, jos))
+                    if (! _s_writeJarEntry(super._frmOwner_, jeyMetaInf, jfeInput, jos))
                     {
                         MySystem.s_printOutError(this, strMethod, "failed");
                         return false;
@@ -616,7 +610,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
                 
                 if (! jey.getName().startsWith(com.google.code.p.keytooliui.shared.util.jar.S_Manifest.f_s_strDirParentManifest))
                 {
-                    if (! _s_writeJarEntry(super._frmOwner_, super._strTitleAppli_, jey, jfeInput, jos))
+                    if (! _s_writeJarEntry(super._frmOwner_, jey, jfeInput, jos))
                     {
                         MySystem.s_printOutError(this, strMethod, "failed");
                         return false;
@@ -635,7 +629,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
                 MySystem.s_printOutError(this, strMethod, "failed");
                 String strBody = "Failed to sign JAR."; 
             
-                OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogError(super._frmOwner_, strBody);
             
                 return false;
             }
@@ -657,7 +651,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
             strBody += "\n  " + exc.getMessage();
             
             strBody += "\n\nMore in session.log";
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             
             return false;
         }
@@ -754,7 +748,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
         // this manifest
         
         byte[] bytsManifest = 
-            com.google.code.p.keytooliui.shared.util.jar.S_Manifest.s_toByteArray(manManifest, super._frmOwner_, super._strTitleAppli_);
+            com.google.code.p.keytooliui.shared.util.jar.S_Manifest.s_toByteArray(manManifest, super._frmOwner_);
         
         if (bytsManifest == null)
         {

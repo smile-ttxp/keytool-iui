@@ -18,14 +18,14 @@ public class DTblsKstView extends DTblsKstViewAbs
 
     public DTblsKstView(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+     
         java.security.KeyStore kseLoaded,
         String strPathAbs
         )
     {
         this(
             cmpFrameOwner, 
-            strTitleAppli,
+        
             DTblsKstView._f_s_strTitleThisPrefix + " " + kseLoaded.getType() + " " + DTblsKstView._f_s_strTitleThisSuffix,
             kseLoaded,
             strPathAbs,
@@ -49,7 +49,7 @@ public class DTblsKstView extends DTblsKstViewAbs
     
     protected DTblsKstView(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+     
         String strTitleBar,
         java.security.KeyStore kseLoaded,
         String strPathAbs,
@@ -58,7 +58,7 @@ public class DTblsKstView extends DTblsKstViewAbs
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+ 
             strTitleBar,
             kseLoaded,
             strPathAbs,

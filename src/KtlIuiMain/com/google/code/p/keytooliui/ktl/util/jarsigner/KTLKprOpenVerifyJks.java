@@ -43,7 +43,7 @@ final public class KTLKprOpenVerifyJks extends KTLKprOpenVerifyAbs
     
     public KTLKprOpenVerifyJks(
         Frame frmOwner,
-        String strTitleAppli,
+       
         String strPathAbsKst, // nil value allowed (optional)
         String strProviderKst,
         String strPathAbsSignedJar,
@@ -56,7 +56,7 @@ final public class KTLKprOpenVerifyJks extends KTLKprOpenVerifyAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+      
             strPathAbsKst, 
             (char[]) null, // chrsPasswdOpenKst
             
@@ -99,7 +99,7 @@ final public class KTLKprOpenVerifyJks extends KTLKprOpenVerifyAbs
             
             // memo: keystore should be of type "JKS", provided by "SUN"
             File fleOpen = UtilJsrFile.s_getFileOpen(
-                super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+                super._frmOwner_, super._strPathAbsKst_);
                 
             if (fleOpen == null)
             {
@@ -108,7 +108,7 @@ final public class KTLKprOpenVerifyJks extends KTLKprOpenVerifyAbs
             }
             
             kstOpen = UtilKstJks.s_getKeystoreOpen(
-                super._frmOwner_, super._strTitleAppli_,
+                super._frmOwner_, 
                 fleOpen,
                 (char[]) null // keystore's Password, not in use for verifying signed jarred file
                 );

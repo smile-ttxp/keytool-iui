@@ -2,10 +2,7 @@ package com.google.code.p.keytooliui.ktl.io;
 
 
 import com.google.code.p.keytooliui.shared.io.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
-import javax.swing.*;
 
 import java.io.*;
 
@@ -21,7 +18,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
     // STATIC PUBLIC
     
     static public File s_getSaveFile(
-        String strTitleAppli,
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String[] strsExtension,
@@ -32,7 +28,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
         String strMethod = _f_s_strClass + "s_getSaveFile(..., strsExtension, ...)";
         
         File fle = S_FileChooserAbs.s_getSaveFile(
-            strTitleAppli,
             cmpFrameParent,
             strApproveButtonText,
             strsExtension,
@@ -45,14 +40,13 @@ public class S_FileChooserUI extends S_FileChooserAbs
         if (fle == null)
             return null;
         
-        if (! _s_isAllowed(strTitleAppli, cmpFrameParent, fle))
+        if (! _s_isAllowed(cmpFrameParent, fle))
             return null;
         
         return fle;    
     }
     
     static public File s_getOpenFile(
-        String strTitleAppli,
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String[] strsExtension, // eg: { "jks", "ks" }
@@ -61,7 +55,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
         )
     {
         File fle = S_FileChooserAbs.s_getOpenFile(
-            strTitleAppli,
             cmpFrameParent,
             strApproveButtonText,
             strsExtension,
@@ -70,7 +63,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
         if (fle == null)
             return null;
             
-        if (! _s_isAllowed(strTitleAppli, cmpFrameParent, fle))
+        if (! _s_isAllowed(cmpFrameParent, fle))
             return null;
     
         // ending
@@ -79,7 +72,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
     
     
     /**static public File s_getOpenFile(
-        String strTitleAppli,
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String strExtension, // eg: jks
@@ -90,7 +82,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
         String strMethod = _f_s_strClass + "s_getOpenFile(...)";        
         
         File fle = S_FileChooserAbs._s_getOpenFile_(
-            strTitleAppli,
+ 
             cmpFrameParent,
             strApproveButtonText,
             strExtension,
@@ -102,7 +94,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
         if (fle == null)
             return null;
         
-        if (! _s_isAllowed(strTitleAppli, cmpFrameParent, fle))
+        if (! _s_isAllowed(cmpFrameParent, fle))
             return null;
     
         // ending
@@ -117,7 +109,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
     
     **/
     /**static public File s_getSaveFile(
-        String strTitleAppli,
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String strExtension,
@@ -128,7 +119,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
         String strMethod = _f_s_strClass + "s_getSaveFile(...)";
         
         File fle = S_FileChooserAbs._s_getSaveFile_(
-            strTitleAppli,
             cmpFrameParent,
             strApproveButtonText,
             strExtension,
@@ -140,7 +130,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
         if (fle == null)
             return null;
         
-        if (! _s_isAllowed(strTitleAppli, cmpFrameParent, fle))
+        if (! _s_isAllowed(cmpFrameParent, fle))
             return null;
     
         // ending
@@ -152,7 +142,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
     // STATIC PRIVATE
     
     static private boolean _s_isAllowed(
-        String strTitleAppli,
         java.awt.Component cmpFrameParent, 
         File fle)
     {
@@ -180,7 +169,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
             strBody += "\n\n";        
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleFileName();
             
-            OPAbstract.s_showDialogWarning(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpFrameParent, strBody);
             return false;
         }
         **/

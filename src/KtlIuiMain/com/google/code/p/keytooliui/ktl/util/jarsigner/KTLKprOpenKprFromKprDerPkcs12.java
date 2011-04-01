@@ -7,15 +7,10 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 
 import java.awt.*;
 import java.io.*;
@@ -28,7 +23,7 @@ final public class KTLKprOpenKprFromKprDerPkcs12 extends KTLKprOpenKprFromKprDer
 
     public KTLKprOpenKprFromKprDerPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -41,7 +36,7 @@ final public class KTLKprOpenKprFromKprDerPkcs12 extends KTLKprOpenKprFromKprDer
     {
         super(
             frmOwner, 
-            strTitleAppli,
+          
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 
@@ -63,7 +58,7 @@ final public class KTLKprOpenKprFromKprDerPkcs12 extends KTLKprOpenKprFromKprDer
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+          
             fleOpen,
             super._chrsPasswdKst_);
     }
@@ -93,7 +88,7 @@ final public class KTLKprOpenKprFromKprDerPkcs12 extends KTLKprOpenKprFromKprDer
         
         DTblsKstViewKeySavePKNoPass dlg = new DTblsKstViewKeySavePKNoPass(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             kstOpen,
            super._strPathAbsKst_,
             "Import private key and associated certificates chain files as new private key entry"

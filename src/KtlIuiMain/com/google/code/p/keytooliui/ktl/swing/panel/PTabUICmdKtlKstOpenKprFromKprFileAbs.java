@@ -27,17 +27,17 @@ abstract public class PTabUICmdKtlKstOpenKprFromKprFileAbs extends PTabUICmdKtlK
     protected PTabUICmdKtlKstOpenKprFromKprFileAbs(
             String strHelpID, 
             Frame frmOwner, 
-            String strTitleAppli,
+      
             String strDocPropValKprKpr,
             String strDocPropValCrtsKpr,
              boolean blnDerVersusPem)
     {
-        super(strHelpID, frmOwner, strTitleAppli, strDocPropValKprKpr, strDocPropValCrtsKpr);
+        super(strHelpID, frmOwner, strDocPropValKprKpr, strDocPropValCrtsKpr);
         
         super._pnlSelectFileKpr_ = new PSelBtnTfdFileOpenKprKpr(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+      
             (ItemListener) null,
             blnDerVersusPem // XOR
             );
@@ -45,7 +45,7 @@ abstract public class PTabUICmdKtlKstOpenKprFromKprFileAbs extends PTabUICmdKtlK
         super._pnlSelectFileCrts_ = new PSelBtnTfdFileOpenCrtsKpr(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+       
             (ItemListener) null,
              blnDerVersusPem // default selection
             );

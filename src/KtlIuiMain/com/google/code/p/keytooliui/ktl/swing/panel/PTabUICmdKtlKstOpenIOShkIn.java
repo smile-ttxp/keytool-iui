@@ -93,7 +93,7 @@ final public class PTabUICmdKtlKstOpenIOShkIn extends PTabUICmdKtlKstOpenIOShkIn
         {
             ktl = new KTLShkOpenIOInJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -111,7 +111,7 @@ final public class PTabUICmdKtlKstOpenIOShkIn extends PTabUICmdKtlKstOpenIOShkIn
         {
             ktl = new KTLShkOpenIOInBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+           
                 
                 // input
                 super._strPathAbsKst_, 
@@ -128,7 +128,7 @@ final public class PTabUICmdKtlKstOpenIOShkIn extends PTabUICmdKtlKstOpenIOShkIn
         {
             ktl = new KTLShkOpenIOInUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+          
                 
                 // input
                 super._strPathAbsKst_, 
@@ -163,11 +163,11 @@ final public class PTabUICmdKtlKstOpenIOShkIn extends PTabUICmdKtlKstOpenIOShkIn
        
     }
     
-    public PTabUICmdKtlKstOpenIOShkIn(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenIOShkIn(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+   
             PTabUICmdKtlKstOpenIOShkIn._s_strHelpID
             );
     }

@@ -75,7 +75,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 strBody);
                 
             return false;
@@ -90,11 +90,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
                 
                 Toolkit.getDefaultToolkit().beep();
         	            
-    	        String strWarningTitle = super._strTitleAppli_;
-    	        strWarningTitle += " - ";
-    	        strWarningTitle += "warning";
-    	        strWarningTitle += " - ";
-    	        strWarningTitle += "confirm";
+    	 
         	            
         	            
 	            String strWarningBody = "An alias with the same name ";
@@ -112,7 +108,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
 	            strWarningBody += "Overwrite this entry?";
 
                 if (! OPAbstract.s_showWarningConfirmDialog(
-                    super._frmOwner_, strWarningTitle, strWarningBody))
+                    super._frmOwner_, strWarningBody))
                 {
                     MySystem.s_printOutTrace(this, strMethod, "action cancelled");
                     return false;
@@ -129,7 +125,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+         
                 strBody);
                 
             return false;
@@ -170,7 +166,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+             
                 strBody);
                 
             return false;
@@ -185,7 +181,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+             
                 strBody);
                 
             return false;
@@ -202,7 +198,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+                
                 strBody);
                 
             return false;
@@ -216,7 +212,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 strBody);
                 
             return false;
@@ -239,7 +235,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 strBody);
                 
             return false;
@@ -262,7 +258,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+              
                 strBody);
                 
             return false;
@@ -272,7 +268,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
         
         // memo: JKS keystore should be of type "JKS", provided by "SUN"
         File fleOpenKstJks = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKstJks == null)
         {
@@ -311,7 +307,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
     
     public KTLShkOpenManChgAlias(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -324,7 +320,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+    
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strProviderKst,
@@ -343,7 +339,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
     {
         String strMethod = "_getAliasNew()";
         
-        String strDialogTitle = super._strTitleAppli_ + " - rename alias";
+        String strDialogTitle = System.getProperty("_appli.title") + " - rename alias";
         
         DSelectString dlg = new DSelectString(
             super._frmOwner_, strDialogTitle);
@@ -397,7 +393,7 @@ final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
             strBody += "\n\n";
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleAlias();
                     
-            OPAbstract.s_showDialogWarning(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmOwner_,  strBody);
             return false;
         }
         

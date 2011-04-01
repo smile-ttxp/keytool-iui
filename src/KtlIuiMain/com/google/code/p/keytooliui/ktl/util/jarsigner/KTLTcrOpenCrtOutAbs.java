@@ -9,7 +9,6 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
@@ -17,11 +16,8 @@ import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
 import java.security.KeyStore;
-import java.security.PrivateKey;
 import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
@@ -134,7 +130,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -153,7 +149,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         }
         
         File fleSaveCrt = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileIO_,
+            super._frmOwner_,  super._strPathAbsFileIO_,
             true // blnShowDlgOverwrite
             );
         
@@ -187,7 +183,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+     
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -197,7 +193,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+       
             kstOpen);
         
         if (strsAliasSK == null)
@@ -210,7 +206,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -219,7 +215,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -228,7 +224,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -237,7 +233,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -245,7 +241,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -253,7 +249,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -261,7 +257,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -269,7 +265,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -277,7 +273,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+            kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -363,7 +359,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
 			String strBody = "got keystore exception."; 
             strBody += "\n\n" + "More: see your session.log";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             
             return false;
         }
@@ -391,7 +387,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
             String strBody = "Failed. Got class cast exception."; 
             strBody += "\n\n" + "More: see your session.log";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             
             return false;
         }
@@ -431,7 +427,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         
         if (super._strFormatFileIO_.toLowerCase().compareTo(KTLAbs.f_s_strFormatFileCrtPem.toLowerCase()) == 0)
         {
-            str = UtilCrtX509Pem.s_generateCrt(super._frmOwner_, super._strTitleAppli_, crt);
+            str = UtilCrtX509Pem.s_generateCrt(super._frmOwner_,  crt);
                 
             if (str == null)
             {
@@ -473,7 +469,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
             strBody += fleSaveCrt.getAbsolutePath();
                         
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
                     
                     
             // -- aborting
@@ -495,7 +491,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         if (super._strFormatFileIO_.toLowerCase().compareTo(KTLAbs.f_s_strFormatFileCrtPkcs7.toLowerCase()) == 0)
         {
             bytsCrt = UtilCrtX509Pkcs7.s_generateCrt(
-                super._frmOwner_, super._strTitleAppli_,
+                super._frmOwner_, 
                 crtX509, 
                 this._strProviderSig);
         }
@@ -503,7 +499,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
         else if (super._strFormatFileIO_.toLowerCase().compareTo(KTLAbs.f_s_strFormatFileCrtDer.toLowerCase()) == 0)
         {
             bytsCrt = UtilCrtX509Der.s_generateCrt(
-                super._frmOwner_, super._strTitleAppli_,
+                super._frmOwner_, 
                 crtX509, 
                 this._strProviderSig);
         }
@@ -541,7 +537,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
             strBody += fleSaveCrt.getAbsolutePath();
                         
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
               
             return false;
         }
@@ -553,7 +549,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
 
     protected KTLTcrOpenCrtOutAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+ 
         
         // input
         String strPathAbsOpenKst, // existing keystore 
@@ -567,7 +563,7 @@ abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+    
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strPathAbsFileSaveCrt,

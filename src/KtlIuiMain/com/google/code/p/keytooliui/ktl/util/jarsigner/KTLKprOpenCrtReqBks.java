@@ -60,7 +60,7 @@ final public class KTLKprOpenCrtReqBks extends KTLKprOpenCrtReqKPAbs
 
     public KTLKprOpenCrtReqBks(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type BKS 
@@ -73,7 +73,7 @@ final public class KTLKprOpenCrtReqBks extends KTLKprOpenCrtReqKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+   
         
             // input
             strPathAbsOpenKst, // existing keystore of type BKS 
@@ -94,7 +94,7 @@ final public class KTLKprOpenCrtReqBks extends KTLKprOpenCrtReqKPAbs
     {
         return UtilKstBks.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+
             fleOpen,
             super._chrsPasswdKst_);
     }

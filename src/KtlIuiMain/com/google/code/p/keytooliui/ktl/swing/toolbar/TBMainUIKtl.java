@@ -12,21 +12,21 @@ final public class TBMainUIKtl extends TBMainUIAbs
     
     public TBMainUIKtl(
         java.awt.Frame frmParent,
-        java.awt.event.ActionListener actListenerParentAppli,
+        java.awt.event.ActionListener actListenerParentAppli
         //javax.help.HelpBroker hbrHelpStandard,
-        String strTitleAppli)
+        )
     {
         super(
             actListenerParentAppli,
             //hbrHelpStandard,
             
             com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get(
-                com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strAppliUIKtl16),
+                com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strAppliUIKtl16)
                 
-            strTitleAppli
+        
             );
 
-        super._btnHelpOnlineHome_ = new BESHelpOnlineHome24(frmParent, strTitleAppli);
+        super._btnHelpOnlineHome_ = new BESHelpOnlineHome24(frmParent);
         
         super._btnHelpTrack_.setToolTipText("Help on active window's task");
         
@@ -36,8 +36,8 @@ final public class TBMainUIKtl extends TBMainUIAbs
          * 
          
          * super._btnAboutAppli_ = new BESAboutAppliKtl(
-                (Component) frmParent, // cmpFrameOwner
-                strTitleAppli);
+                (Component) frmParent // cmpFrameOwner
+                );
          **/
     }
 }

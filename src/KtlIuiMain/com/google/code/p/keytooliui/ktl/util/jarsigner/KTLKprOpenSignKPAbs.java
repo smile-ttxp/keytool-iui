@@ -5,10 +5,8 @@ import java.io.File;
 import java.security.KeyStore;
 import java.security.PrivateKey;
 import java.util.Date;
-import com.google.code.p.keytooliui.ktl.swing.dialog.DTblEntryKprOpenKPAny;
 import com.google.code.p.keytooliui.ktl.swing.dialog.DTblsKstSelPKOpen;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
-import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 import com.google.code.p.keytooliui.shared.util.jarsigner.UtilJsrFile;
 
 
@@ -49,7 +47,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         
 
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -68,7 +66,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         }
         
         File fleOpenJarUnsigned = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsOpenJarSource_);
+            super._frmOwner_, super._strPathAbsOpenJarSource_);
         
         if (fleOpenJarUnsigned == null)
         {
@@ -87,7 +85,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         }
         
         File fleSaveJarSigned = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsSaveJarTarget_,
+            super._frmOwner_,super._strPathAbsSaveJarTarget_,
             true // blnShowDlgOverwrite
             );
         
@@ -120,7 +118,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+       
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -130,7 +128,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+     
             kstOpen);
         
         if (strsAliasSK == null)
@@ -143,7 +141,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -152,7 +150,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+         kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -161,7 +159,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -170,7 +168,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -178,7 +176,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -186,7 +184,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -194,7 +192,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -202,7 +200,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -210,7 +208,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+          kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -220,7 +218,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         
         DTblsKstSelPKOpen dlg = new DTblsKstSelPKOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+
             kstOpen,
             super._strPathAbsKst_,
             "Sign JAR file with private key entry"
@@ -286,7 +284,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         {
             keyPrivateKpr = (PrivateKey) UtilKstAbs.s_getKey(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 kstOpen,
                 strAliasKpr,
                 chrsPasswdKpr);
@@ -332,7 +330,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
     
     protected KTLKprOpenSignKPAbs(
         Frame frmOwner,
-        String strTitleAppli, 
+ 
         String strPathAbsOpenKst, 
         char[] chrsPasswdOpenKst,
         
@@ -343,7 +341,7 @@ abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
         String strNameBaseSigFile
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst,
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst,
                 strPathAbsOpenJarSource, strPathAbsSaveJarTarget, strNameBaseSigFile);
     }
 }

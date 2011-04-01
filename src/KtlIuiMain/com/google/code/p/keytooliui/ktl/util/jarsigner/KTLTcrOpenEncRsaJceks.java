@@ -36,7 +36,7 @@ final public class KTLTcrOpenEncRsaJceks extends KTLTcrOpenEncRsaDMAbs
 
     public KTLTcrOpenEncRsaJceks(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -49,7 +49,7 @@ final public class KTLTcrOpenEncRsaJceks extends KTLTcrOpenEncRsaDMAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+         
         
             // input
             strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -72,7 +72,7 @@ final public class KTLTcrOpenEncRsaJceks extends KTLTcrOpenEncRsaDMAbs
     {
         return UtilKstJceks.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+
             fleOpen,
             super._chrsPasswdKst_);
     }

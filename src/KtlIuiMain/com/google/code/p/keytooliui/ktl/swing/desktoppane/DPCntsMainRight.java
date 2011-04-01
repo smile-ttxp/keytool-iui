@@ -26,7 +26,7 @@ public class DPCntsMainRight extends JDesktopPane
         }
     }
     
-    public DPCntsMainRight(Frame frmParent, String strTitleAppli)
+    public DPCntsMainRight(Frame frmParent)
     {
         super();
         
@@ -34,132 +34,133 @@ public class DPCntsMainRight extends JDesktopPane
         
         IFAbs ife = null;
         
-        ife = new IFWelcomeKtl(frmParent, strTitleAppli);
+        ife = new IFWelcomeKtl(frmParent);
         super.add(ife);
         
         
-        ife = new IFKstSave(frmParent, strTitleAppli);
+        ife = new IFKstSave(frmParent);
         super.add(ife);
         
         // create keypair DSA, vers. #1 cert.
-        ife = new IFKstOpenCrKprDsa(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrKprDsa(frmParent);
         super.add(ife);
             
         // create keypair RSA, vers. #1 cert.
-        ife = new IFKstOpenCrKprRsa(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrKprRsa(frmParent);
         super.add(ife);
         
         // create keypair EC, vers. #1 cert.
-        ife = new IFKstOpenCrKprEc(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrKprEc(frmParent);
         super.add(ife);
         
         
         // create keypair DSA, vers. #3 cert.
-        ife = new IFKstOpenCrKprV3CDsa(frmParent, strTitleAppli);
+     
+        ife = new IFKstOpenCrKprV3CDsa(frmParent);
         super.add(ife);
             
         // create keypair RSA, vers. #3 cert.
-        ife = new IFKstOpenCrKprV3CRsa(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrKprV3CRsa(frmParent);
         super.add(ife);
         
         // create keypair EC, vers. #3 cert.
-        ife = new IFKstOpenCrKprV3CEc(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrKprV3CEc(frmParent);
         super.add(ife);
         
         
         
         
         // certificate RSA-DSA
-        ife = new IFKstOpenSigVerCrt(frmParent, strTitleAppli);
+        ife = new IFKstOpenSigVerCrt(frmParent);
         super.add(ife);
         
-        ife = new IFCmsSigVerify(frmParent, strTitleAppli);
+        ife = new IFCmsSigVerify(frmParent);
         super.add(ife);
                 
         // void
-        ife = new IFXmlSigVerify(frmParent, strTitleAppli);
+        ife = new IFXmlSigVerify(frmParent);
         super.add(ife);
                 
         // shared key all
-        ife = new IFKstOpenCrShkAll(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrShkAll(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenCryptEncShk(frmParent, strTitleAppli);
+        ife = new IFKstOpenCryptEncShk(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenCryptDecShk(frmParent, strTitleAppli);
+        ife = new IFKstOpenCryptDecShk(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenIOShkOut(frmParent, strTitleAppli);
+        ife = new IFKstOpenIOShkOut(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenIOShkIn(frmParent, strTitleAppli);
+        ife = new IFKstOpenIOShkIn(frmParent);
         super.add(ife);
         
         // public key (either trusted cert or private key entry)
         
-        ife = new IFKstOpenCryptEncTC(frmParent, strTitleAppli);
+        ife = new IFKstOpenCryptEncTC(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenCryptEncPK(frmParent, strTitleAppli);
+        ife = new IFKstOpenCryptEncPK(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenCryptDecPK(frmParent, strTitleAppli);
+        ife = new IFKstOpenCryptDecPK(frmParent);
         super.add(ife);
         
         // keypair RSA-DSA
-        ife = new IFKstOpenKprFromKprDer(frmParent, strTitleAppli);
+        ife = new IFKstOpenKprFromKprDer(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenKprFromKprPem(frmParent, strTitleAppli);
-        super.add(ife);
-        
-        
-        ife = new IFKstOpenCrtExpKpr(frmParent, strTitleAppli);
-        super.add(ife);
-        
-        ife = new IFKstOpenCrtSigReq(frmParent, strTitleAppli);
-        super.add(ife);
-        
-        ife = new IFKstOpenCrtImpReply(frmParent, strTitleAppli);
-        super.add(ife);
-        
-        ife = new IFKstOpenSigExpKpr(frmParent, strTitleAppli);
-        super.add(ife);
-        
-        ife = new IFKstOpenSCmsExpKpr(frmParent, strTitleAppli);
+        ife = new IFKstOpenKprFromKprPem(frmParent);
         super.add(ife);
         
         
-        ife = new IFKstOpenXmlSigExpKpr(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrtExpKpr(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenJarSigExpKpr(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrtSigReq(frmParent);
+        super.add(ife);
+        
+        ife = new IFKstOpenCrtImpReply(frmParent);
+        super.add(ife);
+        
+        ife = new IFKstOpenSigExpKpr(frmParent);
+        super.add(ife);
+        
+        ife = new IFKstOpenSCmsExpKpr(frmParent);
         super.add(ife);
         
         
-        ife = new IFKstOpenJarVerif(frmParent, strTitleAppli);
+        ife = new IFKstOpenXmlSigExpKpr(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenArcDir(frmParent, strTitleAppli);
+        ife = new IFKstOpenJarSigExpKpr(frmParent);
+        super.add(ife);
+        
+        
+        ife = new IFKstOpenJarVerif(frmParent);
+        super.add(ife);
+        
+        ife = new IFKstOpenArcDir(frmParent);
         super.add(ife);
         
         
         // trusted certificate
-        ife = new IFKstOpenCrtExpTcr(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrtExpTcr(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenCrtImpTcr(frmParent, strTitleAppli);
+        ife = new IFKstOpenCrtImpTcr(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenCCaImpTcr(frmParent, strTitleAppli);
+        ife = new IFKstOpenCCaImpTcr(frmParent);
         super.add(ife);
         
-        ife = new IFKstOpenKprFromKprKst(frmParent, strTitleAppli);
+        ife = new IFKstOpenKprFromKprKst(frmParent);
         super.add(ife);
         
         // keypair
-         ife = new IFKstOpenKprExpKpr(frmParent, strTitleAppli);
+         ife = new IFKstOpenKprExpKpr(frmParent);
         super.add(ife);
         
     }

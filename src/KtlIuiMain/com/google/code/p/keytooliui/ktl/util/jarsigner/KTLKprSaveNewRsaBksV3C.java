@@ -38,7 +38,7 @@ final public class KTLKprSaveNewRsaBksV3C extends KTLKprSaveNewRsaBks
     
     public KTLKprSaveNewRsaBksV3C(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Bks 
@@ -92,7 +92,7 @@ final public class KTLKprSaveNewRsaBksV3C extends KTLKprSaveNewRsaBks
         
         super(
             frmOwner, 
-            strTitleAppli,
+          
         
             // input
             strPathAbsOpenKst, // existing keystore of type Bks 
@@ -171,7 +171,7 @@ final public class KTLKprSaveNewRsaBksV3C extends KTLKprSaveNewRsaBks
         
             super._strCertAlgoSignType_,
             super._frmOwner_,
-            super._strTitleAppli_,
+          
             this._vecCrtExtExtKeyUsage,
             this._blnCrtExtExtKeyUsageCritical,
             this._blnCrtExtKeyUsage,

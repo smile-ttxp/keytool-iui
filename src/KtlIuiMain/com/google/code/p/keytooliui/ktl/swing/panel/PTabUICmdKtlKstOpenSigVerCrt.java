@@ -96,7 +96,7 @@ final public class PTabUICmdKtlKstOpenSigVerCrt extends PTabUICmdKtlKstOpenSigVe
         {
             ktl = new KTLCrtOpenSigVerJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -114,7 +114,7 @@ final public class PTabUICmdKtlKstOpenSigVerCrt extends PTabUICmdKtlKstOpenSigVe
         {
             ktl = new KTLCrtOpenSigVerJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -131,7 +131,7 @@ final public class PTabUICmdKtlKstOpenSigVerCrt extends PTabUICmdKtlKstOpenSigVe
         {
             ktl = new KTLCrtOpenSigVerPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -148,7 +148,7 @@ final public class PTabUICmdKtlKstOpenSigVerCrt extends PTabUICmdKtlKstOpenSigVe
         {
             ktl = new KTLCrtOpenSigVerBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -165,7 +165,7 @@ final public class PTabUICmdKtlKstOpenSigVerCrt extends PTabUICmdKtlKstOpenSigVe
         {
             ktl = new KTLCrtOpenSigVerUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+          
                 
                 // input
                 super._strPathAbsKst_, 
@@ -197,11 +197,11 @@ final public class PTabUICmdKtlKstOpenSigVerCrt extends PTabUICmdKtlKstOpenSigVe
     
     
     
-    public PTabUICmdKtlKstOpenSigVerCrt(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenSigVerCrt(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+    
             PTabUICmdKtlKstOpenSigVerCrt._s_strHelpID
             );
     }

@@ -80,7 +80,7 @@ public class KTLKprSaveNewEcPkcs12 extends KTLKprSaveNewEcAbs
 
         // memo: keystore should be of type "Pkcs12", provided by "XX"
         File fleOpenKstPkcs12 = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKstPkcs12 == null)
         {
@@ -99,7 +99,7 @@ public class KTLKprSaveNewEcPkcs12 extends KTLKprSaveNewEcAbs
         }
         
         KeyStore kstOpenPkcs12 = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstPkcs12,
             super._chrsPasswdKst_);
         
@@ -152,7 +152,7 @@ public class KTLKprSaveNewEcPkcs12 extends KTLKprSaveNewEcAbs
         
         DTblsKstViewKeySavePKNoPass dlg = new DTblsKstViewKeySavePKNoPass(
             (Component) super._frmOwner_, 
-            super._strTitleAppli_,
+         
             kstOpen,
             super._strPathAbsKst_,
             "Create EC (Elliptic Curve) private key entry");
@@ -236,7 +236,7 @@ public class KTLKprSaveNewEcPkcs12 extends KTLKprSaveNewEcAbs
     
     public KTLKprSaveNewEcPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -282,7 +282,7 @@ public class KTLKprSaveNewEcPkcs12 extends KTLKprSaveNewEcAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
         
             // input
             strPathAbsOpenKst, // existing keystore of type Pkcs12 

@@ -10,20 +10,12 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
 import java.security.KeyStore;
-import java.security.PrivateKey;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 
 // --
-import java.security.cert.Certificate;
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
@@ -37,7 +29,7 @@ abstract public class KTLCrtOpenSigVerANAbs extends KTLCrtOpenSigVerAbs
 
     protected KTLCrtOpenSigVerANAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -52,7 +44,7 @@ abstract public class KTLCrtOpenSigVerANAbs extends KTLCrtOpenSigVerAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -90,7 +82,7 @@ abstract public class KTLCrtOpenSigVerANAbs extends KTLCrtOpenSigVerAbs
 
         DTblsKstSelTCOpen dlg = new DTblsKstSelTCOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             kstOpen,
             super._strPathAbsKst_,
             "Verify signed file with other detached signature file and trusted certificate entry"

@@ -41,18 +41,16 @@ final public class TBMainUIJsr extends TBMainUIAbs
     // PUBLIC
     
     public TBMainUIJsr(
-        java.awt.event.ActionListener actListenerParentAppli,
+        java.awt.event.ActionListener actListenerParentAppli
         //javax.help.HelpBroker hbrHelpStandard,
-        String strTitleAppli)
+        )
     {
         super(
             actListenerParentAppli,
             //hbrHelpStandard,
             
             com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get(
-                com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strAppliUIJsr16),
-            
-            strTitleAppli
+                com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strAppliUIJsr16)
             );
     }
     

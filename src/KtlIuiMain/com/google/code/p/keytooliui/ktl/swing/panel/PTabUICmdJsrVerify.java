@@ -78,7 +78,7 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdJsrVerify";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdJsrVerify" // class name
             ;
         
@@ -124,7 +124,7 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         {            
             sig = new KTLKprOpenVerifyJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 super._strPathAbsKst_, // nil value allowed 
                 KTLAbs.f_s_strProviderKstJks,
                 super._strPathAbsJarSigned_,
@@ -142,7 +142,7 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         {            
             sig = new KTLKprOpenVerifyJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 super._strPathAbsKst_, // nil value allowed 
                 KTLAbs.f_s_strProviderKstJceks,
                 super._strPathAbsJarSigned_,
@@ -160,7 +160,7 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         {            
             sig = new KTLKprOpenVerifyBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 super._strPathAbsKst_, // nil value allowed 
                 KTLAbs.f_s_strProviderKstBks,
                 super._strPathAbsJarSigned_,
@@ -178,7 +178,7 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         {            
             sig = new KTLKprOpenVerifyUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+          
                 super._strPathAbsKst_, // nil value allowed 
                 KTLAbs.f_s_strProviderKstUber,
                 super._strPathAbsJarSigned_,
@@ -208,7 +208,7 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
                 
                 DPasswordOpen dlgPasswordKst = new DPasswordOpen(
                     super._frmOwner_, 
-                    super._strTitleAppli_,
+         
                     true // blnNoPasswdAllowed
                         );
                     
@@ -244,7 +244,7 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
             
             sig = new KTLKprOpenVerifyPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+           
                 super._strPathAbsKst_, // nil value allowed
                 "com.google.code.p.keytooliui.ktl.UIKeytool.S_STR_PROVIDERKSTPKCS12VERIFY",
                 super._strPathAbsJarSigned_,
@@ -416,11 +416,11 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
     }
     
     
-    public PTabUICmdJsrVerify(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdJsrVerify(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+     
             PTabUICmdJsrVerify._s_strHelpID, 
             false, // blnFileSignedJarSave
             false // blnFieldRequiredKeystore

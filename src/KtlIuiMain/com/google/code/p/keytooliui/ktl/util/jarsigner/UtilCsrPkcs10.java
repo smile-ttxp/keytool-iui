@@ -48,13 +48,11 @@ final public class UtilCsrPkcs10
     // STATIC PUBLIC
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilCsrPkcs10._f_s_strClass + "." + "s_showFile(...)";
         
         File fle = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsCsrPkcs10, 
@@ -81,7 +79,7 @@ final public class UtilCsrPkcs10
         // launch dialog 
 
         com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys dlg = new
-            com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys(frmParent, strTitleAppli);
+            com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys(frmParent);
         
         if (! dlg.init())
         {
@@ -89,7 +87,7 @@ final public class UtilCsrPkcs10
         }
         
         dlg.setTitle(
-            strTitleAppli + " - " + "view" + " " + com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strFileDescCrtX509Pkcs7);
+            System.getProperty("_appli.title") + " - " + "view" + " " + com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strFileDescCrtX509Pkcs7);
         
 
         if (! dlg.show(fle))
@@ -103,7 +101,6 @@ final public class UtilCsrPkcs10
     **/
     static public String s_generateCsr(
         Frame frmOwner, 
-        String strTitleAppli,
         X509Certificate crt, 
         PrivateKey keyPrivate,
         String strProviderSignature)
@@ -154,7 +151,7 @@ final public class UtilCsrPkcs10
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -172,7 +169,7 @@ final public class UtilCsrPkcs10
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -191,7 +188,7 @@ final public class UtilCsrPkcs10
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -209,7 +206,7 @@ final public class UtilCsrPkcs10
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -225,7 +222,7 @@ final public class UtilCsrPkcs10
             strBody += "\n\n";
             strBody += "More info in session.log file.";
             
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
                 
             return null;
         }
@@ -251,7 +248,7 @@ final public class UtilCsrPkcs10
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }

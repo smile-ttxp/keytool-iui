@@ -40,7 +40,7 @@ public class DTblsKstSelSKOpen extends DTblsKstSelSKAbs
     
     public DTblsKstSelSKOpen(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+ 
         java.security.KeyStore kseLoaded,
         String strPathAbs,
         String strTitleSuffix
@@ -48,7 +48,7 @@ public class DTblsKstSelSKOpen extends DTblsKstSelSKAbs
     {
         super(
                 cmpFrameOwner, 
-                strTitleAppli, 
+             
                 strTitleSuffix,
                 kseLoaded,
                 strPathAbs,
@@ -122,7 +122,7 @@ public class DTblsKstSelSKOpen extends DTblsKstSelSKAbs
             strBody += super.getAlias();
             strBody += "\"";
                     
-            OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+            OPAbstract.s_showDialogWarning(this, strBody);
             return false;
         }*/
         
@@ -135,7 +135,7 @@ public class DTblsKstSelSKOpen extends DTblsKstSelSKAbs
             
             if (strEnterRespective.length() < 1)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter respective password");
+                OPAbstract.s_showDialogWarning(this, "Please enter respective password");
                 
                 return false;
             }
@@ -145,7 +145,7 @@ public class DTblsKstSelSKOpen extends DTblsKstSelSKAbs
    
             if (com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstAbs.s_getKey(
                 this, 
-                getTitle(),
+              
                 super._kstOpen_,
                 super.getAlias(),
                 strEnterRespective.toCharArray()) == null)

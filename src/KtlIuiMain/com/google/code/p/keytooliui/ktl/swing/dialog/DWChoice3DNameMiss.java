@@ -20,10 +20,9 @@ final public class DWChoice3DNameMiss extends DWChoice3Abs
     // PUBLIC
 
     public DWChoice3DNameMiss(
-        java.awt.Frame frm,
-        String strTitleAppli)
+        java.awt.Frame frm)
     {
-        super(frm, strTitleAppli, DWChoice3DNameMiss._s_strWhat);
+        super(frm, DWChoice3DNameMiss._s_strWhat);
     }
     
     // -------

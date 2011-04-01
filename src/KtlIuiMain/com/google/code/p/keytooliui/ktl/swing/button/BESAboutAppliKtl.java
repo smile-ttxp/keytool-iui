@@ -37,13 +37,12 @@ final public class BESAboutAppliKtl extends BESAboutAppli24Abs
     // PUBLIC
         
     public BESAboutAppliKtl(
-        Component cmpFrameOwner,
-        String strTitleApplication
+        Component cmpFrameOwner
        )
     {
         super(
             cmpFrameOwner, 
-            strTitleApplication, 
+     
             
             MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
             "", // "Product ID: none", // TEMPO

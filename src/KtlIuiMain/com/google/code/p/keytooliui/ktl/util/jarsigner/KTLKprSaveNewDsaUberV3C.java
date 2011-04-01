@@ -38,7 +38,7 @@ final public class KTLKprSaveNewDsaUberV3C extends KTLKprSaveNewDsaUber
     
     public KTLKprSaveNewDsaUberV3C(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Uber 
@@ -92,7 +92,7 @@ final public class KTLKprSaveNewDsaUberV3C extends KTLKprSaveNewDsaUber
         
         super(
             frmOwner, 
-            strTitleAppli,
+      
         
             // input
             strPathAbsOpenKst, // existing keystore of type Uber 
@@ -171,7 +171,7 @@ final public class KTLKprSaveNewDsaUberV3C extends KTLKprSaveNewDsaUber
         
             super._strCertAlgoSignType_,
             super._frmOwner_,
-            super._strTitleAppli_,
+     
             this._vecCrtExtExtKeyUsage,
             this._blnCrtExtExtKeyUsageCritical,
             this._blnCrtExtKeyUsage,

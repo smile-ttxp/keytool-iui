@@ -9,25 +9,17 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 import com.google.code.p.keytooliui.ktl.swing.dialog.DTblsKstViewKeySavePK;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // memo: assigning full class path coz ambiguous: same class name in several Java packages
-import java.security.PublicKey;
 import java.security.KeyPair;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 
-import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
 import java.awt.*;
-import java.io.*;
 import java.util.*;
 
 abstract public class KTLKprSaveNewDsaJAbs extends KTLKprSaveNewDsaAbs
@@ -69,7 +61,7 @@ abstract public class KTLKprSaveNewDsaJAbs extends KTLKprSaveNewDsaAbs
         
         DTblsKstViewKeySavePK dlg = new DTblsKstViewKeySavePK(
             super._frmOwner_, 
-            super._strTitleAppli_,
+           
             kstOpen,
             super._strPathAbsKst_,
             "Create DSA private key entry");
@@ -160,7 +152,7 @@ abstract public class KTLKprSaveNewDsaJAbs extends KTLKprSaveNewDsaAbs
     
     protected KTLKprSaveNewDsaJAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -208,7 +200,7 @@ abstract public class KTLKprSaveNewDsaJAbs extends KTLKprSaveNewDsaAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
         
             // input
             strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 

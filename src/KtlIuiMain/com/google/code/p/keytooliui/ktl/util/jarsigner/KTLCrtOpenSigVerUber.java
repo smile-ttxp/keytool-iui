@@ -37,7 +37,7 @@ final public class KTLCrtOpenSigVerUber extends KTLCrtOpenSigVerANAbs
 
     public KTLCrtOpenSigVerUber(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Uber 
@@ -50,7 +50,7 @@ final public class KTLCrtOpenSigVerUber extends KTLCrtOpenSigVerANAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+   
         
             // input
             strPathAbsOpenKst, // existing keystore of type Uber 
@@ -71,7 +71,7 @@ final public class KTLCrtOpenSigVerUber extends KTLCrtOpenSigVerANAbs
     {
         return UtilKstUber.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+ 
             fleOpen,
             super._chrsPasswdKst_);
     }

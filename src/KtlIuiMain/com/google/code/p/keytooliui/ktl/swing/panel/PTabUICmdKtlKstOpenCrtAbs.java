@@ -266,14 +266,14 @@ abstract public class PTabUICmdKtlKstOpenCrtAbs extends PTabUICmdKtlKstOpenAbs
     protected PTabUICmdKtlKstOpenCrtAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+   
         String strPropValFileIO // eg: select_file_csr
         )
     {
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+      
             true, // blnAllowTypeJks
             true, // blnAllowTypeJceks
             true, // blnAllowTypePkcs12 ==> ?allowed for CSR or cert reply?

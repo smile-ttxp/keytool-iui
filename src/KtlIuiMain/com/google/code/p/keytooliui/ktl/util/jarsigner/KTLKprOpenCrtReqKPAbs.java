@@ -36,7 +36,7 @@ abstract public class KTLKprOpenCrtReqKPAbs extends KTLKprOpenCrtReqAbs
 
     protected KTLKprOpenCrtReqKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type XXX 
@@ -50,7 +50,7 @@ abstract public class KTLKprOpenCrtReqKPAbs extends KTLKprOpenCrtReqAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type BKS 
@@ -102,7 +102,7 @@ abstract public class KTLKprOpenCrtReqKPAbs extends KTLKprOpenCrtReqAbs
         //DTblEntryKprOpenAbs dlg = new DTblEntryKprOpenKPAny(
         DTblsKstSelPKOpen dlg = new DTblsKstSelPKOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+
             kstOpen,
             super._strPathAbsKst_,
             "Export certificate from private key entry as CSR file"

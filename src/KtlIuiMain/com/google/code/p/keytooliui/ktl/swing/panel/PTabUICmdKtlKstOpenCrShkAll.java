@@ -36,7 +36,7 @@ final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkA
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenCrShkAll";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenCrShkAll" // class name
             ;
         
@@ -91,7 +91,7 @@ final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkA
             
             ktl = new KTLShkSaveNewAllJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -107,7 +107,7 @@ final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkA
             
             ktl = new KTLShkSaveNewAllJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -125,7 +125,7 @@ final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkA
         {
             ktl = new KTLShkSaveNewAllPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -142,7 +142,7 @@ final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkA
             
             ktl = new KTLShkSaveNewAllBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+          
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -157,7 +157,7 @@ final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkA
         {
             ktl = new KTLShkSaveNewAllUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -189,12 +189,12 @@ final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkA
     }
     
     
-    public PTabUICmdKtlKstOpenCrShkAll(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCrShkAll(Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstOpenCrShkAll._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+         
             true, // blnAllowTypeBks
             true // blnAllowTypeUber
             );

@@ -23,21 +23,21 @@ abstract public class PTabUICmdKtlKstOpenCrtExpAbs extends PTabUICmdKtlKstOpenCr
     
     protected PTabUICmdKtlKstOpenCrtExpAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+ 
         String strHelpID
         )
     {
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+    
             PSelBtnTfdFileSaveCrt.f_s_strDocPropVal
             );
 
         super._pnlSelectFileIO_ = new PSelBtnTfdFileSaveCrt(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+      
             (ItemListener) null
             );
             

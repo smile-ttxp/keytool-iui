@@ -44,7 +44,7 @@ abstract public class PSelBtnTfdFileJarSaveAbs extends PSelBtnTfdFileJarAbs
     protected PSelBtnTfdFileJarSaveAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+        
         String strLabel,
         Object objDocPropValue,
         String strDirNameDefault, // eg: mysignedfiles
@@ -54,7 +54,7 @@ abstract public class PSelBtnTfdFileJarSaveAbs extends PSelBtnTfdFileJarAbs
         super(
             docListenerParent,
             frmParent,
-            strTitleAppli,
+           
             strLabel,
             objDocPropValue,
             JFileChooser.SAVE_DIALOG,

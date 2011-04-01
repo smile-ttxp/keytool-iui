@@ -45,12 +45,11 @@ final public class MHelpAboutMainUIKtl extends MHelpAboutMainUIAbs
            
     public MHelpAboutMainUIKtl(
         java.awt.Component cmpFrameOwner,
-        String strTitleApplication,
         java.awt.event.ActionListener actListenerParent,
         String strLic)
     {
         super(actListenerParent);
         
-        super._miaAboutAppli_ = new MIHelpAboutAppliUIKtl(cmpFrameOwner, strTitleApplication, strLic);
+        super._miaAboutAppli_ = new MIHelpAboutAppliUIKtl(cmpFrameOwner, strLic);
     }
 }

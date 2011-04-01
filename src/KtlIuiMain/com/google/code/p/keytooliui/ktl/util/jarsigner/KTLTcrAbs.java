@@ -149,7 +149,7 @@ abstract public class KTLTcrAbs extends KTLAbs
                 String strBody = "Got keystore Exception.";
                 
                 OPAbstract.s_showDialogWarning(
-                    super._frmOwner_, super._strTitleAppli_, strBody);
+                    super._frmOwner_,  strBody);
                 
                 return null;
             }
@@ -170,7 +170,7 @@ abstract public class KTLTcrAbs extends KTLAbs
 
     protected KTLTcrAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         
         // input
         String strPathAbsKst, // existing keystore of type [JKS-JCEKS-PKCS12]
@@ -180,7 +180,7 @@ abstract public class KTLTcrAbs extends KTLAbs
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsKst, chrsPasswdKst, strProviderKst);
+        super(frmOwner, strPathAbsKst, chrsPasswdKst, strProviderKst);
     }
 
 }

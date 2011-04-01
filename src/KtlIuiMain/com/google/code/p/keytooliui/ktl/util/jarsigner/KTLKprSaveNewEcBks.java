@@ -79,7 +79,7 @@ public class KTLKprSaveNewEcBks extends KTLKprSaveNewEcJAbs
 
         // memo: keystore should be of type "Bks", provided by "SunJCE"
         File fleOpenKstBks = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKstBks == null)
         {
@@ -98,7 +98,7 @@ public class KTLKprSaveNewEcBks extends KTLKprSaveNewEcJAbs
         }
         
         KeyStore kstOpenBks = UtilKstBks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstBks,
             super._chrsPasswdKst_);
         
@@ -124,7 +124,7 @@ public class KTLKprSaveNewEcBks extends KTLKprSaveNewEcJAbs
     
     public KTLKprSaveNewEcBks(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Bks 
@@ -170,7 +170,7 @@ public class KTLKprSaveNewEcBks extends KTLKprSaveNewEcJAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+   
         
             // input
             strPathAbsOpenKst, // existing keystore of type Bks 

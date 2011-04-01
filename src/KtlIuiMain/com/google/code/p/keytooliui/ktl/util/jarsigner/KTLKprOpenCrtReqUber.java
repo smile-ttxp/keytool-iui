@@ -38,7 +38,7 @@ final public class KTLKprOpenCrtReqUber extends KTLKprOpenCrtReqKPAbs
 
     public KTLKprOpenCrtReqUber(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type UBER 
@@ -51,7 +51,7 @@ final public class KTLKprOpenCrtReqUber extends KTLKprOpenCrtReqKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type UBER 
@@ -72,7 +72,7 @@ final public class KTLKprOpenCrtReqUber extends KTLKprOpenCrtReqKPAbs
     {
         return UtilKstUber.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+   
             fleOpen,
             super._chrsPasswdKst_);
     }

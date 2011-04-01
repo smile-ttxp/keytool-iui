@@ -58,7 +58,7 @@ final public class PSelBtnTfdFileJarSaveUnsigned extends PSelBtnTfdFileJarSaveAb
     
     public PSelBtnTfdFileJarSaveUnsigned(
         javax.swing.event.DocumentListener docListenerParent, 
-        Frame frmParent, String strTitleAppli,
+        Frame frmParent, 
         String strDirNameDefault,
         boolean blnFieldRequired
         )
@@ -66,7 +66,7 @@ final public class PSelBtnTfdFileJarSaveUnsigned extends PSelBtnTfdFileJarSaveAb
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+       
             
             PSelBtnTfdFileJarSaveUnsigned._f_s_strLabel, 
             PSelBtnTfdFileJarSaveUnsigned.f_s_strDocPropVal,

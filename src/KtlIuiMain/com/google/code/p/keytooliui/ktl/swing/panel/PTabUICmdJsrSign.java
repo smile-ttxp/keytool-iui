@@ -76,7 +76,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdJsrSign";
 
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdJsrSign" // class name
             ;
 
@@ -136,7 +136,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
 
             crt = new KTLKprOpenSignJks(
                 super._frmOwner_,
-                super._strTitleAppli_,
+           
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -156,7 +156,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
 
             crt = new KTLKprOpenSignJceks(
                 super._frmOwner_,
-                super._strTitleAppli_,
+              
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -175,7 +175,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         {
             crt = new KTLKprOpenSignBks(
                 super._frmOwner_,
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -194,7 +194,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         {
             crt = new KTLKprOpenSignUber(
                 super._frmOwner_,
-                super._strTitleAppli_,
+         
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -213,7 +213,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         {
             crt = new KTLKprOpenSignPkcs12(
                 super._frmOwner_,
-                super._strTitleAppli_,
+               
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -664,11 +664,11 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         return true;
     }
 
-    public PTabUICmdJsrSign(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdJsrSign(Frame frmOwner)
     {
         super(
             frmOwner,
-            strTitleAppli,
+
             PTabUICmdJsrSign._s_strHelpID,
             true, // blnFileSignedJarSave
             true // blnFieldRequiredKeystore
@@ -678,19 +678,19 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         this._pnlSelectPasswdKst = new PSelBtnTfdPasswdXlsKstAny(
             (javax.swing.event.DocumentListener) this,
             frmOwner,
-            strTitleAppli,
+    
             BESPasswordAbs.f_s_intModeOpen
             );
 
 
         this._pnlSelectSigfileBasename = new PSelBtnTfdStrXlsSigfile(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli);
+            frmOwner);
 
         this._pnlSelectFileJarUnsigned2Open = new PSelBtnTfdFileJarOpenUnsigned(
             (javax.swing.event.DocumentListener) this,
             frmOwner,
-            strTitleAppli,
+       
             (ItemListener) this,
             S_FileExtensionUI.f_s_strDirNameDefaultFileUnsigned,
             true // blnFieldRequired
@@ -889,7 +889,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         {
             // show info dialog
 	        OPAbstract.s_showDialogInfo(
-	            super._frmOwner_, super._strTitleAppli_, strBody);
+	            super._frmOwner_, strBody);
 
             // ending
             return true;
@@ -901,7 +901,7 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
     
         // show info dialog
         OPAbstract.s_showDialogInfo(
-            super._frmOwner_, super._strTitleAppli_, strBody);
+            super._frmOwner_, strBody);
 
         // ending
         return true;

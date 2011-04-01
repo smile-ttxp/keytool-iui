@@ -91,7 +91,7 @@ final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenDecRsaJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+           
                 
                 // input
                 super._strPathAbsKst_, 
@@ -111,7 +111,7 @@ final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenDecRsaJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -131,7 +131,7 @@ final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenDecRsaPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+       
                 
                 // input
                 super._strPathAbsKst_, 
@@ -151,7 +151,7 @@ final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenDecRsaBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -171,7 +171,7 @@ final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenDecRsaUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+        
                 
                 // input
                 super._strPathAbsKst_, 
@@ -244,11 +244,11 @@ final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryp
         return true;
     }
     
-    public PTabUICmdKtlKstOpenCryptDecPK(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCryptDecPK(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+  
             PTabUICmdKtlKstOpenCryptDecPK._s_strHelpID,
             true, // blnAllowTypeJks,
             true  // blnAllowTypePkcs12   

@@ -123,14 +123,14 @@ final public class PSelBtnTfdFileSaveCrypt extends PSelBtnTfdFileSaveAbs
     public PSelBtnTfdFileSaveCrypt(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         ItemListener itmListenerParent
         )
     {
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+       
             PSelBtnTfdFileSaveCrypt.f_s_strLabel,
             true // blnFieldRequired
             );
@@ -184,7 +184,7 @@ final public class PSelBtnTfdFileSaveCrypt extends PSelBtnTfdFileSaveAbs
         
             
         fle = S_FileChooserAbs.s_getSaveFile(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk);
         

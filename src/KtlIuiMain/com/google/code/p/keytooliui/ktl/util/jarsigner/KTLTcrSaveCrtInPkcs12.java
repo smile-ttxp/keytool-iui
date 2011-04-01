@@ -63,7 +63,7 @@ final public class KTLTcrSaveCrtInPkcs12 extends KTLTcrSaveCrtInDMAbs
         
         // memo: keystore should be of type "Pkcs12", provided by "?"
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -82,7 +82,7 @@ final public class KTLTcrSaveCrtInPkcs12 extends KTLTcrSaveCrtInDMAbs
         }
         
         KeyStore kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -109,7 +109,7 @@ final public class KTLTcrSaveCrtInPkcs12 extends KTLTcrSaveCrtInDMAbs
     
     public KTLTcrSaveCrtInPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // output
         String strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -124,7 +124,7 @@ final public class KTLTcrSaveCrtInPkcs12 extends KTLTcrSaveCrtInDMAbs
         
         super(
             frmOwner, 
-            strTitleAppli,
+   
         
           
             strPathAbsOpenKst, // existing keystore of type Pkcs12 

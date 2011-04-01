@@ -109,7 +109,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+       
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -119,7 +119,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+        
             kstOpen);
         
         if (strsAliasSK == null)
@@ -132,7 +132,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -141,7 +141,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -150,7 +150,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -159,7 +159,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -167,7 +167,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -175,7 +175,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -183,7 +183,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -191,7 +191,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -199,7 +199,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+            kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -266,7 +266,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
     
     protected KTLKprSaveNewRsaAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -315,7 +315,7 @@ abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+          
             
             // input
             strPathAbsOpenKst,

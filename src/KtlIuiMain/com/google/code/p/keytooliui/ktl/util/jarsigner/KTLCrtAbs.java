@@ -13,20 +13,16 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // ----
 import java.security.KeyStore;
-import java.security.PublicKey;
 import java.security.KeyStoreException;
-import java.security.Provider;
 // --
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
-import java.util.*;
 
 abstract public class KTLCrtAbs extends KTLAbs
 {
@@ -58,7 +54,7 @@ abstract public class KTLCrtAbs extends KTLAbs
                 String strBody = "Got keystore Exception.";
                 
                 OPAbstract.s_showDialogWarning(
-                    super._frmOwner_, super._strTitleAppli_, strBody);
+                    super._frmOwner_, strBody);
                 
                 return null;
             }
@@ -79,7 +75,6 @@ abstract public class KTLCrtAbs extends KTLAbs
 
     protected KTLCrtAbs(
         Frame frmOwner, 
-        String strTitleAppli,
         
         // input
         String strPathAbsKst, // existing keystore of type [JKS-JCEKS-PKCS12]
@@ -89,7 +84,7 @@ abstract public class KTLCrtAbs extends KTLAbs
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsKst, chrsPasswdKst, strProviderKst);        
+        super(frmOwner, strPathAbsKst, chrsPasswdKst, strProviderKst);        
     }
 
 }

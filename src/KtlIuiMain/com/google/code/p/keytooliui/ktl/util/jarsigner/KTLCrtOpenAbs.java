@@ -34,7 +34,7 @@ abstract public class KTLCrtOpenAbs extends KTLCrtAbs
 
     protected KTLCrtOpenAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -43,6 +43,6 @@ abstract public class KTLCrtOpenAbs extends KTLCrtAbs
         String strProviderKst // should be "SUN", or "SunRsaSign", or "BC"
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
     }
 }

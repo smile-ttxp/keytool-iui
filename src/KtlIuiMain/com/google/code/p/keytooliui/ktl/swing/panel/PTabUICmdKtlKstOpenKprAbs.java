@@ -299,7 +299,7 @@ abstract public class PTabUICmdKtlKstOpenKprAbs extends PTabUICmdKtlKstOpenAbs
     protected PTabUICmdKtlKstOpenKprAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+   
         String strPropValFileKpr, // eg: select_file_[xxx]
         String strPropValFileCrts
         )
@@ -307,7 +307,7 @@ abstract public class PTabUICmdKtlKstOpenKprAbs extends PTabUICmdKtlKstOpenAbs
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+       
             true, // blnAllowTypeJks
             true, // blnAllowTypeJceks
             true, // blnAllowTypePkcs12 ==> ?allowed for C reply?

@@ -286,7 +286,7 @@ abstract public class DTblKstAbs extends DEscapeAbstract implements
         this._strsAlias_ = null;
         this._kstOpen_ = null;
     
-        this._strTitleAppli_ = null;
+ 
     }
     
     
@@ -356,7 +356,7 @@ abstract public class DTblKstAbs extends DEscapeAbstract implements
     
     protected int _intSelectionRowCur_ = -1;
     
-    protected String _strTitleAppli_ = null;
+  
     
     // change in the table, no more selection
     protected void _reset_()
@@ -396,20 +396,19 @@ abstract public class DTblKstAbs extends DEscapeAbstract implements
     
     protected DTblKstAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+     
         String strTitleThis,
         KeyStore kseLoaded
         )
     {
         super(
             (Frame) cmpFrameOwner, 
-            strTitleAppli + " - " + strTitleThis, // title
+            //strTitleAppli + " - " + strTitleThis, // title
             true // true ==> modal=true
             ); 
             
         
-        // ----
-        this._strTitleAppli_ = strTitleAppli;
+    
         this._kstOpen_ = kseLoaded;
         
         // ----
@@ -532,7 +531,7 @@ abstract public class DTblKstAbs extends DEscapeAbstract implements
         }
         
         
-        UtilCrtX509.s_show((Frame) getOwner(), this._strTitleAppli_, crtX509);
+        UtilCrtX509.s_show((Frame) getOwner(), crtX509);
         
         // ending
         return true;
@@ -569,7 +568,7 @@ abstract public class DTblKstAbs extends DEscapeAbstract implements
         }
         
         
-        //UtilCrtX509.s_show((Frame) getOwner(), this._strTitleAppli_, crtX509);
+        //UtilCrtX509.s_show((Frame) getOwner(), crtX509);
         
         // TODO: IN PROGRESS
         /*
@@ -623,7 +622,7 @@ abstract public class DTblKstAbs extends DEscapeAbstract implements
             return false;
         }
         
-        UtilCrtX509.s_showChain((Frame) getOwner(), this._strTitleAppli_, crtsX509);
+        UtilCrtX509.s_showChain((Frame) getOwner(), crtsX509);
         
         // ending
         return true;

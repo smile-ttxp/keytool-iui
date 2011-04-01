@@ -49,7 +49,7 @@ abstract public class UtilKstAbs
     
      static public PublicKey s_getKeyPublic(
         Component cmpOwner, 
-        String strTitleAppli,
+       
         KeyStore kseLoaded,
         String strAlias)
     {
@@ -86,7 +86,7 @@ abstract public class UtilKstAbs
             strBody += "\"";
             
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             return null;
         }
         
@@ -111,7 +111,7 @@ abstract public class UtilKstAbs
             strBody += exc.getMessage();
             
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             
             return null;
         }
@@ -121,7 +121,7 @@ abstract public class UtilKstAbs
     // "PKTC": Private key entry and trusted certificate entry
     static public Boolean[] s_getBoosValidDatePKTC(
         Component cmpOwner, 
-        String strTitleAppli,
+       
         KeyStore kstOpen, 
         String[] strsAlias)
     {
@@ -150,7 +150,7 @@ abstract public class UtilKstAbs
                 strBody += excKeyStore.getMessage();
                 
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                 
                 return null;
             }
@@ -178,7 +178,7 @@ abstract public class UtilKstAbs
 
                         strBody += "\n\nNot a certificate of type X509";
 
-                        OPAbstract.s_showDialogError(cmpOwner, strTitleAppli, strBody);
+                        OPAbstract.s_showDialogError(cmpOwner, strBody);
                         return null;
                     }
 
@@ -198,7 +198,7 @@ abstract public class UtilKstAbs
                     strBody += "\n\nException caught:";
                     strBody += "\n  " + exc.getMessage();
 
-                    OPAbstract.s_showDialogError(cmpOwner, strTitleAppli, strBody);
+                    OPAbstract.s_showDialogError(cmpOwner, strBody);
 
                     return null;
                 }
@@ -256,7 +256,7 @@ abstract public class UtilKstAbs
 
                         strBody += "\n\nNot a certificate of type X509";
 
-                        OPAbstract.s_showDialogError(cmpOwner, strTitleAppli, strBody);
+                        OPAbstract.s_showDialogError(cmpOwner, strBody);
                         return null;
                     }
 
@@ -293,11 +293,11 @@ abstract public class UtilKstAbs
      
      static public boolean s_checkValidDateCert(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kseLoaded,
         String strAlias)
      {
-        String strMethod = "s_checkValidDateCert(cmpOwner, strTitleAppli, kseLoaded, strAlias)";
+        String strMethod = "s_checkValidDateCert(cmpOwner, kseLoaded, strAlias)";
          
         if (kseLoaded==null || strAlias==null)
         {
@@ -330,7 +330,7 @@ abstract public class UtilKstAbs
             strBody += "\"";
             
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             return false;
         }
         
@@ -349,7 +349,7 @@ abstract public class UtilKstAbs
 
                 strBody += "\n\nNot a certificate of type X509";
 
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogWarning(cmpOwner, strBody);
                 return false;
             }
             
@@ -369,7 +369,7 @@ abstract public class UtilKstAbs
             strBody += "\n\nException caught:";
             strBody += "\n  " + exc.getMessage();
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             
             return false;
         }
@@ -387,7 +387,7 @@ abstract public class UtilKstAbs
             String strBody = "Certificate has expired!";
             strBody += "\n\n" + "Continue anyway?";
             
-            if (! OPAbstract.s_showWarningConfirmDialog(cmpOwner, strTitleAppli, strBody))
+            if (! OPAbstract.s_showWarningConfirmDialog(cmpOwner, strBody))
             {
                 MySystem.s_printOutTrace(strMethod, "aborted by user");
                 return false;
@@ -401,7 +401,7 @@ abstract public class UtilKstAbs
             String strBody = "Certificate not yet valid!";
             strBody += "\n\n" + "Continue anyway?";
             
-            if (! OPAbstract.s_showWarningConfirmDialog(cmpOwner, strTitleAppli, strBody))
+            if (! OPAbstract.s_showWarningConfirmDialog(cmpOwner, strBody))
             {
                 MySystem.s_printOutTrace(strMethod, "aborted by user");
                 return false;
@@ -414,7 +414,7 @@ abstract public class UtilKstAbs
     
     static public String s_getCertSigAlgo(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kseLoaded,
         String strAlias)
     {
@@ -451,7 +451,7 @@ abstract public class UtilKstAbs
             strBody += "\"";
             
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             return null;
         }
         
@@ -468,7 +468,7 @@ abstract public class UtilKstAbs
 
                 strBody += "\n\nNot a certificate of type X509";
 
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogWarning(cmpOwner, strBody);
                 return null;
             }
             
@@ -489,7 +489,7 @@ abstract public class UtilKstAbs
             strBody += "\n\nException caught:";
             strBody += "\n  " + exc.getMessage();
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             
             return null;
         }
@@ -502,7 +502,7 @@ abstract public class UtilKstAbs
     **/
     static public Key s_getKey(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kseLoaded,
         String strAliasKpr,
         char[] chrsPasswdKpr
@@ -541,7 +541,7 @@ abstract public class UtilKstAbs
             strBody += "\"";
             
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             return null;
         }
         
@@ -574,7 +574,7 @@ abstract public class UtilKstAbs
             strBody += "\n";
             strBody += "The given password may be wrong.";
             
-            OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(cmpOwner, strBody);
             
             return null;
         }
@@ -588,16 +588,7 @@ abstract public class UtilKstAbs
         if (key == null)
         {
             MySystem.s_printOutExit(strMethod, " nil key");
-            /**MySystem.s_printOutError(strMethod, "nil key");
-            // could be either wrong alias or wrong keypass
-            
-            String strBody = "Failed to get private key!";
-            strBody += "\n\n";
-            strBody += "Please verify that \"keypair alias\" and \"keypair password\" values. are correct";
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
-            
-            return null;
-            **/
+        
         }
         
         return key;
@@ -606,7 +597,7 @@ abstract public class UtilKstAbs
     
     static public boolean s_setKeyEntry(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         KeyStore kstOpen,
         String strAliasKpr,
@@ -641,7 +632,7 @@ abstract public class UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
             
             return false;
         }
@@ -652,7 +643,7 @@ abstract public class UtilKstAbs
     
     static public Date[] s_getDtesLastModified(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kstOpen, 
         String[] strsAlias
         )
@@ -679,7 +670,7 @@ abstract public class UtilKstAbs
                 String strBody = "Got keystore Exception.";
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogWarning(cmpOwner, strBody);
                 return null;
             }
 
@@ -695,7 +686,7 @@ abstract public class UtilKstAbs
     **/
     static public String[] s_getStrsAlgoSigCertPKTC(
         Component cmpOwner, 
-        String strTitleAppli,
+   
         KeyStore kstOpen, 
         String[] strsAlias
         )
@@ -724,7 +715,7 @@ abstract public class UtilKstAbs
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);                
+                OPAbstract.s_showDialogWarning(cmpOwner, strBody);                
                 return null;
             }
             
@@ -744,7 +735,7 @@ abstract public class UtilKstAbs
     
     static public String[] s_getStrsTypeCertificatePKTC(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kstOpen, 
         String[] strsAlias
         )
@@ -773,20 +764,14 @@ abstract public class UtilKstAbs
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogWarning(cmpOwner, strBody);
                 
                 return null;
             }
             
             if (cert == null) // MEMO: if the given alias does not exist or does not contain a certificate
             {
-                /*MySystem.s_printOutError(strMethod, "nil cert");
-                
-                String strBody = "Alias does not contain a certificate";
-                
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
-                    
-                return null;*/
+               
                 MySystem.s_printOutWarning(strMethod, "nil cert, assigning _void_");
                 strsTypeCert[i] = "_void_";
                 continue;
@@ -801,7 +786,7 @@ abstract public class UtilKstAbs
     
     static public String[] s_getStrsAlgoKeyPubl(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kstOpen, 
         String[] strsAlias
         )
@@ -830,7 +815,7 @@ abstract public class UtilKstAbs
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogWarning(cmpOwner, strBody);
                 
                 return null;
             }
@@ -838,13 +823,7 @@ abstract public class UtilKstAbs
             if (cert == null) // MEMO: if the given alias does not exist or does not contain a certificate
             {
                 
-                /**MySystem.s_printOutError(strMethod, "nil cert");
                 
-                String strBody = "Alias does not contain any certificate";
-                
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
-                    
-                return null;**/
                 MySystem.s_printOutWarning(strMethod, "nil cert, assigning _void_");
                 strsAlgoKpu[i] = "_void_";
                 continue;
@@ -861,7 +840,7 @@ abstract public class UtilKstAbs
     
     static public String[] s_getStrsSizeKeyPubl(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kstOpen, 
         String[] strsAlias
         )
@@ -890,7 +869,7 @@ abstract public class UtilKstAbs
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
-                OPAbstract.s_showDialogWarning(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogWarning(cmpOwner, strBody);
                 
                 return null;
             }
@@ -928,7 +907,7 @@ abstract public class UtilKstAbs
     
     static public Boolean[] s_getBoosTrusted(
         Component cmpOwner, 
-        String strTitleAppli,
+   
         KeyStore kstOpen, 
         String[] strsAlias
         )
@@ -944,7 +923,7 @@ abstract public class UtilKstAbs
         // !!!!!!!!!!!!!! call to UtilKstJks, which is a subclass of this one  !!!!!!!!!!!!!!!!!!!
         KeyStore kstCertsTrustCASys = UtilKstJks.s_getKstOpenCertsTrustCASys(
             (Frame) cmpOwner, 
-            strTitleAppli,        
+            
             true // blnShowDialogError
         );
         
@@ -959,7 +938,7 @@ abstract public class UtilKstAbs
         // get aliases in default cacerts
         String[] strsAliasKstCacertsDefault = UtilKstAbs.s_getStrsAlias(
             cmpOwner, 
-            strTitleAppli, 
+     
             kstCertsTrustCASys);
         
         if (strsAliasKstCacertsDefault == null)
@@ -992,7 +971,7 @@ abstract public class UtilKstAbs
             strBody += "\n\n" + excKeyStore.getMessage();
                     
             OPAbstract.s_showDialogWarning(
-                cmpOwner, strTitleAppli, strBody);
+                cmpOwner, strBody);
                     
             return null;
         }
@@ -1049,7 +1028,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + excKeyStore.getMessage();
                     
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                     
                 return null;
             }
@@ -1063,7 +1042,7 @@ abstract public class UtilKstAbs
     
     static public Boolean[] s_getBoosEntryKpr(
         Component cmpOwner, 
-        String strTitleAppli,
+       
         KeyStore kstOpen, 
         String[] strsAlias)
     {
@@ -1103,7 +1082,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                 
                 return null;
             }
@@ -1117,7 +1096,7 @@ abstract public class UtilKstAbs
     
     static public Boolean[] s_getBoosEntryTcr(
         Component cmpOwner, 
-        String strTitleAppli,
+     
         KeyStore kstOpen, 
         String[] strsAlias)
     {
@@ -1146,7 +1125,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                 
                 return null;
             }
@@ -1160,7 +1139,7 @@ abstract public class UtilKstAbs
     
     static public Boolean[] s_getBoosEntryTcrRsa(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kstOpen, 
         String[] strsAlias)
     {
@@ -1194,7 +1173,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                 
                 return null;
             }
@@ -1227,7 +1206,7 @@ abstract public class UtilKstAbs
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
-                OPAbstract.s_showDialogError(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogError(cmpOwner, strBody);
                 
                 return null;
             }
@@ -1256,7 +1235,7 @@ abstract public class UtilKstAbs
     
     static public Boolean[] s_getBoosEntryKprRsa(
         Component cmpOwner, 
-        String strTitleAppli,
+     
         KeyStore kstOpen, 
         String[] strsAlias)
     {
@@ -1303,7 +1282,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                 
                 return null;
             }
@@ -1330,7 +1309,7 @@ abstract public class UtilKstAbs
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
-                OPAbstract.s_showDialogError(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogError(cmpOwner, strBody);
                 
                 return null;
             }
@@ -1367,7 +1346,7 @@ abstract public class UtilKstAbs
      */
     static public Boolean[] s_getBoosEntryKprXmlSign(
         Component cmpOwner, 
-        String strTitleAppli,
+       
         KeyStore kstOpen, 
         String[] strsAlias)
     {
@@ -1414,7 +1393,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                 
                 return null;
             }
@@ -1441,7 +1420,7 @@ abstract public class UtilKstAbs
                 
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
-                OPAbstract.s_showDialogError(cmpOwner, strTitleAppli, strBody);
+                OPAbstract.s_showDialogError(cmpOwner, strBody);
                 
                 return null;
             }
@@ -1479,7 +1458,7 @@ abstract public class UtilKstAbs
     
     static public Boolean[] s_getBoosSelfSigned(
         Component cmpOwner, 
-        String strTitleAppli,
+       
         KeyStore kstOpen, 
         String[] strsAlias)
     {
@@ -1508,7 +1487,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + excKeyStore.getMessage();
                 
                 OPAbstract.s_showDialogWarning(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
                 
                 return null;
             }
@@ -1537,7 +1516,7 @@ abstract public class UtilKstAbs
     
     static public String[] s_getStrsAlias(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kstOpen)
     {
         String strMethod = _f_s_strClass + "." + "s_getStrsAlias(...)";
@@ -1561,7 +1540,7 @@ abstract public class UtilKstAbs
             strBody += "\n\n" + excKeyStore.getMessage();
             
             OPAbstract.s_showDialogWarning(
-                cmpOwner, strTitleAppli, strBody);
+                cmpOwner, strBody);
             
             return null;
         }
@@ -1608,7 +1587,7 @@ abstract public class UtilKstAbs
      */
     static public String[] s_getStrsAliasPKTC(
         Component cmpOwner, 
-        String strTitleAppli,
+     
         KeyStore kstOpen)
     {
         String strMethod = _f_s_strClass + "." + "s_getStrsAliasPKTC(...)";
@@ -1631,7 +1610,7 @@ abstract public class UtilKstAbs
             strBody += "\n\n" + excKeyStore.getMessage();
             
             OPAbstract.s_showDialogError(
-                cmpOwner, strTitleAppli, strBody);
+                cmpOwner, strBody);
             
             return null;
         }
@@ -1673,7 +1652,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + exc.getMessage();
 
                 OPAbstract.s_showDialogError(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
 
                 return null;
             }
@@ -1701,7 +1680,7 @@ abstract public class UtilKstAbs
      */
     static public String[] s_getStrsAliasSK(
         Component cmpOwner, 
-        String strTitleAppli,
+      
         KeyStore kstOpen)
     {
         String strMethod = _f_s_strClass + "." + "s_getStrsAliasSK(...)";
@@ -1724,7 +1703,7 @@ abstract public class UtilKstAbs
             strBody += "\n\n" + excKeyStore.getMessage();
             
             OPAbstract.s_showDialogError(
-                cmpOwner, strTitleAppli, strBody);
+                cmpOwner, strBody);
             
             return null;
         }
@@ -1766,7 +1745,7 @@ abstract public class UtilKstAbs
                 strBody += "\n\n" + exc.getMessage();
 
                 OPAbstract.s_showDialogError(
-                    cmpOwner, strTitleAppli, strBody);
+                    cmpOwner, strBody);
 
                 return null;
             }
@@ -1794,7 +1773,7 @@ abstract public class UtilKstAbs
     
     static protected KeyStore _s_getKeystoreNew_(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         String strKeystoreType, 
         String strKeystoreProvider
         )
@@ -1828,7 +1807,7 @@ abstract public class UtilKstAbs
             MySystem.s_printOutError(strMethod, "exc caught");
             String strBody = "Got Exception.";
             strBody += "\n\n" + exc.getMessage();
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             
             return null;
         }
@@ -1850,7 +1829,7 @@ abstract public class UtilKstAbs
     **/
     static protected KeyStore _s_getKeystoreOpen_(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         File fleOpen,
         char[] chrsPassword, // nil value allowed (eg: verify signed jarred file)
         String strKeystoreType, 
@@ -1882,7 +1861,7 @@ abstract public class UtilKstAbs
             strBody += "\n  " + fleOpen.getAbsolutePath();
             
             strBody += "\n\n" + excFileNotFound.getMessage();
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
             
             return null;
         }
@@ -1918,9 +1897,9 @@ abstract public class UtilKstAbs
             strBody += strKeystoreType;
             strBody += " keystore password!";
             
-            //strBody = KTLAbs.s_getErrorBodyCheckPolicy(strBody, strTitleAppli);
+           
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
             
             return null;
         }
@@ -1933,7 +1912,7 @@ abstract public class UtilKstAbs
             String strBody = "Got NoSuchAlgorithm Exception";
             strBody += "\n\n" + excNoSuchAlgorithm.getMessage();
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
             
             return null;
         }
@@ -1946,7 +1925,7 @@ abstract public class UtilKstAbs
             String strBody = "Got Certificate Exception";
             strBody += "\n\n" + excCertificate.getMessage();
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
             
             return null;
         }
@@ -1963,7 +1942,7 @@ abstract public class UtilKstAbs
             
                 
             OPAbstract.s_showDialogWarning(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
             
             return null;
         }
@@ -1982,7 +1961,7 @@ abstract public class UtilKstAbs
             
                 
             OPAbstract.s_showDialogWarning(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
             
             return null;
         }
@@ -2000,7 +1979,7 @@ abstract public class UtilKstAbs
             strBody += strKeystoreType;
             strBody += ".";
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
 
             return null;
         }
@@ -2020,7 +1999,7 @@ abstract public class UtilKstAbs
             
             strBody += "\n\n" + excIO.getMessage();
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
             
             return null;
         }
@@ -2070,7 +2049,7 @@ abstract public class UtilKstAbs
     }
     
     static protected void _s_manageKstOpen_(
-        String strTitleAppli,
+      
         Frame frmParent,
         KeyStore kstOpen,
         String strPathAbsOpenKst,
@@ -2089,7 +2068,7 @@ abstract public class UtilKstAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             frmParent, 
-            strTitleAppli, 
+          
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -2099,7 +2078,7 @@ abstract public class UtilKstAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             frmParent, 
-            strTitleAppli, 
+          
             kstOpen);
         
         if (strsAliasSK == null)
@@ -2111,7 +2090,7 @@ abstract public class UtilKstAbs
         // get arrays for dialogTableSelectKeypair
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
-            UtilKstAbs.s_getBoosEntryTcr(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosEntryTcr(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -2119,7 +2098,7 @@ abstract public class UtilKstAbs
         }
         
         Boolean[] boosValidDatePKTC = 
-            UtilKstAbs.s_getBoosValidDatePKTC(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosValidDatePKTC(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -2127,7 +2106,7 @@ abstract public class UtilKstAbs
         }
 
         Boolean[] boosSelfSignedCertPKTC = 
-            UtilKstAbs.s_getBoosSelfSigned(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosSelfSigned(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -2135,42 +2114,42 @@ abstract public class UtilKstAbs
         }
         
         Boolean[] boosTrustedCertPKTC = 
-            UtilKstAbs.s_getBoosTrusted(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosTrusted(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil boosTrustedCertPKTC");
         }
         
-        String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(frmParent, kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil strsSizeKeyPublPKTC");
         }
         
-        String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(frmParent, kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil strsTypeCertPKTC");
         }
         
-        String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(frmParent, kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil strsAlgoSigCertPKTC");
         }
 
-        Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(frmParent, kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil dtesLastModifiedPKTC");
         }
         
-        Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(frmParent, strTitleAppli, kstOpen, strsAliasSK);
+        Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(frmParent, kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -2182,7 +2161,7 @@ abstract public class UtilKstAbs
 
         DTblsKstManage dlg = new DTblsKstManage(
             frmParent, 
-            strTitleAppli,
+          
             kstOpen,
             
             strPathAbsOpenKst,
@@ -2220,7 +2199,7 @@ abstract public class UtilKstAbs
    
     
     static protected void _s_showKstOpen_(
-        String strTitleAppli,
+     
         Frame frmParent,
         KeyStore kstOpen,
         String strPathAbs)
@@ -2235,7 +2214,7 @@ abstract public class UtilKstAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             frmParent, 
-            strTitleAppli, 
+          
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -2245,7 +2224,7 @@ abstract public class UtilKstAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             frmParent, 
-            strTitleAppli, 
+        
             kstOpen);
         
         if (strsAliasSK == null)
@@ -2253,28 +2232,13 @@ abstract public class UtilKstAbs
             MySystem.s_printOutExit(strMethod, "nil strsAliasPKTC");
         }
         
-         // ----
-        // check for existing aliases
-        // !!!!!!!!!! TEMPO IN COMMENTS, coz now also handling with SecretKeyEntry
-        /*
-        if (strsAliasPKTC.length < 1)
-        {
-            MySystem.s_printOutWarning(strMethod, "strsAliasPKTC.length < 1");
-            
-            String strBody = "keystore does not contain any entry.";
-                
-            OPAbstract.s_showDialogInfo(
-                frmParent, strTitleAppli, strBody);
-            
-            return;
-        }*/
-        
+       
         
         // --
         // get arrays for dialogTableSelectKeypair
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
-            UtilKstAbs.s_getBoosEntryTcr(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosEntryTcr(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -2282,7 +2246,7 @@ abstract public class UtilKstAbs
         }
         
         Boolean[] boosValidDatePKTC = 
-            UtilKstAbs.s_getBoosValidDatePKTC(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosValidDatePKTC(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -2290,7 +2254,7 @@ abstract public class UtilKstAbs
         }
 
         Boolean[] boosSelfSignedCertPKTC = 
-            UtilKstAbs.s_getBoosSelfSigned(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosSelfSigned(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -2298,14 +2262,14 @@ abstract public class UtilKstAbs
         }
         
         Boolean[] boosTrustedCertPKTC = 
-            UtilKstAbs.s_getBoosTrusted(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+            UtilKstAbs.s_getBoosTrusted(frmParent, kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil boosTrustedCertPKTC");
         }
         
-        String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(frmParent, kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -2313,28 +2277,28 @@ abstract public class UtilKstAbs
         }
 
         
-        String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(frmParent, kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil strsTypeCertPKTC");
         }
         
-        String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(frmParent, kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil strsAlgoSigCertPKTC");
         }
 
-        Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(frmParent, strTitleAppli, kstOpen, strsAliasPKTC);
+        Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(frmParent, kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
             MySystem.s_printOutExit(strMethod, "nil dtesLastModifiedPKTC");
         }
         
-        Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(frmParent, strTitleAppli, kstOpen, strsAliasSK);
+        Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(frmParent, kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -2346,7 +2310,7 @@ abstract public class UtilKstAbs
 
         DTblsKstView dlg = new DTblsKstView(
             frmParent, 
-            strTitleAppli,
+        
             kstOpen,
             strPathAbs
             );
@@ -2425,7 +2389,7 @@ abstract public class UtilKstAbs
         return false;
     }
 
-    static void _s_manageKstOpen_(String strTitleAppli, Frame frmParent, KeyStore kstOpen, String string) 
+    static void _s_manageKstOpen_(Frame frmParent, KeyStore kstOpen, String string) 
     {
         //throw new UnsupportedOperationException("Not yet implemented");
     }

@@ -58,7 +58,7 @@ abstract public class KTLShkAbs extends KTLAbs
     /* IN PROGRESS, TO BE USED BY keystoreManager 
      static public boolean s_createKey(
         Frame frmOwner,
-        String strTitleAppli,
+    
         String strPathAbsOpenKst, // existing keystore
         char[] chrsPasswdOpenKst,
         String strProviderKst, 
@@ -96,7 +96,7 @@ abstract public class KTLShkAbs extends KTLAbs
         }
         
         // ----
-        if (! UtilKstAbs.s_setKeyEntry(frmOwner, strTitleAppli, 
+        if (! UtilKstAbs.s_setKeyEntry(frmOwner, 
             kstOpen, strAliasShk, ShkNew, chrsPasswdShk, null))
         {
             MySystem.s_printOutError(this, strMethod, "failed");
@@ -344,8 +344,7 @@ return new String(decrypted);
 
     protected KTLShkAbs(
         Frame frmOwner, 
-        String strTitleAppli,
-        
+      
         // input
         String strPathAbsKst, // existing keystore of type [JKS-JCEKS-PKCS12]
         char[] chrsPasswdKst,
@@ -354,7 +353,7 @@ return new String(decrypted);
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsKst, chrsPasswdKst, strProviderKst);
+        super(frmOwner,  strPathAbsKst, chrsPasswdKst, strProviderKst);
     }
 
 }

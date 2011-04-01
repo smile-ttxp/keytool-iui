@@ -58,7 +58,7 @@ abstract public class KTLKprSaveNewEcJAbs extends KTLKprSaveNewEcAbs
     
     protected KTLKprSaveNewEcJAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+        
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -107,7 +107,7 @@ abstract public class KTLKprSaveNewEcJAbs extends KTLKprSaveNewEcAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+         
             
             // input
             strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -190,7 +190,7 @@ abstract public class KTLKprSaveNewEcJAbs extends KTLKprSaveNewEcAbs
         
         DTblsKstViewKeySavePK dlg = new DTblsKstViewKeySavePK(
             (Component) super._frmOwner_, 
-            super._strTitleAppli_,
+          
             kstOpen,
             super._strPathAbsKst_,
             "Create EC (Elliptic Curve) private key entry");

@@ -96,7 +96,7 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
         {
             ktl = new KTLShkOpenIOOutJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -113,7 +113,7 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
         {
             ktl = new KTLShkOpenIOOutBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -130,7 +130,7 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
         {
             ktl = new KTLShkOpenIOOutUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 
                 // input
                 super._strPathAbsKst_, 
@@ -164,11 +164,11 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
        
     }
     
-    public PTabUICmdKtlKstOpenIOShkOut(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenIOShkOut(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+      
             PTabUICmdKtlKstOpenIOShkOut._s_strHelpID
             );
     }
@@ -188,7 +188,7 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
              strDlgBody += "\n" + " . secret key file:"+ super._strPathAbsFileData_;
              
              com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogInfo(
-                super._frmOwner_, super._strTitleAppli_, strDlgBody);
+                super._frmOwner_, strDlgBody);
              
              return true;
          }
@@ -199,7 +199,7 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
         
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = "Successfully exported secret key entry:";
@@ -209,7 +209,7 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return true;
         
         
@@ -257,7 +257,7 @@ final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkO
             
             // launch dialog
             
-            UtilPemKeyPrivate.s_showFile(super._strTitleAppli_, super._frmOwner_, fle);
+            UtilPemKeyPrivate.s_showFile(super._frmOwner_, fle);
         }        
        
         

@@ -36,7 +36,7 @@ final public class KTLKprOpenEncRsaPkcs12 extends KTLKprOpenEncRsaAbs
 
     public KTLKprOpenEncRsaPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -49,7 +49,7 @@ final public class KTLKprOpenEncRsaPkcs12 extends KTLKprOpenEncRsaAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -92,7 +92,7 @@ final public class KTLKprOpenEncRsaPkcs12 extends KTLKprOpenEncRsaAbs
 
         DTblsKstSelPKOpenNoPassRsa dlg = new DTblsKstSelPKOpenNoPassRsa(
             super._frmOwner_, 
-            super._strTitleAppli_,
+        
             kstOpen,
             super._strPathAbsKst_,
             "Encrypt file with RSA private key entry's public key"
@@ -154,7 +154,7 @@ final public class KTLKprOpenEncRsaPkcs12 extends KTLKprOpenEncRsaAbs
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+           
             fleOpen,
             super._chrsPasswdKst_);
     }

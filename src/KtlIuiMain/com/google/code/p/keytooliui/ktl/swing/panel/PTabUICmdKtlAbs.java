@@ -124,34 +124,34 @@ abstract public class PTabUICmdKtlAbs extends PTabUICmdAbs
         String strTextLabelPasswd,
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+  
         int intModePassword,
         String strLabelBorderPanelIn, // nil value allowed
         String strLabelBorderPanelOut // nil value allowed
         )
     {
-        super(strHelpID, frmOwner, strTitleAppli, strLabelBorderPanelIn, strLabelBorderPanelOut);
+        super(strHelpID, frmOwner, strLabelBorderPanelIn, strLabelBorderPanelOut);
         
         this._pnlSelectPasswdKst_ = new PSelBtnTfdPasswdXlsKstAny(
             strTextLabelPasswd,
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, intModePassword);
+            frmOwner, intModePassword);
     }
     
     
     protected PTabUICmdKtlAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+      
         int intModePassword,
         String strLabelBorderPanelIn, // nil value allowed
         String strLabelBorderPanelOut // nil value allowed
         )
     {
-        super(strHelpID, frmOwner, strTitleAppli, strLabelBorderPanelIn, strLabelBorderPanelOut);
+        super(strHelpID, frmOwner, strLabelBorderPanelIn, strLabelBorderPanelOut);
         
         this._pnlSelectPasswdKst_ = new PSelBtnTfdPasswdXlsKstAny(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, intModePassword);
+            frmOwner, intModePassword);
     }
 }

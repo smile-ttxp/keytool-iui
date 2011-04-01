@@ -1,8 +1,6 @@
 package com.google.code.p.keytooliui.ktl.swing.dialog;
 
 import java.awt.Component;
-import java.awt.event.ActionEvent;
-import javax.swing.event.ListSelectionEvent;
 
 public class DTblsKstSel extends DTblsKstSelAbs
 {
@@ -18,14 +16,12 @@ public class DTblsKstSel extends DTblsKstSelAbs
 
     public DTblsKstSel(
         Component cmpFrameOwner, 
-        String strTitleAppli,
         java.security.KeyStore kseLoaded,
         String strPathAbs
         )
     {
         this(
             cmpFrameOwner, 
-            strTitleAppli,
             DTblsKstSel._f_s_strTitleThisPrefix + " " + kseLoaded.getType() + " " + DTblsKstSel._f_s_strTitleThisSuffix,
             kseLoaded,
             strPathAbs,
@@ -49,7 +45,6 @@ public class DTblsKstSel extends DTblsKstSelAbs
     
     protected DTblsKstSel(
         Component cmpFrameOwner, 
-        String strTitleAppli,
         String strTitleBar,
         java.security.KeyStore kseLoaded,
         String strPathAbs,
@@ -58,7 +53,6 @@ public class DTblsKstSel extends DTblsKstSelAbs
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
             strTitleBar,
             kseLoaded,
             strPathAbs,

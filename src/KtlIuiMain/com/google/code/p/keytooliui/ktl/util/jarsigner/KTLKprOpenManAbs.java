@@ -15,15 +15,12 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.swing.dialog.*;
 
 // ----
 import java.security.KeyStore;
-import java.security.cert.X509Certificate;
 import java.security.KeyStoreException;
-import java.security.cert.Certificate;
 // ----
 
 
@@ -55,7 +52,7 @@ abstract public class KTLKprOpenManAbs extends KTLKprOpenAbs
             
                 OPAbstract.s_showDialogWarning(
                     super._frmOwner_, 
-                    super._strTitleAppli_, 
+                   
                     strBody);
                 
                 return false;
@@ -71,7 +68,7 @@ abstract public class KTLKprOpenManAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+        
                 strBody);
                 
                 
@@ -89,8 +86,7 @@ abstract public class KTLKprOpenManAbs extends KTLKprOpenAbs
     
     protected KTLKprOpenManAbs(
         Frame frmOwner, 
-        String strTitleAppli,
-        
+       
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
         char[] chrsPasswdOpenKst,
@@ -100,7 +96,7 @@ abstract public class KTLKprOpenManAbs extends KTLKprOpenAbs
         String strAlias
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._kstOpen_ = kstOpen;
         this._strAlias_ = strAlias;
@@ -127,7 +123,7 @@ abstract public class KTLKprOpenManAbs extends KTLKprOpenAbs
                 
         DPasswordOpen dlg = new DPasswordOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+         
             false // blnNoPasswdAllowed
                 );
                     

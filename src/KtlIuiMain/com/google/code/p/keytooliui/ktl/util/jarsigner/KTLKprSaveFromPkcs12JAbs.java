@@ -12,26 +12,17 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
-import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
 import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
-import java.io.*;
 import java.util.*;
 
 // subclasses: Jceks or Jks
@@ -58,7 +49,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
         
         String[] strsAlias = UtilKstAbs.s_getStrsAlias(
             super._frmOwner_, 
-            super._strTitleAppli_, 
+          
             kstOpenTo);
         
         if (strsAlias == null)
@@ -71,7 +62,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
         // --
         
         Boolean[] boosEntryKpr = UtilKstAbs.s_getBoosEntryKpr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+            super._frmOwner_,  kstOpenTo, strsAlias);
         
         if (boosEntryKpr == null)
         {
@@ -81,7 +72,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
         }
         
         Boolean[] boosEntryTcr = UtilKstAbs.s_getBoosEntryTcr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+            super._frmOwner_,  kstOpenTo, strsAlias);
         
         if (boosEntryTcr == null)
         {
@@ -92,7 +83,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
         
         
         Boolean[] boosSelfSignedCert = UtilKstAbs.s_getBoosSelfSigned(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+            super._frmOwner_,  kstOpenTo, strsAlias);
         
         if (boosSelfSignedCert == null)
         {
@@ -102,7 +93,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
         }
         
         Boolean[] boosTrustedCert = 
-            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+            UtilKstAbs.s_getBoosTrusted(super._frmOwner_,  kstOpenTo, strsAlias);
         
         if (boosTrustedCert == null)
         {
@@ -111,7 +102,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
             return false;
         }
         
-        String[] strsSizeKeyPubl = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+        String[] strsSizeKeyPubl = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,  kstOpenTo, strsAlias);
         
         if (strsSizeKeyPubl == null)
         {
@@ -120,7 +111,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
             return false;
         }
         
-        String[] strsAlgoKeyPubl = UtilKstAbs.s_getStrsAlgoKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+        String[] strsAlgoKeyPubl = UtilKstAbs.s_getStrsAlgoKeyPubl(super._frmOwner_,  kstOpenTo, strsAlias);
         
         if (strsAlgoKeyPubl == null)
         {
@@ -129,7 +120,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
             return false;
         }
         
-        String[] strsTypeCert = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+        String[] strsTypeCert = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,  kstOpenTo, strsAlias);
         
         if (strsTypeCert == null)
         {
@@ -138,7 +129,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
             return false;
         }
         
-        String[] strsAlgoSigCert = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+        String[] strsAlgoSigCert = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, kstOpenTo, strsAlias);
         
         if (strsAlgoSigCert == null)
         {
@@ -147,7 +138,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
             return false;
         }
 
-        Date[] dtesLastModified = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, super._strTitleAppli_, kstOpenTo, strsAlias);
+        Date[] dtesLastModified = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, kstOpenTo, strsAlias);
 
         if (dtesLastModified == null)
         {
@@ -174,7 +165,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
        
         DTblEntryKprSaveAny dlg = new DTblEntryKprSaveAny(
             super._frmOwner_, 
-            super._strTitleAppli_,
+         
             kstOpenTo,
             true // blnIsPassword
             );
@@ -216,7 +207,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
         // ----
         // store privateKeyFromPkcs12 & crtsFromPkcs12 associated with alias & password in kstOpenTo
         
-        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_, super._strTitleAppli_, 
+        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_, 
             kstOpenTo, strAliasKpr, pkyPrivateFromPkcs12, chrsPasswdKpr, crtsFromPkcs12))
         {
             MySystem.s_printOutError(this, strMethod, "failed");
@@ -229,7 +220,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
     
     protected KTLKprSaveFromPkcs12JAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // 
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS-PKCS12] 
@@ -244,7 +235,7 @@ abstract public class KTLKprSaveFromPkcs12JAbs extends KTLKprSaveFromPkcs12Abs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+         
             strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS-PKCS12] 
             chrsPasswdOpenKst,
             strPathAbsKstFromPkcs12, // keystore of type PKCS12 (a certificate file suffixed .pfx) 

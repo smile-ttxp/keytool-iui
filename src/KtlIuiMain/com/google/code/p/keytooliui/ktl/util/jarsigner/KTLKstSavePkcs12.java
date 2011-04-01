@@ -57,7 +57,7 @@ final public class KTLKstSavePkcs12 extends KTLKstSaveAbs
         String strMethod = "doJob()";
         
         KeyStore kstNew = UtilKstPkcs12.s_getKeystoreNew(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             super._strProviderKst_);
             
         MySystem.s_printOutTrace(this, strMethod, "super._strProviderKst_=" + super._strProviderKst_);
@@ -80,14 +80,14 @@ final public class KTLKstSavePkcs12 extends KTLKstSaveAbs
     
     public KTLKstSavePkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         String strPathAbs,
         char[] chrsPasswd
         )
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+         
             strPathAbs, 
             chrsPasswd, 
             KTLAbs.f_s_strProviderKstBC

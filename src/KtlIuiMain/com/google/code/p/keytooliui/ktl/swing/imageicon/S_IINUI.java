@@ -27,7 +27,7 @@ public class S_IINUI extends S_IINShared
         File.separator +
         "keytooliui" +
         File.separator +
-        com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir +
+        System.getProperty("_appli.name.short") +
         File.separator +
         "images" +
         File.separator +
@@ -46,7 +46,7 @@ public class S_IINUI extends S_IINShared
         "/" +
         "keytooliui" +
         "/" +
-        com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir +
+        System.getProperty("_appli.name.short") +
         "/" +
         "images" +
         "/" +

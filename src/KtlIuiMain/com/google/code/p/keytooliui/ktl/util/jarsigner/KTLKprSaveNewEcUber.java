@@ -79,7 +79,7 @@ public class KTLKprSaveNewEcUber extends KTLKprSaveNewEcJAbs
 
         // memo: keystore should be of type "Uber", provided by "SunJCE"
         File fleOpenKstUber = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKstUber == null)
         {
@@ -98,7 +98,7 @@ public class KTLKprSaveNewEcUber extends KTLKprSaveNewEcJAbs
         }
         
         KeyStore kstOpenUber = UtilKstUber.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstUber,
             super._chrsPasswdKst_);
         
@@ -124,7 +124,7 @@ public class KTLKprSaveNewEcUber extends KTLKprSaveNewEcJAbs
     
     public KTLKprSaveNewEcUber(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Uber 
@@ -170,7 +170,7 @@ public class KTLKprSaveNewEcUber extends KTLKprSaveNewEcJAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+          
         
             // input
             strPathAbsOpenKst, // existing keystore of type Uber 

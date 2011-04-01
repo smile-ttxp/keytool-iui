@@ -141,7 +141,7 @@ import com.jgoodies.plaf.Options;
     // PROTECTED
 
     protected FMainUIAbs(
-        String strTitleAppli,
+
         java.awt.Image imgIcon,
         java.awt.event.WindowListener winListenerParent,
         //javax.help.HelpBroker hbrHelpStandard,
@@ -149,7 +149,7 @@ import com.jgoodies.plaf.Options;
         )
     {
         super(
-            strTitleAppli,
+         
             imgIcon,
             winListenerParent,
             //hbrHelpStandard, 
@@ -157,7 +157,7 @@ import com.jgoodies.plaf.Options;
             true // blnShowDialogLoadingProgress
             );
                   
-        setTitle(strTitleAppli);
+        setTitle(System.getProperty("_appli.title"));
     }
     
     

@@ -42,12 +42,12 @@ public class PSelBtnTfdFileOpenAnyDirViewXml extends PSelBtnTfdFileOpenAnyDir
     public PSelBtnTfdFileOpenAnyDirViewXml(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         ItemListener itmListenerParent,
         String strLabel
             ) 
     {
-        super(docListenerParent, frmParent, strTitleAppli, itmListenerParent, strLabel);
+        super(docListenerParent, frmParent, itmListenerParent, strLabel);
         
         this._btnViewXml = new BESMore16(this);  
     }

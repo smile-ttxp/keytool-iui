@@ -17,10 +17,9 @@ public class XmlVerif extends XmlAbs
     
     public XmlVerif(
             Frame frmOwner, 
-            String strTitleAppli,
             String strPathAbsFile)
     {
-        super(frmOwner, strTitleAppli, strPathAbsFile);
+        super(frmOwner, strPathAbsFile);
     }
     
     public boolean doJob()
@@ -41,7 +40,7 @@ public class XmlVerif extends XmlAbs
             strBody += "\n" + exc.getMessage();            
             strBody += "\n\n" + "More: see your session.log";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_, strBody);
             
             return false;
         }
@@ -105,7 +104,7 @@ public class XmlVerif extends XmlAbs
             strBody += "\n\n" + "XML file location:";            
             strBody += "\n  " + super._strPathAbsFile_;
             
-            OPAbstract.s_showDialogInfo(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogInfo(super._frmOwner_, strBody);
         }
         
         else
@@ -117,7 +116,7 @@ public class XmlVerif extends XmlAbs
             strBody += "\n\n" + "XML file location:";            
             strBody += "\n  " + super._strPathAbsFile_;
             
-            OPAbstract.s_showDialogWarning(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmOwner_, strBody);
         }
         
     }

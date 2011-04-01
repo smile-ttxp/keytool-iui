@@ -4,28 +4,19 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
     "UtilKstJks" ==> "Utility, keystore of type JKS (Java keystore)"
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 import com.google.code.p.keytooliui.ktl.io.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.io.*;
 
 // ----
-import java.security.Key;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
-import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
 // ----
 
 
 import java.io.*;
 import java.awt.*;
-import java.util.*;
 
 
 final public class UtilKstAll extends UtilKstAbs
@@ -41,13 +32,11 @@ final public class UtilKstAll extends UtilKstAbs
     
     
     static public void s_manageFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilKstAll._f_s_strClass + "." + "s_manageFile(...)";
         
         File fleOpenKst = S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             S_FileExtensionUI.s_getKstAll(), 
@@ -76,7 +65,6 @@ final public class UtilKstAll extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
             true // blnNoPasswdAllowed
                 );
                     
@@ -115,7 +103,7 @@ final public class UtilKstAll extends UtilKstAbs
         if (S_FileExtensionUI.s_isKstJks(fleOpenKst.getAbsolutePath()))
         {
             kstOpen = UtilKstJks.s_getKeystoreOpen(
-                frmParent, strTitleAppli,
+                frmParent,
                 fleOpenKst,
                 chrsPasswdKst);
                 
@@ -125,7 +113,7 @@ final public class UtilKstAll extends UtilKstAbs
         else if (S_FileExtensionUI.s_isKstJceks(fleOpenKst.getAbsolutePath()))
         {
             kstOpen = UtilKstJceks.s_getKeystoreOpen(
-                frmParent, strTitleAppli,
+                frmParent,
                 fleOpenKst,
                 chrsPasswdKst);
                 
@@ -135,7 +123,7 @@ final public class UtilKstAll extends UtilKstAbs
         else if (S_FileExtensionUI.s_isKstPkcs12(fleOpenKst.getAbsolutePath()))
         {
             kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
-                frmParent, strTitleAppli,
+                frmParent,
                 fleOpenKst,
                 chrsPasswdKst);
                 
@@ -145,7 +133,7 @@ final public class UtilKstAll extends UtilKstAbs
         else if (S_FileExtensionUI.s_isKstBks(fleOpenKst.getAbsolutePath()))
         {
             kstOpen = UtilKstBks.s_getKeystoreOpen(
-                frmParent, strTitleAppli,
+                frmParent,
                 fleOpenKst,
                 chrsPasswdKst);
                 
@@ -155,7 +143,7 @@ final public class UtilKstAll extends UtilKstAbs
         else if (S_FileExtensionUI.s_isKstUber(fleOpenKst.getAbsolutePath()))
         {
             kstOpen = UtilKstUber.s_getKeystoreOpen(
-                frmParent, strTitleAppli,
+                frmParent,
                 fleOpenKst,
                 chrsPasswdKst);
                 
@@ -178,7 +166,6 @@ final public class UtilKstAll extends UtilKstAbs
         }
         
         UtilKstAbs._s_manageKstOpen_(
-            strTitleAppli, 
             frmParent, 
             kstOpen,
             fleOpenKst.getAbsolutePath(),
@@ -189,13 +176,11 @@ final public class UtilKstAll extends UtilKstAbs
     
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilKstAll._f_s_strClass + "." + "s_showFile(...)";
         
         File fleOpenKst = S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             S_FileExtensionUI.s_getKstAll(), 
@@ -214,41 +199,52 @@ final public class UtilKstAll extends UtilKstAbs
         
         if (S_FileExtensionUI.s_isKstJks(fleOpenKst.getAbsolutePath()))
         {
-            UtilKstJks._s_showFile_(strTitleAppli, frmParent, fleOpenKst);
+            UtilKstJks._s_showFile_(
+                    frmParent, fleOpenKst);
             return;
         }
         
         if (S_FileExtensionUI.s_isKstJceks(fleOpenKst.getAbsolutePath()))
         {
-            UtilKstJceks._s_showFile_(strTitleAppli, frmParent, fleOpenKst);
+            UtilKstJceks._s_showFile_(
+                    frmParent, fleOpenKst);
             return;
         }
         
         if (S_FileExtensionUI.s_isKstPkcs12(fleOpenKst.getAbsolutePath()))
         {     
-            char[] chrsPasswdKst = UtilKstAll._s_getPassword(frmParent, strTitleAppli);
+            char[] chrsPasswdKst = UtilKstAll._s_getPassword(frmParent
+                    );
             
             if (chrsPasswdKst == null)
                 return;
             
-            UtilKstPkcs12._s_showFile_(strTitleAppli, frmParent, fleOpenKst, chrsPasswdKst);
+            UtilKstPkcs12._s_showFile_(
+
+                    frmParent, fleOpenKst, chrsPasswdKst);
+
             return;
         }
         
         if (S_FileExtensionUI.s_isKstBks(fleOpenKst.getAbsolutePath()))
         {
-            UtilKstBks._s_showFile_(strTitleAppli, frmParent, fleOpenKst);
+            UtilKstBks._s_showFile_(
+                    frmParent, fleOpenKst);
+
             return;
         }
         
         if (S_FileExtensionUI.s_isKstUber(fleOpenKst.getAbsolutePath()))
         {
-            char[] chrsPasswdKst = UtilKstAll._s_getPassword(frmParent, strTitleAppli);
+            char[] chrsPasswdKst = UtilKstAll._s_getPassword(frmParent
+                    );
             
             if (chrsPasswdKst == null)
                 return;
             
-            UtilKstUber._s_showFile_(strTitleAppli, frmParent, fleOpenKst, chrsPasswdKst);
+            UtilKstUber._s_showFile_(
+                    frmParent, fleOpenKst, chrsPasswdKst);
+
             return;
         }
         
@@ -260,7 +256,7 @@ final public class UtilKstAll extends UtilKstAbs
     // --------------
     // static private
     
-    static private char[] _s_getPassword(Frame frmParent, String strTitleAppli)
+    static private char[] _s_getPassword(Frame frmParent)
     {
         String strMethod = "UtilKstAll._s_getPassword(...)";
         
@@ -276,7 +272,6 @@ final public class UtilKstAll extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
             true // blnNoPasswdAllowed
                 );
                     

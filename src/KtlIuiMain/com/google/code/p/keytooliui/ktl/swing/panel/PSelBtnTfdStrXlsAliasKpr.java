@@ -53,13 +53,12 @@ final public class PSelBtnTfdStrXlsAliasKpr extends PSelBtnTfdStrXlsAliasAbs
     
      public PSelBtnTfdStrXlsAliasKpr(
         javax.swing.event.DocumentListener docListenerParent,
-        Frame frmParent, 
-        String strTitleAppli)
+        Frame frmParent)
     {
         super(
             docListenerParent,
             frmParent,
-            strTitleAppli,
+
             PSelBtnTfdStrXlsAliasKpr.f_s_strDocPropVal,
             PSelBtnTfdStrXlsAliasKpr._f_s_strLabelPrefix
         );        

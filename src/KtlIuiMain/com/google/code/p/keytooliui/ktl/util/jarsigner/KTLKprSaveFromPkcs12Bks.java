@@ -10,29 +10,18 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
-import java.security.KeyPair;
-import java.security.PrivateKey;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
-import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
 import java.io.*;
-import java.util.*;
 
 final public class KTLKprSaveFromPkcs12Bks extends KTLKprSaveFromPkcs12JAbs
 {
@@ -65,7 +54,7 @@ final public class KTLKprSaveFromPkcs12Bks extends KTLKprSaveFromPkcs12JAbs
         
         // memo: PKCS12 keystore type, provided by "BC" or "SunRsaSign"
         File fleOpenKstFromPkcs12 = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKstFromPkcs12_);
+            super._frmOwner_,  super._strPathAbsKstFromPkcs12_);
         
         if (fleOpenKstFromPkcs12 == null)
         {
@@ -80,7 +69,7 @@ final public class KTLKprSaveFromPkcs12Bks extends KTLKprSaveFromPkcs12JAbs
             MySystem.s_printOutExit(this, strMethod, "nil super._chrsPasswdKstFromPkcs12_"); 
         
         KeyStore kstOpenFromPkcs12 = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_,
             fleOpenKstFromPkcs12,
             super._chrsPasswdKstFromPkcs12_);
         
@@ -93,7 +82,7 @@ final public class KTLKprSaveFromPkcs12Bks extends KTLKprSaveFromPkcs12JAbs
             
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -108,7 +97,7 @@ final public class KTLKprSaveFromPkcs12Bks extends KTLKprSaveFromPkcs12JAbs
             MySystem.s_printOutExit(this, strMethod, "nil super._chrsPasswdKst_"); 
         
         KeyStore kstOpen = UtilKstBks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -136,7 +125,7 @@ final public class KTLKprSaveFromPkcs12Bks extends KTLKprSaveFromPkcs12JAbs
     
     public KTLKprSaveFromPkcs12Bks(
         Frame frmOwner, 
-        String strTitleAppli,
+       
         
         // 
         String strPathAbsOpenKst, // existing keystore of type BKS 
@@ -149,7 +138,7 @@ final public class KTLKprSaveFromPkcs12Bks extends KTLKprSaveFromPkcs12JAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+        
         
             // 
             strPathAbsOpenKst, // existing keystore of type BKS 

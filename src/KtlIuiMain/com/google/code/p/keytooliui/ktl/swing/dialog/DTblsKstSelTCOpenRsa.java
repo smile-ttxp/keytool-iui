@@ -54,7 +54,7 @@ public class DTblsKstSelTCOpenRsa extends DTblsKstSelTCOpen
         
         Boolean[] boosIsTCRsaEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcrRsa(this,
-            super._strTitleAppli_, super._kstOpen_, strsAliasPKTC);
+            super._kstOpen_, strsAliasPKTC);
         
         if (boosIsTCRsaEntryPKTC == null)
         {
@@ -71,7 +71,7 @@ public class DTblsKstSelTCOpenRsa extends DTblsKstSelTCOpen
             String strBody = "No valid entry found in selected keystore."; 
             strBody += "\n\n" + "Choosen keystore does not contain any entry of type trusted certificate with RSA public key algorithm.";
    
-            OPAbstract.s_showDialogWarning(this, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(this, strBody);
             return false;
         }
         
@@ -115,12 +115,12 @@ public class DTblsKstSelTCOpenRsa extends DTblsKstSelTCOpen
     
     public DTblsKstSelTCOpenRsa(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+      
         java.security.KeyStore kseLoaded,
         String strPathAbs,
         String strTitleSuffix)
     {
-        super(cmpFrameOwner, strTitleAppli, kseLoaded, strPathAbs, strTitleSuffix);
+        super(cmpFrameOwner, kseLoaded, strPathAbs, strTitleSuffix);
     }
     
     // ---------

@@ -64,7 +64,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
         
     protected KTLCcaSaveNewAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // output
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -78,7 +78,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
         String strFormatFileCrt
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         // input
         this._strPathAbsCrt_ = strPathAbsCrt;
@@ -107,7 +107,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             
                 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return null;
         }
@@ -123,7 +123,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             strBody += "  " + this._strPathAbsCrt_;
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return null;
         }
@@ -131,7 +131,6 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
         // memo: this one takes care of DER-PKCS7-PEM crt file
         X509Certificate[] crtsX509ToImport = UtilCrtX509.s_load(
             super._frmOwner_, 
-            super._strTitleAppli_,
             fleOpenCrt);
         
         if (crtsX509ToImport == null)
@@ -144,7 +143,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             strBody += "  " + this._strPathAbsCrt_;
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
                         
             return null;
         }
@@ -160,7 +159,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             strBody += "  " + this._strPathAbsCrt_;
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -182,7 +181,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             strBody += "in root CA certs keystore";
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -211,7 +210,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             strBody += "in root CA certs keystore";
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return null;
             
@@ -236,7 +235,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             strBody += "More in session.log file.";
 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
 
             return null;
         }
@@ -267,7 +266,7 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
 
 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
 
             return null;
         }
@@ -279,11 +278,11 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
 
             Toolkit.getDefaultToolkit().beep();
 
-            String strWarningTitle = super._strTitleAppli_;
+            /*String strWarningTitle = System.getProperty("_appli.title");
             strWarningTitle += " - ";
             strWarningTitle += "warning";
             strWarningTitle += " - ";
-            strWarningTitle += "confirm";
+            strWarningTitle += "confirm";*/
 
 
             String strWarningBody = "Trusted certificate entry already exists in root CA certs keystore, under alias ";
@@ -297,7 +296,9 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
             strWarningBody += "Do you still want to install this certificate?";
 
             if (! OPAbstract.s_showWarningConfirmDialog(
-                super._frmOwner_, strWarningTitle, strWarningBody))
+                super._frmOwner_, 
+                //strWarningTitle,
+                strWarningBody))
             {
                 MySystem.s_printOutTrace(this, strMethod, "action cancelled");
                 return null;
@@ -314,20 +315,22 @@ abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
 
 
             OPAbstract.s_showDialogInfo(
-            super._frmOwner_, super._strTitleAppli_, strBody);
+            super._frmOwner_, strBody);
 
             // next show this certificate
-            UtilCrtX509.s_show(super._frmOwner_, super._strTitleAppli_, crtX509);
+            UtilCrtX509.s_show(super._frmOwner_, crtX509);
 
             // then show question-confirm dialog
-            String strTitleConfirm = super._strTitleAppli_ + " - " + "confirm";   
+            //String strTitleConfirm = System.getProperty("_appli.title") + " - " + "confirm";
 
 
             String strBodyConfirm = "Trust this certificate?";
             strBodyConfirm += "\n\n";
 
             if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-                super._frmOwner_, strTitleConfirm, strBodyConfirm))
+                super._frmOwner_, 
+                //strTitleConfirm,
+                strBodyConfirm))
             {
                 MySystem.s_printOutTrace(this, strMethod, "action cancelled");
                 return null;

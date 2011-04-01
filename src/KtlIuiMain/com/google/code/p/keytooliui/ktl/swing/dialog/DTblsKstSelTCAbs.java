@@ -203,7 +203,7 @@ abstract public class DTblsKstSelTCAbs extends DTblsKstSel
     
     protected DTblsKstSelTCAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         String strTitleSuffix,
         java.security.KeyStore kseLoaded,
         String strPathAbs,
@@ -214,7 +214,7 @@ abstract public class DTblsKstSelTCAbs extends DTblsKstSel
     {
         super(
                 cmpFrameOwner, 
-                strTitleAppli, 
+         
                 strTitleSuffix, 
                 kseLoaded,
                 strPathAbs,
@@ -322,9 +322,9 @@ abstract public class DTblsKstSelTCAbs extends DTblsKstSel
         if (strAlias.length() < 1)
         {
             if (this._blnSave)
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter alias");
+                OPAbstract.s_showDialogWarning(this, "Please enter alias");
             else
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please click a valid alias");
+                OPAbstract.s_showDialogWarning(this, "Please click a valid alias");
             
             return false;
         }
@@ -345,7 +345,7 @@ abstract public class DTblsKstSelTCAbs extends DTblsKstSel
                 strBody += "\n\n";
                 strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleAlias();
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -368,7 +368,7 @@ abstract public class DTblsKstSelTCAbs extends DTblsKstSel
                 strBody += "\n\n";
                 strBody += "(Memo: aliases are case-insensitive)";
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -386,7 +386,7 @@ abstract public class DTblsKstSelTCAbs extends DTblsKstSel
                 strBody += strAlias;
                 strBody += "\"";
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }

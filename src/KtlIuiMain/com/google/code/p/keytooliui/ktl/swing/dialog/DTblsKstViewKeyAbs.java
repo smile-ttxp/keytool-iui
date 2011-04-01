@@ -123,7 +123,7 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
     
     protected DTblsKstViewKeyAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+      
         String strTitleSuffix,
         java.security.KeyStore kseLoaded,
         String strPathAbs,
@@ -135,7 +135,7 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
     {
         super(
                 cmpFrameOwner, 
-                strTitleAppli, 
+         
                 strTitleSuffix,
                 kseLoaded,
                 strPathAbs,
@@ -267,9 +267,9 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
         if (strAlias.length() < 1)
         {
             if (this._blnSave)
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter alias");
+                OPAbstract.s_showDialogWarning(this, "Please enter alias");
             else
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please click a valid alias");
+                OPAbstract.s_showDialogWarning(this, "Please click a valid alias");
             
             return false;
         }
@@ -290,7 +290,7 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
                 strBody += "\n\n";
                 strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleAlias();
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -313,7 +313,7 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
                 strBody += "\n\n";
                 strBody += "(Memo: aliases are case-insensitive)";
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -331,7 +331,7 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
                 strBody += strAlias;
                 strBody += "\"";
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -375,21 +375,21 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
             
             if (strEnterNew.length() < 1)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter new password");
+                OPAbstract.s_showDialogWarning(this, "Please enter new password");
                 
                 return false;
             }
             
             if (strConfirmNew.length() < 1)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please confirm new password");
+                OPAbstract.s_showDialogWarning(this, "Please confirm new password");
                 
                 return false;
             }
             
             if (strEnterNew.compareTo(strConfirmNew) != 0)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Passwords do not match");
+                OPAbstract.s_showDialogWarning(this, "Passwords do not match");
                 
                 return false;
             }
@@ -406,7 +406,7 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
                 strBody += "\n\n";
                 strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRulePassword();
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }

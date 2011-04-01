@@ -38,13 +38,13 @@ public class DTblsKstViewTCSaveIn extends DTblsKstViewTCAbs
     
     public DTblsKstViewTCSaveIn(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         java.security.KeyStore kseLoaded,
         String strPathAbs)
     {
         super(
                 cmpFrameOwner, 
-                strTitleAppli, 
+             
                 DTblsKstViewTCSaveIn._f_s_strTitleThisPrefix + " " + kseLoaded.getType() + " " + DTblsKstViewTCSaveIn._f_s_strTitleThisSuffix,
                 kseLoaded,
                 strPathAbs,

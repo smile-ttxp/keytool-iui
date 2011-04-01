@@ -28,7 +28,7 @@ final public class KTLShkOpenIOInBks extends KTLShkOpenIOInKPAbs
 
     public KTLShkOpenIOInBks(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -40,7 +40,7 @@ final public class KTLShkOpenIOInBks extends KTLShkOpenIOInKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 
@@ -60,7 +60,7 @@ final public class KTLShkOpenIOInBks extends KTLShkOpenIOInKPAbs
     {
         return UtilKstBks.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+     
             fleOpen,
             super._chrsPasswdKst_);
     }

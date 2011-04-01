@@ -33,19 +33,15 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // memo: assigning full class path coz ambiguous: same class name in several Java packages
-import java.security.PublicKey;
 import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 
-import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
 import java.awt.*;
@@ -86,7 +82,7 @@ public class KTLKprSaveNewDsaPkcs12 extends KTLKprSaveNewDsaAbs
         
         // memo: keystore should be of type "PKCS12", provided by "?"
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -105,7 +101,7 @@ public class KTLKprSaveNewDsaPkcs12 extends KTLKprSaveNewDsaAbs
         }
         
         KeyStore kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -131,7 +127,7 @@ public class KTLKprSaveNewDsaPkcs12 extends KTLKprSaveNewDsaAbs
     
     public KTLKprSaveNewDsaPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -177,7 +173,7 @@ public class KTLKprSaveNewDsaPkcs12 extends KTLKprSaveNewDsaAbs
         
         super(
             frmOwner, 
-            strTitleAppli,
+       
         
             // input
             strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -272,7 +268,7 @@ public class KTLKprSaveNewDsaPkcs12 extends KTLKprSaveNewDsaAbs
         
         DTblsKstViewKeySavePKNoPass dlg = new DTblsKstViewKeySavePKNoPass(
             (Component) super._frmOwner_, 
-            super._strTitleAppli_,
+         
             kstOpen,
             super._strPathAbsKst_,
             "Create DSA private key entry");
@@ -422,7 +418,7 @@ public class KTLKprSaveNewDsaPkcs12 extends KTLKprSaveNewDsaAbs
             
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
                 
             return false;**/
         }
@@ -436,7 +432,7 @@ public class KTLKprSaveNewDsaPkcs12 extends KTLKprSaveNewDsaAbs
             MySystem.s_printOutExit(this, strMethod, "nil pkyKeyPrivate");
         }
         
-        if (! UtilKstPkcs12.s_setKeyEntry(super._frmOwner_, super._strTitleAppli_, 
+        if (! UtilKstPkcs12.s_setKeyEntry(super._frmOwner_, 
             kstOpen, strAliasKpr, pkyKeyPrivate, new X509Certificate[]{ crtX509New }))
         {
             MySystem.s_printOutError(this, strMethod, "failed");

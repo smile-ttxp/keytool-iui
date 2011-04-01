@@ -63,7 +63,7 @@ final public class KTLTcrSaveCrtInUber extends KTLTcrSaveCrtInDMAbs
         
         // memo: keystore should be of type "Uber", provided by "?"
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -82,7 +82,7 @@ final public class KTLTcrSaveCrtInUber extends KTLTcrSaveCrtInDMAbs
         }
         
         KeyStore kstOpen = UtilKstUber.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -109,7 +109,7 @@ final public class KTLTcrSaveCrtInUber extends KTLTcrSaveCrtInDMAbs
     
     public KTLTcrSaveCrtInUber(
         Frame frmOwner, 
-        String strTitleAppli,
+       
         
         // output
         String strPathAbsOpenKst, // existing keystore of type Uber 
@@ -124,7 +124,7 @@ final public class KTLTcrSaveCrtInUber extends KTLTcrSaveCrtInDMAbs
         
         super(
             frmOwner, 
-            strTitleAppli,
+       
         
           
             strPathAbsOpenKst, // existing keystore of type Uber 

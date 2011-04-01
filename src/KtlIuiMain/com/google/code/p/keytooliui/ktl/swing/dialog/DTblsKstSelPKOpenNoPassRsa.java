@@ -54,7 +54,7 @@ public class DTblsKstSelPKOpenNoPassRsa extends DTblsKstSelPKOpenNoPass
         
         Boolean[] boosIsPKRsaEntryPKTC = 
             UtilKstAbs.s_getBoosEntryKprRsa(this,
-            super._strTitleAppli_, super._kstOpen_, strsAliasPKTC);
+            super._kstOpen_, strsAliasPKTC);
         
         if (boosIsPKRsaEntryPKTC == null)
         {
@@ -71,7 +71,7 @@ public class DTblsKstSelPKOpenNoPassRsa extends DTblsKstSelPKOpenNoPass
             String strBody = "No valid entry found in selected keystore."; 
             strBody += "\n\n" + "Choosen keystore does not contain any entry of type private key with RSA public key algorithm.";
    
-            OPAbstract.s_showDialogWarning(this, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(this, strBody);
             return false;
         }
         
@@ -116,12 +116,12 @@ public class DTblsKstSelPKOpenNoPassRsa extends DTblsKstSelPKOpenNoPass
     
     public DTblsKstSelPKOpenNoPassRsa(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+     
         java.security.KeyStore kseLoaded,
         String strPathAbs,
         String strTitlePrefix)
     {
-        super(cmpFrameOwner, strTitleAppli, kseLoaded, strPathAbs, strTitlePrefix);
+        super(cmpFrameOwner, kseLoaded, strPathAbs, strTitlePrefix);
     }
     
     // ---------

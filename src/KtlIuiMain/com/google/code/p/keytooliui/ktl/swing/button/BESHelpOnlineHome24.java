@@ -38,12 +38,12 @@ final public class BESHelpOnlineHome24 extends BESHelpOnlineAbs
     // ------
     // PUBLIC
         
-    public BESHelpOnlineHome24(java.awt.Component cmpFrameOwner, String strTitleApplication)
+    public BESHelpOnlineHome24(java.awt.Component cmpFrameOwner)
     {
         
         super(
             cmpFrameOwner,
-            strTitleApplication,
+       
             BESHelpOnlineHome24._STR_NAME_ICON,
             MIHelpOnlineHome.STR_TEXT,
             24,

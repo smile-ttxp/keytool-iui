@@ -1432,8 +1432,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         String strTypeKeypair)
     {
         
-        // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+
        
         
         String strDlgBody = "Successfully created " + strTypeKeypair + " keypair." + "\n" +
@@ -1442,7 +1441,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return;
             
         // show file
@@ -1451,14 +1450,14 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJceks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJceks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
@@ -1475,7 +1474,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
                     chrsPasswdKst = strPasswdKst.toCharArray();
             }
             
-            UtilKstPkcs12.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstPkcs12.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     chrsPasswdKst);
             return;
         }
@@ -1483,7 +1482,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstBks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstBks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
@@ -1500,7 +1499,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
                     chrsPasswdKst = strPasswdKst.toCharArray();
             }
             
-            UtilKstUber.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstUber.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     chrsPasswdKst);
             return;
         }
@@ -2020,7 +2019,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
     protected PTabUICmdKtlKstOpenCrKprAbs(
         String strHelpID, 
         Frame frmOwner, 
-        String strTitleAppli,
+  
         Integer[] itgsSizeListKpr,
         boolean blnAllowTypePkcs12,
         boolean blnAllowTypeBks,
@@ -2030,7 +2029,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+          
             true, // blnAllowTypeJks
             true, // blnAllowTypeJceks
             blnAllowTypePkcs12,
@@ -2046,7 +2045,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         
         this._pnlSelectValidityKpr = new PSelBtnTfdRngIntValidityKpr(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli);
+            frmOwner);
 
         // ----
         // cert info
@@ -2055,35 +2054,35 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         
         this._pnlSelectCN = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Common (or domain) name:",
+            frmOwner, "Common (or domain) name:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValCN,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldCN // blnFieldRequired
             );
             
         this._pnlSelectOU = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Organizational unit:",
+            frmOwner, "Organizational unit:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValOU,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldOU // blnFieldRequired
             );
             
         this._pnlSelectO = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Organization:",
+            frmOwner, "Organization:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValO,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldO // blnFieldRequired
             );
             
         this._pnlSelectL = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "City or locality:",
+            frmOwner, "City or locality:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValL,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldL // blnFieldRequired
             );
             
         this._pnlSelectST = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "State or province:",
+            frmOwner, "State or province:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValST,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldST // blnFieldRequired
             );
@@ -2092,14 +2091,14 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
             
         this._pnlSelectC = new PSelBtnTfdStrXlsCountryCode(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "2-letter country code:",
+            frmOwner, "2-letter country code:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValC,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldC
             );
             
         this._pnlSelectE = new PSelBtnTfdStrW20Email(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli,
+            frmOwner,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValEMAIL,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldEMAIL // blnFieldRequired
             );
@@ -2109,91 +2108,91 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         
         this._pnlSelectT = new PSelBtnTfdStrW10(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Title:",
+            frmOwner, "Title:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValT,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldT // blnFieldRequired
             );
         
         this._pnlSelectSN = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Device serial number name:",
+            frmOwner, "Device serial number name:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValSN,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldSN // blnFieldRequired
             );
         
         this._pnlSelectSTREET = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Street:",
+            frmOwner, "Street:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValSTREET,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldSTREET // blnFieldRequired
             );
         
         this._pnlSelectBUSINESS_CATEGORY = new PSelBtnTfdStrW30(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Business category:",
+            frmOwner, "Business category:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValBUSINESS_CATEGORY,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldBUSINESS_CATEGORY // blnFieldRequired
             );
         
         this._pnlSelectPOSTAL_CODE = new PSelBtnTfdStrW10(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Postal code:",
+            frmOwner, "Postal code:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValPOSTAL_CODE,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldPOSTAL_CODE // blnFieldRequired
             );
         
         this._pnlSelectDN_QUALIFIER = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "DN qualifier:",
+            frmOwner, "DN qualifier:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValDN_QUALIFIER,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldDN_QUALIFIER // blnFieldRequired
             );
         
         this._pnlSelectPSEUDONYM = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Pseudonym:",
+            frmOwner, "Pseudonym:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValPSEUDONYM,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldPSEUDONYM // blnFieldRequired
             );
         
         this._pnlSelectDATE_OF_BIRTH = new PSelBtnTfdStrW10DateBirth(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli,
+            frmOwner,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValDATE_OF_BIRTH,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldDATE_OF_BIRTH // blnFieldRequired
             );
         
         this._pnlSelectPLACE_OF_BIRTH = new PSelBtnTfdStrW30(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Place of birth:",
+            frmOwner, "Place of birth:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValPLACE_OF_BIRTH,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldPLACE_OF_BIRTH // blnFieldRequired
             );
         
         this._pnlSelectGENDER = new PSelBtnTfdStrXlsCbxGender(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "1-letter gender:",
+            frmOwner, "1-letter gender:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValGENDER,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldGENDER
             );
         
         this._pnlSelectCOUNTRY_OF_CITIZENSHIP = new PSelBtnTfdStrXlsCountryCode(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "2-letter country of citizenship:",
+            frmOwner, "2-letter country of citizenship:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValCOUNTRY_OF_CITIZENSHIP,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldCOUNTRY_OF_CITIZENSHIP
             );
                 
                 /*new PSelBtnTfdStrW10(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Country of citizenship:",
+            frmOwner, "Country of citizenship:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValCOUNTRY_OF_CITIZENSHIP,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldCOUNTRY_OF_CITIZENSHIP // blnFieldRequired
             );*/
         
         this._pnlSelectCOUNTRY_OF_RESIDENCE = new PSelBtnTfdStrXlsCountryCode(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "2-letter country of residence:",
+            frmOwner, "2-letter country of residence:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValCOUNTRY_OF_RESIDENCE,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldCOUNTRY_OF_RESIDENCE
             ); 
@@ -2201,14 +2200,14 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         
         this._pnlSelectNAME_AT_BIRTH = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Name at birth:",
+            frmOwner, "Name at birth:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValNAME_AT_BIRTH,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldNAME_AT_BIRTH // blnFieldRequired
             );
         
         this._pnlSelectPOSTAL_ADDRESS = new PSelBtnTfdStrW10(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Postal address:",
+            frmOwner, "Postal address:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValPOSTAL_ADDRESS,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldPOSTAL_ADDRESS // blnFieldRequired
             );
@@ -2217,35 +2216,35 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         
         this._pnlSelectSURNAME = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Surname:",
+            frmOwner, "Surname:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValSURNAME,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldSURNAME // blnFieldRequired
             );
         
         this._pnlSelectGIVENNAME = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Given name:",
+            frmOwner, "Given name:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValGIVENNAME,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldGIVENNAME // blnFieldRequired
             );
         
         this._pnlSelectINITIALS = new PSelBtnTfdStrW10(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Initials:",
+            frmOwner, "Initials:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValINITIALS,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldINITIALS // blnFieldRequired
             );
         
         this._pnlSelectGENERATION = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Generation:",
+            frmOwner, "Generation:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValGENERATION,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldGENERATION // blnFieldRequired
             );
         
         this._pnlSelectUNIQUE_IDENTIFIER = new PSelBtnTfdStrW20(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli, "Unique identifier:",
+            frmOwner, "Unique identifier:",
             PTabUICmdKtlKstOpenCrKprAbs._f_s_strDocPropValUNIQUE_IDENTIFIER,
             PTabUICmdKtlKstOpenCrKprAbs._f_s_blnReqFieldUNIQUE_IDENTIFIER // blnFieldRequired
             );
@@ -2652,8 +2651,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
      
         com.google.code.p.keytooliui.ktl.swing.dialog.DWChoice3DNameMiss dew = new 
             com.google.code.p.keytooliui.ktl.swing.dialog.DWChoice3DNameMiss(
-                (java.awt.Frame) super._frmOwner_,
-                super._strTitleAppli_);
+                (java.awt.Frame) super._frmOwner_);
             
         if (! dew.init())
         {

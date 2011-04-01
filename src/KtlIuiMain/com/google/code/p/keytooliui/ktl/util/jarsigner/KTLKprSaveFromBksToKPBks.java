@@ -63,7 +63,7 @@ final public class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
         String strMethod = "doJob()";
         
         File fleOpenKstSource = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKstSource_);
+            super._frmOwner_,  super._strPathAbsKstSource_);
         
         if (fleOpenKstSource == null)
         {
@@ -73,7 +73,7 @@ final public class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
         }
         
         File fleOpenKstTarget = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKstTarget == null)
         {
@@ -91,7 +91,7 @@ final public class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
         }
         
         KeyStore kstOpenSource = UtilKstBks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_,
             fleOpenKstSource,
             super._chrsPasswdKstSource_);
         
@@ -109,7 +109,7 @@ final public class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
             MySystem.s_printOutExit(this, strMethod, "nil super._chrsPasswdKst_"); 
         
         KeyStore kstOpenTarget = UtilKstBks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstTarget,
             super._chrsPasswdKst_);
         
@@ -139,7 +139,7 @@ final public class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
     
     public KTLKprSaveFromBksToKPBks(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         String strPathAbsOpenKstTarget, // existing keystore of type BKS 
         char[] chrsPasswdOpenKstTarget,
@@ -151,7 +151,7 @@ final public class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
 
             strPathAbsOpenKstTarget, // existing keystore of type BKS 
             chrsPasswdOpenKstTarget,

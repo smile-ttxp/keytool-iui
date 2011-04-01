@@ -51,14 +51,14 @@ abstract public class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs
     
     protected DTblEntryKprOpenKPAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         String strTitleThis,
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+       
             strTitleThis,
             kseLoaded
             ); 
@@ -112,7 +112,7 @@ abstract public class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs
             strBody += super.getAlias();
             strBody += "\"";
                     
-            OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+            OPAbstract.s_showDialogWarning(this, strBody);
             return false;
         }
         
@@ -125,7 +125,7 @@ abstract public class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs
             
             if (strEnterRespective.length() < 1)
             {
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter respective password");
+                OPAbstract.s_showDialogWarning(this, "Please enter respective password");
                 
                 return false;
             }
@@ -135,7 +135,7 @@ abstract public class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs
    
             if (com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstAbs.s_getKey(
                 this, 
-                getTitle(),
+   
                 super._kseLoaded_,
                 super.getAlias(),
                 strEnterRespective.toCharArray()) == null)

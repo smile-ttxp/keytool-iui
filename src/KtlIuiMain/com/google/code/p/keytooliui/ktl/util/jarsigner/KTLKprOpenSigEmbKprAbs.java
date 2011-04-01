@@ -10,11 +10,8 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 **/
 
 import javax.xml.parsers.DocumentBuilderFactory;
-import org.xml.sax.SAXException;
 
-import java.security.PublicKey;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -26,23 +23,16 @@ import javax.xml.crypto.dsig.SignatureMethod;
 import javax.xml.crypto.dsig.SignedInfo;
 import javax.xml.crypto.dsig.Transform;
 import javax.xml.crypto.dsig.XMLSignature;
-import javax.xml.crypto.dsig.XMLSignatureException;
 import javax.xml.crypto.dsig.XMLSignatureFactory;
 import javax.xml.crypto.dsig.dom.DOMSignContext;
-import javax.xml.crypto.dsig.dom.DOMValidateContext;
 import javax.xml.crypto.dsig.keyinfo.KeyInfo;
 import javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 import javax.xml.crypto.dsig.keyinfo.X509Data;
 import javax.xml.crypto.dsig.spec.C14NMethodParameterSpec;
 import javax.xml.crypto.dsig.spec.TransformParameterSpec;
 
-import javax.xml.parsers.ParserConfigurationException;
 
-import javax.xml.crypto.MarshalException;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.UnrecoverableEntryException;
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
@@ -50,15 +40,8 @@ import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
 import java.security.KeyStore;
-import java.security.PrivateKey;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.cert.CertificateException;
 // --
-import java.security.cert.Certificate;
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
@@ -133,7 +116,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -152,7 +135,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         }
         
         File fleOpenData = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileOpenData_
+            super._frmOwner_,super._strPathAbsFileOpenData_
             );
         
         if (fleOpenData == null)
@@ -163,7 +146,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         }
         
         File fleSaveData = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileSaveData_,
+            super._frmOwner_,  super._strPathAbsFileSaveData_,
             true // blnShowDlgOverwrite
             );
         
@@ -197,7 +180,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+         
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -208,7 +191,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+       
             kstOpen);
         
         if (strsAliasSK == null)
@@ -222,7 +205,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -233,7 +216,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -243,7 +226,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -253,7 +236,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -262,7 +245,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+         kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -271,7 +254,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -280,7 +263,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+        kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -289,7 +272,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+         kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -298,7 +281,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+         kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -384,7 +367,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
 
     protected KTLKprOpenSigEmbKprAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore 
@@ -398,7 +381,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strPathAbsFileOpenData,
@@ -431,7 +414,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
         
         
         String strCrtSigAlgo = UtilKstAbs.s_getCertSigAlgo((Component) super._frmOwner_, 
-                super._strTitleAppli_, kstOpen, strAliasPrivateKey);
+                kstOpen, strAliasPrivateKey);
         
         if (strCrtSigAlgo == null)
         {
@@ -441,7 +424,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
             strBody += "\n" + strAliasPrivateKey;            
             strBody += "\n\n" + "More: see your session.log";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             return false;
         }
         
@@ -467,7 +450,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
             strBody += "\nfor private key entry aliased: " + strAliasPrivateKey;            
             strBody += "\n\n" + "More: see your session.log";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             return false;
         }
         
@@ -488,7 +471,7 @@ abstract public class KTLKprOpenSigEmbKprAbs extends KTLKprOpenSigEmbAbs
             strBody += "\n" + exc.getMessage();            
             strBody += "\n\n" + "More: see your session.log";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_, strBody);
             
             return false;
         }

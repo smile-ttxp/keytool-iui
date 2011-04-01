@@ -15,30 +15,21 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.InvalidKeyException;
 import java.security.KeyFactory;
-import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
-import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // ----
 import java.security.KeyStore;
-import java.security.PublicKey;
 import java.security.KeyStoreException;
-import java.security.Provider;
 // --
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
-import java.util.*;
 
 abstract public class KTLKprAbs extends KTLAbs
 {
@@ -302,7 +293,7 @@ abstract public class KTLKprAbs extends KTLAbs
                 String strBody = "Got keystore Exception.";
                 
                 OPAbstract.s_showDialogWarning(
-                    super._frmOwner_, super._strTitleAppli_, strBody);
+                    super._frmOwner_, strBody);
                 
                 return null;
             }
@@ -323,7 +314,7 @@ abstract public class KTLKprAbs extends KTLAbs
 
     protected KTLKprAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         
         // input
         String strPathAbsKst, // existing keystore of type [JKS-JCEKS-PKCS12]
@@ -333,7 +324,7 @@ abstract public class KTLKprAbs extends KTLAbs
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsKst, chrsPasswdKst, strProviderKst);
+        super(frmOwner,  strPathAbsKst, chrsPasswdKst, strProviderKst);
         
     }
 

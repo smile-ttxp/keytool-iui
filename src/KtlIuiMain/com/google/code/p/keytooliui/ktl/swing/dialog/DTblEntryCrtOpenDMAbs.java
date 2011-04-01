@@ -28,14 +28,14 @@ abstract public class DTblEntryCrtOpenDMAbs extends DTblEntryCrtOpenAbs
     
     protected DTblEntryCrtOpenDMAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         String strTitleThis,
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+         
             strTitleThis,
             kseLoaded
             ); 
@@ -84,7 +84,7 @@ abstract public class DTblEntryCrtOpenDMAbs extends DTblEntryCrtOpenAbs
             strBody += super.getAlias();
             strBody += "\"";
                     
-            OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+            OPAbstract.s_showDialogWarning(this, strBody);
             return false;
         }
 

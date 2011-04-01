@@ -21,14 +21,14 @@ final public class DTblEntryKprSaveAny extends DTblEntryKprSaveAbs
     
     public DTblEntryKprSaveAny(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+   
         java.security.KeyStore kseLoaded,
         boolean blnIsPassword
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+      
             DTblEntryKprSaveAny._f_s_strTitleThisPrefix,
 
             kseLoaded,

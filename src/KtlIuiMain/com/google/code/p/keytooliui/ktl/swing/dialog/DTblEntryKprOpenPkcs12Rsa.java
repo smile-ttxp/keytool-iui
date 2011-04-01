@@ -32,13 +32,13 @@ final public class DTblEntryKprOpenPkcs12Rsa extends DTblEntryKprOpenPkcs12Abs
     
     public DTblEntryKprOpenPkcs12Rsa(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+     
             DTblEntryKprOpenPkcs12Rsa._f_s_strTitleThis,
             kseLoaded
             ); 

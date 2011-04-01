@@ -237,10 +237,10 @@ public class SPUIMainKtl extends JSplitPane implements
             ((PCntsMainRight) this._pnlRight).setSelectedTaskKprAnyFromCrt();
     }
     
-    public SPUIMainKtl(Frame frmParent, String strTitleAppli)
+    public SPUIMainKtl(Frame frmParent)
     {
-        this._pnlLeft = new PCntsMainLeft(frmParent, strTitleAppli, (TreeSelectionListener) this);
-        this._pnlRight = new PCntsMainRight(frmParent, strTitleAppli);
+        this._pnlLeft = new PCntsMainLeft(frmParent, (TreeSelectionListener) this);
+        this._pnlRight = new PCntsMainRight(frmParent);
     }
     
     public boolean init()

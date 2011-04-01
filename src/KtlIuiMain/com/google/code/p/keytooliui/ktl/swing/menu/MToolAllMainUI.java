@@ -47,7 +47,7 @@ final public class MToolAllMainUI extends MToolAllMainAbstract
 
     public MToolAllMainUI(
         JFrame frmOwner,
-        String strTitleAppli,
+    
         ActionListener actListenerParent)
     {
         super();
@@ -64,7 +64,7 @@ final public class MToolAllMainUI extends MToolAllMainAbstract
         
         /**this._matDeploy = new MToolDeplAll(
             frmOwner, 
-            strTitleAppli,
+    
             com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir // "kst"
         );**/
     }

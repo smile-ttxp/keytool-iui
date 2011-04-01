@@ -56,7 +56,7 @@ abstract public class PSelBtnTfdPasswdXlsKstAbs extends PSelBtnTfdPasswdXlsAbs
         String strLabel,
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+      
         Object objDocPropValue,
         int intModePassword)
     {
@@ -64,7 +64,7 @@ abstract public class PSelBtnTfdPasswdXlsKstAbs extends PSelBtnTfdPasswdXlsAbs
             strLabel,
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+   
             objDocPropValue, 
             false, // blnFieldRequired
             intModePassword);
@@ -73,7 +73,7 @@ abstract public class PSelBtnTfdPasswdXlsKstAbs extends PSelBtnTfdPasswdXlsAbs
     protected PSelBtnTfdPasswdXlsKstAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+
         Object objDocPropValue,
         String strLabelPrefix,
         int intModePassword)
@@ -81,7 +81,7 @@ abstract public class PSelBtnTfdPasswdXlsKstAbs extends PSelBtnTfdPasswdXlsAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+      
             objDocPropValue, 
             strLabelPrefix, 
             false, // blnFieldRequired

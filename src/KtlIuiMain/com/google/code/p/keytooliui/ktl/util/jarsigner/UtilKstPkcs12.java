@@ -63,13 +63,11 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     // STATIC PUBLIC
     
     static public void s_manageFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilKstPkcs12._f_s_strClass + "." + "s_manageFile(...)";
         
         File fleOpenKstPkcs12 = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsKstPkcs12, 
@@ -96,7 +94,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             strBody += fleOpenKstPkcs12.getAbsolutePath();
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -113,7 +111,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             strBody += fleOpenKstPkcs12.getAbsolutePath();
          
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -132,7 +130,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
             true // blnNoPasswdAllowed
                 );
                     
@@ -166,7 +163,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         
         KeyStore kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
             frmParent, 
-            strTitleAppli,
             fleOpenKstPkcs12,
             chrsPasswdKst);
         
@@ -180,7 +176,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         }
         
         UtilKstAbs._s_manageKstOpen_(
-            strTitleAppli, 
             frmParent, 
             kstOpen,
             fleOpenKstPkcs12.getAbsolutePath(),
@@ -192,13 +187,11 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     // --
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilKstPkcs12._f_s_strClass + "." + "s_showFile(...)";
         
         File fleOpenKst = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsKstPkcs12, 
@@ -224,7 +217,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -241,7 +234,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -254,7 +247,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
             true // blnNoPasswdAllowed
                 );
                     
@@ -286,11 +278,10 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         dlgPasswordKst = null;
         
         // ----
-        UtilKstPkcs12._s_showFile_(strTitleAppli, frmParent, fleOpenKst, chrsPasswdKst);
+        UtilKstPkcs12._s_showFile_(frmParent, fleOpenKst, chrsPasswdKst);
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         String strPathAbs, char[] chrsPasswd)
     {
@@ -318,16 +309,15 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
         
-        UtilKstPkcs12._s_showFile_(strTitleAppli, frmParent, fleOpenKst, chrsPasswd); 
+        UtilKstPkcs12._s_showFile_(frmParent, fleOpenKst, chrsPasswd); 
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         String strPathAbs)
     {
@@ -355,7 +345,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -368,7 +358,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
             true // blnNoPasswdAllowed
                 );
                     
@@ -399,7 +388,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         dlgPasswordKst.destroy();
         dlgPasswordKst = null;
         
-        UtilKstPkcs12._s_showFile_(strTitleAppli, frmParent, fleOpenKst, chrsPasswdKst); 
+        UtilKstPkcs12._s_showFile_(frmParent, fleOpenKst, chrsPasswdKst); 
     }
     
     // chrsPasswdKst
@@ -407,7 +396,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     // ----
     
     static protected void _s_showFile_(
-        String strTitleAppli,
         Frame frmParent,
         File fle,
         char[] chrsPasswd)
@@ -418,7 +406,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         {
             MySystem.s_printOutError(strMethod, "nil fle");
             String strBody = "Failed to load file.";            
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
                 
             return;
         }
@@ -435,7 +423,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -452,7 +440,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -465,7 +453,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         
         
         KeyStore kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
-            frmParent, strTitleAppli,
+            frmParent,
             fle,
             chrsPasswd //new char[0] 
                 );
@@ -479,13 +467,12 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             return;
         }
         
-        UtilKstAbs._s_showKstOpen_(strTitleAppli, frmParent, kstOpen, fle.getAbsolutePath());
+        UtilKstAbs._s_showKstOpen_(frmParent, kstOpen, fle.getAbsolutePath());
     }
     
     
     static public boolean s_setKeyEntry(
         Frame frmOwner, 
-        String strTitleAppli,
         KeyStore kstOpen,
         String strAliasKpr,
         Key keyPrivate,
@@ -494,7 +481,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
      {
         return UtilKstAbs.s_setKeyEntry(
             frmOwner,
-            strTitleAppli,
             kstOpen,
             strAliasKpr,
             keyPrivate,
@@ -511,7 +497,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     **/
     static public Key s_getKeyProviderAny(
         Component cmpOwner, 
-        String strTitleAppli,
         KeyStore kseLoaded,
         String strAliasKpr,
         char[] chrsPasswdKpr,
@@ -533,7 +518,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         {
             return UtilKstPkcs12.s_getKeyProviderSunJsse(
                 cmpOwner, 
-                strTitleAppli,
                 kseLoaded,
                 strAliasKpr,
                 chrsPasswdKpr)
@@ -544,7 +528,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         {
             return UtilKstPkcs12.s_getKeyProviderBc(
                 cmpOwner, 
-                strTitleAppli,
                 kseLoaded,
                 strAliasKpr)
                 ;
@@ -562,14 +545,12 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     **/
     static public Key s_getKeyProviderBc(
         Component cmpOwner, 
-        String strTitleAppli,
         KeyStore kseLoaded,
         String strAliasKpr
         )
     {
         return UtilKstAbs.s_getKey(
             cmpOwner, 
-            strTitleAppli,
             kseLoaded,
             strAliasKpr,
             new char[]{} // chrsPasswdKpr
@@ -577,8 +558,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     }
     
     static public Key s_getKeyProviderSunJsse(
-        Component cmpOwner, 
-        String strTitleAppli,
+        Component cmpOwner,
         KeyStore kseLoaded,
         String strAliasKpr,
         char[] chrsPasswdKpr
@@ -586,7 +566,6 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     {
         return UtilKstAbs.s_getKey(
             cmpOwner, 
-            strTitleAppli,
             kseLoaded,
             strAliasKpr,
             chrsPasswdKpr
@@ -595,13 +574,12 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     
     static public KeyStore s_getKeystoreNew(
         Frame frmOwner, 
-        String strTitleAppli,
         String strProviderKst
         )
     {
         return UtilKstAbs._s_getKeystoreNew_(
             frmOwner,
-            strTitleAppli,
+           
             UtilKstPkcs12.f_s_strKeystoreType,
             UtilKstPkcs12.f_s_strKeystoreProvider
             );     
@@ -616,14 +594,14 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     **/
     static public KeyStore s_getKeystoreOpen(
         Frame frmOwner, 
-        String strTitleAppli,
+        
         File fleOpen,
         char[] chrsPassword // nil value allowed (eg: verify signed jarred file)
         )
     {
         return UtilKstAbs._s_getKeystoreOpen_(
             frmOwner,
-            strTitleAppli,
+            
             fleOpen,
             chrsPassword,
             UtilKstPkcs12.f_s_strKeystoreType,

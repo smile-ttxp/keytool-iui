@@ -20,13 +20,13 @@ final public class DTblEntryCrtOpenDMAny extends DTblEntryCrtOpenDMAbs
     
     public DTblEntryCrtOpenDMAny(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+       
             DTblEntryCrtOpenDMAny._f_s_strTitleThisPrefix,
             kseLoaded
             ); 

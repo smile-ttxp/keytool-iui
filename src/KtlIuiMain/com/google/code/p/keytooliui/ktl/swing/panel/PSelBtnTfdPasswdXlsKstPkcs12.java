@@ -55,14 +55,14 @@ final public class PSelBtnTfdPasswdXlsKstPkcs12 extends PSelBtnTfdPasswdXlsKstAb
      public PSelBtnTfdPasswdXlsKstPkcs12(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli,
+     
         int intModePassword
         )
     {
         super(
             docListenerParent,
             frmParent,
-            strTitleAppli,
+    
             (Object) PSelBtnTfdPasswdXlsKstPkcs12.f_s_strDocPropVal,
             PSelBtnTfdPasswdXlsKstPkcs12._f_s_strLabelPrefix,
             intModePassword

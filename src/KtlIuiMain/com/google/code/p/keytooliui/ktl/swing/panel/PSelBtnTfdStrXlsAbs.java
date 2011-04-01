@@ -66,7 +66,7 @@ abstract public class PSelBtnTfdStrXlsAbs extends PSelBtnTfdStrAbs
     protected PSelBtnTfdStrXlsAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+
         String strLabel,
         TFAbstract tfd,
         Object objDocPropValue,
@@ -75,7 +75,7 @@ abstract public class PSelBtnTfdStrXlsAbs extends PSelBtnTfdStrAbs
     {
         super(
             frmParent, 
-            strTitleAppli, 
+     
             strLabel,
             tfd,
             objDocPropValue,

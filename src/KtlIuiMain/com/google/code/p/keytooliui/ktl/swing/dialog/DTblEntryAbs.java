@@ -142,9 +142,9 @@ abstract public class DTblEntryAbs extends DEscapeAbstract implements
         if (strAlias.length() < 1)
         {
             if (blnSave)
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter alias");
+                OPAbstract.s_showDialogWarning(this, "Please enter alias");
             else
-                OPAbstract.s_showDialogWarning(this, getTitle(), "Please click a valid alias");
+                OPAbstract.s_showDialogWarning(this, "Please click a valid alias");
             
             return false;
         }
@@ -165,7 +165,7 @@ abstract public class DTblEntryAbs extends DEscapeAbstract implements
                 strBody += "\n\n";
                 strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleAlias();
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -188,7 +188,7 @@ abstract public class DTblEntryAbs extends DEscapeAbstract implements
                 strBody += "\n\n";
                 strBody += "(Memo: aliases are case-insensitive)";
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -206,7 +206,7 @@ abstract public class DTblEntryAbs extends DEscapeAbstract implements
                 strBody += strAlias;
                 strBody += "\"";
                         
-                OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+                OPAbstract.s_showDialogWarning(this, strBody);
                 
                 return false;
             }
@@ -238,14 +238,14 @@ abstract public class DTblEntryAbs extends DEscapeAbstract implements
     
     protected DTblEntryAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+
         String strTitleThis,
         String strLabelAlias,
         KeyStore kseLoaded)
     {
         super(
             (Frame) cmpFrameOwner, 
-            strTitleAppli + " - " + strTitleThis + kseLoaded.getType() + " keystore", // title
+            //strTitleAppli + " - " + strTitleThis + kseLoaded.getType() + " keystore", // title
             true // true ==> modal=true
             ); 
         

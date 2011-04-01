@@ -168,14 +168,14 @@ abstract public class PTabUICmdKtlKstOpenSCmsExpAbs extends PTabUICmdKtlKstOpenS
     
     protected PTabUICmdKtlKstOpenSCmsExpAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         String strHelpID
         )
     {
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+     
             PSelBtnTfdFileOpenAnyFile.f_s_strDocPropVal,
             PSelBtnTfdFileSaveSCms.f_s_strDocPropVal
             );
@@ -183,14 +183,14 @@ abstract public class PTabUICmdKtlKstOpenSCmsExpAbs extends PTabUICmdKtlKstOpenS
         super._pnlSelectFileSCms_ = new PSelBtnTfdFileSaveSCms(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+      
             (ItemListener) null
             );
         
         this._pnlSelectFileCrt_ = new PSelBtnTfdFileSaveCCms(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+  
             (ItemListener) null
             );
         

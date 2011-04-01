@@ -52,13 +52,13 @@ final public class PSelBtnTfdPasswdXlsKpr extends PSelBtnTfdPasswdXlsAbs
      public PSelBtnTfdPasswdXlsKpr(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli,
+   
         int intModePassword)
     {
         super(
             docListenerParent,
             frmParent,
-            strTitleAppli,
+      
             (String) PSelBtnTfdPasswdXlsKpr.f_s_strDocPropVal,
             PSelBtnTfdPasswdXlsKpr._f_s_strLabelPrefix,
             true, // blnFieldRequired

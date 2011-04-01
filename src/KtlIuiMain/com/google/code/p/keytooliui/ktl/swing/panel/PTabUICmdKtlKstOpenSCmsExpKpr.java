@@ -100,7 +100,7 @@ final public class PTabUICmdKtlKstOpenSCmsExpKpr extends PTabUICmdKtlKstOpenSCms
         {
             ktl = new KTLKprOpenSigDetOCmsPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -120,7 +120,7 @@ final public class PTabUICmdKtlKstOpenSCmsExpKpr extends PTabUICmdKtlKstOpenSCms
         {
             ktl = new KTLKprOpenSigDetOCmsBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+         
                 
                 // input
                 super._strPathAbsKst_, 
@@ -140,7 +140,7 @@ final public class PTabUICmdKtlKstOpenSCmsExpKpr extends PTabUICmdKtlKstOpenSCms
         {
             ktl = new KTLKprOpenSigDetOCmsUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+         
                 
                 // input
                 super._strPathAbsKst_, 
@@ -170,11 +170,11 @@ final public class PTabUICmdKtlKstOpenSCmsExpKpr extends PTabUICmdKtlKstOpenSCms
        
     }
     
-    public PTabUICmdKtlKstOpenSCmsExpKpr(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenSCmsExpKpr(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+   
             PTabUICmdKtlKstOpenSCmsExpKpr._s_strHelpID
             );
     }

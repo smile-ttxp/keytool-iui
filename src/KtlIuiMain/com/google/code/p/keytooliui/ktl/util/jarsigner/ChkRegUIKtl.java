@@ -74,7 +74,7 @@ final public class ChkRegUIKtl
     // eg: _sreg_xls11.jar
     final static private String _f_s_strNameLibReg = 
         "_" + "s" + "r" + "eg" + "_" + 
-        com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir + 
+        System.getProperty("_appli.name.short") +
         Shared.f_s_strPackLibVersionXP +
         "." +
         com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strJARDocument.toLowerCase();
@@ -537,9 +537,8 @@ final public class ChkRegUIKtl
     public String getLic() { return this._strLic; }
     public boolean isReg() { return this._blnIsReg; }
         
-    public ChkRegUIKtl(String strTitleAppli)
+    public ChkRegUIKtl()
     {
-        this._strTitleAppli = strTitleAppli;
     }
     
     /**
@@ -622,7 +621,8 @@ final public class ChkRegUIKtl
                 String strBody = "Fai" + "led to" + " r" + "ec" + "over " + "l" + "ice" + "nse!";
                 strBody += "\n" + com.google.code.p.keytooliui.shared.swing.panel.PHelpAboutAppli.s_strContactPoints;
                 
-                OPAbstract.s_showDialogError((Component) null, this._strTitleAppli, strBody);
+                OPAbstract.s_showDialogError((Component) null, 
+                        strBody);
                 System.exit(1);
                 
             }
@@ -635,8 +635,7 @@ final public class ChkRegUIKtl
     
     // -------
     // PRIVATE
-        
-    private String _strTitleAppli = null;
+
     
     private String _strLic = null; 
     private boolean _blnIsReg = false;
@@ -1402,7 +1401,7 @@ final public class ChkRegUIKtl
         // ----
         // show option dialog
         
-        DChoiceEvWarning chg = new DChoiceEvWarning(this._strTitleAppli, strAllowedEval);
+        DChoiceEvWarning chg = new DChoiceEvWarning(strAllowedEval);
                 
         if (! chg.init())
             MySystem.s_printOutExit(strMethod, "failed");
@@ -1440,7 +1439,7 @@ final public class ChkRegUIKtl
         // ----
         // show option dialog
         
-        DChoiceEvQuestion chg = new DChoiceEvQuestion(this._strTitleAppli, strAllowedEval);
+        DChoiceEvQuestion chg = new DChoiceEvQuestion(strAllowedEval);
                 
         if (! chg.init())
             MySystem.s_printOutExit(strMethod, "failed");
@@ -1504,7 +1503,7 @@ final public class ChkRegUIKtl
         
         while (true)
         {
-            fleSource = S_FileChooserAbs.s_getOpenFileRegSource(this._strTitleAppli);
+            fleSource = S_FileChooserAbs.s_getOpenFileRegSource();
         
             if (fleSource != null)
             {
@@ -1527,7 +1526,7 @@ final public class ChkRegUIKtl
                 strWarningConfirmBody += "Retry?";
            
                 boolean blnConfirm = com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showWarningConfirmDialog(
-                    null, this._strTitleAppli + " - " + strWarningConfirmTitle, strWarningConfirmBody);
+                    null, System.getProperty("_.appli.title") + " - " + strWarningConfirmTitle, strWarningConfirmBody);
                 
                 
                 // ---
@@ -1550,7 +1549,7 @@ final public class ChkRegUIKtl
         }
 
         // --
-        File fleParentTarget = S_FileChooserAbs.s_getOpenParentFileRegTarget(this._strTitleAppli); 
+        File fleParentTarget = S_FileChooserAbs.s_getOpenParentFileRegTarget(System.getProperty("_.appli.title"));
         
         if (fleParentTarget == null) // exiting
         {
@@ -1583,7 +1582,7 @@ final public class ChkRegUIKtl
             String strBody = "Fai" + "led to" + " r" + "ec" + "over " + "l" + "ice" + "nse!";
             strBody += "\n" + com.google.code.p.keytooliui.shared.swing.panel.PHelpAboutAppli.s_strContactPoints;
                 
-            OPAbstract.s_showDialogError((Component) null, this._strTitleAppli, strBody);
+            OPAbstract.s_showDialogError((Component) null, System.getProperty("_.appli.title"), strBody);
             System.exit(1);    
         }
         

@@ -54,7 +54,7 @@ public class DTblsKstSelPKOpenNoPassXmlSign extends DTblsKstSelPKOpenNoPass
         
         Boolean[] boosIsPKXmlSignEntryPKTC = 
             UtilKstAbs.s_getBoosEntryKprXmlSign(this,
-            super._strTitleAppli_, super._kstOpen_, strsAliasPKTC);
+            super._kstOpen_, strsAliasPKTC);
         
         if (boosIsPKXmlSignEntryPKTC == null)
         {
@@ -71,7 +71,7 @@ public class DTblsKstSelPKOpenNoPassXmlSign extends DTblsKstSelPKOpenNoPass
             String strBody = "No valid entry found in selected keystore."; 
             strBody += "\n\n" + "Choosen keystore does not contain any entry of type private key with supported (SHA1withRSA  or SHA1withDSA) certificate signature algorithm.";
    
-            OPAbstract.s_showDialogWarning(this, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(this, strBody);
             return false;
         }
         
@@ -116,12 +116,12 @@ public class DTblsKstSelPKOpenNoPassXmlSign extends DTblsKstSelPKOpenNoPass
     
     public DTblsKstSelPKOpenNoPassXmlSign(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+  
         java.security.KeyStore kseLoaded,
         String strPathAbs,
         String strTitlePrefix)
     {
-        super(cmpFrameOwner, strTitleAppli, kseLoaded, strPathAbs, strTitlePrefix);
+        super(cmpFrameOwner, kseLoaded, strPathAbs, strTitlePrefix);
     }
     
     // ---------

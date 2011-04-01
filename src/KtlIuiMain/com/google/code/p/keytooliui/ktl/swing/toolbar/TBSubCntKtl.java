@@ -9,7 +9,7 @@ import com.google.code.p.keytooliui.ktl.swing.button.*;
 public class TBSubCntKtl extends TBSubAbstract
 {
     
-    public TBSubCntKtl(String strTitleAppli,
+    public TBSubCntKtl(
             java.awt.event.ActionListener actListenerParentPrint
             )
     {
@@ -26,7 +26,7 @@ public class TBSubCntKtl extends TBSubAbstract
         // ----
         setBorderPainted(true);
         this.setFloatable(true);
-        setName(strTitleAppli + " - " + "Contents' toolbar"); // in case of floatable toolbar
+        setName(System.getProperty("_appli.title") + " - " + "Contents' toolbar"); // in case of floatable toolbar
     }
     
     public boolean init()

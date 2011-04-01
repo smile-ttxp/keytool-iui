@@ -25,7 +25,6 @@ import org.bouncycastle.jce.X509Principal;
 //import org.bouncycastle.jce.X509V1CertificateGenerator; // deprecated from bc120 to bc130
 import org.bouncycastle.x509.X509V1CertificateGenerator;
 //import org.bouncycastle.jce.X509V3CertificateGenerator; // deprecated from bc120 to bc130
-import org.bouncycastle.x509.X509V3CertificateGenerator;
 import org.bouncycastle.asn1.DERObjectIdentifier;
 
 // ----
@@ -131,7 +130,7 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
               strBody += "\n\n " + "Workaround: please increase key size.";
                 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
                 
             return null;
         }
@@ -146,7 +145,7 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
             strBody += "\n  " + exc.getMessage();
                 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
                 
             return null;
         }
@@ -158,7 +157,7 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
         
     protected KTLKprSaveNewAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -207,7 +206,7 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
         String strTypeKpr          // eg: DSA, RSA, assigned by subclasses
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         
         
@@ -341,14 +340,14 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
             strBody += "\n  " + exc.getMessage();
                 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return null;
         }
         
 
         
-        DGenKeypair dlg = new DGenKeypair(super._frmOwner_, super._strTitleAppli_, kpg);
+        DGenKeypair dlg = new DGenKeypair(super._frmOwner_, kpg);
         
         if (! dlg.init())
             MySystem.s_printOutExit(this, strMethod, "failed");
@@ -416,13 +415,13 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
             strBody += "\n  " + exc.getMessage();
                 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return null;
         }
         
         
-        DGenKeypair dlg = new DGenKeypair(super._frmOwner_, super._strTitleAppli_, kpg);
+        DGenKeypair dlg = new DGenKeypair(super._frmOwner_,  kpg);
         
         if (! dlg.init())
             MySystem.s_printOutExit(this, strMethod, "failed");
@@ -514,7 +513,7 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
             
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
                 
             return false;**/
         }
@@ -528,7 +527,7 @@ abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
             MySystem.s_printOutExit(this, strMethod, "nil pkyKeyPrivate");
         }
         
-        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_, super._strTitleAppli_, 
+        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_,  
             kstOpen, strAliasKpr, pkyKeyPrivate, chrsPasswdKpr, new X509Certificate[]{ crtX509New }))
         {
             MySystem.s_printOutError(this, strMethod, "failed");

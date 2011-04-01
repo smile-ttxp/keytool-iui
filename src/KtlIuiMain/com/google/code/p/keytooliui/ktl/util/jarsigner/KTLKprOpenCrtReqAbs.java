@@ -151,7 +151,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -170,7 +170,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         }
         
         File fleSaveCsr = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileIO_,
+            super._frmOwner_,  super._strPathAbsFileIO_,
             true // blnShowDlgOverwrite
             );
         
@@ -204,7 +204,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+ 
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -214,7 +214,6 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
             kstOpen);
         
         if (strsAliasSK == null)
@@ -227,7 +226,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -236,7 +235,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -245,7 +244,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -254,7 +253,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -262,7 +261,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -270,7 +269,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -278,7 +277,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -286,7 +285,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -294,7 +293,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+             kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -302,186 +301,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         }
         
         
-        /* OLD
         
-        // ----
-        // get aliases
-        
-        String[] strsAlias = UtilKstAbs.s_getStrsAlias(
-            super._frmOwner_, 
-            super._strTitleAppli_, 
-            kstOpen);
-        
-        if (strsAlias == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsAlias");
-            return false;
-        }
-        
-        // ----
-        // check for existing aliases
-        
-        if (strsAlias.length < 1)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutWarning(this, strMethod, "strsAlias.length < 1");
-            
-            String strBody = "keystore does not contain any entry.";
-            strBody += "\n  ";
-            strBody += fleOpenKst.getAbsolutePath();
-                
-            OPAbstract.s_showDialogInfo(
-                super._frmOwner_, super._strTitleAppli_, strBody);
-            
-            return false;
-        }
-        
-        // ----
-        // get arrays for dialogTableSelectKeypair
-
-        Boolean[] boosEntryKpr = UtilKstAbs.s_getBoosEntryKpr(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (boosEntryKpr == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosEntryKpr");
-            return false;
-        }
-        
-        Boolean[] boosEntryTcr = UtilKstAbs.s_getBoosEntryTcr(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (boosEntryTcr == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosEntryTcr");
-            return false;
-        }
-
-        Boolean[] boosSelfSignedCert = UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (boosSelfSignedCert == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosSelfSignedCert");
-            return false;
-        }
-        
-        Boolean[] boosTrustedCert = 
-            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (boosTrustedCert == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosTrustedCert");
-            return false;
-        }
-        
-        String[] strsAlgoKeyPubl = UtilKstAbs.s_getStrsAlgoKeyPubl(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (strsAlgoKeyPubl == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsAlgoKeyPubl");
-            return false;
-        }
-        
-        String[] strsSizeKeyPubl = UtilKstAbs.s_getStrsSizeKeyPubl(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (strsSizeKeyPubl == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsSizeKeyPubl");
-            return false;
-        }
-        
-        String[] strsTypeCert = UtilKstAbs.s_getStrsTypeCertificatePKTC(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (strsTypeCert == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsTypeCert");
-            return false;
-        }
-        
-        String[] strsAlgoSigCert = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-        
-        if (strsAlgoSigCert == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsAlgoSigCert");
-            return false;
-        }
-
-        Date[] dtesLastModified = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAlias);
-
-        if (dtesLastModified == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil dtesLastModified");
-            return false;
-        }
-        
-        
-        // ----
-        
-        Boolean[] boosTypeCertX509 = super._getBoosTypeCertX509_(kstOpen, strsAlias);
-        
-        if (boosTypeCertX509 == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosTypeCertX509");
-            return false;
-        }
-        
-        
-        Boolean[] boosElligible = this._getBoosElligible(
-            boosEntryKpr, boosSelfSignedCert, strsAlgoKeyPubl, boosTypeCertX509, strsAlgoSigCert);
-        
-        if (boosElligible == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosElligible");
-            return false;
-        }
-        
-        // -- 
-        // clean-up
-        boosTypeCertX509 = null;
-        
-        // ---
-        // check for elligible entry
-        
-        boolean blnElligible = false;
-        
-        for (int i=0; i<boosElligible.length; i++)
-        {
-            if (boosElligible[i].booleanValue() == true)
-            {
-                blnElligible = true;
-                break;
-            }
-        }
-        
-        if (! blnElligible)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "! blnElligible");
-            
-            String strBody = "keystore does not contain any entry of type RSA with a self-signed X.509 certificate.";
-            strBody += "\n  ";
-            strBody += fleOpenKst.getAbsolutePath();
-            
-            OPAbstract.s_showDialogInfo(
-                super._frmOwner_, super._strTitleAppli_, strBody);
-        
-            return false;
-        }*/
         
         // --
         // assign default cursor
@@ -575,7 +395,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
  
         Key key = UtilKstAbs.s_getKey(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             kstOpen,
             strAliasKpr,
             chrsPasswdKpr);
@@ -614,7 +434,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
 			String strBody = "Failed to get first in chain X509 certificate."; 
             strBody += "\n\n" + "More: see your session.log";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_, strBody);
             
             return false;
         }
@@ -625,7 +445,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
         String strCsr = null;
         
         strCsr = UtilCsrPkcs10.s_generateCsr(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             crtX509FirstInChain, pkyPrivate,
             this._strProviderSig);
         
@@ -661,7 +481,7 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
             strBody += fleSaveCsr.getAbsolutePath();
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             
             // -- aborting
@@ -741,7 +561,6 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
 
     protected KTLKprOpenCrtReqAbs(
         Frame frmOwner, 
-        String strTitleAppli,
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -755,7 +574,6 @@ abstract public class KTLKprOpenCrtReqAbs extends KTLKprOpenCrtAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strPathAbsFileSaveCsr,

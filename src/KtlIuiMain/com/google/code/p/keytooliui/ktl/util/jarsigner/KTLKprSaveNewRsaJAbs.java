@@ -58,7 +58,7 @@ abstract public class KTLKprSaveNewRsaJAbs extends KTLKprSaveNewRsaAbs
     
     protected KTLKprSaveNewRsaJAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -107,7 +107,7 @@ abstract public class KTLKprSaveNewRsaJAbs extends KTLKprSaveNewRsaAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+         
             
             // input
             strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -202,7 +202,7 @@ abstract public class KTLKprSaveNewRsaJAbs extends KTLKprSaveNewRsaAbs
         
         DTblsKstViewKeySavePK dlg = new DTblsKstViewKeySavePK(
             (Component) super._frmOwner_, 
-            super._strTitleAppli_,
+         
             kstOpen,
             super._strPathAbsKst_,
             "Create RSA private key entry");

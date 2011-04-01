@@ -60,7 +60,7 @@ final public class PSelBtnTfdFileJarOpenSigned extends PSelBtnTfdFileJarOpenAbs
     public PSelBtnTfdFileJarOpenSigned(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli,
+   
         ItemListener itmListenerParent,
         String strDirNameDefault,
         boolean blnFieldRequired
@@ -69,7 +69,7 @@ final public class PSelBtnTfdFileJarOpenSigned extends PSelBtnTfdFileJarOpenAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+        
             PSelBtnTfdFileJarOpenSigned._f_s_strLabel, 
             PSelBtnTfdFileJarOpenSigned.f_s_strDocPropVal, 
             itmListenerParent, 

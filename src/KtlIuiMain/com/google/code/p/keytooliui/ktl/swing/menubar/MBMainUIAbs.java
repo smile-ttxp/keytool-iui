@@ -134,7 +134,7 @@ abstract public class MBMainUIAbs extends MBMainAbstract
     
     protected MBMainUIAbs(
         java.awt.Component cmpFrameOwner,
-        String strTitleApplication,
+    
         java.awt.event.ActionListener actListenerParent
         )
     {
@@ -146,7 +146,7 @@ abstract public class MBMainUIAbs extends MBMainAbstract
         
         
         super._mimTools_ = new MToolAllMainUI(
-            (javax.swing.JFrame) cmpFrameOwner, strTitleApplication, actListenerParent);
+            (javax.swing.JFrame) cmpFrameOwner, actListenerParent);
         
  
     }

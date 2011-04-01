@@ -105,7 +105,7 @@ final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAb
         
         KTLCcaSaveNewAbs ktl = new KTLCcaSaveCrtInJks(
             super._frmOwner_, 
-            super._strTitleAppli_,
+          
             // input
             super._strPathAbsKst_, 
             chrsPasswdKstTarget,
@@ -130,12 +130,12 @@ final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAb
     }
     
     
-    public PTabUICmdKtlKstOpenCCaImpTcr(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCCaImpTcr(Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstOpenCCaImpTcr._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+    
             PSelBtnTfdFileOpenCrtTcr.f_s_strDocPropVal
             );
         
@@ -144,7 +144,7 @@ final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAb
             PCntsMainLeft.STR_NODE_KW_TCROOTCA + " file:",
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+    
             (ItemListener) null
             );
             
@@ -193,7 +193,7 @@ final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAb
     {  
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = System.getProperty("_appli.title") + " - " + "confirm";
        
         
         String strDlgBody = "Successfully imported root CA certificate file as trusted certificate entry." + "\n" +
@@ -202,7 +202,7 @@ final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAb
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return;
             
         // show file
@@ -211,21 +211,21 @@ final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAb
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJceks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJceks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstPkcs12.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstPkcs12.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     super._strPasswdKst_.toCharArray());
             return;
         }
@@ -233,14 +233,14 @@ final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAb
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstBks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstBks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstUber.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstUber.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                      super._strPasswdKst_.toCharArray());
             return;
         }

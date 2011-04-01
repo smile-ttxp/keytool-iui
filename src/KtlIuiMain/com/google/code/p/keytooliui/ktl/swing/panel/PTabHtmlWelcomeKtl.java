@@ -17,7 +17,7 @@ public class PTabHtmlWelcomeKtl extends PTabAbstract
     final static public String STR_TITLETASK = "Welcome";
     
     public PTabHtmlWelcomeKtl(
-            Frame frmOwner, String strTitleAppli // MEMO: not yet in use!
+            Frame frmOwner
             )
     {
         super();

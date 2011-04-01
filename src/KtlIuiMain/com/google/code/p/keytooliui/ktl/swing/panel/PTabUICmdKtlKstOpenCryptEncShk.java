@@ -91,7 +91,7 @@ final public class PTabUICmdKtlKstOpenCryptEncShk extends PTabUICmdKtlKstOpenCry
         {
             ktl = new KTLShkOpenCryptEncJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+       
                 
                 // input
                 super._strPathAbsKst_, 
@@ -108,7 +108,7 @@ final public class PTabUICmdKtlKstOpenCryptEncShk extends PTabUICmdKtlKstOpenCry
         {
             ktl = new KTLShkOpenCryptEncBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -125,7 +125,7 @@ final public class PTabUICmdKtlKstOpenCryptEncShk extends PTabUICmdKtlKstOpenCry
         {
             ktl = new KTLShkOpenCryptEncUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 
                 // input
                 super._strPathAbsKst_, 
@@ -159,11 +159,11 @@ final public class PTabUICmdKtlKstOpenCryptEncShk extends PTabUICmdKtlKstOpenCry
        
     }
     
-    public PTabUICmdKtlKstOpenCryptEncShk(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCryptEncShk(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+         
             PTabUICmdKtlKstOpenCryptEncShk._s_strHelpID,
             false, // blnAllowTypeJks,
             false  // blnAllowTypePkcs12 

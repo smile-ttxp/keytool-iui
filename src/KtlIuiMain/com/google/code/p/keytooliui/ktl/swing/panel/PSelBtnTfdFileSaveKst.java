@@ -169,7 +169,7 @@ final public class PSelBtnTfdFileSaveKst extends PSelBtnTfdFileSaveAbs
     public PSelBtnTfdFileSaveKst(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+        
         ItemListener itmListenerParent,
         boolean blnFieldRequired,
         boolean blnAllowTypePkcs12,
@@ -180,7 +180,7 @@ final public class PSelBtnTfdFileSaveKst extends PSelBtnTfdFileSaveAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+    
             PSelBtnTfdFileSaveKst.f_s_strLabel,
             blnFieldRequired
             );
@@ -256,7 +256,7 @@ final public class PSelBtnTfdFileSaveKst extends PSelBtnTfdFileSaveAbs
         String strButtonTextOk = "Save file";
             
         fle = S_FileChooserUI.s_getSaveFile(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk,
             strsTypeFileKstCur, 

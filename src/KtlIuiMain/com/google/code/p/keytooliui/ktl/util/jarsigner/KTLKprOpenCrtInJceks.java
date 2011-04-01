@@ -8,25 +8,16 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // ----
 import java.security.KeyStore;
-import java.security.PublicKey;
-import java.security.Key;
-import java.security.KeyStoreException;
 // --
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
 import java.io.*;
-import java.util.*;
 
 final public class KTLKprOpenCrtInJceks extends KTLKprOpenCrtInKPAbs
 {
@@ -37,7 +28,7 @@ final public class KTLKprOpenCrtInJceks extends KTLKprOpenCrtInKPAbs
 
     public KTLKprOpenCrtInJceks(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -51,7 +42,7 @@ final public class KTLKprOpenCrtInJceks extends KTLKprOpenCrtInKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+      
         
             // input
             strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -72,7 +63,7 @@ final public class KTLKprOpenCrtInJceks extends KTLKprOpenCrtInKPAbs
     protected KeyStore _getKeystoreOpen_(File fleOpenKst)
     {
         return UtilKstJceks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_,
             fleOpenKst,
             super._chrsPasswdKst_);
     

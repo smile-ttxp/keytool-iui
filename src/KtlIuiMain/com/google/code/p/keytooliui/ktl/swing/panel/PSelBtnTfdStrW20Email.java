@@ -35,14 +35,14 @@ final public class PSelBtnTfdStrW20Email extends PSelBtnTfdStrW20
     public PSelBtnTfdStrW20Email(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+
         Object objDocPropValue,
         boolean blnFieldRequired
         )
     {
         super(
             docListenerParent,
-            frmParent, strTitleAppli, PSelBtnTfdStrW20Email._f_s_strLabel, objDocPropValue, blnFieldRequired);
+            frmParent, PSelBtnTfdStrW20Email._f_s_strLabel, objDocPropValue, blnFieldRequired);
         
     }
     
@@ -72,7 +72,9 @@ final public class PSelBtnTfdStrW20Email extends PSelBtnTfdStrW20
         {
             MySystem.s_printOutWarning(this, strMethod, "intPosSpace != -1, intPosSpace=" + intPosSpace);
             // show rule message
-            OPAbstract.s_showDialogWarning(this, "wrong email format", str + "\ncontains space char\n\n eg right format: john.doe@acme.com");
+            OPAbstract.s_showDialogWarning(this,
+                    //"wrong email format",
+                    str + "\ncontains space char\n\n eg right format: john.doe@acme.com");
             return true;
         }
         
@@ -81,7 +83,9 @@ final public class PSelBtnTfdStrW20Email extends PSelBtnTfdStrW20
         if (intLength < 5)
         {
             MySystem.s_printOutWarning(this, strMethod, "intLength < 5, intLength=" + intLength);
-            OPAbstract.s_showDialogWarning(this, "wrong email format", str + "\n\n eg right format: john.doe@acme.com");
+            OPAbstract.s_showDialogWarning(this, 
+                    //"wrong email format",
+                    str + "\n\n eg right format: john.doe@acme.com");
             return true;
         }
         
@@ -90,7 +94,9 @@ final public class PSelBtnTfdStrW20Email extends PSelBtnTfdStrW20
         if (intPosAt<1 || intPosAt>intLength-1)
         {
             MySystem.s_printOutWarning(this, strMethod, "intPosAt<1 || intPosAt>intLength-1, intPosAt=" + intPosAt);
-            OPAbstract.s_showDialogWarning(this, "wrong email format", str + "\n\n eg right format: john.doe@acme.com");
+            OPAbstract.s_showDialogWarning(this, 
+                    //"wrong email format",
+                    str + "\n\n eg right format: john.doe@acme.com");
             return true;
         }
         
@@ -101,7 +107,9 @@ final public class PSelBtnTfdStrW20Email extends PSelBtnTfdStrW20
         if (intLengthSuffix < 3)
         {
             MySystem.s_printOutWarning(this, strMethod, "intLengthSuffix < 3, intLengthSuffix=" + intLengthSuffix);
-            OPAbstract.s_showDialogWarning(this, "wrong email format", str + "\n\n eg right format: john.doe@acme.com");
+            OPAbstract.s_showDialogWarning(this, 
+                    //"wrong email format",
+                    str + "\n\n eg right format: john.doe@acme.com");
             return true;
         }
         
@@ -110,7 +118,9 @@ final public class PSelBtnTfdStrW20Email extends PSelBtnTfdStrW20
         if (intPosDot<1 || intPosDot>intLengthSuffix-1)
         {
             MySystem.s_printOutWarning(this, strMethod, "intPosDot<1 || intPosDot>intLengthSuffix-1, intPosDot=" + intPosDot);
-            OPAbstract.s_showDialogWarning(this, "wrong email format", str + "\n\n eg right format: john.doe@acme.com");
+            OPAbstract.s_showDialogWarning(this, 
+                    //"wrong email format",
+                    str + "\n\n eg right format: john.doe@acme.com");
             return true;
         }
         

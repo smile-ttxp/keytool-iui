@@ -11,16 +11,10 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 **/
 
 // ----
-import java.security.Key;
-import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
 import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 
 
 import java.awt.*;
@@ -47,7 +41,7 @@ abstract public class KTLKprSaveFromAbs extends KTLKprSaveAbs
     
     protected KTLKprSaveFromAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKstTarget, // existing keystore of type [JKS-JCEKS-PKCS12-BKS-UBER] 
@@ -60,7 +54,7 @@ abstract public class KTLKprSaveFromAbs extends KTLKprSaveAbs
         boolean blnIsPasswdKprTarget
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKstTarget, chrsPasswdOpenKstTarget, strProviderKstTarget);
+        super(frmOwner,  strPathAbsOpenKstTarget, chrsPasswdOpenKstTarget, strProviderKstTarget);
         
         this._strPathAbsKstSource_ = strPathAbsKstSource;
         this._chrsPasswdKstSource_ = chrsPasswdKstSource;

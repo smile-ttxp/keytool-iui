@@ -35,7 +35,7 @@ final public class KTLTcrOpenCrtOutPkcs12 extends KTLTcrOpenCrtOutDMAbs
 
     public KTLTcrOpenCrtOutPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -47,7 +47,7 @@ final public class KTLTcrOpenCrtOutPkcs12 extends KTLTcrOpenCrtOutDMAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -68,7 +68,7 @@ final public class KTLTcrOpenCrtOutPkcs12 extends KTLTcrOpenCrtOutDMAbs
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+     
             fleOpen,
             super._chrsPasswdKst_);
     }

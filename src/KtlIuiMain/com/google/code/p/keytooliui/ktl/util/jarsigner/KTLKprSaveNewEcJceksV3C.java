@@ -37,7 +37,8 @@ final public class KTLKprSaveNewEcJceksV3C extends KTLKprSaveNewEcJceks
     
     public KTLKprSaveNewEcJceksV3C(
         Frame frmOwner, 
-        String strTitleAppli,
+
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Jceks 
@@ -91,7 +92,7 @@ final public class KTLKprSaveNewEcJceksV3C extends KTLKprSaveNewEcJceks
         
         super(
             frmOwner, 
-            strTitleAppli,
+        
         
             // input
             strPathAbsOpenKst, // existing keystore of type Jceks 
@@ -170,7 +171,7 @@ final public class KTLKprSaveNewEcJceksV3C extends KTLKprSaveNewEcJceks
         
             super._strCertAlgoSignType_,
             super._frmOwner_,
-            super._strTitleAppli_,
+         
             this._vecCrtExtExtKeyUsage,
             this._blnCrtExtExtKeyUsageCritical,
             this._blnCrtExtKeyUsage,

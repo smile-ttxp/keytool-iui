@@ -37,14 +37,14 @@ public class DTblsKstViewKeySaveSKNoPass extends DTblsKstViewKeyAbs
     
     public DTblsKstViewKeySaveSKNoPass(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+ 
         java.security.KeyStore kseLoaded,
         String strPathAbs,
         String strTitlePrefix)
     {
         super(
                 cmpFrameOwner, 
-                strTitleAppli, 
+             
                 strTitlePrefix,
                 kseLoaded,
                 strPathAbs,

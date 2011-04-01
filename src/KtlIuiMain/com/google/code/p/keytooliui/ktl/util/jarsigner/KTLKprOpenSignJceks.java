@@ -29,32 +29,18 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
-import sun.misc.BASE64Encoder;
 //import sun.security.util.SignatureFile;
-import sun.security.util.ManifestDigester;
 
 // ----
 import java.security.KeyStore;
-import java.security.PrivateKey;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.InvalidKeyException;
-import java.security.SignatureException;
 // --
-import java.security.cert.X509Certificate;
-import java.security.cert.CertificateException;
 // ----
 
 import java.awt.*;
 import java.io.*;
-import java.util.*;
-import java.util.jar.*;
 
 final public class KTLKprOpenSignJceks extends KTLKprOpenSignKPAbs
 {
@@ -80,7 +66,7 @@ final public class KTLKprOpenSignJceks extends KTLKprOpenSignKPAbs
 
     public KTLKprOpenSignJceks(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -96,7 +82,7 @@ final public class KTLKprOpenSignJceks extends KTLKprOpenSignKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+      
             strPathAbsOpenKst, 
             chrsPasswdOpenKst,
             strProviderKst, // "Kst": "JCEKS"
@@ -115,7 +101,7 @@ final public class KTLKprOpenSignJceks extends KTLKprOpenSignKPAbs
     protected KeyStore _getKeystoreOpen_(File fleOpenKst)
     {
         KeyStore kstOpen = UtilKstJceks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_,
             fleOpenKst,
             super._chrsPasswdKst_);
         

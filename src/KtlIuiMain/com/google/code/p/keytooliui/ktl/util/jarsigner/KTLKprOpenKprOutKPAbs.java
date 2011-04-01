@@ -37,7 +37,7 @@ abstract public class KTLKprOpenKprOutKPAbs extends KTLKprOpenKprOutAbs
 
     protected KTLKprOpenKprOutKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -54,7 +54,7 @@ abstract public class KTLKprOpenKprOutKPAbs extends KTLKprOpenKprOutAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+     
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -95,7 +95,7 @@ abstract public class KTLKprOpenKprOutKPAbs extends KTLKprOpenKprOutAbs
 
         DTblsKstSelPKOpen dlg = new DTblsKstSelPKOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+          
             kstOpen,
             super._strPathAbsKst_,
             "Export private key entry as private key and certificates chain files"

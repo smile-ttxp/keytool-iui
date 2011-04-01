@@ -176,7 +176,7 @@ abstract public class PTabUICmdCmsAbs extends PTabUICmdAbs implements
     
     protected PTabUICmdCmsAbs(
         Frame frmOwner, 
-        String strTitleAppli, 
+      
         String strHelpID,
         boolean blnFieldRequiredKeystore
         )
@@ -184,7 +184,7 @@ abstract public class PTabUICmdCmsAbs extends PTabUICmdAbs implements
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+    
             "Source", // strLabelBorderPanelIn, nil value allowed
             (String) null // "Target:" // strLabelBorderPanelOut nil value allowed
             );
@@ -194,7 +194,7 @@ abstract public class PTabUICmdCmsAbs extends PTabUICmdAbs implements
         this._pnlSelectFileData_ = new PSelBtnTfdFileOpenAnyFile(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+     
             (java.awt.event.ItemListener) null,
             "Data file:" // strLabel
             );
@@ -203,7 +203,7 @@ abstract public class PTabUICmdCmsAbs extends PTabUICmdAbs implements
         this._fssSelectSignedCms_ = new PSelBtnTfdFileOpenCms(
                 (javax.swing.event.DocumentListener) this,
                 frmOwner, 
-                strTitleAppli,
+          
                 (ItemListener) null
             );
     

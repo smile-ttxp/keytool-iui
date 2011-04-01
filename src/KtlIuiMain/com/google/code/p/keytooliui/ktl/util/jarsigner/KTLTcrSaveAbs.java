@@ -19,7 +19,7 @@ abstract public class KTLTcrSaveAbs extends KTLTcrAbs
     
     protected KTLTcrSaveAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKstTarget, // existing keystore of type [JKS-JCEKS-PKCS12-BKS-UBER] 
@@ -28,7 +28,7 @@ abstract public class KTLTcrSaveAbs extends KTLTcrAbs
         String strProviderKstTarget
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKstTarget, chrsPasswdOpenKstTarget, strProviderKstTarget);
+        super(frmOwner,  strPathAbsOpenKstTarget, chrsPasswdOpenKstTarget, strProviderKstTarget);
     }
     
 }

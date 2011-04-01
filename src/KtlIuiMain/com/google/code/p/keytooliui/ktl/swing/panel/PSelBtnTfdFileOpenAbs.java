@@ -60,7 +60,7 @@ abstract public class PSelBtnTfdFileOpenAbs extends PSelBtnTfdFileAbs
     protected PSelBtnTfdFileOpenAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent,
-        String strTitleAppli,
+       
         String strLabel,
         boolean blnFieldRequired
         )
@@ -68,7 +68,7 @@ abstract public class PSelBtnTfdFileOpenAbs extends PSelBtnTfdFileAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+     
             strLabel,
             blnFieldRequired
             );

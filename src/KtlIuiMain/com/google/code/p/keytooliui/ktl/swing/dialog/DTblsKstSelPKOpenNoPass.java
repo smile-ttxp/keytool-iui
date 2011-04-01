@@ -1,27 +1,6 @@
 package com.google.code.p.keytooliui.ktl.swing.dialog;
 
-import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.WindowEvent;
-import java.security.KeyStoreException;
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRootPane;
-import javax.swing.JTextField;
-import javax.swing.KeyStroke;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.event.ListSelectionEvent;
-import com.google.code.p.keytooliui.shared.lang.MySystem;
-import com.google.code.p.keytooliui.shared.swing.button.BCancel;
-import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
 public class DTblsKstSelPKOpenNoPass extends DTblsKstSelPKAbs
 {
@@ -39,14 +18,12 @@ public class DTblsKstSelPKOpenNoPass extends DTblsKstSelPKAbs
     
     public DTblsKstSelPKOpenNoPass(
         Component cmpFrameOwner, 
-        String strTitleAppli,
         java.security.KeyStore kseLoaded,
         String strPathAbs,
         String strTitlePrefix)
     {
         super(
-                cmpFrameOwner, 
-                strTitleAppli, 
+                cmpFrameOwner,  
                 strTitlePrefix,
                 kseLoaded,
                 strPathAbs,

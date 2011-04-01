@@ -34,7 +34,7 @@ abstract public class KTLKprOpenKprFromKprAbs extends KTLKprOpenAbs
     
     protected KTLKprOpenKprFromKprAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -47,7 +47,7 @@ abstract public class KTLKprOpenKprFromKprAbs extends KTLKprOpenAbs
         String strProviderKst // eg "SUN"
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._strPathAbsFileKpr_ = strPathAbsFileKpr;
         this._strPathAbsFileCrts_ = strPathAbsFileCrts;

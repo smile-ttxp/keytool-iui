@@ -94,7 +94,7 @@ final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenEncRsaJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -114,7 +114,7 @@ final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenEncRsaJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -134,7 +134,7 @@ final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenEncRsaPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+               
                 
                 // input
                 super._strPathAbsKst_, 
@@ -154,7 +154,7 @@ final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenEncRsaBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -174,7 +174,7 @@ final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryp
         {
             ktl = new KTLKprOpenEncRsaUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+               
                 
                 // input
                 super._strPathAbsKst_, 
@@ -249,11 +249,11 @@ final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryp
         return true;
     }
     
-    public PTabUICmdKtlKstOpenCryptEncPK(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCryptEncPK(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+        
             PTabUICmdKtlKstOpenCryptEncPK._s_strHelpID,
             true, // blnAllowTypeJks,
             true  // blnAllowTypePkcs12 

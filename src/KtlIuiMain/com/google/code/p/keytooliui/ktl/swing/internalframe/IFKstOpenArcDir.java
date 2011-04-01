@@ -33,11 +33,11 @@ import com.google.code.p.keytooliui.ktl.swing.panel.*;
 
 public class IFKstOpenArcDir extends IFAbs
 {
-    public IFKstOpenArcDir(Frame frmParent, String strTitleAppli)
+    public IFKstOpenArcDir(Frame frmParent)
     {
         super();
         
-        super._pnl_ = new PTabUICmdArcDir(frmParent, strTitleAppli);
+        super._pnl_ = new PTabUICmdArcDir(frmParent);
         setTitle(PTabUICmdArcDir.STR_TITLETASK);
     }
 

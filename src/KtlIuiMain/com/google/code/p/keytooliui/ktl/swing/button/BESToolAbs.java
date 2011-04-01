@@ -26,7 +26,7 @@ abstract public class BESToolAbs extends BEnabledState
     {
     
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".BESToolAbs" // class name
             ;
     

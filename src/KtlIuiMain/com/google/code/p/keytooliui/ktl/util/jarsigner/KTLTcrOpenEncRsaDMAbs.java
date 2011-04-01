@@ -36,7 +36,7 @@ abstract public class KTLTcrOpenEncRsaDMAbs extends KTLTcrOpenEncRsaAbs
 
     protected KTLTcrOpenEncRsaDMAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -51,7 +51,7 @@ abstract public class KTLTcrOpenEncRsaDMAbs extends KTLTcrOpenEncRsaAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+      
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -90,7 +90,7 @@ abstract public class KTLTcrOpenEncRsaDMAbs extends KTLTcrOpenEncRsaAbs
 
         DTblsKstSelTCOpenRsa dlg = new DTblsKstSelTCOpenRsa(
             super._frmOwner_, 
-            super._strTitleAppli_,
+  
             kstOpen,
             super._strPathAbsKst_,
             "Encrypt file with RSA trusted certificate entry's public key"

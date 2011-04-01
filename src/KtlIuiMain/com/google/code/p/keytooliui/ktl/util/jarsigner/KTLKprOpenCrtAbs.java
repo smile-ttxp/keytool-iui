@@ -74,7 +74,7 @@ abstract public class KTLKprOpenCrtAbs extends KTLKprOpenAbs
     
     protected KTLKprOpenCrtAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -87,7 +87,7 @@ abstract public class KTLKprOpenCrtAbs extends KTLKprOpenAbs
         String strFormatFileIO // eg, request CSR: PKCS#10, import CA Cert: PKCS#7, import cert: DER-PKCS7 
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._strPathAbsFileIO_ = strPathAbsFileIO;
         this._strFormatFileIO_ = strFormatFileIO;

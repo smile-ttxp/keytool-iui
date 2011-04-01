@@ -73,7 +73,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
         try
         {
             String strBundleFileShort =
-                com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+                com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
                 ".KTLKprOpenVerifyAbs" // class name
                 ;
 
@@ -102,7 +102,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
 
     protected KTLKprOpenVerifyAbs(
         Frame frmOwner,
-        String strTitleAppli,
+    
         String strPathAbsOpenKst, // nil value allowed (in case of use as verifier: optional)
         char[] chrsPasswdOpenKst,
         String strProviderKst,
@@ -116,7 +116,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
     {        
         super(
             frmOwner, 
-            strTitleAppli, 
+        
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strProviderKst
@@ -183,7 +183,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+                 
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodyIO + "\n" + this._strPathAbsOpenSignedJar);
                 
             return false;
@@ -203,7 +203,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+                 
                 strBody);
                 
             return false;
@@ -226,7 +226,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
          
         com.google.code.p.keytooliui.shared.swing.dialog.DViewString vsg = new com.google.code.p.keytooliui.shared.swing.dialog.DViewString(
             super._frmOwner_,
-            super._strTitleAppli_ + " - " + "verify signed file",
+            //System.getProperty("_appli.title") + " - " + "verify signed file",
             strDump);
                     
         if (! vsg.init())
@@ -280,7 +280,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodyFNF + "\n" + this._strPathAbsOpenSignedJar);
             
             return null;
@@ -293,7 +293,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+              
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodyIO + "\n" + this._strPathAbsOpenSignedJar);
             
             return null;
@@ -348,7 +348,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+              
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodyZip + "\n" + this._strPathAbsOpenSignedJar);
 
     	    return false;
@@ -361,7 +361,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodyIO + "\n" + this._strPathAbsOpenSignedJar);
 
     	    return false;
@@ -374,7 +374,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+            
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodySecurity + "\n" + this._strPathAbsOpenSignedJar);
 
     	    return false;
@@ -689,7 +689,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodyIO + "\n" + this._strPathAbsOpenSignedJar);
 
             
@@ -703,7 +703,7 @@ abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 KTLKprOpenVerifyAbs._s_strDlgWarnBodySecurity + "\n" + this._strPathAbsOpenSignedJar);
 
 

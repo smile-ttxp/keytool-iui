@@ -20,7 +20,7 @@ public class TBSubTreeKtl extends TBSubAbstract
             this._btnFolderClose.setEnabled(bln);
     }
     
-    public TBSubTreeKtl(String strTitleAppli,
+    public TBSubTreeKtl(
             java.awt.event.ActionListener actListenerParentTree, // treeExpandOrCollapse
             java.awt.event.ActionListener actListenerParentPrint
             )
@@ -40,7 +40,7 @@ public class TBSubTreeKtl extends TBSubAbstract
         // ----
         setBorderPainted(true);
         this.setFloatable(true);
-        setName(strTitleAppli + " - " + "Tree's toolbar"); // in case of floatable toolbar
+        setName(System.getProperty("_appli.title") + " - " + "Tree's toolbar"); // in case of floatable toolbar
     }
     
     public boolean init()

@@ -107,7 +107,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLKprOpenManAbs ktl = new KTLKprOpenManChgAlias(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+      
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -214,7 +214,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLTcrOpenManAbs ktl = new KTLTcrOpenManChgAlias(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -321,7 +321,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLShkOpenManAbs ktl = new KTLShkOpenManChgAlias(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+     
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -428,7 +428,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLKprOpenManAbs ktl = new KTLKprOpenManCopy(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+      
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -533,7 +533,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLTcrOpenManAbs ktl = new KTLTcrOpenManCopy(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -638,7 +638,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLShkOpenManAbs ktl = new KTLShkOpenManCopy(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+      
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -759,7 +759,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLKprOpenManAbs ktl = new KTLKprOpenManDelete(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+      
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -868,7 +868,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLTcrOpenManAbs ktl = new KTLTcrOpenManDelete(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+        
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -977,7 +977,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLShkOpenManAbs ktl = new KTLShkOpenManDelete(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+ 
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -1437,7 +1437,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
 
     public DTblsKstManage(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+
         KeyStore kseLoaded,
         
         String strPathAbsOpenKst,
@@ -1447,7 +1447,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+        
             kseLoaded.getType() + " " + DTblsKstManage.f_s_strTitleThisSuffix,
             kseLoaded,
             strPathAbsOpenKst,
@@ -1487,7 +1487,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
 
         KTLKstOpenAbs ktl = new KTLKstOpenManChgPasswd(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+         
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -1550,7 +1550,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         String[] strsAlias = UtilKstAbs.s_getStrsAlias(
             (Frame) getOwner(), 
-            super._strTitleAppli_, 
+            
             super._kstOpen_);
         
         if (strsAlias == null)
@@ -1591,7 +1591,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             (Frame) getOwner(), 
-            this._strTitleAppli_, 
+          
             this._kstOpen_);
         
         if (strsAliasPKTC == null)
@@ -1605,7 +1605,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr((Frame) getOwner(), 
-            this._strTitleAppli_, 
+      
             this._kstOpen_, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
@@ -1615,7 +1615,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC((Frame) getOwner(), 
-            this._strTitleAppli_, 
+        
             this._kstOpen_, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
@@ -1625,7 +1625,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned((Frame) getOwner(), 
-            this._strTitleAppli_, 
+  
             this._kstOpen_, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
@@ -1635,7 +1635,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted((Frame) getOwner(), 
-            this._strTitleAppli_, 
+     
             this._kstOpen_, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
@@ -1644,7 +1644,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl((Frame) getOwner(), 
-            this._strTitleAppli_, 
+           
             this._kstOpen_, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
@@ -1653,7 +1653,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC((Frame) getOwner(), 
-            this._strTitleAppli_, 
+          
             this._kstOpen_, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
@@ -1662,7 +1662,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC((Frame) getOwner(), 
-            this._strTitleAppli_, 
+          
             this._kstOpen_, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
@@ -1671,7 +1671,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified((Frame) getOwner(), 
-            this._strTitleAppli_, 
+           
             this._kstOpen_, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
@@ -1720,7 +1720,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLKprOpenManAbs ktl = new KTLKprOpenManChgPasswd(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
+        
         
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
@@ -1820,8 +1820,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         KTLShkOpenManAbs ktl = new KTLShkOpenManChgPasswd(
             (Frame) getOwner(), 
-            super._strTitleAppli_,
-        
+            
             // input
             super._strPathAbs_, // existing keystore of type JKS/JCEKS/?PKCS12? 
             this._chrsPasswdOpenKst,
@@ -1915,7 +1914,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         String[] strsAlias = UtilKstAbs.s_getStrsAlias(
             (Frame) getOwner(), 
-            super._strTitleAppli_, 
+            
             super._kstOpen_);
         
         if (strsAlias == null)
@@ -1949,7 +1948,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             (Frame) getOwner(), 
-            this._strTitleAppli_, 
+           
             this._kstOpen_);
         
         if (strsAliasSK == null)
@@ -1958,7 +1957,7 @@ final public class DTblsKstManage extends DTblsKstViewAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified((Frame) getOwner(), 
-            this._strTitleAppli_, 
+         
             this._kstOpen_, strsAliasSK);
 
         if (dtesLastModifiedSK == null)

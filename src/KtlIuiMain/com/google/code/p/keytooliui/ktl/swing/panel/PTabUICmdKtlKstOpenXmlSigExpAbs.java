@@ -156,21 +156,21 @@ abstract public class PTabUICmdKtlKstOpenXmlSigExpAbs extends PTabUICmdKtlKstOpe
     
     protected PTabUICmdKtlKstOpenXmlSigExpAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         String strHelpID
         )
     {
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+         
             PSelBtnTfdFileSaveXml.f_s_strDocPropVal
             );
         
          super._pnlSelectFileDataOut_ = new PSelBtnTfdFileSaveXml(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli, 
+     
             (ItemListener) null);
         
         
@@ -195,7 +195,7 @@ abstract public class PTabUICmdKtlKstOpenXmlSigExpAbs extends PTabUICmdKtlKstOpe
 
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = new String("");
@@ -206,7 +206,7 @@ abstract public class PTabUICmdKtlKstOpenXmlSigExpAbs extends PTabUICmdKtlKstOpe
         strDlgBody += "See contents?";
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return true;
         
             
@@ -236,7 +236,7 @@ abstract public class PTabUICmdKtlKstOpenXmlSigExpAbs extends PTabUICmdKtlKstOpe
             this._dlgViewResult = null;
         }
         
-        this._dlgViewResult = new DViewSourceFileTextSys(super._frmOwner_, super._strTitleAppli_);
+        this._dlgViewResult = new DViewSourceFileTextSys(super._frmOwner_);
         
         if (! this._dlgViewResult.init())
         {

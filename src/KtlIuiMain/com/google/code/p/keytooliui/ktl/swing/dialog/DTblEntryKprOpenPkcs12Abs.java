@@ -47,14 +47,14 @@ abstract public class DTblEntryKprOpenPkcs12Abs extends DTblEntryKprOpenAbs
     
     protected DTblEntryKprOpenPkcs12Abs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         String strTitleThis,
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+         
             strTitleThis,
             //DTblEntryKprOpenPkcs12Abs._f_s_strTitleThis,
             kseLoaded
@@ -108,7 +108,7 @@ abstract public class DTblEntryKprOpenPkcs12Abs extends DTblEntryKprOpenAbs
             strBody += super.getAlias();
             strBody += "\"";
                     
-            OPAbstract.s_showDialogWarning(this, getTitle(), strBody);
+            OPAbstract.s_showDialogWarning(this, strBody);
             return false;
         }
         

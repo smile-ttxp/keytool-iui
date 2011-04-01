@@ -27,7 +27,7 @@ public class S_EPEUI extends S_EPEShared
         File.separator +
         "keytooliui" +
         File.separator +
-        com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir +
+        System.getProperty("_appli.name.short") +
         File.separator +
         "htmls" +
         File.separator +
@@ -46,7 +46,7 @@ public class S_EPEUI extends S_EPEShared
         "/" +
         "keytooliui" +
         "/" +
-        com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir +
+        System.getProperty("_appli.name.short") +
         "/" +
         "htmls" +
         "/" +

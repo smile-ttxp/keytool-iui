@@ -36,7 +36,7 @@ final public class KTLKprOpenEncRsaJks extends KTLKprOpenEncRsaDMAbs
 
     public KTLKprOpenEncRsaJks(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Jks 
@@ -49,7 +49,7 @@ final public class KTLKprOpenEncRsaJks extends KTLKprOpenEncRsaDMAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+         
         
             // input
             strPathAbsOpenKst, // existing keystore of type Jks 
@@ -72,7 +72,7 @@ final public class KTLKprOpenEncRsaJks extends KTLKprOpenEncRsaDMAbs
     {
         return UtilKstJks.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+        
             fleOpen,
             super._chrsPasswdKst_);
     }

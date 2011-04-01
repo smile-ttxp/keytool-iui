@@ -287,7 +287,7 @@ abstract public class PTabUICmdKtlKstOpenSCmsAbs extends PTabUICmdKtlKstOpenAbs
     protected PTabUICmdKtlKstOpenSCmsAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+  
         String strPropValFileData, // ie document file to sign or verify
         String strPropValFileSCms // eg: select_file_xxx, ie. digital signature resulting from signing, or as input to verify
         )
@@ -295,7 +295,7 @@ abstract public class PTabUICmdKtlKstOpenSCmsAbs extends PTabUICmdKtlKstOpenAbs
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+     
             false, // blnAllowTypeJks
             false, // blnAllowTypeJceks
             true, // blnAllowTypePkcs12 ==> ?allowed for CSR or cert reply?
@@ -309,7 +309,7 @@ abstract public class PTabUICmdKtlKstOpenSCmsAbs extends PTabUICmdKtlKstOpenAbs
         this._pnlSelectFileData_ = new PSelBtnTfdFileOpenAnyFile(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+      
             (java.awt.event.ItemListener) null,
             "Data file:" // strLabel
             );

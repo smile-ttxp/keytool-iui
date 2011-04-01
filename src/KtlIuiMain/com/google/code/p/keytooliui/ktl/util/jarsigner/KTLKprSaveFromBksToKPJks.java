@@ -10,29 +10,18 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
-import java.security.KeyPair;
-import java.security.PrivateKey;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
-import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
 import java.io.*;
-import java.util.*;
 
 final public class KTLKprSaveFromBksToKPJks extends KTLKprSaveFromBksToKPAbs
 {
@@ -63,7 +52,7 @@ final public class KTLKprSaveFromBksToKPJks extends KTLKprSaveFromBksToKPAbs
         String strMethod = "doJob()";
         
         File fleOpenKstSource = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKstSource_);
+            super._frmOwner_, super._strPathAbsKstSource_);
         
         if (fleOpenKstSource == null)
         {
@@ -73,7 +62,7 @@ final public class KTLKprSaveFromBksToKPJks extends KTLKprSaveFromBksToKPAbs
         }
         
         File fleOpenKstTarget = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,super._strPathAbsKst_);
         
         if (fleOpenKstTarget == null)
         {
@@ -91,7 +80,7 @@ final public class KTLKprSaveFromBksToKPJks extends KTLKprSaveFromBksToKPAbs
         }
         
         KeyStore kstOpenSource = UtilKstBks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstSource,
             super._chrsPasswdKstSource_);
         
@@ -109,7 +98,7 @@ final public class KTLKprSaveFromBksToKPJks extends KTLKprSaveFromBksToKPAbs
             MySystem.s_printOutExit(this, strMethod, "nil super._chrsPasswdKst_"); 
         
         KeyStore kstOpenTarget = UtilKstJks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstTarget,
             super._chrsPasswdKst_);
         
@@ -139,7 +128,7 @@ final public class KTLKprSaveFromBksToKPJks extends KTLKprSaveFromBksToKPAbs
     
     public KTLKprSaveFromBksToKPJks(
         Frame frmOwner, 
-        String strTitleAppli,
+       
         
         String strPathAbsOpenKstTarget, // existing keystore of type JKS 
         char[] chrsPasswdOpenKstTarget,
@@ -151,7 +140,7 @@ final public class KTLKprSaveFromBksToKPJks extends KTLKprSaveFromBksToKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
 
             strPathAbsOpenKstTarget, // existing keystore of type JKS 
             chrsPasswdOpenKstTarget,

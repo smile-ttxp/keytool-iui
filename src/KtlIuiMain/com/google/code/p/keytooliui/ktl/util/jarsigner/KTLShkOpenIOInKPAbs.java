@@ -37,7 +37,7 @@ abstract public class KTLShkOpenIOInKPAbs extends KTLShkOpenIOInAbs
 
     protected KTLShkOpenIOInKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -50,7 +50,7 @@ abstract public class KTLShkOpenIOInKPAbs extends KTLShkOpenIOInAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+   
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -87,7 +87,7 @@ abstract public class KTLShkOpenIOInKPAbs extends KTLShkOpenIOInAbs
         
         DTblsKstViewKeySaveSK dlg = new DTblsKstViewKeySaveSK(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             kstOpen,
            super._strPathAbsKst_,
             "Import binary secret key file as new secret key entry"

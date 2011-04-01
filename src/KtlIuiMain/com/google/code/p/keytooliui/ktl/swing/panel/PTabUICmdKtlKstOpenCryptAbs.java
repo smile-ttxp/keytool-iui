@@ -297,7 +297,7 @@ abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs
     protected PTabUICmdKtlKstOpenCryptAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+ 
         boolean blnAllowTypeJks,
         boolean blnAllowTypePkcs12
         )
@@ -305,7 +305,7 @@ abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+       
             blnAllowTypeJks,
             true, // blnAllowTypeJceks
             blnAllowTypePkcs12, //==> ?allowed for CSR or cert reply?
@@ -361,7 +361,7 @@ abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs
 
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = new String("");
@@ -375,7 +375,7 @@ abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return true;
         
             
@@ -405,7 +405,7 @@ abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs
             this._dlgViewResult = null;
         }
         
-        this._dlgViewResult = new DViewSourceFileTextSys(super._frmOwner_, super._strTitleAppli_);
+        this._dlgViewResult = new DViewSourceFileTextSys(super._frmOwner_);
         
         if (! this._dlgViewResult.init())
         {

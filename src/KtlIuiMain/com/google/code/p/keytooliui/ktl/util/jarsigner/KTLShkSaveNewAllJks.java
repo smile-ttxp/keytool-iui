@@ -81,7 +81,7 @@ final public class KTLShkSaveNewAllJks extends KTLShkSaveNewAllJAbs
         
         // memo: keystore should be of type "JKS", provided by "??SUN"
         File fleOpenKstJks = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKstJks == null)
         {
@@ -100,7 +100,7 @@ final public class KTLShkSaveNewAllJks extends KTLShkSaveNewAllJAbs
         }
         
         KeyStore kstOpenJks = UtilKstJks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstJks,
             super._chrsPasswdKst_);
         
@@ -128,7 +128,7 @@ final public class KTLShkSaveNewAllJks extends KTLShkSaveNewAllJAbs
     
     public KTLShkSaveNewAllJks(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -140,7 +140,7 @@ final public class KTLShkSaveNewAllJks extends KTLShkSaveNewAllJAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 

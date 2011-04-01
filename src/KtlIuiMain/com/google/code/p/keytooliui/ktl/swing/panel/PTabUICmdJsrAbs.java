@@ -143,17 +143,17 @@ abstract public class PTabUICmdJsrAbs extends PTabUICmdAbs implements
     
     protected PTabUICmdJsrAbs(
         Frame frmOwner, 
-        String strTitleAppli, 
+    
         String strHelpID,
         boolean blnFileSignedJarSave, // if "true" means "sign file", else if false means "verify signed file"
         boolean blnFieldRequiredKeystore
         )
     {
         super(
-            //"String strTitleTab", // TEMPO
+           
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+     
             "Source", // strLabelBorderPanelIn, nil value allowed
             "Target" // strLabelBorderPanelOut nil value allowed
             );
@@ -163,7 +163,7 @@ abstract public class PTabUICmdJsrAbs extends PTabUICmdAbs implements
         super._pnlSelectFileKst_ = new PSelBtnTfdFileOpenKst(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+       
             (ItemListener) null,
             blnFieldRequiredKeystore,
             true, // blnAllowTypeJks
@@ -180,7 +180,7 @@ abstract public class PTabUICmdJsrAbs extends PTabUICmdAbs implements
             this._fssSelectSignedJar_ = new PSelBtnTfdFileJarSaveSigned(
                 (javax.swing.event.DocumentListener) this,
                 frmOwner, 
-                strTitleAppli, 
+           
                 S_FileExtensionUI.f_s_strDirNameDefaultFileSigned,
                 true // blnFieldRequired
             );
@@ -191,7 +191,7 @@ abstract public class PTabUICmdJsrAbs extends PTabUICmdAbs implements
             this._fssSelectSignedJar_ = new PSelBtnTfdFileJarOpenSigned(
                 (javax.swing.event.DocumentListener) this,
                 frmOwner, 
-                strTitleAppli,
+          
                 (ItemListener) this,
                 S_FileExtensionUI.f_s_strDirNameDefaultFileSigned,
                 true // blnFieldRequired

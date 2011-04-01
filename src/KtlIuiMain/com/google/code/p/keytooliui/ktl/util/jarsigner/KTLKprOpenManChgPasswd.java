@@ -105,7 +105,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+           
                 strBody);
                 
             return false;
@@ -134,7 +134,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+            
                 strBody);
                 
             return false;
@@ -149,7 +149,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+             
                 strBody);
                 
             return false;
@@ -166,7 +166,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+             
                 strBody);
                 
             return false;
@@ -180,7 +180,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+           
                 strBody);
                 
             return false;
@@ -203,7 +203,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+           
                 strBody);
                 
             return false;
@@ -217,7 +217,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+             
                 strBody);
                 
             return false;
@@ -240,7 +240,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+             
                 strBody);
                 
             return false;
@@ -251,7 +251,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
         
         // memo: JKS keystore should be of type "JKS", provided by "SUN"
         File fleOpenKstJks = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKstJks == null)
         {
@@ -285,7 +285,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
     
     public KTLKprOpenManChgPasswd(
         Frame frmOwner, 
-        String strTitleAppli,
+ 
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -298,7 +298,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+        
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strProviderKst,
@@ -317,7 +317,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
     {
         String strMethod = "_getPasswordKprNew()";
         
-        DPasswordAbs dlg = new DPasswordConfirmSave(super._frmOwner_, super._strTitleAppli_);
+        DPasswordAbs dlg = new DPasswordConfirmSave(super._frmOwner_);
         
         if (! dlg.init())
             MySystem.s_printOutExit(this, strMethod, "failed");
@@ -377,7 +377,7 @@ final public class KTLKprOpenManChgPasswd extends KTLKprOpenManAbs
             strBody += "\n\n";
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRulePassword();
                     
-            OPAbstract.s_showDialogWarning(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmOwner_, strBody);
             return false;
         }
         

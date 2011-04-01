@@ -52,14 +52,13 @@ final public class PSelBtnTfdRngIntValidityKpr extends PSelBtnTfdRngInt
 
     public PSelBtnTfdRngIntValidityKpr(
         javax.swing.event.DocumentListener docListenerParent,
-        Frame frmParent, 
-        String strTitleAppli 
+        Frame frmParent
         )
     {
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+ 
             
             PSelBtnTfdRngIntValidityKpr._f_s_strLabel,
             PSelBtnTfdRngIntValidityKpr.f_s_strDocPropVal,

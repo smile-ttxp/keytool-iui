@@ -37,7 +37,7 @@ final public class KTLTcrOpenEncRsaPkcs12 extends KTLTcrOpenEncRsaDMAbs
 
     public KTLTcrOpenEncRsaPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -50,7 +50,7 @@ final public class KTLTcrOpenEncRsaPkcs12 extends KTLTcrOpenEncRsaDMAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+  
         
             // input
             strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -73,7 +73,7 @@ final public class KTLTcrOpenEncRsaPkcs12 extends KTLTcrOpenEncRsaDMAbs
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+
             fleOpen,
             super._chrsPasswdKst_);
     }

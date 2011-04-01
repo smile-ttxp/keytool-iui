@@ -128,7 +128,7 @@ final public class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAb
         {
             ktl = new KTLKprSaveNewEcJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+               
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -177,7 +177,7 @@ final public class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAb
         {
             ktl = new KTLKprSaveNewEcJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+               
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -226,7 +226,7 @@ final public class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAb
         {
             ktl = new KTLKprSaveNewEcPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -275,7 +275,7 @@ final public class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAb
         {
             ktl = new KTLKprSaveNewEcBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -324,7 +324,7 @@ final public class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAb
         {
             ktl = new KTLKprSaveNewEcUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -387,12 +387,12 @@ final public class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAb
             MySystem.s_printOutTrace(this, strMethod, "either aborted by user or failed");
     }
     
-    public PTabUICmdKtlKstOpenCrKprEc(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCrKprEc(Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstOpenCrKprEc._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+     
             com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs.s_getItgsListSizeKprEc(),
             true, // blnAllowTypePkcs12
             true, // blnAllowTypeBks

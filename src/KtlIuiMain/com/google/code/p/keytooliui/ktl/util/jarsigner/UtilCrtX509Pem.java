@@ -48,7 +48,6 @@ final public class UtilCrtX509Pem
     
  
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         File fle)
     {
@@ -74,7 +73,7 @@ final public class UtilCrtX509Pem
         // launch dialog 
 
         com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys dlg = new
-            com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys(frmParent, strTitleAppli);
+            com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys(frmParent);
         
         if (! dlg.init())
         {
@@ -82,7 +81,7 @@ final public class UtilCrtX509Pem
         }
         
         dlg.setTitle(
-            strTitleAppli + " - " + "view" + " " + com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strFileDescCrtX509Pem);
+            System.getProperty("_appli.title") + " - " + "view" + " " + com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strFileDescCrtX509Pem);
         
 
         if (! dlg.show(fle))
@@ -90,13 +89,11 @@ final public class UtilCrtX509Pem
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilCrtX509Pem._f_s_strClass + "." + "s_showFile(...)";
         
         File fle = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsCrtX509Pem, 
@@ -110,7 +107,7 @@ final public class UtilCrtX509Pem
             return;
         }
         
-        UtilCrtX509Pem.s_showFile(strTitleAppli, frmParent, fle);
+        UtilCrtX509Pem.s_showFile(frmParent, fle);
         
     }
     
@@ -121,7 +118,6 @@ final public class UtilCrtX509Pem
     **/
     static public String s_generateCrt(
         Frame frmOwner, 
-        String strTitleAppli,
         X509Certificate crt)
     {
         String strMethod = UtilCrtX509Pem._f_s_strClass + "." + "s_generateCrt(...)";
@@ -149,7 +145,7 @@ final public class UtilCrtX509Pem
             strBody += "More in your session.log file";
                         
             OPAbstract.s_showDialogWarning(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
             
             return null;
         }

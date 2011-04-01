@@ -68,7 +68,6 @@ abstract public class KTLCcaSaveCrtInDMAbs extends KTLCcaSaveNewDMAbs
 
         DTblsKstViewTCSaveIn dlg = new DTblsKstViewTCSaveIn(
             super._frmOwner_,
-            super._strTitleAppli_,
             kstOpen,
             super._strPathAbsKst_
             );
@@ -132,7 +131,6 @@ abstract public class KTLCcaSaveCrtInDMAbs extends KTLCcaSaveNewDMAbs
     
     protected KTLCcaSaveCrtInDMAbs(
         Frame frmOwner, 
-        String strTitleAppli,
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -147,7 +145,6 @@ abstract public class KTLCcaSaveCrtInDMAbs extends KTLCcaSaveNewDMAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
         
             // output
             strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 

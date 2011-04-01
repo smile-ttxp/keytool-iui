@@ -103,7 +103,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -122,7 +122,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         }
         
         File fleOpenCrypt = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileDataOpen_//,
+            super._frmOwner_,  super._strPathAbsFileDataOpen_//,
             //false //true // blnShowDlgOverwrite
             );
         
@@ -143,7 +143,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         }
         
         File fleSaveDecrypted = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileDataSave_,
+            super._frmOwner_,  super._strPathAbsFileDataSave_,
             true // blnShowDlgOverwrite
             );
         
@@ -177,7 +177,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+          
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -187,7 +187,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+          
             kstOpen);
         
         if (strsAliasSK == null)
@@ -200,7 +200,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -209,7 +209,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -218,7 +218,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -227,7 +227,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -235,7 +235,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -243,7 +243,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -251,7 +251,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -259,7 +259,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -267,7 +267,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+            kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -350,7 +350,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
  
         Key key = UtilKstAbs.s_getKey(
             super._frmOwner_, 
-            super._strTitleAppli_,
+   
             kstOpen,
             strAliasShk,
             chrsPasswdShk);
@@ -388,7 +388,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
             
             strBody += "\n\n" + "More: see your session.log file";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             
             return false;
         }
@@ -399,7 +399,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
         strBody += "\n  " + fleSaveDecrypted.getAbsolutePath();
         
         OPAbstract.s_showDialogInfo(super._frmOwner_, 
-            super._strTitleAppli_, 
+      
             strBody);
         
         
@@ -410,7 +410,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
 
     protected KTLShkOpenCryptDecAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore 
@@ -424,7 +424,7 @@ abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+        
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strPathAbsFileOpenCrypted,

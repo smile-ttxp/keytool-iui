@@ -55,7 +55,7 @@ abstract public class KTLShkSaveNewAbs extends KTLShkSaveAbs
     
     protected KTLShkSaveNewAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -66,7 +66,7 @@ abstract public class KTLShkSaveNewAbs extends KTLShkSaveAbs
         String strInstanceKeyGenerator // eg: DES (Signature Algorithm)
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         this._strInstanceKeyGenerator = strInstanceKeyGenerator;
     }
     
@@ -170,7 +170,7 @@ abstract public class KTLShkSaveNewAbs extends KTLShkSaveAbs
         }
         
         
-        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_, super._strTitleAppli_, 
+        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_, 
             kstOpen, strAliasShk, ShkNew, chrsPasswdShk, null))
         {
             MySystem.s_printOutError(this, strMethod, "failed");

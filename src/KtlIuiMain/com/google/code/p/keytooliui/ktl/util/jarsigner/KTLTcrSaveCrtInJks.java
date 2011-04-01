@@ -57,7 +57,7 @@ final public class KTLTcrSaveCrtInJks extends KTLTcrSaveCrtInDMAbs
         
         // memo: keystore should be of type "JKS", provided by "SUN"
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -76,7 +76,7 @@ final public class KTLTcrSaveCrtInJks extends KTLTcrSaveCrtInDMAbs
         }
         
         KeyStore kstOpen = UtilKstJks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -103,7 +103,7 @@ final public class KTLTcrSaveCrtInJks extends KTLTcrSaveCrtInDMAbs
     
     public KTLTcrSaveCrtInJks(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // output
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -118,7 +118,7 @@ final public class KTLTcrSaveCrtInJks extends KTLTcrSaveCrtInDMAbs
         
         super(
             frmOwner, 
-            strTitleAppli,
+   
         
             strPathAbsOpenKst, // existing keystore of type JKS 
             chrsPasswdOpenKst, 

@@ -12,25 +12,16 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // memo: assigning full class path coz ambiguous: same class name in several Java packages
-import java.security.PublicKey;
-import java.security.KeyPair;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 
 import java.awt.*;
 import java.io.*;
-import java.util.*;
 
 public class KTLKprSaveNewDsaJks extends KTLKprSaveNewDsaJAbs
 {
@@ -66,7 +57,7 @@ public class KTLKprSaveNewDsaJks extends KTLKprSaveNewDsaJAbs
         
         // memo: keystore should be of type "JKS", provided by "SUN"
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -85,7 +76,7 @@ public class KTLKprSaveNewDsaJks extends KTLKprSaveNewDsaJAbs
         }
         
         KeyStore kstOpen = UtilKstJks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -111,7 +102,7 @@ public class KTLKprSaveNewDsaJks extends KTLKprSaveNewDsaJAbs
     
     public KTLKprSaveNewDsaJks(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -156,7 +147,7 @@ public class KTLKprSaveNewDsaJks extends KTLKprSaveNewDsaJAbs
         
         super(
             frmOwner, 
-            strTitleAppli,
+        
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 

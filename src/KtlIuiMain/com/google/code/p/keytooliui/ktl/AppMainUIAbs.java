@@ -8,27 +8,18 @@ package com.google.code.p.keytooliui.ktl;
 // Uses actions with a tool bar and a menu.
 
 import com.google.code.p.keytooliui.ktl.swing.frame.*;
-import com.google.code.p.keytooliui.ktl.util.changer.*;
 import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 import com.google.code.p.keytooliui.ktl.swing.button.*;
-import com.google.code.p.keytooliui.ktl.io.*;
 
 import com.google.code.p.keytooliui.shared.*;
 import com.google.code.p.keytooliui.shared.io.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.button.BESPrint24;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.eventlistener.*;
-import com.google.code.p.keytooliui.shared.awt.awtevent.*;
-import com.google.code.p.keytooliui.shared.awt.awteventmulticaster.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.util.changer.*;
 import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
 import javax.swing.event.*;
 
-import java.io.*;
 import java.awt.event.*;
 import java.util.*;
 
@@ -36,21 +27,22 @@ import java.util.*;
 abstract public class AppMainUIAbs extends AppMainAbs implements
     ChangeListener // tabbedPane ==> tab selected
 {
-    // --------------------------
-    // FINAL STATIC PUBLIC STRING
-    
-    final static public String f_s_strApplicationDir = "ktl";
-    final static public String f_s_strBundleDir = new String("com.google.code.p.keytooliui." + AppMainUIAbs.f_s_strApplicationDir + ".bundle");
+
+    final static public String F_STR_BUNDLE_DIR =
+            new String("com.google.code.p.keytooliui." +
+            System.getProperty("_appli.name.short") + // ie. "ktl"
+            ".bundle");
     
     
     // ----------------------
     // final static protected
-    final static protected boolean _f_s_blnSetLAFSwing_ = true;
+    final static protected boolean _F_BLN_SET_LAF_SWING_ = true;
     
     
     // ------
     // PUBLIC
     
+    @Override
     public boolean start()
     {
         String strMethod = "start()";
@@ -70,6 +62,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
         return true;
     }
     
+    @Override
     public void actionPerformed(ActionEvent evtAction)
     {
         String strMethod = "actionPerformed(evtAction)";
@@ -92,7 +85,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof BESView24)
             {
-                UtilKstAll.s_showFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstAll.s_showFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -100,7 +93,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof BESTool24)
             {
-                UtilKstAll.s_manageFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstAll.s_manageFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -121,7 +114,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
                         
             if (evtAction.getSource() instanceof MIViewCsrPkcs10)
             {                
-                UtilCsrPkcs10.s_showFile(super._strTitleAppli_, super._fmaFrame_);
+                UtilCsrPkcs10.s_showFile(super._fmaFrame_);
             
                 // ending
                 return;
@@ -129,7 +122,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewCrtPem)
             {
-                UtilCrtX509Pem.s_showFile(super._strTitleAppli_, super._fmaFrame_);
+                UtilCrtX509Pem.s_showFile(super._fmaFrame_);
             
                 // ending
                 return;
@@ -137,7 +130,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewCrtDer)
             {
-                UtilCrtX509Der.s_showFile(super._strTitleAppli_, super._fmaFrame_);
+                UtilCrtX509Der.s_showFile(super._fmaFrame_);
             
                 // ending
                 return;
@@ -145,7 +138,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewCrtPkcs7)
             {
-                UtilCrtX509Pkcs7.s_showFile(super._strTitleAppli_, super._fmaFrame_);
+                UtilCrtX509Pkcs7.s_showFile(super._fmaFrame_);
             
                 // ending
                 return;
@@ -153,7 +146,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewKstJks)
             {
-                UtilKstJks.s_showFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstJks.s_showFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -161,7 +154,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewKstJceks)
             {
-                UtilKstJceks.s_showFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstJceks.s_showFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -169,7 +162,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewKstPkcs12)
             {
-                UtilKstPkcs12.s_showFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstPkcs12.s_showFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -177,7 +170,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewKstBks)
             {
-                UtilKstBks.s_showFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstBks.s_showFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -185,7 +178,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIViewKstUber)
             {
-                UtilKstUber.s_showFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstUber.s_showFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -193,28 +186,28 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
              if (evtAction.getSource() instanceof MIToolKstJksSysRootCA)
             {
-                UtilKstJks.s_manageFileKstCertsTrustSys(super._strTitleAppli_, super._fmaFrame_);  
+                UtilKstJks.s_manageFileKstCertsTrustSys(super._fmaFrame_);  
                 // ending
                 return;
             }
             
             if (evtAction.getSource() instanceof MIViewKstJksSysRootCA)
             {
-                UtilKstJks.s_showFileKstCertsTrustSys(super._strTitleAppli_, super._fmaFrame_);  
+                UtilKstJks.s_showFileKstCertsTrustSys(super._fmaFrame_);  
                 // ending
                 return;
             }
             
             if (evtAction.getSource() instanceof MIViewKstJksUsrTrusSig)
             {
-                UtilKstJks.s_showFileKstCertsTrustUsr(super._strTitleAppli_, super._fmaFrame_);  
+                UtilKstJks.s_showFileKstCertsTrustUsr(super._fmaFrame_);  
                 // ending
                 return;
             }
             
             if (evtAction.getSource() instanceof MIToolKstJks)
             {
-                UtilKstJks.s_manageFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstJks.s_manageFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -222,7 +215,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIToolKstJceks)
             {
-                UtilKstJceks.s_manageFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstJceks.s_manageFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -231,7 +224,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIToolKstPkcs12)
             {
-                UtilKstPkcs12.s_manageFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstPkcs12.s_manageFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -239,7 +232,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIToolKstBks)
             {
-                UtilKstBks.s_manageFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstBks.s_manageFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -247,7 +240,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
             
             if (evtAction.getSource() instanceof MIToolKstUber)
             {
-                UtilKstUber.s_manageFile(super._strTitleAppli_, super._fmaFrame_); 
+                UtilKstUber.s_manageFile(super._fmaFrame_); 
             
                 // ending
                 return;
@@ -433,8 +426,8 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
     public AppMainUIAbs(
         boolean blnExitNormally, // memo: should be equals to value of "blnShowDialogExitConfirm""
         boolean blnParentDirReadOnlyAllowed,
-        String strTitleAppli,
-        String strAppliNameShort, // eg: "ktl"
+        //String strTitleAppli,
+        //String strAppliNameShort, // eg: "ktl"
         boolean blnShowDialogExitConfirm, 
         boolean blnIsHelpGettingStarted,
         boolean blnInternAllowed
@@ -442,18 +435,18 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
     {
         super(
             blnParentDirReadOnlyAllowed, // MEMO: blnParentDirReadOnlyAllowed
-            strTitleAppli, 
-            strAppliNameShort, // eg: "ktl"
+            //strTitleAppli,
+            //strAppliNameShort, // eg: "ktl"
             blnShowDialogExitConfirm,
             blnIsHelpGettingStarted,
-            AppMainUIAbs._f_s_blnSetLAFSwing_, // used to fix up JH's toolbar buttons
+            AppMainUIAbs._F_BLN_SET_LAF_SWING_, // used to fix up JH's toolbar buttons
             blnInternAllowed
             );
             
         this._blnExitNormally = blnExitNormally;
         //this._blnDumpSecurityProviderJVM = blnDumpSecurityProviderJVM;
             
-        String strMethod = "AppMainUIAbs()";
+        String strMethod = "AppMainUIAbs(...)";
         
         if (! _addProviders())
             MySystem.s_printOutExit(this, strMethod, "failed");
@@ -462,10 +455,10 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
     }
     
     protected boolean _createLastUserPreferences_(
-            String strAppliNameShort,
+            //String strAppliNameShort,
             String strVersionAppli)
     {
-        String strMethod = "_createLastUserPreferences_(strAppliNameShort, strVersionAppli)";
+        String strMethod = "_createLastUserPreferences_(...)";
         
         Vector<UserChoice> vecUserChoice = new Vector<UserChoice>();
 	        
@@ -479,7 +472,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
         
         vecUserChoice.addElement(this._cltSetVisibleTab_);*/
         
-        if (! super._createLastUserPreferences_(strAppliNameShort, strVersionAppli, vecUserChoice))
+        if (! super._createLastUserPreferences_(strVersionAppli, vecUserChoice))
         {
 	        MySystem.s_printOutExit(this, strMethod, "failed");
 	        return false;

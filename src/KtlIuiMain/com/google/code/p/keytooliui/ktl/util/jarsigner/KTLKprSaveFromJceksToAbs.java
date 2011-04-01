@@ -18,14 +18,10 @@ import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
-import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
 import java.awt.*;
@@ -79,7 +75,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         String[] strsAliasPKTCSource = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+          
             kstOpenSource);
         
         if (strsAliasPKTCSource == null)
@@ -89,7 +85,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         String[] strsAliasSKSource = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+            
             kstOpenSource);
         
         if (strsAliasSKSource == null)
@@ -102,7 +98,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTCSource = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+            kstOpenSource, strsAliasPKTCSource);
         
         if (boosIsTCEntryPKTCSource == null)
         {
@@ -111,7 +107,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         Boolean[] boosValidDatePKTCSource = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+             kstOpenSource, strsAliasPKTCSource);
         
         if (boosValidDatePKTCSource == null)
         {
@@ -120,7 +116,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
 
         Boolean[] boosSelfSignedCertPKTCSource = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+            kstOpenSource, strsAliasPKTCSource);
         
         if (boosSelfSignedCertPKTCSource == null)
         {
@@ -129,7 +125,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         Boolean[] boosTrustedCertPKTCSource = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+             kstOpenSource, strsAliasPKTCSource);
         
         if (boosTrustedCertPKTCSource == null)
         {
@@ -137,7 +133,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         String[] strsSizeKeyPublPKTCSource = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+            kstOpenSource, strsAliasPKTCSource);
         
         if (strsSizeKeyPublPKTCSource == null)
         {
@@ -145,7 +141,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         String[] strsTypeCertPKTCSource = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+            kstOpenSource, strsAliasPKTCSource);
         
         if (strsTypeCertPKTCSource == null)
         {
@@ -153,7 +149,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         String[] strsAlgoSigCertPKTCSource = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+             kstOpenSource, strsAliasPKTCSource);
         
         if (strsAlgoSigCertPKTCSource == null)
         {
@@ -161,7 +157,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
 
         Date[] dtesLastModifiedPKTCSource = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasPKTCSource);
+             kstOpenSource, strsAliasPKTCSource);
 
         if (dtesLastModifiedPKTCSource == null)
         {
@@ -169,181 +165,14 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         Date[] dtesLastModifiedSKSource = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpenSource, strsAliasSKSource);
+            kstOpenSource, strsAliasSKSource);
 
         if (dtesLastModifiedSKSource == null)
         {
             MySystem.s_printOutExit(strMethod, "nil dtesLastModifiedPKTCSource");
         }
         
-        /*String[] strsAliasSource = UtilKstAbs.s_getStrsAlias(
-            super._frmOwner_, 
-            super._strTitleAppli_, 
-            kstOpenSource);
-     
-        if (strsAliasSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsAliasSource");
-            return false;
-        }
-        
-        // ----
-        // check for existing aliases
-        
-        if (strsAliasSource.length < 1)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutWarning(this, strMethod, "strsAliasSource.length < 1");
-            
-            String strBody = "source keystore does not contain any entry.";
-                
-            OPAbstract.s_showDialogInfo(
-                super._frmOwner_, super._strTitleAppli_, strBody);
-            
-            return false;
-        }
-        
-        // --
-        // fill in table for dialogSelect
-        
-        Boolean[] boosEntryTcrSource = UtilKstAbs.s_getBoosEntryTcr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (boosEntryTcrSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosEntryTcrSource");
-            return false;
-        }
-        
-        Boolean[] boosEntryKprSource = UtilKstAbs.s_getBoosEntryKpr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (boosEntryKprSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosEntryKprSource");
-            return false;
-        }
-        
-        Boolean[] boosSelfSignedCertSource = UtilKstAbs.s_getBoosSelfSigned(
-            super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (boosSelfSignedCertSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosSelfSignedCertSource");
-            return false;
-        }
-        
-        
-        Boolean[] boosTrustedCertSource = 
-            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (boosTrustedCertSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosTrustedCertSource");
-            return false;
-        }
-        
-        String[] strsSizeKeyPublSource = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (strsSizeKeyPublSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsSizeKeyPublSource");
-            return false;
-        }
-           
-        String[] strsAlgoKeyPublSource = UtilKstAbs.s_getStrsAlgoKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (strsAlgoKeyPublSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsAlgoKeyPublSource");
-            return false;
-        }
-        
-        String[] strsTypeCertSource = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (strsTypeCertSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsTypeCertSource");
-            return false;
-        }
-        
-        String[] strsAlgoSigCertSource = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-        
-        if (strsAlgoSigCertSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil strsAlgoSigCertSource");
-            return false;
-        }
-
-        Date[] dtesLastModifiedSource = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, super._strTitleAppli_, kstOpenSource, strsAliasSource);
-
-        if (dtesLastModifiedSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil dtesLastModifiedSource");
-            return false;
-        }
-        
-        // ----
-        
-        Boolean[] boosTypeCertX509Source = super._getBoosTypeCertX509_(kstOpenSource, strsAliasSource);
-        
-        if (boosTypeCertX509Source == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosTypeCertX509Source");
-            return false;
-        }
-        
-        Boolean[] boosElligibleSource = super._getBoosElligibleAny_(
-            boosEntryKprSource, strsAlgoKeyPublSource, boosTypeCertX509Source);
-        
-        if (boosElligibleSource == null)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "nil boosElligibleSource");
-            return false;
-        } 
-        
-        // -- 
-        // clean-up
-        boosTypeCertX509Source = null;
-        
-        // ---
-        // check for elligible entry
-        
-        boolean blnElligible = false;
-        
-        for (int i=0; i<boosElligibleSource.length; i++)
-        {
-            if (boosElligibleSource[i].booleanValue() == true)
-            {
-                blnElligible = true;
-                break;
-            }
-        }
-        
-        if (! blnElligible)
-        {
-            super._setEnabledCursorWait_(false);
-            MySystem.s_printOutError(this, strMethod, "! blnElligible");
-            
-            String strBody = "source keystore does not contain any keypair entry\n either of type RSA, or of type DSA, with an X.509 certificate .";
-                
-            OPAbstract.s_showDialogInfo(
-                super._frmOwner_, super._strTitleAppli_, strBody);
-        
-            return false;
-        }*/
+       
         
         // --
         // assign default cursor
@@ -351,16 +180,11 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         super._setEnabledCursorWait_(false);
         
         // ----
-       
-        /*DTblEntryKprOpenKPAny dlgSource = new DTblEntryKprOpenKPAny(
-            super._frmOwner_, 
-            super._strTitleAppli_,
-            kstOpenSource
-            );*/
+  
         
         DTblsKstSelPKOpen dlgSource = new DTblsKstSelPKOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             kstOpenSource,
             super._strPathAbsKst_,
             "Import private key from other keystore - step 1/2: source"
@@ -436,7 +260,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         try
         {
             pkySource = (PrivateKey) UtilKstAbs.s_getKey(
-                super._frmOwner_, super._strTitleAppli_,
+                super._frmOwner_,
                 kstOpenSource,
                 strAliasKprSource,
                 chrsPasswdKprSource);
@@ -503,7 +327,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
     
     protected KTLKprSaveFromJceksToAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // 
         String strPathAbsOpenKstTarget, // existing keystore of type [JKS-JCEKS-PKCS12-BKS-UBER] 
@@ -518,7 +342,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+    
             
             // input
             strPathAbsOpenKstTarget,
@@ -545,7 +369,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         String[] strsAliasSourceAll = UtilKstAbs.s_getStrsAlias(
             super._frmOwner_, 
-            super._strTitleAppli_, 
+       
             kstOpenToSource);
    
         
@@ -567,7 +391,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             strBody += super._strPathAbsKstSource_;
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -607,7 +431,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             strBody += super._strPathAbsKstSource_;
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
         }
         
         // --
@@ -625,7 +449,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             strBody += super._strPathAbsKstSource_;
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -701,7 +525,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+       
             kstOpenTarget);
         
         if (strsAliasPKTC == null)
@@ -711,7 +535,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+          
             kstOpenTarget);
         
         if (strsAliasSK == null)
@@ -724,7 +548,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+             kstOpenTarget, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -733,7 +557,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+            kstOpenTarget, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -742,7 +566,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+           kstOpenTarget, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -751,7 +575,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+            kstOpenTarget, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -759,7 +583,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+             kstOpenTarget, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -767,7 +591,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+            kstOpenTarget, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -775,7 +599,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+            kstOpenTarget, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -783,7 +607,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+            kstOpenTarget, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -791,7 +615,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasSK);
+            kstOpenTarget, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -808,7 +632,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         /*String[] strsAliasTarget = UtilKstAbs.s_getStrsAlias(
             super._frmOwner_, 
-            super._strTitleAppli_, 
+            
             kstOpenTarget);
         
         if (strsAliasTarget == null)
@@ -821,7 +645,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         // --
         
         Boolean[] boosEntryKpr = UtilKstAbs.s_getBoosEntryKpr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+            super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (boosEntryKpr == null)
         {
@@ -831,7 +655,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         Boolean[] boosEntryTcr = UtilKstAbs.s_getBoosEntryTcr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+            super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (boosEntryTcr == null)
         {
@@ -842,7 +666,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         
         Boolean[] boosSelfSignedCert = UtilKstAbs.s_getBoosSelfSigned(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+            super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (boosSelfSignedCert == null)
         {
@@ -852,7 +676,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         }
         
         Boolean[] boosTrustedCert = 
-            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (boosTrustedCert == null)
         {
@@ -861,7 +685,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             return false;
         }
         
-        String[] strsSizeKeyPubl = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+        String[] strsSizeKeyPubl = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (strsSizeKeyPubl == null)
         {
@@ -870,7 +694,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             return false;
         }
         
-        String[] strsAlgoKeyPubl = UtilKstAbs.s_getStrsAlgoKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+        String[] strsAlgoKeyPubl = UtilKstAbs.s_getStrsAlgoKeyPubl(super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (strsAlgoKeyPubl == null)
         {
@@ -879,7 +703,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             return false;
         }
         
-        String[] strsTypeCert = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+        String[] strsTypeCert = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (strsTypeCert == null)
         {
@@ -888,7 +712,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             return false;
         }
         
-        String[] strsAlgoSigCert = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+        String[] strsAlgoSigCert = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, kstOpenTarget, strsAliasTarget);
         
         if (strsAlgoSigCert == null)
         {
@@ -897,7 +721,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
             return false;
         }
 
-        Date[] dtesLastModified = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAliasTarget);
+        Date[] dtesLastModified = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, kstOpenTarget, strsAliasTarget);
 
         if (dtesLastModified == null)
         {
@@ -931,7 +755,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         
         DTblsKstViewKeySavePK dlgTarget = new DTblsKstViewKeySavePK(
             super._frmOwner_, 
-            super._strTitleAppli_,
+          
             kstOpenTarget,
             super._strPathAbsKst_,
             "Import private key from other keystore - step 2/2: target");
@@ -991,7 +815,7 @@ abstract public class KTLKprSaveFromJceksToAbs extends KTLKprSaveFromAbs
         // ----
         // store privateKeySource & crtsSource associated with alias (?& password) in kstOpenTarget
         
-        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_, super._strTitleAppli_, 
+        if (! UtilKstAbs.s_setKeyEntry(super._frmOwner_,
             kstOpenTarget, strAliasKprTarget, pkyPrivateSource, chrsPasswdKprTarget, crtsSource))
         {
             MySystem.s_printOutError(this, strMethod, "failed");

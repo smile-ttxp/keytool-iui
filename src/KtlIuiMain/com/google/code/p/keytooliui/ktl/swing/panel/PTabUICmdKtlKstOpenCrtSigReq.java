@@ -61,7 +61,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenCrtSigReq";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenCrtSigReq" // class name
             ;
         
@@ -113,7 +113,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         {
             ktl = new KTLKprOpenCrtReqJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -131,7 +131,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         {
             ktl = new KTLKprOpenCrtReqJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+               
                 
                 // input
                 super._strPathAbsKst_, 
@@ -149,7 +149,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         {
             ktl = new KTLKprOpenCrtReqBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -167,7 +167,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         {
             ktl = new KTLKprOpenCrtReqPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+           
                 
                 // input
                 super._strPathAbsKst_, 
@@ -185,7 +185,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         {
             ktl = new KTLKprOpenCrtReqUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -232,19 +232,19 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
     }
     
     
-    public PTabUICmdKtlKstOpenCrtSigReq(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCrtSigReq(Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstOpenCrtSigReq._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+      
             PSelBtnTfdFileSaveCsr.f_s_strDocPropVal
             );
 
         super._pnlSelectFileIO_ = new PSelBtnTfdFileSaveCsr(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+  
             (ItemListener) null
             );
             
@@ -319,7 +319,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         }
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = _s_strDlgInfoActionBodyBeg + "\n" +
@@ -328,7 +328,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return true;
         
             
@@ -358,7 +358,7 @@ final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAb
             this._dlgViewResult = null;
         }
         
-        this._dlgViewResult = new DViewSourceFileTextSys(super._frmOwner_, super._strTitleAppli_);
+        this._dlgViewResult = new DViewSourceFileTextSys(super._frmOwner_);
         
         if (! this._dlgViewResult.init())
         {

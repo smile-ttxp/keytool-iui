@@ -33,14 +33,14 @@ final public class PSelBtnTfdStrW10DateBirth extends PSelBtnTfdStrW10
     public PSelBtnTfdStrW10DateBirth(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+      
         Object objDocPropValue,
         boolean blnFieldRequired
         )
     {
         super(
             docListenerParent,
-            frmParent, strTitleAppli, PSelBtnTfdStrW10DateBirth._f_s_strLabel, objDocPropValue, blnFieldRequired);
+            frmParent, PSelBtnTfdStrW10DateBirth._f_s_strLabel, objDocPropValue, blnFieldRequired);
         
     }
     
@@ -78,7 +78,7 @@ final public class PSelBtnTfdStrW10DateBirth extends PSelBtnTfdStrW10
             strBody += "\n\n";
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleDateBirth();
                     
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }
         

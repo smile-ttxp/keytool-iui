@@ -458,7 +458,7 @@ abstract public class KTLAbs extends Object
      *ie keySize = 2048 ==> limitation for file encrypting = 245
      */
     static protected boolean _s_can_encryptRsa_(
-            Frame frmOwner, String strTitleAppli, X509Certificate crtX509, int intSizeFileInput)
+            Frame frmOwner, X509Certificate crtX509, int intSizeFileInput)
     {
         int intSizeKey = UtilCrtX509.s_getSizeKey(crtX509);
         
@@ -477,7 +477,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + "  ([key-size] / 8) - 11";          
             
             
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             
             return false;
         }
@@ -485,39 +485,7 @@ abstract public class KTLAbs extends Object
         return true;
     }
     
-    /*
-     *MEMO: (intKeySize/8) - 11 = intDataSize
-     *where "11" is padding in bytes
-     *ie keySize = 2048 ==> limitation for file encrypting = 245
-     */
-    /* NOT NEEDED !
-     static protected boolean _s_can_decryptRsa_(
-            Frame frmOwner, String strTitleAppli, X509Certificate crtX509, int intSizeFileInput)
-    {
-        int intSizeKey = UtilCrtX509.s_getSizeKey(crtX509);
-        
-        int intSizeDataMax = intSizeKey;
-        intSizeDataMax /= 8;
-        intSizeDataMax -= 11;
-        
-        if (intSizeDataMax < intSizeFileInput)
-        {
-            String strBody = "Data must not be longer than " + intSizeDataMax + " bytes"; 
-            strBody += "\n" + "Data size: " + intSizeFileInput + " bytes"; 
-            strBody += "\n" + "Key size: " + intSizeKey + " bytes"; 
-            
-            //strBody += "\n\n" + "Workaround: increase key size"; 
-            strBody += "\n\n" + "MEMO: Data size should not exceed the following in bytes";
-            strBody += "\n" + "  ([key-size] / 8) - 11";          
-            
-            
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
-            
-            return false;
-        }
-        
-        return true;
-    }*/
+  
     
     static protected void _s_encryptRsa_(
             PublicKey pky, 
@@ -607,23 +575,6 @@ abstract public class KTLAbs extends Object
     // STATIC PUBLIC
     
     
-    
-    
-    
-    // TODO: call this method for all related errors (juste done for "createKeystore" and "createKeypair"
-    /*static public String s_getErrorBodyCheckPolicy(String str, String strTitleAppli)
-    {
-        if (! KTLAbs.s_isPolicyExtended())
-            return str;
-        
-        str += "\n\n";
-        str += "You appear to be running " + strTitleAppli;
-        str += "\nMake sur Java(TM) Cryptography Extension (JCE)";
-        str += "\n  Unlimited Strength Jurisdiction Policy files";
-        str += "\n  have been installed in [jdk-home]/jre/lib/security/";
-            
-        return str;
-    }*/
     
     /* ATTN: be carefull, should be inside range!
      *DSA: should point to 1024
@@ -762,7 +713,6 @@ abstract public class KTLAbs extends Object
     // PROTECTED
     
     protected Frame _frmOwner_ = null;
-    protected String _strTitleAppli_ = null;
     protected String _strPathAbsKst_ = null;
     protected char[] _chrsPasswdKst_ = null; 
     
@@ -781,14 +731,13 @@ abstract public class KTLAbs extends Object
     
     protected KTLAbs(
         Frame frmOwner, 
-        String strTitleAppli, // input
         String strPathAbsKst, // existing keystore of type [JKS-JCEKS-PKCS12]
         char[] chrsPasswdKst,
         
         String strProviderKst)
     {
         this._frmOwner_ = frmOwner;
-        this._strTitleAppli_ = strTitleAppli;
+
         // input
         this._strPathAbsKst_ = strPathAbsKst;
         this._chrsPasswdKst_ = chrsPasswdKst;
@@ -827,7 +776,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n\n" + "Got FileNotFound exception,\nsounds like you selected a directory.";
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             // error dlg
             return false;
@@ -852,7 +801,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + excKeyStore.getMessage();
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }
@@ -865,10 +814,10 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + excIO.getMessage();
             
             // error could be coz: using KeyTool IUI Plus WITHOUT JCE Unlimited Strength Jurisdiction Policy Files installed
-            //strBody = KTLAbs.s_getErrorBodyCheckPolicy(strBody, this._strTitleAppli_);
+            //strBody = KTLAbs.s_getErrorBodyCheckPolicy(strBody);
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }
@@ -881,7 +830,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + excNoSuchAlgorithm.getMessage();
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }
@@ -894,7 +843,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + excCertificate.getMessage();
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }
@@ -907,7 +856,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + errExceptionInInitializer.getMessage();
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }
@@ -920,7 +869,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + errNoClassDefFound.getMessage();
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }
@@ -934,7 +883,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + exc.getMessage();
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }
@@ -956,7 +905,7 @@ abstract public class KTLAbs extends Object
             strBody += "\n" + excIO.getMessage();
             
             OPAbstract.s_showDialogError(
-                this._frmOwner_, this._strTitleAppli_, strBody);
+                this._frmOwner_, strBody);
                 
             return false;
         }

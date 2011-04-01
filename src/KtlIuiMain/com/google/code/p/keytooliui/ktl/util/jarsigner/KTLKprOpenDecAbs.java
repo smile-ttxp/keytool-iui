@@ -33,7 +33,7 @@ abstract public class KTLKprOpenDecAbs extends KTLKprOpenAbs
     
     protected KTLKprOpenDecAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -46,7 +46,7 @@ abstract public class KTLKprOpenDecAbs extends KTLKprOpenAbs
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._strPathAbsFileOpenData_ = strPathAbsFileOpenData;
         this._strPathAbsFileSaveData_ = strPathAbsFileSaveData;

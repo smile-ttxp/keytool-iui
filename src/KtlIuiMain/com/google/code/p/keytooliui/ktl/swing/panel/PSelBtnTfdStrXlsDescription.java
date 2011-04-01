@@ -60,13 +60,12 @@ final public class PSelBtnTfdStrXlsDescription extends PSelBtnTfdStrXlsAbs
     
     public PSelBtnTfdStrXlsDescription(
         javax.swing.event.DocumentListener docListenerParent,
-        Frame frmParent, 
-        String strTitleAppli)
+        Frame frmParent)
     {
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+ 
             PSelBtnTfdStrXlsDescription._f_s_strLabel,
             new TF30x20SelString(),
             PSelBtnTfdStrXlsDescription.f_s_strDocPropVal, 
@@ -105,7 +104,7 @@ final public class PSelBtnTfdStrXlsDescription extends PSelBtnTfdStrXlsAbs
             strBody += "\n\n";
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleDescription();
                     
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }*/
         

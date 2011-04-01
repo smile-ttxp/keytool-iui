@@ -34,7 +34,7 @@ final public class KTLKprOpenSigDetOCmsBks extends KTLKprOpenSigDetOCmsKPAbs
 
     public KTLKprOpenSigDetOCmsBks(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -48,7 +48,7 @@ final public class KTLKprOpenSigDetOCmsBks extends KTLKprOpenSigDetOCmsKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+ 
         
             // input
             strPathAbsOpenKst, // existing keystore
@@ -71,7 +71,7 @@ final public class KTLKprOpenSigDetOCmsBks extends KTLKprOpenSigDetOCmsKPAbs
     {
         return UtilKstBks.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+        
             fleOpen,
             super._chrsPasswdKst_);
     }

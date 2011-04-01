@@ -59,7 +59,7 @@ abstract public class KTLShkSaveNewAllJAbs extends KTLShkSaveNewAllAbs
     
     protected KTLShkSaveNewAllJAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -71,7 +71,7 @@ abstract public class KTLShkSaveNewAllJAbs extends KTLShkSaveNewAllAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
             
             // input
             strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -118,7 +118,7 @@ abstract public class KTLShkSaveNewAllJAbs extends KTLShkSaveNewAllAbs
         
         DTblsKstViewKeySaveSK dlg = new DTblsKstViewKeySaveSK(
             (Component) super._frmOwner_, 
-            super._strTitleAppli_,
+
             kstOpen,
             super._strPathAbsKst_,
             "Create secret key entry");
@@ -184,7 +184,7 @@ abstract public class KTLShkSaveNewAllJAbs extends KTLShkSaveNewAllAbs
             String strBody = "got NoSuchAlgorithmException:";
             strBody += "\n  " + excNoSuchAlgorithm.getMessage();
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             
             
             

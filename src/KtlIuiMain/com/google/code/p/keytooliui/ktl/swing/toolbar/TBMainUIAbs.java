@@ -78,8 +78,7 @@ abstract public class TBMainUIAbs extends TBMainAbstract
     protected TBMainUIAbs(
         java.awt.event.ActionListener actListenerParentAppli,
         //javax.help.HelpBroker hbrHelpStandard,
-        javax.swing.ImageIcon iinFrameFloatable,
-        String strTitleAppli)
+        javax.swing.ImageIcon iinFrameFloatable)
     {
         super(
             (String) null, // strHelpId
@@ -94,7 +93,7 @@ abstract public class TBMainUIAbs extends TBMainAbstract
             );
             
         
-         setName(strTitleAppli + " - " + "Main toolbar"); // in case of floatable toolbar
+         setName(System.getProperty("_appli.title") + " - " + "Main toolbar"); // in case of floatable toolbar
          
          this._btnKstView = new BESView24(actListenerParentAppli);
          this._btnKstTool = new BESTool24(actListenerParentAppli);

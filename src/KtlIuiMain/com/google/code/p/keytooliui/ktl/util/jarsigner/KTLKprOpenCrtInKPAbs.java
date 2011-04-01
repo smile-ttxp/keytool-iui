@@ -40,7 +40,7 @@ abstract public class KTLKprOpenCrtInKPAbs extends KTLKprOpenCrtInAbs
 
     protected KTLKprOpenCrtInKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -56,7 +56,7 @@ abstract public class KTLKprOpenCrtInKPAbs extends KTLKprOpenCrtInAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+     
         
             // input
             strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -73,8 +73,8 @@ abstract public class KTLKprOpenCrtInKPAbs extends KTLKprOpenCrtInAbs
     //protected DTblEntryKprOpenAbs _getDialogSelectKpr_(KeyStore kstOpen)
     protected DTblsKstSelPKAbs _getDialogSelectKpr_(KeyStore kstOpen)
     {
-        //return new DTblEntryKprOpenKPAny(super._frmOwner_, super._strTitleAppli_, kstOpen);
-        return new DTblsKstSelPKOpen(super._frmOwner_, super._strTitleAppli_, kstOpen,
+        
+        return new DTblsKstSelPKOpen(super._frmOwner_, kstOpen,
                 super._strPathAbsKst_,
             "Import certificate file as C.A. cert. reply to private key"
                 );

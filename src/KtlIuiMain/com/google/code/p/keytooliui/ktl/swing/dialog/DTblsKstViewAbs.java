@@ -125,7 +125,7 @@ abstract public class DTblsKstViewAbs extends DTblsKstAbs
     
     protected DTblsKstViewAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         String strTitleThis,
         KeyStore kseLoaded,
         String strPathAbs,
@@ -133,7 +133,7 @@ abstract public class DTblsKstViewAbs extends DTblsKstAbs
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+       
             strTitleThis,
             kseLoaded,
             strPathAbs,

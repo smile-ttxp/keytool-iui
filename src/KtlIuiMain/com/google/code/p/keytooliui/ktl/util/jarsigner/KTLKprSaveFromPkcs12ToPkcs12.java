@@ -12,22 +12,15 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
-import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
 import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
@@ -65,7 +58,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         // memo: PKCS12 keystore type, provided by "BC" or "SunRsaSign"
         File fleOpenKstSource = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKstSource_);
+            super._frmOwner_,  super._strPathAbsKstSource_);
         
         if (fleOpenKstSource == null)
         {
@@ -80,7 +73,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             MySystem.s_printOutExit(this, strMethod, "nil super._chrsPasswdKstSource_"); 
         
         KeyStore kstOpenSource = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstSource,
             super._chrsPasswdKstSource_);
         
@@ -93,7 +86,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -108,7 +101,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             MySystem.s_printOutExit(this, strMethod, "nil super._chrsPasswdKst_"); 
         
         KeyStore kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -135,8 +128,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
     
     public KTLKprSaveFromPkcs12ToPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
-        
+       
         // 
         String strPathAbsOpenKst, // existing keystore of type PKCS12 target 
         char[] chrsPasswdOpenKst,
@@ -148,7 +140,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
     {
         super(
             frmOwner, 
-            strTitleAppli,
+           
         
             // 
             strPathAbsOpenKst, // existing keystore of type PKCS12 target 
@@ -183,7 +175,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+           
             kstOpenTarget);
         
         if (strsAliasPKTC == null)
@@ -193,7 +185,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+          
             kstOpenTarget);
         
         if (strsAliasSK == null)
@@ -206,7 +198,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+             kstOpenTarget, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -215,7 +207,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+             kstOpenTarget, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -224,7 +216,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+           kstOpenTarget, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -233,7 +225,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+             kstOpenTarget, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -241,7 +233,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+             kstOpenTarget, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -249,7 +241,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+           kstOpenTarget, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -257,7 +249,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+            kstOpenTarget, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -265,7 +257,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasPKTC);
+            kstOpenTarget, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -273,7 +265,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpenTarget, strsAliasSK);
+           kstOpenTarget, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -286,7 +278,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         /*String[] strsAlias = UtilKstAbs.s_getStrsAlias(
             super._frmOwner_, 
-            super._strTitleAppli_, 
+            
             kstOpenTarget);
         
         if (strsAlias == null)
@@ -299,7 +291,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         // --
         
         Boolean[] boosEntryKpr = UtilKstAbs.s_getBoosEntryKpr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+            super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (boosEntryKpr == null)
         {
@@ -309,7 +301,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         }
         
         Boolean[] boosEntryTcr = UtilKstAbs.s_getBoosEntryTcr(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+            super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (boosEntryTcr == null)
         {
@@ -320,7 +312,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         
         Boolean[] boosSelfSignedCert = UtilKstAbs.s_getBoosSelfSigned(
-            super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+            super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (boosSelfSignedCert == null)
         {
@@ -330,7 +322,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         }
         
         Boolean[] boosTrustedCert = 
-            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (boosTrustedCert == null)
         {
@@ -339,7 +331,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             return false;
         }
         
-        String[] strsSizeKeyPubl = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+        String[] strsSizeKeyPubl = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (strsSizeKeyPubl == null)
         {
@@ -348,7 +340,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             return false;
         }
         
-        String[] strsAlgoKeyPubl = UtilKstAbs.s_getStrsAlgoKeyPubl(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+        String[] strsAlgoKeyPubl = UtilKstAbs.s_getStrsAlgoKeyPubl(super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (strsAlgoKeyPubl == null)
         {
@@ -357,7 +349,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             return false;
         }
         
-        String[] strsTypeCert = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+        String[] strsTypeCert = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (strsTypeCert == null)
         {
@@ -366,7 +358,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             return false;
         }
         
-        String[] strsAlgoSigCert = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+        String[] strsAlgoSigCert = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, kstOpenTarget, strsAlias);
         
         if (strsAlgoSigCert == null)
         {
@@ -375,7 +367,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
             return false;
         }
 
-        Date[] dtesLastModified = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, super._strTitleAppli_, kstOpenTarget, strsAlias);
+        Date[] dtesLastModified = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, kstOpenTarget, strsAlias);
 
         if (dtesLastModified == null)
         {
@@ -404,7 +396,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         
         DTblsKstViewKeySavePKNoPass dlgTarget = new DTblsKstViewKeySavePKNoPass(
             super._frmOwner_, 
-            super._strTitleAppli_,
+          
             kstOpenTarget,
             super._strPathAbsKst_,
             "Import private key from other keystore - step 2/2: target");
@@ -454,7 +446,7 @@ final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAb
         // store privateKeySource & crtsSource associated with alias (NO PASSWORD) in kstOpenTarget
         
 
-        if (! UtilKstPkcs12.s_setKeyEntry(super._frmOwner_, super._strTitleAppli_, 
+        if (! UtilKstPkcs12.s_setKeyEntry(super._frmOwner_, 
             kstOpenTarget, strAliasKpr, pkyPrivateSource, crtsSource))
         {
             MySystem.s_printOutError(this, strMethod, "failed");

@@ -44,7 +44,7 @@ abstract public class PSelBtnTfdFileJarOpenAbs extends PSelBtnTfdFileJarAbs
     protected PSelBtnTfdFileJarOpenAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         String strLabel,
         Object objDocPropValue,
         ItemListener itmListenerParent, // memo: always nil if intMode == SAVE_DIALOG
@@ -55,7 +55,7 @@ abstract public class PSelBtnTfdFileJarOpenAbs extends PSelBtnTfdFileJarAbs
         super(
             docListenerParent,
             frmParent,
-            strTitleAppli,
+         
             strLabel,
             objDocPropValue,
             JFileChooser.OPEN_DIALOG,

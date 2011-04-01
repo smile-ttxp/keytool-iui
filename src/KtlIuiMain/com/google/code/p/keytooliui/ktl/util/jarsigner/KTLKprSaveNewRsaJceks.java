@@ -79,7 +79,7 @@ public class KTLKprSaveNewRsaJceks extends KTLKprSaveNewRsaJAbs
 
         // memo: keystore should be of type "JCEKS", provided by "SunJCE"
         File fleOpenKstJceks = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKstJceks == null)
         {
@@ -98,7 +98,7 @@ public class KTLKprSaveNewRsaJceks extends KTLKprSaveNewRsaJAbs
         }
         
         KeyStore kstOpenJceks = UtilKstJceks.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKstJceks,
             super._chrsPasswdKst_);
         
@@ -124,7 +124,7 @@ public class KTLKprSaveNewRsaJceks extends KTLKprSaveNewRsaJAbs
     
     public KTLKprSaveNewRsaJceks(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -170,7 +170,7 @@ public class KTLKprSaveNewRsaJceks extends KTLKprSaveNewRsaJAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+      
         
             // input
             strPathAbsOpenKst, // existing keystore of type JCEKS 

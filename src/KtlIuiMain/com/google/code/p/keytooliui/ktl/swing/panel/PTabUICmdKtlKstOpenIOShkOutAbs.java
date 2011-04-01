@@ -25,14 +25,14 @@ abstract public class PTabUICmdKtlKstOpenIOShkOutAbs extends PTabUICmdKtlKstOpen
     
     protected PTabUICmdKtlKstOpenIOShkOutAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         String strHelpID
         )
     {
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+         
             PSelBtnTfdFileSaveShk.f_s_strDocPropVal
             );
         
@@ -40,7 +40,7 @@ abstract public class PTabUICmdKtlKstOpenIOShkOutAbs extends PTabUICmdKtlKstOpen
             /*super._pnlSelectFileData_ = new PSelBtnTfdFileSaveAny(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+       
             (java.awt.event.ItemListener) null,
             "Secret key file:" // strLabel
             );*/
@@ -48,7 +48,7 @@ abstract public class PTabUICmdKtlKstOpenIOShkOutAbs extends PTabUICmdKtlKstOpen
             super._pnlSelectFileData_ = new PSelBtnTfdFileSaveShk(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+         
             (ItemListener) null
             );
         

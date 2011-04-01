@@ -34,7 +34,7 @@ final public class KTLKprOpenSigDetOCmsPkcs12 extends KTLKprOpenSigDetOCmsAbs
 
     public KTLKprOpenSigDetOCmsPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -49,7 +49,7 @@ final public class KTLKprOpenSigDetOCmsPkcs12 extends KTLKprOpenSigDetOCmsAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 
@@ -71,7 +71,7 @@ final public class KTLKprOpenSigDetOCmsPkcs12 extends KTLKprOpenSigDetOCmsAbs
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+       
             fleOpen,
             super._chrsPasswdKst_);
     }
@@ -102,7 +102,7 @@ final public class KTLKprOpenSigDetOCmsPkcs12 extends KTLKprOpenSigDetOCmsAbs
 
         DTblsKstSelPKOpenNoPass dlg = new DTblsKstSelPKOpenNoPass(
             super._frmOwner_, 
-            super._strTitleAppli_,
+        
             kstOpen,
             super._strPathAbsKst_,
             "Sign file with private key and save as CMS detached signature file"

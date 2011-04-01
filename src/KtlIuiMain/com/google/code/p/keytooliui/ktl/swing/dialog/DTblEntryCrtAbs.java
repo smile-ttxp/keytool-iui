@@ -32,13 +32,13 @@ abstract public class DTblEntryCrtAbs extends DTblEntryAbs
    
     protected DTblEntryCrtAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+
         String strTitleThis,
         String strLabelAlias,
         KeyStore kseLoaded
         )
     {
-        super(cmpFrameOwner, strTitleAppli, strTitleThis, strLabelAlias, kseLoaded); 
+        super(cmpFrameOwner, strTitleThis, strLabelAlias, kseLoaded); 
     }
  
 }

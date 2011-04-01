@@ -64,13 +64,12 @@ final public class UtilKstUber extends UtilKstAbs
     // STATIC PUBLIC
     
     static public void s_manageFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilKstUber._f_s_strClass + "." + "s_manageFile(...)";
         
         File fleOpenKstUber = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
+     
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsKstUber, 
@@ -95,7 +94,7 @@ final public class UtilKstUber extends UtilKstAbs
             strBody += fleOpenKstUber.getAbsolutePath();
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -113,7 +112,7 @@ final public class UtilKstUber extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -133,7 +132,7 @@ final public class UtilKstUber extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
+            
             true // blnNoPasswdAllowed
                 );
                     
@@ -172,7 +171,7 @@ final public class UtilKstUber extends UtilKstAbs
         
         
         KeyStore kstOpen = UtilKstUber.s_getKeystoreOpen(
-            frmParent, strTitleAppli,
+            frmParent,
             fleOpenKstUber,
             chrsPasswdKst);
         
@@ -186,7 +185,7 @@ final public class UtilKstUber extends UtilKstAbs
         }
         
         UtilKstAbs._s_manageKstOpen_(
-            strTitleAppli, 
+         
             frmParent, 
             kstOpen,
             fleOpenKstUber.getAbsolutePath(),
@@ -197,13 +196,13 @@ final public class UtilKstUber extends UtilKstAbs
     // --
     
     static public void s_showFile(
-        String strTitleAppli,
+       
         Frame frmParent)
     {
         String strMethod = UtilKstUber._f_s_strClass + "." + "s_showFile(...)";
         
         File fleOpenKst = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
+            
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsKstUber, 
@@ -229,7 +228,7 @@ final public class UtilKstUber extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -246,7 +245,7 @@ final public class UtilKstUber extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -267,7 +266,7 @@ final public class UtilKstUber extends UtilKstAbs
         
         dlgPasswordKst = new DPasswordOpen(
             frmParent, 
-            strTitleAppli,
+  
             true // blnNoPasswdAllowed
                 );
                     
@@ -298,11 +297,10 @@ final public class UtilKstUber extends UtilKstAbs
         dlgPasswordKst = null;
         
         // ----
-        UtilKstUber._s_showFile_(strTitleAppli, frmParent, fleOpenKst, chrsPasswdKst);
+        UtilKstUber._s_showFile_(frmParent, fleOpenKst, chrsPasswdKst);
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         String strPathAbs,
         char[] chrsPasswdKst)
@@ -331,18 +329,17 @@ final public class UtilKstUber extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
         
-        UtilKstUber._s_showFile_(strTitleAppli, frmParent, fleOpenKst, chrsPasswdKst); 
+        UtilKstUber._s_showFile_(frmParent, fleOpenKst, chrsPasswdKst); 
     }
     
     // ----
     
     static protected void _s_showFile_(
-        String strTitleAppli,
         Frame frmParent,
         File fle,
         char[] chrsPassword)
@@ -353,7 +350,7 @@ final public class UtilKstUber extends UtilKstAbs
         {
             MySystem.s_printOutError(strMethod, "nil arg");
             String strBody = "Failed to load file.";            
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
                 
             return;
         }
@@ -370,7 +367,7 @@ final public class UtilKstUber extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -387,56 +384,17 @@ final public class UtilKstUber extends UtilKstAbs
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
-        /*
-        // open up a passwordOpen dialog
-                
-        DPasswordOpen dlgPasswordKst = null;
-        
-        // ---
-        
-        dlgPasswordKst = new DPasswordOpen(
-            frmParent, 
-            strTitleAppli,
-            true // blnNoPasswdAllowed
-                );
-                    
-        String strTitleSuffixDlg = " ";
-        strTitleSuffixDlg += "for";
-        strTitleSuffixDlg += " ";
-        strTitleSuffixDlg += UtilKstUber.f_s_strKeystoreType;
-        strTitleSuffixDlg += " ";
-        strTitleSuffixDlg += "keystore";
-                
-                
-        dlgPasswordKst.setTitle(dlgPasswordKst.getTitle() + strTitleSuffixDlg);
-                    
-        if (! dlgPasswordKst.init())
-            MySystem.s_printOutExit(strMethod, "failed");
-                    
-        dlgPasswordKst.setVisible(true);
-                
-        char[] chrsPasswdKst = dlgPasswordKst.getPassword();
-                
-        if (chrsPasswdKst == null)
-        {
-            MySystem.s_printOutTrace(strMethod, "nil chrsPasswdKst, user canceled");
-            return;
-        }
-                
-                
-        dlgPasswordKst.destroy();
-        dlgPasswordKst = null;
-        */
+       
         // ----
         // open keystore
         
         
         KeyStore kstOpen = UtilKstUber.s_getKeystoreOpen(
-            frmParent, strTitleAppli,
+            frmParent,
             fle,
             chrsPassword // new char[0] //chrsPassword
                 );
@@ -450,21 +408,19 @@ final public class UtilKstUber extends UtilKstAbs
             return;
         }
         
-        UtilKstAbs._s_showKstOpen_(strTitleAppli, frmParent, kstOpen, fle.getAbsolutePath());
+        UtilKstAbs._s_showKstOpen_(frmParent, kstOpen, fle.getAbsolutePath());
     }
     
     
                        
     static public KeyStore s_getKeystoreOpen(
         Frame frmOwner, 
-        String strTitleAppli,
         File fleOpen,
         char[] chrsPassword // nil value allowed (eg: verify signed jarred file)
         )
     {
         return UtilKstAbs._s_getKeystoreOpen_(
             frmOwner,
-            strTitleAppli,
             fleOpen,
             chrsPassword,
             UtilKstUber.f_s_strKeystoreType,
@@ -473,13 +429,11 @@ final public class UtilKstUber extends UtilKstAbs
     
     
     static public KeyStore s_getKeystoreNew(
-        Frame frmOwner, 
-        String strTitleAppli
+        Frame frmOwner
         )
     {
         return UtilKstAbs._s_getKeystoreNew_(
             frmOwner,
-            strTitleAppli,
             UtilKstUber.f_s_strKeystoreType,
             UtilKstUber.f_s_strKeystoreProvider);     
     }

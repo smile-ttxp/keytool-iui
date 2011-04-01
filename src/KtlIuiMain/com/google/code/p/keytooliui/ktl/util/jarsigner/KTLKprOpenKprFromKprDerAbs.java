@@ -7,34 +7,20 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import java.nio.ByteBuffer;
-import java.security.KeyFactory;
-import java.security.KeyPair;
 import java.security.PublicKey;
-import java.security.cert.CertificateExpiredException;
 import java.security.cert.CertificateFactory;
 import java.security.interfaces.RSAKey;
-import java.security.spec.PKCS8EncodedKeySpec;
 import javax.crypto.Cipher;
-import javax.crypto.SecretKey;
-import javax.security.cert.CertificateNotYetValidException;
-import org.bouncycastle.jce.interfaces.ECKey;
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.DPasswordOpen;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 
 // ----
-import java.security.Key;
 import java.security.KeyStore;
 import java.security.PrivateKey;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 // --
-import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 // ----
 
@@ -113,7 +99,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -132,7 +118,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         }
         
         File fleOpenKpr = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileKpr_//,
+            super._frmOwner_, super._strPathAbsFileKpr_//,
             //true // blnShowDlgOverwrite
             );
         
@@ -153,7 +139,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         }
         
         File fleOpenCrts = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileCrts_//,
+            super._frmOwner_,  super._strPathAbsFileCrts_//,
             //true // blnShowDlgOverwrite
             );
         
@@ -186,7 +172,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+         
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -196,7 +182,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+       
             kstOpen);
         
         if (strsAliasSK == null)
@@ -209,7 +195,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -218,7 +204,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -227,7 +213,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+          kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -236,7 +222,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -244,7 +230,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -252,7 +238,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -260,7 +246,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -268,7 +254,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -276,7 +262,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+             kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -431,12 +417,12 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
 
             strBody += "\n\n" + "More: see your session.log";
 
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
             return false;
         }
 
         if (! UtilKstAbs.s_setKeyEntry(
-                super._frmOwner_, super._strTitleAppli_, kstOpen,
+                super._frmOwner_,  kstOpen,
                     strAliasKpr, pky, chrsPasswdKpr, crtsX509
                 ))
         {
@@ -451,7 +437,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -476,7 +462,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
 
     protected KTLKprOpenKprFromKprDerAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore 
@@ -491,7 +477,7 @@ abstract public class KTLKprOpenKprFromKprDerAbs extends KTLKprOpenKprFromKprAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+         
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strPathAbsFileOpenKpr,

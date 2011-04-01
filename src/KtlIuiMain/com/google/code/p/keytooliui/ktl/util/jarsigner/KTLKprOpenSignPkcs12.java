@@ -35,28 +35,19 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
-import sun.misc.BASE64Encoder;
 //import sun.security.util.SignatureFile;
-import sun.security.util.ManifestDigester;
 
 // ----
 import java.security.KeyStore;
 import java.security.PrivateKey;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.InvalidKeyException;
-import java.security.SignatureException;
 import java.security.KeyStoreException;
 // --
-import java.security.cert.X509Certificate;
-import java.security.cert.CertificateException;
 import java.security.cert.Certificate;
 // ----
 
 import java.awt.*;
 import java.io.*;
 import java.util.*;
-import java.util.jar.*;
 
 final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
 {
@@ -89,7 +80,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         // memo: keystore should be of type "Pkcs12", provided by "BC", or "SunRsaSign"
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -106,7 +97,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         
         File fleOpenJarUnsigned = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsOpenJarSource_);
+            super._frmOwner_,  super._strPathAbsOpenJarSource_);
         
         if (fleOpenJarUnsigned == null)
         {
@@ -123,7 +114,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         
         File fleSaveJarSigned = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsSaveJarTarget_,
+            super._frmOwner_,super._strPathAbsSaveJarTarget_,
             true // blnShowDlgOverwrite
             );
         
@@ -140,7 +131,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
             MySystem.s_printOutExit(this, strMethod, "nil super._chrsPasswdKst_"); 
         
         KeyStore kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_, 
             fleOpenKst,
             super._chrsPasswdKst_);
         
@@ -169,7 +160,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         {
             //
             keyPrivateKpr = (PrivateKey) UtilKstPkcs12.s_getKeyProviderAny(
-                super._frmOwner_, super._strTitleAppli_,
+                super._frmOwner_, 
                 kstOpen,
                 strAliasKpr,
                 super._chrsPasswdKst_,
@@ -215,7 +206,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
 
     public KTLKprOpenSignPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+    
         
         // input
         String strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -231,7 +222,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+     
             strPathAbsOpenKst, 
             chrsPasswdOpenKst,
             strProviderKst,
@@ -255,7 +246,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         String[] strsAliasPkcs12All = UtilKstAbs.s_getStrsAlias(
             super._frmOwner_, 
-            super._strTitleAppli_, 
+        
             kstOpen);
         
         if (strsAliasPkcs12All == null)
@@ -276,7 +267,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
             strBody += super._strPathAbsKst_;
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -316,7 +307,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
             strBody += super._strPathAbsKst_;
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
         }
         
         
@@ -335,7 +326,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
             strBody += super._strPathAbsKst_;
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return null;
         }
@@ -398,7 +389,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         // get arrays for dialogTableSelectKeypair
         
         Boolean[] boosEntryKprPkcs12 = UtilKstAbs.s_getBoosEntryKpr(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+            super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (boosEntryKprPkcs12 == null)
         {
@@ -408,7 +399,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         Boolean[] boosEntryTcrPkcs12 = UtilKstAbs.s_getBoosEntryTcr(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+            super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (boosEntryTcrPkcs12 == null)
         {
@@ -419,7 +410,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
 
         Boolean[] boosSelfSignedCertPkcs12 = UtilKstAbs.s_getBoosSelfSigned(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+            super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (boosSelfSignedCertPkcs12 == null)
         {
@@ -429,7 +420,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         Boolean[] boosTrustedCertPkcs12 = 
-            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+            UtilKstAbs.s_getBoosTrusted(super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (boosTrustedCertPkcs12 == null)
         {
@@ -439,7 +430,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         String[] strsAlgoKeyPublPkcs12 = UtilKstAbs.s_getStrsAlgoKeyPubl(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+            super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (strsAlgoKeyPublPkcs12 == null)
         {
@@ -449,7 +440,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         String[] strsSizeKeyPublPkcs12 = UtilKstAbs.s_getStrsSizeKeyPubl(
-            super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+            super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (strsSizeKeyPublPkcs12 == null)
         {
@@ -459,7 +450,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         
-        String[] strsTypeCertPkcs12 = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+        String[] strsTypeCertPkcs12 = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (strsTypeCertPkcs12 == null)
         {
@@ -468,7 +459,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
             return null;
         }
         
-        String[] strsAlgoSigCertPkcs12 = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+        String[] strsAlgoSigCertPkcs12 = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_, kstOpen, strsAliasPkcs12);
         
         if (strsAlgoSigCertPkcs12 == null)
         {
@@ -477,7 +468,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
             return null;
         }
 
-        Date[] dtesLastModifiedPkcs12 = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, super._strTitleAppli_, kstOpen, strsAliasPkcs12);
+        Date[] dtesLastModifiedPkcs12 = UtilKstAbs.s_getDtesLastModified(super._frmOwner_, kstOpen, strsAliasPkcs12);
 
         if (dtesLastModifiedPkcs12 == null)
         {
@@ -540,7 +531,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
             String strBody = "keystore does not contain any valid entry of type RSA with a CA X.509 certificate.";
                 
             OPAbstract.s_showDialogWarning(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
         
             return null;
         }*/
@@ -571,7 +562,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+         
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -581,7 +572,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+         
             kstOpen);
         
         if (strsAliasSK == null)
@@ -594,7 +585,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -603,7 +594,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+          kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -612,7 +603,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -621,7 +612,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+           kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -629,7 +620,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -637,7 +628,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -645,7 +636,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -653,7 +644,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -661,7 +652,7 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+            kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -671,17 +662,13 @@ final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
         
         DTblsKstSelPKOpenNoPass dlg = new DTblsKstSelPKOpenNoPass(
             super._frmOwner_, 
-            super._strTitleAppli_,
+      
             kstOpen,
             super._strPathAbsKst_,
             "Sign JAR file with private key entry"
             );
        
-        /*DTblEntryKprOpenPkcs12Any dlgPkcs12 = new DTblEntryKprOpenPkcs12Any(
-            super._frmOwner_, 
-            super._strTitleAppli_,
-            kstOpen
-            );*/
+   
         
         if (! dlg.init())
             MySystem.s_printOutExit(this, strMethod, "failed");

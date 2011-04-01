@@ -83,12 +83,12 @@ abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
         int intMode = ((BESPasswordAbs) super._btnSelect_).getMode();
         
         if (intMode == BESPasswordAbs.f_s_intModeOpen)
-            dlg = new DPasswordOpen(super._frmParent_, super._strTitleAppli_,
+            dlg = new DPasswordOpen(super._frmParent_, 
                     false // blnNoPasswdAllowed
                     );
             
         else if (intMode == BESPasswordAbs.f_s_intModeSave)
-            dlg = new DPasswordConfirmSave(super._frmParent_, super._strTitleAppli_);
+            dlg = new DPasswordConfirmSave(super._frmParent_);
             
         else
         {
@@ -119,7 +119,7 @@ abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
         String strLabel,
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+
         Object objDocPropValue,
         boolean blnFieldRequired,
         int intModePassword
@@ -127,7 +127,7 @@ abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
     {
         super(
             frmParent, 
-            strTitleAppli, 
+      
             strLabel,
             blnFieldRequired
             );
@@ -152,7 +152,7 @@ abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
     protected PSelBtnTfdPasswdXlsAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+       
         Object objDocPropValue,
         String strLabelPrefix,
         boolean blnFieldRequired,
@@ -163,7 +163,7 @@ abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
             strLabelPrefix + " " + PSelBtnTfdPasswdXlsAbs._f_s_strLabelSuffix,
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+
             objDocPropValue,
             blnFieldRequired,
             intModePassword
@@ -201,7 +201,7 @@ abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
                 strBody += "\n\n";
                 strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRulePassword();
 
-                OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 return true;
             }
         }

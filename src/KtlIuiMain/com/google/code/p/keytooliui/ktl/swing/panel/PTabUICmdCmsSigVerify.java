@@ -96,7 +96,7 @@ final public class PTabUICmdCmsSigVerify extends PTabUICmdCmsAbs
         
         String strMethod = "actionPerformed(evtAction)";
         
-        CmsVerif xvf = new  CmsVerif(super._frmOwner_,  super._strTitleAppli_, 
+        CmsVerif xvf = new  CmsVerif(super._frmOwner_,  
                 super._strPathAbsFileData_, super._strPathAbsCmsSigned_);
         
         if (! xvf.doJob())
@@ -253,11 +253,11 @@ final public class PTabUICmdCmsSigVerify extends PTabUICmdCmsAbs
     }
     
     
-    public PTabUICmdCmsSigVerify(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdCmsSigVerify(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+        
             PTabUICmdCmsSigVerify._s_strHelpID, 
             false // blnFieldRequiredKeystore
             );

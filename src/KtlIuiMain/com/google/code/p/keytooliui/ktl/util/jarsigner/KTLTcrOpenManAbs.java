@@ -53,7 +53,7 @@ abstract public class KTLTcrOpenManAbs extends KTLTcrOpenAbs
             
                 OPAbstract.s_showDialogWarning(
                     super._frmOwner_, 
-                    super._strTitleAppli_, 
+                  
                     strBody);
                 
                 return false;
@@ -69,7 +69,7 @@ abstract public class KTLTcrOpenManAbs extends KTLTcrOpenAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+        
                 strBody);
                 
                 
@@ -87,7 +87,7 @@ abstract public class KTLTcrOpenManAbs extends KTLTcrOpenAbs
     
     protected KTLTcrOpenManAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore 
@@ -98,7 +98,7 @@ abstract public class KTLTcrOpenManAbs extends KTLTcrOpenAbs
         String strAlias
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._kstOpen_ = kstOpen;
         this._strAlias_ = strAlias;

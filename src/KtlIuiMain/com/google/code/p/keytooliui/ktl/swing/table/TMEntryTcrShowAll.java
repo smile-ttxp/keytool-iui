@@ -43,7 +43,7 @@ final public class TMEntryTcrShowAll extends TMEntryTcrAbs
     static
     {
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".TMEntryTcrShowAll" // class name
             ;
         

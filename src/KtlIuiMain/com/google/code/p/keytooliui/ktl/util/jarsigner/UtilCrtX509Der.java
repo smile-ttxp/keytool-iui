@@ -49,7 +49,6 @@ final public class UtilCrtX509Der extends UtilCrtX509
     
     static public byte[] s_generateCrts(
         Frame frmOwner, 
-        String strTitleAppli,
         X509Certificate[] crts, 
         String strProviderSignature)
         throws Exception
@@ -96,7 +95,6 @@ final public class UtilCrtX509Der extends UtilCrtX509
     **/
     static public byte[] s_generateCrt(
         Frame frmOwner, 
-        String strTitleAppli,
         X509Certificate crt, 
         String strProviderSignature)
     {
@@ -127,7 +125,7 @@ final public class UtilCrtX509Der extends UtilCrtX509
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -138,7 +136,6 @@ final public class UtilCrtX509Der extends UtilCrtX509
     
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         File fleCrt)
     {
@@ -153,7 +150,7 @@ final public class UtilCrtX509Der extends UtilCrtX509
         
         // --
         
-        X509Certificate[] crts = UtilCrtX509.s_load(frmParent, strTitleAppli, fleCrt);
+        X509Certificate[] crts = UtilCrtX509.s_load(frmParent, fleCrt);
         
         if (crts == null)
         {
@@ -161,17 +158,15 @@ final public class UtilCrtX509Der extends UtilCrtX509
             return;
         }
         
-        UtilCrtX509.s_showChain(frmParent, strTitleAppli, crts);
+        UtilCrtX509.s_showChain(frmParent, crts);
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilCrtX509Der._f_s_strClass + "." + "s_showFile(...)";
         
         File fleCrt = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsCrtX509Der, 
@@ -197,7 +192,7 @@ final public class UtilCrtX509Der extends UtilCrtX509
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
@@ -214,12 +209,12 @@ final public class UtilCrtX509Der extends UtilCrtX509
             
                 
             OPAbstract.s_showDialogError(
-                frmParent, strTitleAppli, strBody);
+                frmParent, strBody);
                 
             return;
         }
         
-        UtilCrtX509Der.s_showFile(strTitleAppli, frmParent, fleCrt);
+        UtilCrtX509Der.s_showFile(frmParent, fleCrt);
     }
     
    

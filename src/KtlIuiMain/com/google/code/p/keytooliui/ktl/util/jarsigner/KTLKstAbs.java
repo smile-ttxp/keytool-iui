@@ -38,7 +38,7 @@ abstract public class KTLKstAbs extends KTLAbs
 
     protected KTLKstAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+       
         
         // input
         String strPathAbs, // existing keystore
@@ -48,7 +48,7 @@ abstract public class KTLKstAbs extends KTLAbs
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbs, chrsPasswd, strProvider);
+        super(frmOwner, strPathAbs, chrsPasswd, strProvider);
     }
 
 }

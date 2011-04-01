@@ -58,6 +58,8 @@ abstract public class PSelCmbStrCipherRsaAlgoAbs extends PSelCmbStrAbs
             PSelCmbStrCipherRsaAlgoAbs._f_s_strTextLabel,
             strsValue,
             0 // first value in array for "setSelected(...)"
+            // TODO dummy value coz conflicts
+            ,200
             ); 
     }
 }

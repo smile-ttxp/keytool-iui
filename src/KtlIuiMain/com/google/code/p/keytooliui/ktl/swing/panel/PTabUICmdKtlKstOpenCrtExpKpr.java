@@ -39,7 +39,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenCrtExpKpr";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenCrtExpKpr" // class name
             ;
         
@@ -91,7 +91,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         {
             ktl = new KTLKprOpenCrtOutJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -109,7 +109,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         {
             ktl = new KTLKprOpenCrtOutJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -127,7 +127,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         {
             ktl = new KTLKprOpenCrtOutPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 
                 // input
                 super._strPathAbsKst_, 
@@ -145,7 +145,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         {
             ktl = new KTLKprOpenCrtOutBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+                
                 
                 // input
                 super._strPathAbsKst_, 
@@ -163,7 +163,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         {
             ktl = new KTLKprOpenCrtOutUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -199,11 +199,11 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
     
     
     
-    public PTabUICmdKtlKstOpenCrtExpKpr(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCrtExpKpr(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+         
             PTabUICmdKtlKstOpenCrtExpKpr._s_strHelpID
             );
             
@@ -229,7 +229,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         
         
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = _s_strDlgInfoActionBodyBeg + "\n" +
@@ -238,7 +238,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return true;
         
         
@@ -287,7 +287,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
             
             // launch dialog
             
-            UtilCrtX509Pkcs7.s_showFile(super._strTitleAppli_, super._frmOwner_, fle);
+            UtilCrtX509Pkcs7.s_showFile(super._frmOwner_, fle);
         }
         
         else if (strFormatFileCert.toLowerCase().compareTo(KTLAbs.f_s_strFormatFileCrtDer.toLowerCase()) == 0)
@@ -315,7 +315,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
             
             // launch dialog
             
-            UtilCrtX509Der.s_showFile(super._strTitleAppli_, super._frmOwner_, fle);
+            UtilCrtX509Der.s_showFile(super._frmOwner_, fle);
         }              
        
         else if (strFormatFileCert.toLowerCase().compareTo(KTLAbs.f_s_strFormatFileCrtPem.toLowerCase()) == 0)
@@ -343,7 +343,7 @@ final public class PTabUICmdKtlKstOpenCrtExpKpr extends PTabUICmdKtlKstOpenCrtEx
             
             // launch dialog
             
-            UtilCrtX509Pem.s_showFile(super._strTitleAppli_, super._frmOwner_, fle);
+            UtilCrtX509Pem.s_showFile(super._frmOwner_, fle);
         }              
        
         

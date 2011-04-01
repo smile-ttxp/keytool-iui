@@ -11,16 +11,13 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
 
 // ----
 import java.security.Key;
 import java.security.KeyStore;
-import java.security.cert.X509Certificate;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
-import java.security.cert.Certificate;
 // ----
 
 
@@ -56,13 +53,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
         
         Toolkit.getDefaultToolkit().beep();
         	            
-    	String strWarningTitle = super._strTitleAppli_;
-    	strWarningTitle += " - ";
-    	strWarningTitle += "warning";
-    	strWarningTitle += " - ";
-    	strWarningTitle += "confirm";
-        	            
-        	            
+
 	    String strWarningBody = "Are you sure you want to delete private key aliased ";
         	            
 	    strWarningBody += "\"";
@@ -77,7 +68,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
 	    strWarningBody += "Please confirm";
 
         if (! OPAbstract.s_showWarningConfirmDialog(
-            super._frmOwner_, strWarningTitle, strWarningBody))
+            super._frmOwner_, strWarningBody))
         {
             MySystem.s_printOutTrace(this, strMethod, "action cancelled");
             return false;
@@ -115,7 +106,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+            
                 strBody);
                 
             return false;
@@ -130,7 +121,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+            
                 strBody);
                 
             return false;
@@ -147,7 +138,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 strBody);
                 
             return false;
@@ -161,7 +152,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+               
                 strBody);
                 
             return false;
@@ -184,7 +175,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+              
                 strBody);
                 
             return false;
@@ -194,7 +185,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
         
         // memo: JKS keystore should be of type "JKS", provided by "SUN"
         File fleOpenKstJks = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKstJks == null)
         {
@@ -226,7 +217,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
     
     public KTLKprOpenManDelete(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -239,7 +230,7 @@ final public class KTLKprOpenManDelete extends KTLKprOpenManAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+   
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strProviderKst,

@@ -28,7 +28,7 @@ final public class KTLKprOpenKprFromKprPemPkcs12 extends KTLKprOpenKprFromKprPem
 
     public KTLKprOpenKprFromKprPemPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore of type Pkcs12 
@@ -41,7 +41,7 @@ final public class KTLKprOpenKprFromKprPemPkcs12 extends KTLKprOpenKprFromKprPem
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 
@@ -63,7 +63,7 @@ final public class KTLKprOpenKprFromKprPemPkcs12 extends KTLKprOpenKprFromKprPem
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+    
             fleOpen,
             super._chrsPasswdKst_);
     }
@@ -93,7 +93,7 @@ final public class KTLKprOpenKprFromKprPemPkcs12 extends KTLKprOpenKprFromKprPem
         
         DTblsKstViewKeySavePKNoPass dlg = new DTblsKstViewKeySavePKNoPass(
             super._frmOwner_, 
-            super._strTitleAppli_,
+  
             kstOpen,
            super._strPathAbsKst_,
             "Import private key and associated certificates chain files as new private key entry"

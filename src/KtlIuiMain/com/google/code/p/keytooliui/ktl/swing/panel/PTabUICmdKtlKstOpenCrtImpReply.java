@@ -36,7 +36,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenCrtImpReply";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenCrtImpReply" // class name
             ;
         
@@ -88,7 +88,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         {
             ktl = new KTLKprOpenCrtInJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -104,7 +104,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         {
             ktl = new KTLKprOpenCrtInJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -120,7 +120,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         {
             ktl = new KTLKprOpenCrtInPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -136,7 +136,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         {
             ktl = new KTLKprOpenCrtInBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+         
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -152,7 +152,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         {
             ktl = new KTLKprOpenCrtInUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+         
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -181,12 +181,12 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
     }
     
     
-    public PTabUICmdKtlKstOpenCrtImpReply(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCrtImpReply(Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstOpenCrtImpReply._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+       
             PSelBtnTfdFileOpenCrtReply.f_s_strDocPropVal
             );
         
@@ -194,7 +194,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         super._pnlSelectFileIO_ = new PSelBtnTfdFileOpenCrtReply(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+         
             (ItemListener) null
             );
             
@@ -237,7 +237,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
      private void _doneJob(String strFormatKstTarget)
     {        
         // show warning confirm dialog
-        String strTitle = super._strTitleAppli_ + " - " + "confirm";   
+        //String strTitle = super._strTitleAppli_ + " - " + "confirm";
        
         
         String strDlgBody = "Successfully imported C.A. certificate file in private key entry." + "\n" +
@@ -246,7 +246,7 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         
         
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitle, strDlgBody))
+            super._frmOwner_, strDlgBody))
             return;
             
         // show file
@@ -255,21 +255,21 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstJceks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstJceks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstPkcs12.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstPkcs12.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     super._strPasswdKst_.toCharArray());
             return;
         }
@@ -277,14 +277,14 @@ final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrt
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstBks.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_);
+            UtilKstBks.s_showFile(super._frmOwner_, super._strPathAbsKst_);
             return;
         }
         
         if (strFormatKstTarget.toLowerCase().compareTo(
                 com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber.f_s_strKeystoreType.toLowerCase()) == 0)
         {
-            UtilKstUber.s_showFile(super._strTitleAppli_, super._frmOwner_, super._strPathAbsKst_,
+            UtilKstUber.s_showFile(super._frmOwner_, super._strPathAbsKst_,
                     super._strPasswdKst_.toCharArray());
             return;
         }

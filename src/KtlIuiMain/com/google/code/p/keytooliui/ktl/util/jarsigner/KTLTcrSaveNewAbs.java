@@ -60,7 +60,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
         
     protected KTLTcrSaveNewAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+       
         
         // output
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -76,7 +76,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
         
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner,strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         // input
         this._strPathAbsCrt_ = strPathAbsCrt;
@@ -91,7 +91,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
         // memo: this one takes care of DER-PKCS7-PEM crt file
         X509Certificate[] crtsX509ToImport = UtilCrtX509.s_load(
             super._frmOwner_, 
-            super._strTitleAppli_,
+   
             fleOpenCrt);
         
         if (crtsX509ToImport == null)
@@ -104,7 +104,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             strBody += "  " + this._strPathAbsCrt_;
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
                         
             return null;
         }
@@ -120,7 +120,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             strBody += "  " + this._strPathAbsCrt_;
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -138,7 +138,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             strBody += "Only certificate file with one certificate in certs list allowed as trusted certificate entry!";
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return null;
         }
@@ -164,7 +164,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             
                 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -180,7 +180,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             strBody += "  " + this._strPathAbsCrt_;
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return null;
         }
@@ -199,7 +199,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             String strBody = "Failed to get root CA certs store!";
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_, strBody);
             
             return false;
         }
@@ -215,7 +215,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             String strBody = "Failed to get root CA certs store!";
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return false;
         }
@@ -252,7 +252,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
                 strBody += prpIssuerCur.getName();
   
                 OPAbstract.s_showDialogInfo(
-                    super._frmOwner_, super._strTitleAppli_, strBody);
+                    super._frmOwner_, strBody);
                 
                 // ending
                 return true;
@@ -271,7 +271,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             strBody += exc.getMessage();
 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
 
             return false;
         } 
@@ -290,7 +290,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             String strBody = "Failed to get root CA certs store!";
             
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
             
             return false;
         }
@@ -314,7 +314,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             strBody += exc.getMessage();
 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
 
             return false;
         } 
@@ -329,13 +329,6 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
 
         Toolkit.getDefaultToolkit().beep();
 
-        String strWarningTitle = super._strTitleAppli_;
-        strWarningTitle += " - ";
-        strWarningTitle += "warning";
-        strWarningTitle += " - ";
-        strWarningTitle += "confirm";
-
-
         String strWarningBody = "Trusted certificate already exists in";
         strWarningBody += "\n";
         strWarningBody += "System-level root CA certificate store, under alias ";
@@ -348,7 +341,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
         strWarningBody += "\n";
         strWarningBody += "Do you still want to install this certificate in your keystore?";
 
-        if (! OPAbstract.s_showWarningConfirmDialog(super._frmOwner_, strWarningTitle, strWarningBody))
+        if (! OPAbstract.s_showWarningConfirmDialog(super._frmOwner_, strWarningBody))
         {
             MySystem.s_printOutTrace(this, strMethod, "action cancelled");
             return false;
@@ -380,7 +373,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             strBody += "  " + this._strPathAbsCrt_;
 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
 
             return false;
         }
@@ -433,13 +426,6 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
 
         Toolkit.getDefaultToolkit().beep();
 
-        String strWarningTitle = super._strTitleAppli_;
-        strWarningTitle += " - ";
-        strWarningTitle += "warning";
-        strWarningTitle += " - ";
-        strWarningTitle += "confirm";
-
-
         String strWarningBody = "Trusted certificate entry already exists in keystore, under alias ";
 
         strWarningBody += "\"";
@@ -451,7 +437,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
         strWarningBody += "Do you still want to install this certificate?";
 
         if (! OPAbstract.s_showWarningConfirmDialog(
-            super._frmOwner_, strWarningTitle, strWarningBody))
+            super._frmOwner_, strWarningBody))
         {
             MySystem.s_printOutTrace(this, strMethod, "action cancelled");
             return false;
@@ -471,20 +457,17 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
 
 
         OPAbstract.s_showDialogInfo(
-            super._frmOwner_, super._strTitleAppli_, strBody);
+            super._frmOwner_,  strBody);
 
         // next show this certificate
-        UtilCrtX509.s_show(super._frmOwner_, super._strTitleAppli_, crtX509);
+        UtilCrtX509.s_show(super._frmOwner_,  crtX509);
 
-        // then show question-confirm dialog
-        String strTitleConfirm = super._strTitleAppli_ + " - " + "confirm";   
-
-
+       
         String strBodyConfirm = "Do you trust this certificate?";
         strBodyConfirm += "\n\n";
 
         if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-            super._frmOwner_, strTitleConfirm, strBodyConfirm))
+            super._frmOwner_, strBodyConfirm))
         {
             MySystem.s_printOutTrace(this, strMethod, "action cancelled");
             return false;
@@ -542,7 +525,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
 
 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
 
             return null;
         }
@@ -665,7 +648,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
             String strBody = "Got exception. Failed to load system-level root CA certificate store";
 
             OPAbstract.s_showDialogError(
-                super._frmOwner_, super._strTitleAppli_, strBody);
+                super._frmOwner_,  strBody);
 
             return false;
         }

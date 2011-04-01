@@ -23,14 +23,14 @@ abstract public class PTabUICmdKtlKstOpenSigVerAbs extends PTabUICmdKtlKstOpenSi
     
     protected PTabUICmdKtlKstOpenSigVerAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         String strHelpID
         )
     {
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+    
             PSelBtnTfdFileOpenAnyFile.f_s_strDocPropVal,
             PSelBtnTfdFileOpenSig.f_s_strDocPropVal
             );
@@ -40,7 +40,7 @@ abstract public class PTabUICmdKtlKstOpenSigVerAbs extends PTabUICmdKtlKstOpenSi
         super._pnlSelectFileSig_ = new PSelBtnTfdFileOpenSig(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+     
             (ItemListener) null
             );
     }

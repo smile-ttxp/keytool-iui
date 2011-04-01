@@ -182,7 +182,7 @@ public class PSelBtnTfdRngInt extends PSelBtnTfdAbs implements
     public PSelBtnTfdRngInt(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+   
         String strLabel,
         
         Object objDocPropValue,
@@ -198,7 +198,7 @@ public class PSelBtnTfdRngInt extends PSelBtnTfdAbs implements
     {
         super(
             frmParent, 
-            strTitleAppli, 
+
             strLabel,
             blnFieldRequired
             );
@@ -286,7 +286,7 @@ public class PSelBtnTfdRngInt extends PSelBtnTfdAbs implements
         {
         
             this._dlgRangeIntegers = new DRangeToValue(this._draListenerThis, super._frmParent_,
-                super._strTitleAppli_, strDlgRangeToValueTitle, strDlgRangeToValueLabel, strDlgRangeToValueTitlePanel,
+                strDlgRangeToValueTitle, strDlgRangeToValueLabel, strDlgRangeToValueTitlePanel,
                 intDialogRangeMin, intDialogRangeMax, intDialogRangeDefault,
                 intDialogMajorTickSpacing, intDialogMinorTickSpacing);
         }

@@ -90,7 +90,7 @@ final public class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXm
         {
             ktl = new KTLKprOpenSigEmbKprJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 
                 // input
                 super._strPathAbsKst_, 
@@ -108,7 +108,7 @@ final public class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXm
         {
             ktl = new KTLKprOpenSigEmbKprJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 
                 // input
                 super._strPathAbsKst_, 
@@ -125,7 +125,7 @@ final public class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXm
         {
             ktl = new KTLKprOpenSigEmbKprPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 
                 // input
                 super._strPathAbsKst_, 
@@ -142,7 +142,7 @@ final public class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXm
         {
             ktl = new KTLKprOpenSigEmbKprBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+               
                 
                 // input
                 super._strPathAbsKst_, 
@@ -159,7 +159,7 @@ final public class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXm
         {
             ktl = new KTLKprOpenSigEmbKprUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+           
                 
                 // input
                 super._strPathAbsKst_, 
@@ -193,11 +193,11 @@ final public class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXm
       
     }
     
-    public PTabUICmdKtlKstOpenXmlSigExpKpr(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenXmlSigExpKpr(Frame frmOwner)
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
             PTabUICmdKtlKstOpenXmlSigExpKpr._s_strHelpID
             );
     }

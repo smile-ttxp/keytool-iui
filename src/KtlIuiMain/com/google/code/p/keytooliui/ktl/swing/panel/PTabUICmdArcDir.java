@@ -79,7 +79,7 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdArcDir";
 
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdArcDir" // class name
             ;
 
@@ -134,15 +134,16 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
             
             strBody += "\n\nAborting ...";
             
-            OPAbstract.s_showDialogWarning(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmOwner_, strBody);
             return;
         }
         
         
         com.google.code.p.keytooliui.shared.io.DirToJar dtj =
-            new com.google.code.p.keytooliui.shared.io.DirToJar(this._strPathAbsFileDir2Open,
-                super._strPathAbsUnsignedJar2Save_, 
-                super._strTitleAppli_ // MEMO: strManifestCreatedBySuffix
+            new com.google.code.p.keytooliui.shared.io.DirToJar(
+            this._strPathAbsFileDir2Open,
+                super._strPathAbsUnsignedJar2Save_,
+                System.getProperty("_appli.title") // !!!!!!!!
                 );
         
         
@@ -167,7 +168,7 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
             strBody += "\n\n";
             strBody += "more in \"session.log\" file";
             
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_, strBody);
             
             
             return;
@@ -200,7 +201,7 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
 
             crt = new KTLKprOpenArcDirJks(
                 super._frmOwner_,
-                super._strTitleAppli_,
+ 
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -221,7 +222,7 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
 
             crt = new KTLKprOpenArcDirJceks(
                 super._frmOwner_,
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -240,7 +241,7 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
         {
             crt = new KTLKprOpenArcDirPkcs12(
                 super._frmOwner_,
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_,
                 chrsPasswdKst,
@@ -590,11 +591,11 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
         return true;
     }
 
-    public PTabUICmdArcDir(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdArcDir(Frame frmOwner)
     {
         super(
             frmOwner,
-            strTitleAppli,
+
             PTabUICmdArcDir._s_strHelpID
             );
 
@@ -602,18 +603,18 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
         this._pnlSelectFileDir2Open = new PSelBtnTfdFileOpenAnyDirViewXml(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+
             (java.awt.event.ItemListener) null,
             "Directory:" // strLabel
             );
         
         /*this._pnlSelectDescription = new PSelBtnTfdStrXlsDescription(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli);
+            frmOwner);
         
         this._pnlSelectKeywords = new PSelBtnTfdStrXlsKeywords(
             (javax.swing.event.DocumentListener) this,
-            frmOwner, strTitleAppli);*/
+            frmOwner);*/
     }
 
     // ---------
@@ -773,7 +774,7 @@ final public class PTabUICmdArcDir extends PTabUICmdArcAbs
         {
             // show info dialog
 	        OPAbstract.s_showDialogInfo(
-	            super._frmOwner_, super._strTitleAppli_, strBody);
+	            super._frmOwner_, strBody);
 
             // ending
             return true;

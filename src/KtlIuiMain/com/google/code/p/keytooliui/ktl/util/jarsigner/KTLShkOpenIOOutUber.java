@@ -28,7 +28,7 @@ final public class KTLShkOpenIOOutUber extends KTLShkOpenIOOutKPAbs
 
     public KTLShkOpenIOOutUber(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -40,7 +40,7 @@ final public class KTLShkOpenIOOutUber extends KTLShkOpenIOOutKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 
@@ -61,7 +61,7 @@ final public class KTLShkOpenIOOutUber extends KTLShkOpenIOOutKPAbs
     {
         return UtilKstUber.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+  
             fleOpen,
             super._chrsPasswdKst_);
     }

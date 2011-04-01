@@ -37,7 +37,7 @@ final public class KTLKprOpenCrtOutJceks extends KTLKprOpenCrtOutKPAbs
 
     public KTLKprOpenCrtOutJceks(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -49,7 +49,7 @@ final public class KTLKprOpenCrtOutJceks extends KTLKprOpenCrtOutKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+     
         
             // input
             strPathAbsOpenKst, // existing keystore of type JCEKS 
@@ -70,7 +70,7 @@ final public class KTLKprOpenCrtOutJceks extends KTLKprOpenCrtOutKPAbs
     {
         return UtilKstJceks.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+  
             fleOpen,
             super._chrsPasswdKst_);
     }

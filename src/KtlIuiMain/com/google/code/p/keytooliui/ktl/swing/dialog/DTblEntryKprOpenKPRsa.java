@@ -19,13 +19,13 @@ final public class DTblEntryKprOpenKPRsa extends DTblEntryKprOpenKPAbs
 
     public DTblEntryKprOpenKPRsa(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+      
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+     
             DTblEntryKprOpenKPRsa._f_s_strTitleThisPrefix,
             kseLoaded
             ); 

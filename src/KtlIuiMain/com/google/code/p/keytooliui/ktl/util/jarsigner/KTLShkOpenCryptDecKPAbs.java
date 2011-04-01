@@ -37,7 +37,7 @@ abstract public class KTLShkOpenCryptDecKPAbs extends KTLShkOpenCryptDecAbs
 
     protected KTLShkOpenCryptDecKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+     
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -50,7 +50,7 @@ abstract public class KTLShkOpenCryptDecKPAbs extends KTLShkOpenCryptDecAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+  
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -88,7 +88,7 @@ abstract public class KTLShkOpenCryptDecKPAbs extends KTLShkOpenCryptDecAbs
         
         DTblsKstSelSKOpen dlg = new DTblsKstSelSKOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+        
             kstOpen,
             super._strPathAbsKst_,
             "Decrypt data file with secret key, save result as file"

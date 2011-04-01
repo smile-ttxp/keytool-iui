@@ -28,7 +28,7 @@ final public class KTLShkOpenCryptEncUber extends KTLShkOpenCryptEncKPAbs
 
     public KTLShkOpenCryptEncUber(
         Frame frmOwner, 
-        String strTitleAppli,
+        
         
         // input
         String strPathAbsOpenKst, // existing keystore of type JKS 
@@ -40,7 +40,7 @@ final public class KTLShkOpenCryptEncUber extends KTLShkOpenCryptEncKPAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore of type JKS 
@@ -60,7 +60,7 @@ final public class KTLShkOpenCryptEncUber extends KTLShkOpenCryptEncKPAbs
     {
         return UtilKstUber.s_getKeystoreOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+           
             fleOpen,
             super._chrsPasswdKst_);
     }

@@ -92,7 +92,7 @@ abstract public class MHelpAllMainUIAbs extends MHelpAllMainAbs
     
     protected MHelpAllMainUIAbs(
         java.awt.Component cmpFrameOwner,
-        String strTitleApplication,
+
         //javax.help.HelpBroker hbrHelpStandard,
         String strLic)
     {
@@ -105,7 +105,7 @@ abstract public class MHelpAllMainUIAbs extends MHelpAllMainAbs
             );
         
         
-        this._mimLicBc = new MIHelpLicBc(cmpFrameOwner, strTitleApplication);
+        this._mimLicBc = new MIHelpLicBc(cmpFrameOwner);
         
     }
     

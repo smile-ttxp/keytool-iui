@@ -1,43 +1,14 @@
 
 package com.google.code.p.keytooliui.ktl.swing.dialog;
 
-import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Frame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.security.KeyStore;
-import java.security.cert.X509Certificate;
 import java.util.Date;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JTable;
-import javax.swing.JToolBar;
-import javax.swing.ListSelectionModel;
-import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import com.google.code.p.keytooliui.ktl.swing.panel.PTblEntPKTCAbs;
 import com.google.code.p.keytooliui.ktl.swing.panel.PTblEntPKTCSelAll;
-import com.google.code.p.keytooliui.ktl.swing.panel.PTblEntSKAbs;
 import com.google.code.p.keytooliui.ktl.swing.panel.PTblEntSKSelAll;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
-import com.google.code.p.keytooliui.shared.swing.button.BESExit24;
-import com.google.code.p.keytooliui.shared.swing.button.BESTip24;
-import com.google.code.p.keytooliui.shared.swing.button.BEnabledState;
-import com.google.code.p.keytooliui.shared.swing.dialog.DEscapeAbstract;
-import com.google.code.p.keytooliui.shared.swing.dialog.DPasswordOpen;
-import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
-import com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrtX509;
 
 abstract public class DTblsKstSelAbs extends DTblsKstAbs 
 {
@@ -133,7 +104,6 @@ abstract public class DTblsKstSelAbs extends DTblsKstAbs
     
     protected DTblsKstSelAbs(
         Component cmpFrameOwner, 
-        String strTitleAppli,
         String strTitleThis,
         KeyStore kseLoaded,
         String strPathAbs,
@@ -141,7 +111,6 @@ abstract public class DTblsKstSelAbs extends DTblsKstAbs
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
             strTitleThis,
             kseLoaded,
             strPathAbs,

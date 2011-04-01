@@ -198,7 +198,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
     public PSelBtnTfdFileOpenKst(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+       
         ItemListener itmListenerParent,
         String strTextLabel, // ie. root CA certs store
         boolean blnFieldRequired,
@@ -212,7 +212,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+    
             strTextLabel,
             blnFieldRequired
             );
@@ -230,7 +230,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
     public PSelBtnTfdFileOpenKst(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+      
         ItemListener itmListenerParent,
         boolean blnFieldRequired,
         boolean blnAllowTypeJks,
@@ -243,7 +243,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
         this(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+
             itmListenerParent,
             PSelBtnTfdFileOpenKst.f_s_strLabel,
             blnFieldRequired,
@@ -257,7 +257,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
     public PSelBtnTfdFileOpenKst(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         ItemListener itmListenerParent,
         boolean blnFieldRequired,
         boolean blnAllowTypeJks,
@@ -271,7 +271,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+
             PSelBtnTfdFileOpenKst.f_s_strLabel,
             blnFieldRequired
             );
@@ -315,7 +315,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
         String strButtonTextOk = "Open file";
             
         fle = S_FileChooserUI.s_getOpenFile(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk,
             strsTypeFileKstCur, 
@@ -442,7 +442,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\nFile not found.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }
@@ -454,7 +454,7 @@ final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\nFile is a directory.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }

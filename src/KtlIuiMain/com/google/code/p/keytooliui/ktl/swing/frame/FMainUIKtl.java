@@ -53,7 +53,7 @@
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.frame.FMainUIKtl";
 
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".FMainUIKtl" // class name
             ;
 
@@ -381,7 +381,7 @@
 
 
     public FMainUIKtl(
-        String strTitleAppli,
+      
         java.awt.event.WindowListener winListenerParent,
         java.awt.event.ActionListener actListenerParent,
         java.awt.event.ItemListener itmListenerParent,
@@ -393,7 +393,7 @@
         )
     {
         super(
-            strTitleAppli,
+         
             
             com.google.code.p.keytooliui.shared.awt.image.S_Image.s_get(
                 com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strAppliUIKtl16),
@@ -424,7 +424,7 @@
 
         super._mbmMenuBar_ = new MBMainUIKtl(
             (java.awt.Component) this,
-            strTitleAppli,
+          
             actListenerParent,
             itmListenerParent,
             //hbrHelpStandard,
@@ -432,7 +432,7 @@
 
         super._pcpContentPane_ = new PCPMainUIKtl(
             (java.awt.Frame) this,
-            strTitleAppli,
+        
             actListenerParent, chgListenerParent/*, hbrHelpStandard*/);
     }
  }

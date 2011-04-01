@@ -60,13 +60,12 @@ final public class PSelBtnTfdStrXlsSigfile extends PSelBtnTfdStrXlsAbs
     
     public PSelBtnTfdStrXlsSigfile(
         javax.swing.event.DocumentListener docListenerParent,
-        Frame frmParent, 
-        String strTitleAppli)
+        Frame frmParent)
     {
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+        
             PSelBtnTfdStrXlsSigfile._f_s_strLabel,
             new TF10x20SelString(),
             PSelBtnTfdStrXlsSigfile.f_s_strDocPropVal, 
@@ -95,7 +94,7 @@ final public class PSelBtnTfdStrXlsSigfile extends PSelBtnTfdStrXlsAbs
             MySystem.s_printOutWarning(this, strMethod, "str.indexOf(' ') != -1");
                     
             String strBody = "No spaces allowed in this string value.";
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }*/
                 
@@ -115,7 +114,7 @@ final public class PSelBtnTfdStrXlsSigfile extends PSelBtnTfdStrXlsAbs
             strBody += "\n\n";
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleSigfile();
                     
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }
         

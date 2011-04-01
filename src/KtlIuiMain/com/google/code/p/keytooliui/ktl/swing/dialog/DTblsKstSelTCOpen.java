@@ -40,14 +40,14 @@ public class DTblsKstSelTCOpen extends DTblsKstSelTCAbs
     
     public DTblsKstSelTCOpen(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+    
         java.security.KeyStore kseLoaded,
         String strPathAbs,
         String strTitleSuffix)
     {
         super(
                 cmpFrameOwner, 
-                strTitleAppli, 
+              
                 //DTblsKstSelTCOpen._f_s_strTitleThisPrefix + " " + kseLoaded.getType() + " " + DTblsKstSelTCOpen._f_s_strTitleThisSuffix,
                 strTitleSuffix,
                 kseLoaded,

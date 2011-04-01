@@ -115,14 +115,14 @@ abstract public class PSelBtnTfdFileAbs extends PSelBtnTfdAbs implements
     protected PSelBtnTfdFileAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent,
-        String strTitleAppli,
+
         String strLabel,
         boolean blnFieldRequired
         )
     {
         super(
             frmParent, 
-            strTitleAppli, 
+       
             strLabel,
             blnFieldRequired
             );

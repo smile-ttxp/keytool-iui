@@ -25,7 +25,7 @@ abstract public class PTabUICmdKtlKstOpenCryptDecAbs extends PTabUICmdKtlKstOpen
     
     protected PTabUICmdKtlKstOpenCryptDecAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         String strHelpID,
         boolean blnAllowTypeJks,
         boolean blnAllowTypePkcs12
@@ -34,7 +34,7 @@ abstract public class PTabUICmdKtlKstOpenCryptDecAbs extends PTabUICmdKtlKstOpen
         super(
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+       
             blnAllowTypeJks,
             blnAllowTypePkcs12
             );
@@ -42,7 +42,7 @@ abstract public class PTabUICmdKtlKstOpenCryptDecAbs extends PTabUICmdKtlKstOpen
         super._pnlSelectFileDataOpen_ = new PSelBtnTfdFileOpenAnyCbx(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+       
             (java.awt.event.ItemListener) null,
             "Encrypted data file:", // strLabel
             "Ascii",
@@ -54,7 +54,7 @@ abstract public class PTabUICmdKtlKstOpenCryptDecAbs extends PTabUICmdKtlKstOpen
           super._pnlSelectFileDataSave_ = new PSelBtnTfdFileSaveAny(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli,
+         
             (java.awt.event.ItemListener) null,
             "Decrypted data file:" // strLabel
             );

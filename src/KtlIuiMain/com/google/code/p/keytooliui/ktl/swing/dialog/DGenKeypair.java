@@ -102,13 +102,12 @@ final public class DGenKeypair extends DEscapeAbstract implements
     
     public DGenKeypair(
         Frame frmParent, 
-        String strTitleAppli,
         KeyPairGenerator kpg
         )
     {
         super(
             frmParent, 
-            strTitleAppli + " - " + DGenKeypair._f_s_strTitle, 
+            //strTitleAppli + " - " + DGenKeypair._f_s_strTitle,
             true
             
             

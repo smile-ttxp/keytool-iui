@@ -237,15 +237,15 @@ public class PCntsMainRight extends PCntsMainAbs
             this._dpe.setSelectedTaskKprAnyFromCrt();
     }
     
-    public PCntsMainRight(Frame frmParent, String strTitleAppli)
+    public PCntsMainRight(Frame frmParent)
     {
         super();
         
         
-        this._tbr = new  TBSubCntKtl(strTitleAppli,
+        this._tbr = new  TBSubCntKtl(
             (ActionListener) this);
         
-        this._dpe = new DPCntsMainRight(frmParent, strTitleAppli);
+        this._dpe = new DPCntsMainRight(frmParent);
        
         
     }

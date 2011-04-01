@@ -37,7 +37,7 @@ abstract public class KTLCrtOpenSigAbs extends KTLCrtOpenAbs
     
     protected KTLCrtOpenSigAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+ 
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -50,7 +50,7 @@ abstract public class KTLCrtOpenSigAbs extends KTLCrtOpenAbs
         String strFormatFileSig // 
         )
     {
-        super(frmOwner, strTitleAppli, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
+        super(frmOwner, strPathAbsOpenKst, chrsPasswdOpenKst, strProviderKst);
         
         this._strPathAbsFileData_ = strPathAbsFileData;
         this._strPathAbsFileSig_ = strPathAbsFileSig;

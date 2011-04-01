@@ -67,14 +67,14 @@ abstract public class PSelBtnTfdStrXlsAliasAbs extends PSelBtnTfdStrXlsAbs
     protected PSelBtnTfdStrXlsAliasAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         Object objDocPropValue,
         String strLabelPrefix)
     {
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+    
             strLabelPrefix + " " + PSelBtnTfdStrXlsAliasAbs._f_s_strLabelSuffix, 
             new TF10x20SelString(),
             objDocPropValue,
@@ -101,7 +101,7 @@ abstract public class PSelBtnTfdStrXlsAliasAbs extends PSelBtnTfdStrXlsAbs
             MySystem.s_printOutWarning(this, strMethod, "str.indexOf(' ') != -1");
                     
             String strBody = "No spaces allowed in this string value.";
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }
         **/     
@@ -121,7 +121,7 @@ abstract public class PSelBtnTfdStrXlsAliasAbs extends PSelBtnTfdStrXlsAbs
             strBody += "\n\n";
             strBody += com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.s_getRuleAlias();
                     
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
             return true;
         }
         

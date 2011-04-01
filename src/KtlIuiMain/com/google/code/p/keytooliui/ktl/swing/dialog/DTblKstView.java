@@ -24,13 +24,13 @@ final public class DTblKstView extends DTblKstAbs
 
     public DTblKstView(
         Component cmpFrameOwner, 
-        String strTitleAppli,
+     
         java.security.KeyStore kseLoaded
         )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli,
+      
             DTblKstView._f_s_strTitleThisPrefix + " " + kseLoaded.getType() + " " + DTblKstView._f_s_strTitleThisSuffix,
             kseLoaded
             ); 

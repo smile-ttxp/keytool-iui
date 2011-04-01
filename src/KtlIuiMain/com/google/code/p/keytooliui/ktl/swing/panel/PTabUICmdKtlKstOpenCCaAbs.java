@@ -282,7 +282,7 @@ abstract public class PTabUICmdKtlKstOpenCCaAbs extends PTabUICmdKtlKstOpenAbs
     protected PTabUICmdKtlKstOpenCCaAbs(
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+     
         String strPropValFileIO // eg: select_file_csr
         )
     {
@@ -290,7 +290,7 @@ abstract public class PTabUICmdKtlKstOpenCCaAbs extends PTabUICmdKtlKstOpenAbs
             "Root CA certs store password:", // MEMO: default: "changeit
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+        
             "Root CA certs store file:",
             true, // blnAllowTypeJks
             false, // blnAllowTypeJceks

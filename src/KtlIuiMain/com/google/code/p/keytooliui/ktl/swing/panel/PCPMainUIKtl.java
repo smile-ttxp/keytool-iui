@@ -339,7 +339,7 @@ final public class PCPMainUIKtl extends PCPMainUIAbs
    
     
     public PCPMainUIKtl(
-        Frame frmParent, String strTitleAppli,
+        Frame frmParent, 
         java.awt.event.ActionListener alrParentAppli,
         javax.swing.event.ChangeListener chgListenerParent/*,
         javax.help.HelpBroker hbrHelpStandard*/
@@ -350,7 +350,7 @@ final public class PCPMainUIKtl extends PCPMainUIAbs
         // ---------------
         // create children
         
-        super._tbrToolBar_ = new TBMainUIKtl(frmParent, alrParentAppli/*, hbrHelpStandard*/, strTitleAppli);
-        super._spe_ = new SPUIMainKtl(frmParent, strTitleAppli);
+        super._tbrToolBar_ = new TBMainUIKtl(frmParent, alrParentAppli/*, hbrHelpStandard*/);
+        super._spe_ = new SPUIMainKtl(frmParent);
     }
 }

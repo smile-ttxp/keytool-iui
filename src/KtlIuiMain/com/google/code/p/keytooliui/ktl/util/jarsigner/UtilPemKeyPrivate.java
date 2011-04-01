@@ -49,7 +49,6 @@ final public class UtilPemKeyPrivate
     
  
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent,
         File fle)
     {
@@ -75,7 +74,7 @@ final public class UtilPemKeyPrivate
         // launch dialog 
 
         com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys dlg = new
-            com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys(frmParent, strTitleAppli);
+            com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys(frmParent);
         
         if (! dlg.init())
         {
@@ -83,7 +82,7 @@ final public class UtilPemKeyPrivate
         }
         
         dlg.setTitle(
-            strTitleAppli + " - " + "view" + " " + com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strFileDescKprPem);
+            System.getProperty("_appli.title") + " - " + "view" + " " + com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strFileDescKprPem);
         
 
         if (! dlg.show(fle))
@@ -91,13 +90,11 @@ final public class UtilPemKeyPrivate
     }
     
     static public void s_showFile(
-        String strTitleAppli,
         Frame frmParent)
     {
         String strMethod = UtilPemKeyPrivate._f_s_strClass + "." + "s_showFile(...)";
         
         File fle = com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.s_getOpenFile(
-            strTitleAppli, 
             frmParent, 
             "select",
             com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI.f_s_strsKprPem, 
@@ -111,7 +108,7 @@ final public class UtilPemKeyPrivate
             return;
         }
         
-        UtilPemKeyPrivate.s_showFile(strTitleAppli, frmParent, fle);
+        UtilPemKeyPrivate.s_showFile(frmParent, fle);
         
     }
     
@@ -122,7 +119,6 @@ final public class UtilPemKeyPrivate
     **/
     static public String s_generateKpr(
         Frame frmOwner, 
-        String strTitleAppli,
         PrivateKey pky
             )
     {
@@ -154,7 +150,7 @@ final public class UtilPemKeyPrivate
             strBody += "More in your session.log file";
                         
             OPAbstract.s_showDialogWarning(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
             
             return null;
         }

@@ -27,13 +27,9 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import java.awt.*;
 import java.io.*;
-import java.util.jar.*;
-import java.util.*;
-import java.util.zip.*;
 
 
 final public class KTLKprOpenVerifyUber extends KTLKprOpenVerifyAbs
@@ -43,7 +39,6 @@ final public class KTLKprOpenVerifyUber extends KTLKprOpenVerifyAbs
     
     public KTLKprOpenVerifyUber(
         Frame frmOwner,
-        String strTitleAppli,
         String strPathAbsKst, // nil value allowed (optional)
         String strProviderKst,
         String strPathAbsSignedJar,
@@ -56,7 +51,7 @@ final public class KTLKprOpenVerifyUber extends KTLKprOpenVerifyAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+       
             strPathAbsKst, 
             (char[]) null, // chrsPasswdOpenKst
             
@@ -98,7 +93,7 @@ final public class KTLKprOpenVerifyUber extends KTLKprOpenVerifyAbs
             
             // memo: keystore should be of type "UBER", provided by "SunJCE"
             File fleOpen = UtilJsrFile.s_getFileOpen(
-                super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+                super._frmOwner_, super._strPathAbsKst_);
                 
             if (fleOpen == null)
             {
@@ -107,7 +102,7 @@ final public class KTLKprOpenVerifyUber extends KTLKprOpenVerifyAbs
             }
             
             kstOpen = UtilKstUber.s_getKeystoreOpen(
-                super._frmOwner_, super._strTitleAppli_,
+                super._frmOwner_, 
                 fleOpen,
                 (char[]) null // keystore's Password, not in use for verifying signed jarred file
                 );

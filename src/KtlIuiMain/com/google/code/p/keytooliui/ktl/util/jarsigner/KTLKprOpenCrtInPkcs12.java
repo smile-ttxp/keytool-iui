@@ -11,22 +11,14 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // ----
 import java.security.KeyStore;
-import java.security.PublicKey;
-import java.security.Key;
-import java.security.KeyStoreException;
 // --
-import java.security.cert.X509Certificate;
 // ----
 
 import java.awt.*;
 import java.io.*;
-import java.util.*;
 
 final public class KTLKprOpenCrtInPkcs12 extends KTLKprOpenCrtInAbs
 {
@@ -37,7 +29,7 @@ final public class KTLKprOpenCrtInPkcs12 extends KTLKprOpenCrtInAbs
 
     public KTLKprOpenCrtInPkcs12(
         Frame frmOwner, 
-        String strTitleAppli,
+  
         
         // input
         String strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -51,7 +43,7 @@ final public class KTLKprOpenCrtInPkcs12 extends KTLKprOpenCrtInAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+       
         
             // input
             strPathAbsOpenKst, // existing keystore of type PKCS12 
@@ -72,8 +64,8 @@ final public class KTLKprOpenCrtInPkcs12 extends KTLKprOpenCrtInAbs
     
     protected DTblsKstSelPKAbs _getDialogSelectKpr_(KeyStore kstOpen)
     {
-        //return new DTblEntryKprOpenPkcs12Any(super._frmOwner_, super._strTitleAppli_, kstOpen);
-        return new DTblsKstSelPKOpenNoPass(super._frmOwner_, super._strTitleAppli_, kstOpen,
+
+        return new DTblsKstSelPKOpenNoPass(super._frmOwner_, kstOpen,
                 super._strPathAbsKst_,
             "Import certificate file as C.A. cert. reply to private key"
                 );
@@ -82,7 +74,7 @@ final public class KTLKprOpenCrtInPkcs12 extends KTLKprOpenCrtInAbs
     protected KeyStore _getKeystoreOpen_(File fleOpenKst)
     {
         return UtilKstPkcs12.s_getKeystoreOpen(
-            super._frmOwner_, super._strTitleAppli_,
+            super._frmOwner_,
             fleOpenKst,
             super._chrsPasswdKst_);
     }

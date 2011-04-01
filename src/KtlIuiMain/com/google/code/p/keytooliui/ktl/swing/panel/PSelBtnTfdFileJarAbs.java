@@ -345,7 +345,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
     protected PSelBtnTfdFileJarAbs(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+  
         String strLabel,
         Object objDocPropValue,
         int intMode,
@@ -356,7 +356,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
     {
         super(
             frmParent, 
-            strTitleAppli, 
+       
             strLabel,
             blnFieldRequired
             );
@@ -465,7 +465,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
             String strButtonTextOk = "Open file";
             
             fle = S_FileChooserUI.s_getOpenFile(
-                super._strTitleAppli_, 
+                
                 super._frmParent_, 
                 strButtonTextOk,
                 strsTypeFileJarCur, 
@@ -479,7 +479,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
             String strButtonTextOk = "Save file";
             
             fle = S_FileChooserUI.s_getSaveFile(
-                super._strTitleAppli_, super._frmParent_, strButtonTextOk,
+                super._frmParent_, strButtonTextOk,
                 strsTypeFileJarCur, strFileDesc,
                 this._strDirNameDefault);
         }
@@ -549,7 +549,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
                 String strBody = fle.getAbsolutePath();
                 strBody += ":\nFile already exists.";
                 
-                OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 return true;
             }*/
         }
@@ -563,7 +563,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
                 String strBody = fle.getAbsolutePath();
                 strBody += ":\nFile not found.";
                 
-                OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
                 return true;
             }
@@ -575,7 +575,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
                 String strBody = fle.getAbsolutePath();
                 strBody += ":\nFile is a directory.";
                 
-                OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
                 return true;
             }

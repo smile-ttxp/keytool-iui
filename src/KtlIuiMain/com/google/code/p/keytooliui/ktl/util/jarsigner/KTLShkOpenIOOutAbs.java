@@ -103,7 +103,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_,  super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -123,7 +123,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         }
         
         File fleSaveIO = UtilJsrFile.s_getFileSave(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileData_,
+            super._frmOwner_,  super._strPathAbsFileData_,
             true // blnShowDlgOverwrite
             );
         
@@ -157,7 +157,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+   
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -167,7 +167,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+        
             kstOpen);
         
         if (strsAliasSK == null)
@@ -180,7 +180,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -189,7 +189,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -198,7 +198,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -207,7 +207,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -215,7 +215,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -223,7 +223,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -231,7 +231,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -239,7 +239,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -247,7 +247,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+           kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -328,7 +328,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
  
         Key key = UtilKstAbs.s_getKey(
             super._frmOwner_, 
-            super._strTitleAppli_,
+     
             kstOpen,
             strAliasShk,
             chrsPasswdShk);
@@ -391,7 +391,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
 
                 String strBody = "Uncaught secret key file format: " + this._strFormatFileShk_; 
 
-                OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+                OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
 
                 return false;
             }
@@ -408,7 +408,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
 
             strBody += "\n\n" + "More: see your session.log file";
 
-            OPAbstract.s_showDialogError(super._frmOwner_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogError(super._frmOwner_,  strBody);
 
             return false;
         }
@@ -416,16 +416,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
 
         // ----
         
-        // TODO : REMOVE THE CODE BELOW !!!!!
-        
-        /*String strBody = "Secret key aliased ";
-        strBody += strAliasShk;
-        strBody += "\nsuccessfully saved as:";
-        strBody += "\n  " + fleSaveIO.getAbsolutePath();
-        
-        OPAbstract.s_showDialogInfo(super._frmOwner_, 
-            super._strTitleAppli_, 
-            strBody);*/
+  
        
         
         // ending
@@ -436,7 +427,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
 
     protected KTLShkOpenIOOutAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore 
@@ -449,7 +440,7 @@ abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+  
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strPathAbsFileSaveIO,

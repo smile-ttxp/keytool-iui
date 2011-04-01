@@ -131,14 +131,14 @@ final public class PSelBtnTfdFileOpenCrtTcr extends PSelBtnTfdFileOpenAbs
         String strTextLabel,
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+       
         ItemListener itmListenerParent
         )
     {
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+     
             strTextLabel,
             true // blnFieldRequired
             );
@@ -169,7 +169,7 @@ final public class PSelBtnTfdFileOpenCrtTcr extends PSelBtnTfdFileOpenAbs
     public PSelBtnTfdFileOpenCrtTcr(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+      
         ItemListener itmListenerParent
         )
     {
@@ -177,7 +177,7 @@ final public class PSelBtnTfdFileOpenCrtTcr extends PSelBtnTfdFileOpenAbs
             PSelBtnTfdFileOpenCrtTcr._f_s_strLabel,
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+
             itmListenerParent);
     }
     
@@ -205,7 +205,7 @@ final public class PSelBtnTfdFileOpenCrtTcr extends PSelBtnTfdFileOpenAbs
         String strButtonTextOk = "Open file";
             
         fle = S_FileChooserUI.s_getOpenFile(
-            super._strTitleAppli_, 
+            
             super._frmParent_, 
             strButtonTextOk,
             strsTypeFileCrtCur, 
@@ -248,7 +248,7 @@ final public class PSelBtnTfdFileOpenCrtTcr extends PSelBtnTfdFileOpenAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\nFile not found.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }
@@ -260,7 +260,7 @@ final public class PSelBtnTfdFileOpenCrtTcr extends PSelBtnTfdFileOpenAbs
             String strBody = fle.getAbsolutePath();
             strBody += ":\nFile is a directory.";
                 
-            OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+            OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
                 
             return true;
         }

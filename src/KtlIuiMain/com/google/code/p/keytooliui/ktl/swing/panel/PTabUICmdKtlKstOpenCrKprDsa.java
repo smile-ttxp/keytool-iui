@@ -58,7 +58,7 @@ final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprA
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.panel.PTabUICmdKtlKstOpenCrKprDsa";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
             ".PTabUICmdKtlKstOpenCrKprDsa" // class name
             ;
         
@@ -130,7 +130,7 @@ final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprA
             
             ktl = new KTLKprSaveNewDsaJks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -180,7 +180,7 @@ final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprA
             
             ktl = new KTLKprSaveNewDsaJceks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+              
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -232,7 +232,7 @@ final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprA
             
             ktl = new KTLKprSaveNewDsaPkcs12(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -282,7 +282,7 @@ final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprA
             
             ktl = new KTLKprSaveNewDsaBks(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+            
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -332,7 +332,7 @@ final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprA
             
             ktl = new KTLKprSaveNewDsaUber(
                 super._frmOwner_, 
-                super._strTitleAppli_,
+             
                 // input
                 super._strPathAbsKst_, 
                 chrsPasswdKstTarget,
@@ -397,12 +397,12 @@ final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprA
     }
     
     
-    public PTabUICmdKtlKstOpenCrKprDsa(Frame frmOwner, String strTitleAppli)
+    public PTabUICmdKtlKstOpenCrKprDsa(Frame frmOwner)
     {
         super(
             PTabUICmdKtlKstOpenCrKprDsa._s_strHelpID, 
             frmOwner, 
-            strTitleAppli,
+     
             com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs.s_getItgsListSizeKprDsa(),
             true, // blnAllowTypePkcs12
             true, // blnAllowTypeBks

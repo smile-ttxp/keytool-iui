@@ -9,21 +9,12 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.dialog.*;
 
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 // memo: assigning full class path coz ambiguous: same class name in several Java packages
-import java.security.PublicKey;
-import java.security.KeyPair;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 
 import java.awt.*;
 import java.io.*;
@@ -90,7 +81,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+    
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -100,7 +91,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+            
             kstOpen);
         
         if (strsAliasSK == null)
@@ -113,7 +104,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -122,7 +113,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -131,7 +122,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -140,7 +131,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -148,7 +139,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -156,7 +147,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -164,7 +155,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -172,7 +163,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -180,7 +171,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+            kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -233,7 +224,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
     
     protected KTLCcaSaveNewDMAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // output
         String strPathAbsOpenKst, // existing keystore of type [JKS-JCEKS] 
@@ -250,7 +241,7 @@ abstract public class KTLCcaSaveNewDMAbs extends KTLCcaSaveNewAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+          
             
             // output
             strPathAbsOpenKst,

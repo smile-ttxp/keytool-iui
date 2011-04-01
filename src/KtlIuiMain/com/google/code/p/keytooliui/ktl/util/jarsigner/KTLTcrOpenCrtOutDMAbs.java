@@ -36,7 +36,7 @@ abstract public class KTLTcrOpenCrtOutDMAbs extends KTLTcrOpenCrtOutAbs
 
     protected KTLTcrOpenCrtOutDMAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -50,7 +50,7 @@ abstract public class KTLTcrOpenCrtOutDMAbs extends KTLTcrOpenCrtOutAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -87,7 +87,7 @@ abstract public class KTLTcrOpenCrtOutDMAbs extends KTLTcrOpenCrtOutAbs
 
         DTblsKstSelTCOpen dlg = new DTblsKstSelTCOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+    
             kstOpen,
             super._strPathAbsKst_,
             "Export trusted certificate entry as certificate file"

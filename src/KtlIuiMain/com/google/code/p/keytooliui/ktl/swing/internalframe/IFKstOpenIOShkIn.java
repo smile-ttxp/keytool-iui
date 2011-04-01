@@ -6,11 +6,11 @@ import com.google.code.p.keytooliui.ktl.swing.panel.*;
 
 public class IFKstOpenIOShkIn extends IFAbs
 {
-    public IFKstOpenIOShkIn(Frame frmParent, String strTitleAppli)
+    public IFKstOpenIOShkIn(Frame frmParent)
     {
         super();
         
-        super._pnl_ = new PTabUICmdKtlKstOpenIOShkIn(frmParent, strTitleAppli);
+        super._pnl_ = new PTabUICmdKtlKstOpenIOShkIn(frmParent);
         setTitle(PTabUICmdKtlKstOpenIOShkIn.STR_TITLETASK);
     }
 

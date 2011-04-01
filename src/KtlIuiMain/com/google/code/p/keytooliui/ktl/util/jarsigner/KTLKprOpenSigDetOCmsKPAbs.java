@@ -37,7 +37,7 @@ abstract public class KTLKprOpenSigDetOCmsKPAbs extends KTLKprOpenSigDetOCmsAbs
 
     protected KTLKprOpenSigDetOCmsKPAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+      
         
         // input
         String strPathAbsOpenKst, // existing keystore
@@ -53,7 +53,7 @@ abstract public class KTLKprOpenSigDetOCmsKPAbs extends KTLKprOpenSigDetOCmsAbs
     {
         super(
             frmOwner, 
-            strTitleAppli,
+
         
             // input
             strPathAbsOpenKst, // existing keystore 
@@ -95,7 +95,7 @@ abstract public class KTLKprOpenSigDetOCmsKPAbs extends KTLKprOpenSigDetOCmsAbs
         
         DTblsKstSelPKOpen dlg = new DTblsKstSelPKOpen(
             super._frmOwner_, 
-            super._strTitleAppli_,
+        
             kstOpen,
             super._strPathAbsKst_,
             "Sign file with private key and save as CMS detached signature file"

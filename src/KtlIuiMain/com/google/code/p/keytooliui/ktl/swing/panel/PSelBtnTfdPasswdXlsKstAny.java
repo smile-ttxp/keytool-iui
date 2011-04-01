@@ -50,7 +50,7 @@ final public class PSelBtnTfdPasswdXlsKstAny extends PSelBtnTfdPasswdXlsKstAbs
         String strLabel,
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli,
+    
         int intModePassword
         )
     {
@@ -58,7 +58,7 @@ final public class PSelBtnTfdPasswdXlsKstAny extends PSelBtnTfdPasswdXlsKstAbs
             strLabel,
             docListenerParent,
             frmParent,
-            strTitleAppli,
+     
             (Object) PSelBtnTfdPasswdXlsKstAny.f_s_strDocPropVal,
             intModePassword
         );        
@@ -68,14 +68,14 @@ final public class PSelBtnTfdPasswdXlsKstAny extends PSelBtnTfdPasswdXlsKstAbs
      public PSelBtnTfdPasswdXlsKstAny(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli,
+     
         int intModePassword
         )
     {
         super(
             docListenerParent,
             frmParent,
-            strTitleAppli,
+      
             (Object) PSelBtnTfdPasswdXlsKstAny.f_s_strDocPropVal,
             PSelBtnTfdPasswdXlsKstAny._f_s_strLabelPrefix,
             intModePassword
@@ -85,7 +85,7 @@ final public class PSelBtnTfdPasswdXlsKstAny extends PSelBtnTfdPasswdXlsKstAbs
     public PSelBtnTfdPasswdXlsKstAny(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli,
+     
         int intModePassword,
         String strSuffixDocPropVal // in case of more than on panel of same class in the same tab, used to differentiate
         )
@@ -93,7 +93,7 @@ final public class PSelBtnTfdPasswdXlsKstAny extends PSelBtnTfdPasswdXlsKstAbs
         super(
             docListenerParent,
             frmParent,
-            strTitleAppli,
+        
             (Object) PSelBtnTfdPasswdXlsKstAny.f_s_strDocPropVal + strSuffixDocPropVal,
             PSelBtnTfdPasswdXlsKstAny._f_s_strLabelPrefix,
             intModePassword

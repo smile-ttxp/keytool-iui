@@ -138,15 +138,15 @@ abstract public class PTabUICmdArcAbs extends PTabUICmdAbs implements
     
     protected PTabUICmdArcAbs(
         Frame frmOwner, 
-        String strTitleAppli, 
+ 
         String strHelpID
         )
     {
         super(
-            //"String strTitleTab", // TEMPO
+          
             strHelpID, 
             frmOwner, 
-            strTitleAppli,
+  
             "Source", // strLabelBorderPanelIn, nil value allowed
             "Target" // strLabelBorderPanelOut nil value allowed
             );
@@ -154,7 +154,7 @@ abstract public class PTabUICmdArcAbs extends PTabUICmdAbs implements
         this._fssSelectUnsignedJar2Save_ = new PSelBtnTfdFileJarSaveUnsigned(
             (javax.swing.event.DocumentListener) this,
             frmOwner, 
-            strTitleAppli, 
+    
             S_FileExtensionUI.f_s_strDirNameDefaultFileSigned,
             true // blnFieldRequired
         );

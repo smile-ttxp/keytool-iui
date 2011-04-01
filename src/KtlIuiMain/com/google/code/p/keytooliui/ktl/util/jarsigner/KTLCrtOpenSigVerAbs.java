@@ -121,7 +121,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         
         
         File fleOpenKst = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+            super._frmOwner_, super._strPathAbsKst_);
         
         if (fleOpenKst == null)
         {
@@ -140,7 +140,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         }
         
         File fleOpenData = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileData_//,
+            super._frmOwner_, super._strPathAbsFileData_//,
             //false //true // blnShowDlgOverwrite
             );
         
@@ -161,7 +161,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         }
         
         File fleOpenSig = UtilJsrFile.s_getFileOpen(
-            super._frmOwner_, super._strTitleAppli_, super._strPathAbsFileSig_//,
+            super._frmOwner_,  super._strPathAbsFileSig_//,
             //true // blnShowDlgOverwrite
             );
         
@@ -194,7 +194,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         
         String[] strsAliasPKTC = UtilKstAbs.s_getStrsAliasPKTC(
             super._frmOwner_,
-            super._strTitleAppli_,
+    
             kstOpen);
         
         if (strsAliasPKTC == null)
@@ -204,7 +204,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         
         String[] strsAliasSK = UtilKstAbs.s_getStrsAliasSK(
             super._frmOwner_,
-            super._strTitleAppli_,
+     
             kstOpen);
         
         if (strsAliasSK == null)
@@ -217,7 +217,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         // TC versus PK
         Boolean[] boosIsTCEntryPKTC = 
             UtilKstAbs.s_getBoosEntryTcr(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosIsTCEntryPKTC == null)
         {
@@ -226,7 +226,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         
         Boolean[] boosValidDatePKTC = 
             UtilKstAbs.s_getBoosValidDatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosValidDatePKTC == null)
         {
@@ -235,7 +235,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
 
         Boolean[] boosSelfSignedCertPKTC = 
             UtilKstAbs.s_getBoosSelfSigned(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (boosSelfSignedCertPKTC == null)
         {
@@ -244,7 +244,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         
         Boolean[] boosTrustedCertPKTC = 
             UtilKstAbs.s_getBoosTrusted(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (boosTrustedCertPKTC == null)
         {
@@ -252,7 +252,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         }
         
         String[] strsSizeKeyPublPKTC = UtilKstAbs.s_getStrsSizeKeyPubl(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
         
         if (strsSizeKeyPublPKTC == null)
         {
@@ -260,7 +260,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         }
         
         String[] strsTypeCertPKTC = UtilKstAbs.s_getStrsTypeCertificatePKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsTypeCertPKTC == null)
         {
@@ -268,7 +268,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         }
         
         String[] strsAlgoSigCertPKTC = UtilKstAbs.s_getStrsAlgoSigCertPKTC(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+            kstOpen, strsAliasPKTC);
         
         if (strsAlgoSigCertPKTC == null)
         {
@@ -276,7 +276,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         }
 
         Date[] dtesLastModifiedPKTC = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasPKTC);
+             kstOpen, strsAliasPKTC);
 
         if (dtesLastModifiedPKTC == null)
         {
@@ -284,7 +284,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         }
         
         Date[] dtesLastModifiedSK = UtilKstAbs.s_getDtesLastModified(super._frmOwner_,
-            super._strTitleAppli_, kstOpen, strsAliasSK);
+            kstOpen, strsAliasSK);
 
         if (dtesLastModifiedSK == null)
         {
@@ -362,7 +362,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
             MySystem.s_printOutExit(this, strMethod, "nil arg");
         
         
-        if (! UtilKstAbs.s_checkValidDateCert(super._frmOwner_, super._strTitleAppli_, kstOpen, strAliasCrt))
+        if (! UtilKstAbs.s_checkValidDateCert(super._frmOwner_,  kstOpen, strAliasCrt))
         {
             MySystem.s_printOutTrace(this, strMethod, "not a valid cert, aborted by user");
             return false;
@@ -372,7 +372,6 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
  
         PublicKey pkyPublic = UtilKstAbs.s_getKeyPublic(
             super._frmOwner_, 
-            super._strTitleAppli_,
             kstOpen,
             strAliasCrt);
         
@@ -471,7 +470,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
 
     protected KTLCrtOpenSigVerAbs(
         Frame frmOwner, 
-        String strTitleAppli,
+   
         
         // input
         String strPathAbsOpenKst, // existing keystore 
@@ -486,7 +485,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+     
             strPathAbsOpenKst, 
             chrsPasswdOpenKst, 
             strPathAbsFileOpenData,
@@ -525,7 +524,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         
         try
         {
-            String strCrtSigAlgo = UtilKstAbs.s_getCertSigAlgo(super._frmOwner_, super._strTitleAppli_,
+            String strCrtSigAlgo = UtilKstAbs.s_getCertSigAlgo(super._frmOwner_, 
                 kstOpen, strAliasCrt);
          
             if (strCrtSigAlgo == null)
@@ -551,7 +550,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
             
                 OPAbstract.s_showDialogWarning(
                     super._frmOwner_, 
-                    super._strTitleAppli_, 
+           
                     strBody);
                 
                 return false;
@@ -572,7 +571,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
             
             OPAbstract.s_showDialogWarning(
                 super._frmOwner_, 
-                super._strTitleAppli_, 
+      
                 strBody);
             
             return false;
@@ -591,7 +590,7 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
         strBody += "\n  " + strAliasCrt;
            
         OPAbstract.s_showDialogInfo(super._frmOwner_, 
-            super._strTitleAppli_, 
+ 
             strBody);
         
         return true;

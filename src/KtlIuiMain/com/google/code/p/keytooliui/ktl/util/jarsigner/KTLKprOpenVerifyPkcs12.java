@@ -27,13 +27,9 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import java.awt.*;
 import java.io.*;
-import java.util.jar.*;
-import java.util.*;
-import java.util.zip.*;
 
 final public class KTLKprOpenVerifyPkcs12 extends KTLKprOpenVerifyAbs
 {
@@ -42,7 +38,7 @@ final public class KTLKprOpenVerifyPkcs12 extends KTLKprOpenVerifyAbs
     
     public KTLKprOpenVerifyPkcs12(
         Frame frmOwner,
-        String strTitleAppli,
+   
         String strPathAbsKst, // nil value allowed (optional)
         String strProviderKst,
         String strPathAbsSignedJar,
@@ -57,7 +53,7 @@ final public class KTLKprOpenVerifyPkcs12 extends KTLKprOpenVerifyAbs
     {
         super(
             frmOwner, 
-            strTitleAppli, 
+        
             strPathAbsKst, 
             chrsPasswdOpenKst,
             strProviderKst,
@@ -105,7 +101,7 @@ final public class KTLKprOpenVerifyPkcs12 extends KTLKprOpenVerifyAbs
             
             // memo: keystore should be of type "PKCS12", provided by "BC", or "SunRsaSign"
             File fleOpenKst = UtilJsrFile.s_getFileOpen(
-                super._frmOwner_, super._strTitleAppli_, super._strPathAbsKst_);
+                super._frmOwner_, super._strPathAbsKst_);
                 
             if (fleOpenKst == null)
             {
@@ -114,7 +110,7 @@ final public class KTLKprOpenVerifyPkcs12 extends KTLKprOpenVerifyAbs
             }
             
             kstOpen = UtilKstPkcs12.s_getKeystoreOpen(
-                super._frmOwner_, super._strTitleAppli_,
+                super._frmOwner_, 
                 fleOpenKst,
                 super._chrsPasswdKst_ // keystore's Password, REQUIRED!
                 );

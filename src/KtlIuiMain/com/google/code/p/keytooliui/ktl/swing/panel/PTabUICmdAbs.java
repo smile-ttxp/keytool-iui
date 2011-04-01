@@ -123,7 +123,7 @@ abstract public class PTabUICmdAbs extends PTabUIAbs implements
         }
         
         this._frmOwner_ = null;
-        this._strTitleAppli_ = null;
+   
         this._strPathAbsKst_ = null;
         
         this._pnlInput_ = null;
@@ -147,14 +147,14 @@ abstract public class PTabUICmdAbs extends PTabUIAbs implements
     protected String _strPathAbsKst_ = null;
     
     protected Frame _frmOwner_ = null;
-    protected String _strTitleAppli_ = null;
+
  
     protected void _doneJob_(String strBody)
     {                    
         // oct 23, 05 tbrl with jdk1.5 ==> artifacts, dialog shows up also at the topLeft of the window!
         // not always!
         OPAbstract.s_showDialogInfo(
-            this._frmOwner_, this._strTitleAppli_, strBody);        
+            this._frmOwner_,  strBody);        
             
     }
     
@@ -163,16 +163,16 @@ abstract public class PTabUICmdAbs extends PTabUIAbs implements
         //String strTitleTab,
         String strHelpID,
         Frame frmOwner,
-        String strTitleAppli,
+
         String strLabelBorderPanelIn, // nil value allowed
         String strLabelBorderPanelOut // nil value allowed
         )
     {
         super(strHelpID);
         
-        //this._strTitleTab = strTitleTab;
+     
         this._frmOwner_ = frmOwner;
-        this._strTitleAppli_ = strTitleAppli;
+
         
         // new objects
         this._pnlInput_ = new JPanel();

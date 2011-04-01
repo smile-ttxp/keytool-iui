@@ -56,6 +56,8 @@ abstract public class PSelCmbStrSigAlgoAbs extends PSelCmbStrAbs
             PSelCmbStrSigAlgoAbs._f_s_strTextLabel,
             strsValue,
             0 // first value in array for "setSelected(...)"
+            // TODO dummy value coz conflicts
+            ,200
             ); 
     }
 }
