@@ -13,6 +13,7 @@ package com.google.code.p.keytooliui.shared;
     
 **/
 
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -819,6 +820,11 @@ abstract public class AppMainAbs extends AppAbs implements
             MySystem.s_printOutError(this, strMethod, "excArrayIndexOutOfBounds caught");
             return false;
         }
+        
+        // center the frame on the screen
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension size = _fmaFrame_.getSize();
+        this._fmaFrame_.setLocation((screen.width - size.width) / 2, (screen.height - size.height) / 2);
         
         this._fmaFrame_.setVisible(true);
         
