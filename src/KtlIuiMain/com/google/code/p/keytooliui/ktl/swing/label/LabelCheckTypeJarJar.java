@@ -18,32 +18,21 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
- 
- 
- package com.google.code.p.keytooliui.ktl.swing.label;
- 
- 
- /**
 
-    
- **/
- 
- 
- final public class LabelCheckTypeJarJar extends LabelCheckTypeJarAbs
- {
-    // ---------
-    // PUBLIC
-    
+package com.google.code.p.keytooliui.ktl.swing.label;
+
+import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJar;
+
+final public class LabelCheckTypeJarJar extends LabelCheckTypeJarAbs
+{
     public LabelCheckTypeJarJar()
     {
-        super(
-            com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJar.f_s_strDesc,
-            com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJar.f_s_strsFileExt);
+        super(RBTypeJarJar.f_s_strDesc, RBTypeJarJar.f_s_strsFileExt);
     }
-    
+
     public LabelCheckTypeJarJar(boolean blnIsChecked)
     {
         this();
         super.setChecked(blnIsChecked);
     }
- }
+}

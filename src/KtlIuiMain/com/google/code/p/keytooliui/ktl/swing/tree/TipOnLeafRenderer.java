@@ -5,39 +5,18 @@ import javax.swing.JTree;
 import javax.swing.tree.DefaultTreeCellRenderer;
 
 public class TipOnLeafRenderer extends DefaultTreeCellRenderer
-{    
-    public Component getTreeCellRendererComponent(
-        JTree tree,
-        Object objValue,
-        boolean sel,
-        boolean expanded,
-        boolean leaf,
-        int row,
-        boolean hasFocus) 
+{
+    public Component getTreeCellRendererComponent(JTree tree, Object value, boolean sel, boolean expanded, boolean leaf, int row, boolean hasFocus)
     {
-
-        super.getTreeCellRendererComponent(tree, objValue, sel, expanded, leaf, row, hasFocus);
-
-        if (leaf) 
-        {
-            if (objValue instanceof TipOnLeafNode)
-            {
-                TipOnLeafNode tln = (TipOnLeafNode) objValue;
-                setToolTipText(tln.getTip());
-            }
-            
-            else
-                setToolTipText(null); //no tool tip
-                
-            //setIcon(myIcon);
-        } 
+        super.getTreeCellRendererComponent(tree, value, sel, expanded, leaf, row, hasFocus);
+        setToolTipText(null);
         
-        else 
+        if (leaf && value instanceof TipOnLeafNode)
         {
-            setToolTipText(null); //no tool tip
+            TipOnLeafNode tln = (TipOnLeafNode) value;
+            setToolTipText(tln.getTip());
         }
-
+        
         return this;
     }
-    
 }

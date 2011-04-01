@@ -48,20 +48,14 @@ abstract public class LabelCheckTypeJarAbs extends LabelCheck
     // ---------
     // PROTECTED
     
-    protected LabelCheckTypeJarAbs(
-        String strDescription,
-        String[] strsExtension,
-        boolean blnChecked)
+    protected LabelCheckTypeJarAbs(String strDescription, String[] strsExtension, boolean blnChecked)
     {
         super("", blnChecked);
         this._strsExtension = strsExtension;
         setText(strDescription);
     }
     
-    protected LabelCheckTypeJarAbs(
-        String strDescription,
-        String[] strsExtension
-        )
+    protected LabelCheckTypeJarAbs(String strDescription, String[] strsExtension)
     {
         super("");
         this._strsExtension = strsExtension;

@@ -2,21 +2,18 @@ package com.google.code.p.keytooliui.ktl.swing.tree;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 import java.util.Enumeration;
-import javax.swing.*;
+import javax.swing.JTree;
+import javax.swing.ToolTipManager;
 import javax.swing.event.TreeExpansionListener;
 import javax.swing.event.TreeSelectionListener;
-import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
+
 import com.google.code.p.keytooliui.ktl.swing.button.BESFolderCloseAbs;
 import com.google.code.p.keytooliui.ktl.swing.button.BESFolderOpenAbs;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 
-//TipOnLeafTree
-
-public class TipOnLeafTree extends JTree 
-        implements ActionListener
+public class TipOnLeafTree extends JTree implements ActionListener
 {
     // ------
     // public
@@ -104,12 +101,6 @@ public class TipOnLeafTree extends JTree
         
         return false;
     }
-    
-    /*public TipOnLeafTree()
-    {
-        super();
-    }*/
-    
     
     public TipOnLeafTree(
             TreeSelectionListener lstTreeSelectionParent, // used to enable/disable "expandAll/collapseAll" 

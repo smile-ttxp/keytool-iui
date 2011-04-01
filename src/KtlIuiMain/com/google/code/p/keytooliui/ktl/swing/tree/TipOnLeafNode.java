@@ -1,24 +1,25 @@
 package com.google.code.p.keytooliui.ktl.swing.tree;
 
-import javax.swing.*;
-import javax.swing.tree.*;
+import javax.swing.tree.DefaultMutableTreeNode;
 
-//TipOnLeafTree
-
-public class TipOnLeafNode extends DefaultMutableTreeNode 
+public class TipOnLeafNode extends DefaultMutableTreeNode
 {
-    public String getTip() { return this._strTip; }
-    public TipOnLeafNode(String strText)
+    private String tip;
+    
+    public TipOnLeafNode(String text)
     {
-        super(strText);
+        super(text);
+    }
+
+    public TipOnLeafNode(String text, String tip)
+    {
+        super(text);
+
+        this.tip = tip;
     }
     
-    public TipOnLeafNode(String strText, String strTip)
+    public String getTip()
     {
-        super(strText);
-        
-        this._strTip = strTip;
+        return this.tip;
     }
-    
-    private String _strTip = null;
 }
