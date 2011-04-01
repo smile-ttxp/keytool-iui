@@ -1,20 +1,11 @@
 package com.google.code.p.keytooliui.ktl.swing.tree;
 
-import java.awt.Color;
 import java.awt.Component;
 import javax.swing.JTree;
-import javax.swing.UIManager;
 import javax.swing.tree.DefaultTreeCellRenderer;
 
 public class TipOnLeafRenderer extends DefaultTreeCellRenderer
-{
-    public TipOnLeafRenderer()
-    {
-        super();
-        UIManager.put ("ToolTip.background", Color.YELLOW);
-        UIManager.put ("ToolTip.foreground", Color.DARK_GRAY);
-    }
-    
+{    
     public Component getTreeCellRendererComponent(
         JTree tree,
         Object objValue,

@@ -1,39 +1,21 @@
 package com.google.code.p.keytooliui.ktl;
 
-/**
-    contains:
-    . 1 frame
-**/
-
-// Uses actions with a tool bar and a menu.
-
-import java.security.Provider;
-import com.google.code.p.keytooliui.ktl.swing.frame.*;
-import com.google.code.p.keytooliui.ktl.swing.menuitem.MISelTabCreateKprV3CDsa;
-import com.google.code.p.keytooliui.ktl.util.changer.*;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
-import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
-import com.google.code.p.keytooliui.ktl.io.*;
-
-import com.google.code.p.keytooliui.shared.*;
-import com.google.code.p.keytooliui.shared.io.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.util.eventlistener.*;
-import com.google.code.p.keytooliui.shared.awt.awtevent.*;
-import com.google.code.p.keytooliui.shared.awt.awteventmulticaster.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.util.changer.*;
-import com.google.code.p.keytooliui.shared.swing.menuitem.*;
-
-import javax.swing.event.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
+import java.awt.event.WindowListener;
+import java.util.Locale;
 import javax.swing.UIManager;
+import javax.swing.event.ChangeListener;
 import javax.swing.plaf.ColorUIResource;
 
-import java.io.*;
-import java.awt.event.*;
-import java.awt.Font;
-import java.util.*;
+import com.google.code.p.keytooliui.ktl.swing.frame.FMainUIKtl;
+import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
+import com.google.code.p.keytooliui.ktl.util.changer.ChgLocMainUIToolKtl;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.ChkRegUIKtl;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
 
 
 final public class UIKeytool extends AppMainUIAbs
@@ -151,6 +133,8 @@ final public class UIKeytool extends AppMainUIAbs
                 UIManager.put("swing.boldMetal", Boolean.FALSE);
                 UIManager.put("TitledBorder.font", UIManager.getFont("TitledBorder.font").deriveFont(Font.BOLD));
                 UIManager.put("TitledBorder.titleColor", new ColorUIResource(80, 40, 40));
+                UIManager.put("ToolTip.background", new ColorUIResource(Color.YELLOW));
+                UIManager.put("ToolTip.foreground", new ColorUIResource(Color.DARK_GRAY));
             }
             else
             {
