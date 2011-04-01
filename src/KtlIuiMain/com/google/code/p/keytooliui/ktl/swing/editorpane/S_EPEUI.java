@@ -1,9 +1,9 @@
 package com.google.code.p.keytooliui.ktl.swing.editorpane;
 
+import java.io.File;
 
-
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.editorpane.*;
+import com.google.code.p.keytooliui.shared.swing.editorpane.S_EPEAbs;
+import com.google.code.p.keytooliui.shared.swing.editorpane.S_EPEShared;
 
 public class S_EPEUI extends S_EPEShared
 {
@@ -18,19 +18,19 @@ public class S_EPEUI extends S_EPEShared
     
     final static private String _f_s_strResourcePathRelativeSystem =
         "com" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "google" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "code" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "p" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "keytooliui" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "htmls" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "";
     
     

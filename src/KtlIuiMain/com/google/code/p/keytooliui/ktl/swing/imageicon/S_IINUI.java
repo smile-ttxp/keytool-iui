@@ -1,9 +1,9 @@
 package com.google.code.p.keytooliui.ktl.swing.imageicon;
 
+import java.io.File;
 
-
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.imageicon.*;
+import com.google.code.p.keytooliui.shared.swing.imageicon.S_IINAbstract;
+import com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared;
 
 public class S_IINUI extends S_IINShared
 {
@@ -18,19 +18,19 @@ public class S_IINUI extends S_IINShared
     
     final static private String _f_s_strResourcePathRelativeSystem =
         "com" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "google" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "code" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "p" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "keytooliui" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "images" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "";
     
     

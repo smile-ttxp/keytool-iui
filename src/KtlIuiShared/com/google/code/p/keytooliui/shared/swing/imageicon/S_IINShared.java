@@ -21,7 +21,7 @@
  
 package com.google.code.p.keytooliui.shared.swing.imageicon;
 
-import com.google.code.p.keytooliui.shared.lang.*;
+import java.io.File;
 
 public class S_IINShared extends S_IINAbstract
 {
@@ -75,38 +75,23 @@ public class S_IINShared extends S_IINAbstract
     
     final static private String _f_s_strResourcePathRelativeSystem =
         "com" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "google" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "code" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "p" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "keytooliui" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "shared" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "images" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "";
     
     
-    final static private String _f_s_strResourcePathRelativeJar =
-        "com" +
-        "/" +
-         "google" +
-        "/" +
-        "code" +
-        "/" +
-        "p" +
-        "/" +
-        "keytooliui" +
-        "/" +
-        "shared" +
-        "/" +
-        "images" +
-        "/" +
-        "";
+    final static private String _f_s_strResourcePathRelativeJar = "com/google/code/p/keytooliui/shared/images/";
     
     // -------------
     // STATIC PUBLIC

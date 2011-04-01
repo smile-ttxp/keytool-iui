@@ -60,11 +60,8 @@ public class DirToJar
      * LIMITATIONS:
      * . in case of empty directory, jarring it anyway (the jar will only contain the manifest stuff
      */
-    public void doJob()
-        throws Exception
+    public void doJob() throws Exception
     {
-        //System.out.println("this._strPathAbsSourceDir=" + this._strPathAbsSourceDir);
-
         String strBaseFolder = this._strPathAbsSourceDir + File.separator;
         this._intBaseFolderLength = strBaseFolder.length();
         this._fosTargetJar = new FileOutputStream(this._strPathAbsTargetJarUnsigned);

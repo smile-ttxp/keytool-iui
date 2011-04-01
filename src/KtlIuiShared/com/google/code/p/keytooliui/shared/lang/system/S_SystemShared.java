@@ -22,7 +22,9 @@
  
 package com.google.code.p.keytooliui.shared.lang.system;
 
-import com.google.code.p.keytooliui.shared.lang.string.*;
+import java.io.File;
+
+import com.google.code.p.keytooliui.shared.lang.string.S_StringShared;
 
 
 public class S_SystemShared
@@ -125,7 +127,7 @@ public class S_SystemShared
             return null;
         }
         
-        String strFileSeparator = com.google.code.p.keytooliui.shared.lang.MySystem.s_getFileSeparator();
+        String strFileSeparator = File.separator;
         
         if (strFileSeparator == null)
         {
@@ -188,7 +190,7 @@ public class S_SystemShared
             return null;
         }
         
-        String strFileSeparator = com.google.code.p.keytooliui.shared.lang.MySystem.s_getFileSeparator();
+        String strFileSeparator = File.separator;
         
         if (strFileSeparator == null)
         {

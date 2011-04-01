@@ -28,6 +28,7 @@ package com.google.code.p.keytooliui.shared.lang;
 
 import java.util.*;
 import java.text.*;
+import java.io.File;
 
 public class MySystem
 {
@@ -201,13 +202,13 @@ public class MySystem
     
     // -------------
     // STATIC PUBLIC
-    
+
+    /**
+     * @deprecated Use File.separator instead
+     */
     static public String s_getFileSeparator()
     {
-        if (_s_strFileSeparator == null)
-            _s_getFileSeparator();  
-        
-        return _s_strFileSeparator;
+        return File.separator;
     }
     
     static public String s_getDateFromTime(long lngTime)
@@ -375,35 +376,9 @@ public class MySystem
     
     
     
-    static private String _s_strFileSeparator = null;
-    
     static private int _S_INT_PRINTOUTCOUNT = 1;
     
-    
-    
-    static private void _s_getFileSeparator()
-    {
-        String strWhere = _f_s_strClass + "_s_getFileSeparator()";
         
-        try
-        {
-            _s_strFileSeparator = System.getProperty("file.separator");      
-        }
-        
-        catch (SecurityException excSecurity)
-        {
-            excSecurity.printStackTrace();
-            s_printOutExit(strWhere, "excSecurity caught");
-        }
-        
-        if (_s_strFileSeparator == null)
-        {
-            s_printOutExit(strWhere, "nil _s_strFileSeparator");
-            
-        }
-    
-    }
-    
     static private void _s_printOut(String strWhat, String strWhere, String strMessage)
     {
         String str = "\n" + _S_INT_PRINTOUTCOUNT + " " + strWhat;

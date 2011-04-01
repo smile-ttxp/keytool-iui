@@ -21,7 +21,7 @@
  
 package com.google.code.p.keytooliui.shared.swing.editorpane;
 
-import com.google.code.p.keytooliui.shared.lang.*;
+import java.io.File;
 
 public class S_EPEShared extends S_EPEAbs
 {
@@ -75,38 +75,23 @@ public class S_EPEShared extends S_EPEAbs
     
     final static private String _f_s_strResourcePathRelativeSystem =
         "com" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "google" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "code" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "p" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "keytooliui" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "shared" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "htmls" +
-        MySystem.s_getFileSeparator() +
+        File.separator +
         "";
     
     
-    final static private String _f_s_strResourcePathRelativeJar =
-        "com" +
-        "/" +
-         "google" +
-        "/" +
-        "code" +
-        "/" +
-        "p" +
-        "/" +
-        "keytooliui" +
-        "/" +
-        "shared" +
-        "/" +
-        "htmls" +
-        "/" +
-        "";
+    final static private String _f_s_strResourcePathRelativeJar = "com/google/code/p/keytooliui/shared/htmls/";
     
     // -------------
     // STATIC PUBLIC

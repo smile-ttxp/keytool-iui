@@ -205,7 +205,7 @@ abstract public class DefaultUserAbstract
         // -----------------------
         // 1) get ~/.rcp/usr
         
-        String strPathUsr = this._strPathAbsParentAppli_ + MySystem.s_getFileSeparator() + FileLocation.f_strUser;
+        String strPathUsr = this._strPathAbsParentAppli_ + File.separator + FileLocation.f_strUser;
         File fleDirUsr = new File(strPathUsr);
         
         if (fleDirUsr == null)
@@ -249,7 +249,7 @@ abstract public class DefaultUserAbstract
         // ie     ~/.rcp/usr/ktl
         
         
-        String strPathUsrAppli = fleDirUsr.getAbsolutePath() + MySystem.s_getFileSeparator() + this._strApplicationNameShort;
+        String strPathUsrAppli = fleDirUsr.getAbsolutePath() + File.separator + this._strApplicationNameShort;
         File fleDirUsrAppli = new File(strPathUsrAppli);
         
         if (fleDirUsrAppli == null)

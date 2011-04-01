@@ -1,9 +1,10 @@
 package com.google.code.p.keytooliui.shared.lang.string;
 
 
-import com.google.code.p.keytooliui.shared.lang.*;
+import java.io.File;
+import java.util.StringTokenizer;
 
-import java.util.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
 
 public class S_StringShared
 {
@@ -153,7 +154,7 @@ public class S_StringShared
     */
     static public String[] s_getArrayFromStringFileSeparatorSystem(String str)
     {
-        return S_StringShared.s_getArrayFromStringSeparator(str, MySystem.s_getFileSeparator());
+        return S_StringShared.s_getArrayFromStringSeparator(str, File.separator);
     }
     
     
@@ -262,7 +263,7 @@ public class S_StringShared
         }
         
         // modif may 5, 2000
-        // strResult += com.google.code.p.keytooliui.shared.lang.MySystem.s_getFileSeparator();
+        // strResult += com.google.code.p.keytooliui.shared.lang.File.separator;
         
         return strResult;
     

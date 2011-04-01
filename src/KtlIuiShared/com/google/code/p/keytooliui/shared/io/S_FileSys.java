@@ -793,7 +793,7 @@ public class S_FileSys
 		
 		return 
 		    fleDirSubTmp.getAbsolutePath() + 
-		    MySystem.s_getFileSeparator() +
+		    File.separator +
 		    strNameDirJarJhrShort;
     }
     
@@ -888,7 +888,7 @@ public class S_FileSys
         }
         
         String strAbsolutePath = fleParent.getAbsolutePath();
-        strAbsolutePath += MySystem.s_getFileSeparator();
+        strAbsolutePath += File.separator;
         strAbsolutePath += strName;
         
         return s_mkdir(strAbsolutePath);
@@ -984,7 +984,7 @@ public class S_FileSys
         
         // generate subDirTo (if needed)
 
-        java.util.StringTokenizer stk = new java.util.StringTokenizer(strPathRelativeTo, MySystem.s_getFileSeparator());
+        java.util.StringTokenizer stk = new java.util.StringTokenizer(strPathRelativeTo, File.separator);
         
         int intCountTokens = stk.countTokens();
         
@@ -1030,7 +1030,7 @@ public class S_FileSys
         // ------
         
         String strPathAbsoluteTo = fleAncestorTo.getAbsolutePath();
-        strPathAbsoluteTo += MySystem.s_getFileSeparator();
+        strPathAbsoluteTo += File.separator;
         strPathAbsoluteTo += strPathRelativeTo;
         
         // ending

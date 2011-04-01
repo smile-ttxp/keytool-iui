@@ -616,11 +616,11 @@ final public class UtilKstJks extends UtilKstAbs
             
             for (int i=0; i<UtilKstJks._f_s_strsDirKstCertsCASys.length; i++)
             {
-                strPathAbs += MySystem.s_getFileSeparator();
+                strPathAbs += File.separator;
                 strPathAbs += UtilKstJks._f_s_strsDirKstCertsCASys[i];
             }
             
-            strPathAbs += MySystem.s_getFileSeparator();
+            strPathAbs += File.separator;
             strPathAbs += UtilKstJks._f_s_strNameKstCertsCASys;
             
        
@@ -672,11 +672,11 @@ final public class UtilKstJks extends UtilKstAbs
 
             for (int i=0; i<strs.length; i++)
             {
-                strPathAbs += MySystem.s_getFileSeparator();
+                strPathAbs += File.separator;
                 strPathAbs += strs[i];
             }
       
-            strPathAbs += MySystem.s_getFileSeparator();
+            strPathAbs += File.separator;
             strPathAbs += UtilKstJks._f_s_strNameKstCertsTrustUsr;
             
             fleKeystore = new File(strPathAbs);
@@ -766,7 +766,7 @@ final public class UtilKstJks extends UtilKstAbs
                 
                 for (int i=0; i<strs.length; i++)
                 {
-                    strPathAbs += MySystem.s_getFileSeparator();
+                    strPathAbs += File.separator;
                     strPathAbs += strs[i];
                 }
             }
@@ -775,7 +775,7 @@ final public class UtilKstJks extends UtilKstAbs
             {
                 for (int i=0; i<UtilKstJks._f_s_strsDirKstCertsTrustUsrUnix.length; i++)
                 {
-                    strPathAbs += MySystem.s_getFileSeparator();
+                    strPathAbs += File.separator;
                     strPathAbs += UtilKstJks._f_s_strsDirKstCertsTrustUsrUnix[i];
                 }
             }
@@ -786,7 +786,7 @@ final public class UtilKstJks extends UtilKstAbs
                 return null;
             } 
             
-            strPathAbs += MySystem.s_getFileSeparator();
+            strPathAbs += File.separator;
             strPathAbs += UtilKstJks._f_s_strNameKstCertsTrustUsr;
             
             fleKeystore = new File(strPathAbs);

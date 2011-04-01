@@ -1329,8 +1329,7 @@ abstract public class S_FileChooserAbs
         }
         
         
-        File fleDoc = new File(
-            strPathAbsHomeAppli + MySystem.s_getFileSeparator() + com.google.code.p.keytooliui.shared.io.FileLocation.f_strDocumentation);
+        File fleDoc = new File(strPathAbsHomeAppli + File.separator + com.google.code.p.keytooliui.shared.io.FileLocation.f_strDocumentation);
          
         if (fleDoc == null)
         {
