@@ -171,7 +171,9 @@ final public class PTblEntryTcrShowAll extends PTblEntryTcrAbs
             return false;
         }
         
-        TableEntryTcrAbs tbl = new TableEntryTcrShowAll((TMEntryTcrAbs) super._mtm_);
+        JTable tbl = new JTable(super._mtm_);
+        tbl.setRowSelectionAllowed(false);
+        tbl.setColumnSelectionAllowed(false);
         this.setBackground(tbl.getBackground());
         
         if (! _initColumnSize(tbl))
@@ -310,7 +312,9 @@ final public class PTblEntryTcrShowAll extends PTblEntryTcrAbs
         }
             
            
-        TableEntryTcrAbs tbl = new TableEntryTcrShowAll((TMEntryTcrAbs) super._mtm_);
+        JTable tbl = new JTable(super._mtm_);
+        tbl.setRowSelectionAllowed(false);
+        tbl.setColumnSelectionAllowed(false);
         this.setBackground(tbl.getBackground());
             
         if (! _initColumnSize(tbl))

@@ -170,7 +170,9 @@ final public class PTblEntSKSelAll extends PTblEntSKAbs
             return false;
         }
         
-        TableEntryAbs tbl = new TableEntSKSelAll((TMEntSKSelAll) super._mtm_);
+        JTable tbl = new JTable(super._mtm_);
+        tbl.setRowSelectionAllowed(false);
+        tbl.setColumnSelectionAllowed(false);
         this.setBackground(tbl.getBackground());
         
         if (! _initColumnSize(tbl))
@@ -302,7 +304,9 @@ final public class PTblEntSKSelAll extends PTblEntSKAbs
         }
             
            
-        TableEntryAbs tbl = new TableEntSKSelAll((TMEntSKSelAll) super._mtm_);
+        JTable tbl = new JTable(super._mtm_);
+        tbl.setRowSelectionAllowed(false);
+        tbl.setColumnSelectionAllowed(false);
         this.setBackground(tbl.getBackground());
             
         if (! _initColumnSize(tbl))

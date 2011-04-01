@@ -268,7 +268,7 @@ final public class PTblEntryKprSel extends PTblEntryKprAbs
             return false;
         }
         
-        TableEntryKprAbs tbl = new TableEntryKprSel((TMEntryKprAbs) super._mtm_);
+        JTable tbl = new JTable(super._mtm_);
         this.setBackground(tbl.getBackground());
         
         if (! _initColumnSize(tbl))
@@ -398,7 +398,7 @@ final public class PTblEntryKprSel extends PTblEntryKprAbs
         }
             
            
-        TableEntryKprAbs tbl = new TableEntryKprSel((TMEntryKprAbs) super._mtm_);
+        JTable tbl = new JTable(super._mtm_);
         this.setBackground(tbl.getBackground());
             
         if (! _initColumnSize(tbl))
