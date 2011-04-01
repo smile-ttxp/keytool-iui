@@ -84,9 +84,9 @@ final public class MHelpAboutViewerAudioPreview extends MHelpAboutAbstract
         return true;
     }
     
-    public MHelpAboutViewerAudioPreview(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutViewerAudioPreview(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
     // -------

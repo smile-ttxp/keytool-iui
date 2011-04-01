@@ -596,10 +596,10 @@ final public class JarSignedSys
     }
 
 
-    public JarSignedSys(java.awt.Component cmpFrameOwner, String strTitleApplication, String strPathAbsoluteJar)
+    public JarSignedSys(java.awt.Component cmpFrameOwner, String strPathAbsoluteJar)
     {
         this._cmpFrameOwner = cmpFrameOwner;
-        this._strTitleApplication = strTitleApplication;
+ 
         this._strPathAbsoluteJar = strPathAbsoluteJar;
     }
 
@@ -607,7 +607,7 @@ final public class JarSignedSys
     // PRIVATE
 
     private java.awt.Component _cmpFrameOwner = null;
-    private String _strTitleApplication = null;
+ 
 
     private String _strPathAbsoluteJar = null;
     private JarFile _jfe = null;
@@ -642,7 +642,7 @@ final public class JarSignedSys
             MySystem.s_printOutWarning(this, strMethod, "excFileNotFound caught");
 
             OPAbstract.s_showDialogWarning(
-                this._cmpFrameOwner, this._strTitleApplication,
+                this._cmpFrameOwner,
                 JarSignedSys._s_strDialogInitFailedBodyFNF + "\n" + this._strPathAbsoluteJar);
 
             return null;
@@ -653,7 +653,7 @@ final public class JarSignedSys
             excIO.printStackTrace();
             MySystem.s_printOutWarning(this, strMethod, "excIO caught");
 
-            OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication,
+            OPAbstract.s_showDialogWarning(this._cmpFrameOwner,
                 JarSignedSys._s_strDialogInitFailedBodyIO + "\n" + this._strPathAbsoluteJar);
 
             return null;
@@ -728,7 +728,7 @@ final public class JarSignedSys
 
             OPAbstract.s_showDialogWarning(
                 this._cmpFrameOwner,
-                this._strTitleApplication,
+              
                 JarSignedSys._s_strDialogInitFailedBodyIO + "\n" + this._strPathAbsoluteJar);
 
 
@@ -742,7 +742,7 @@ final public class JarSignedSys
 
             OPAbstract.s_showDialogWarning(
                 this._cmpFrameOwner,
-                this._strTitleApplication,
+             
                 JarSignedSys._s_strDialogInitFailedBodySecurity + "\n" + this._strPathAbsoluteJar);
 
 
@@ -957,7 +957,7 @@ final public class JarSignedSys
             excZip.printStackTrace();
             MySystem.s_printOutWarning(this, strMethod, "excZip caught");
 
-            OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, JarSignedSys._s_strDialogInitFailedBodyZip + "\n" + this._strPathAbsoluteJar);
+            OPAbstract.s_showDialogWarning(this._cmpFrameOwner, JarSignedSys._s_strDialogInitFailedBodyZip + "\n" + this._strPathAbsoluteJar);
 
     	    return false;
         }
@@ -967,7 +967,7 @@ final public class JarSignedSys
             excIO.printStackTrace();
             MySystem.s_printOutWarning(this, strMethod, "excIO caught");
 
-            OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, JarSignedSys._s_strDialogInitFailedBodyIO + "\n" + this._strPathAbsoluteJar);
+            OPAbstract.s_showDialogWarning(this._cmpFrameOwner, JarSignedSys._s_strDialogInitFailedBodyIO + "\n" + this._strPathAbsoluteJar);
 
     	    return false;
         }
@@ -977,7 +977,7 @@ final public class JarSignedSys
             excSecurity.printStackTrace();
             MySystem.s_printOutWarning(this, strMethod, "excSecurity caught");
 
-            OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, JarSignedSys._s_strDialogInitFailedBodySecurity + "\n" + this._strPathAbsoluteJar);
+            OPAbstract.s_showDialogWarning(this._cmpFrameOwner, JarSignedSys._s_strDialogInitFailedBodySecurity + "\n" + this._strPathAbsoluteJar);
 
     	    return false;
         }

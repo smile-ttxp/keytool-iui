@@ -18,6 +18,7 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
+
  
  
  package com.google.code.p.keytooliui.shared.io;
@@ -61,45 +62,6 @@ abstract public class LastUserAbstract extends DefaultUserAbstract
     // STATIC PRIVATE
     
     static private boolean _S_BLN_SETSESSIONLOG = true; // default
-    
-    // ------------------
-    // STATIC INITIALIZER
-    
-    // in comments, april 11, 07
-    /*static
-    {
-        String strMethod = _f_s_strClass + "initializer";
-        
-       
-        PropertyResourceBundle prbMagic = Shared.s_getPrbMagic();
-        
-        if (prbMagic != null)
-        {
-            String str = null;
-            
-            // --
-            str = null;
-            try { str = prbMagic.getString(_f_s_strClass + "setSessionLog"); }
-            catch (java.util.MissingResourceException excMissingResource) {}
-            
-            if (str != null) // else ignoring
-            {
-                str = str.toLowerCase();
-                
-                if (str.compareTo("false") == 0)
-                    LastUserAbstract._S_BLN_SETSESSIONLOG = false;
-                else if (str.compareTo("true") == 0)
-                    LastUserAbstract._S_BLN_SETSESSIONLOG = true;
-                else
-                    MySystem.s_printOutTrace(strMethod, "ignoring uncaught value, key=" + _f_s_strClass + "setSessionLog" + ", value =" + str);
-            }
-            
-            
-            // --
-        }
-    } 
-    */
-    
     
     
     // ----------------------
@@ -231,13 +193,13 @@ abstract public class LastUserAbstract extends DefaultUserAbstract
     protected LastUserAbstract(
         // application
         String strPathAbsHomeAppli, 
-        String strApplicationNameShort,
+        //String strApplicationNameShort,
         String strVersionAppli,
         String strFileNameIni,
         String strFileNameBak,
         java.util.Vector<UserChoice> vecUserChoice)
     {
-        super(strPathAbsHomeAppli, strApplicationNameShort, strVersionAppli);
+        super(strPathAbsHomeAppli, strVersionAppli);
         this._strFileNameIni = strFileNameIni;
         this._strFileNameBak = strFileNameBak;
         this._vecUserChoice = vecUserChoice;

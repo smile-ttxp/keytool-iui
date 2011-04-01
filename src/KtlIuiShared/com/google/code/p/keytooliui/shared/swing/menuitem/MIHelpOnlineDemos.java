@@ -73,8 +73,8 @@ final public class MIHelpOnlineDemos extends MIHelpOnlineAbstract
     // ------
     // PUBLIC
     
-    public MIHelpOnlineDemos(java.awt.Component cmpFrameOwner, String strTitleApplication)
+    public MIHelpOnlineDemos(java.awt.Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication, _s_strText, _f_s_strUrl);   
+        super(cmpFrameOwner, _s_strText, _f_s_strUrl);   
     }        
 }

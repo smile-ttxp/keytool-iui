@@ -78,7 +78,7 @@ abstract public class PSelBtnTfdStrWAbs extends PSelBtnTfdStrAbs
     
     protected PSelBtnTfdStrWAbs(
         Frame frmParent, 
-        String strTitleAppli, 
+     
         String strLabel,
         TFAbstract tfa,
         Object objDocPropValue,
@@ -87,7 +87,7 @@ abstract public class PSelBtnTfdStrWAbs extends PSelBtnTfdStrAbs
     {
         super(
             frmParent, 
-            strTitleAppli, 
+          
             strLabel, 
             tfa, 
             objDocPropValue,

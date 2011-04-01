@@ -55,11 +55,10 @@ abstract public class DefaultUserAbstract
     protected DefaultUserAbstract(
         // application
         String strPathAbsHomeAppli,
-        String strApplicationNameShort,
         String strVersionAppli)
     {
         this._strPathAbsParentAppli_ = strPathAbsHomeAppli;
-        this._strApplicationNameShort = strApplicationNameShort;
+        this._strApplicationNameShort = System.getProperty("_appli.name.short"); // MEMO: prerequisite
         this._strVersionAppli = strVersionAppli;
     }
     

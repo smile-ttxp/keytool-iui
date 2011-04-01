@@ -34,12 +34,12 @@ final public class MBViewerFileTextRtfPreview extends MBViewerFileTextAbs
     
     public MBViewerFileTextRtfPreview(
         java.awt.Component cmpFrameOwner,
-        String strApplicationTitle,
+      
         ActionListener actListenerParentFrame,
         ActionListener actListenerParentPanel)
     {
         super(actListenerParentFrame, actListenerParentPanel);
         
-        super._menHelpAbout_ = new MHelpAboutViewerRtfPreview(cmpFrameOwner, strApplicationTitle);
+        super._menHelpAbout_ = new MHelpAboutViewerRtfPreview(cmpFrameOwner);
     }
 }

@@ -84,7 +84,7 @@ abstract public class PSelBtnTfdStrAbs extends PSelBtnTfdAbs
     
     protected PSelBtnTfdStrAbs(
         Frame frmParent, 
-        String strTitleAppli, 
+    
         String strLabel,
         TFAbstract tfa,
         Object objDocPropValue,
@@ -93,7 +93,7 @@ abstract public class PSelBtnTfdStrAbs extends PSelBtnTfdAbs
     {
         super(
             frmParent, 
-            strTitleAppli, 
+         
             strLabel,
             blnFieldRequired
             );
@@ -115,7 +115,7 @@ abstract public class PSelBtnTfdStrAbs extends PSelBtnTfdAbs
     {
         String strMethod = "_showDialog_()";
         
-        String strDialogTitle = super._strTitleAppli_ + " - enter text";
+        String strDialogTitle = System.getProperty("_appli.title") + " - enter text";
         
         DSelectString ssgDialog = new DSelectString(
             super._frmParent_,

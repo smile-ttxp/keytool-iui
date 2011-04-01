@@ -24,7 +24,6 @@ package com.google.code.p.keytooliui.shared.swing.dialog;
 
 
 
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
@@ -142,11 +141,9 @@ final public class DChoiceEvWarning extends DChoiceEvAbs
     }
     
     public DChoiceEvWarning(
-        String strTitleAppli,
         String strAllowedEval)
     {
         super(
-            strTitleAppli,
             DChoiceEvWarning._s_strTitleSuffix
             );
             
@@ -160,7 +157,7 @@ final public class DChoiceEvWarning extends DChoiceEvAbs
         strBody += "\n\n";
         strBody += DChoiceEvWarning._s_strBodyWhat2;
         strBody += " ";
-        strBody += strTitleAppli;
+        strBody += System.getProperty("_.appli.title");
         strBody += "\n\n";
         strBody += com.google.code.p.keytooliui.shared.swing.panel.PHelpAboutAppli.s_strContactPoints;
         strBody += "\n\n";

@@ -63,13 +63,11 @@ final public class DPasswordOpen extends DPasswordAbs
     
     public DPasswordOpen(
         Component cmpFrameOwner,
-        String strTitleAppli,
         boolean blnNoPasswdAllowed // added february 8, 2008 ==> allow keystores without passwords
             )
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli, 
             DPasswordOpen._f_s_strTitleThis);
             
         this._lbl = new JLabel(DPasswordOpen._f_s_strTextLabel);
@@ -98,7 +96,7 @@ final public class DPasswordOpen extends DPasswordAbs
             return true;
         }
         
-        OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter password");
+        OPAbstract.s_showDialogWarning(this, "Please enter password");
        
         
         return false;

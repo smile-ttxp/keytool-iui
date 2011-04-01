@@ -115,7 +115,7 @@ abstract public class DEditorAbstract extends DEscapeAbstract implements
 	{
 	    Toolkit.getDefaultToolkit().beep();
 		
-		if (! OPAbstract.s_showConfirmDialog(this._cmpFrameOwner, this._strTitleApplication + " - " + _s_strConfirmDeleteAndCloseTitle, _s_strConfirmDeleteAndCloseBody))
+		if (! OPAbstract.s_showConfirmDialog(this._cmpFrameOwner, _s_strConfirmDeleteAndCloseBody))
 		{
 		    super._cancel_();
 		    return;
@@ -221,16 +221,16 @@ abstract public class DEditorAbstract extends DEscapeAbstract implements
     protected DEditorAbstract(
         DEditorAbstractListener dapListenerParent,
         Component cmpFrameOwner,
-        String strTitleApplication,
+
         String strTitleSuffix)
     {
         super((Frame) cmpFrameOwner, true);
         
         this._dapListenerParent = dapListenerParent;
         this._cmpFrameOwner = cmpFrameOwner;
-        this._strTitleApplication = strTitleApplication;
+ 
 
-        setTitle(this._strTitleApplication + " - " + strTitleSuffix);
+        setTitle(System.getProperty("_appli.title") + " - " + strTitleSuffix);
         
         _createListeners();
     }
@@ -243,7 +243,7 @@ abstract public class DEditorAbstract extends DEscapeAbstract implements
     private DEditorAbstractListener _dapListenerThis = null;
     private DEditorAbstractListener _dapListenerParent = null;
     
-    private String _strTitleApplication = null;
+
     private Component _cmpFrameOwner = null;
     
     private boolean _addChildren()

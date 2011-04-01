@@ -177,12 +177,11 @@ final public class PEditorNote extends PEditorAbstract implements
     
     public PEditorNote(
         PEditorAbstractListener pndListenerParent,
-        Component cmpFrameOwner,
-        String strApplicationTitle)
+        Component cmpFrameOwner)
     {
-        super(pndListenerParent, cmpFrameOwner, strApplicationTitle);
+        super(pndListenerParent, cmpFrameOwner);
     
-        String f_strMethod = "PEditorNote(pndListenerParent, cmpFrameOwner, strApplicationTitle)";
+        String f_strMethod = "PEditorNote(pndListenerParent, cmpFrameOwner)";
          
 	    _createListeners();
 	    
@@ -224,7 +223,7 @@ final public class PEditorNote extends PEditorAbstract implements
         // ----
         
         super._nbr_ = new MBEditorNote(
-            cmpFrameOwner, strApplicationTitle,
+            cmpFrameOwner, 
             (java.awt.event.ActionListener) this,
             super._nfeListenerThis_, this._netListenerThis, htbActions, aanUndo, aanRedo);
         
@@ -255,9 +254,9 @@ final public class PEditorNote extends PEditorAbstract implements
         {
             JFrame frame = new JFrame();
 	        frame.getContentPane().setLayout(new BorderLayout());
-	        String strApplicationTitle = "PEditorNote as a standalone application";
+	
 	        
-	        PEditorAbstract ntp = new PEditorNote(null, frame, strApplicationTitle);
+	        PEditorAbstract ntp = new PEditorNote(null, frame);
 	        
 	        if (! ntp.init())
 	        {

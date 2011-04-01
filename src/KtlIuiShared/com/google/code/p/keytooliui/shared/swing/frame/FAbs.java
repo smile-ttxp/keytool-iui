@@ -70,13 +70,6 @@ abstract public class FAbs extends JFrame
     
     public boolean init()
     {
-        String strMethod = "init()";
-        
-        if (this._strTitleApplication_ == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil this._strTitleApplication_");
-            return false;
-        }
         
         return true;
     }
@@ -86,7 +79,7 @@ abstract public class FAbs extends JFrame
         String strMethod = "destroy()";
         MySystem.s_printOutFlagDev(this, strMethod, "(reinstalled) #### CODE IN COMMENTS #### if (isVisible()) setVisible(false)");
         
-        this._strTitleApplication_ = null;
+   
         if (isVisible())
             setVisible(false);
     }
@@ -94,16 +87,16 @@ abstract public class FAbs extends JFrame
     // ---------
     // PROTECTED
     
-    protected String _strTitleApplication_ = null;
+
     
     protected FAbs(
-        final String f_strTitleApplication, // should be the title of the top-level appli! 
+      
         Image imgIcon
         )
     {
-        super(f_strTitleApplication);
+        super(System.getProperty("_appli.title"));
         
-        this._strTitleApplication_ = f_strTitleApplication;
+  
         
         if (imgIcon != null)
             setIconImage(imgIcon);

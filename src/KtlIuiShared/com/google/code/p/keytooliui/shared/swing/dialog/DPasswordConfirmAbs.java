@@ -71,10 +71,10 @@ abstract public class DPasswordConfirmAbs extends DPasswordAbs
     
     protected DPasswordConfirmAbs(
         Component cmpFrameOwner,
-        String strTitleAppli,
+
         String strTitleThis)
     {
-        super(cmpFrameOwner, strTitleAppli, strTitleThis);
+        super(cmpFrameOwner, strTitleThis);
 
         this._lblEnterNew_ = new JLabel(DPasswordConfirmAbs._f_s_strTextLabelEnterNew);
         this._lblConfirmNew_ = new JLabel(DPasswordConfirmAbs._f_s_strTextLabelConfirmNew);

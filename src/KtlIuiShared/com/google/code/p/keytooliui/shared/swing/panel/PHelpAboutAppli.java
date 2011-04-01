@@ -123,7 +123,7 @@
     public PHelpAboutAppli(
         ActionListener actListenerParent, 
         // tabGeneral
-        String strAppliTitle, 
+ 
         String strAppliVersion,
         String strAppliCopyright,
         String strProductID,
@@ -147,7 +147,7 @@
         
         
         JTabbedPane tpnMid = _createTabbedPaneMid(
-            strAppliTitle, strAppliVersion, strAppliCopyright, 
+            strAppliVersion, strAppliCopyright, 
             PHelpAboutAppli.s_strContactPoints, 
             strProductID, 
             strTextThirdParty);
@@ -230,7 +230,7 @@
     
     
     private JTabbedPane _createTabbedPaneMid(
-        String strAppliTitle, 
+  
         String strAppliVersion,
         String strAppliCopyright,
         String strContactPoints,
@@ -241,7 +241,7 @@
         JTabbedPane tpn = new JTabbedPane();
         
         JPanel pnlTabGeneral = _createPanelTabGeneral(
-            strAppliTitle, strAppliVersion, strAppliCopyright, 
+            strAppliVersion, strAppliCopyright, 
             strContactPoints, strProductID, strTextThirdParty);
         
         if (pnlTabGeneral == null)
@@ -288,7 +288,7 @@
           . third parties copyright
     */
     private JPanel _createPanelTabGeneral(
-        String strAppliTitle, 
+ 
         String strAppliVersion,
         String strAppliCopyright,
         String strContactPoints,
@@ -300,7 +300,7 @@
         JPanel pnl = new JPanel();
         
         JPanel pnlTop = _createPanelTabGeneralTop(
-            strAppliTitle, strAppliVersion, strAppliCopyright, strContactPoints, strProductID);
+            strAppliVersion, strAppliCopyright, strContactPoints, strProductID);
         
         if (pnlTop == null)
         {
@@ -335,7 +335,7 @@
     */
  
     private JPanel _createPanelTabGeneralTop(
-        String strAppliTitle, 
+   
         String strAppliVersion,
         String strAppliCopyright,
         String strContactPoints,
@@ -343,7 +343,7 @@
     {
         String strMethod = "_createPanelTabGeneralTop(...)";
         
-        if (strAppliTitle==null || strAppliVersion==null || strAppliCopyright==null || 
+        if (strAppliVersion==null || strAppliCopyright==null || 
             strContactPoints==null || strProductID==null)
         {
             MySystem.s_printOutError(this, strMethod, "nil arg");
@@ -386,7 +386,7 @@
         lblAppliVersion.setFont(new Font("Serif", Font.PLAIN, 24));
         //lblBig.setForeground(Color.green);
         
-        lblAppliTitle.setText(strAppliTitle);
+        lblAppliTitle.setText(System.getProperty("_appli.title"));
         lblAppliVersion.setText(strAppliVersion);
         
         lblAppliCopyright.setText(strAppliCopyright);

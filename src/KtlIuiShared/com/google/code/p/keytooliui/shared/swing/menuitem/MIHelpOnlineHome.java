@@ -95,8 +95,8 @@ final public class MIHelpOnlineHome extends MIHelpOnlineAbstract
         return true;
     }
     
-    public MIHelpOnlineHome(java.awt.Component cmpFrameOwner, String strTitleApplication)
+    public MIHelpOnlineHome(java.awt.Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication, MIHelpOnlineHome.STR_TEXT, MIHelpOnlineHome.STR_URL);
+        super(cmpFrameOwner, MIHelpOnlineHome.STR_TEXT, MIHelpOnlineHome.STR_URL);
     }        
 }

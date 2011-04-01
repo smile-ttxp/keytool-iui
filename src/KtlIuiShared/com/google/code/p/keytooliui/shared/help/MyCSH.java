@@ -275,7 +275,7 @@ public class MyCSH extends CSH
                 
                 String strBody = "Got javax.help.BadIDException";
                 strBody += "\n" + excBadID.getMessage();
-                com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(null, "Error", strBody);
+                com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(null, strBody);
                 return;
             }
             

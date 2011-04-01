@@ -62,13 +62,13 @@ final public class MBEditorDefault extends MBEditorAbstract
     
     public MBEditorDefault(
         java.awt.Component cmpFrameOwner,
-        String strApplicationTitle,
+
         java.awt.event.ActionListener actListenerParent,
         MFileAllEditorListener nfeListenerParent)
     {
         super(actListenerParent, nfeListenerParent);
         
-        super._nhp_ = new MHelpAboutEditorDefault(cmpFrameOwner, strApplicationTitle);
+        super._nhp_ = new MHelpAboutEditorDefault(cmpFrameOwner);
     }
     
     public boolean init()

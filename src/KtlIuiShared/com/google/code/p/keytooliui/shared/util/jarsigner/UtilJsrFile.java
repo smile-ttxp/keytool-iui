@@ -59,7 +59,6 @@ final public class UtilJsrFile
     **/
     static public File s_getFileSave(
         Frame frmOwner, 
-        String strTitleAppli,
         String strPathAbs,
         boolean blnShowDlgOverwrite
         )
@@ -92,7 +91,7 @@ final public class UtilJsrFile
         Object objInitialValue = objsOptions[0]; // "Cancel"  
             
             
-        String strMessageTitle = strTitleAppli + " - " + "confirm file overwrite";
+      
         String strMessageBody = "Confirm overwrite:";
             
         strMessageBody += "\n";
@@ -103,7 +102,7 @@ final public class UtilJsrFile
             
 
         String strResult = OPAbstract.s_showQuestionInputDialog(
-            frmOwner, strMessageTitle, strMessageBody, objsOptions, objInitialValue);
+            frmOwner,  strMessageBody, objsOptions, objInitialValue);
             
         if (strResult == null) // "Abort"
         {
@@ -149,7 +148,6 @@ final public class UtilJsrFile
     **/
     static public File s_getFileOpen(
         Frame frmOwner, 
-        String strTitleAppli,
         String strPathAbs
         )
     {
@@ -170,7 +168,7 @@ final public class UtilJsrFile
             String strBody = "File not found:";
             strBody += "\n  " + fleOpen.getAbsolutePath();
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner,  strBody);
                 
             return null;
         }
@@ -183,7 +181,7 @@ final public class UtilJsrFile
             String strBody = "File is write-protected:";
             strBody += "\n  " + fleOpen.getAbsolutePath();
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
                 
             return null;
         }
@@ -196,7 +194,7 @@ final public class UtilJsrFile
             String strBody = "File is directory:";
             strBody += "\n  " + fleOpen.getAbsolutePath();
             
-            OPAbstract.s_showDialogWarning(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogWarning(frmOwner, strBody);
                 
             return null;
         }

@@ -151,9 +151,9 @@ final public class DFindPage extends DFindAbstract implements DFindPageListener
         super.destroy();
     }
     
-    public DFindPage(DFindPageListener dfpListenerParent, Component cmpFrameOwner, String strTitleApplication)
+    public DFindPage(DFindPageListener dfpListenerParent, Component cmpFrameOwner)
     {
-        super((Frame) cmpFrameOwner, strTitleApplication, _s_strTitle, _s_strButtonTextFindNext, _s_strButtonTipFindNext);
+        super((Frame) cmpFrameOwner, _s_strTitle, _s_strButtonTextFindNext, _s_strButtonTipFindNext);
         
         this._dfpListenerParent = dfpListenerParent;
 

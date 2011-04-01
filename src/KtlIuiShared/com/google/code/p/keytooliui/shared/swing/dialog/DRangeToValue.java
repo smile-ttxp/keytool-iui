@@ -83,12 +83,12 @@ final public class DRangeToValue extends DRangeAbstract implements
     
     
     public DRangeToValue(DRangeAbstractListener draListenerParent, Component cmpFrameOwner,
-        String strTitleApplication, String strTitleDialog, String strTextArea, String strTitlePanel,
+        String strTitleDialog, String strTextArea, String strTitlePanel,
         int intRangeMin, int intRangeMax, int intRangeDefault,
             int intMajorTickSpacing, int intMinorTickSpacing)
     {
         
-        super(draListenerParent, cmpFrameOwner, strTitleApplication, strTitleDialog, strTextArea);
+        super(draListenerParent, cmpFrameOwner, strTitleDialog, strTextArea);
         addPRangeToValueListener(this);
         super._pra_ = new PRangeToValue(this._rtvListenerThis, strTitlePanel, intRangeMin, intRangeMax, intRangeDefault, intMajorTickSpacing, intMinorTickSpacing);
     }

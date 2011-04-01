@@ -145,12 +145,11 @@ final public class PEditorDefaultJar extends PEditorAbstract
     
     public PEditorDefaultJar(
         PEditorAbstractListener pndListenerParent,
-        Component cmpFrameOwner,
-        String strApplicationTitle)
+        Component cmpFrameOwner)
     {
-        super(pndListenerParent, cmpFrameOwner, strApplicationTitle);
+        super(pndListenerParent, cmpFrameOwner);
     
-        String f_strMethod = "PEditorDefaultJar(pndListenerParent, cmpFrameOwner, strApplicationTitle)";
+        String f_strMethod = "PEditorDefaultJar(pndListenerParent, cmpFrameOwner)";
 	    
 	    // ----
 	    super._nsl_ = new SPEditorDefaultJar();
@@ -164,7 +163,7 @@ final public class PEditorDefaultJar extends PEditorAbstract
         // ----
         
         super._nbr_ = new MBEditorDefault(
-            cmpFrameOwner, strApplicationTitle, 
+            cmpFrameOwner, 
             (java.awt.event.ActionListener) this,
             super._nfeListenerThis_);
         
@@ -188,9 +187,9 @@ final public class PEditorDefaultJar extends PEditorAbstract
             
             JFrame frame = new JFrame();
 	        frame.getContentPane().setLayout(new BorderLayout());
-	        String strApplicationTitle = "PEditorDefaultJar as a standalone application";
 	        
-	        PEditorAbstract ntp = new PEditorDefaultJar(null, frame, strApplicationTitle);
+	        
+	        PEditorAbstract ntp = new PEditorDefaultJar(null, frame);
 	        
 	        if (! ntp.init())
 	            MySystem.s_printOutExit(f_strWhere, "failed");

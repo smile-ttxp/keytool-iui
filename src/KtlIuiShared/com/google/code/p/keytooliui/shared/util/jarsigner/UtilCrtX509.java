@@ -230,7 +230,6 @@ public class UtilCrtX509 extends UtilCrt
     
     static public void s_show(
         Frame frmParent, 
-        String strTitleAppli,
         X509Certificate crt)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "s_show(...)";
@@ -249,7 +248,7 @@ public class UtilCrtX509 extends UtilCrt
             
             String strBody = "Failed to get certificate.";
  
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
             
             // --
             return;
@@ -262,7 +261,7 @@ public class UtilCrtX509 extends UtilCrt
         com.google.code.p.keytooliui.shared.swing.dialog.DViewString vsg = new
             com.google.code.p.keytooliui.shared.swing.dialog.DViewString(
             frmParent,
-            strTitleAppli + " - " + "view" + " " + "X.509 certificate",
+            //System.getProperty("_appli.title") + " - " + "view" + " " + "X.509 certificate",
             strContents
             );
                     
@@ -274,7 +273,6 @@ public class UtilCrtX509 extends UtilCrt
     
     static public void s_showChain(
         Frame frmParent, 
-        String strTitleAppli,
         X509Certificate[] crts)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "s_showChain(...)";
@@ -293,7 +291,7 @@ public class UtilCrtX509 extends UtilCrt
             
             String strBody = "Failed to get certificates chain.";
  
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
             
             // --
             return;
@@ -306,7 +304,7 @@ public class UtilCrtX509 extends UtilCrt
         com.google.code.p.keytooliui.shared.swing.dialog.DViewString vsg = new
             com.google.code.p.keytooliui.shared.swing.dialog.DViewString(
             frmParent,
-            strTitleAppli + " - " + "view" + " " + "X.509 certificates chain",
+            //System.getProperty("_appli.title") + " - " + "view" + " " + "X.509 certificates chain",
             strContents
             );
                     
@@ -318,8 +316,6 @@ public class UtilCrtX509 extends UtilCrt
     
     // if any error, return nil, then calling method should exit immediately!
     static public X509Certificate s_getX509Certificate(
-        //Frame frmOwner, 
-        //String strTitleAppli,
         KeyStore kstOpen,
         String strAliasKpr
         )
@@ -656,7 +652,6 @@ public class UtilCrtX509 extends UtilCrt
      */
     static public X509Certificate[] s_load(
         Frame frmOwner, 
-        String strTitleAppli,
         File fleCrt
         )
     {
@@ -687,7 +682,7 @@ public class UtilCrtX509 extends UtilCrt
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -712,30 +707,12 @@ public class UtilCrtX509 extends UtilCrt
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
             
             
             return null;
         }
         
-        /*catch (NoSuchProviderException excNoSuchProvider)
-        {
-            excNoSuchProvider.printStackTrace();
-            MySystem.s_printOutError(strMethod, "excNoSuchProvider caught");
-            
-            String strBody = "Got NoSuchProvider exception.";
-            strBody += "\n" + excNoSuchProvider.getMessage();
-            
-            strBody += "\n\n";
-            strBody += "See log file to get more info.";
-            
-                
-            OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
-            
-            
-            return null;
-        }*/
 
         try
         {
@@ -782,7 +759,7 @@ public class UtilCrtX509 extends UtilCrt
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
             
             
             return null;
@@ -806,7 +783,7 @@ public class UtilCrtX509 extends UtilCrt
             
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -1253,7 +1230,7 @@ public class UtilCrtX509 extends UtilCrt
             strBody += "Ignoring ...";
             
             OPAbstract.s_showDialogError(
-                null, "strTitleAppli", strBody); // TODO: assign appli's title
+                null, strBody);
             
             strResult += " unknown!";
             return strResult;
@@ -1481,7 +1458,6 @@ public class UtilCrtX509 extends UtilCrt
         
         String strCertAlgoSignType,
         Frame frmOwner,
-        String strTitleAppli,
         Vector<DERObjectIdentifier> vecCrtExtExtKeyUsage,
         boolean blnCrtExtExtKeyUsageCritical,
         boolean blnCrtExtKeyUsage,
@@ -1523,7 +1499,7 @@ public class UtilCrtX509 extends UtilCrt
             strBody += "\n  " + exc.getMessage();
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -1555,7 +1531,7 @@ public class UtilCrtX509 extends UtilCrt
                 strBody += "\n  " + exc.getMessage();
 
                 OPAbstract.s_showDialogError(
-                    frmOwner, strTitleAppli, strBody);
+                    frmOwner, strBody);
 
                 return null;
             }
@@ -1595,7 +1571,7 @@ public class UtilCrtX509 extends UtilCrt
               strBody += "\n\n " + "Workaround: please increase key size.";
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }
@@ -1610,7 +1586,7 @@ public class UtilCrtX509 extends UtilCrt
             strBody += "\n  " + exc.getMessage();
                 
             OPAbstract.s_showDialogError(
-                frmOwner, strTitleAppli, strBody);
+                frmOwner, strBody);
                 
             return null;
         }

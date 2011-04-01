@@ -92,7 +92,7 @@ final public class DocPageTextSearch
         {
             MySystem.s_printOutTrace(this, strMethod, "empty list");
             Toolkit.getDefaultToolkit().beep();
-	        OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, _s_strWarningEmptyListBody + "\"" + this._strText + "\"");
+	        OPAbstract.s_showDialogWarning(this._cmpFrameOwner, _s_strWarningEmptyListBody + "\"" + this._strText + "\"");
             
             return null;
         }
@@ -139,7 +139,7 @@ final public class DocPageTextSearch
             
             MySystem.s_printOutTrace(this, strMethod, "end of document reached");
             Toolkit.getDefaultToolkit().beep();
-	        OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, _s_strWarningBottomReachedBody);
+	        OPAbstract.s_showDialogWarning(this._cmpFrameOwner, _s_strWarningBottomReachedBody);
             
             // modif feb 4, 2002, returning last in the least
             //return null;
@@ -165,7 +165,7 @@ final public class DocPageTextSearch
             
         MySystem.s_printOutTrace(this, strMethod, "begin of document reached");
         Toolkit.getDefaultToolkit().beep();
-	    OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, _s_strWarningTopReachedBody);
+	    OPAbstract.s_showDialogWarning(this._cmpFrameOwner, _s_strWarningTopReachedBody);
         // modif feb 4, 2002, returning first in the list
         //return null;
         return (MyStringSelection) this._lstStringSelection.get(0);
@@ -198,10 +198,11 @@ final public class DocPageTextSearch
         return true;
     }
     
-    public DocPageTextSearch(Component cmpFrameOwner, String strTitleApplication, Document doc, String strText, boolean blnMatchWord, boolean blnMatchCase)
+    public DocPageTextSearch(Component cmpFrameOwner,
+         
+            Document doc, String strText, boolean blnMatchWord, boolean blnMatchCase)
     {
         this._cmpFrameOwner = cmpFrameOwner;
-        this._strTitleApplication = strTitleApplication;
         this._doc = doc;
         this._strText = strText;
         this._blnMatchWord = blnMatchWord;
@@ -320,7 +321,6 @@ final public class DocPageTextSearch
     // PRIVATE
     
     private Component _cmpFrameOwner = null;
-    private String _strTitleApplication = null;
     
     private Document _doc = null;
     private String _strText = null;

@@ -81,9 +81,9 @@ public class MySystem
     /**
         JVM: Java Virtual Machine
     **/
-    static public boolean s_checkJvmVersion(String strTitleApplication)
+    static public boolean s_checkJvmVersion()
     {
-        String strMethod = _f_s_strClass + "s_checkJvmVersion(strTitleApplication)";
+        String strMethod = _f_s_strClass + "s_checkJvmVersion()";
         
         // changes coz cannot assign a JVM download in JWS like for example v:1.4.2, just supports handling of eg: v:1.4
         // ==> adding a warning
@@ -183,7 +183,10 @@ public class MySystem
             String strErrorJvmBody2 = "\n    " + strJavaVersion + "\n\n";
             String strErrorJvmBody4 = "\n    " + f_strsJavaVersionOk[0] + "\n\n";
             String strBody = _s_strDialogErrorJvmBody1 + strErrorJvmBody2 + _s_strDialogErrorJvmBody3 + strErrorJvmBody4 /*+ _s_strDialogErrorJvmBody5*/;
-            com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(null, strTitleApplication, strBody);
+            
+            com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(null,
+  
+                    strBody);
             
             // forcing an exit, not returning false
             MySystem.s_printOutTrace(strMethod, "forcing an exit(0)");
@@ -405,8 +408,8 @@ public class MySystem
         
         String strApplicationTitle = "application";
         
-        if (_s_strDialogErrorExitTitle != null)
-            strApplicationTitle = _s_strDialogErrorExitTitle;
+        if (System.getProperty("_appli.title") != null)
+            strApplicationTitle = System.getProperty("_appli.title");
             
         String strApplicationBody = "An error occurred in the application.";
         strApplicationBody += "\n";
@@ -424,7 +427,7 @@ public class MySystem
         }
         
         com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(
-                    (java.awt.Component) null, strApplicationTitle, strApplicationBody);
+                    (java.awt.Component) null, strApplicationBody);
 
         //4) exit
     

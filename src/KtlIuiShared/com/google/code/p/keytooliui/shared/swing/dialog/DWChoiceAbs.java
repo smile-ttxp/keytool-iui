@@ -144,13 +144,13 @@ abstract public class DWChoiceAbs extends DEscapeAbstract implements
     
     protected DWChoiceAbs(
         Frame frm,
-        String strTitleApplication,
+       
         String strMessageBody,
         Object[] objsOption)
     {
         super(frm, true);
         
-        setTitle(strTitleApplication + " - " + _s_strTitleSuffix);
+        setTitle(System.getProperty("_appli.title") + " - " + _s_strTitleSuffix);
         
         Object[] objsArray = {strMessageBody + "\n\n" + _s_strBodySuffix + "\n"};
         

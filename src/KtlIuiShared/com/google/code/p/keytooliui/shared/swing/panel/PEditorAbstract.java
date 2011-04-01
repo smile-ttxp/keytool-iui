@@ -299,9 +299,10 @@ abstract public class PEditorAbstract extends JPanel implements
     protected MFileAllEditorListener _nfeListenerThis_ = null;
     protected TBEditorAbstractListener _ntlListenerThis_ = null;
     
-    protected PEditorAbstract(PEditorAbstractListener pndListenerParent, Component cmpFrameOwner, String strApplicationTitle)
+    protected PEditorAbstract(PEditorAbstractListener pndListenerParent, Component cmpFrameOwner)
     {
         super(true); // double buffering
+        
         this._pndListenerParent = pndListenerParent;
 
 	    _createListeners();

@@ -67,11 +67,11 @@ final public class DLoadingAppli extends DLoadingAbs
     // ------
     // PUBLIC
     
-    public DLoadingAppli(Frame fmrOwner, String strTitleApplication)
+    public DLoadingAppli(Frame fmrOwner)
     {
         super(
             fmrOwner, 
-            strTitleApplication, 
+
             DLoadingAppli._s_strLoadingWhat,
             new java.awt.Dimension(240, 120) // contentPane's size
             );

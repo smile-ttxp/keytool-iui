@@ -87,9 +87,9 @@ final public class MHelpAboutEditorDefault extends MHelpAboutAbstract
         return true;
     }
     
-    public MHelpAboutEditorDefault(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutEditorDefault(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
    

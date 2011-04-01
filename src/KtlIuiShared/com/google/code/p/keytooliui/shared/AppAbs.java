@@ -22,10 +22,6 @@
  
 package com.google.code.p.keytooliui.shared;
 
-import java.awt.AWTEvent;
-import java.awt.Toolkit;
-//import org.progx.swing.debug.DebugEventListener;
-
 /**
     "App" means "Application"
 

@@ -49,7 +49,7 @@ final public class PSelBtnTfdFileIcnOpen extends PSelBtnTfdFileIcnAbs
     public PSelBtnTfdFileIcnOpen(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         String strLabel,
         Object objDocPropValue,
         boolean blnFieldRequired
@@ -58,7 +58,7 @@ final public class PSelBtnTfdFileIcnOpen extends PSelBtnTfdFileIcnAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+          
             strLabel, 
             objDocPropValue, 
             JFileChooser.OPEN_DIALOG,

@@ -36,14 +36,14 @@ final public class DRangeVsRange extends DRangeAbstract
     
     
     public DRangeVsRange(DRangeAbstractListener draListenerParent, Component cmpFrameOwner,
-        String strTitleApplication, String strTitleDialog, String strTextArea,
+        String strTitleDialog, String strTextArea,
         String strTitleTop, int intRangeMinTop, int intRangeMaxTop, int intRangeDefaultTop,
         String strTitleBottom, int intRangeDefaultBottom,
         int intMajorTickSpacing, int intMinorTickSpacing,
         int intSpacingMin)
     {
         
-        super(draListenerParent, cmpFrameOwner, strTitleApplication, strTitleDialog, strTextArea);
+        super(draListenerParent, cmpFrameOwner, strTitleDialog, strTextArea);
         
         super._pra_ = new PRangeVsRange(strTitleTop, intRangeMinTop, intRangeMaxTop, intRangeDefaultTop, strTitleBottom, intRangeDefaultBottom, intMajorTickSpacing, intMinorTickSpacing, intSpacingMin);
        

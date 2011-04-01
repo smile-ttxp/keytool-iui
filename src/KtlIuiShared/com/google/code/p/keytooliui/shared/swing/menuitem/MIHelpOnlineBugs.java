@@ -73,8 +73,8 @@ final public class MIHelpOnlineBugs extends MIHelpOnlineAbstract
     // ------
     // PUBLIC
     
-    public MIHelpOnlineBugs(java.awt.Component cmpFrameOwner, String strTitleApplication)
+    public MIHelpOnlineBugs(java.awt.Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication, _s_strText, _f_s_strUrl);   
+        super(cmpFrameOwner, _s_strText, _f_s_strUrl);   
     }        
 }

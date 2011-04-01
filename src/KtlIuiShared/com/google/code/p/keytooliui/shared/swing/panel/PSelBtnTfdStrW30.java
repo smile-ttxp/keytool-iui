@@ -48,7 +48,7 @@ final public class PSelBtnTfdStrW30 extends PSelBtnTfdStrWAbs
     public PSelBtnTfdStrW30(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         String strLabel,
         Object objDocPropValue,
         boolean blnFieldRequired
@@ -56,7 +56,7 @@ final public class PSelBtnTfdStrW30 extends PSelBtnTfdStrWAbs
     {
         super(
             frmParent, 
-            strTitleAppli, 
+      
             strLabel, 
             new TF30x20SelString(docListenerParent), 
             objDocPropValue,

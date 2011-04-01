@@ -89,9 +89,9 @@ public class MHelpAboutViewerHtmlPreview extends MHelpAboutAbstract
         return true;
     }
     
-    public MHelpAboutViewerHtmlPreview(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutViewerHtmlPreview(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
     // -------

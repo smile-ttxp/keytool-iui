@@ -101,7 +101,7 @@ final public class DHelpAboutAppli extends DEscapeAbstract implements ActionList
     */
     public DHelpAboutAppli( 
         Component cmpFrameOwner,
-        String strTitleApplication,
+      
         String strTitlePrefix,
         String strAppliVersion,
         String strAppliCopyright,
@@ -114,16 +114,16 @@ final public class DHelpAboutAppli extends DEscapeAbstract implements ActionList
         String strMethod = "DHelpAboutAppli(...)";
         
         
-        if (cmpFrameOwner==null || strTitleApplication==null || strTitlePrefix==null)
+        if (cmpFrameOwner==null || strTitlePrefix==null)
             MySystem.s_printOutExit(this, strMethod, "nil arg");
 
-        setTitle(strTitlePrefix + " " + strTitleApplication);
+        setTitle(strTitlePrefix + " " + System.getProperty("_appli.title"));
 
         // --
     
         this._pnl = new PHelpAboutAppli(
             (ActionListener) this, 
-            strTitleApplication,
+   
             strAppliVersion,
             strAppliCopyright,
             strProductID,

@@ -267,7 +267,7 @@ abstract public class DRangeAbstract extends DEscapeAbstract implements
     protected DRangeAbstract(
         DRangeAbstractListener draListenerParent, 
         Component cmpFrameOwner, 
-        String strTitleApplication, 
+       
         String strTitleDialog, 
         String strTextArea)
     {
@@ -275,7 +275,7 @@ abstract public class DRangeAbstract extends DEscapeAbstract implements
         this._draListenerParent = draListenerParent;
         
         
-        setTitle(strTitleApplication + " - " + strTitleDialog);
+        setTitle(System.getProperty("_appli.title") + " - " + strTitleDialog);
         
         // listeners
         addDRangeAbstractListener(this);

@@ -150,15 +150,15 @@ final public class DEditorSysText extends DEditorAbstract
         this._strPathAbsolutePath = null;
     }
     
-    public DEditorSysText(DEditorAbstractListener dapListenerParent, Component cmpFrameOwner, String strTitleApplication)
+    public DEditorSysText(DEditorAbstractListener dapListenerParent, Component cmpFrameOwner)
     {
-        super(dapListenerParent, cmpFrameOwner, strTitleApplication, _s_strTitleSuffix);
+        super(dapListenerParent, cmpFrameOwner, _s_strTitleSuffix);
         
-        String strMethod = "DEditorSysText(dapListenerParent, cmpFrameOwner, strTitleApplication)";
+        String strMethod = "DEditorSysText(dapListenerParent, cmpFrameOwner)";
         
         try
 	    {
-	        super._pnd_ = new PEditorDefaultSys(super._pndListenerThis_, cmpFrameOwner, strTitleApplication);
+	        super._pnd_ = new PEditorDefaultSys(super._pndListenerThis_, cmpFrameOwner);
 	    }
 	    
 	    catch(Exception exc)

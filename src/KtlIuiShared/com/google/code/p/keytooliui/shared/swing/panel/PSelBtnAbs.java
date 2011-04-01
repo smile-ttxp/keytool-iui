@@ -124,7 +124,7 @@ abstract public class PSelBtnAbs extends PSelAbs implements
         }
             
         this._frmParent_ = null;
-        this._strTitleAppli_ = null;
+  
     }
     
     public boolean init()
@@ -154,7 +154,7 @@ abstract public class PSelBtnAbs extends PSelAbs implements
     
     protected BESClearEntry16 _btnClearSelection_ = null;
     protected Frame _frmParent_ = null;
-    protected String _strTitleAppli_ = null;
+
     
     protected void _setSelectedValue_(boolean bln)
     {
@@ -169,7 +169,7 @@ abstract public class PSelBtnAbs extends PSelAbs implements
     
     protected PSelBtnAbs(
         Frame frmParent, 
-        String strTitleAppli, 
+
         String strLabel,
         boolean blnFieldRequired
         )
@@ -177,7 +177,7 @@ abstract public class PSelBtnAbs extends PSelAbs implements
         super(strLabel, blnFieldRequired);
         
         this._frmParent_ = frmParent;
-        this._strTitleAppli_ = strTitleAppli;
+      
         this._blnFieldRequired = blnFieldRequired;
        
         // --

@@ -115,12 +115,12 @@ abstract public class DWChoice3Abs extends DWChoiceAbs
         
     protected DWChoice3Abs(
         Frame frm,
-        String strTitleApplication,
+     
         String strBodyWhat)
     {
         super(
             frm,
-            strTitleApplication, 
+     
             
            strBodyWhat + 
                 "\n\n" + 

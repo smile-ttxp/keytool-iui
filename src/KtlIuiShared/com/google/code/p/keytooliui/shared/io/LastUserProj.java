@@ -43,13 +43,12 @@ final public class LastUserProj extends LastUserAbstract
     public LastUserProj(
         // application
         String strPathAbsHomeAppli, 
-        String strApplicationNameShort,
         String strVersionAppli,
         java.util.Vector<UserChoice> vecUserChoice
         
        )
     {
-        super(strPathAbsHomeAppli, strApplicationNameShort, strVersionAppli,
+        super(strPathAbsHomeAppli, strVersionAppli,
                 _f_s_strFileNameIni, _f_s_strFileNameBak, vecUserChoice);
     }
     

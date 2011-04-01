@@ -80,9 +80,9 @@ final public class MHelpAboutViewerHtmlPreviewJar extends MHelpAboutViewerHtmlPr
         return true;
     }
     
-    public MHelpAboutViewerHtmlPreviewJar(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutViewerHtmlPreviewJar(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
     // -------

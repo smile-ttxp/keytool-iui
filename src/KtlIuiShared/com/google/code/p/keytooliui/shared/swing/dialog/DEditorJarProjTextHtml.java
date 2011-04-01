@@ -87,10 +87,9 @@ final public class DEditorJarProjTextHtml extends DEditorJarProjText implements
     public DEditorJarProjTextHtml(
         DEditorJarProjTextHtmlListener dhpListenerParent,
         DEditorAbstractListener dapListenerParent,
-        Component cmpFrameOwner,
-        String strTitleApplication)
+        Component cmpFrameOwner)
     {
-        super(dapListenerParent, cmpFrameOwner, strTitleApplication);    
+        super(dapListenerParent, cmpFrameOwner);    
         this._dhpListenerParent = dhpListenerParent;
         addDEditorJarProjTextHtmlListener(this);
     }

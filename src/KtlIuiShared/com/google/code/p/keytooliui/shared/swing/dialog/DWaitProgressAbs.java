@@ -80,15 +80,11 @@ abstract public class DWaitProgressAbs extends DEscapeAbstract
     {
         String strMethod = "init()";
         
-        if (this._strTitleApplication == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil this._strTitleApplication");
-            return false;
-        }
+   
         
         
         
-        setTitle(this._strTitleApplication + " - " + _s_strTitleSuffix);
+        setTitle(System.getProperty("_appli.title") + " - " + _s_strTitleSuffix);
     
         if (this._strWaitWhat == null)
         {
@@ -134,10 +130,10 @@ abstract public class DWaitProgressAbs extends DEscapeAbstract
     // ---------
     // PROTECTED
     
-    protected DWaitProgressAbs(JFrame fmrOwner, String strTitleApplication, String strLoadingWhat)
+    protected DWaitProgressAbs(JFrame fmrOwner, String strLoadingWhat)
     {
         super(fmrOwner, false);
-        this._strTitleApplication = strTitleApplication;
+   
         this._strWaitWhat = strLoadingWhat;
     }
     
@@ -148,6 +144,6 @@ abstract public class DWaitProgressAbs extends DEscapeAbstract
     
     private JLabel _lbl1 = null;
     private JLabel _lbl2 = null;
-    private String _strTitleApplication = null;
+   
     private String _strWaitWhat = null;
 }

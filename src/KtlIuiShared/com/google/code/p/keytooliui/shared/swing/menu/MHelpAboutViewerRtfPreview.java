@@ -85,9 +85,9 @@ final public class MHelpAboutViewerRtfPreview extends MHelpAboutAbstract
         return true;
     }
     
-    public MHelpAboutViewerRtfPreview(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutViewerRtfPreview(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
     // -------

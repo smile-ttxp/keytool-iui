@@ -42,15 +42,14 @@ abstract public class DAbs extends DEscapeAbstract
     // ---------
     // PROTECTED
     
-    protected String _strTitleApplication_ = null;
+
     
-    protected DAbs(Dialog dlgOwner, String strTitleApplication)
+    protected DAbs(Dialog dlgOwner)
     {
         super(
             dlgOwner,
             true // modal
             );
-        
-        this._strTitleApplication_ = strTitleApplication;
+
     }
 }

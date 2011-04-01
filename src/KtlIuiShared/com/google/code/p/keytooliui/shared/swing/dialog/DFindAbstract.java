@@ -236,15 +236,13 @@ abstract public class DFindAbstract extends DEscapeAbstract implements
         super.destroy();
     }
     
-    protected DFindAbstract(Component cmpFrameOwner, String strTitleApplication, String strTitle,
+    protected DFindAbstract(Component cmpFrameOwner, String strTitle,
         String strButtonTextFindNow, String strButtonTipFindNow)
     {
         super((Frame) cmpFrameOwner, true);
         
-        if (strTitleApplication == null)
-            setTitle(strTitle);
-        else
-            setTitle(strTitleApplication + " - " + strTitle);
+       
+        setTitle(System.getProperty("_appli.title") + " - " + strTitle);
         
        
         

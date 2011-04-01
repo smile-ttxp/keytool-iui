@@ -140,12 +140,11 @@ final public class PEditorDefaultSys extends PEditorAbstract
     
     public PEditorDefaultSys(
         PEditorAbstractListener pndListenerParent,
-        Component cmpFrameOwner,
-        String strApplicationTitle)
+        Component cmpFrameOwner)
     {
-        super(pndListenerParent, cmpFrameOwner, strApplicationTitle);
+        super(pndListenerParent, cmpFrameOwner);
     
-        String strMethod = "PEditorDefaultSys(pndListenerParent, cmpFrameOwner, strApplicationTitle)";
+        String strMethod = "PEditorDefaultSys(pndListenerParent, cmpFrameOwner)";
 	    
 	    // ----
 	    super._nsl_ = new SPEditorDefaultSys();
@@ -158,7 +157,7 @@ final public class PEditorDefaultSys extends PEditorAbstract
         // ----
         
         super._nbr_ = new MBEditorDefault(
-            cmpFrameOwner, strApplicationTitle,
+            cmpFrameOwner, 
              (java.awt.event.ActionListener) this,
              super._nfeListenerThis_);
         
@@ -183,9 +182,9 @@ final public class PEditorDefaultSys extends PEditorAbstract
             
             JFrame frame = new JFrame();
 	        frame.getContentPane().setLayout(new BorderLayout());
-	        String strApplicationTitle = "PEditorDefaultSys as a standalone application";
+	       
 	        
-	        PEditorAbstract ntp = new PEditorDefaultSys(null, frame, strApplicationTitle);
+	        PEditorAbstract ntp = new PEditorDefaultSys(null, frame);
 	        
 	        if (! ntp.init())
 	        {

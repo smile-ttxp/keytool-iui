@@ -89,11 +89,10 @@ final public class S_JarOutputStream
     
     static public JarOutputStream s_createWithManifest(
         String strPathAbs,
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
         )
     {
-        String strMethod = _f_s_strClass + "s_createWithManifest(strPathAbs, frmOwner, strTitleAppli)";
+        String strMethod = _f_s_strClass + "s_createWithManifest(...)";
         
         JarOutputStream jos = S_JarOutputStream.s_create(strPathAbs);
         
@@ -107,7 +106,7 @@ final public class S_JarOutputStream
         
         Manifest man = S_Manifest.s_create();
         
-        if (! S_JarOutputStream.s_writeManifest(jos, man, frmOwner, strTitleAppli))
+        if (! S_JarOutputStream.s_writeManifest(jos, man, frmOwner))
         {
             MySystem.s_printOutError(strMethod, "failed");
             return null;
@@ -180,11 +179,10 @@ final public class S_JarOutputStream
     static public boolean s_writeEntry(
         JarOutputStream jos,
         MySignatureFile.Block blk,
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
     )
     {
-        String strMethod = _f_s_strClass + "s_writeEntry(jos, blk, frmOwner, strTitleAppli)";
+        String strMethod = _f_s_strClass + "s_writeEntry(jos, blk, frmOwner)";
         
         if (jos==null || blk==null)
         {
@@ -208,7 +206,7 @@ final public class S_JarOutputStream
             MySystem.s_printOutError(strMethod, "excIO caught");
             
             String strBody = "Got IO exception"; 
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             
             
             return false;
@@ -226,11 +224,10 @@ final public class S_JarOutputStream
     static public boolean s_writeEntry(
         JarOutputStream jos,
         MySignatureFile sfe,
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
     )
     {
-        String strMethod = _f_s_strClass + "s_writeEntry(jos, sfe, frmOwner, strTitleAppli)";
+        String strMethod = _f_s_strClass + "s_writeEntry(...)";
         
         if (jos==null || sfe==null)
         {
@@ -254,7 +251,7 @@ final public class S_JarOutputStream
             MySystem.s_printOutError(strMethod, "excIO caught");
             
             String strBody = "Got IO exception"; 
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             return false;
         }
 
@@ -267,18 +264,17 @@ final public class S_JarOutputStream
         byte[] byts
         )
     {
-        return S_JarOutputStream.s_writeEntry(jos, jey, byts, (Frame) null, (String) null);
+        return S_JarOutputStream.s_writeEntry(jos, jey, byts, (Frame) null);
     }
     
     static public boolean s_writeEntry(
         JarOutputStream jos,
         JarEntry jey,
         byte[] byts,
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
         )
     {
-        String strMethod = _f_s_strClass + "s_writeEntry(jos, jey, byts, frmOwner, strTitleAppli)";
+        String strMethod = _f_s_strClass + "s_writeEntry(jos, jey, byts, frmOwner)";
         
         if (jos==null || jey==null || byts==null)
         {
@@ -298,7 +294,7 @@ final public class S_JarOutputStream
             excIO.printStackTrace();
             MySystem.s_printOutError(strMethod, "excIO caught");
             String strBody = "Got IO exception"; 
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             return false;
         }
             
@@ -313,11 +309,10 @@ final public class S_JarOutputStream
         JarOutputStream jos,
         JarEntry jey,
         JarFile jfeInput,
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
         )
     {
-        String strMethod = _f_s_strClass + "s_writeEntry(jos, jey, jfeInput, frmOwner, strTitleAppli)";
+        String strMethod = _f_s_strClass + "s_writeEntry(jos, jey, jfeInput, frmOwner)";
         
         if (jos==null || jey==null || jfeInput==null)
         {
@@ -349,7 +344,7 @@ final public class S_JarOutputStream
             excIO.printStackTrace();
             MySystem.s_printOutError(strMethod, "excIO caught");
             String strBody = "Got IO exception"; 
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             return false;
         }
             
@@ -362,11 +357,10 @@ final public class S_JarOutputStream
     static public boolean s_writeManifest(
         JarOutputStream jos,
         Manifest man,
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
         )
     {
-        String strMethod = _f_s_strClass + "s_writeManifest(jos, man, frmOwner, strTitleAppli)";
+        String strMethod = _f_s_strClass + "s_writeManifest(jos, man, frmOwner)";
         
         if (jos==null || man==null)
         {
@@ -377,7 +371,7 @@ final public class S_JarOutputStream
         JarEntry jeyManifest = new JarEntry(com.google.code.p.keytooliui.shared.util.jar.S_Manifest.f_s_strPathRelManifest);
             
         byte bytsManifest[] =
-            com.google.code.p.keytooliui.shared.util.jar.S_Manifest.s_toByteArray(man, frmOwner, strTitleAppli);
+            com.google.code.p.keytooliui.shared.util.jar.S_Manifest.s_toByteArray(man, frmOwner);
             
         if (bytsManifest == null)
         {
@@ -397,7 +391,7 @@ final public class S_JarOutputStream
             excIO.printStackTrace();
             MySystem.s_printOutError(strMethod, "excIO caught");
             String strBody = "Got IO exception"; 
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             return false;
         }
         

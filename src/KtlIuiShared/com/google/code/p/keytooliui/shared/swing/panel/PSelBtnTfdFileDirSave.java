@@ -49,7 +49,7 @@ final public class PSelBtnTfdFileDirSave extends PSelBtnTfdFileDirAbs
     public PSelBtnTfdFileDirSave(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+     
         String strLabel,
         Object objDocPropValue,
         String strDirAppli, // eg: xlb, xls
@@ -60,7 +60,7 @@ final public class PSelBtnTfdFileDirSave extends PSelBtnTfdFileDirAbs
         super(
             docListenerParent,
             frmParent, 
-            strTitleAppli, 
+         
             strLabel, 
             objDocPropValue, 
             JFileChooser.SAVE_DIALOG, 

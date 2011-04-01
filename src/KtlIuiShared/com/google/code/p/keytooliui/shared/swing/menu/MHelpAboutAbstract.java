@@ -117,7 +117,7 @@ abstract public class MHelpAboutAbstract extends MAbstract implements
 	        
 	        OPAbstract.s_showDialogInfo(
 	            this._cmpFrameOwner,
-	            this._strTitleApplication,
+	        
 	            this._strInfoAboutBody_);
             
             return;
@@ -166,11 +166,11 @@ abstract public class MHelpAboutAbstract extends MAbstract implements
         return true;
     }
     
-    protected MHelpAboutAbstract(Component cmpFrameOwner, String strTitleApplication)
+    protected MHelpAboutAbstract(Component cmpFrameOwner)
     {
         super();
         this._cmpFrameOwner = cmpFrameOwner;
-        this._strTitleApplication = strTitleApplication;
+   
         
         _createChildren();
         _createListeners();
@@ -192,7 +192,7 @@ abstract public class MHelpAboutAbstract extends MAbstract implements
     
     // ---------
     private Component _cmpFrameOwner = null;
-    private String _strTitleApplication = null;
+   
     
     
     private void _createChildren()

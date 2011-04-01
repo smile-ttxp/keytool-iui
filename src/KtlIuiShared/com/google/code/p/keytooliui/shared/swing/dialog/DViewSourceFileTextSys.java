@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2008 keyTool IUI Project.
+ * Copyright (c) 2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -57,9 +57,9 @@ final public class DViewSourceFileTextSys extends DViewSourceFileTextAbs
     
     
     
-    public DViewSourceFileTextSys(Component cmpFrameOwner, String strTitleApplication)
+    public DViewSourceFileTextSys(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
     
     

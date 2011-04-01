@@ -34,11 +34,11 @@ final public class MBViewerFileTextHtmlViewSys extends MBViewerFileTextAbs
     
     public MBViewerFileTextHtmlViewSys(
         java.awt.Component cmpFrameOwner,
-        String strApplicationTitle,
+      
         ActionListener actListenerParentFrame,
         ActionListener actListenerParentPanel)
     {
         super(actListenerParentFrame, actListenerParentPanel);
-        super._menHelpAbout_ = new MHelpAboutViewerHtmlView(cmpFrameOwner, strApplicationTitle);
+        super._menHelpAbout_ = new MHelpAboutViewerHtmlView(cmpFrameOwner);
     }
 }

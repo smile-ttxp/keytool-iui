@@ -37,13 +37,13 @@ final public class DRangeToRange extends DRangeAbstract
     
     
     public DRangeToRange(DRangeAbstractListener draListenerParent, Component cmpFrameOwner,
-        String strTitleApplication, String strTitleDialog, String strTextArea, String strTitleMaster,
+        String strTitleDialog, String strTextArea, String strTitleMaster,
         int intRangeMinMaster, int intRangeMaxMaster, int intRangeDefaultMaster,
         int intMajorTickSpacingMaster, int intMinorTickSpacingMaster,
         String strTitleSlave, int intRangeMinSlave, int intRangeDefaultSlave)
     {
         
-        super(draListenerParent, cmpFrameOwner, strTitleApplication, strTitleDialog, strTextArea);
+        super(draListenerParent, cmpFrameOwner, strTitleDialog, strTextArea);
         
         super._pra_ = new PRangeToRange(strTitleMaster, intRangeMinMaster, intRangeMaxMaster, intRangeDefaultMaster, intMajorTickSpacingMaster, intMinorTickSpacingMaster, strTitleSlave, intRangeMinSlave, intRangeDefaultSlave);
     

@@ -157,7 +157,7 @@ abstract public class EPTextAbs extends JEditorPane implements
         */
         
         this._cmpFrameOwner = null;
-        this._strTitleApplication = null;
+    
         this._url = null;
         
         
@@ -201,7 +201,7 @@ abstract public class EPTextAbs extends JEditorPane implements
             MySystem.s_printOutTrace(this, strMethod, "! this._blnPageLoaded");
             
             if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-                this._cmpFrameOwner, this._strTitleApplication, _s_strDlgPageNotFullyLoaded))
+                this._cmpFrameOwner, _s_strDlgPageNotFullyLoaded))
 	        {
 	            // action cancelled
 	            MySystem.s_printOutTrace(this, strMethod, "! blnPageLoaded, action cancelled");
@@ -420,7 +420,7 @@ abstract public class EPTextAbs extends JEditorPane implements
             MySystem.s_printOutTrace(this, strMethod, "! blnPageLoaded");
             
             if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-                this._cmpFrameOwner, this._strTitleApplication, _s_strDlgPageNotFullyLoaded))
+                this._cmpFrameOwner, _s_strDlgPageNotFullyLoaded))
 	        {
 	            // action cancelled
 	            MySystem.s_printOutTrace(this, strMethod, "! blnPageLoaded, action cancelled");
@@ -639,15 +639,10 @@ abstract public class EPTextAbs extends JEditorPane implements
                 strBody += "\n";
                 strBody += "then try again by selecting \"OK\" button below.";
                                 
-                String strTitle = null;
-                
-                if (this._strTitleApplication != null)
-                    strTitle = this._strTitleApplication + " - " + "Unknown host exception"; // !!!!!!!
-                else
-                    strTitle = "Unknown host exception";
+               
                 
                 if (! com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
-                    this._cmpFrameOwner, strTitle, strBody))
+                    this._cmpFrameOwner, strBody))
 	            {
 	                // action cancelled
 	                MySystem.s_printOutTrace(this, strMethod, "action cancelled");
@@ -708,7 +703,7 @@ abstract public class EPTextAbs extends JEditorPane implements
 	    
 	    if (this._shlCur == null)
 	    {
-	        this._shlCur = new DocPageTextSearch(this._cmpFrameOwner, this._strTitleApplication, getDocument(), strText, evtDFindPage.getMatchWord(), evtDFindPage.getMatchCase());
+	        this._shlCur = new DocPageTextSearch(this._cmpFrameOwner, getDocument(), strText, evtDFindPage.getMatchWord(), evtDFindPage.getMatchCase());
 	        
 	        if (! this._shlCur.init())
 	            MySystem.s_printOutExit(this, strMethod, "failed");
@@ -721,7 +716,7 @@ abstract public class EPTextAbs extends JEditorPane implements
 	        if (! this._shlCur.sameConfig(strText, evtDFindPage.getMatchWord(), evtDFindPage.getMatchCase()))
 	        {
 	            this._shlCur.destroy();
-	            this._shlCur = new DocPageTextSearch(this._cmpFrameOwner, this._strTitleApplication, getDocument(), strText, evtDFindPage.getMatchWord(), evtDFindPage.getMatchCase());
+	            this._shlCur = new DocPageTextSearch(this._cmpFrameOwner, getDocument(), strText, evtDFindPage.getMatchWord(), evtDFindPage.getMatchCase());
 	            
 	            if (! this._shlCur.init())
 	                MySystem.s_printOutExit(this, strMethod, "failed");
@@ -899,7 +894,7 @@ abstract public class EPTextAbs extends JEditorPane implements
     protected EPTextAbs(
         EPTextAbsListener pepListenerParent,
         Component cmpFrameOwner,
-        String strTitleApplication, 
+
         Color colPageTextSelection,
         URL url,
         StyledEditorKit sek
@@ -912,7 +907,7 @@ abstract public class EPTextAbs extends JEditorPane implements
         
         this._pepListenerParent = pepListenerParent;
         this._cmpFrameOwner = cmpFrameOwner;
-        this._strTitleApplication = strTitleApplication;
+
         this._url = url;
         
         // --
@@ -952,7 +947,7 @@ abstract public class EPTextAbs extends JEditorPane implements
         
         _addListeners();
 
-        this._dfp = new DFindPage(this._dfpListenerThis, cmpFrameOwner, strTitleApplication);  
+        this._dfp = new DFindPage(this._dfpListenerThis, cmpFrameOwner);  
     }
     
     // -------
@@ -974,7 +969,7 @@ abstract public class EPTextAbs extends JEditorPane implements
     private boolean _blnPageLoaded = false;
 
     private Component _cmpFrameOwner;
-    private String _strTitleApplication;
+
     private URL _url = null;
     
     

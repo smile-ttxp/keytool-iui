@@ -161,16 +161,15 @@ final public class DEditorNote extends DEditorAbstract
     
     public DEditorNote(
         DEditorAbstractListener dapListenerParent, 
-        Component cmpFrameOwner, 
-        String strTitleApplication)
+        Component cmpFrameOwner)
     {
-        super(dapListenerParent, cmpFrameOwner, strTitleApplication, DEditorNote._s_strTitleSuffix);
+        super(dapListenerParent, cmpFrameOwner, DEditorNote._s_strTitleSuffix);
         
-        String strMethod = "DEditorNote(dapListenerParent, cmpFrameOwner, strTitleApplication)";
+        String strMethod = "DEditorNote(dapListenerParent, cmpFrameOwner)";
         
         try
 	    {
-	        super._pnd_ = new PEditorNote(super._pndListenerThis_, cmpFrameOwner, strTitleApplication);
+	        super._pnd_ = new PEditorNote(super._pndListenerThis_, cmpFrameOwner);
 	    }
 	    
 	    catch(Exception exc)

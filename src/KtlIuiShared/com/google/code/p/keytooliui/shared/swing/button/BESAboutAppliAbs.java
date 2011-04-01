@@ -103,7 +103,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
             String strImage,
             
             final Component cmpFrameOwner,
-            final String strTitleApplication,
+        
             final String strDlgBodyVersion,
             final String strProductID,
             final String strDlgBodyTextThirdParty,
@@ -115,7 +115,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
         String strMethod = "BESAboutAppliAbs(..)";
 
         if (_s_strToolTipTextPrefix != null)
-            setToolTipText(_s_strToolTipTextPrefix + " " + strTitleApplication);
+            setToolTipText(_s_strToolTipTextPrefix + " " + System.getProperty("_appli.title"));
         
         if (strProductID == null)
             MySystem.s_printOutExit(this, strMethod, "nil strProductID");
@@ -134,7 +134,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
                 {
                     _dlg = new DHelpAboutAppli(
                         cmpFrameOwner,
-                        strTitleApplication, 
+             
                         MIHelpAboutAppliAbstract.s_strTitlePrefix,
                         strDlgBodyVersion,
                         strDlgBodyCopyright,

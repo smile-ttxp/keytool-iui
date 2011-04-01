@@ -87,9 +87,9 @@ final public class MHelpAboutViewerHtmlView extends MHelpAboutAbstract
         return true;
     }
     
-    public MHelpAboutViewerHtmlView(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutViewerHtmlView(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
     // -------

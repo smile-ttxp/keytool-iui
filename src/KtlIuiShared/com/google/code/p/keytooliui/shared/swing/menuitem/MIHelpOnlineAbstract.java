@@ -80,7 +80,7 @@ abstract public class MIHelpOnlineAbstract extends MIAbstract
     
     protected MIHelpOnlineAbstract(
         final java.awt.Component f_cmpFrameOwner, 
-        final String f_strTitleApplication,
+   
         String strText,
         final String f_strUrl)
     {
@@ -108,7 +108,7 @@ abstract public class MIHelpOnlineAbstract extends MIAbstract
                         + f_strUrl;
 
                     com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(
-                            f_cmpFrameOwner, f_strTitleApplication, strBody);
+                            f_cmpFrameOwner, strBody);
                 }
                 
             }

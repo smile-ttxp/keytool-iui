@@ -133,7 +133,7 @@ abstract public class PViewerFileAbs extends JPanel
     
     
     
-    protected String _strTitleApplication_ = null;
+ 
     protected Component _cmpFrameOwner_ = null;
         
     
@@ -182,11 +182,10 @@ abstract public class PViewerFileAbs extends JPanel
     }
     
     protected PViewerFileAbs(
-        Component cmpFrameOwner, 
-        String strTitleApplication)
+        Component cmpFrameOwner)
     {
         super(true); // double buffering
         this._cmpFrameOwner_ = cmpFrameOwner;
-        this._strTitleApplication_ = strTitleApplication;
+
     }
 }

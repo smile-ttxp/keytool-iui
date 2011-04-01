@@ -123,13 +123,13 @@ final public class DViewString extends DEscapeAbstract implements
     }
    
     
-    public DViewString(Component cmpFrameOwner, String strTitle, String strSource)
+    public DViewString(Component cmpFrameOwner, String strSource)
     {
         super((Frame) cmpFrameOwner, true); // true ==> modal=true
         
         this._btnClose = new BClose((ActionListener) this);
         
-        setTitle(strTitle);
+        setTitle(System.getProperty("_appli.title"));
                 
         this._tpeContents = new JTextPane();
         // --

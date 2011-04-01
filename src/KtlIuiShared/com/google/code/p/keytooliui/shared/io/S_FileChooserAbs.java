@@ -118,7 +118,7 @@ abstract public class S_FileChooserAbs
         //String strPathAbsHomeAppli,
         String strDirAppli, // eg: xlb, xls
         String strDirNameDefault, // eg: mydeploys
-        String strApplicationTitle,
+
         String strTitleSuffix,
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -130,7 +130,7 @@ abstract public class S_FileChooserAbs
             strDirAppli,
             strDirNameDefault, // eg: mydeploys
             
-            strApplicationTitle,
+      
             strTitleSuffix,
             cmpFrameParent,
             strApproveButtonText,
@@ -148,7 +148,7 @@ abstract public class S_FileChooserAbs
             ==> ask for overwrite
     **/
     static public File s_getSaveFile(
-        String strTitleAppli,
+ 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String[] strsExtension,
@@ -164,7 +164,7 @@ abstract public class S_FileChooserAbs
 		FileFilterExtended ffe = new FileFilterExtended(strsExtension, strDescription);	
 	
 		JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile_(
-		    strTitleAppli, strApproveButtonText, ffe);
+		    strApproveButtonText, ffe);
 		
         if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -203,7 +203,7 @@ abstract public class S_FileChooserAbs
                     MySystem.s_printOutTrace(strMethod, "fleSave.exists(), strAbsolutePath=" + strAbsolutePath);
                     
                     OPAbstract.s_showDialogWarning(
-                        cmpFrameParent, strTitleAppli, "File (with same short name) already exists:\n " + strAbsolutePath);
+                        cmpFrameParent, "File (with same short name) already exists:\n " + strAbsolutePath);
                     
                     return null;
                 }
@@ -239,7 +239,7 @@ abstract public class S_FileChooserAbs
             String strBody = S_FileChooserAbs._s_getBodyDlgErrorExtension(strsExtension, strFileExtensionCur,
                 fleSelected.getName());
        
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent,  strBody);
             return null;
         }
         
@@ -247,9 +247,7 @@ abstract public class S_FileChooserAbs
            
         if (fleSave.exists())
         {
-            //OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, "File already exists:\n " + fleSelected.getAbsolutePath());
-            //return null;
-        
+           
             MySystem.s_printOutTrace(strMethod, 
                 "fleSave.exists(), fleSave.getAbsolutePath()=" + fleSave.getAbsolutePath());
             
@@ -261,7 +259,7 @@ abstract public class S_FileChooserAbs
             strBody += "\n\n";
             strBody += "Overwrite this file?"; 
             
-            if (! OPAbstract.s_showWarningConfirmDialog(cmpFrameParent, strTitleAppli, strBody))
+            if (! OPAbstract.s_showWarningConfirmDialog(cmpFrameParent, strBody))
             {
                 MySystem.s_printOutTrace(strMethod, "cancelled by user");
                 return null;
@@ -275,7 +273,7 @@ abstract public class S_FileChooserAbs
     }
     
     static public File s_getOpenFile(
-        String strTitleAppli,
+
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String[] strsExtension,
@@ -288,7 +286,7 @@ abstract public class S_FileChooserAbs
         FileFilterExtended ffe = new FileFilterExtended(strsExtension, strDescription);
 		
 	JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile_(
-            strTitleAppli, strApproveButtonText, ffe);
+            strApproveButtonText, ffe);
 		    
 	if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -336,7 +334,7 @@ abstract public class S_FileChooserAbs
             {
                 Toolkit.getDefaultToolkit().beep();
                 String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
-                OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+                OPAbstract.s_showDialogError(cmpFrameParent, strBody);
                 return null;
             }
             
@@ -369,7 +367,7 @@ abstract public class S_FileChooserAbs
                 strBody += "\n. " + strsExtension[i];
             
             
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -379,7 +377,7 @@ abstract public class S_FileChooserAbs
         {
             Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -392,14 +390,14 @@ abstract public class S_FileChooserAbs
     // in a hurry, should be refactored with s_getOpenFile
     
     static public File s_getOpenDir(
-        String strTitleAppli,
+
         java.awt.Component cmpFrameParent,
         String strApproveButtonText
             )
     {
         String strMethod = _f_s_strClass + "s_getOpenDir(...)";
 		
-	JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleAppli, "strTitleSuffix");
+	JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_("strTitleSuffix");
 		    
 	if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -430,7 +428,7 @@ abstract public class S_FileChooserAbs
         {
             Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -441,14 +439,14 @@ abstract public class S_FileChooserAbs
     // ----
     
     static public File s_getOpenFile(
-        String strTitleAppli,
+
         java.awt.Component cmpFrameParent,
         String strApproveButtonText
             )
     {
         String strMethod = _f_s_strClass + "s_getOpenFile(...)";
 		
-	JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleAppli, "strTitleSuffix");
+	JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_("strTitleSuffix");
 		    
 	if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -477,7 +475,7 @@ abstract public class S_FileChooserAbs
         {
             Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -488,14 +486,14 @@ abstract public class S_FileChooserAbs
     // ----
     
     static public File s_getSaveFile(
-        String strTitleAppli,
+  
         java.awt.Component cmpFrameParent,
         String strApproveButtonText
             )
     {
         String strMethod = _f_s_strClass + "s_getSaveFile(...)";
 		
-	JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleAppli, "strTitleSuffix");
+	JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_("strTitleSuffix");
 		    
 	if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -524,7 +522,7 @@ abstract public class S_FileChooserAbs
         {
             Toolkit.getDefaultToolkit().beep();
             String strBody = "File already exists!\n  " + fleSelected.getAbsolutePath();
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -533,7 +531,7 @@ abstract public class S_FileChooserAbs
     }
     
     static public File s_getOpenFile(
-        String strTitleAppli,
+
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String strExtension,
@@ -549,7 +547,7 @@ abstract public class S_FileChooserAbs
             );
        
 		JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile(
-		    strTitleAppli, strApproveButtonText, ffe); 
+		    strApproveButtonText, ffe); 
 		    
 		if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");   
@@ -582,7 +580,7 @@ abstract public class S_FileChooserAbs
             {
                 Toolkit.getDefaultToolkit().beep();
                 String strBody = _s_strErrorFileNotFound + strAbsolutePath;
-                OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+                OPAbstract.s_showDialogError(cmpFrameParent, strBody);
                 return null;
             }
             
@@ -602,7 +600,7 @@ abstract public class S_FileChooserAbs
             strBody += "\n" + _s_strErrorWrongExtensionSuffix;
             strBody += " " + strExtension;
             
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent,strBody);
             return null;
         }
         
@@ -612,7 +610,7 @@ abstract public class S_FileChooserAbs
         {
             Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent,strBody);
             return null;
         }
         
@@ -626,8 +624,7 @@ abstract public class S_FileChooserAbs
         
         IMPORTANT: take care about JWS
     **/
-    static public File s_getOpenParentFileRegTarget(
-        String strTitleAppli)
+    static public File s_getOpenParentFileRegTarget()
     {
         String strMethod = _f_s_strClass + "s_getOpenParentFileRegTarget(...)";
         
@@ -814,7 +811,7 @@ abstract public class S_FileChooserAbs
     
      static protected File _s_getFileOnlyDir_(
         java.awt.Component cmpFrameParent,
-        String strTitleAppli,
+
         String strTitleSuffix,
         //String strPathAbsHomeAppli,
         String strNameDirSub, // nil value allowed
@@ -824,7 +821,7 @@ abstract public class S_FileChooserAbs
     {
         String strMethod = _f_s_strClass + "_s_getFileOnlyDir_(...)";
         
-        JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleAppli, strTitleSuffix);
+        JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleSuffix);
         
         if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -871,13 +868,13 @@ abstract public class S_FileChooserAbs
            
         if (! fleOpen.exists())
         {
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, "file not found: " + fleSelected.getAbsolutePath());
+            OPAbstract.s_showDialogError(cmpFrameParent,"file not found: " + fleSelected.getAbsolutePath());
             return null;
         }
         
         if (! fleOpen.isDirectory())
         {
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, "not a directory: " + fleSelected.getAbsolutePath());
+            OPAbstract.s_showDialogError(cmpFrameParent, "not a directory: " + fleSelected.getAbsolutePath());
             return null;
         }
         
@@ -887,14 +884,14 @@ abstract public class S_FileChooserAbs
     }
     
     static protected JFileChooser _s_getFileChooserOnlyFile_(
-        String strTitleAppli,
+ 
         String strTitleSuffix,
         FileFilterExtended ffe
     )
     {
-        String strMethod = _f_s_strClass + "_s_getFileChooserOnlyFile_(strTitleAppli, strTitleSuffix, ffe)";
+        String strMethod = _f_s_strClass + "_s_getFileChooserOnlyFile_(strTitleSuffix, ffe)";
         
-        JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleAppli, strTitleSuffix);
+        JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleSuffix);
         
         if (jfc == null)
         {
@@ -913,16 +910,16 @@ abstract public class S_FileChooserAbs
     
     
     static protected JFileChooser _s_getFileChooser_(
-        String strTitleAppli,
+
         String strTitleSuffix
         )
     {
-        String strMethod = _f_s_strClass + "_s_getFileChooser_(strTitleAppli, strTitleSuffix)";
+        String strMethod = _f_s_strClass + "_s_getFileChooser_(strTitleSuffix)";
         
         JFileChooser jfc = new JFileChooser();
         
         
-        jfc.setDialogTitle(strTitleAppli + " - " + strTitleSuffix);
+        jfc.setDialogTitle(System.getProperty("_appli.title") + " - " + strTitleSuffix);
         jfc.setDialogType(JFileChooser.CUSTOM_DIALOG);
         
         FVExtended mfv = new FVExtended();
@@ -955,7 +952,7 @@ abstract public class S_FileChooserAbs
             ==> ask for overwrite
     **/
     static protected File _s_getSaveFile_(
-        String strTitleAppli,
+
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String[] strsExtension,
@@ -971,7 +968,7 @@ abstract public class S_FileChooserAbs
 		FileFilterExtended ffe = new FileFilterExtended(strsExtension, strDescription);	
 	
 		JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile(
-		    strTitleAppli, strApproveButtonText, ffe);
+		    strApproveButtonText, ffe);
 		
         if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -1010,7 +1007,7 @@ abstract public class S_FileChooserAbs
                     MySystem.s_printOutTrace(strMethod, "fleSave.exists(), strAbsolutePath=" + strAbsolutePath);
                     
                     OPAbstract.s_showDialogWarning(
-                        cmpFrameParent, strTitleAppli, "File (with same short name) already exists:\n " + strAbsolutePath);
+                        cmpFrameParent, "File (with same short name) already exists:\n " + strAbsolutePath);
                     
                     return null;
                 }
@@ -1045,7 +1042,7 @@ abstract public class S_FileChooserAbs
             String strBody = S_FileChooserAbs._s_getBodyDlgErrorExtension(strsExtension, strFileExtensionCur,
                 fleSelected.getName());
                      
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -1053,7 +1050,7 @@ abstract public class S_FileChooserAbs
            
         if (fleSave.exists())
         {
-            //OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, "File already exists:\n " + fleSelected.getAbsolutePath());
+            //OPAbstract.s_showDialogError(cmpFrameParent, "File already exists:\n " + fleSelected.getAbsolutePath());
             //return null;
         
             MySystem.s_printOutTrace(strMethod, 
@@ -1067,7 +1064,7 @@ abstract public class S_FileChooserAbs
             strBody += "\n\n";
             strBody += "Overwrite this file?"; 
             
-            if (! OPAbstract.s_showWarningConfirmDialog(cmpFrameParent, strTitleAppli, strBody))
+            if (! OPAbstract.s_showWarningConfirmDialog(cmpFrameParent,  strBody))
             {
                 MySystem.s_printOutTrace(strMethod, "cancelled by user");
                 return null;
@@ -1081,7 +1078,7 @@ abstract public class S_FileChooserAbs
     }
     
     static protected File _s_getSaveFile_(
-        String strTitleAppli,
+
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String strExtension,
@@ -1100,7 +1097,7 @@ abstract public class S_FileChooserAbs
 	        );
 	    
 		JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile(
-		    strTitleAppli, strApproveButtonText, ffe);
+		    strApproveButtonText, ffe);
 		    
 		if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -1137,7 +1134,7 @@ abstract public class S_FileChooserAbs
                 MySystem.s_printOutTrace(strMethod, "fleSave.exists(), strAbsolutePath=" + strAbsolutePath);
                     
                 OPAbstract.s_showDialogWarning(
-                    cmpFrameParent, strTitleAppli, "File (with same short name) already exists:\n " + strAbsolutePath);
+                    cmpFrameParent, "File (with same short name) already exists:\n " + strAbsolutePath);
                     
                 return null;
             }
@@ -1152,7 +1149,7 @@ abstract public class S_FileChooserAbs
         { 
             
                 
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, "wrong file extension name: " + strFileExtensionCur + "\n... should be: " + strExtension);
+            OPAbstract.s_showDialogError(cmpFrameParent,  "wrong file extension name: " + strFileExtensionCur + "\n... should be: " + strExtension);
             return null;
         }
         
@@ -1160,8 +1157,7 @@ abstract public class S_FileChooserAbs
            
         if (fleSave.exists())
         {
-            //OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, "File already exists:\n " + fleSelected.getAbsolutePath());
-            //return null;
+            
             MySystem.s_printOutTrace(strMethod, 
                 "fleSave.exists(), fleSave.getAbsolutePath()=" + fleSave.getAbsolutePath());
             
@@ -1173,7 +1169,7 @@ abstract public class S_FileChooserAbs
             strBody += "\n\n";
             strBody += "Overwrite this file?"; 
             
-            if (! OPAbstract.s_showWarningConfirmDialog(cmpFrameParent, strTitleAppli, strBody))
+            if (! OPAbstract.s_showWarningConfirmDialog(cmpFrameParent, strBody))
             {
                 MySystem.s_printOutTrace(strMethod, "cancelled by user");
                 return null;
@@ -1192,7 +1188,7 @@ abstract public class S_FileChooserAbs
         ==> don't show JWS cache folder
     **/
     static protected File _s_getOpenFile_(
-        String strTitleAppli,
+
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String strExtension,
@@ -1210,7 +1206,7 @@ abstract public class S_FileChooserAbs
             );
 		
 		JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile(
-		    strTitleAppli, strApproveButtonText, ffe);
+		    strApproveButtonText, ffe);
 		    
 		if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");  
@@ -1246,7 +1242,7 @@ abstract public class S_FileChooserAbs
             {
                 Toolkit.getDefaultToolkit().beep();
                 String strBody = _s_strErrorFileNotFound + strAbsolutePath;
-                OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+                OPAbstract.s_showDialogError(cmpFrameParent, strBody);
                 return null;
             }
             
@@ -1266,7 +1262,7 @@ abstract public class S_FileChooserAbs
             strBody += " " + strExtension;
             
             
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -1276,7 +1272,7 @@ abstract public class S_FileChooserAbs
         {
             Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
-            OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
             return null;
         }
         
@@ -1467,7 +1463,7 @@ abstract public class S_FileChooserAbs
         
         String strNameDirSub, // nil value allowed
         String strNameDirSubSub,  // nil value alloed
-        String strTitleAppli,
+
         String strTitleSuffix,
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -1480,7 +1476,7 @@ abstract public class S_FileChooserAbs
             if WebStart, set current directory to ?user.home?
         */
 	
-		JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleAppli, strTitleSuffix);
+		JFileChooser jfc = S_FileChooserAbs._s_getFileChooser_(strTitleSuffix);
         
         if (jfc == null)
             MySystem.s_printOutExit(strMethod, "nil jfc");
@@ -1531,7 +1527,7 @@ abstract public class S_FileChooserAbs
         if (fleSave.exists())
         {
             OPAbstract.s_showDialogError(
-            cmpFrameParent, strTitleAppli, "File (or directory) already exists:\n " + fleSelected.getAbsolutePath());
+            cmpFrameParent, "File (or directory) already exists:\n " + fleSelected.getAbsolutePath());
             return null;
         }
             
@@ -1547,14 +1543,14 @@ abstract public class S_FileChooserAbs
    
     
     static private JFileChooser _s_getFileChooserOnlyFile(
-        String strTitleAppli,
+
         String strTitleSuffix,
         FileFilterExtended ffe
     )
     {
-        String strMethod = _f_s_strClass + "_s_getFileChooserOnlyFile(strTitleAppli, strTitleSuffix, ffe)";
+        String strMethod = _f_s_strClass + "_s_getFileChooserOnlyFile(strTitleSuffix, ffe)";
         
-        JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile_(strTitleAppli, strTitleSuffix, ffe);
+        JFileChooser jfc = S_FileChooserAbs._s_getFileChooserOnlyFile_(strTitleSuffix, ffe);
         
         if (jfc == null)
         {

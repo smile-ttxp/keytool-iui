@@ -100,14 +100,14 @@ abstract public class MIHelpAboutAppliAbstract extends MIAbstract
     
     protected MIHelpAboutAppliAbstract(
         final Component cmpFrameOwner,
-        final String strTitleApplication,
+    
         final String strDlgBodyVersion,
         final String strProductID,
         final String strDlgBodyTextThirdParty,
         final PTabHelpAppliAdvancedAbs pnlTabAdvanced // created in subclasses
             )
     {
-        super(strTitleApplication + " ...");
+        super(System.getProperty("_appli.title") + " ...");
         
         String strMethod = "MIHelpAboutAppliAbstract(...)";
         
@@ -128,7 +128,7 @@ abstract public class MIHelpAboutAppliAbstract extends MIAbstract
                 {
                     _dlg = new DHelpAboutAppli(
                         cmpFrameOwner,
-                        strTitleApplication, 
+                  
                         MIHelpAboutAppliAbstract.s_strTitlePrefix,
                         strDlgBodyVersion,
                         strDlgBodyCopyright,

@@ -86,9 +86,9 @@ final public class MHelpAboutEditorNote extends MHelpAboutAbstract
         return true;
     }
     
-    public MHelpAboutEditorNote(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutEditorNote(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
    

@@ -141,11 +141,11 @@ final public class DIImage extends DEscapeAbstract implements
     
     public DIImage(
         Frame frm,
-        String strTitleApplication,
+     
         String strTitle,
         ImageIcon iin)
     {
-        super(frm, strTitleApplication + " - " + strTitle, true);
+        super(frm, System.getProperty("_appli.title") + " - " + strTitle, true);
         
         this._iin = iin;
     }

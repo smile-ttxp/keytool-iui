@@ -45,12 +45,11 @@ final public class DPasswordConfirmSave extends DPasswordConfirmAbs
     
     
     public DPasswordConfirmSave(
-        Component cmpFrameOwner,
-        String strTitleAppli)
+        Component cmpFrameOwner)
     {
         super(
             cmpFrameOwner, 
-            strTitleAppli, 
+
             DPasswordConfirmSave._f_s_strTitleThis); 
     }
     
@@ -67,21 +66,21 @@ final public class DPasswordConfirmSave extends DPasswordConfirmAbs
         
         if (strEnterNew.length() < 1)
         {
-            OPAbstract.s_showDialogWarning(this, getTitle(), "Please enter new password");
+            OPAbstract.s_showDialogWarning(this, "Please enter new password");
             
             return false;
         }
         
         if (strConfirmNew.length() < 1)
         {
-            OPAbstract.s_showDialogWarning(this, getTitle(), "Please confirm new password");
+            OPAbstract.s_showDialogWarning(this, "Please confirm new password");
             
             return false;
         }
         
         if (strEnterNew.compareTo(strConfirmNew) != 0)
         {
-            OPAbstract.s_showDialogWarning(this, getTitle(), "Passwords do not match");
+            OPAbstract.s_showDialogWarning(this, "Passwords do not match");
             
             return false;
         }

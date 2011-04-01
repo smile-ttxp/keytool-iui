@@ -105,7 +105,7 @@ abstract public class DLoadingAbs extends DEscapeAbstract implements
     {
       stop();
       
-      this._strTitleApplication = null;
+ 
       this._strLoadingWhat = null;
       this._dimSize = null;
 
@@ -173,15 +173,9 @@ abstract public class DLoadingAbs extends DEscapeAbstract implements
     {
         String strMethod = "init()";
 
-        if (this._strTitleApplication == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil this._strTitleApplication");
-            return false;
-        }
 
 
-
-        setTitle(this._strTitleApplication + " - " + _s_strTitleSuffix);
+        setTitle(System.getProperty("_appli.title") + " - " + _s_strTitleSuffix);
 
         if (this._strLoadingWhat == null)
         {
@@ -216,13 +210,13 @@ abstract public class DLoadingAbs extends DEscapeAbstract implements
 
     protected DLoadingAbs(
         Frame fmrOwner,
-        String strTitleApplication,
+   
         String strLoadingWhat,
         java.awt.Dimension dimSize // created by subclasses
             )
     {
         super(fmrOwner, false);
-        this._strTitleApplication = strTitleApplication;
+     
         this._strLoadingWhat = strLoadingWhat;
         this._dimSize = dimSize;
 
@@ -244,6 +238,6 @@ abstract public class DLoadingAbs extends DEscapeAbstract implements
 
     private JLabel _lbl1 = null;
     private JLabel _lbl2 = null;
-    private String _strTitleApplication = null;
+ 
     private String _strLoadingWhat = null;
 }

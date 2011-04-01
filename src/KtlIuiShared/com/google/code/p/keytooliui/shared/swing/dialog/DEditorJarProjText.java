@@ -167,15 +167,15 @@ public class DEditorJarProjText extends DEditorAbstract
         this._strPathRelativeFile = null;
     }
     
-    public DEditorJarProjText(DEditorAbstractListener dapListenerParent, Component cmpFrameOwner, String strTitleApplication)
+    public DEditorJarProjText(DEditorAbstractListener dapListenerParent, Component cmpFrameOwner)
     {
-        super(dapListenerParent, cmpFrameOwner, strTitleApplication, _s_strTitleSuffix);
+        super(dapListenerParent, cmpFrameOwner, _s_strTitleSuffix);
         
-        String strMethod = "DEditorJarProjText(dapListenerParent, cmpFrameOwner, strTitleApplication)";
+        String strMethod = "DEditorJarProjText(dapListenerParent, cmpFrameOwner)";
         
         try
 	    {
-	        super._pnd_ = new PEditorDefaultJar(super._pndListenerThis_, cmpFrameOwner, strTitleApplication);
+	        super._pnd_ = new PEditorDefaultJar(super._pndListenerThis_, cmpFrameOwner);
 	    }
 	    
 	    catch(Exception exc)

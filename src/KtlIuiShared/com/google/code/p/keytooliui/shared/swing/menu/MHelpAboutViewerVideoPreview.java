@@ -84,9 +84,9 @@ final public class MHelpAboutViewerVideoPreview extends MHelpAboutAbstract
         return true;
     }
     
-    public MHelpAboutViewerVideoPreview(Component cmpFrameOwner, String strTitleApplication)
+    public MHelpAboutViewerVideoPreview(Component cmpFrameOwner)
     {
-        super(cmpFrameOwner, strTitleApplication);
+        super(cmpFrameOwner);
     }
  
     // -------

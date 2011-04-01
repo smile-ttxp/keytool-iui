@@ -34,13 +34,13 @@ final public class MBViewerFileTextHtmlPreviewJar extends MBViewerFileTextAbs
     
     public MBViewerFileTextHtmlPreviewJar(
         java.awt.Component cmpFrameOwner,
-        String strApplicationTitle,
+    
         ActionListener actListenerParentFrame,
         ActionListener actListenerParentPanel)
     {
         super(actListenerParentFrame, actListenerParentPanel);
         
-        super._menHelpAbout_ = new MHelpAboutViewerHtmlPreviewJar(cmpFrameOwner, strApplicationTitle);
+        super._menHelpAbout_ = new MHelpAboutViewerHtmlPreviewJar(cmpFrameOwner);
     }
     
     

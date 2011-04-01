@@ -83,11 +83,10 @@ final public class S_Manifest
     */
     static public byte[] s_toByteArray(
         Manifest man,
-        Frame frmOwner,
-        String strTitleAppli
+        Frame frmOwner
         ) 
     {
-        String strMethod = _f_s_strClass + "s_toByteArray(man, frmOwner, strTitleAppli)";
+        String strMethod = _f_s_strClass + "s_toByteArray(...)";
         
         if (man == null)
         {
@@ -110,7 +109,7 @@ final public class S_Manifest
             
             String strBody = "Got IO exception"; 
             
-            OPAbstract.s_showDialogError(frmOwner, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmOwner, strBody);
             
             return null;
         }

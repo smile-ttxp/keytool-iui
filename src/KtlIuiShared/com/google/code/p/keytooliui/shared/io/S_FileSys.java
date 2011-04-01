@@ -1518,8 +1518,8 @@ public class S_FileSys
 	    {
 	        MySystem.s_printOutWarning(strMethod, "fle: cannot read file:" + fle.toString()); 
 	        
-	        String strTitle = _s_strDialogFileProtectedTitle;
-            com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, strTitle, _s_strDialogFileProtectedBodyR + "\n" + fle.toString());
+	        
+            com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, _s_strDialogFileProtectedBodyR + "\n" + fle.toString());
 	        
 	        
 	        return false;
@@ -1532,8 +1532,8 @@ public class S_FileSys
 	        {
 	            MySystem.s_printOutWarning(strMethod, "fle: cannot write file:" + fle.toString()); 
     	        
-	            String strTitle = _s_strDialogFileProtectedTitle;
-                com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, strTitle, _s_strDialogFileProtectedBodyW + "\n" + fle.toString());
+	       
+                com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, _s_strDialogFileProtectedBodyW + "\n" + fle.toString());
 
 	            return false;
 	        }
@@ -1543,8 +1543,8 @@ public class S_FileSys
 	    {
 	        excAccessControl.printStackTrace();
 	        MySystem.s_printOutWarning(strMethod, "excAccessControl caught");
-	        String strTitle = _s_strDialogFileProtectedTitle;
-	        com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, strTitle, _s_strDialogFileProtectedBodyW + "\n" + fle.toString());
+	       
+	        com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, _s_strDialogFileProtectedBodyW + "\n" + fle.toString());
 	        return false;
 	    }
 	    
@@ -1588,8 +1588,8 @@ public class S_FileSys
 	        {
 	            MySystem.s_printOutWarning(strMethod, "fle: cannot read file:" + fle.toString()); 
     	        
-	            String strTitle = _s_strDialogFileProtectedTitle;
-                com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, strTitle, _s_strDialogFileProtectedBodyR + "\n" + fle.toString());
+	     
+                com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, _s_strDialogFileProtectedBodyR + "\n" + fle.toString());
     	        
 	            return false;
 	        }
@@ -1599,8 +1599,8 @@ public class S_FileSys
 	    {
 	        excAccessControl.printStackTrace();
 	        MySystem.s_printOutWarning(strMethod, "excAccessControl caught");
-	        String strTitle = _s_strDialogFileProtectedTitle;
-	        com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, strTitle, _s_strDialogFileProtectedBodyW + "\n" + fle.toString());
+	        
+	        com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogWarning(null, _s_strDialogFileProtectedBodyW + "\n" + fle.toString());
 	        return false;
 	    }
 	    

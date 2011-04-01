@@ -92,11 +92,10 @@ abstract public class DPasswordAbs extends DEscapeAbstract implements
     
     protected DPasswordAbs(
         Component cmpFrameOwner,
-        String strTitleAppli,
         String strTitleThis)
     {
         super((Frame) cmpFrameOwner, 
-            strTitleAppli + " - " + strTitleThis,
+            System.getProperty("_appli.title") + " - " + strTitleThis,
             true); // true ==> modal=true
         
                  

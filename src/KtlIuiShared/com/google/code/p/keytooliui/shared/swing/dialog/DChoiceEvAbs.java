@@ -106,13 +106,12 @@ abstract public class DChoiceEvAbs extends DEscapeAbstract implements
     }
     
     protected DChoiceEvAbs(
-        String strTitleApplication,
         String strTitleSuffix
         )
     {
         super((Frame) null, true);
         
-        setTitle(strTitleApplication + " - " + strTitleSuffix);
+        setTitle(System.getProperty("_.appli.title") + " - " + strTitleSuffix);
         
         
         

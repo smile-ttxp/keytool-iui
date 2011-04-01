@@ -132,7 +132,7 @@ abstract public class MHelpOnlineAbstract extends MAbstract
     // ---------
     // PROTECTED
     
-    protected MHelpOnlineAbstract(java.awt.Component cmpFrameOwner, String strTitleApplication)
+    protected MHelpOnlineAbstract(java.awt.Component cmpFrameOwner)
     {
         super();
 
@@ -141,8 +141,8 @@ abstract public class MHelpOnlineAbstract extends MAbstract
         javax.swing.ImageIcon iin = com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("webcomponent16.gif");
         setIcon(iin);
         
-        this._hoaHome = new MIHelpOnlineHome(cmpFrameOwner, strTitleApplication);
-        this._hoaSupport = new MIHelpOnlineSupport(cmpFrameOwner, strTitleApplication);
+        this._hoaHome = new MIHelpOnlineHome(cmpFrameOwner);
+        this._hoaSupport = new MIHelpOnlineSupport(cmpFrameOwner);
     } 
     
     // -------

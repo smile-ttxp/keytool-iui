@@ -2,9 +2,6 @@ package com.google.code.p.keytooliui.shared.util.jarsigner;
 
 import java.awt.Frame;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.UnrecoverableEntryException;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
@@ -21,7 +18,7 @@ public class UtilSK
 {
     static private String _s_dumpIt(
         Frame frmParent, 
-        String strTitleAppli,
+    
         KeyStore kst,
         String strAlias,
         char[] chrsPasswdEntry
@@ -92,7 +89,7 @@ public class UtilSK
     
     static public void s_show(
         Frame frmParent, 
-        String strTitleAppli,
+    
         KeyStore kst,
         String strAlias,
         char[] chrsPasswdEntry)
@@ -109,7 +106,7 @@ public class UtilSK
         
         try
         {
-            strContents = UtilSK._s_dumpIt(frmParent, strTitleAppli, kst, strAlias, chrsPasswdEntry);
+            strContents = UtilSK._s_dumpIt(frmParent, kst, strAlias, chrsPasswdEntry);
         }
         
         catch(java.security.UnrecoverableKeyException excUnrecoverableKey)
@@ -119,7 +116,7 @@ public class UtilSK
             strBody += "\n  " + excUnrecoverableKey.getMessage();
             strBody += "\n \n" + "Given password may be wrong!";
  
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
             
             // ending
             return;
@@ -131,7 +128,7 @@ public class UtilSK
             String strBody = "Got exception.";
             strBody += "\n  " + exc.getMessage();
  
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
             
             // ending
             return;
@@ -144,7 +141,7 @@ public class UtilSK
             
             String strBody = "Failed to get contents.";
  
-            OPAbstract.s_showDialogError(frmParent, strTitleAppli, strBody);
+            OPAbstract.s_showDialogError(frmParent, strBody);
             
             // --
             return;
@@ -157,7 +154,7 @@ public class UtilSK
         com.google.code.p.keytooliui.shared.swing.dialog.DViewString vsg = new
             com.google.code.p.keytooliui.shared.swing.dialog.DViewString(
             frmParent,
-            strTitleAppli + " - " + "view" + " " + "SecretKey infos",
+            //System.getProperty("_appli.title") + " - " + "view" + " " + "SecretKey infos",
             strContents
             );
                     

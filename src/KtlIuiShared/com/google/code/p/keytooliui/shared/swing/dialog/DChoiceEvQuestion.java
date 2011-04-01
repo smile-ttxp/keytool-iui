@@ -147,11 +147,9 @@ final public class DChoiceEvQuestion extends DChoiceEvAbs
     }
     
     public DChoiceEvQuestion(
-        String strTitleAppli,
         String strAllowedEval)
     {
         super(
-            strTitleAppli,
             DChoiceEvQuestion._s_strTitleSuffix
             );
             

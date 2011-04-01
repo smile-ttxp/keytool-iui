@@ -116,12 +116,12 @@ abstract public class PSelBtnTfdAbs extends PSelBtnAbs
     
     protected PSelBtnTfdAbs(
         Frame frmParent, 
-        String strTitleAppli, 
+     
         String strLabel,
         boolean blnFieldRequired
         )
     {
-        super(frmParent, strTitleAppli, strLabel, blnFieldRequired);
+        super(frmParent, strLabel, blnFieldRequired);
     }
     
     // -------

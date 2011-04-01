@@ -150,7 +150,7 @@ final public class MBEditorNote extends MBEditorAbstract
     
     public MBEditorNote(
         java.awt.Component cmpFrameOwner,
-        String strApplicationTitle,
+  
         java.awt.event.ActionListener actListenerParent,
         MFileAllEditorListener nfeListenerParent,
         MEditEditorTextListener netListenerParent,
@@ -168,7 +168,7 @@ final public class MBEditorNote extends MBEditorAbstract
         this._nct = new METextFgColorEditorText();
         this._nca = new METextAlignmentEditorText(actions);
         
-        super._nhp_ = new MHelpAboutEditorNote(cmpFrameOwner, strApplicationTitle);
+        super._nhp_ = new MHelpAboutEditorNote(cmpFrameOwner);
     }
     
     public boolean init()

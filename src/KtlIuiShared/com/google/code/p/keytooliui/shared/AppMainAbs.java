@@ -13,6 +13,7 @@ package com.google.code.p.keytooliui.shared;
     
 **/
 
+
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -25,9 +26,9 @@ import java.io.File;
 import java.util.Locale;
 import java.util.Vector;
 
+
 import com.google.code.p.keytooliui.shared.io.LastUserAbstract;
 import com.google.code.p.keytooliui.shared.io.LastUserPref;
-import com.google.code.p.keytooliui.shared.io.LastUserProj;
 import com.google.code.p.keytooliui.shared.io.S_FileSys;
 import com.google.code.p.keytooliui.shared.io.UserChoice;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
@@ -91,9 +92,18 @@ abstract public class AppMainAbs extends AppAbs implements
         shound return:
               "rc[version]xls_hs"
     */
-    static public String s_getNameLibHelpStandardShort(String strAppliLibNameShort)
-    {        
-        String str = _s_getNameLibHelpPrefix(strAppliLibNameShort);   
+    static public String s_getNameLibHelpStandardShort()
+    {
+        String strAppliNameShort = System.getProperty("_appli.name.short");
+
+        if (strAppliNameShort == null)
+        {
+            // TBRL!
+            return null;
+        }
+
+
+        String str = _s_getNameLibHelpPrefix(strAppliNameShort);
         str += AppMainAbs.f_s_strKWLibHelpStandard; // help type
         return str;
     }
@@ -106,9 +116,17 @@ abstract public class AppMainAbs extends AppAbs implements
               "rc[version]xls_hr"
               
     */
-    static public String s_getNameLibHelpStartedShort(String strAppliLibNameShort)
+    static public String s_getNameLibHelpStartedShort()
     {
-        String str = _s_getNameLibHelpPrefix(strAppliLibNameShort);   
+        String strAppliNameShort = System.getProperty("_appli.name.short");
+
+        if (strAppliNameShort == null)
+        {
+            // should not append, coz in prerequisite
+            return null;
+        }
+
+        String str = _s_getNameLibHelpPrefix(strAppliNameShort);
         str += AppMainAbs._f_s_strKWLibHelpStarted; // help type
         return str;
     }
@@ -309,7 +327,7 @@ abstract public class AppMainAbs extends AppAbs implements
         
         // test
         // TEST
-        _delayDoHelpBroker(this._strAppliPackNameShort);
+        _delayDoHelpBroker(/*this._strAppliPackNameShort*/);
         
         // ------
         // ending
@@ -491,14 +509,14 @@ abstract public class AppMainAbs extends AppAbs implements
     // ---------
     // PROTECTED
     
-    private String _strAppliPackNameShort;
+    //private String _strAppliPackNameShort;
     
-    protected String _strTitleAppli_ = null; // "[application]";
+
     
     protected AppMainAbs(
         boolean blnParentDirReadOnlyAllowed,
-        String strTitleAppli,
-        String strAppliPackNameShort, // eg: rcr, xlb, tpb, ktl, jst
+        //String strTitleAppli,
+        //String strAppliPackNameShort, // eg: rcr, xlb, tpb, ktl, jst
         boolean blnShowDialogExitConfirm,
         boolean blnIsHelpGettingStarted,
         boolean blnSetLAFSwing, // used to fix up JH's toolbar buttons
@@ -510,8 +528,8 @@ abstract public class AppMainAbs extends AppAbs implements
         String strMethod = "AppMainAbs(...)";
         
         this._blnParentDirReadOnlyAllowed = blnParentDirReadOnlyAllowed;
-        this._strTitleAppli_ = strTitleAppli;
-        this._strAppliPackNameShort = strAppliPackNameShort;
+
+        //this._strAppliPackNameShort = strAppliPackNameShort;
         this._blnShowDialogExitConfirm = blnShowDialogExitConfirm;
         this._blnSetLAFSwing = blnSetLAFSwing;
         this._blnInternAllowed = blnInternAllowed;
@@ -534,7 +552,7 @@ abstract public class AppMainAbs extends AppAbs implements
          
         if (blnIsHelpGettingStarted)
         {
-            this._hbrHelpStarted_ = this._doHelpBroker_(s_getNameLibHelpStartedShort(strAppliPackNameShort));
+            this._hbrHelpStarted_ = this._doHelpBroker_(s_getNameLibHelpStartedShort());
         
             if (this._hbrHelpStarted_ == null)
                 MySystem.s_printOutExit(this, strMethod, "nil this._hbrHelpStarted_");
@@ -575,16 +593,16 @@ abstract public class AppMainAbs extends AppAbs implements
     
     // test
     
-    private void _delayDoHelpBroker(final String strAppliPackNameShort)
+    private void _delayDoHelpBroker()
     {
-        final String strMethod = "_delayDoHelpBroker(strAppliPackNameShort)";
+        final String strMethod = "_delayDoHelpBroker()";
         
         javax.swing.SwingUtilities.invokeLater(new Runnable()
         {
             public void run()
             {
             javax.help.HelpBroker hbrHelpStandard = _doHelpBroker_(
-                AppMainAbs.s_getNameLibHelpStandardShort(strAppliPackNameShort));
+                AppMainAbs.s_getNameLibHelpStandardShort());
           
             if (hbrHelpStandard == null)
             {
@@ -667,7 +685,6 @@ abstract public class AppMainAbs extends AppAbs implements
     }
     
     protected boolean _createLastUserPreferences_(
-        String strDirSubAppli, 
         String strVersionAppli,
         java.util.Vector<UserChoice> vecUserChoice)
     {
@@ -676,11 +693,7 @@ abstract public class AppMainAbs extends AppAbs implements
         if (! this._blnAppliDirCanWrite_)
             return true;
 
-        if (strDirSubAppli==null)
-        {
-            MySystem.s_printOutExit(this, strMethod, "nil strDirSubAppli");
-            return false;
-        }
+
         
         if (vecUserChoice==null)
         {
@@ -710,46 +723,7 @@ abstract public class AppMainAbs extends AppAbs implements
         
         // --
         this._luaLastUserPreferences = new LastUserPref(
-	        fle.getAbsolutePath(), strDirSubAppli, strVersionAppli, vecUserChoice);
-	        
-	    return true;
-    }
-    
-    protected boolean _createLastUserProjects_(
-        String strDirSubAppli, 
-        String strVersionAppli,
-        java.util.Vector<UserChoice> vecUserChoice)
-    {
-        String strMethod = "_createLastUserProjects_(strDirSubAppli, strVersionAppli, vecUserChoice)";
-        
-        if (! this._blnAppliDirCanWrite_)
-            return true;
-        
-        if (strDirSubAppli==null)
-        {
-            MySystem.s_printOutExit(this, strMethod, "nil strDirSubAppli");
-            return false;
-        }
-        
-        if (vecUserChoice==null)
-        {
-            MySystem.s_printOutExit(this, strMethod, "nil vecUserChoice");
-            return false;
-        }
-        
-        // --
-
-        File fle = S_FileSys.s_getPathAbsParentAppli(this._blnParentDirReadOnlyAllowed);
-        
-        if (fle == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil fle");
-            return false;
-        }
-        
-        // --
-        this._luaLastUserProjects_ = new LastUserProj(
-	        fle.getAbsolutePath(), strDirSubAppli, strVersionAppli, vecUserChoice);
+	        fle.getAbsolutePath(), strVersionAppli, vecUserChoice);
 	        
 	    return true;
     }
@@ -759,7 +733,7 @@ abstract public class AppMainAbs extends AppAbs implements
     {
         final String strMethod = "_exitNormally_()";
         //com.google.code.p.keytooliui.shared.lang.thread.MyThreadAbs.s_dumpThreadsActive();
-        //System.out.println("\n\n>> " + this._strTitleAppli_ + " successfully exited");
+
         
         // -- begin test
         
@@ -1007,14 +981,11 @@ abstract public class AppMainAbs extends AppAbs implements
         if (_s_strDlgExitTitle == null)
             _s_getDialogProps();
         
-        String strTitle = _s_strDlgExitTitle;
         
-        if (this._strTitleAppli_ != null)
-            strTitle = this._strTitleAppli_ + " - " + _s_strDlgExitTitle;
         
         return com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showConfirmDialog(
             this._fmaFrame_,
-            strTitle,
+          
             _s_strDlgExitBody);
     }
     

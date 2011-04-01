@@ -90,14 +90,12 @@ abstract public class OPAbstract extends JOptionPane
     // -------------
     // STATIC PUBLIC
     
-    static public void s_showDialogWarning(Component cmpParent, String strTitleAppli, String strBody)
+    static public void s_showDialogWarning(Component cmpParent, String strBody)
     {    
         String strTitle = null;
         
-        if (strTitleAppli == null)
-            strTitle = OPAbstract._s_strTitleWarning;
-        else
-            strTitle = strTitleAppli + " - " + OPAbstract._s_strTitleWarning;
+        
+        strTitle = System.getProperty("_appli.title") + " - " + OPAbstract._s_strTitleWarning;
         
         Object[] objsOption = { OPAbstract._s_strButtonClose };
         
@@ -106,14 +104,9 @@ abstract public class OPAbstract extends JOptionPane
                 null, objsOption, objsOption[0]);
     }
     
-    static public void s_showDialogInfo(Component cmpParent, String strTitleAppli, String strBody)
+    static public void s_showDialogInfo(Component cmpParent, String strBody)
     {  
-        String strTitle = null;
-        
-        if (strTitleAppli == null)
-            strTitle = OPAbstract._s_strTitleInfo;
-        else
-            strTitle = strTitleAppli + " - " + OPAbstract._s_strTitleInfo;
+        String strTitle = System.getProperty("_appli.title") + " - " + OPAbstract._s_strTitleInfo;
         
         Object[] objsOption = { OPAbstract._s_strButtonClose };
         
@@ -129,43 +122,11 @@ abstract public class OPAbstract extends JOptionPane
         }
     }
     
-    /*static public void s_showDialogError(Component cmpParent, String strTitleAppli, String strBody,
-            String strPathAbsLog)
-    {        
-        String strTitle = null;
-        
-        if (strTitleAppli == null)
-            strTitle = OPAbstract._s_strTitleError;
-        else
-            strTitle = strTitleAppli + " - " + OPAbstract._s_strTitleError;
+
     
-        Object[] objsOption = null;
-        
-        if (strPathAbsLog == null)
-        {
-            objsOption = new Object[1];
-            objsOption[0] = OPAbstract._s_strButtonClose;
-        }
-        else
-        {
-            objsOption = new Object[2];
-            objsOption[0] = "Show log";
-            objsOption[1] = OPAbstract._s_strButtonClose;
-        }
-        
-        JOptionPane.showOptionDialog(cmpParent, strBody, strTitle, 
-                JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE,
-                null, objsOption, objsOption[0]);
-    }*/
-    
-    static public void s_showDialogError(Component cmpParent, String strTitleAppli, String strBody)
+    static public void s_showDialogError(Component cmpParent, String strBody)
     {        
-        String strTitle = null;
-        
-        if (strTitleAppli == null)
-            strTitle = OPAbstract._s_strTitleError;
-        else
-            strTitle = strTitleAppli + " - " + OPAbstract._s_strTitleError;
+        String strTitle = System.getProperty("_appli.title") + " - " + OPAbstract._s_strTitleError;
     
         String strPathAbsLog = MySystem.s_getPathLogSession();
      
@@ -215,7 +176,7 @@ abstract public class OPAbstract extends JOptionPane
                 return;
             }
             
-            DViewSourceFileTextSys dlg = new  DViewSourceFileTextSys(cmpParent, strTitleAppli);
+            DViewSourceFileTextSys dlg = new  DViewSourceFileTextSys(cmpParent);
             
             if (! dlg.init())
             {
@@ -237,13 +198,13 @@ abstract public class OPAbstract extends JOptionPane
     /**
         if any error, exiting
     **/
-    static public boolean s_showConfirmDialog(Component cmpParent, String strTitle, String strBody)
+    static public boolean s_showConfirmDialog(Component cmpParent, String strBody)
     {
-        String strWhere = OPAbstract._f_s_strClass + "s_showConfirmDialog(cmpParent, strTitle, strBody)";    
+        String strWhere = OPAbstract._f_s_strClass + "s_showConfirmDialog(cmpParent, strBody)";    
           
         Object[] objsOption = { OPAbstract._s_strButtonOk, OPAbstract._s_strButtonCancel};
         
-        int intReply = JOptionPane.showOptionDialog(cmpParent, strBody, strTitle, 
+        int intReply = JOptionPane.showOptionDialog(cmpParent, strBody, System.getProperty("_appli.title"),
             JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
             null, objsOption, objsOption[0]);
 
@@ -262,13 +223,13 @@ abstract public class OPAbstract extends JOptionPane
     // there is a warning, the user may choose to solve the problem
     // icon=warning
     // buttons: choice between Y/N
-    static public boolean s_showWarningConfirmDialog(Component cmpParent, String strTitle, String strBody)
+    static public boolean s_showWarningConfirmDialog(Component cmpParent, String strBody)
     {
-        String strWhere = OPAbstract._f_s_strClass + "s_showWarningConfirmDialog(cmpParent, strTitle, strBody)";    
+        String strWhere = OPAbstract._f_s_strClass + "s_showWarningConfirmDialog(cmpParent, strBody)";    
           
         Object[] objsOption = { OPAbstract._s_strButtonOk, OPAbstract._s_strButtonCancel};
         
-        int intReply = JOptionPane.showOptionDialog(cmpParent, strBody, strTitle, 
+        int intReply = JOptionPane.showOptionDialog(cmpParent, strBody, System.getProperty("_appli.title"),
             JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
             null, objsOption, objsOption[0]);
 
@@ -289,20 +250,20 @@ abstract public class OPAbstract extends JOptionPane
     
     static public String s_showQuestionInputDialog(
         Component cmpParent, // nil value allowed 
-        String strTitle, 
+   
         String strBody, 
         Object[] objsOptions, 
         Object objInitialValue)
     {
         String strWhere = OPAbstract._f_s_strClass + "s_showQuestionInputDialog(...)";    
         
-        if (strTitle==null || strBody==null || objsOptions==null || objInitialValue==null)
+        if (strBody==null || objsOptions==null || objInitialValue==null)
             MySystem.s_printOutExit(strWhere, "nil arg");
       
         int intMessageType = JOptionPane.QUESTION_MESSAGE;
         
         String strResult = (String) JOptionPane.showInputDialog(
-                cmpParent, strBody, strTitle, intMessageType,
+                cmpParent, strBody, System.getProperty("_appli.title"), intMessageType,
                 null, objsOptions, objInitialValue);
         
         // ending

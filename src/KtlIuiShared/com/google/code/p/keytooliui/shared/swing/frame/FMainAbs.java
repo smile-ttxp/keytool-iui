@@ -210,14 +210,14 @@ abstract public class FMainAbs extends FAbs
 
 
     protected FMainAbs(
-        String strTitleAppli,
+  
         java.awt.Image imgIcon,
         java.awt.event.WindowListener winListenerParent,
         //javax.help.HelpBroker hbrHelpStandard,  
         String strHelpHomeID, 
         boolean blnShowDialogLoadingProgress)
     {
-        super(strTitleAppli, imgIcon);
+        super(imgIcon);
 
         String strMethod = "FMainAbs(...)";
         
@@ -227,7 +227,7 @@ abstract public class FMainAbs extends FAbs
 
         if (blnShowDialogLoadingProgress) // not if for example, main appli is RCReader, and used as an help in another appli
         {
-            this._dlgLoading = new DLoadingAppli(this, super._strTitleApplication_);
+            this._dlgLoading = new DLoadingAppli(this);
 
             if (! this._dlgLoading.init())
                 MySystem.s_printOutExit(this, strMethod, "failed");

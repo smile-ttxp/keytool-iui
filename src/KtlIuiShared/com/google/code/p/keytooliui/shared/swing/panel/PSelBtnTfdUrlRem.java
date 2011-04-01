@@ -55,7 +55,7 @@ final public class PSelBtnTfdUrlRem extends PSelBtnTfdStrWAbs
     public PSelBtnTfdUrlRem(
         javax.swing.event.DocumentListener docListenerParent,
         Frame frmParent, 
-        String strTitleAppli, 
+    
         String strLabel,
         Object objDocPropValue,
         boolean blnFieldRequired
@@ -63,7 +63,7 @@ final public class PSelBtnTfdUrlRem extends PSelBtnTfdStrWAbs
     {
         super(
             frmParent, 
-            strTitleAppli, 
+        
             strLabel, 
             new TF30x20SelUrlRem(docListenerParent), 
             objDocPropValue,
@@ -199,6 +199,6 @@ final public class PSelBtnTfdUrlRem extends PSelBtnTfdStrWAbs
         strBody += strBodyWrongMid;
         strBody += strBodyWrongEnd;
         
-        OPAbstract.s_showDialogWarning(super._frmParent_, super._strTitleAppli_, strBody);
+        OPAbstract.s_showDialogWarning(super._frmParent_, strBody);
     }
 }

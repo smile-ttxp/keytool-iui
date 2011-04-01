@@ -55,6 +55,7 @@ abstract public class DViewSourceFileTextAbs extends DEscapeAbstract implements
     // ------
     // PUBLIC
     
+    @Override
     public void destroy()
     {
         if (this._btnClose != null)
@@ -79,6 +80,7 @@ abstract public class DViewSourceFileTextAbs extends DEscapeAbstract implements
 
     
     
+    @Override
     public void windowClosing(WindowEvent e)
     {
         _cancel();
@@ -134,7 +136,7 @@ abstract public class DViewSourceFileTextAbs extends DEscapeAbstract implements
     // ---------
     // PROTECTED
     
-    protected DViewSourceFileTextAbs(Component cmpFrameOwner, String strTitleApplication)
+    protected DViewSourceFileTextAbs(Component cmpFrameOwner)
     {
         super((Frame) cmpFrameOwner, true); // true ==> modal=true
 
@@ -142,7 +144,7 @@ abstract public class DViewSourceFileTextAbs extends DEscapeAbstract implements
         
         String strTitleThis = "view source file";
         
-        setTitle(strTitleApplication + " - " + strTitleThis);
+        setTitle(System.getProperty("_appli.title") + " - " + strTitleThis);
     }
     
     
