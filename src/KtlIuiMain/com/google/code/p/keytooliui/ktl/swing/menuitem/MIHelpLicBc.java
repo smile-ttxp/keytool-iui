@@ -18,89 +18,89 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
- 
- 
+
+
 package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
-/**
-**/
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.menuitem.*;
-
-import java.awt.event.*;
-import java.awt.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.dialog.DViewString;
+import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
 final public class MIHelpLicBc extends MIAbstract implements
-    ActionListener
+        ActionListener
 {
     // --------------
     // STATIC PRIVATE
-    
+
     static private String _s_strText = null;
-    
+
     // ------------------
     // STATIC INITIALIZER
 
     static
-    {    
+    {
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-            ".MIHelpLicBc" // class name
-            ;
+                com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+                        ".MIHelpLicBc" // class name
+                ;
 
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.menuitem.MIHelpLicBc";
-        
+
         try
         {
-            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
-                java.util.Locale.getDefault());
-                
+            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort,
+                    java.util.Locale.getDefault());
+
             MIHelpLicBc._s_strText = rbeResources.getString("text");
         }
-        
+
         catch (java.util.MissingResourceException excMissingResource)
         {
             excMissingResource.printStackTrace();
             MySystem.s_printOutExit(strWhere, "excMissingResource caught");
         }
     }
-    
+
     // ------
     // PUBLIC
-    
+
     public void actionPerformed(ActionEvent evtAction)
     {
         String strMethod = "actionPerformed(evtAction)";
-        
+
         DViewString vsg = new DViewString(
-            this._cmpFrameOwner,
-            this._strTitleAppli + " - " + MIHelpLicBc._s_strText,
-            org.bouncycastle.LICENSE.licenseText
-            );
-                    
-        if (! vsg.init())
+                this._cmpFrameOwner,
+                this._strTitleAppli + " - " + MIHelpLicBc._s_strText,
+                org.bouncycastle.LICENSE.licenseText
+        );
+
+        if (!vsg.init())
+        {
             MySystem.s_printOutExit(strMethod, "failed");
-                
+        }
+
         vsg.setVisible(true);
     }
-    
+
     public MIHelpLicBc(Component cmpFrameOwner, String strTitleAppli)
     {
         super(
-            MIHelpLicBc._s_strText + " " + "..."
-            );
-        
+                MIHelpLicBc._s_strText + " " + "..."
+        );
+
         this._cmpFrameOwner = cmpFrameOwner;
         this._strTitleAppli = strTitleAppli;
-        
+
         addActionListener(this);
     }
-    
+
     // -------
     // PRIVATE
-    
+
     private Component _cmpFrameOwner = null;
     private String _strTitleAppli = null;
 }

@@ -21,24 +21,12 @@
 
 package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
-/**
-
-**/
-
-
-import java.awt.event.*;
+import java.awt.event.ActionListener;
 
 final public class MISelTabJarVerify extends MISelTabAbs
-{    
-    // ------
-    // PUBLIC
-    
-    public MISelTabJarVerify(
-        ActionListener actListenerParent
-        )
+{
+    public MISelTabJarVerify(ActionListener actListenerParent)
     {
-        super(
-            "Signed JAR file", 
-            actListenerParent);
+        super("Signed JAR file", actListenerParent);
     }
 }

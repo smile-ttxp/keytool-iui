@@ -21,25 +21,15 @@
 
 package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
+import java.awt.event.ActionListener;
+
 /**
- *
  * @author bantchao
  */
-
-
-import java.awt.event.*;
-
 final public class MISelTabArcDir extends MISelTabAbs
-{    
-    // ------
-    // PUBLIC
-    
-    public MISelTabArcDir(
-        ActionListener actListenerParent
-        )
+{
+    public MISelTabArcDir(ActionListener actListenerParent)
     {
-        super(
-            "Archive directory in JAR format", 
-            actListenerParent);
+        super("Archive directory in JAR format", actListenerParent);
     }
 }

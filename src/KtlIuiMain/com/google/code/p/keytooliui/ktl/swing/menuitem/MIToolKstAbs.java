@@ -18,57 +18,53 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
- 
- 
+
+
 package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 /**
-    known subclasses:
-    . MIToolKstJks
-    . MIToolKstJceks
-**/
+ known subclasses:
+ . MIToolKstJks
+ . MIToolKstJceks
+ **/
 
 
-import com.google.code.p.keytooliui.shared.swing.menuitem.*;
-import com.google.code.p.keytooliui.shared.lang.*;
+import java.awt.event.ActionListener;
 
-import java.awt.event.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
 abstract public class MIToolKstAbs extends MIAbstract
-{   
+{
     public boolean init()
     {
         String strMethod = "init()";
-        
-        if (! super.init())
+
+        if (!super.init())
+        {
             return false;
-            
+        }
+
         javax.swing.ImageIcon iin = com.google.code.p.keytooliui.ktl.swing.imageicon.S_IINUI.s_get(
-            com.google.code.p.keytooliui.ktl.swing.button.BESTool16.f_s_strImage);
-            
+                com.google.code.p.keytooliui.ktl.swing.button.BESTool16.f_s_strImage);
+
         if (iin == null)
         {
             MySystem.s_printOutError(this, strMethod, "nil iin");
             return false;
         }
-        
+
         setIcon(iin);
-            
+
         // --
         return true;
     }
-    
+
     // ---------
     // PROTECTED
-    
-    protected MIToolKstAbs(
-        String strTypeKst,
-        ActionListener actListenerParent
-        )
+
+    protected MIToolKstAbs(String strTypeKst, ActionListener actListenerParent)
     {
-        super(
-            strTypeKst + " " + "keystore" + " " + "...",
-            actListenerParent
-            );
+        super(strTypeKst + " " + "keystore" + " " + "...", actListenerParent);
     }
 }

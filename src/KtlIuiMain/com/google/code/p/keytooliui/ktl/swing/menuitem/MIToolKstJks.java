@@ -18,27 +18,19 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
- 
- 
+
+
 package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
-/**
-**/
+import java.awt.event.ActionListener;
 
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
-
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks;
 
 final public class MIToolKstJks extends MIToolKstAbs
-{    
-    // ------
-    // PUBLIC
-    
+{
     public MIToolKstJks(ActionListener actListenerParent)
     {
-        super(
-            UtilKstJks.f_s_strKeystoreType,
-            actListenerParent
-            );
+        super(UtilKstJks.f_s_strKeystoreType, actListenerParent
+        );
     }
 }

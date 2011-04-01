@@ -18,92 +18,89 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
- 
- 
+
+
 package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 /**
-    known subclasses:
-    . MIViewKstJks
-    . MIViewKstJceks
-    
-**/
+ known subclasses:
+ . MIViewKstJks
+ . MIViewKstJceks
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.menuitem.*;
+ **/
 
-import java.awt.event.*;
+import java.awt.event.ActionListener;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
 abstract public class MIViewKstAbs extends MIAbstract
 {
     // --------------
     // STATIC PRIVATE
-    
+
     static private String _s_strText = null;
-    
+
     // ------------------
     // STATIC INITIALIZER
 
     static
-    {    
+    {
         String strBundleFileShort =
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-            ".MIViewKstAbs" // class name
-            ;
+                com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
+                        ".MIViewKstAbs" // class name
+                ;
 
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.menuitem.MIViewKstAbs";
-        
+
         try
         {
-            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
-                java.util.Locale.getDefault());
-                
+            ResourceBundle rbeResources = ResourceBundle.getBundle(strBundleFileShort, Locale.getDefault());
+
             MIViewKstAbs._s_strText = rbeResources.getString("text");
         }
-        
         catch (java.util.MissingResourceException excMissingResource)
         {
             excMissingResource.printStackTrace();
             MySystem.s_printOutExit(strWhere, "excMissingResource caught");
         }
     }
-    
+
     // ------
     // PUBLIC
-    
+
     public boolean init()
     {
         String strMethod = "init()";
-        
-        if (! super.init())
+
+        if (!super.init())
+        {
             return false;
-            
+        }
+
         javax.swing.ImageIcon iin = com.google.code.p.keytooliui.ktl.swing.imageicon.S_IINUI.s_get(
-            com.google.code.p.keytooliui.ktl.swing.button.BESView16.f_s_strImage);
-            
+                com.google.code.p.keytooliui.ktl.swing.button.BESView16.f_s_strImage);
+
         if (iin == null)
         {
             MySystem.s_printOutError(this, strMethod, "nil iin");
             return false;
         }
-        
+
         setIcon(iin);
-            
+
         // --
         return true;
     }
-    
+
     // ---------
     // PROTECTED
-    
-    protected MIViewKstAbs(
-        String strTypeKst,
-        ActionListener actListenerParent
-        )
+
+    protected MIViewKstAbs(String strTypeKst, ActionListener actListenerParent)
     {
-        super(
-            strTypeKst + " " + MIViewKstAbs._s_strText,
-            actListenerParent
-            );
+        super(strTypeKst + " " + MIViewKstAbs._s_strText, actListenerParent
+        );
     }
 }
