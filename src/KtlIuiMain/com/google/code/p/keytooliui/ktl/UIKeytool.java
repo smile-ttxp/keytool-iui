@@ -965,7 +965,6 @@ final public class UIKeytool extends AppMainUIAbs
     {
         super(
             blnShowDialogExitConfirm, // this field used for "blnExitNormally"
-            false, // blnAllowedCleanUpAllManagerMedia - change to "true" if uncommenting "MyManager.s_loadLibrary()" line
             false, // MEMO: blnParentDirReadOnlyAllowed
             UIKeytool.s_getTitleAppli(), 
             UIKeytool._F_STR_NAME_SHORT_APPLI, // eg: "ktl"

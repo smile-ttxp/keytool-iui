@@ -65,12 +65,10 @@ abstract public class Shared extends Object
     
     final static private String _f_s_strPackLibNameJH = "jh";   // JavaSoft's JavaHelp
     final static private String _f_s_strPackLibNameOH = "oh";   // Oracle Help for Java
-    final static private String _f_s_strPackLibNameJMF = "jmf"; // JavaSoft's Java Media Frameworks
     
     // -- package version
     final static private String _f_s_strPackLibVersionJH = "2004"; // changed march  25, 2007 (jh2002: from oct 23, 2005, previous: jh2001)
     final static private String _f_s_strPackLibVersionOH = "427";  // changed dec 01, 2004 (old:"423") 
-    final static private String _f_s_strPackLibVersionJMF = "211e";
     
     // -- lib short name
     
@@ -82,11 +80,6 @@ abstract public class Shared extends Object
     final static private String _f_s_strLibNameShortOHj = "j";
     final static private String _f_s_strLibNameShortJHjh = "jh";
     final static private String _f_s_strLibNameShortJHjsearch = "jsearch"; // used in XLBuilder
-    
-    final static private String _f_s_strLibNameShortJMFcor = "cor";
-    final static private String _f_s_strLibNameShortJMFplg = "plg";
-    final static private String _f_s_strLibNameShortJMFDllWin = "dllwin";
-    final static private String _f_s_strLibNameShortJMFSoLin = "solin";
     
     // --------------------------
     // FINAL STATIC PUBLIC STRING  
@@ -131,38 +124,6 @@ abstract public class Shared extends Object
         Shared._f_s_strLibSuffix_
         ; 
     
-    // eg: jmf[version]_cor.jar
-    final static public String f_s_strLibJMFcor =
-        Shared._f_s_strPackLibNameJMF + // package name
-        Shared._f_s_strPackLibVersionJMF + // package version
-        Shared._f_s_strLibNameShortJMFcor + // library short name
-        Shared._f_s_strLibSuffix_
-        ; 
-        
-    // eg: jmf[version]_plg.jar
-    final static public String f_s_strLibJMFplg =
-        Shared._f_s_strPackLibNameJMF + // package name
-        Shared._f_s_strPackLibVersionJMF + // package version
-        Shared._f_s_strLibNameShortJMFplg + // library short name
-        Shared._f_s_strLibSuffix_
-        ; 
-        
-    // eg: jmf[version]_dll_win.jar
-    final static public String f_s_strLibJMFDllWin =
-        Shared._f_s_strPackLibNameJMF + // package name
-        Shared._f_s_strPackLibVersionJMF + // package version
-        Shared._f_s_strLibNameShortJMFDllWin + // library short name
-        Shared._f_s_strLibSuffix_
-        ; 
-        
-    // eg: jmf[version]_so_lin.jar
-    final static public String f_s_strLibJMFSoLin =
-        Shared._f_s_strPackLibNameJMF + // package name
-        Shared._f_s_strPackLibVersionJMF + // package version
-        Shared._f_s_strLibNameShortJMFSoLin + // library short name
-        Shared._f_s_strLibSuffix_
-        ; 
-  
     final static public String f_s_strBundleDir = "com.google.code.p.keytooliui.shared.bundle";
     
     /*

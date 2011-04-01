@@ -432,7 +432,6 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
    
     public AppMainUIAbs(
         boolean blnExitNormally, // memo: should be equals to value of "blnShowDialogExitConfirm""
-        boolean blnAllowedCleanUpAllManagerMedia,
         boolean blnParentDirReadOnlyAllowed,
         String strTitleAppli,
         String strAppliNameShort, // eg: "ktl"
@@ -442,7 +441,6 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
         )
     {
         super(
-            blnAllowedCleanUpAllManagerMedia, // blnAllowedCleanUpAllManagerMedia - change to "true" if uncommenting "MyManager.s_loadLibrary()" line
             blnParentDirReadOnlyAllowed, // MEMO: blnParentDirReadOnlyAllowed
             strTitleAppli, 
             strAppliNameShort, // eg: "ktl"

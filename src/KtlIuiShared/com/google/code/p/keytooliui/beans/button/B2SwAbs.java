@@ -138,12 +138,6 @@ abstract public class B2SwAbs extends B2Abs implements
     
     protected FSwAbs _frmWindow_ = null;
     
-    protected B2SwAbs()
-    {
-        super();
-        com.google.code.p.keytooliui.javax.media.MyManager.s_loadLibrary(); // ?? should be in JMF's related subclasses? eg: B2SwRtpAbs & B2SwUrlMediaAbs
-    }
-    
     protected Image _getImageIconFrameTarget_()
     {
         if (! this._blnFrameTargetIconFromFrameSource)

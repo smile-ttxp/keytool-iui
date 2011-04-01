@@ -353,10 +353,6 @@ abstract public class AppMainAbs extends AppAbs implements
             this._vecMyHelpBroker.clear();
             this._vecMyHelpBroker = null;
         }
-        
-        
-        if (this._blnAllowedCleanUpAllManagerMedia)
-            com.google.code.p.keytooliui.javax.media.MyManager.s_cleanUpAll();
     }
     
     public void itemStateChanged(ItemEvent evtItem) 
@@ -489,7 +485,6 @@ abstract public class AppMainAbs extends AppAbs implements
     protected String _strTitleAppli_ = null; // "[application]";
     
     protected AppMainAbs(
-        boolean blnAllowedCleanUpAllManagerMedia,
         boolean blnParentDirReadOnlyAllowed,
         String strTitleAppli,
         String strAppliPackNameShort, // eg: rcr, xlb, tpb, ktl, jst
@@ -503,7 +498,6 @@ abstract public class AppMainAbs extends AppAbs implements
         
         String strMethod = "AppMainAbs(...)";
         
-        this._blnAllowedCleanUpAllManagerMedia = blnAllowedCleanUpAllManagerMedia;
         this._blnParentDirReadOnlyAllowed = blnParentDirReadOnlyAllowed;
         this._strTitleAppli_ = strTitleAppli;
         this._strAppliPackNameShort = strAppliPackNameShort;
@@ -960,7 +954,6 @@ abstract public class AppMainAbs extends AppAbs implements
     
     private boolean _blnInternAllowed = false;
     private boolean _blnSetLAFSwing;
-    private boolean _blnAllowedCleanUpAllManagerMedia = false;
     
     private boolean _blnShowDialogExitConfirm = false;
     private boolean _blnParentDirReadOnlyAllowed = false;
