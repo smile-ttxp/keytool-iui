@@ -47,7 +47,7 @@ final public class BESAboutAppliKtl extends BESAboutAppli24Abs
             
             MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
             "", // "Product ID: none", // TEMPO
-            MIHelpAboutAppliUIKtl.s_strDlgBodySuffix,
+            MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX,
             new PTabHelpAppliAdvancedUI()
                 );        
     }

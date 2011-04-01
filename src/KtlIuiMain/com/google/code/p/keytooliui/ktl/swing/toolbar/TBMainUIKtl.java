@@ -1,7 +1,6 @@
 package com.google.code.p.keytooliui.ktl.swing.toolbar;
 
-import java.awt.Component;
-import com.google.code.p.keytooliui.ktl.swing.button.BESAboutAppliKtl;
+import com.google.code.p.keytooliui.ktl.swing.button.BESHelpOnlineHome24;
 
 final public class TBMainUIKtl extends TBMainUIAbs
 {
@@ -26,7 +25,8 @@ final public class TBMainUIKtl extends TBMainUIAbs
                 
             strTitleAppli
             );
-        
+
+        super._btnHelpOnlineHome_ = new BESHelpOnlineHome24(frmParent, strTitleAppli);
         
         super._btnHelpTrack_.setToolTipText("Help on active window's task");
         

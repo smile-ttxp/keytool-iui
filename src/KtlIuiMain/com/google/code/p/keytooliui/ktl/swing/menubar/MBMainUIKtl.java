@@ -32,7 +32,7 @@ final public class MBMainUIKtl extends MBMainUIAbs
         super._menView_ = new MViewAllMainUIKtl(actListenerParent);
        
         
-        super._hamHelp_ = new MHelpAllMainUIKtl(
+        super._menHelp_ = new MHelpAllMainUIKtl(
             cmpFrameOwner, strTitleApplication/*, hbrHelpStandard*/, actListenerParent, strLic);
     }
 }

@@ -17,7 +17,7 @@ abstract public class BESViewAbs extends BEnabledState
     // --------------
     // STATIC PRIVATE
     
-    static private String _s_strToolTipText = null;
+    static private String _STR_TOOL_TIP_TEXT = null;
     
     // ------------------
     // STATIC INITIALIZER
@@ -39,7 +39,7 @@ abstract public class BESViewAbs extends BEnabledState
             java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
                 java.util.Locale.getDefault());
                 
-            BESViewAbs._s_strToolTipText = rbeResources.getString("toolTipText");
+            BESViewAbs._STR_TOOL_TIP_TEXT = rbeResources.getString("toolTipText");
         }
         
         catch (java.util.MissingResourceException excMissingResource)
@@ -64,10 +64,10 @@ abstract public class BESViewAbs extends BEnabledState
         
         String strMethod = "BESViewAbs(alr, strImage)";
         
-        if (BESViewAbs._s_strToolTipText == null)
+        if (BESViewAbs._STR_TOOL_TIP_TEXT == null)
             MySystem.s_printOutExit(this, strMethod, "nil BESViewAbs._s_strToolTipText");
             
-        setToolTipText(BESViewAbs._s_strToolTipText);
+        setToolTipText(BESViewAbs._STR_TOOL_TIP_TEXT);
         
         intDim += 8;
         java.awt.Dimension dim = new java.awt.Dimension(intDim, intDim);

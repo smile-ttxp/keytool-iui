@@ -14,16 +14,13 @@ import java.awt.*;
 
 final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
 {
-    // -------------------
-    // FINAL STATIC PUBLIC
+    final static public String f_s_strDlgBodyVersion = "2.5";
+
     
-    final static public String f_s_strDlgBodyVersion = "2.4.2";
-    
-    // -------------
-    // STATIC PUBLIC
-    
-    static public String s_strDlgBodySuffix = null;
-    
+    static public String STR_DLG_BODY_SUFFIX = null;
+
+
+    final static private String _F_STR_NAME_ICON = "aboutappli16.gif";
     
     // ------------------
     // STATIC INITIALIZER
@@ -42,7 +39,7 @@ final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
             java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
                 java.util.Locale.getDefault());
                 
-            MIHelpAboutAppliUIKtl.s_strDlgBodySuffix = rbeResources.getString("dlgBodySuffix");
+            MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX = rbeResources.getString("dlgBodySuffix");
         }
         
         catch (java.util.MissingResourceException excMissingResource)
@@ -77,18 +74,21 @@ final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
             
             // end modif
             
-            MIHelpAboutAppliUIKtl.s_strDlgBodySuffix,
+            MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX,
             new PTabHelpAppliAdvancedUI()
             );
     }
     
+    @Override
     public boolean init()
     {
         String strMethod = "init()";
+
+        if (! super.init())
+            return false;
         
         ImageIcon iin = com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get(
-            //com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strAppliUIKtl16
-            "aboutappli16.gif"
+            MIHelpAboutAppliUIKtl._F_STR_NAME_ICON
                 );
         
         if (iin == null)

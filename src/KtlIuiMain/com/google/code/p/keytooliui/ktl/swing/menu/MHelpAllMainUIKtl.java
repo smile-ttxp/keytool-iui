@@ -36,20 +36,42 @@ package com.google.code.p.keytooliui.ktl.swing.menu;
     . inited, added, and destroyed in superclass
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 
 import com.google.code.p.keytooliui.shared.swing.menu.*;
+import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
+import com.google.code.p.keytooliui.shared.swing.menuitem.MIHelpOnlineHome;
 
-import com.google.code.p.keytooliui.shared.lang.*;
 
-import java.awt.*;
 
 final public class MHelpAllMainUIKtl extends MHelpAllMainUIAbs
 {    
-    // ------
-    // PUBLIC
+    private MIAbstract _mimHomePage = null;
     
-    
+    @Override
+    public boolean init()
+    {
+        if (! super.init())
+            return false;
+
+        if (! this._mimHomePage.init())
+            return false;
+
+        super.add(this._mimHomePage, 1);
+
+        return true;
+    }
+
+    @Override
+    public void destroy()
+    {
+        super.destroy();
+
+        if (this._mimHomePage != null)
+        {
+            this._mimHomePage.destroy();
+            this._mimHomePage = null;
+        }
+    }
     
     public MHelpAllMainUIKtl(
         java.awt.Component cmpFrameOwner,
@@ -58,8 +80,10 @@ final public class MHelpAllMainUIKtl extends MHelpAllMainUIAbs
         java.awt.event.ActionListener actListenerParent,
         String strLic)
     {
-        super(cmpFrameOwner, strTitleApplication/*, hbrHelpStandard*/, strLic);
-        
+        super(cmpFrameOwner, strTitleApplication, strLic);
+
+
+        this._mimHomePage = new MIHelpOnlineHome(cmpFrameOwner, strTitleApplication);
         
         // march 14, 2003: in comments coz not cross-platforms
         //super._matHelpOnline_ = new MHelpOnlineUIKtl(cmpFrameOwner, strTitleApplication);

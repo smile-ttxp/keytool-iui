@@ -18,7 +18,10 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
- 
+
+/*
+ *  @author bantchao
+ */
  
 package com.google.code.p.keytooliui.ktl.swing.menubar;
 
@@ -28,6 +31,7 @@ import com.google.code.p.keytooliui.ktl.swing.menu.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.menubar.*;
 import com.google.code.p.keytooliui.shared.swing.menu.*;
+import javax.swing.Box;
 
 
 
@@ -92,7 +96,7 @@ abstract public class MBMainUIAbs extends MBMainAbstract
         
         // ----
         // help
-        if (super._hamHelp_ == null)
+        if (super._menHelp_ == null)
         {
             MySystem.s_printOutError(this, strMethod, "nil super._hamHelp_");
             return false;
@@ -105,7 +109,10 @@ abstract public class MBMainUIAbs extends MBMainAbstract
             add(super._pamPreference_);
         
         add(super._mimTools_);
-        add(super._hamHelp_);
+
+        super.add(Box.createHorizontalGlue());
+	super.add(Box.createVerticalGlue()); // !!
+        add(super._menHelp_);
         
         // ending
         return true;
