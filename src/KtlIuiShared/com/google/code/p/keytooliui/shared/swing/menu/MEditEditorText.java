@@ -26,7 +26,6 @@
 import com.google.code.p.keytooliui.shared.awt.awtevent.*;
 import com.google.code.p.keytooliui.shared.awt.awteventmulticaster.*;
 import com.google.code.p.keytooliui.shared.util.eventlistener.*;
-import com.google.code.p.keytooliui.shared.manager.*;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
