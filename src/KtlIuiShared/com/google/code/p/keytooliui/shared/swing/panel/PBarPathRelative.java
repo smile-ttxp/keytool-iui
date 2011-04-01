@@ -23,12 +23,7 @@
  package com.google.code.p.keytooliui.shared.swing.panel;
 
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-
-import javax.swing.*;
-
-import java.awt.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
 
 final public class PBarPathRelative extends PBarPathAbstract
 {    
@@ -71,12 +66,8 @@ final public class PBarPathRelative extends PBarPathAbstract
     // ------
     // PUBLIC
 
-    public PBarPathRelative(int intH, Color colFg, Font fnt)
+    public PBarPathRelative(int intH)
     {
-        super(intH, colFg, fnt, _s_strLabelTip);
+        super(intH, _s_strLabelTip);
     }
-    
-    
-    // -------
-    // PRIVATE
 }

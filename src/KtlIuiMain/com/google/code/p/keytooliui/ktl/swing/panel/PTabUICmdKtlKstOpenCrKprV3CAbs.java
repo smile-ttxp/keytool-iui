@@ -11,32 +11,32 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     
 **/
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.util.Vector;
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import com.google.code.p.keytooliui.shared.crypto.asnl.x509.MyKeyPurposeId;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
 import org.bouncycastle.asn1.DERObjectIdentifier;
 import org.bouncycastle.asn1.x509.KeyPurposeId;
 import org.bouncycastle.asn1.x509.KeyUsage;
-import com.google.code.p.keytooliui.shared.crypto.asnl.x509.MyKeyPurposeId;
-import com.google.code.p.keytooliui.ktl.io.*;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-
-import javax.swing.*;
-import javax.swing.border.TitledBorder;
-import javax.swing.event.*;
-import javax.swing.text.*;
-
-import java.awt.*;
-
-abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpenCrKprAbs implements
-        ChangeListener
+abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpenCrKprAbs implements ChangeListener
 {
      // --------------------
     // FINAL STATIC PRIVATE
-    
-    final static private Font _f_s_fntLabelCrtExtEnabled = new Font("Dialog", Font.BOLD, 12);
     
     final static private String _f_s_strTextCrtExtEnabled = "ENABLED?";
     final static private String _f_s_strTextCrtExtCritical = "            - CRITICAL?";
@@ -502,7 +502,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblCrtExtKUEnabled = new JLabel();
-        this._lblCrtExtKUEnabled.setFont(_f_s_fntLabelCrtExtEnabled);
+        this._lblCrtExtKUEnabled.setFont(_lblCrtExtKUEnabled.getFont().deriveFont(Font.BOLD));
         this._lblCrtExtKUEnabled.setText(_f_s_strTextCrtExtEnabled);
         this._lblCrtExtKUEnabled.setToolTipText(_f_s_strTipCrtExtEnabled);
         this._lblCrtExtKUEnabled.setHorizontalAlignment(SwingConstants.LEFT);
@@ -521,7 +521,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblCrtExtEKUEnabled = new JLabel();
-        this._lblCrtExtEKUEnabled.setFont(_f_s_fntLabelCrtExtEnabled);
+        this._lblCrtExtEKUEnabled.setFont(_lblCrtExtEKUEnabled.getFont().deriveFont(Font.BOLD));
         this._lblCrtExtEKUEnabled.setText(_f_s_strTextCrtExtEnabled);
         this._lblCrtExtEKUEnabled.setToolTipText(_f_s_strTipCrtExtEnabled);
         this._lblCrtExtEKUEnabled.setHorizontalAlignment(SwingConstants.LEFT);
@@ -540,7 +540,6 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblCrtExtKUCritical = new JLabel();
-        this._lblCrtExtKUCritical.setFont(PSelAbs.f_s_fntLabel);
         this._lblCrtExtKUCritical.setForeground(Color.RED);
         this._lblCrtExtKUCritical.setText(_f_s_strTextCrtExtCritical);
         this._lblCrtExtKUCritical.setToolTipText(_f_s_strTipCrtExtCritical);
@@ -560,7 +559,6 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblCrtExtEKUCritical = new JLabel();
-        this._lblCrtExtEKUCritical.setFont(PSelAbs.f_s_fntLabel);
         this._lblCrtExtEKUCritical.setForeground(Color.RED);
         this._lblCrtExtEKUCritical.setText(_f_s_strTextCrtExtCritical);
         this._lblCrtExtEKUCritical.setToolTipText(_f_s_strTipCrtExtCritical);
@@ -579,7 +577,6 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
 
         this._lblsCrtExtEKUValue[intID] = new JLabel();
-        this._lblsCrtExtEKUValue[intID].setFont(PSelAbs.f_s_fntLabel);
         this._lblsCrtExtEKUValue[intID].setText(_f_s_strsTextCrtExtEKUValue[intID]);
         this._lblsCrtExtEKUValue[intID].setToolTipText(_f_s_strsTextCrtExtEKUValue[intID]);
         this._lblsCrtExtEKUValue[intID].setHorizontalAlignment(SwingConstants.LEFT);
@@ -597,7 +594,6 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
 
         this._lblsCrtExtKUValue[intID] = new JLabel();
-        this._lblsCrtExtKUValue[intID].setFont(PSelAbs.f_s_fntLabel);
         this._lblsCrtExtKUValue[intID].setText(_f_s_strsTextCrtExtKUValue[intID]);
         this._lblsCrtExtKUValue[intID].setToolTipText(_f_s_strsTextCrtExtKUValue[intID]);
         this._lblsCrtExtKUValue[intID].setHorizontalAlignment(SwingConstants.LEFT);

@@ -44,22 +44,24 @@ a button panel that contains from left to right:
 **/
 
 
-import com.google.code.p.keytooliui.shared.awt.awtevent.*;
-import com.google.code.p.keytooliui.shared.awt.awteventmulticaster.*;
-import com.google.code.p.keytooliui.shared.util.eventlistener.*;
+import java.awt.Component;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.border.TitledBorder;
 
-import com.google.code.p.keytooliui.shared.lang.*;
- 
- 
-import javax.swing.*;
-import javax.swing.text.*;
-import javax.swing.event.*;
- 
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.shared.awt.awtevent.DFindPageEvent;
+import com.google.code.p.keytooliui.shared.awt.awteventmulticaster.DFindPageEventMulticaster;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.util.eventlistener.DFindPageListener;
 
-final public class DFindPage extends DFindAbstract implements
-    DFindPageListener
+final public class DFindPage extends DFindAbstract implements DFindPageListener
 {
     // ---------------------
     // STATIC PRIVATE STRING
@@ -236,8 +238,7 @@ final public class DFindPage extends DFindAbstract implements
         JPanel pnl = new JPanel();
       
         pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
-        
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, _s_strBorderTitleDirection);
+        pnl.setBorder(new TitledBorder(_s_strBorderTitleDirection));
         
         ButtonGroup bgp = new ButtonGroup();
  

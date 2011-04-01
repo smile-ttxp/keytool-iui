@@ -41,10 +41,8 @@ abstract public class PBarContainerAbstract extends JPanel
     // ----------------------
     // FINAL STATIC PROTECTED
     
-    final static protected Font _f_s_fntChildren_ = new Font("Dialog", Font.PLAIN, 12);
     final static protected int _f_s_intH_ = 28;
-    final static protected Color _f_s_colFgChildren_ = Color.black;
-    
+
     // ---------------
     // ABSTRACT PUBLIC
     

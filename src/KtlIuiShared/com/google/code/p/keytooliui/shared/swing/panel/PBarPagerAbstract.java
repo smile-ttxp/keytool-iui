@@ -195,11 +195,9 @@ abstract public class PBarPagerAbstract extends JPanel
     protected int _intPageId_ = -1; // dummy value
     protected int _intPageNb_ = -1; // dummy value
     
-    protected PBarPagerAbstract(int intH, Color colFg, Font fnt)
+    protected PBarPagerAbstract(int intH)
     {
         this._lblPageId_ = new JLabel();
-        this._lblPageId_.setForeground(colFg);
-        this._lblPageId_.setFont(fnt);
         
         this.setMinimumSize(new Dimension(_f_s_intW, intH));
     }

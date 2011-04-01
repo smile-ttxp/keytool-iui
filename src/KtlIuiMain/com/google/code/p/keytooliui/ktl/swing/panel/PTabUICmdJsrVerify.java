@@ -611,7 +611,6 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblEntrySize = new JLabel();
-        this._lblEntrySize.setFont(PSelAbs.f_s_fntLabel);
         this._lblEntrySize.setText(_f_s_strTextEntrySize);
         this._lblEntrySize.setToolTipText(_f_s_strTipEntrySize);
         this._lblEntrySize.setHorizontalAlignment(SwingConstants.LEFT);
@@ -630,7 +629,6 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblEntryDate = new JLabel();
-        this._lblEntryDate.setFont(PSelAbs.f_s_fntLabel);
         this._lblEntryDate.setText(_f_s_strTextEntryDate);
         this._lblEntryDate.setToolTipText(_f_s_strTipEntryDate);
         this._lblEntryDate.setHorizontalAlignment(SwingConstants.LEFT);
@@ -649,7 +647,6 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblEntryCertsType = new JLabel();
-        this._lblEntryCertsType.setFont(PSelAbs.f_s_fntLabel);
         this._lblEntryCertsType.setText(_f_s_strTextEntryCertsType);
         this._lblEntryCertsType.setToolTipText(_f_s_strTipEntryCertsType);
         this._lblEntryCertsType.setHorizontalAlignment(SwingConstants.LEFT);
@@ -668,7 +665,6 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         //pnl.setAlignmentX(LEFT_ALIGNMENT);
 
         this._lblEntryCertsX509AlgoName = new JLabel();
-        this._lblEntryCertsX509AlgoName.setFont(PSelAbs.f_s_fntLabel);
         this._lblEntryCertsX509AlgoName.setText(_f_s_strTextEntryCertsX509AlgoName);
         this._lblEntryCertsX509AlgoName.setToolTipText(_f_s_strTipEntryCertsX509AlgoName);
         this._lblEntryCertsX509AlgoName.setHorizontalAlignment(SwingConstants.LEFT);
@@ -686,7 +682,6 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
 	    
         this._lblEntryCertsX509SubjectDN = new JLabel();
-        this._lblEntryCertsX509SubjectDN.setFont(PSelAbs.f_s_fntLabel);
         this._lblEntryCertsX509SubjectDN.setText(_f_s_strTextEntryCertsX509SubjectDN);
         this._lblEntryCertsX509SubjectDN.setToolTipText(_f_s_strTipEntryCertsX509SubjectDN);
         this._lblEntryCertsX509SubjectDN.setHorizontalAlignment(SwingConstants.LEFT);

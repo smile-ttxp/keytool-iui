@@ -39,11 +39,6 @@ import java.awt.*;
 
 abstract public class CRStringAbstract extends Object
 {
-    // --------------
-    // static private
-    
-    final static private Font _f_s_fnt = new Font("Dialog", Font.PLAIN, 12);
-    
     // ------
     // public
     
@@ -62,7 +57,6 @@ abstract public class CRStringAbstract extends Object
     protected CRStringAbstract(String str)
     {
         this._str = str;
-        this._fnt = _f_s_fnt;
     }   
     
     // -------

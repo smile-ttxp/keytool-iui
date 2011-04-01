@@ -34,7 +34,7 @@ final public class PBarContainerPathAbsolute extends PBarContainerPathAbstract
     {
         super(); 
 
-        super._bpr_ = new PBarPathAbsolute(PBarContainerAbstract._f_s_intH_, PBarContainerAbstract._f_s_colFgChildren_, PBarContainerAbstract._f_s_fntChildren_);
+        super._bpr_ = new PBarPathAbsolute(PBarContainerAbstract._f_s_intH_);
     }
     
     public boolean init()

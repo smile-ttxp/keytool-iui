@@ -45,28 +45,10 @@ public class S_Border
     final static private Border _f_s_brdLightLowered = new BevelBorder(BevelBorder.LOWERED, 
         Color.white, Color.gray);
     
-    final static private Font _f_s_fntTitle = new Font("Dialog", Font.BOLD, 12);
-    
     // -------------
     // STATIC PUBLIC
-    
-    
-    static public void s_set(JPanel pnl, String strTitle)
-    {
-        String f_strMethod = _f_s_strClass + "s_set(pnl, strTitle)";
-        
-        if (pnl==null || strTitle==null)
-            MySystem.s_printOutExit(f_strMethod, "nil arg");
-        
-        Border brdTitle = new TitledBorder(null, strTitle, 
-	        TitledBorder.LEFT, TitledBorder.TOP, _f_s_fntTitle, new Color(80, 40, 40));
 
-	    Border brdCompound = new CompoundBorder(brdTitle, _f_s_brdEmpty5);
-	    pnl.setBorder(brdCompound);
-    }
-    
-    // 
-    
+
     static public void s_setRaised(JPanel pnl)
     {
         String strMethod = _f_s_strClass + "s_setRaised(pnl)";

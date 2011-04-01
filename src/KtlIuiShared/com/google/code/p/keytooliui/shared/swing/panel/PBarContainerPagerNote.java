@@ -19,27 +19,17 @@
  *
  */
  
- 
  package com.google.code.p.keytooliui.shared.swing.panel;
 
+import java.awt.BorderLayout;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-
-import javax.swing.*;
-
-import java.awt.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
 
 final public class PBarContainerPagerNote extends PBarContainerPagerAbstract 
 {
-    // ------
-    // PUBLIC
-    
     public PBarContainerPagerNote()
     {
-        super(); 
-
-        super._bpr_ = new PBarPagerNote(PBarContainerAbstract._f_s_intH_, PBarContainerAbstract._f_s_colFgChildren_, PBarContainerAbstract._f_s_fntChildren_);
+        super._bpr_ = new PBarPagerNote(PBarContainerAbstract._f_s_intH_);
     }
     
     public boolean init()
@@ -63,8 +53,4 @@ final public class PBarContainerPagerNote extends PBarContainerPagerAbstract
         // ending
         return true;
     }
-    
-    
-    // -------
-    // PRIVATE    
 }

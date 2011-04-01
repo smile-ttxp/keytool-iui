@@ -73,9 +73,9 @@ final public class PBarPathAbsolute extends PBarPathAbstract
     // ------
     // PUBLIC
 
-    public PBarPathAbsolute(int intH, Color colFg, Font fnt)
+    public PBarPathAbsolute(int intH)
     {
-        super(intH, colFg, fnt, _s_strLabelTip);
+        super(intH, _s_strLabelTip);
     }
     
     

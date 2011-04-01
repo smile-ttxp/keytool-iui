@@ -117,11 +117,9 @@ abstract public class PBarPathAbstract extends JPanel
     
     
     
-    protected PBarPathAbstract(int intH, Color colFg, Font fnt, String strLabelTip)
+    protected PBarPathAbstract(int intH, String strLabelTip)
     {
         this._lbl = new JLabel();
-        this._lbl.setForeground(colFg);
-        this._lbl.setFont(fnt);
         this._strLabelTip = strLabelTip;
         
         this.setMinimumSize(new Dimension(_f_s_intW, intH));

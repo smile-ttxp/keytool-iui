@@ -46,7 +46,6 @@ abstract public class PSelAbs extends JPanel
     // -------------------
     // FINAL STATIC PUBLIC
     
-    final static public Font f_s_fntLabel = new Font("Dialog", Font.PLAIN, 12);
     //final static public Dimension f_s_dimBoxX = new java.awt.Dimension(1, 1); // new java.awt.Dimension(4,1);
     
     
@@ -231,7 +230,6 @@ abstract public class PSelAbs extends JPanel
         this._pnl_ = new JPanel();
         this._lbl = new JLabel(strLabel);
 
-        this._lbl.setFont(PSelAbs.f_s_fntLabel);
         this.setFieldRequired(blnFieldRequired);
 	this._lbl.setHorizontalTextPosition(SwingConstants.RIGHT);
     }

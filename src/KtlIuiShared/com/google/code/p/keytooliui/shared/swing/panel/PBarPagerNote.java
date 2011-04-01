@@ -19,28 +19,12 @@
  *
  */
  
- 
- package com.google.code.p.keytooliui.shared.swing.panel;
-
-
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-
-import javax.swing.*;
-
-import java.awt.*;
+package com.google.code.p.keytooliui.shared.swing.panel;
 
 final public class PBarPagerNote extends PBarPagerAbstract 
 {    
-    // ------
-    // PUBLIC
-
-    public PBarPagerNote(int intH, Color colFg, Font fnt)
+    public PBarPagerNote(int intH)
     {
-        super(intH, colFg, fnt);
+        super(intH);
     }
-    
-    
-    // -------
-    // PRIVATE
 }
