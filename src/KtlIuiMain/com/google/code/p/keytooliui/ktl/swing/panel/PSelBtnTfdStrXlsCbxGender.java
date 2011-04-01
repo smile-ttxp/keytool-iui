@@ -35,25 +35,20 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
      1-letter gender selection
 **/
 
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
-import com.google.code.p.keytooliui.shared.swing.textfield.*;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.FocusEvent;
+import javax.swing.JComboBox;
 
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
+import com.google.code.p.keytooliui.shared.swing.textfield.TF2x20SelString;
 
 final public class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs 
 {
     // --------------------
     // FINAL STATIC PRIVATE
     
-    
-    final static private int _f_s_intWidthComboBox = 100;
     
     final static private String _f_s_strListMale = "M";
     
@@ -186,8 +181,7 @@ final public class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs
             new TF2x20SelString(),
             objDocPropValue,
             blnFieldRequired,
-            PSelBtnTfdStrXlsCbxGender._f_s_strsList,
-            _f_s_intWidthComboBox
+            PSelBtnTfdStrXlsCbxGender._f_s_strsList
             );
 
     }

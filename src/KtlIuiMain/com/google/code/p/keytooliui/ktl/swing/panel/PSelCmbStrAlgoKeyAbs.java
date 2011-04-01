@@ -45,20 +45,16 @@ abstract public class PSelCmbStrAlgoKeyAbs extends PSelCmbStrAbs
     
     // X509 certificate version
     final static private String _f_s_strTextLabelSuffix = "key algorithm:";
-    final static private int _f_s_intWidthComboBox = 150; // 114;
     
     // ---------
     // PROTECTED   
      
-    protected PSelCmbStrAlgoKeyAbs(
-        String strLabelPrefix,
-        String[] strsValue)
+    protected PSelCmbStrAlgoKeyAbs(String strLabelPrefix, String[] strsValue)
     {        
         super(
             strLabelPrefix + " " + PSelCmbStrAlgoKeyAbs._f_s_strTextLabelSuffix,
             strsValue,
-            0, // first value in array for "setSelected(...)"
-            PSelCmbStrAlgoKeyAbs._f_s_intWidthComboBox
+            0 // first value in array for "setSelected(...)"
             ); 
     }
 }

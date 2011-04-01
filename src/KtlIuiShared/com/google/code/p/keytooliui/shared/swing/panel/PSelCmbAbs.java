@@ -36,12 +36,11 @@ known subclasses:
     
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
+import java.awt.Dimension;
+import javax.swing.Box;
+import javax.swing.JComboBox;
 
-import javax.swing.*;
-
-import java.awt.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
 
 abstract public class PSelCmbAbs extends PSelAbs
 {
@@ -68,7 +67,6 @@ abstract public class PSelCmbAbs extends PSelAbs
             return false;
         
 	    _addItem();
-	    _setSizeComboBox();
 
         // ending
         return true;
@@ -81,12 +79,7 @@ abstract public class PSelCmbAbs extends PSelAbs
     // array of [String-Integer)
     protected JComboBox _cmbArrayValue_ = null;
     
-    protected PSelCmbAbs(
-        String strLabel,
-        Object[] objsValue,
-        int intSelectedId,
-        int intWidthComboBox
-        )
+    protected PSelCmbAbs(String strLabel, Object[] objsValue, int intSelectedId)
     {
         super(
             strLabel, 
@@ -94,7 +87,6 @@ abstract public class PSelCmbAbs extends PSelAbs
             ); 
             
         this._cmbArrayValue_ = new JComboBox(objsValue);
-        this._intWidthComboBox = intWidthComboBox;
         
         // ----
         String strMethod = "PSelCmbAbs(...)";
@@ -119,8 +111,6 @@ abstract public class PSelCmbAbs extends PSelAbs
     // -------
     // PRIVATE
     
-    private int _intWidthComboBox = -1;
-    
     private void _addItem()
     {
         // --
@@ -136,13 +126,5 @@ abstract public class PSelCmbAbs extends PSelAbs
         
         //super._pnl_.add(Box.createRigidArea(PSelAbs.f_s_dimBoxX));
 	    super._pnl_.add(this._cmbArrayValue_);	
-    }
-    
-    private void _setSizeComboBox()
-    {       
-        Dimension dim = new Dimension(this._intWidthComboBox, getLabel().getPreferredSize().height*2);
-	    this._cmbArrayValue_.setMaximumSize(dim);
-	    this._cmbArrayValue_.setMinimumSize(dim);
-	    this._cmbArrayValue_.setPreferredSize(dim);
     }
 }

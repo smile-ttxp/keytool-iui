@@ -42,23 +42,12 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 abstract public class PSelCmbStrProviderAbs extends PSelCmbStrAbs
 {   
-    // --------------------
-    // FINAL STATIC PRIVATE
-    
-    final static private int _f_s_intWidthComboBox = 114;
-    
-    // ---------
-    // PROTECTED   
-     
-    protected PSelCmbStrProviderAbs(
-        String strLabel,
-        String[] strsValue)
+    protected PSelCmbStrProviderAbs(String strLabel, String[] strsValue)
     {        
         super(
             strLabel,
             strsValue,
-            0, // first value in array for "setSelected(...)"
-            PSelCmbStrProviderAbs._f_s_intWidthComboBox
+            0 // first value in array for "setSelected(...)"
             ); 
     }
 }

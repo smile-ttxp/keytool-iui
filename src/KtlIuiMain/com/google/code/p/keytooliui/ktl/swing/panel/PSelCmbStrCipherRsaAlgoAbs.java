@@ -48,19 +48,16 @@ abstract public class PSelCmbStrCipherRsaAlgoAbs extends PSelCmbStrAbs
     
     // X509 certificate version
     final static private String _f_s_strTextLabel = "RSA Encryption algorithm:";
-    final static private int _f_s_intWidthComboBox = 300;
     
     // ---------
     // PROTECTED   
      
-    protected PSelCmbStrCipherRsaAlgoAbs(
-        String[] strsValue)
+    protected PSelCmbStrCipherRsaAlgoAbs(String[] strsValue)
     {        
         super(
             PSelCmbStrCipherRsaAlgoAbs._f_s_strTextLabel,
             strsValue,
-            0, // first value in array for "setSelected(...)"
-            PSelCmbStrCipherRsaAlgoAbs._f_s_intWidthComboBox
+            0 // first value in array for "setSelected(...)"
             ); 
     }
 }

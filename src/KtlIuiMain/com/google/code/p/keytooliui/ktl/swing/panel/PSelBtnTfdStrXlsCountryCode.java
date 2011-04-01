@@ -35,25 +35,19 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
      2-letter countryCode selection
 **/
 
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
-import com.google.code.p.keytooliui.shared.swing.textfield.*;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.FocusEvent;
+import javax.swing.JComboBox;
 
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
+import com.google.code.p.keytooliui.shared.swing.textfield.TF2x20SelString;
 
 final public class PSelBtnTfdStrXlsCountryCode extends PSelBtnTfdStrXlsCbxAbs 
 {
     // --------------------
     // FINAL STATIC PRIVATE
-    
-    
-    final static private int _f_s_intWidthComboBox = 180;
     
     final static private String _f_s_strCountryUs = "US (United States)";
     
@@ -477,8 +471,7 @@ final public class PSelBtnTfdStrXlsCountryCode extends PSelBtnTfdStrXlsCbxAbs
             new TF2x20SelString(),
             objDocPropValue,
             blnFieldRequired,
-            PSelBtnTfdStrXlsCountryCode._f_s_strsCountry,
-            _f_s_intWidthComboBox
+            PSelBtnTfdStrXlsCountryCode._f_s_strsCountry
             );
 
     }

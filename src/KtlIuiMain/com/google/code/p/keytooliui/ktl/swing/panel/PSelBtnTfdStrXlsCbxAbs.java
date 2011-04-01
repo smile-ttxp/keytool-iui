@@ -31,16 +31,15 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 **/
 
 
-import java.awt.*;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import javax.swing.JComboBox;
-import com.google.code.p.keytooliui.shared.lang.MySystem;
+
 import com.google.code.p.keytooliui.shared.swing.textfield.TFAbstract;
 
-abstract public class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs implements
-        FocusListener
+abstract public class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs implements FocusListener
 {
  
     // ---------------
@@ -65,7 +64,6 @@ abstract public class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs impleme
             return false;
         
         _addItem();
-        _setSizeComboBox();
 
         // ending
         return true;
@@ -102,8 +100,7 @@ abstract public class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs impleme
         TFAbstract tfd,
         Object objDocPropValue,
         boolean blnFieldRequired,
-        String[] strsSComboBox,
-        int intWidthComboBox
+        String[] strsSComboBox
         )
     {
         super(
@@ -117,7 +114,6 @@ abstract public class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs impleme
             );
         
         this._cmbArrayValue_ = new JComboBox(strsSComboBox);
-        this._intWidthComboBox = intWidthComboBox;
         
         _setValueDefault_();
         this._cmbArrayValue_.addActionListener(this); // used in subclasses
@@ -127,25 +123,8 @@ abstract public class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs impleme
     // -------
     // private
     
-    private int _intWidthComboBox = -1;
-    
     private void _addItem()
     {
 	super._pnl_.add(this._cmbArrayValue_);	
     }
-    
-    private void _setSizeComboBox()
-    {       
-	    int intMaxW = this._cmbArrayValue_.getPreferredSize().width;
-	    
-	    if (intMaxW > this._intWidthComboBox)
-	        intMaxW = this._intWidthComboBox;
-	    
-	    Dimension dim = new Dimension(intMaxW, getLabel().getPreferredSize().height*2);
-	    
-	    this._cmbArrayValue_.setMaximumSize(dim);
-	    this._cmbArrayValue_.setMinimumSize(dim);
-	    this._cmbArrayValue_.setPreferredSize(dim);
-    }
-    
 }

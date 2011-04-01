@@ -39,22 +39,8 @@ known subclasses:
 
 abstract public class PSelCmbStrAbs extends PSelCmbAbs
 {       
-    // ---------
-    // PROTECTED   
-    
-    
-    protected PSelCmbStrAbs(
-        String strLabel,
-        String[] strsValue,
-        int intSelectedId,
-        int intWidthComboBox
-        )
+    protected PSelCmbStrAbs(String strLabel, String[] strsValue, int intSelectedId)
     {
-        super(
-            strLabel,
-            (Object[]) strsValue,
-            intSelectedId,
-            intWidthComboBox
-            ); 
+        super(strLabel, (Object[]) strsValue, intSelectedId); 
     }
 }

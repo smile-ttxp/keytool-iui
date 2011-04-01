@@ -45,7 +45,6 @@ abstract public class PSelCmbStrSigAlgoAbs extends PSelCmbStrAbs
     
     // X509 certificate version
     final static private String _f_s_strTextLabel = "Signature algorithm:";
-    final static private int _f_s_intWidthComboBox = 150; // 114;
     
     // ---------
     // PROTECTED   
@@ -56,8 +55,7 @@ abstract public class PSelCmbStrSigAlgoAbs extends PSelCmbStrAbs
         super(
             PSelCmbStrSigAlgoAbs._f_s_strTextLabel,
             strsValue,
-            0, // first value in array for "setSelected(...)"
-            PSelCmbStrSigAlgoAbs._f_s_intWidthComboBox
+            0 // first value in array for "setSelected(...)"
             ); 
     }
 }

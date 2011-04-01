@@ -40,26 +40,8 @@ known subclasses:
 
 abstract public class PSelCmbItgAbs extends PSelCmbAbs
 {   
-    // --------------------
-    // FINAL STATIC PRIVATE
-    
-    final static private int _f_s_intWidthComboBox = 60;
-    
-    // ---------
-    // PROTECTED   
-    
-    
-    protected PSelCmbItgAbs(
-        String strLabel,
-        Integer[] itgsValue,
-        int intSelectedId
-        )
+    protected PSelCmbItgAbs(String strLabel, Integer[] itgsValue, int intSelectedId)
     {
-        super(
-            strLabel,
-            (Object[]) itgsValue,
-            intSelectedId,
-            PSelCmbItgAbs._f_s_intWidthComboBox
-            ); 
+        super(strLabel, (Object[]) itgsValue, intSelectedId); 
     }
 }
