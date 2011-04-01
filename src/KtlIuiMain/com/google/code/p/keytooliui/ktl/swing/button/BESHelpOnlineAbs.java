@@ -1,18 +1,26 @@
 /*
- *  Copyright (C) 2011 geoForge Project
- * 
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Lesser General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- * 
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Lesser General Public License for more details.
- * 
- *  You should have received a copy of the GNU Lesser General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Copyright (c) 2001-2011 keyTool IUI Project.
+ * LGPL License.
+ * http://code.google.com/p/keytool-iui/
+ *
+ *
+ * You shall not disclose such confidential information and shall use it only in
+ * accordance with the terms of keyTool IUI Project's license agreement.
+ *
+ * THE SOFTWARE IS PROVIDED AND LICENSED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+ * EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * LICENSE FOR THE SOFTWARE DOES NOT INCLUDE ANY CONSIDERATION FOR ASSUMPTION OF RISK
+ * BY KEYTOOL IUI PROJECT, AND KEYTOOL IUI PROJECT DISCLAIMS ANY AND ALL LIABILITY FOR INCIDENTAL
+ * OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF OR INABILITY
+ * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ *
+ */
+
+/*
+ *  @author bantchao
  */
 
 package com.google.code.p.keytooliui.ktl.swing.button;
@@ -24,14 +32,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URI;
 
-/**
- *
- * @author bantchao
- *
- * email: bantchao_AT_gmail.com
- * ... please remove "_AT_" from the above string to get the right email address
- *
- */
+
 
 abstract public class BESHelpOnlineAbs extends BEnabledState
 {

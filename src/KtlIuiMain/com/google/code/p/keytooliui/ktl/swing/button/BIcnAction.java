@@ -1,21 +1,24 @@
 /*
+ *  Copyright (C) 2001-2011 keyTool IUI Project
  *
- * Copyright (c) 2001-2008 RagingCat Project.
- * LGPL License.
- * http://code.google.com/p/keytool-iui/
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Lesser General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
  *
- * This software is the confidential and proprietary information of RagingCat Project.
- * You shall not disclose such confidential information and shall use it only in
- * accordance with the terms of RagingCat Project's license agreement.
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Lesser General Public License for more details.
  *
- * THE SOFTWARE IS PROVIDED AND LICENSED "AS IS" WITHOUT WARRANTY OF ANY KIND,
- * EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. 
+ *  You should have received a copy of the GNU Lesser General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
  *
- * LICENSE FOR THE SOFTWARE DOES NOT INCLUDE ANY CONSIDERATION FOR ASSUMPTION OF RISK
- * BY KEYTOOL IUI PROJECT, AND KEYTOOL IUI PROJECT DISCLAIMS ANY AND ALL LIABILITY FOR INCIDENTAL
- * OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF OR INABILITY
- * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+ * @author bantchao
+ *
  *
  */
  
@@ -28,7 +31,6 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 
 
 import java.awt.Font;
-import com.google.code.p.keytooliui.shared.swing.button.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
