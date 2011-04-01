@@ -81,8 +81,8 @@ abstract public class MBMainAbstract extends JMenuBar
     // menubar's menuItem'
     public void setEnabledHelpSourceAndTrack(javax.help.HelpBroker hbrHelpStandard)  
     {
-       if (this._hamHelp_ != null)
-           this._hamHelp_.setEnabledHelpSourceAndTrack(hbrHelpStandard);
+       if (this._menHelp_ != null)
+           this._menHelp_.setEnabledHelpSourceAndTrack(hbrHelpStandard);
     }
     
     // called by parent
@@ -113,13 +113,13 @@ abstract public class MBMainAbstract extends JMenuBar
             return false;
         }
         
-        if (this._hamHelp_ == null)
+        if (this._menHelp_ == null)
         {
             MySystem.s_printOutError(this, strMethod, "nil this._hamHelp_");
             return false;
         }
         
-        if (! this._hamHelp_.init())
+        if (! this._menHelp_.init())
         {
             MySystem.s_printOutError(this, strMethod, "failed");
             return false;
@@ -175,10 +175,10 @@ abstract public class MBMainAbstract extends JMenuBar
         
         
         
-        if (this._hamHelp_ != null)
+        if (this._menHelp_ != null)
         {
-            this._hamHelp_.destroy();
-            this._hamHelp_ = null;
+            this._menHelp_.destroy();
+            this._menHelp_ = null;
         }
     }
     
@@ -188,7 +188,7 @@ abstract public class MBMainAbstract extends JMenuBar
     protected MFileAllAbstract _faaFile_ = null;
     protected MPrefAllMainAbstract _pamPreference_ = null; // TO BE REMOVED
     protected MToolAllMainAbstract _mimTools_ = null; // nil value allowed
-    protected MHelpAllMainAbs _hamHelp_ = null;
+    protected MHelpAllMainAbs _menHelp_ = null;
     
     protected MBMainAbstract(String strHelpID)
     {

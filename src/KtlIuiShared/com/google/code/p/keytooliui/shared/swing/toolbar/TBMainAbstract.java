@@ -116,6 +116,12 @@ abstract public class TBMainAbstract extends TBMSAbstract
             if (! isAncestorOf(this._btnHelpTrack_)) 
                 javax.swing.SwingUtilities.updateComponentTreeUI(this._btnHelpTrack_);
         }
+
+        if (this._btnHelpOnlineHome_ != null)
+        {
+            if (! isAncestorOf(this._btnHelpOnlineHome_))
+                javax.swing.SwingUtilities.updateComponentTreeUI(this._btnHelpOnlineHome_);
+        }
         
         if (this._btnAboutAppli_ != null) 
         {
@@ -130,6 +136,7 @@ abstract public class TBMainAbstract extends TBMSAbstract
         }
     }
     
+    @Override
     public boolean init()
     {
         String strMethod = "init()";
@@ -166,10 +173,14 @@ abstract public class TBMainAbstract extends TBMSAbstract
             }
         }
         
+
+
+        
         // ending
         return true;
     }
     
+    @Override
     public void destroy()
     {
         super.destroy();
@@ -186,6 +197,12 @@ abstract public class TBMainAbstract extends TBMSAbstract
         {
             this._btnHelpTrack_.destroy();
             this._btnHelpTrack_ = null;
+        }
+
+        if (this._btnHelpOnlineHome_ != null)
+        {
+            this._btnHelpOnlineHome_.destroy();
+            this._btnHelpOnlineHome_ = null;
         }
         
         if (this._btnAboutAppli_ != null)
@@ -207,6 +224,8 @@ abstract public class TBMainAbstract extends TBMSAbstract
     
     protected BEnabledState _btnHelpSource_ = null;
     protected BEnabledState _btnHelpTrack_ = null;
+    protected BEnabledState _btnHelpOnlineHome_ = null;
+
     protected BEnabledState _btnAboutAppli_ = null;
     protected BEnabledState _btnExit_ = null;
     
@@ -301,6 +320,11 @@ abstract public class TBMainAbstract extends TBMSAbstract
         if (this._btnHelpTrack_ != null)
         {
             add(this._btnHelpTrack_);
+        }
+
+        if (this._btnHelpOnlineHome_ != null)
+        {
+            add(this._btnHelpOnlineHome_);
         }
         
         // ending

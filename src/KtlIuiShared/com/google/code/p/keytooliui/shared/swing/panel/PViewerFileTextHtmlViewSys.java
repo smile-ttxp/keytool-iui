@@ -85,12 +85,19 @@ final public class PViewerFileTextHtmlViewSys extends PViewerFileTextHtmlAbs
 	        
 	        else
 	        {
-	            // redirecting to default browser
-	            if (! com.google.code.p.keytooliui.shared.io.S_ToBrowserDefault.s_displayURL(
-                    super._cmpFrameOwner_, super._strTitleApplication_, urlLink.toString()))
-                {
-                    MySystem.s_printOutExit(this, strMethod, "failed");
-                }
+                    try
+                    {
+                        URI uri = new URI(urlLink.toString());
+                        java.awt.Desktop.getDesktop().browse(uri);
+                    }
+
+                    catch (Exception exc)
+                    {
+                        exc.printStackTrace();
+                        MySystem.s_printOutError(strMethod, "got exception, exc.get<message()=" + exc.getMessage());
+
+                        MySystem.s_printOutExit(this, strMethod, "failed");
+                    }
 	        }
 	        
 	        

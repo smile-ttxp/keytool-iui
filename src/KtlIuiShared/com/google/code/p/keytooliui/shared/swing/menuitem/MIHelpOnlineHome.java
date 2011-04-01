@@ -18,26 +18,26 @@
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
  */
+
+/*
+ * @author bantchao
+ */
  
 package com.google.code.p.keytooliui.shared.swing.menuitem;
 
 /**
-    . MIHelpOnlineHome     ==> redirecting to default browser: http://code.google.com/p/keytool-iui//index.html
+    . MIHelpOnlineHome     ==> redirecting to default browser: http://code.google.com/p/keytool-iui
 **/
 
 import com.google.code.p.keytooliui.shared.lang.*;
+import javax.swing.ImageIcon;
 
 final public class MIHelpOnlineHome extends MIHelpOnlineAbstract 
 {
-    // --------------------
-    // FINAL STATIC PRIVATE
+    final static private String _F_STR_NAME_ICON = "webcomponent16.gif";
     
-    final static private String _f_s_strUrl = "http://code.google.com/p/keytool-iui//index.html";
-    
-    // --------------
-    // STATIC PRIVATE
-    
-    static private String _s_strText = null;
+    static public String STR_TEXT = null;
+    static public String STR_URL = null;
     
     // ------------------
     // STATIC INITIALIZER
@@ -60,7 +60,8 @@ final public class MIHelpOnlineHome extends MIHelpOnlineAbstract
             rbeResources = java.util.ResourceBundle.getBundle(f_strBundleFileShort, 
                 java.util.Locale.getDefault());
                 
-            _s_strText = rbeResources.getString("text");
+            MIHelpOnlineHome.STR_TEXT = rbeResources.getString("text");
+            MIHelpOnlineHome.STR_URL = rbeResources.getString("url");
         }
         
         catch (java.util.MissingResourceException excMissingResource)
@@ -70,11 +71,32 @@ final public class MIHelpOnlineHome extends MIHelpOnlineAbstract
         }
     }
     
-    // ------
-    // PUBLIC
+    @Override
+    public boolean init()
+    {
+        String strMethod = "init()";
+
+        if (! super.init())
+            return false;
+
+        ImageIcon iin = com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get(
+            MIHelpOnlineHome._F_STR_NAME_ICON
+                );
+
+        if (iin == null)
+        {
+            MySystem.s_printOutError(this, strMethod, "nil iin");
+            return false;
+        }
+
+        setIcon(iin);
+
+        // ending
+        return true;
+    }
     
     public MIHelpOnlineHome(java.awt.Component cmpFrameOwner, String strTitleApplication)
     {
-        super(cmpFrameOwner, strTitleApplication, _s_strText, _f_s_strUrl);   
+        super(cmpFrameOwner, strTitleApplication, MIHelpOnlineHome.STR_TEXT, MIHelpOnlineHome.STR_URL);
     }        
 }

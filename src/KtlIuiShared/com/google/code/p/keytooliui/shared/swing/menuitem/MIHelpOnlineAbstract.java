@@ -21,6 +21,11 @@
  
 package com.google.code.p.keytooliui.shared.swing.menuitem;
 
+/*
+ * @author bantchao
+ */
+
+
 /**
     known subclasses:
     . MIHelpOnlineHome     ==> redirecting to default browser: http://code.google.com/p/keytool-iui//index.html
@@ -32,13 +37,14 @@ package com.google.code.p.keytooliui.shared.swing.menuitem;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.event.*;
+import java.net.URI;
 
 abstract public class MIHelpOnlineAbstract extends MIAbstract 
 {       
     // --------------
     // STATIC PRIVATE
     
-    static private String _s_strDlgErrorBody = null;
+    static public String STR_DLG_ERROR_BODY = null;
     
     // ------------------
     // STATIC INITIALIZER
@@ -59,7 +65,7 @@ abstract public class MIHelpOnlineAbstract extends MIAbstract
             rbeResources = java.util.ResourceBundle.getBundle(f_strBundleFileShort, 
                 java.util.Locale.getDefault());
                 
-            _s_strDlgErrorBody = rbeResources.getString("dlgErrorBody");
+            STR_DLG_ERROR_BODY = rbeResources.getString("dlgErrorBody");
         }
         
         catch (java.util.MissingResourceException excMissingResource)
@@ -75,7 +81,8 @@ abstract public class MIHelpOnlineAbstract extends MIAbstract
     protected MIHelpOnlineAbstract(
         final java.awt.Component f_cmpFrameOwner, 
         final String f_strTitleApplication,
-        String strText, final String f_strUrl)
+        String strText,
+        final String f_strUrl)
     {
         super(strText);
         
@@ -84,14 +91,24 @@ abstract public class MIHelpOnlineAbstract extends MIAbstract
             public void actionPerformed(ActionEvent actionEvent)
             {
                 String strMethod = "MIHelpOnlineAbstract().addActionListener()... actionPerfomed(evtAction)";
-                              
-                if (! com.google.code.p.keytooliui.shared.io.S_ToBrowserDefault.s_displayURL(f_cmpFrameOwner, f_strTitleApplication, f_strUrl))
+
+
+                try
                 {
-                    String strBody = _s_strDlgErrorBody
-                        + "\n" 
+                    URI uri = new URI(f_strUrl);
+                    java.awt.Desktop.getDesktop().browse(uri);
+                }
+
+                catch (Exception exc)
+                {
+                    exc.printStackTrace();
+                    MySystem.s_printOutError(strMethod, "got exception, exc.get<message()=" + exc.getMessage());
+                    String strBody = STR_DLG_ERROR_BODY
+                        + "\n"
                         + f_strUrl;
-                
-                    com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(f_cmpFrameOwner, f_strTitleApplication, strBody);
+
+                    com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.s_showDialogError(
+                            f_cmpFrameOwner, f_strTitleApplication, strBody);
                 }
                 
             }

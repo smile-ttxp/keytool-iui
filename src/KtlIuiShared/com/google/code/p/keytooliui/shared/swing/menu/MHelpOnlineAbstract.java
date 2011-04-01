@@ -33,7 +33,6 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
-import javax.swing.*;
 
 
 abstract public class MHelpOnlineAbstract extends MAbstract 
