@@ -185,7 +185,7 @@ abstract public class PTabUICmdCmsAbs extends PTabUICmdAbs implements
             strHelpID, 
             frmOwner, 
             strTitleAppli,
-            "Source:", // strLabelBorderPanelIn, nil value allowed
+            "Source", // strLabelBorderPanelIn, nil value allowed
             (String) null // "Target:" // strLabelBorderPanelOut nil value allowed
             );
         

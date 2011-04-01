@@ -218,7 +218,7 @@
         JLabel lblStandalone = new LabelCheck(_s_strTextStandalone, blnSTD);
         
         // --
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, _s_strTitleLaunchBy);
+        pnl.setBorder(new TitledBorder( _s_strTitleLaunchBy));
         
         
         // --
@@ -268,7 +268,7 @@
         JPanel pnlUserName = _createPanelPathAbs(PTabHelpAppliAdvancedAbs._s_strLabelUserName, strUserName);
 
         // --
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "Properties:");
+        pnl.setBorder(new TitledBorder("Properties"));
         
         
         // --

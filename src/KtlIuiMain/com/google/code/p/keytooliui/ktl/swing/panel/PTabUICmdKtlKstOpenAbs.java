@@ -63,8 +63,8 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
             frmOwner, 
             strTitleAppli, 
             BESPasswordAbs.f_s_intModeOpen, // password for KeyStore of type [JKS-JCEKS-BKS-UBER]
-            "Source:", // String strLabelBorderPanelIn, // nil value allowed
-            "Target:"  // String strLabelBorderPanelOut // nil value allowed
+            "Source", // String strLabelBorderPanelIn, // nil value allowed
+            "Target"  // String strLabelBorderPanelOut // nil value allowed
             );
             
         // ----
@@ -104,8 +104,8 @@ abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs
             frmOwner, 
             strTitleAppli, 
             BESPasswordAbs.f_s_intModeOpen, // password for KeyStore of type [JKS-JCEKS-BKS-UBER]
-            "Source:", // String strLabelBorderPanelIn, // nil value allowed
-            "Target:"  // String strLabelBorderPanelOut // nil value allowed
+            "Source", // String strLabelBorderPanelIn, // nil value allowed
+            "Target"  // String strLabelBorderPanelOut // nil value allowed
             );
             
         // ----

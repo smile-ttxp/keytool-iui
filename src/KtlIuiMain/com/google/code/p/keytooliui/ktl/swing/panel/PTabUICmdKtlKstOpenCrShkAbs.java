@@ -19,6 +19,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.event.*;
 import javax.swing.text.*;
 
@@ -448,7 +449,7 @@ abstract public class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs
         // --
         
         JPanel pnl = new JPanel();
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "New Entry - Secret Key:"); // shared key
+        pnl.setBorder(new TitledBorder("New Entry - Secret Key")); // shared key
         
         pnl.setLayout(new GridBagLayout());
         

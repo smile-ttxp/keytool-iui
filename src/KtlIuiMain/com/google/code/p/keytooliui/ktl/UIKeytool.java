@@ -27,9 +27,12 @@ import com.google.code.p.keytooliui.shared.util.changer.*;
 import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
 import javax.swing.event.*;
+import javax.swing.UIManager;
+import javax.swing.plaf.ColorUIResource;
 
 import java.io.*;
 import java.awt.event.*;
+import java.awt.Font;
 import java.util.*;
 
 
@@ -145,17 +148,13 @@ final public class UIKeytool extends AppMainUIAbs
         {
             if (AppMainUIAbs._f_s_blnSetLAFSwing_)
             {
-                 javax.swing.UIManager.put("swing.boldMetal", Boolean.FALSE);
-                 
-                 javax.swing.plaf.metal.MetalLookAndFeel.setCurrentTheme(
-                    new javax.swing.plaf.metal.OceanTheme() // memo: default in JDK 1.5
-                    );
+                UIManager.put("swing.boldMetal", Boolean.FALSE);
+                UIManager.put("TitledBorder.font", UIManager.getFont("TitledBorder.font").deriveFont(Font.BOLD));
+                UIManager.put("TitledBorder.titleColor", new ColorUIResource(80, 40, 40));
             }
-            
             else
             {
-                String strLaf = javax.swing.UIManager.getSystemLookAndFeelClassName();
-	        javax.swing.UIManager.setLookAndFeel(strLaf);
+	            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             }
            
         }

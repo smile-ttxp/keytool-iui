@@ -24,6 +24,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.event.*;
 import javax.swing.text.*;
 
@@ -398,7 +399,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         String strMethod = "_createPanelOutputCrtExtKU()";
 
         JPanel pnl = new JPanel();
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "Cert. Extension - KeyUsage:");
+        pnl.setBorder(new TitledBorder("Cert. Extension - KeyUsage"));
         
         JPanel pnlCrtExtKUEnabled = _createPanelCrtExtKUEnabled();
         JPanel pnlCrtExtKUCritical = _createPanelCrtExtKUCritical();
@@ -449,7 +450,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         String strMethod = "_createPanelOutputCrtExtEKU()";
 
         JPanel pnl = new JPanel();
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "Cert. Extension - ExtKeyUsage:");
+        pnl.setBorder(new TitledBorder("Cert. Extension - ExtKeyUsage"));
         
         JPanel pnlCrtExtEKUEnabled = _createPanelCrtExtEKUEnabled();
         JPanel pnlCrtExtEKUCritical = _createPanelCrtExtEKUCritical();

@@ -42,6 +42,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.event.*;
 import javax.swing.text.*;
 
@@ -2434,7 +2435,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         // --
         
         JPanel pnl = new JPanel();
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "Private Key:"); // keypair
+        pnl.setBorder(new TitledBorder("Private Key")); // keypair
         
         pnl.setLayout(new GridBagLayout());
         
@@ -2468,7 +2469,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
     private JPanel _createPanelOutputX520N()
     {
         JPanel pnl = new JPanel();
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "Cert. - X.520 Name:");
+        pnl.setBorder(new TitledBorder("Cert. - X.520 Name"));
         
         pnl.setLayout(new GridBagLayout());
         
@@ -2511,7 +2512,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
     private JPanel _createPanelOutputX500DNM()
     {
         JPanel pnl = new JPanel();
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "Cert. - X.500 Distinguished Name ...:");
+        pnl.setBorder(new TitledBorder("Cert. - X.500 Distinguished Name ..."));
         
         pnl.setLayout(new GridBagLayout());
         
@@ -2600,7 +2601,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
     private JPanel _createPanelOutputX500DN()
     {
         JPanel pnl = new JPanel();
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, "Cert. - X.500 Distinguished Name:");
+        pnl.setBorder(new TitledBorder("Cert. - X.500 Distinguished Name"));
         
         pnl.setLayout(new GridBagLayout());
         

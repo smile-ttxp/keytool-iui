@@ -358,7 +358,7 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
             strTitleAppli,
             BESPasswordAbs.f_s_intModeSave,
             (String) null,     // String strLabelBorderPanelIn, // nil value allowed
-            "Target:"          // String strLabelBorderPanelOut // nil value allowed
+            "Target"          // String strLabelBorderPanelOut // nil value allowed
             );
             
         super._pnlSelectFileKst_ = new PSelBtnTfdFileSaveKst(

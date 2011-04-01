@@ -55,7 +55,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
         
         // --
         
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(pnl, MIKstJksCrtAbs.s_strSuffix + "s:");
+        pnl.setBorder(new TitledBorder(MIKstJksCrtAbs.s_strSuffix + "s"));
         
         File fleCertsTrustCASys = UtilKstJks.s_getFileKstCertsTrustCASys();
         

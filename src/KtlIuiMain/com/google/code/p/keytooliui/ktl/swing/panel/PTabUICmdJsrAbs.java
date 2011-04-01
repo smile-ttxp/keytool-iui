@@ -154,8 +154,8 @@ abstract public class PTabUICmdJsrAbs extends PTabUICmdAbs implements
             strHelpID, 
             frmOwner, 
             strTitleAppli,
-            "Source:", // strLabelBorderPanelIn, nil value allowed
-            "Target:" // strLabelBorderPanelOut nil value allowed
+            "Source", // strLabelBorderPanelIn, nil value allowed
+            "Target" // strLabelBorderPanelOut nil value allowed
             );
         
         // ----

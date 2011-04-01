@@ -147,8 +147,8 @@ abstract public class PTabUICmdArcAbs extends PTabUICmdAbs implements
             strHelpID, 
             frmOwner, 
             strTitleAppli,
-            "Source:", // strLabelBorderPanelIn, nil value allowed
-            "Target:" // strLabelBorderPanelOut nil value allowed
+            "Source", // strLabelBorderPanelIn, nil value allowed
+            "Target" // strLabelBorderPanelOut nil value allowed
             );
 
         this._fssSelectUnsignedJar2Save_ = new PSelBtnTfdFileJarSaveUnsigned(

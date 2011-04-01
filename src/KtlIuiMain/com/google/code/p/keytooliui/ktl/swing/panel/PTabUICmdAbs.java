@@ -16,6 +16,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.event.*;
 import javax.swing.text.*;
 
@@ -180,16 +181,8 @@ abstract public class PTabUICmdAbs extends PTabUIAbs implements
         this._btnAction_ = new BIcnAction((ActionListener) this); 
         
         // --
-        if (strLabelBorderPanelIn != null)
-            com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(this._pnlInput_, strLabelBorderPanelIn);
-        else
-            com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(this._pnlInput_, "Input:");
-        
-        if (strLabelBorderPanelOut != null)
-            com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(this._pnlOutput_, strLabelBorderPanelOut);
-        else
-            com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(this._pnlOutput_, "Output:");
-        
+        this._pnlInput_.setBorder(new TitledBorder(strLabelBorderPanelIn != null ? strLabelBorderPanelIn : "Input"));
+        this._pnlOutput_.setBorder(new TitledBorder(strLabelBorderPanelOut != null ? strLabelBorderPanelOut : "Output"));
         
         // --
         com.google.code.p.keytooliui.shared.swing.border.S_Border.s_setEtched(this);

@@ -28,6 +28,7 @@ import java.security.cert.X509Certificate;
 
 import javax.swing.event.*;
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -449,8 +450,8 @@ abstract public class DTblKstAbs extends DEscapeAbstract implements
         
         this._pnlCloseThis.setLayout(new FlowLayout(FlowLayout.CENTER)); 
         
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(this._pnlButtonKpr_, "Highlighted keypair entry:");
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(this._pnlButtonTcr_, "Highlighted trusted certificate entry:");
+        this._pnlButtonKpr_.setBorder(new TitledBorder("Highlighted keypair entry"));
+        this._pnlButtonTcr_.setBorder(new TitledBorder("Highlighted trusted certificate entry"));
     }
     
     // -------

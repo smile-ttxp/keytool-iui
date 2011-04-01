@@ -2,6 +2,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 import java.awt.event.MouseListener;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.border.TitledBorder;
 
 /**
     known subclasses:
@@ -24,7 +25,7 @@ abstract public class PTblEntPKTCAbs extends PTblEntAbs
         MouseListener mouListenerParent)
     {
         super(intW, lsnListenerParent, mouListenerParent);   
-        com.google.code.p.keytooliui.shared.swing.border.S_Border.s_set(this, "Private Key (keypair) & Trusted Certificate Entries:");
+        setBorder(new TitledBorder("Private Key (keypair) & Trusted Certificate Entries"));
     }
  
 }
