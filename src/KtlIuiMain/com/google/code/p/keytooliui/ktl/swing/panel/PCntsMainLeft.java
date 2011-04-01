@@ -29,6 +29,7 @@ import com.google.code.p.keytooliui.shared.swing.button.BESPrint16;
 import java.awt.event.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 //import org.progx.swing.debug.DebugBorder;
 
 public class PCntsMainLeft extends PCntsMainAbs implements 
@@ -170,31 +171,22 @@ public class PCntsMainLeft extends PCntsMainAbs implements
         
         TipOnLeafNode mtnKtl = _createNodeMain();
         mtnRoot.add(mtnKtl);
-       
-       this._tre = new TipOnLeafTree(
-               (TreeSelectionListener) this,
-               (TreeExpansionListener) this,
-               mtnRoot)
-       { 
- 	    public Insets getInsets() { 
- 		return new Insets(10, 10, 10, 10); 
- 	    } 
- 	}; 
+
+        this._tre = new TipOnLeafTree(this, this, mtnRoot); 
        
        if (lsrTreeSelectionParent != null)
            this._tre.addTreeSelectionListener(lsrTreeSelectionParent);
            
        //this._tre.addTreeSelectionListener(this);
-       
-       this._tre.setRootVisible(true);
-       this._tre.setShowsRootHandles(true);
-       
-       
-       this._spe = new JScrollPane(this._tre);
+
+        this._tre.setRootVisible(true);
+        this._tre.setShowsRootHandles(false);
+        this._tre.setBorder(new EmptyBorder(2, 3, 2, 3));
+
+        this._spe = new JScrollPane(this._tre);
        
        // beg test
        this._spe.addMouseListener(this);
-       this._spe.setBorder(new BevelBorder(BevelBorder.LOWERED));
        // end test
        
       
