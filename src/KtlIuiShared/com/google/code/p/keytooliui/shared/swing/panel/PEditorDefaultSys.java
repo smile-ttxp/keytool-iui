@@ -198,7 +198,7 @@ final public class PEditorDefaultSys extends PEditorAbstract
 	        com.google.code.p.keytooliui.shared.awt.event.WindowCloser acr = new com.google.code.p.keytooliui.shared.awt.event.WindowCloser();
 	        
 	        frame.addWindowListener(acr);
-	        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+	        Toolkit.getDefaultToolkit().beep();
 	        frame.pack();
 	        
 	        int intPreferredW = frame.getPreferredSize().width;

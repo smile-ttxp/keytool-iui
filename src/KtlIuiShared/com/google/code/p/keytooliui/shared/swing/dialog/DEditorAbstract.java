@@ -113,7 +113,7 @@ abstract public class DEditorAbstract extends DEscapeAbstract implements
 	
 	public void fileDelete(DEditorAbstractEvent evtDEditorAbstract)
 	{
-	    com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+	    Toolkit.getDefaultToolkit().beep();
 		
 		if (! OPAbstract.s_showConfirmDialog(this._cmpFrameOwner, this._strTitleApplication + " - " + _s_strConfirmDeleteAndCloseTitle, _s_strConfirmDeleteAndCloseBody))
 		{

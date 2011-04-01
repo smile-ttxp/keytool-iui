@@ -40,6 +40,8 @@
  **/
  
  
+ import java.awt.Toolkit;
+
  import com.google.code.p.keytooliui.shared.lang.*;
  
  
@@ -554,7 +556,7 @@
             if (strReference.indexOf(strRequest.valueOf(strRequest.charAt(i))) == -1)
             {
                 //MySystem.s_printOutWarning(this, strMethod, "this._strCharsAccepted_");
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
                 return false;
             }
         }

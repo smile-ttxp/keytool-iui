@@ -243,7 +243,7 @@ public class PSelBtnTfdRngInt extends PSelBtnTfdAbs implements
                 MySystem.s_printOutExit(this, strMethod, "nil this._dlgRangeIntegers");
         
         //this._dlgRangeIntegers.setDefault();
-        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+        Toolkit.getDefaultToolkit().beep();
         this._dlgRangeIntegers.setVisible(true); 
     }
     

@@ -211,7 +211,7 @@ abstract public class EPTextAbs extends JEditorPane implements
             //return false;
         }
 
-        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+        Toolkit.getDefaultToolkit().beep();
         this._dfp.setVisible(true);
         return true;
     }

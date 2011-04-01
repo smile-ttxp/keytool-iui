@@ -327,7 +327,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
 
         MySystem.s_printOutWarning(this, strMethod, "tcr already exists in this._kstTcrSys as " + strAliasTcrCheck);
 
-        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+        Toolkit.getDefaultToolkit().beep();
 
         String strWarningTitle = super._strTitleAppli_;
         strWarningTitle += " - ";
@@ -431,7 +431,7 @@ abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
         
         MySystem.s_printOutWarning(this, strMethod, "tcr already exists in keystore as " + strAliasTcrCheck);
 
-        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+        Toolkit.getDefaultToolkit().beep();
 
         String strWarningTitle = super._strTitleAppli_;
         strWarningTitle += " - ";

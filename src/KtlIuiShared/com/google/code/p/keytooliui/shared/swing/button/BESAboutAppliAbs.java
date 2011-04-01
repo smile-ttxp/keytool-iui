@@ -31,6 +31,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 
 import java.awt.Component;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import com.google.code.p.keytooliui.shared.lang.*;
@@ -125,7 +126,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
             {
                 String strMethod = "BESAboutAppliAbs(...).addActionListener(...).actionPerformed(...)";
                 
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
 
                 String strDlgBodyCopyright = MIHelpAboutAppliAbstract.s_strDlgBodyCopyright;
                 

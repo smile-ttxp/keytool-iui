@@ -22,9 +22,10 @@
  
 package com.google.code.p.keytooliui.shared.swing.text;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-
-import javax.swing.text.*;
+import java.awt.Toolkit;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.PlainDocument;
 
 final public class PlainDocumentFilter extends PlainDocument
 {
@@ -73,7 +74,7 @@ final public class PlainDocumentFilter extends PlainDocument
         if (str == null)
         {
             //MySystem.s_printOutWarning(this, strMethod, "nil str");
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             return;
         }
 
@@ -88,7 +89,7 @@ final public class PlainDocumentFilter extends PlainDocument
             if (this._strCharsAccepted.indexOf(str.valueOf(str.charAt(i))) == -1)
             {
                 //MySystem.s_printOutWarning(this, strMethod, "this._strCharsAccepted");
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
                 return;
             }
         }
@@ -101,7 +102,7 @@ final public class PlainDocumentFilter extends PlainDocument
                 if (getText(0, getLength()).indexOf(".") != -1)
                 {
                     //MySystem.s_printOutWarning(this, strMethod, "indexOf . != -1");
-                    com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                    Toolkit.getDefaultToolkit().beep();
                     return;
                 }
             }
@@ -112,7 +113,7 @@ final public class PlainDocumentFilter extends PlainDocument
             if (str.indexOf("-") != 0 || intOffset != 0 )
             {
                 //MySystem.s_printOutWarning(this, strMethod, "indexOf - != -0");
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
                 return;
             }
         }

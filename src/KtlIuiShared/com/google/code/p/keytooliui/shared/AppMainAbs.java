@@ -13,15 +13,25 @@ package com.google.code.p.keytooliui.shared;
     
 **/
 
-import com.google.code.p.keytooliui.shared.lang.thread.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.frame.*;
-import com.google.code.p.keytooliui.shared.util.changer.*;
-import com.google.code.p.keytooliui.shared.io.*;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.File;
+import java.util.Locale;
+import java.util.Vector;
 
-import java.util.*;
-import java.awt.event.*;
-import java.io.*;
+import com.google.code.p.keytooliui.shared.io.LastUserAbstract;
+import com.google.code.p.keytooliui.shared.io.LastUserPref;
+import com.google.code.p.keytooliui.shared.io.LastUserProj;
+import com.google.code.p.keytooliui.shared.io.S_FileSys;
+import com.google.code.p.keytooliui.shared.io.UserChoice;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.frame.FMainAbs;
+import com.google.code.p.keytooliui.shared.util.changer.ChgLocAbstract;
 
 abstract public class AppMainAbs extends AppAbs implements
     WindowListener,
@@ -986,7 +996,7 @@ abstract public class AppMainAbs extends AppAbs implements
         if (! this._blnShowDialogExitConfirm) 
             return true;
         
-        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+        Toolkit.getDefaultToolkit().beep();
         
         if (_s_strDlgExitTitle == null)
             _s_getDialogProps();

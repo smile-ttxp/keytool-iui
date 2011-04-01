@@ -22,13 +22,13 @@
  
 package com.google.code.p.keytooliui.shared.lang;
 
-/**
-**/
-
-
-import java.util.*;
-import java.text.*;
+import java.awt.Toolkit;
 import java.io.File;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
 
 public class MySystem
 {
@@ -116,7 +116,7 @@ public class MySystem
                 
                 // shows a warning-confirm message
                 
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();	
+                Toolkit.getDefaultToolkit().beep();	
                 
                  
                 String strBody = "Your are using Java VM: " + strJavaVersion;
@@ -179,8 +179,7 @@ public class MySystem
         **/
         if (! strJavaVersion.startsWith("1.0"))
         {
-
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             String strErrorJvmBody2 = "\n    " + strJavaVersion + "\n\n";
             String strErrorJvmBody4 = "\n    " + f_strsJavaVersionOk[0] + "\n\n";
             String strBody = _s_strDialogErrorJvmBody1 + strErrorJvmBody2 + _s_strDialogErrorJvmBody3 + strErrorJvmBody4 /*+ _s_strDialogErrorJvmBody5*/;

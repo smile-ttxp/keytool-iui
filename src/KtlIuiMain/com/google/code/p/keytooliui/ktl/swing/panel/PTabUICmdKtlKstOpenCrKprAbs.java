@@ -2648,7 +2648,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
     {
         String strMethod = "_showDlgWarnOptDnameMiss_()";
                   
-        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();	
+        Toolkit.getDefaultToolkit().beep();	
      
         com.google.code.p.keytooliui.ktl.swing.dialog.DWChoice3DNameMiss dew = new 
             com.google.code.p.keytooliui.ktl.swing.dialog.DWChoice3DNameMiss(

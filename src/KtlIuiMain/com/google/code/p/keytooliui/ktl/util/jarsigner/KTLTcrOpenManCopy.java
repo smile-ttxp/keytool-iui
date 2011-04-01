@@ -110,7 +110,7 @@ final public class KTLTcrOpenManCopy extends KTLTcrOpenManAbs
             if (super._kstOpen_.containsAlias(strAliasNew))
             {
                 
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
         	            
     	        String strWarningTitle = super._strTitleAppli_;
     	        strWarningTitle += " - ";

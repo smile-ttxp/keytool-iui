@@ -29,17 +29,15 @@ package com.google.code.p.keytooliui.shared.io;
     . S_FileChooserUI
 **/
 
-import com.google.code.p.keytooliui.shared.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.lang.system.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
+import java.awt.Toolkit;
+import java.io.File;
+import javax.swing.JFileChooser;
 
-import javax.swing.*;
-
-
-import java.io.*;
-
-
+import com.google.code.p.keytooliui.shared.AppAbs;
+import com.google.code.p.keytooliui.shared.AppMainAbs;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.lang.system.S_SystemShared;
+import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
 abstract public class S_FileChooserAbs
 {
@@ -336,7 +334,7 @@ abstract public class S_FileChooserAbs
            
             if (fleOpen == null)
             {
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
                 String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
                 OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
                 return null;
@@ -361,7 +359,7 @@ abstract public class S_FileChooserAbs
             
         if (! blnGotIt)        
         { 
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             
             String strBody = _s_strErrorWrongExtensionPrefix;
             strBody += " " + strFileExtensionCur;
@@ -379,7 +377,7 @@ abstract public class S_FileChooserAbs
            
         if (! fleOpen.exists())
         {
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
             OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
             return null;
@@ -430,7 +428,7 @@ abstract public class S_FileChooserAbs
            
         if (! fleOpen.exists())
         {
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
             OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
             return null;
@@ -477,7 +475,7 @@ abstract public class S_FileChooserAbs
            
         if (! fleOpen.exists())
         {
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
             OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
             return null;
@@ -524,7 +522,7 @@ abstract public class S_FileChooserAbs
            
         if (fleOpen.exists())
         {
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             String strBody = "File already exists!\n  " + fleSelected.getAbsolutePath();
             OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
             return null;
@@ -582,7 +580,7 @@ abstract public class S_FileChooserAbs
            
             if (! fleOpen.exists())
             {
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
                 String strBody = _s_strErrorFileNotFound + strAbsolutePath;
                 OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
                 return null;
@@ -597,7 +595,7 @@ abstract public class S_FileChooserAbs
             
         if (! strFileExtensionCur.equalsIgnoreCase(strExtension))        
         { 
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             
             String strBody = _s_strErrorWrongExtensionPrefix;
             strBody += " " + strFileExtensionCur;
@@ -612,7 +610,7 @@ abstract public class S_FileChooserAbs
            
         if (! fleOpen.exists())
         {
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
             OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
             return null;
@@ -771,7 +769,7 @@ abstract public class S_FileChooserAbs
            
             if (! fleOpen.exists())
             {
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();	
+                Toolkit.getDefaultToolkit().beep();	
                 String strBody = _s_strErrorFileNotFound + strAbsolutePath;
                 OPAbstract.s_showDialogError((java.awt.Component) null, strTitleAppli, strBody);
                 return null;
@@ -785,7 +783,7 @@ abstract public class S_FileChooserAbs
             
         if (! strFileExtensionCur.equalsIgnoreCase(strExtension))        
         { 
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();	
+            Toolkit.getDefaultToolkit().beep();	
             
             String strBody = _s_strErrorWrongExtensionPrefix;
             strBody += " " + strFileExtensionCur;
@@ -800,7 +798,7 @@ abstract public class S_FileChooserAbs
            
         if (! fleOpen.exists())
         {
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();	
+            Toolkit.getDefaultToolkit().beep();	
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
             OPAbstract.s_showDialogError((java.awt.Component) null, strTitleAppli, strBody);
             return null;
@@ -1246,7 +1244,7 @@ abstract public class S_FileChooserAbs
            
             if (! fleOpen.exists())
             {
-                com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+                Toolkit.getDefaultToolkit().beep();
                 String strBody = _s_strErrorFileNotFound + strAbsolutePath;
                 OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
                 return null;
@@ -1260,7 +1258,7 @@ abstract public class S_FileChooserAbs
             
         if (! strFileExtensionCur.equalsIgnoreCase(strExtension))        
         { 
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             
             String strBody = _s_strErrorWrongExtensionPrefix;
             strBody += " " + strFileExtensionCur;
@@ -1276,7 +1274,7 @@ abstract public class S_FileChooserAbs
            
         if (! fleOpen.exists())
         {
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
             OPAbstract.s_showDialogError(cmpFrameParent, strTitleAppli, strBody);
             return null;

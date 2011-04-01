@@ -91,7 +91,7 @@ final public class DocPageTextSearch
         if (this._lstStringSelection.isEmpty())
         {
             MySystem.s_printOutTrace(this, strMethod, "empty list");
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
 	        OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, _s_strWarningEmptyListBody + "\"" + this._strText + "\"");
             
             return null;
@@ -138,7 +138,7 @@ final public class DocPageTextSearch
             }
             
             MySystem.s_printOutTrace(this, strMethod, "end of document reached");
-            com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+            Toolkit.getDefaultToolkit().beep();
 	        OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, _s_strWarningBottomReachedBody);
             
             // modif feb 4, 2002, returning last in the least
@@ -164,7 +164,7 @@ final public class DocPageTextSearch
         }
             
         MySystem.s_printOutTrace(this, strMethod, "begin of document reached");
-        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+        Toolkit.getDefaultToolkit().beep();
 	    OPAbstract.s_showDialogWarning(this._cmpFrameOwner, this._strTitleApplication, _s_strWarningTopReachedBody);
         // modif feb 4, 2002, returning first in the list
         //return null;

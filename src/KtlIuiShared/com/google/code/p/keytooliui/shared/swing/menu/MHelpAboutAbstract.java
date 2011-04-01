@@ -113,7 +113,7 @@ abstract public class MHelpAboutAbstract extends MAbstract implements
         
         if (mim == this._mimAbout)
         {
-	        com.google.code.p.keytooliui.shared.awt.MyToolkit.s_beep();
+	        Toolkit.getDefaultToolkit().beep();
 	        
 	        OPAbstract.s_showDialogInfo(
 	            this._cmpFrameOwner,
