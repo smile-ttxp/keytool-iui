@@ -1,12 +1,12 @@
 /*
  *
- * Copyright (c) 2001-2007 RagingCat Project.
+ * Copyright (c) 2001-2007 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
- * This software is the confidential and proprietary information of RagingCat Project.
+ *
  * You shall not disclose such confidential information and shall use it only in
- * accordance with the terms of RagingCat Project's license agreement.
+ * accordance with the terms of keyTool IUI Project's license agreement.
  *
  * THE SOFTWARE IS PROVIDED AND LICENSED "AS IS" WITHOUT WARRANTY OF ANY KIND,
  * EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
