@@ -39,10 +39,7 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
-import javax.swing.border.*;
 import javax.swing.event.*;
-
-
 import java.awt.*;
 
 abstract public class TFAbstract extends JTextField
@@ -100,7 +97,6 @@ abstract public class TFAbstract extends JTextField
         setMaximumSize(dim);
         setMinimumSize(dim);
 	    
-        setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
         setEditable(false);
     }
     

@@ -17,8 +17,6 @@ import javax.swing.JPanel;
 import javax.swing.JRootPane;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
 import javax.swing.event.ListSelectionEvent;
 import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstAbs;
 import com.google.code.p.keytooliui.shared.lang.MySystem;

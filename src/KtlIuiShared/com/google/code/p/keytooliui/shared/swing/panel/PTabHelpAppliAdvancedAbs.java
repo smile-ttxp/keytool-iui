@@ -126,7 +126,6 @@
         
         
         tfd.setEditable(false);
-        tfd.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
 	    
 	    final Dimension dim = new Dimension(PTabHelpAppliAdvancedAbs._f_s_intTextFieldColumns, PTabHelpAppliAdvancedAbs._f_s_intTextFieldH);
         tfd.setPreferredSize(dim);

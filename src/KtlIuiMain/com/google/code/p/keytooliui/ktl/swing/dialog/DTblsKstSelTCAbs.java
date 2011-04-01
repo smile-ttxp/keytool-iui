@@ -18,8 +18,6 @@ import javax.swing.JRootPane;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 import javax.swing.ListSelectionModel;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
 import javax.swing.event.ListSelectionEvent;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BCancel;
@@ -231,7 +229,6 @@ abstract public class DTblsKstSelTCAbs extends DTblsKstSel
         this._lblAlias.setText(strLabelAlias);
         
         this._tfdAlias = new JTextField();
-        this._tfdAlias.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
         this._tfdAlias.setEditable(false);
 
         //

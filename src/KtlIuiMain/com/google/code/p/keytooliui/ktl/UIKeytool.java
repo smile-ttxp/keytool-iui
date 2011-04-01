@@ -8,8 +8,11 @@ import java.awt.event.ItemListener;
 import java.awt.event.WindowListener;
 import java.util.Locale;
 import javax.swing.UIManager;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 import javax.swing.event.ChangeListener;
 import javax.swing.plaf.ColorUIResource;
+import javax.swing.plaf.BorderUIResource;
 
 import com.google.code.p.keytooliui.ktl.swing.frame.FMainUIKtl;
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
@@ -135,6 +138,8 @@ final public class UIKeytool extends AppMainUIAbs
                 UIManager.put("TitledBorder.titleColor", new ColorUIResource(80, 40, 40));
                 UIManager.put("ToolTip.background", new ColorUIResource(Color.YELLOW));
                 UIManager.put("ToolTip.foreground", new ColorUIResource(Color.DARK_GRAY));
+                UIManager.put("TextField.border", new BorderUIResource(new SoftBevelBorder(BevelBorder.LOWERED)));
+                UIManager.put("PasswordField.border", UIManager.get("TextField.border"));
             }
             else
             {

@@ -4,8 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.security.*;
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
 import com.google.code.p.keytooliui.ktl.swing.panel.*;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BCancel;
@@ -259,7 +257,6 @@ abstract public class DTblEntryAbs extends DEscapeAbstract implements
         this._lblAlias.setText(strLabelAlias);
         
         this._tfdAlias_ = new JTextField();
-        this._tfdAlias_.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
 
         //
         

@@ -17,8 +17,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JRootPane;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
 import javax.swing.event.ListSelectionEvent;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BCancel;
@@ -62,8 +60,6 @@ public class DTblsKstSelSKOpen extends DTblsKstSelSKAbs
         this._lblEnterRespective = new JLabel(DTblsKstSelSKOpen._f_s_strLabelPasswdRespective);
         
         this._pfdEnterRespective = new JPasswordField(12);
-        
-        this._pfdEnterRespective.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
         
         super._pnlContentsTextfields_.setLayout(new GridLayout(2, 2, 5, 5)); 
     }

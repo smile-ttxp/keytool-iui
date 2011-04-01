@@ -13,7 +13,6 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import javax.swing.*;
-import javax.swing.border.*;
 import javax.swing.event.*;
 
 import java.awt.*;
@@ -69,8 +68,6 @@ abstract public class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs
         this._lblEnterRespective = new JLabel(DTblEntryKprOpenKPAbs._f_s_strLabelPasswdRespective);
         
         this._pfdEnterRespective = new JPasswordField(12);
-        
-        this._pfdEnterRespective.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
         
         super._pnlContentsTextfields_.setLayout(new GridLayout(2, 2, 5, 5)); 
     }

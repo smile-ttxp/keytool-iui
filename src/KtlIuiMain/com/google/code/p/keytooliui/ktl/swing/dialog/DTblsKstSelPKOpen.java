@@ -4,8 +4,6 @@ import java.awt.Component;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
@@ -47,8 +45,6 @@ public class DTblsKstSelPKOpen extends DTblsKstSelPKAbs
         this._lblEnterRespective = new JLabel(DTblsKstSelPKOpen._f_s_strLabelPasswdRespective);
         
         this._pfdEnterRespective = new JPasswordField(12);
-        
-        this._pfdEnterRespective.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
         
         super._pnlContentsTextfields_.setLayout(new GridLayout(2, 2, 5, 5)); 
     }

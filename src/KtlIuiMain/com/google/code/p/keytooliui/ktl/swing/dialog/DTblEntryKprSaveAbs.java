@@ -15,7 +15,6 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import javax.swing.*;
-import javax.swing.border.*;
 
 import java.awt.*;
 import java.util.*;
@@ -116,9 +115,6 @@ abstract public class DTblEntryKprSaveAbs extends DTblEntryKprAbs
             this._pfdEnterNew = new JPasswordField(12);
             this._pfdConfirmNew = new JPasswordField(12);
         
-            this._pfdEnterNew.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
-            this._pfdConfirmNew.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
-            
             super._pnlContentsTextfields_.setLayout(new GridLayout(3, 2, 5, 5));
         }
         

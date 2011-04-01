@@ -32,8 +32,6 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
-import javax.swing.border.*;
-
 import java.awt.*;
 
 abstract public class PFAbs extends JPasswordField
@@ -86,7 +84,6 @@ abstract public class PFAbs extends JPasswordField
         setMaximumSize(dim);
         setMinimumSize(dim);
 	    
-	    setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
 	    setEditable(false);
     }
     

@@ -17,8 +17,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JRootPane;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
 import javax.swing.event.ListSelectionEvent;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BCancel;
@@ -154,7 +152,6 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
         this._lblAlias.setText(strLabelAlias);
         
         this._tfdAlias = new JTextField();
-        this._tfdAlias.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
 
         //
         
@@ -168,9 +165,6 @@ abstract public class DTblsKstViewKeyAbs extends DTblsKstView
             this._pfdEnterNew = new JPasswordField(12);
             this._pfdConfirmNew = new JPasswordField(12);
         
-            this._pfdEnterNew.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
-            this._pfdConfirmNew.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
-            
             this._pnlContentsTextfields.setLayout(new GridLayout(3, 2, 5, 5));
         }
         
