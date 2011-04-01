@@ -1,89 +1,24 @@
 package com.google.code.p.keytooliui.ktl.swing.panel;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
 import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.print.PageFormat;
-import java.awt.print.PrinterException;
-import java.awt.print.PrinterJob;
-import javax.swing.*;
+import javax.swing.JScrollPane;
+import javax.swing.JTree;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.TreeExpansionEvent;
 import javax.swing.event.TreeExpansionListener;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
-//import javax.swing.tree.TipOnLeafNode;
 import javax.swing.tree.TreePath;
 import javax.swing.tree.TreeSelectionModel;
+
 import com.google.code.p.keytooliui.ktl.swing.toolbar.TBSubTreeKtl;
-import com.google.code.p.keytooliui.ktl.swing.tree.*;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
+import com.google.code.p.keytooliui.ktl.swing.tree.TipOnLeafNode;
+import com.google.code.p.keytooliui.ktl.swing.tree.TipOnLeafTree;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
-import com.google.code.p.keytooliui.shared.swing.button.BESPrint16;
-import java.awt.event.*;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.Border;
-import javax.swing.border.EmptyBorder;
-//import org.progx.swing.debug.DebugBorder;
 
-public class PCntsMainLeft extends PCntsMainAbs implements 
-        TreeSelectionListener,
-        TreeExpansionListener
-        // test
-        , MouseListener
-{
-    // test
-    public void mouseClicked(MouseEvent e) 
-    {   
-    }
-    
-    public void mousePressed(MouseEvent e) 
-    {   
-    }
-    
-    public void mouseReleased(MouseEvent e) 
-    {   
-    }
-    
-    public void mouseEntered(MouseEvent e) 
-    {   
-        String str = e.getSource().getClass().toString();
-        System.out.println("mouseEntered " + str);
-
-        /* just testing swing effects
-        JComponent cmp = (JComponent) e.getSource();
-        Border border = cmp.getBorder();
-        
-        if (border != null) 
-        {
-            cmp.setBorder(new DebugBorder(border));
-        }
-        
-        else
-            System.out.println("border = null");*/
-    }
-    
-    public void mouseExited(MouseEvent e) 
-    {   
-        /*String str = e.getSource().getClass().toString();
-        System.out.println("mouseExited  " + str);
-        
-        JComponent cmp = (JComponent) e.getSource();
-        Border border = cmp.getBorder();
-        
-        if (border != null && border instanceof DebugBorder) 
-        {
-            cmp.setBorder(((DebugBorder) border).getDelegate());
-        }*/
-        
-    }
-    
+public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener, TreeExpansionListener
+{   
     // -------------------
     // final static public
     
@@ -160,12 +95,6 @@ public class PCntsMainLeft extends PCntsMainAbs implements
        this._strTitleAppli = strTitleAppli;
        
        // -----
-       // test
-        addMouseListener(this);
-       
-       
-       
-      
        
         TipOnLeafNode mtnRoot = new TipOnLeafNode("ROOT NODE");
         
@@ -185,17 +114,12 @@ public class PCntsMainLeft extends PCntsMainAbs implements
 
         this._spe = new JScrollPane(this._tre);
        
-       // beg test
-       this._spe.addMouseListener(this);
-       // end test
-       
-      
        
        // ----
        this._tbr = new TBSubTreeKtl(
                strTitleAppli,
-               (ActionListener) this._tre, // expand/collapse folders
-               (ActionListener) this // print
+               this._tre, // expand/collapse folders
+               this // print
                ); 
        
        
