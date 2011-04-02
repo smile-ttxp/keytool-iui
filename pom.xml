@@ -122,7 +122,7 @@
 				<artifactId>build-helper-maven-plugin</artifactId>
 				<version>1.5</version>
 				<executions>
-				
+
 					<!-- Add a second 'shared' source folder -->
 					<execution>
 						<id>add-source</id>
@@ -136,7 +136,7 @@
 							</sources>
 						</configuration>
 					</execution>
-					
+
 					<!-- Add a second 'shared' resource folder -->
 					<execution>
 						<id>add-resource</id>
@@ -179,6 +179,12 @@
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bctsp-jdk16</artifactId>
 			<version>1.46</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.help</groupId>
+			<artifactId>javahelp</artifactId>
+			<version>2.0.02</version>
 		</dependency>
 
 		<!-- TEST -->
