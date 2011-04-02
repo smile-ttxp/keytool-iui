@@ -148,7 +148,6 @@
 							<resources>
 								<resource>
 									<directory>${basedir}/src/main/resourcesShared</directory>
-									<targetPath>target/classes</targetPath>
 								</resource>
 							</resources>
 						</configuration>
