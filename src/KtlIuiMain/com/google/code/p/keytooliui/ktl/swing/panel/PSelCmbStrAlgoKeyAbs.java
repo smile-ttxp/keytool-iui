@@ -55,8 +55,7 @@ abstract public class PSelCmbStrAlgoKeyAbs extends PSelCmbStrAbs
             strLabelPrefix + " " + PSelCmbStrAlgoKeyAbs._f_s_strTextLabelSuffix,
             strsValue,
             0 // first value in array for "setSelected(...)",
-            // TODO dummy value coz conflicts
-            ,200
+          
             ); 
     }
 }

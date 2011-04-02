@@ -21,9 +21,9 @@ final public class MIViewCrtPem extends MIAbstract
     static
     {
         String strBundleFileShort =
-                com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-                        ".MIViewCrtPem" // class name
-                ;
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR + ".MIViewCrtPem" // class name
+            ;
+
 
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.menuitem.MIViewCrtPem";
 

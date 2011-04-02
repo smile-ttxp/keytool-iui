@@ -49,9 +49,11 @@ abstract public class MIViewKstAbs extends MIAbstract
     static
     {
         String strBundleFileShort =
-                com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-                        ".MIViewKstAbs" // class name
-                ;
+
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
+            ".MIViewKstAbs" // class name
+            ;
+
 
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.menuitem.MIViewKstAbs";
 

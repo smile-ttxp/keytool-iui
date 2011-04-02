@@ -18,10 +18,13 @@ final public class MIViewCrtPkcs7 extends MIAbstract
     // STATIC INITIALIZER
 
     static
-    {
-        String strBundleFileShort = com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-                ".MIViewCrtPkcs7" // class name
-                ;
+
+    {    
+        String strBundleFileShort =
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
+            ".MIViewCrtPkcs7" // class name
+            ;
+
 
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.menuitem.MIViewCrtPkcs7";
 

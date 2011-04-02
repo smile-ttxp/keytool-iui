@@ -18,8 +18,11 @@ final public class MIViewCrtDer extends MIAbstract
     // STATIC INITIALIZER
 
     static
-    {
-        String strBundleFileShort = com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir + ".MIViewCrtDer"; // class name
+
+    {    
+        String strBundleFileShort =
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR + ".MIViewCrtDer" // class name
+            ;
 
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.menuitem.MIViewCrtDer";
 

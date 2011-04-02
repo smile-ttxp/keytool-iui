@@ -44,9 +44,10 @@ final public class MIHelpLicBc extends MIAbstract implements
     static
     {
         String strBundleFileShort =
-                com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-                        ".MIHelpLicBc" // class name
-                ;
+            com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
+            ".MIHelpLicBc" // class name
+            ;
+
 
         String strWhere = "com.google.code.p.keytooliui.ktl.swing.menuitem.MIHelpLicBc";
 
@@ -73,12 +74,11 @@ final public class MIHelpLicBc extends MIAbstract implements
         String strMethod = "actionPerformed(evtAction)";
 
         DViewString vsg = new DViewString(
-                this._cmpFrameOwner,
-                this._strTitleAppli + " - " + MIHelpLicBc._s_strText,
-                org.bouncycastle.LICENSE.licenseText
-        );
-
-        if (!vsg.init())
+            this._cmpFrameOwner,
+            org.bouncycastle.LICENSE.licenseText
+            );
+                    
+        if (! vsg.init())
         {
             MySystem.s_printOutExit(strMethod, "failed");
         }
@@ -86,14 +86,14 @@ final public class MIHelpLicBc extends MIAbstract implements
         vsg.setVisible(true);
     }
 
-    public MIHelpLicBc(Component cmpFrameOwner, String strTitleAppli)
+    public MIHelpLicBc(Component cmpFrameOwner)
     {
         super(
                 MIHelpLicBc._s_strText + " " + "..."
         );
 
         this._cmpFrameOwner = cmpFrameOwner;
-        this._strTitleAppli = strTitleAppli;
+
 
         addActionListener(this);
     }
@@ -102,5 +102,5 @@ final public class MIHelpLicBc extends MIAbstract implements
     // PRIVATE
 
     private Component _cmpFrameOwner = null;
-    private String _strTitleAppli = null;
+  
 }

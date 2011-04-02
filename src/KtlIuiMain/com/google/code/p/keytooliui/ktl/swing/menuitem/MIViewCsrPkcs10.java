@@ -45,11 +45,14 @@ final public class MIViewCsrPkcs10 extends MIAbstract
         try
         {
             String strBundleFileShort =
-                    com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-                            ".MIViewCsrPkcs10" // class name
-                    ;
 
-            ResourceBundle rbeResources = ResourceBundle.getBundle(strBundleFileShort, Locale.getDefault());
+                com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
+                ".MIViewCsrPkcs10" // class name
+                ;
+            
+            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
+                java.util.Locale.getDefault());
+                
 
             MIViewCsrPkcs10.STR_TEXT = rbeResources.getString("text");
         }

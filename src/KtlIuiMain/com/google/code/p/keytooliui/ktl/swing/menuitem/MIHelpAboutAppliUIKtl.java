@@ -27,13 +27,13 @@ final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
         try
         {
             String strBundleFileShort =
-                    com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strBundleDir +
-                            ".MIHelpAboutAppliUIKtl" // class name
-                    ;
-
-            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort,
-                    java.util.Locale.getDefault());
-
+                com.google.code.p.keytooliui.ktl.AppMainUIAbs.F_STR_BUNDLE_DIR +
+                ".MIHelpAboutAppliUIKtl" // class name
+                ;
+            
+            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
+                java.util.Locale.getDefault());
+                
             MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX = rbeResources.getString("dlgBodySuffix");
         }
 
@@ -49,29 +49,31 @@ final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
     // PUBLIC
 
     public MIHelpAboutAppliUIKtl(
-            Component cmpFrameOwner,
-            String strTitleApplication,
-            String strLic)
+        Component cmpFrameOwner,
+  
+        String strLic)
+
     {
         super(
-                cmpFrameOwner,
-                strTitleApplication,
 
-                MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
-
-                // ---
-                /*
-                    modif june 26, 2003
-                    from v1.1 to v1.2: disabling all
-                */
-                "", // "Product ID: none", // TEMPO
-                //strLic,
-
-                // end modif
-
-                MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX,
-                new PTabHelpAppliAdvancedUI()
-        );
+            cmpFrameOwner, 
+ 
+            
+            MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
+            
+            // ---
+            /*
+                modif june 26, 2003
+                from v1.1 to v1.2: disabling all
+            */
+            "", // "Product ID: none", // TEMPO
+            //strLic,
+            
+            // end modif
+            
+            MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX,
+            new PTabHelpAppliAdvancedUI()
+            );
     }
 
     @Override
