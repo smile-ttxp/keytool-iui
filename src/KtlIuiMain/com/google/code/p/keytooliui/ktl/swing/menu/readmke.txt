@@ -1,5 +1,0 @@
-6:48 PM 10/21/2003
-####
-
-MViewSelTab.java TOBE RENAMED: MViewSelTabSin.java
-"Sin" for SignIt Now!
