@@ -50,8 +50,7 @@ final public class UIKeytool extends AppMainUIAbs
     // FINAL STATIC PRIVATE
 
     final static private String _F_STR_CLASS = "com.google.code.p.keytooliui.ktl.UIKeytool.";
-    
-    //final static public String _F_STR_NAME_SHORT_APPLI = "ktl";
+
 
     static
     {
@@ -983,8 +982,6 @@ final public class UIKeytool extends AppMainUIAbs
         super(
             blnShowDialogExitConfirm, // this field used for "blnExitNormally"
             false, // MEMO: blnParentDirReadOnlyAllowed
-            //UIKeytool.s_getTitleAppli(),
-            //UIKeytool._F_STR_NAME_SHORT_APPLI, // eg: "ktl"
             blnShowDialogExitConfirm,
             false, // blnIsHelpGettingStarted
             // tmp forcing default english language
@@ -1015,9 +1012,7 @@ final public class UIKeytool extends AppMainUIAbs
 	     
 	    // ----
         
-        if (! super._createLastUserPreferences_(
-                    //UIKeytool._F_STR_NAME_SHORT_APPLI,
-                    MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion))
+        if (! super._createLastUserPreferences_())
 	        MySystem.s_printOutExit(this, strMethod, "failed");
     }
     

@@ -9,8 +9,6 @@ import com.google.code.p.keytooliui.shared.swing.menuitem.MIHelpAboutAppliAbstra
 
 final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
 {
-    final static public String f_s_strDlgBodyVersion = "2.5";
-
 
     static public String STR_DLG_BODY_SUFFIX = null;
 
@@ -58,8 +56,6 @@ final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
 
             cmpFrameOwner, 
  
-            
-            MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
             
             // ---
             /*

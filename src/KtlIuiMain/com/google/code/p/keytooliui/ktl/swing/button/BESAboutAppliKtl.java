@@ -42,9 +42,6 @@ final public class BESAboutAppliKtl extends BESAboutAppli24Abs
     {
         super(
             cmpFrameOwner, 
-     
-            
-            MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
             "", // "Product ID: none", // TEMPO
             MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX,
             new PTabHelpAppliAdvancedUI()

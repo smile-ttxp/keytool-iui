@@ -454,11 +454,9 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
         this._addListeners();
     }
     
-    protected boolean _createLastUserPreferences_(
-            //String strAppliNameShort,
-            String strVersionAppli)
+    protected boolean _createLastUserPreferences_()
     {
-        String strMethod = "_createLastUserPreferences_(...)";
+        String strMethod = "_createLastUserPreferences_()";
         
         Vector<UserChoice> vecUserChoice = new Vector<UserChoice>();
 	        
@@ -472,7 +470,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
         
         vecUserChoice.addElement(this._cltSetVisibleTab_);*/
         
-        if (! super._createLastUserPreferences_(strVersionAppli, vecUserChoice))
+        if (! super._createLastUserPreferences_(vecUserChoice))
         {
 	        MySystem.s_printOutExit(this, strMethod, "failed");
 	        return false;
