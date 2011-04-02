@@ -25,6 +25,9 @@
   <target name="run" depends="compile">
     <java classname="com.google.code.p.keytooliui.ktl.UIKeytool" fork="true">
       <jvmarg value="-Xmx512m"/>
+   	  <jvmarg value="-D_appli.title=KeyToolIUI"/>
+      <jvmarg value="-D_appli.version=2.4.2"/>
+      <jvmarg value="-D_appli.name.short=ktl"/>
       <classpath>
         <pathelement path="build" />
         <path refid="classpath.main"/>
