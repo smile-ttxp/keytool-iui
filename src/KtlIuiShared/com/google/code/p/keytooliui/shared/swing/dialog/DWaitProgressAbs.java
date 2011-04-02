@@ -48,7 +48,7 @@ abstract public class DWaitProgressAbs extends DEscapeAbstract
     static
     {
         final  String f_strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".DWaitProgressAbs" // class name
             ;
             

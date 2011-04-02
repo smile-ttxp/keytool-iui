@@ -51,7 +51,7 @@ final public class MEditEditorText extends MAbstract implements
     static private java.util.ResourceBundle _s_rbeResources;
     
     final static private String _f_s_strBundleFileShort =
-        com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+        com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
         ".MEditEditorText" // class name
         ;
     

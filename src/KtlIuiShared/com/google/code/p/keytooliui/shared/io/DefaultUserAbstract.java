@@ -54,12 +54,11 @@ abstract public class DefaultUserAbstract
     **/
     protected DefaultUserAbstract(
         // application
-        String strPathAbsHomeAppli,
-        String strVersionAppli)
+        String strPathAbsHomeAppli)
     {
         this._strPathAbsParentAppli_ = strPathAbsHomeAppli;
         this._strApplicationNameShort = System.getProperty("_appli.name.short"); // MEMO: prerequisite
-        this._strVersionAppli = strVersionAppli;
+        this._strVersionAppli = System.getProperty("_appli.version"); // MEMO: prerequisite
     }
     
     protected boolean _init_()
@@ -85,7 +84,7 @@ abstract public class DefaultUserAbstract
     {
     }
     
-    // EG: linux, KTL: ~/.rcp/usr/[ktl-version]/[user.name]
+    // EG: linux, KTL: ~/.keitooliui/usr/[ktl-version]/[user.name]
     
     protected File _getFileDirUser_()
     {
@@ -194,15 +193,15 @@ abstract public class DefaultUserAbstract
     
     /**
         EG linux:, RCReader
-        should return the directory name ~/.rcp/usr/[ktl-version]
-     *  ie                               ~/.rcp/usr/ktl/20   (for version #2.0)
+        should return the directory name ~/.keytooliui/usr/[ktl-version]
+     *  ie                               ~/.keytooliui/usr/ktl/20   (for version #2.0)
     **/
     private File _getFileDirUsers()
     {
         String strMethod = "_getFileDirUsers()";
         
         // -----------------------
-        // 1) get ~/.rcp/usr
+        // 1) get ~/.keytooliui/usr
         
         String strPathUsr = this._strPathAbsParentAppli_ + File.separator + FileLocation.f_strUser;
         File fleDirUsr = new File(strPathUsr);
@@ -244,8 +243,8 @@ abstract public class DefaultUserAbstract
         }
         
         // -----------------------
-        // 2) get ~/.rcp/usr/[appli.shortName]
-        // ie     ~/.rcp/usr/ktl
+        // 2) get ~/.keytooliui/usr/[appli.shortName]
+        // ie     ~/.keytooliui/usr/ktl
         
         
         String strPathUsrAppli = fleDirUsr.getAbsolutePath() + File.separator + this._strApplicationNameShort;
@@ -288,10 +287,10 @@ abstract public class DefaultUserAbstract
         }
         
         // -----------------------
-        // 3) get ~/.rcp/usr/[appli.shortName]/[appli.version]
+        // 3) get ~/.keytooliui/usr/[appli.shortName]/[appli.version]
         //    ie. appli's version: "2.0"
         //                     ==> "20"
-        //                     ==> ~/.rcp/usr/ktl/20
+        //                     ==> ~/.keytooliui/usr/ktl/20
         
         
         String strNameVersionAppli = this._strVersionAppli;

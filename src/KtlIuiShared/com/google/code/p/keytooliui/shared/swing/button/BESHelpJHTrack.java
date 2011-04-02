@@ -48,7 +48,7 @@ final public class BESHelpJHTrack extends BESHelpJHAbstract
         java.util.ResourceBundle rbeResources;
     
         String f_strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".BESHelpJHTrack" // class name
             ;
     

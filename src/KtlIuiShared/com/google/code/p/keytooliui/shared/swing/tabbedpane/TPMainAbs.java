@@ -53,7 +53,7 @@ abstract public class TPMainAbs extends JTabbedPane
         String strWhere = "com.google.code.p.keytooliui.shared.swing.tabbedpane.TPMainAbs";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".TPMainAbs" // class name
             ;
         

@@ -52,7 +52,7 @@ final public class MFileAllEditor extends MFileAllAbstract implements
         String strWhere = "com.google.code.p.keytooliui.shared.swing.menu.MFileAllEditor";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".MFileAllEditor" // class name
             ;
             

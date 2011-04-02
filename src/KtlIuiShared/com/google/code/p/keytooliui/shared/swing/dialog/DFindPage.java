@@ -84,7 +84,7 @@ final public class DFindPage extends DFindAbstract implements DFindPageListener
         String strWhere = "com.google.code.p.keytooliui.shared.swing.dialog.DFindPage";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".DFindPage" // class name
             ;
         

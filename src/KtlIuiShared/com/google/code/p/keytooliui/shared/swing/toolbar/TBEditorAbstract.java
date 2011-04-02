@@ -49,7 +49,7 @@ abstract public class TBEditorAbstract extends TBAbs implements
     // FINAL STATIC PRIVATE
         
     final static private String _f_s_strBundleFileShort =
-        com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+        com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
         ".TBEditorAbstract" // class name
         ;
     

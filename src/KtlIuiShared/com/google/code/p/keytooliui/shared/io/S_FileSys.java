@@ -37,7 +37,7 @@ public class S_FileSys
     final static private String _f_s_strDirTmp = "temp";
     
     final static private String _f_s_strBundleFileShort =
-        com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+        com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
         ".S_FileSys" // class name
         ;
         
@@ -282,7 +282,9 @@ public class S_FileSys
                 return null;
             }
             
-            File fleNew = new File(fle, ".rcp");
+            File fleNew = new File(fle, 
+                    System.getProperty("_appli.cache") // MEMO: prerequisite
+                    );
             
             if (! fleNew.exists())
             {

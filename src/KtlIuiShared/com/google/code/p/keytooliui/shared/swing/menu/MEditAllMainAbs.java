@@ -49,7 +49,7 @@ abstract public class MEditAllMainAbs extends MAbstract
     {
     
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".MEditAllMainAbs" // class name
         ;
         

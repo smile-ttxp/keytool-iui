@@ -43,7 +43,7 @@ final public class MHelpAboutViewerAudioPreview extends MHelpAboutAbstract
         final String f_strWhere = "com.google.code.p.keytooliui.shared.swing.menu.MHelpAboutViewerAudioPreview";
         
         final String f_strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".MHelpAboutViewerAudioPreview" // class name
             ;
     

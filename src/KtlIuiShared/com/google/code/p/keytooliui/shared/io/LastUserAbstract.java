@@ -193,13 +193,11 @@ abstract public class LastUserAbstract extends DefaultUserAbstract
     protected LastUserAbstract(
         // application
         String strPathAbsHomeAppli, 
-        //String strApplicationNameShort,
-        String strVersionAppli,
         String strFileNameIni,
         String strFileNameBak,
         java.util.Vector<UserChoice> vecUserChoice)
     {
-        super(strPathAbsHomeAppli, strVersionAppli);
+        super(strPathAbsHomeAppli);
         this._strFileNameIni = strFileNameIni;
         this._strFileNameBak = strFileNameBak;
         this._vecUserChoice = vecUserChoice;
@@ -542,7 +540,7 @@ abstract public class LastUserAbstract extends DefaultUserAbstract
         
         LastUserAbstract._s_blnSessionLogDone = true;
         
-        File fleParent = super._getFileDirUser_(); // ie ~/.rcp/usr/ktl/20/john-doe
+        File fleParent = super._getFileDirUser_(); // ie ~/.keytooliui/usr/ktl/20/john-doe
         
         if (fleParent == null)
         {

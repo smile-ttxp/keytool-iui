@@ -124,7 +124,7 @@ abstract public class Shared extends Object
         Shared._f_s_strLibSuffix_
         ; 
     
-    final static public String f_s_strBundleDir = "com.google.code.p.keytooliui.shared.bundle";
+    final static public String _F_STR_PATH_BUNDLE = "com.google.code.p.keytooliui.shared.bundle";
     
     /*
         ==> public released:

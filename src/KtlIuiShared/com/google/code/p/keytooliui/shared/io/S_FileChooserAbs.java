@@ -56,7 +56,7 @@ abstract public class S_FileChooserAbs
     static
     {
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".S_FileChooserAbs" // class name
             ;    
     

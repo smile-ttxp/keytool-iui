@@ -217,7 +217,7 @@ abstract public class AppMainAbs extends AppAbs implements
         String strMethod = _f_s_strClass + "_s_getDialogProps()";
         
         final String _f_s_strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".AppMainAbs" // class name
         ;
         
@@ -684,16 +684,12 @@ abstract public class AppMainAbs extends AppAbs implements
         return true;
     }
     
-    protected boolean _createLastUserPreferences_(
-        String strVersionAppli,
-        java.util.Vector<UserChoice> vecUserChoice)
+    protected boolean _createLastUserPreferences_(java.util.Vector<UserChoice> vecUserChoice)
     {
-        String strMethod = "_createLastUserPreferences_(strDirSubAppli, strVersionAppli, vecUserChoice)";
+        String strMethod = "_createLastUserPreferences_(vecUserChoice)";
         
         if (! this._blnAppliDirCanWrite_)
             return true;
-
-
         
         if (vecUserChoice==null)
         {
@@ -723,7 +719,7 @@ abstract public class AppMainAbs extends AppAbs implements
         
         // --
         this._luaLastUserPreferences = new LastUserPref(
-	        fle.getAbsolutePath(), strVersionAppli, vecUserChoice);
+	        fle.getAbsolutePath(), vecUserChoice);
 	        
 	    return true;
     }
@@ -732,40 +728,9 @@ abstract public class AppMainAbs extends AppAbs implements
     protected void _exitNormally_()
     {
         final String strMethod = "_exitNormally_()";
-        //com.google.code.p.keytooliui.shared.lang.thread.MyThreadAbs.s_dumpThreadsActive();
-
-        
-        // -- begin test
-        
-        /*Thread thrCur = Thread.currentThread();
-        System.out.println("thrCur.getName()=" + thrCur.getName());
-        
-        ThreadGroup tgp = thrCur.getThreadGroup();
-        
-        if (tgp == null)
-            System.out.println("nil tgp");
-        else
-        {
-            System.out.println("! nil tgp, tgp.activeCount()=" + tgp.activeCount());
-            System.out.println("tgp.getName()=" + tgp.getName());
-            tgp.list();
-        }*/
-        
-        // -- end test
-        
-        //System.exit(0); // memo: convention, "0"=normal termination
-        
-        //if (this._blnAllowedCleanUpAllManagerMedia)
-          //  com.google.code.p.keytooliui.javax.media.MyManager.s_cleanUpAll();
-        
-        /*javax.swing.SwingUtilities.invokeLater(new Runnable()
-	    {
-	        public void run()
-	        {*/
-	            MySystem.s_printOutTrace(this, strMethod, "exit normally");
-	            System.exit(0);
-	        /*}
-	    }); */
+        MySystem.s_printOutTrace(this, strMethod, "exiting normally");
+        System.exit(0);
+	 
     }
     
     protected boolean _packAndShow_()

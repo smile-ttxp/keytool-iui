@@ -54,7 +54,7 @@ abstract public class MIHelpAboutAppliAbstract extends MIAbstract
     static
     {    
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".MIHelpAboutAppliAbstract" // class name
             ;
 
@@ -81,6 +81,7 @@ abstract public class MIHelpAboutAppliAbstract extends MIAbstract
     }
     
     
+    @Override
     public void destroy()
     {
         super.destroy();
@@ -100,8 +101,6 @@ abstract public class MIHelpAboutAppliAbstract extends MIAbstract
     
     protected MIHelpAboutAppliAbstract(
         final Component cmpFrameOwner,
-    
-        final String strDlgBodyVersion,
         final String strProductID,
         final String strDlgBodyTextThirdParty,
         final PTabHelpAppliAdvancedAbs pnlTabAdvanced // created in subclasses
@@ -110,9 +109,6 @@ abstract public class MIHelpAboutAppliAbstract extends MIAbstract
         super(System.getProperty("_appli.title") + " ...");
         
         String strMethod = "MIHelpAboutAppliAbstract(...)";
-        
-        if (strProductID == null)
-            MySystem.s_printOutExit(this, strMethod, "nil strProductID");
             
         this.addActionListener(new ActionListener()
         {
@@ -130,7 +126,6 @@ abstract public class MIHelpAboutAppliAbstract extends MIAbstract
                         cmpFrameOwner,
                   
                         MIHelpAboutAppliAbstract.s_strTitlePrefix,
-                        strDlgBodyVersion,
                         strDlgBodyCopyright,
                         strProductID,
                         strDlgBodyTextThirdParty,

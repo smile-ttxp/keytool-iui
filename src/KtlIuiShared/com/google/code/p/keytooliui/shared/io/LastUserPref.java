@@ -37,8 +37,8 @@ final public class LastUserPref extends LastUserAbstract
     // ---------------------------
     // FINAL STATIC PRIVATE STRING
     
-    final static private String _f_s_strFileNameIni = new String("pref.ini");
-    final static private String _f_s_strFileNameBak = new String("pref.bak");
+    final static private String _F_S_STR_NAME_CUR = new String("pref.ini");
+    final static private String _F_S_STR_NAME_BAK = new String("pref.bak");
     
     // ------
     // PUBLIC
@@ -46,13 +46,12 @@ final public class LastUserPref extends LastUserAbstract
     public LastUserPref(
         // application
         String strPathAbsHomeAppli, 
-        String strVersionAppli,
         java.util.Vector<UserChoice> vecUserChoice
         
        )
     {
-        super(strPathAbsHomeAppli, strVersionAppli,
-                _f_s_strFileNameIni, _f_s_strFileNameBak, vecUserChoice);
+        super(strPathAbsHomeAppli,
+                _F_S_STR_NAME_CUR, _F_S_STR_NAME_BAK, vecUserChoice);
     }
     
 }

@@ -56,7 +56,7 @@ abstract public class MChgAlignToolAbstract extends MChgAlignAbstract
         java.util.ResourceBundle rbeResources;
     
         final String f_strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".MChgAlignToolAbstract" // class name
             ;
     

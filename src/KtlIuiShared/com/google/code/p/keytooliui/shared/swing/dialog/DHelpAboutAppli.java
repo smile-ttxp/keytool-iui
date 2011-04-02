@@ -85,6 +85,7 @@ final public class DHelpAboutAppli extends DEscapeAbstract implements ActionList
         return true;
     }
     
+    @Override
     public void destroy()
     {          
         if (this._pnl != null)
@@ -103,7 +104,6 @@ final public class DHelpAboutAppli extends DEscapeAbstract implements ActionList
         Component cmpFrameOwner,
       
         String strTitlePrefix,
-        String strAppliVersion,
         String strAppliCopyright,
         String strProductID,
         String strTextThirdParty,
@@ -124,7 +124,6 @@ final public class DHelpAboutAppli extends DEscapeAbstract implements ActionList
         this._pnl = new PHelpAboutAppli(
             (ActionListener) this, 
    
-            strAppliVersion,
             strAppliCopyright,
             strProductID,
             strTextThirdParty,

@@ -80,7 +80,7 @@
         String strWhere = "com.google.code.p.keytooliui.shared.swing.panel.PHelpAboutAppli";
         
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".PHelpAboutAppli" // class name
             ;
         
@@ -124,7 +124,6 @@
         ActionListener actListenerParent, 
         // tabGeneral
  
-        String strAppliVersion,
         String strAppliCopyright,
         String strProductID,
         String strTextThirdParty,
@@ -147,7 +146,7 @@
         
         
         JTabbedPane tpnMid = _createTabbedPaneMid(
-            strAppliVersion, strAppliCopyright, 
+            strAppliCopyright, 
             PHelpAboutAppli.s_strContactPoints, 
             strProductID, 
             strTextThirdParty);
@@ -230,8 +229,6 @@
     
     
     private JTabbedPane _createTabbedPaneMid(
-  
-        String strAppliVersion,
         String strAppliCopyright,
         String strContactPoints,
         String strProductID,
@@ -241,7 +238,7 @@
         JTabbedPane tpn = new JTabbedPane();
         
         JPanel pnlTabGeneral = _createPanelTabGeneral(
-            strAppliVersion, strAppliCopyright, 
+            strAppliCopyright, 
             strContactPoints, strProductID, strTextThirdParty);
         
         if (pnlTabGeneral == null)
@@ -288,8 +285,6 @@
           . third parties copyright
     */
     private JPanel _createPanelTabGeneral(
- 
-        String strAppliVersion,
         String strAppliCopyright,
         String strContactPoints,
         String strProductID,
@@ -300,7 +295,7 @@
         JPanel pnl = new JPanel();
         
         JPanel pnlTop = _createPanelTabGeneralTop(
-            strAppliVersion, strAppliCopyright, strContactPoints, strProductID);
+            strAppliCopyright, strContactPoints, strProductID);
         
         if (pnlTop == null)
         {
@@ -335,15 +330,14 @@
     */
  
     private JPanel _createPanelTabGeneralTop(
-   
-        String strAppliVersion,
+
         String strAppliCopyright,
         String strContactPoints,
         String strProductID)
     {
         String strMethod = "_createPanelTabGeneralTop(...)";
         
-        if (strAppliVersion==null || strAppliCopyright==null || 
+        if (strAppliCopyright==null || 
             strContactPoints==null || strProductID==null)
         {
             MySystem.s_printOutError(this, strMethod, "nil arg");
@@ -387,7 +381,7 @@
         //lblBig.setForeground(Color.green);
         
         lblAppliTitle.setText(System.getProperty("_appli.title"));
-        lblAppliVersion.setText(strAppliVersion);
+        lblAppliVersion.setText(System.getProperty("_appli.version"));
         
         lblAppliCopyright.setText(strAppliCopyright);
         lblContactPoints.setText(strContactPoints);

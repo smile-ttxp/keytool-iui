@@ -44,7 +44,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
     // --------------
     // STATIC PRIVATE
     
-    static private String _s_strToolTipTextPrefix = null;
+    static private String _STR_TOOL_TIP_PREFIX = null;
     
     // ------------------
     // STATIC INITIALIZER
@@ -53,7 +53,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
     {
     
         String strBundleFileShort =
-            com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
+            com.google.code.p.keytooliui.shared.Shared._F_STR_PATH_BUNDLE +
             ".BESAboutAppliAbs" // class name
             ;
     
@@ -66,7 +66,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
             java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, 
                 java.util.Locale.getDefault());
                 
-            _s_strToolTipTextPrefix = rbeResources.getString("toolTipTextPrefix");
+            _STR_TOOL_TIP_PREFIX = rbeResources.getString("toolTipTextPrefix");
         }
         
         catch (java.util.MissingResourceException excMissingResource)
@@ -82,6 +82,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
     // ------
     // PUBLIC
     
+    @Override
      public void destroy()
     {
         super.destroy();
@@ -101,10 +102,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
         
     protected BESAboutAppliAbs(
             String strImage,
-            
             final Component cmpFrameOwner,
-        
-            final String strDlgBodyVersion,
             final String strProductID,
             final String strDlgBodyTextThirdParty,
             final PTabHelpAppliAdvancedAbs pnlTabAdvanced // created in subclasses
@@ -114,8 +112,8 @@ abstract public class BESAboutAppliAbs extends BEnabledState
         
         String strMethod = "BESAboutAppliAbs(..)";
 
-        if (_s_strToolTipTextPrefix != null)
-            setToolTipText(_s_strToolTipTextPrefix + " " + System.getProperty("_appli.title"));
+        if (_STR_TOOL_TIP_PREFIX != null)
+            setToolTipText(_STR_TOOL_TIP_PREFIX + " " + System.getProperty("_appli.title"));
         
         if (strProductID == null)
             MySystem.s_printOutExit(this, strMethod, "nil strProductID");
@@ -134,9 +132,7 @@ abstract public class BESAboutAppliAbs extends BEnabledState
                 {
                     _dlg = new DHelpAboutAppli(
                         cmpFrameOwner,
-             
                         MIHelpAboutAppliAbstract.s_strTitlePrefix,
-                        strDlgBodyVersion,
                         strDlgBodyCopyright,
                         strProductID,
                         strDlgBodyTextThirdParty,
