@@ -155,6 +155,30 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>java</executable>
+					<arguments>
+						<argument>-Xmx512m</argument>
+						<argument>-D_appli.title=KeyToolIUI</argument>
+						<argument>-D_appli.version=${version}</argument>
+						<argument>-D_appli.name.short=ktl</argument>
+						<argument>-classpath</argument>
+						<classpath />
+						<argument>com.google.code.p.keytooliui.ktl.UIKeytool</argument>
+					</arguments>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
