@@ -18,6 +18,11 @@
 		</license>
 	</licenses>
 
+	<organization>
+		<name>keytool-iui project</name>
+		<url>http://code.google.com/p/keytool-iui/</url>
+	</organization>
+
 	<developers>
 		<developer>
 			<id>bob</id>
@@ -133,7 +138,7 @@
 					<arguments>
 						<argument>-Xmx512m</argument>
 						<argument>-D_appli.title=KeyToolIUI</argument>
-						<argument>-D_appli.version=${version}</argument>
+						<argument>-D_appli.version=${project.version}</argument>
 						<argument>-D_appli.name.short=ktl</argument>
 						<argument>-classpath</argument>
 						<classpath />
@@ -141,6 +146,50 @@
 					</arguments>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo.webstart</groupId>
+				<artifactId>webstart-maven-plugin</artifactId>
+				<version>1.0-beta-1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jnlp</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outputDirectory>${basedir}/webstart</outputDirectory>
+					<jnlp>
+						<outputFile>keytool-iui.jnlp</outputFile>
+						<mainClass>com.google.code.p.keytooliui.ktl.UIKeytool</mainClass>
+					</jnlp>
+					<sign>
+						<keystore>${project.build.directory}/keytooliui.jks</keystore>
+						<keypass>${keytooliui.storepass}</keypass>
+						<storepass>${keytooliui.keypass}</storepass>
+						<storetype>jks</storetype>
+						<alias>ktliui</alias>
+						<validity>3650</validity>
+						<dnameCn>ktliui</dnameCn>
+						<dnameOu>ktliui</dnameOu>
+						<dnameO>ktliui</dnameO>
+						<dnameL>ktliui</dnameL>
+						<dnameSt>ktliui</dnameSt>
+						<dnameC>ktliui</dnameC>
+						<verify>false</verify>
+						<keystoreConfig>
+							<delete>true</delete>
+							<gen>true</gen>
+						</keystoreConfig>
+					</sign>
+					<outputJarVersions>false</outputJarVersions>
+					<verbose>true</verbose>
+					<unsign>false</unsign>
+					<verifyjar>false</verifyjar>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
