@@ -188,8 +188,6 @@ public class MHelpOffline extends MAbstract
     // ??? protected or private instead ???
     public MHelpOffline(boolean blnDoHelpOnItem)
     {
-        super();
-        
         this._mihSource = new MIHelpJHSourceStandard();
         setEnabled(this._mihSource.isEnabled());
         

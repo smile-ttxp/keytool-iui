@@ -8,8 +8,6 @@ public class IFKstOpenSigVerCrt extends IFAbs
 {
     public IFKstOpenSigVerCrt(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstOpenSigVerCrt(frmParent);
         setTitle(PTabUICmdKtlKstOpenSigVerCrt.STR_TITLETASK);
     }

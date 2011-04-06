@@ -45,12 +45,8 @@ final public class MToolAllMainUI extends MToolAllMainAbstract
     // PUBLIC
 
 
-    public MToolAllMainUI(
-        JFrame frmOwner,
-    
-        ActionListener actListenerParent)
+    public MToolAllMainUI(JFrame frmOwner, ActionListener actListenerParent)
     {
-        super();
         //super._pam_ = new MToolAppliMainSec(actListenerParent);
         
         this._mimManagerKstJks = new MIToolKstJks(actListenerParent);

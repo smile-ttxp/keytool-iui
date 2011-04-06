@@ -77,8 +77,6 @@ final public class MHtml extends MAbstract
     
     public MHtml()
     {
-        super();
-        
         String strMethod = "MHtml()";
         
         ImageIcon iin = com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get(_f_s_strIcon);

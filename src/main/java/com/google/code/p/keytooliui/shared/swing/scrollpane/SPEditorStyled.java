@@ -80,10 +80,7 @@ final public class SPEditorStyled extends SPEditorAbstract
     
     public SPEditorStyled()
     {
-        super();
 	    super._ntt_ = new TPEditorStyled();
     }
 
-    // -------
-    // PRIVATE
 }

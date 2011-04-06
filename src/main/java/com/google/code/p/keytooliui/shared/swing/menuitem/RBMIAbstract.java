@@ -46,8 +46,6 @@
     
     protected RBMIAbstract(String strText)
     {
-        super();
-        
         String strMethod = "RBMIAbstract(strText)";
         
         if (strText == null)

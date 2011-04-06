@@ -95,8 +95,6 @@ abstract public class PIcn2StateAbs extends JPanel
     protected PIcn2StateAbs(int intH)
     {
         // tempo
-        super();
-        
         this.setMinimumSize(new Dimension(intH, intH));
         this.setPreferredSize(getMinimumSize());
         

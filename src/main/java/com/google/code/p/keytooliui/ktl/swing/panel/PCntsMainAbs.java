@@ -15,9 +15,7 @@ import javax.swing.JPanel;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BESPrint16;
 
-abstract public class PCntsMainAbs extends JPanel implements
-        ActionListener,
-        Printable
+abstract public class PCntsMainAbs extends JPanel implements ActionListener, Printable
 {
     // ---------------
     // abstract public 
@@ -45,15 +43,6 @@ abstract public class PCntsMainAbs extends JPanel implements
         
         
     }
-    
-    // ---------
-    // protected
-    
-    protected PCntsMainAbs()
-    {
-        super();
-    }        
-        
     
     // -------
     // private

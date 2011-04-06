@@ -101,8 +101,6 @@ abstract public class TMEntryAbs extends TMAbs
 
     protected TMEntryAbs(Object[][] objssData)
     {
-        super();
-        
         String strMethod = "TMEntryAbs(objssData)";
         
         if (objssData == null)
@@ -111,4 +109,3 @@ abstract public class TMEntryAbs extends TMAbs
         this._objssData_ = objssData;
     }
 }
-

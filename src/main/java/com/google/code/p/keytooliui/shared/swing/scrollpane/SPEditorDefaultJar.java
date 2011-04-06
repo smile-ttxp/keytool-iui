@@ -56,7 +56,6 @@ final public class SPEditorDefaultJar extends SPEditorAbstract
     
     public SPEditorDefaultJar()
     {
-        super();
 	    super._ntt_ = new TPEditorDefaultJar();
     }
 

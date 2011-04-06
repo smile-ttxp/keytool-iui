@@ -122,6 +122,5 @@ abstract public class MBViewerFileAbs extends JMenuBar
     
     protected MBViewerFileAbs()
     {
-        super();
     }
 }

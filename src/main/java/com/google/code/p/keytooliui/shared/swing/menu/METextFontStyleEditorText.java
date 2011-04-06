@@ -104,11 +104,8 @@ final public class METextFontStyleEditorText extends MAbstract
     
     public METextFontStyleEditorText()
     {
-        super();
-
         _createChildren();
         _createListeners();
-        
     }
  
     public boolean init()

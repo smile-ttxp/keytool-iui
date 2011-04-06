@@ -159,7 +159,6 @@ abstract public class PListDblClickAbs extends JPanel implements
 
     protected PListDblClickAbs(boolean blnIsSelectable)
     {
-        super();
         this._blnIsSelectable_ = blnIsSelectable;
         
         this._dlm_ = new DefaultListModel();

@@ -192,8 +192,6 @@ abstract public class MBMainAbstract extends JMenuBar
     
     protected MBMainAbstract(String strHelpID)
     {
-        super();
-        
         // test
         addMouseListener(this);
 

@@ -55,7 +55,6 @@ abstract public class PBarContainerAbstract extends JPanel
     
     protected PBarContainerAbstract()
     {        
-        super();
     }
     
 }

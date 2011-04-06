@@ -191,8 +191,6 @@ abstract public class MHelpAllMainAbs extends MAbstract
     
     protected MHelpAllMainAbs()
     {
-        super();
-        
         setText(MHelpAllMainAbs._s_strText);
         setMnemonic(MHelpAllMainAbs._s_chrThisMnemo);
     }

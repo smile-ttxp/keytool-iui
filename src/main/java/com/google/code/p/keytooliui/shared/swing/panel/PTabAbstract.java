@@ -45,7 +45,6 @@ abstract public class PTabAbstract extends JPanel
     
     protected PTabAbstract()
     {
-        super();
         setDoubleBuffered(true);
         setLayout(new java.awt.BorderLayout());
     }

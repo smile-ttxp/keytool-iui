@@ -148,7 +148,6 @@ abstract public class MPrefAllMainAbstract extends MAbstract
     
     protected MPrefAllMainAbstract()
     {
-        super();        
         setText(_s_strText);
         setMnemonic(_s_chrThisMnemo);
     }

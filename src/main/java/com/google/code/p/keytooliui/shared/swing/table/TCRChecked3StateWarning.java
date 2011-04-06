@@ -45,9 +45,4 @@ final public class TCRChecked3StateWarning extends TCRChecked3StateAbs
 	        setText(cwv.getText());   
 	    }
 	}
-    
-    public TCRChecked3StateWarning()
-    {
-        super();
-    }
  }

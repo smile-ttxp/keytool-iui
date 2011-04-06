@@ -55,7 +55,6 @@ final public class SPEditorDefaultSys extends SPEditorAbstract
     
     public SPEditorDefaultSys()
     {
-        super();
 	    super._ntt_ = new TPEditorDefaultSys();
     }
 

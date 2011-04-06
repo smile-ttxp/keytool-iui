@@ -134,8 +134,6 @@ final public class PRangeVsRange extends PRangeAbstract implements
         int intMajorTickSpacing, int intMinorTickSpacing, int intSpacingMin
         )
     {
-        super();
-        
         // not really necessary, should be retrieved by "minTop minus minBottom"
         this._intSpacingMin = intSpacingMin;
         // -------

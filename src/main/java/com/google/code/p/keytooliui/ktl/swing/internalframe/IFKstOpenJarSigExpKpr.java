@@ -8,8 +8,6 @@ public class IFKstOpenJarSigExpKpr extends IFAbs
 {
     public IFKstOpenJarSigExpKpr(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdJsrSign(frmParent);
         setTitle(PTabUICmdJsrSign.STR_TITLETASK);
     }

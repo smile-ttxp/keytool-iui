@@ -193,7 +193,6 @@ abstract public class MToolAllMainAbstract extends MAbstract
     
     protected MToolAllMainAbstract()
     {
-        super();        
         setText(_s_strText);
         setMnemonic(_s_chrThisMnemo);
     }

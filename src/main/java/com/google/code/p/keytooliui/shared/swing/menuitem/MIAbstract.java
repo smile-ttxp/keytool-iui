@@ -82,8 +82,6 @@
     
     protected MIAbstract(String strText)
     {
-        super();
-        
         String strMethod = "MIAbstract(strText)";
         
         if (strText == null)

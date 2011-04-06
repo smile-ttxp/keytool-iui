@@ -119,8 +119,6 @@ abstract public class MGoAllMainAbs extends MAbstract
     
     protected MGoAllMainAbs()
     {
-        super();
-        
         setText(_s_strTextThis);
         setMnemonic(_s_chrMnemoThis);
     }

@@ -80,8 +80,6 @@ abstract public class MAppliMainAbstract extends MAbstract
     
     protected MAppliMainAbstract(String strIcon)
     {
-        super();
-        
         String strMethod = "MAppliMainAbstract(strIcon)";
         
         setText(_s_strText);

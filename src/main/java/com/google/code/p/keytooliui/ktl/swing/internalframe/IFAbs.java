@@ -61,8 +61,6 @@ abstract public class IFAbs extends JInternalFrame
     
     protected IFAbs()
     {
-        super();
-              
         setBounds(0, 0, 800, 600);
 
         setResizable(false);

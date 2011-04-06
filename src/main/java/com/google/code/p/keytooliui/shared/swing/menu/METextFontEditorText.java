@@ -129,11 +129,7 @@ final public class METextFontEditorText extends MAbstract
     
     public METextFontEditorText(Hashtable actions)
     {
-        super();
-        
         _createChildren(actions);
-        
-       
     }
  
     public boolean init()

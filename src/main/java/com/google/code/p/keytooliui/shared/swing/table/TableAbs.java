@@ -44,13 +44,11 @@
     
     protected TableAbs()
     {
-        super();
     }
     
     protected TableAbs(TableModel tml)
     {
         super(tml);
     }
-    
     
  }

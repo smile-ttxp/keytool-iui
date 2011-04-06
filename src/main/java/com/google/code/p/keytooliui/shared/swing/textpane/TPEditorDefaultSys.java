@@ -190,8 +190,6 @@ final public class TPEditorDefaultSys extends TPEditorAbstract
 
     public TPEditorDefaultSys()
     {
-        super();
-        
         //_setDefaultFont();
         //_createChildren();
     }

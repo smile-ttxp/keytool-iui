@@ -138,12 +138,8 @@ public class METextAlignmentEditorText extends MAbstract
     
     public METextAlignmentEditorText(Hashtable actions)
     {
-        super();
-
         _createChildren();
         _createListeners(actions);
-        
-        
     }
         
     // -------

@@ -24,10 +24,7 @@ abstract public class BAbs extends JButton
     // ---------
     // protected
     
-    protected BAbs(
-            String strText,
-            String strToolTip,
-            ActionListener actListenerParent)
+    protected BAbs(String strText, String strToolTip, ActionListener actListenerParent)
     {
         this(strText, strToolTip);
         this._actListenerParent = actListenerParent;
@@ -36,12 +33,8 @@ abstract public class BAbs extends JButton
             addActionListener(this._actListenerParent);
     }
     
-    protected BAbs(
-            String strText,
-            String strToolTip)
+    protected BAbs(String strText, String strToolTip)
     {
-        super();
-        
         if (strText != null)
             setText(strText);
         

@@ -252,7 +252,6 @@ final public class MEditEditorText extends MAbstract implements
     
     public MEditEditorText(MEditEditorTextListener netListenerParent, Hashtable actions, AbstractAction aanUndo, AbstractAction aanRedo)
     {
-        super();
         String f_strMethod = "MEditEditorText(...)";
         
         this._netListenerParent = netListenerParent;

@@ -114,12 +114,7 @@ abstract public class PSelBtnTfdAbs extends PSelBtnAbs
     // destroyed in subclasses
     protected JTextField _tfdCurSelection_ = null;
     
-    protected PSelBtnTfdAbs(
-        Frame frmParent, 
-     
-        String strLabel,
-        boolean blnFieldRequired
-        )
+    protected PSelBtnTfdAbs(Frame frmParent, String strLabel, boolean blnFieldRequired)
     {
         super(frmParent, strLabel, blnFieldRequired);
     }

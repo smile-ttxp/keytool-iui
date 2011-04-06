@@ -153,7 +153,6 @@ abstract public class MHelpAboutMainAbstract extends MAbstract
     
     protected MHelpAboutMainAbstract(boolean blnAddAboutProj)
     {
-        super();
         this._blnAddAboutProj = blnAddAboutProj;
         setText(MHelpAboutMainAbstract._s_strText);
         

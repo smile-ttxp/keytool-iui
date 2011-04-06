@@ -45,9 +45,6 @@ abstract public class MChgAlignToolMainUIAbs extends MChgAlignToolAbstract
     
     protected MChgAlignToolMainUIAbs(java.awt.event.ItemListener itmListenerParent)
     {
-        super();
-               
-        // ---------------
         // create children
         super._rbmAlignTop_ = new RBMIAlignTopToolMain(itmListenerParent);
         super._rbmAlignLeft_ = new RBMIAlignLeftToolMain(itmListenerParent);

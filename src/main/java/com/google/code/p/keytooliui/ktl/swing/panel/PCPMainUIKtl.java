@@ -345,11 +345,7 @@ final public class PCPMainUIKtl extends PCPMainUIAbs
         javax.help.HelpBroker hbrHelpStandard*/
         )
     {
-        super();
-        
-        // ---------------
         // create children
-        
         super._tbrToolBar_ = new TBMainUIKtl(frmParent, alrParentAppli/*, hbrHelpStandard*/);
         super._spe_ = new SPUIMainKtl(frmParent);
     }

@@ -112,7 +112,6 @@ abstract public class BOChecked3StateAbstract extends BOCheckedAbs
     
     protected BOChecked3StateAbstract(int intState)
     {
-        super();
         this._intState = intState;
     }
 

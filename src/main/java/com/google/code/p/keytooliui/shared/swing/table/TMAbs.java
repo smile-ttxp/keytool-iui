@@ -18,6 +18,5 @@ package com.google.code.p.keytooliui.shared.swing.table;
     
     protected TMAbs()
     {
-        super();
     }
  }

@@ -47,8 +47,6 @@ abstract public class CBMIAbstract extends JCheckBoxMenuItem
     
     protected CBMIAbstract(String strText, ActionListener actListenerParent)
     {
-        super();
-        
         String strMethod = "CBMIAbstract(strText, actListenerParent)";
         
         this._actListenerParent = actListenerParent;

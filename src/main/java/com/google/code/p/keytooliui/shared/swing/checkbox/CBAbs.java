@@ -47,8 +47,6 @@
     
     protected CBAbs(ActionListener actListenerParent, String strTip)
     {
-        super();
-        
         this._actListenerParent = actListenerParent;
         
         if (this._actListenerParent != null)

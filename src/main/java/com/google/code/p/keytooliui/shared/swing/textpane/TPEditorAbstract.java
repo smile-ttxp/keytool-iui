@@ -129,7 +129,6 @@ abstract public class TPEditorAbstract extends JTextPane implements
 
     protected TPEditorAbstract()
     {
-        super();
     }
     
     protected boolean _init_()

@@ -45,9 +45,6 @@ abstract public class MChgAlignTabsMainUIAbs extends MChgAlignTabsAbstract
     
     protected MChgAlignTabsMainUIAbs(java.awt.event.ItemListener itmListenerParent)
     {
-        super();
-               
-        // ---------------
         // create children
         super._rbmAlignTop_ = new RBMIAlignTopTabsMain(itmListenerParent);
         super._rbmAlignLeft_ = new RBMIAlignLeftTabsMain(itmListenerParent);

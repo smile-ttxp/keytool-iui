@@ -46,8 +46,6 @@ public class TCRData extends TCRAbs
     
     public TCRData()
     {
-        super();
-        
         setForeground(TCRData.f_s_colFgDefault);
         setBackground(TCRData.f_s_colBgDefault);
     }

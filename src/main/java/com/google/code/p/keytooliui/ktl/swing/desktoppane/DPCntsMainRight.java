@@ -28,8 +28,6 @@ public class DPCntsMainRight extends JDesktopPane
     
     public DPCntsMainRight(Frame frmParent)
     {
-        super();
-        
         setBackground(new java.awt.Color(0, 0, 153));
         
         IFAbs ife = null;

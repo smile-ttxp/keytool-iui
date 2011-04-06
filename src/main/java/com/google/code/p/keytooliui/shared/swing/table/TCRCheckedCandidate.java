@@ -78,9 +78,4 @@ final public class TCRCheckedCandidate extends TCRCheckedAbs
                 this.setForeground(col);
         }
     }
-    
-    public TCRCheckedCandidate()
-    {
-        super();
-    }
  }

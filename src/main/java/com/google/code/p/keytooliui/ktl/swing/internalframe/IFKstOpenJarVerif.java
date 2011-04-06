@@ -8,8 +8,6 @@ public class IFKstOpenJarVerif extends IFAbs
 {
     public IFKstOpenJarVerif(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdJsrVerify(frmParent);
         setTitle(PTabUICmdJsrVerify.STR_TITLETASK);
     }

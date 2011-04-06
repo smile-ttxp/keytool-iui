@@ -105,8 +105,6 @@ final public class PRangeToRange extends PRangeAbstract implements
         int intMajorTickSpacingMaster, int intMinorTickSpacingMaster,
         String strTitleSlave, int intRangeMinSlave, int intRangeDefaultSlave)
     {
-        super();
-        // -------
         // creates
         
         _createPanelRangeToValue(strTitleMaster, intRangeMinMaster, intRangeMaxMaster, intRangeDefaultMaster, intMajorTickSpacingMaster, intMinorTickSpacingMaster);

@@ -138,8 +138,6 @@ abstract public class MFileAllAbstract extends MAbstract
     
     protected MFileAllAbstract(ActionListener actListenerParent)
     {
-        super();
-        
         setText(_s_strThisText);
         setMnemonic(_s_chrThisMnemo);
         this._fet_ = new MIFileExit(actListenerParent);

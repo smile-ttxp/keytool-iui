@@ -149,8 +149,6 @@ final public class METextFontFamilyEditorText extends MAbstract
     
     public METextFontFamilyEditorText()
     {
-        super();
-        
         _createChildren();
         _createListeners();
     }

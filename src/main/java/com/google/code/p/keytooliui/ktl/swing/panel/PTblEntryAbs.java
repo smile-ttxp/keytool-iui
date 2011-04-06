@@ -151,17 +151,10 @@ abstract public class PTblEntryAbs extends JPanel
     
     protected PTblEntryAbs(int intDeltaW)
     {
-        super();   
-
         this._speList_ = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         
         Dimension dim = new Dimension(PTblEntryAbs._f_s_intWidth + intDeltaW, PTblEntryAbs._f_s_intHeight);
         setSize(dim);
         setPreferredSize(dim);
     }
-    
-    
-
-    // -------
-    // PRIVATE    
 }

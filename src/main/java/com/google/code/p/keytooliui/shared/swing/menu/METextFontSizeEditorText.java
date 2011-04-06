@@ -143,8 +143,6 @@ public class METextFontSizeEditorText extends MAbstract
     
     public METextFontSizeEditorText(Hashtable actions)
     {
-        super();
-       
         _createChildren();
         _createListeners(actions);
     }

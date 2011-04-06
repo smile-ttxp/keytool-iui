@@ -114,7 +114,6 @@ abstract public class BOCheckedCandidateAbs extends BOCheckedAbs
     
     protected BOCheckedCandidateAbs(String strIcon)
     {
-        super();
         String strMethod = "BOCheckedCandidateAbs(...)";
         
         this._iin = S_IINShared.s_get(strIcon);

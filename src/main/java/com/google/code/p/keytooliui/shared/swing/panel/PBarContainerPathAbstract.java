@@ -77,7 +77,6 @@ abstract public class PBarContainerPathAbstract extends PBarContainerAbstract
     
     protected PBarContainerPathAbstract()
     {        
-        super();
     }
     
     protected boolean _init_()

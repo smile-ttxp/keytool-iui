@@ -105,11 +105,8 @@ abstract public class MBEditorAbstract extends JMenuBar
     }
     
     
-    protected MBEditorAbstract(
-        java.awt.event.ActionListener actListenerParent,
-        MFileAllEditorListener nfeListenerParent)
+    protected MBEditorAbstract(java.awt.event.ActionListener actListenerParent, MFileAllEditorListener nfeListenerParent)
     {
-        super();
         this._nfl = new MFileAllEditor(actListenerParent, nfeListenerParent);
     }
     

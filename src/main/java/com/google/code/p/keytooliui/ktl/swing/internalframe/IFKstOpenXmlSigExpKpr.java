@@ -8,8 +8,6 @@ public class IFKstOpenXmlSigExpKpr extends IFAbs
 {
     public IFKstOpenXmlSigExpKpr(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstOpenXmlSigExpKpr(frmParent);
         setTitle(PTabUICmdKtlKstOpenXmlSigExpKpr.STR_TITLETASK);
     }

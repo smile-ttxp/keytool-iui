@@ -891,18 +891,8 @@ abstract public class EPTextAbs extends JEditorPane implements
     
     
     
-    protected EPTextAbs(
-        EPTextAbsListener pepListenerParent,
-        Component cmpFrameOwner,
-
-        Color colPageTextSelection,
-        URL url,
-        StyledEditorKit sek
-        )
-        
+    protected EPTextAbs(EPTextAbsListener pepListenerParent, Component cmpFrameOwner, Color colPageTextSelection, URL url, StyledEditorKit sek)
     {
-        super();
-        
         String strMethod = "EPTextAbs(...)";
         
         this._pepListenerParent = pepListenerParent;

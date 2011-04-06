@@ -59,7 +59,6 @@ final public class PStatusBarVoidUI extends JPanel
     public PStatusBarVoidUI()
     {
         // tempo
-        super();
         setLayout(new java.awt.BorderLayout());
         
         com.google.code.p.keytooliui.shared.swing.border.S_Border.s_setEmptyLightLowered0(this);

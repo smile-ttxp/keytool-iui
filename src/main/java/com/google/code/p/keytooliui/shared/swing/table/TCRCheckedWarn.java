@@ -65,9 +65,4 @@ final public class TCRCheckedWarn extends TCRCheckedAbs
                 this.setForeground(col);
         }
     }
-    
-    public TCRCheckedWarn()
-    {
-        super();
-    }
  }

@@ -149,8 +149,6 @@ final public class METextFgColorEditorText extends MAbstract
         
     public METextFgColorEditorText()
     {
-        super();
-        
         _createChildren();
         _createListeners();
     }

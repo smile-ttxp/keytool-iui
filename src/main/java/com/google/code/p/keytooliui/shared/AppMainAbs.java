@@ -523,8 +523,6 @@ abstract public class AppMainAbs extends AppAbs implements
         boolean blnInternAllowed // custom help
         )
     {
-        super();
-        
         String strMethod = "AppMainAbs(...)";
         
         this._blnParentDirReadOnlyAllowed = blnParentDirReadOnlyAllowed;

@@ -100,8 +100,6 @@
     
     public TCRHeader()
     {
-        super();
-        
         setForeground(TCRHeader.f_s_colFgDefault);
         setBackground(TCRHeader.f_s_colBgDefault);
         setToolTipText(TCRHeader._s_strTip);

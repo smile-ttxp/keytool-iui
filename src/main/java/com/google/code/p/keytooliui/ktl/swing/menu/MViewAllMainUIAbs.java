@@ -212,8 +212,6 @@ abstract public class MViewAllMainUIAbs extends MViewAllMainAbs
     
     protected MViewAllMainUIAbs(ActionListener actListenerParent)
     {
-        super();
-
         this._mimViewCsrPkcs10 = new MIViewCsrPkcs10(actListenerParent);
         this._mimViewCrtDer = new MIViewCrtDer(actListenerParent);
         this._mimViewCrtPkcs7 = new MIViewCrtPkcs7(actListenerParent);

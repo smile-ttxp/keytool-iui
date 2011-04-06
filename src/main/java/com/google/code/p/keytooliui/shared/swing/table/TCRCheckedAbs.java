@@ -44,7 +44,6 @@
     
     protected TCRCheckedAbs()
     {
-        super();
         setHorizontalAlignment(JLabel.CENTER);
     }
  }

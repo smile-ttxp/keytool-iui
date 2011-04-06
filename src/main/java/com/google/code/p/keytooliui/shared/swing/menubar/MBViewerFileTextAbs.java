@@ -36,14 +36,8 @@ import java.awt.event.*;
 
 abstract public class MBViewerFileTextAbs extends MBViewerFileAbs
 {
-    // ---------
-    // PROTECTED   
-    
-    protected MBViewerFileTextAbs(
-        ActionListener actListenerParentFrame,
-        ActionListener actListenerParentPanel)
+    protected MBViewerFileTextAbs(ActionListener actListenerParentFrame, ActionListener actListenerParentPanel)
     {
-        super();
         super._menFile_ = new MFileAllViewerFileText(actListenerParentFrame, actListenerParentPanel);
     } 
 }

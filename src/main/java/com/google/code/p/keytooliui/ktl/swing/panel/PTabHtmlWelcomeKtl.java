@@ -20,8 +20,6 @@ public class PTabHtmlWelcomeKtl extends PTabAbstract
             Frame frmOwner
             )
     {
-        super();
-        
         // tempo
         setBackground(java.awt.Color.ORANGE);
         

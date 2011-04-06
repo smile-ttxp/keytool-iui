@@ -33,8 +33,6 @@ final public class PBarContainerPathRelative extends PBarContainerPathAbstract
     
     public PBarContainerPathRelative()
     {
-        super(); 
-
         super._bpr_ = new PBarPathRelative(PBarContainerAbstract._f_s_intH_);
     }
     

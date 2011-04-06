@@ -31,8 +31,6 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     
     public PTabHelpAppliAdvancedUI()
     {
-        super();       
-        
         String strMethod = "PTabHelpAppliAdvancedUI()";
         
         JPanel pnlCerts = _createPanelCerts();

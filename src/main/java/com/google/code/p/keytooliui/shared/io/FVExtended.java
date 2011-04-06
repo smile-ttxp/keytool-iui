@@ -33,14 +33,6 @@ import java.util.*;
 
 final public class FVExtended extends FileView
 {
-    // ------
-    // PUBLIC
-    
-    public FVExtended()
-    {
-        super();
-    }
-    
     public boolean init()
     {
         String strMethod = "init()";

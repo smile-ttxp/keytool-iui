@@ -47,8 +47,6 @@ abstract public class MAbstract extends JMenu
     
     protected MAbstract()
     {
-        super();
-        
         /*
             added march 7, 2002
             in order to Swing-based menus overlapping AWT-based stuffs like JMF player

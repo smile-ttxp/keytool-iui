@@ -44,12 +44,8 @@ final public class PBarContainerSecRtp extends PBarContainerSec
             this._pnlStreaming.setStateOn(bln);
     }
     
-    public PBarContainerSecRtp(
-        java.awt.event.ActionListener actListenerParent
-        )
+    public PBarContainerSecRtp(java.awt.event.ActionListener actListenerParent)
     {        
-        super();
-        
         this._pnlStreaming = new PIcn2StateRtpStreaming(PBarContainerAbstract._f_s_intH_, actListenerParent);
     }
     

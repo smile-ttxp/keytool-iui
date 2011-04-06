@@ -37,6 +37,5 @@ abstract public class BOCheckedAbs extends BOAbs
     
     protected BOCheckedAbs()
     {
-        super();
     }
 }

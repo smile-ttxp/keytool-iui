@@ -21,16 +21,7 @@ public class KeySelectorXmlVerif extends KeySelector
     // ------
     // public
     
-    public KeySelectorXmlVerif()
-    {
-        super();
-    }
-    
-    public KeySelectorResult select(KeyInfo keyInfo,
-                                    KeySelector.Purpose purpose,
-                                    AlgorithmMethod method,
-                                    XMLCryptoContext context)
-        throws KeySelectorException 
+    public KeySelectorResult select(KeyInfo keyInfo, KeySelector.Purpose purpose, AlgorithmMethod method, XMLCryptoContext context) throws KeySelectorException 
     {
         Iterator ki = keyInfo.getContent().iterator();
         

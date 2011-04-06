@@ -82,21 +82,9 @@ abstract public class PSelBtnTfdStrAbs extends PSelBtnTfdAbs
     // ---------
     // PROTECTED
     
-    protected PSelBtnTfdStrAbs(
-        Frame frmParent, 
-    
-        String strLabel,
-        TFAbstract tfa,
-        Object objDocPropValue,
-        boolean blnFieldRequired
-        )
+    protected PSelBtnTfdStrAbs(Frame frmParent, String strLabel, TFAbstract tfa, Object objDocPropValue, boolean blnFieldRequired)
     {
-        super(
-            frmParent, 
-         
-            strLabel,
-            blnFieldRequired
-            );
+        super(frmParent, strLabel, blnFieldRequired);
         
         super._btnSelect_ = new BESString16(this);
         super._btnSelect_.setToolTipText("click to enter string value");

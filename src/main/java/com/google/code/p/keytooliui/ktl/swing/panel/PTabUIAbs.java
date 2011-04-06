@@ -59,8 +59,6 @@ abstract public class PTabUIAbs extends PTabAbstract
     
     protected PTabUIAbs(String strHelpID)
     {
-        super();
-        
         this._strHelpID = strHelpID;
         
             

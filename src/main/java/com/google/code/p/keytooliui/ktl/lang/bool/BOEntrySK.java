@@ -23,8 +23,6 @@ public class BOEntrySK extends BOAbs
     
     public BOEntrySK()
     {
-        super();
-        
         this._iin = S_IINUI.s_get(BOEntrySK.STR_IMAGE);
         
         String strMethod = "BOEntrySK(...)";

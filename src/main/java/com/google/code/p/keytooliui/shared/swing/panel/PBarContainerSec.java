@@ -52,8 +52,6 @@ public class PBarContainerSec extends PBarContainerAbstract
     
     public PBarContainerSec()
     {        
-        super();
-        
         this._pnlStatus = new PBarStatus(PBarContainerAbstract._f_s_intH_);
     }
     

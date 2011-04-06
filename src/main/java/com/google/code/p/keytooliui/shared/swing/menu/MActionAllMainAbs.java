@@ -117,8 +117,6 @@ abstract public class MActionAllMainAbs extends MAbstract
     
     protected MActionAllMainAbs()
     {
-        super();
-        
         setText(_s_strTextThis);
         setMnemonic(_s_chrMnemoThis);
     }

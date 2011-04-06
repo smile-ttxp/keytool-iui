@@ -161,8 +161,6 @@ final public class TPEditorStyled extends TPEditorAbstract
 
     public TPEditorStyled()
     {
-        super();
-        
         this._hstActions = new Hashtable<Object, Action>();
         
         _setDefaultFont();

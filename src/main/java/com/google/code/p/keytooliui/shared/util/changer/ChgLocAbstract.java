@@ -198,7 +198,6 @@ abstract public class ChgLocAbstract extends UserChoice
     
     protected ChgLocAbstract(FMainAbs fmn)
     {
-        super();
         this._fmn_ = fmn;
     }
 }

@@ -8,8 +8,6 @@ public class IFKstOpenCryptDecShk extends IFAbs
 {
     public IFKstOpenCryptDecShk(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstOpenCryptDecShk(frmParent);
         setTitle(PTabUICmdKtlKstOpenCryptDecShk.STR_TITLETASK);
     }

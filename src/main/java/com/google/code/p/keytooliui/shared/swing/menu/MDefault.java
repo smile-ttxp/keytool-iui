@@ -39,13 +39,11 @@ public class MDefault extends MAbstract
     
     public MDefault()
     {
-        super();
     }
     
 
     public MDefault(String strText)
     {
-        this();
         setText(strText);
     }
 }

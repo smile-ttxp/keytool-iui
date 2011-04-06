@@ -50,12 +50,8 @@ abstract public class MProjCurAbs extends MAbstract
     // PROTECTED
    
     
-    protected MProjCurAbs(
-        String strTextThis, 
-        String strIcon)
+    protected MProjCurAbs(String strTextThis, String strIcon)
     {
-        super();
-        
         String strMethod = "MProjCurAbs(strTextThis, strIcon)";
         
         if (strTextThis == null)

@@ -38,6 +38,5 @@
     
     protected TCRChecked3StateAbs()
     {
-        super();
     }
  }

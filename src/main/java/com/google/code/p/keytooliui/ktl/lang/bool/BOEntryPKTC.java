@@ -45,7 +45,6 @@ public class BOEntryPKTC extends BOAbs
             boolean blnIsKey // else this is a certificate
             )
     {
-        super();
         this._blnIsKey = blnIsKey;
         
         // !!! not sure there is a need for the following !!!

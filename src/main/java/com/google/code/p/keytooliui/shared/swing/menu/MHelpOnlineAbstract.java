@@ -134,8 +134,6 @@ abstract public class MHelpOnlineAbstract extends MAbstract
     
     protected MHelpOnlineAbstract(java.awt.Component cmpFrameOwner)
     {
-        super();
-
         setText(_s_strText);
         
         javax.swing.ImageIcon iin = com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("webcomponent16.gif");

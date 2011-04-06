@@ -129,8 +129,5 @@ abstract public class PBarContainerPagerAbstract extends PBarContainerAbstract
     
     protected PBarContainerPagerAbstract()
     {        
-        super();
     }
-    
-    
 }

@@ -35,8 +35,6 @@ public class IFKstOpenArcDir extends IFAbs
 {
     public IFKstOpenArcDir(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdArcDir(frmParent);
         setTitle(PTabUICmdArcDir.STR_TITLETASK);
     }

@@ -110,7 +110,6 @@ abstract public class BOCheckedWarnAbs extends BOCheckedAbs
     
     protected BOCheckedWarnAbs(String strIcon)
     {
-        super();
         String strMethod = "BOCheckedWarnAbs(...)";
         
         this._iin = S_IINShared.s_get(strIcon);

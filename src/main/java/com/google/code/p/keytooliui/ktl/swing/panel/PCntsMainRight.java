@@ -239,15 +239,9 @@ public class PCntsMainRight extends PCntsMainAbs
     
     public PCntsMainRight(Frame frmParent)
     {
-        super();
-        
-        
-        this._tbr = new  TBSubCntKtl(
-            (ActionListener) this);
+        this._tbr = new  TBSubCntKtl((ActionListener) this);
         
         this._dpe = new DPCntsMainRight(frmParent);
-       
-        
     }
     
     public boolean init()

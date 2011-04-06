@@ -141,12 +141,6 @@ final public class TPEditorDefaultJar extends TPEditorAbstract
         return true;
     }
     
-
-    public TPEditorDefaultJar()
-    {
-        super();
-    }
-    
     public boolean init()
     {
         String f_strMethod = "init()";

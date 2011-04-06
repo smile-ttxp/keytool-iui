@@ -75,11 +75,6 @@ public class MAdvanced extends MAbstract
     // ------
     // PUBLIC
     
-    public MAdvanced()
-    {
-        super();
-    }
-    
     public boolean init()
     {
         String f_strMethod = "init()";

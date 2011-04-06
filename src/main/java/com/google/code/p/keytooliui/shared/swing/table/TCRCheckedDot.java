@@ -45,9 +45,4 @@ final public class TCRCheckedDot extends TCRCheckedAbs
             setText(cwv.getText());   
         }
     }
-    
-    public TCRCheckedDot()
-    {
-        super();
-    }
  }

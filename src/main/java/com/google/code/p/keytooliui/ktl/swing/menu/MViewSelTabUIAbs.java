@@ -35,9 +35,6 @@ abstract public class MViewSelTabUIAbs extends MAbstract
     
     protected MViewSelTabUIAbs()
     {
-        super();
-            
-        // --
         setText("Select task");
     }
     

@@ -94,7 +94,6 @@ abstract public class BOCheckedDotAbs extends BOCheckedAbs
     
     protected BOCheckedDotAbs(String strIcon)
     {
-        super();
         String strMethod = "BOCheckedDotAbs(...)";
         
         this._iin = S_IINShared.s_get(strIcon);

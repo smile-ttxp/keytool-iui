@@ -8,8 +8,6 @@ public class IFKstOpenIOShkOut extends IFAbs
 {
     public IFKstOpenIOShkOut(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstOpenIOShkOut(frmParent);
         setTitle(PTabUICmdKtlKstOpenIOShkOut.STR_TITLETASK);
     }

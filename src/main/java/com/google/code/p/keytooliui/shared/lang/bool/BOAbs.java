@@ -38,6 +38,5 @@ abstract public class BOAbs extends Object
     
     protected BOAbs()
     {
-        super();
     }
 }

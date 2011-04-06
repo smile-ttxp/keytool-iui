@@ -120,8 +120,6 @@ abstract public class MViewAllMainAbs extends MAbstract
     
     protected MViewAllMainAbs()
     {
-        super();
-        
         setText(_s_strTextThis);
         setMnemonic(_s_chrMnemoThis);
     }

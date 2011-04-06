@@ -8,8 +8,6 @@ public class IFWelcomeKtl extends IFAbs
 {
     public IFWelcomeKtl(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabHtmlWelcomeKtl(frmParent);
         setTitle(PTabHtmlWelcomeKtl.STR_TITLETASK);
     }

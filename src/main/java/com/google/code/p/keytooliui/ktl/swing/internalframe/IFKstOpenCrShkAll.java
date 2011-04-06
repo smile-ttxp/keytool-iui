@@ -8,8 +8,6 @@ public class IFKstOpenCrShkAll extends IFAbs
 {
     public IFKstOpenCrShkAll(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstOpenCrShkAll(frmParent);
         setTitle(PTabUICmdKtlKstOpenCrShkAll.STR_TITLETASK);
     }

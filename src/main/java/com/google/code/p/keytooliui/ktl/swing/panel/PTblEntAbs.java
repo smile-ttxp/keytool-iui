@@ -186,8 +186,6 @@ abstract public class PTblEntAbs extends JPanel
         ListSelectionListener lsnListenerParent,
         MouseListener mouListenerParent)
     {
-        super();   
-        
         this._lsnListenerParent = lsnListenerParent;
         this._mouListenerParent = mouListenerParent;
 

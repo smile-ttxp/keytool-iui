@@ -8,8 +8,6 @@ public class IFCmsSigVerify extends IFAbs
 {
     public IFCmsSigVerify(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdCmsSigVerify(frmParent);
         setTitle(PTabUICmdCmsSigVerify.STR_TITLETASK);
     }

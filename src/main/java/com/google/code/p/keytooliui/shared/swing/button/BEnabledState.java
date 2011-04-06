@@ -144,8 +144,6 @@ public class BEnabledState extends JButton implements
     
     public BEnabledState()
     {
-        super();
-        
         setBorderPainted(false);
         this.setContentAreaFilled(false);
         addMouseListener(this);

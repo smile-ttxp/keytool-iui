@@ -8,8 +8,6 @@ public class IFKstSave extends IFAbs
 {
     public IFKstSave(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstSave(frmParent);
         setTitle(PTabUICmdKtlKstSave.STR_TITLETASK);
     }

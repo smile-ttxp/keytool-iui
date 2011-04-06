@@ -69,8 +69,6 @@
         String[] strsExtension
         )
     {
-        super();
-        
         this._itmListenerParent = itmListenerParent;
         this._strsExtension = strsExtension;
         this._strFileDesc = strDescription;

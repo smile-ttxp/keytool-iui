@@ -45,9 +45,4 @@ final public class TCRChecked3StateUnchecked extends TCRChecked3StateAbs
 	        setText(cwv.getText());   
 	    }
 	}
-    
-    public TCRChecked3StateUnchecked()
-    {
-        super();
-    }
  }

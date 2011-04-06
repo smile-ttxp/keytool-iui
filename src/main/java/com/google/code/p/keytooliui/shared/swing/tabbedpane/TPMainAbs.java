@@ -133,12 +133,8 @@ abstract public class TPMainAbs extends JTabbedPane
     protected PTabAbstract _pnlWelcome_ = null;
     
     
-    protected TPMainAbs(
-        String strHelpID, 
-        javax.swing.event.ChangeListener chgListenerParent)
+    protected TPMainAbs(String strHelpID, javax.swing.event.ChangeListener chgListenerParent)
     {
-        super();
-        
         this._chgListenerParent = chgListenerParent;
         
         if (strHelpID != null)

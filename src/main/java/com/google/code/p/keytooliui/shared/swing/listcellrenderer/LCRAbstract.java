@@ -64,7 +64,6 @@ abstract public class LCRAbstract extends DefaultListCellRenderer
     
     protected LCRAbstract(boolean blnSelectable)
     {
-	    super();
 	    this._blnSelectable = blnSelectable;
 	}
 	

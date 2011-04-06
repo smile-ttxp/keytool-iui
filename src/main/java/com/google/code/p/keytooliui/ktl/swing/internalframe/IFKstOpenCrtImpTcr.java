@@ -8,8 +8,6 @@ public class IFKstOpenCrtImpTcr extends IFAbs
 {
     public IFKstOpenCrtImpTcr(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstOpenCrtImpTcr(frmParent);
         setTitle(PTabUICmdKtlKstOpenCrtImpTcr.STR_TITLETASK);
     }

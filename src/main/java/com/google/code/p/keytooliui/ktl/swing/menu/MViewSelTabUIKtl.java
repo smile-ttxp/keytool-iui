@@ -7,10 +7,6 @@ package com.google.code.p.keytooliui.ktl.swing.menu;
 
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.menu.*;
-import com.google.code.p.keytooliui.shared.swing.menuitem.*;
-
 import javax.swing.*;
 
 import java.awt.*;
@@ -73,10 +69,6 @@ final public class MViewSelTabUIKtl extends MViewSelTabUIAbs
     
     public MViewSelTabUIKtl(ActionListener actListenerParent)
     {
-        super();
-        
-        // --
-        
         MISelTabAbs itmCreateKst = new MISelTabCreateKst(actListenerParent);
         MISelTabAbs itmCreateKprV1CDsa = new MISelTabCreateKprDsa(actListenerParent);
         MISelTabAbs itmCreateKprV1CRsa = new MISelTabCreateKprRsa(actListenerParent);

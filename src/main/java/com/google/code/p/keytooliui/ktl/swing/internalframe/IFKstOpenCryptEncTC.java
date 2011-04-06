@@ -8,8 +8,6 @@ public class IFKstOpenCryptEncTC extends IFAbs
 {
     public IFKstOpenCryptEncTC(Frame frmParent)
     {
-        super();
-        
         super._pnl_ = new PTabUICmdKtlKstOpenCryptEncTC(frmParent);
         setTitle(PTabUICmdKtlKstOpenCryptEncTC.STR_TITLETASK);
     }

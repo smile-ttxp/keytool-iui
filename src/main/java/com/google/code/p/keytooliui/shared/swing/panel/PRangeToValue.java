@@ -155,8 +155,6 @@ final public class PRangeToValue extends PRangeAbstract implements
         int intMajorTickSpacing,
         int intMinorTickSpacing)
     {
-        super();
-        
         String f_strMethod = "PRangeToValue(...)";
         
         this._rtvListenerParent = rtvListenerParent;

@@ -119,11 +119,7 @@ abstract public class PCPMainUIAbs extends PCPMainAbs
     
     protected PCPMainUIAbs()
     {
-        super();
-        
-        // ---------------
         // create children
-
         //this._pnlStatusBar = new PBarContainerSec(alrParentAppli);
     }
     

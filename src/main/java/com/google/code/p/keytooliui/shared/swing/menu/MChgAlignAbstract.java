@@ -154,9 +154,6 @@ abstract public class MChgAlignAbstract extends MAbstract
         
     protected MChgAlignAbstract(String strText)
     {
-        super();
         setText(strText);
     }
-    
-    
 }

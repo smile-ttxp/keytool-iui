@@ -168,13 +168,10 @@ abstract public class MHelpAboutAbstract extends MAbstract implements
     
     protected MHelpAboutAbstract(Component cmpFrameOwner)
     {
-        super();
         this._cmpFrameOwner = cmpFrameOwner;
-   
         
         _createChildren();
         _createListeners();
-        
     }
  
     

@@ -96,8 +96,6 @@ abstract public class MHelpAllMainUIAbs extends MHelpAllMainAbs
         //javax.help.HelpBroker hbrHelpStandard,
         String strLic)
     {
-        super();
-        
         super._matHelpOffline_ = new MHelpOffline(
             //hbrHelpStandard,
             MHelpAllMainUIAbs._f_s_strTextHelpOfflineSource,

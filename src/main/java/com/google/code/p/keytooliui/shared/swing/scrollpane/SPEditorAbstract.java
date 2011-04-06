@@ -119,7 +119,6 @@ abstract public class SPEditorAbstract extends JScrollPane
     
     protected SPEditorAbstract()
     {
-        super();
     }
     
     protected TPEditorAbstract _ntt_ = null;

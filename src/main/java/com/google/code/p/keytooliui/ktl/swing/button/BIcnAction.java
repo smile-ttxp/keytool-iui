@@ -66,8 +66,6 @@ final public class BIcnAction extends JButton
     
     public BIcnAction(java.awt.event.ActionListener actListenerParent)
     {
-        super();
-        
         String strMethod = "BIcnAction(...)";
         
         if (actListenerParent != null)
