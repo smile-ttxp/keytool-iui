@@ -33,13 +33,16 @@ package com.google.code.p.keytooliui.shared.swing.panel;
 **/
 
 
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.util.Vector;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-
-import javax.swing.*;
-
-import java.util.*;
-import java.awt.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import net.miginfocom.swing.MigLayout;
 
 abstract public class PSelAbs extends JPanel
 {
@@ -218,20 +221,16 @@ abstract public class PSelAbs extends JPanel
     protected ImageIcon _iinReqFieldOk_ = null;
     protected ImageIcon _iinReqFieldWrong_ = null;
     
-    protected PSelAbs(
-        String strLabel,
-        boolean blnFieldRequired
-        )
+    protected PSelAbs(String strLabel, boolean blnFieldRequired)
     {
-        super();
-        
-        String strMethod = "PSelAbs(...)";
+        setLayout(new MigLayout("fill, ins 0"));
         
         this._pnl_ = new JPanel();
+        this._pnl_.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 0));
         this._lbl = new JLabel(strLabel);
 
         this.setFieldRequired(blnFieldRequired);
-	this._lbl.setHorizontalTextPosition(SwingConstants.RIGHT);
+	    this._lbl.setHorizontalTextPosition(SwingConstants.RIGHT);
     }
     
     // -------
