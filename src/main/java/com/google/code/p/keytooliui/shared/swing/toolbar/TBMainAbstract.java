@@ -376,12 +376,7 @@ abstract public class TBMainAbstract extends TBMSAbstract
         boolean blnFloatable
         )
     {
-        super(
-            intOrientation, 
-            iinFrameFloatable, 
-            strHelpID,
-            blnFloatable
-            );
+        super(intOrientation, iinFrameFloatable, strHelpID, blnFloatable);
        
         String strMethod = "TBMainAbstract(...)";
         

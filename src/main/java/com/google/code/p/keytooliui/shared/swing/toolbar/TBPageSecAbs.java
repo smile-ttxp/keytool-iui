@@ -79,10 +79,7 @@ abstract public class TBPageSecAbs extends TBAbs
     
     protected TBPageSecAbs(ActionListener actListenerParent)
     {
-        super(
-            SwingConstants.HORIZONTAL,
-            false // blnFloatable
-            );
+        super(SwingConstants.HORIZONTAL, false);
         
         this._btnPageReload = new BESPageReload16(actListenerParent);
         this._btnPageAbout = new BESPageAbout16(actListenerParent);

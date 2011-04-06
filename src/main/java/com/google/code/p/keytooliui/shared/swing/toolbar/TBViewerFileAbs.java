@@ -76,10 +76,7 @@ abstract public class TBViewerFileAbs extends TBAbs
     
     protected TBViewerFileAbs(ActionListener actListenerParentFrame)
     {
-        super(
-            SwingConstants.HORIZONTAL,
-            false // blnFloatable
-            );
+        super(SwingConstants.HORIZONTAL, false);
         
         this._btnExit = new BESExit24(actListenerParentFrame);
     }

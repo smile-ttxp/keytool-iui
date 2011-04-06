@@ -215,14 +215,9 @@ abstract public class TBEditorAbstract extends TBAbs implements
         return true;
     }
     
-    protected TBEditorAbstract(
-        ActionListener alrParent,
-        TBEditorAbstractListener ntlListenerParent)
+    protected TBEditorAbstract(ActionListener alrParent, TBEditorAbstractListener ntlListenerParent)
     {
-        super(
-            SwingConstants.HORIZONTAL,
-            false // blnFloatable
-            );
+        super(SwingConstants.HORIZONTAL, false);
         
         this._ntlListenerParent = ntlListenerParent;
         

@@ -61,12 +61,7 @@ abstract public class TBSubAbstract extends TBMSAbstract
         javax.swing.ImageIcon iinFrameFloatable // should be used once bug fixed "setFloatable(true), see below
         )
     {
-        super(
-            intOrientation, 
-            iinFrameFloatable, 
-            strHelpID,
-            false // blnFloatable
-            );
+        super(intOrientation, iinFrameFloatable, strHelpID, false);
         
         if (actListenerParent != null)
             super._btnPrint_ = new BESPrint16(actListenerParent);

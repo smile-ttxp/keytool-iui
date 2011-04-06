@@ -37,14 +37,6 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 abstract public class TBMainUIAbs extends TBMainAbstract
 {
-    // -------------------
-    // final static public
-    
-    final static public boolean F_BLN_IS_FLOATABLE = true;
-    
-    // ------
-    // PUBLIC
-    
     @Override
     public boolean init()
     {
@@ -89,7 +81,7 @@ abstract public class TBMainUIAbs extends TBMainAbstract
             iinFrameFloatable, // not in use for now
             
             true, // blnDoHelpOnItem
-            TBMainUIAbs.F_BLN_IS_FLOATABLE
+            false
             );
             
         

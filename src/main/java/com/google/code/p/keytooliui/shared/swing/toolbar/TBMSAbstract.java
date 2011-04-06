@@ -80,10 +80,7 @@ abstract public class TBMSAbstract extends TBAbs
         boolean blnFloatable
         )
     {
-        super(
-            intOrientation,
-            blnFloatable
-            );
+        super(intOrientation, blnFloatable);
         
         
         String strMethod = "TBMSAbstract(...)";

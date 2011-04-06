@@ -39,7 +39,7 @@ public class TBSubTreeKtl extends TBSubAbstract
         
         // ----
         setBorderPainted(true);
-        this.setFloatable(true);
+        this.setFloatable(false);
         setName(System.getProperty("_appli.title") + " - " + "Tree's toolbar"); // in case of floatable toolbar
     }
     
