@@ -31,6 +31,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.event.ChangeListener;
 import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.BorderUIResource;
+import javax.swing.plaf.InsetsUIResource;
 
 import java.awt.event.*;
 import java.awt.Font;
@@ -189,6 +190,7 @@ final public class UIKeytool extends AppMainUIAbs
                 UIManager.put("ToolTip.foreground", new ColorUIResource(Color.DARK_GRAY));
                 UIManager.put("TextField.border", new BorderUIResource(new SoftBevelBorder(BevelBorder.LOWERED)));
                 UIManager.put("PasswordField.border", UIManager.get("TextField.border"));
+                UIManager.put("ComboBox.padding", new InsetsUIResource(-2, 0, -2, 0));
             }
             else
             {
