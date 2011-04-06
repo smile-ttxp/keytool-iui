@@ -19,22 +19,12 @@
  *
  */
  
- 
 package com.google.code.p.keytooliui.ktl.swing.panel;
 
-/**
-
-**/
-
-import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemEvent;
-import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import javax.swing.event.DocumentEvent;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
@@ -59,13 +49,11 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
     // --------------------
     // FINAL STATIC PRIVATE
     
-    final static private String _f_s_strTextEntrySize               = "Entries' size:";
-    final static private String _f_s_strTextEntryDate               = "Entries' date:";
-    final static private String _f_s_strTextEntryCertsType          = "Certs type:";
-    final static private String _f_s_strTextEntryCertsX509AlgoName  = "Algos name:";
-    final static private String _f_s_strTextEntryCertsX509SubjectDN = "Subject DN:";
-    
-    
+    final static private String _f_s_strTextEntrySize               = "Entries' size";
+    final static private String _f_s_strTextEntryDate               = "Entries' date";
+    final static private String _f_s_strTextEntryCertsType          = "Certs type";
+    final static private String _f_s_strTextEntryCertsX509AlgoName  = "Algos name";
+    final static private String _f_s_strTextEntryCertsX509SubjectDN = "Subject DN";
     
     final static private String _f_s_strTipEntrySize = "display size of each entry";
     final static private String _f_s_strTipEntryDate = "display date of each entry";
@@ -420,55 +408,37 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
             return false;
         }
         
-        _alignLabelsEntries();
-        
-        // ---------
         return true;
     }
     
     
     public PTabUICmdJsrVerify(Frame frmOwner)
     {
-        super(
-            frmOwner, 
-     
-            PTabUICmdJsrVerify._s_strHelpID, 
-            false, // blnFileSignedJarSave
-            false // blnFieldRequiredKeystore
-            );
+        super(frmOwner, PTabUICmdJsrVerify._s_strHelpID, false, false);
         
-        this._cbxEntrySize = new JCheckBox();
-        this._cbxEntryDate = new JCheckBox();
-        this._cbxEntryCertsType = new JCheckBox();
-        this._cbxEntryCertsX509AlgoName = new JCheckBox();
-        this._cbxEntryCertsX509SubjectDN = new JCheckBox();
-        
+        this._cbxEntrySize = new JCheckBox(_f_s_strTextEntrySize);
+        this._cbxEntryDate = new JCheckBox(_f_s_strTextEntryDate);
+        this._cbxEntryCertsType = new JCheckBox(_f_s_strTextEntryCertsType);
+        this._cbxEntryCertsX509AlgoName = new JCheckBox(_f_s_strTextEntryCertsX509AlgoName);
+        this._cbxEntryCertsX509SubjectDN = new JCheckBox(_f_s_strTextEntryCertsX509SubjectDN);
+
+        this._cbxEntrySize.setToolTipText(_f_s_strTipEntrySize);
+        this._cbxEntryDate.setToolTipText(_f_s_strTipEntryDate);
+        this._cbxEntryCertsType.setToolTipText(_f_s_strTipEntryCertsType);
+        this._cbxEntryCertsX509AlgoName.setToolTipText(_f_s_strTipEntryCertsX509AlgoName);
+        this._cbxEntryCertsX509SubjectDN.setToolTipText(_f_s_strTipEntryCertsX509SubjectDN);
         // ----
         
         /* july 10, 03:
             modif coz an empty entry of type file may be confusing while looking for "M" or "K" properties, forcing selected, and disabling
         */
         this._cbxEntrySize.setSelected(true);
-        this._cbxEntrySize.setHorizontalTextPosition(SwingConstants.LEFT);
         this._cbxEntrySize.setEnabled(false);
         // end modif
-        
         this._cbxEntryDate.setSelected(false);
-        this._cbxEntryDate.setHorizontalTextPosition(SwingConstants.LEFT);
-        
         this._cbxEntryCertsType.setSelected(true);
-        //this._cbxEntryCertsType.setBorderPainted(true);
-        this._cbxEntryCertsType.setHorizontalTextPosition(SwingConstants.LEFT);
-        
         this._cbxEntryCertsX509AlgoName.setSelected(true);
-        //this._cbxEntryCertsX509AlgoName.setBorderPainted(true);
-        this._cbxEntryCertsX509AlgoName.setHorizontalTextPosition(SwingConstants.LEFT);
-        
         this._cbxEntryCertsX509SubjectDN.setSelected(false);
-        //this._cbxEntryCertsX509SubjectDN.setBorderPainted(true);
-        this._cbxEntryCertsX509SubjectDN.setHorizontalTextPosition(SwingConstants.LEFT);
-        
-        
     }
     
     // ---------
@@ -479,25 +449,16 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         super._pnlInput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
         super._pnlInput_.add(super._fssSelectSignedJar_);
         super._pnlInput_.add(super._pnlSelectFileKst_);
-
     }
-    
 
     protected void _fillInPanelOutput_() 
     {
-        JPanel pnlEntrySize = _createPanelEntrySize();
-        JPanel pnlEntryDate = _createPanelEntryDate();
-        JPanel pnlEntryCertsType = _createPanelEntryCertsType();
-        JPanel pnlEntryCertsX509AlgoName = _createPanelEntryCertsX509AlgoName();
-        JPanel pnlEntryCertsX509SubjectDN = _createPanelEntryCertsX509SubjectDN();
-        
-        
         super._pnlOutput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
-        super._pnlOutput_.add(pnlEntrySize);
-        super._pnlOutput_.add(pnlEntryDate);
-        super._pnlOutput_.add(pnlEntryCertsType);
-        super._pnlOutput_.add(pnlEntryCertsX509AlgoName);
-        super._pnlOutput_.add(pnlEntryCertsX509SubjectDN);
+        super._pnlOutput_.add(_cbxEntrySize);
+        super._pnlOutput_.add(_cbxEntryDate);
+        super._pnlOutput_.add(_cbxEntryCertsType);
+        super._pnlOutput_.add(_cbxEntryCertsX509AlgoName);
+        super._pnlOutput_.add(_cbxEntryCertsX509SubjectDN);
     }
     
     protected void _updateActionButtonDataChanged_(boolean blnFieldInserted)
@@ -539,128 +500,5 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
     private JCheckBox _cbxEntryDate = null;
     private JCheckBox _cbxEntryCertsType = null;
     private JCheckBox _cbxEntryCertsX509AlgoName = null;
-    private JCheckBox _cbxEntryCertsX509SubjectDN = null;
-    
-    
-    private JLabel _lblEntrySize = null;
-    private JLabel _lblEntryDate = null;
-    private JLabel _lblEntryCertsType = null;
-    private JLabel _lblEntryCertsX509AlgoName = null;
-    private JLabel _lblEntryCertsX509SubjectDN = null;
-    
-    
-    /**
-        done in the hurry, should take the top-most width of all labels
-    **/
-    private void _alignLabelsEntries()
-    {
-        Dimension dimPref = this._lblEntryDate.getPreferredSize();
-        Dimension dimMin = this._lblEntryDate.getMinimumSize();
-        Dimension dimMax = this._lblEntryDate.getMaximumSize();
-        
-        this._lblEntrySize.setPreferredSize(dimPref);
-        this._lblEntryCertsType.setPreferredSize(dimPref);
-        this._lblEntryCertsX509AlgoName.setPreferredSize(dimPref);
-        this._lblEntryCertsX509SubjectDN.setPreferredSize(dimPref);
-        
-        this._lblEntrySize.setMinimumSize(dimMin);
-        this._lblEntryCertsType.setMinimumSize(dimMin);
-        this._lblEntryCertsX509AlgoName.setMinimumSize(dimMin);
-        this._lblEntryCertsX509SubjectDN.setMinimumSize(dimMin);
-        
-        this._lblEntrySize.setMaximumSize(dimMax);
-        this._lblEntryCertsType.setMaximumSize(dimMax);
-        this._lblEntryCertsX509AlgoName.setMaximumSize(dimMax);
-        this._lblEntryCertsX509SubjectDN.setMaximumSize(dimMax);
-    }
-    
-    
-    private JPanel _createPanelEntrySize()
-    {
-        JPanel pnl = new JPanel();
-        
-        pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
-        //pnl.setAlignmentX(LEFT_ALIGNMENT);
-
-        this._lblEntrySize = new JLabel();
-        this._lblEntrySize.setText(_f_s_strTextEntrySize);
-        this._lblEntrySize.setToolTipText(_f_s_strTipEntrySize);
-        this._lblEntrySize.setHorizontalAlignment(SwingConstants.LEFT);
-
-        pnl.add(this._lblEntrySize);
-        pnl.add(this._cbxEntrySize);
-
-        return pnl;
-    }
-    
-    private JPanel _createPanelEntryDate()
-    {
-        JPanel pnl = new JPanel();
-        
-        pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
-        //pnl.setAlignmentX(LEFT_ALIGNMENT);
-
-        this._lblEntryDate = new JLabel();
-        this._lblEntryDate.setText(_f_s_strTextEntryDate);
-        this._lblEntryDate.setToolTipText(_f_s_strTipEntryDate);
-        this._lblEntryDate.setHorizontalAlignment(SwingConstants.LEFT);
-
-        pnl.add(this._lblEntryDate);
-        pnl.add(this._cbxEntryDate);
-
-        return pnl;
-    }
-    
-    private JPanel _createPanelEntryCertsType()
-    {
-        JPanel pnl = new JPanel();
-        
-        pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
-        //pnl.setAlignmentX(LEFT_ALIGNMENT);
-
-        this._lblEntryCertsType = new JLabel();
-        this._lblEntryCertsType.setText(_f_s_strTextEntryCertsType);
-        this._lblEntryCertsType.setToolTipText(_f_s_strTipEntryCertsType);
-        this._lblEntryCertsType.setHorizontalAlignment(SwingConstants.LEFT);
-
-        pnl.add(this._lblEntryCertsType);
-        pnl.add(this._cbxEntryCertsType);
-
-        return pnl;
-    }
-    
-    private JPanel _createPanelEntryCertsX509AlgoName()
-    {
-        JPanel pnl = new JPanel();
-        
-        pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
-        //pnl.setAlignmentX(LEFT_ALIGNMENT);
-
-        this._lblEntryCertsX509AlgoName = new JLabel();
-        this._lblEntryCertsX509AlgoName.setText(_f_s_strTextEntryCertsX509AlgoName);
-        this._lblEntryCertsX509AlgoName.setToolTipText(_f_s_strTipEntryCertsX509AlgoName);
-        this._lblEntryCertsX509AlgoName.setHorizontalAlignment(SwingConstants.LEFT);
-
-        pnl.add(this._lblEntryCertsX509AlgoName);
-        pnl.add(this._cbxEntryCertsX509AlgoName);
-
-        return pnl;
-    }
-    
-    private JPanel _createPanelEntryCertsX509SubjectDN()
-    {
-        JPanel pnl = new JPanel();
-        
-        pnl.setLayout(new BoxLayout(pnl, BoxLayout.X_AXIS));
-	    
-        this._lblEntryCertsX509SubjectDN = new JLabel();
-        this._lblEntryCertsX509SubjectDN.setText(_f_s_strTextEntryCertsX509SubjectDN);
-        this._lblEntryCertsX509SubjectDN.setToolTipText(_f_s_strTipEntryCertsX509SubjectDN);
-        this._lblEntryCertsX509SubjectDN.setHorizontalAlignment(SwingConstants.LEFT);
-
-        pnl.add(this._lblEntryCertsX509SubjectDN);
-        pnl.add(this._cbxEntryCertsX509SubjectDN);
-
-        return pnl;
-    }
+    private JCheckBox _cbxEntryCertsX509SubjectDN = null;  
 }
