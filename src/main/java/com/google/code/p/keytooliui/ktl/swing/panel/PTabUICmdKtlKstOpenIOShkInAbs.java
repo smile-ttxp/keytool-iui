@@ -3,20 +3,17 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 /*
 */
 
-import javax.swing.event.DocumentEvent;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Document;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
-import com.google.code.p.keytooliui.ktl.io.*;
+import java.awt.Frame;
+import java.awt.event.ItemListener;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import net.miginfocom.swing.MigLayout;
 
 abstract public class PTabUICmdKtlKstOpenIOShkInAbs extends PTabUICmdKtlKstOpenIOShkAbs
 {   
@@ -168,39 +165,14 @@ abstract public class PTabUICmdKtlKstOpenIOShkInAbs extends PTabUICmdKtlKstOpenI
     
     protected void _fillInPanelInput_()
     {        
-        super._pnlInput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        
-        gbc.gridy = 0;
-        super._pnlInput_.add(this._pnlSelectFileData_, gbc);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectSigAlgo_, gbc);
-        
+        super._pnlInput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlInput_.add(this._pnlSelectFileData_);
+        super._pnlInput_.add(this._pnlSelectSigAlgo_);
     }
     
     protected void _fillInPanelOutput_()
     {
-        GridBagConstraints gbc = super._fillInPanelKst_(super._pnlOutput_);
-        
-        //gbc.gridy ++;
-        //super._pnlInput_.add(this._pnlSelectFileDataOpen_, gbc);
-        
-        
-        
+        super._fillInPanelKst_(super._pnlOutput_);
+        //super._pnlInput_.add(this._pnlSelectFileDataOpen_);
     }
-
-    // -------
-    // PRIVATE
-
 }

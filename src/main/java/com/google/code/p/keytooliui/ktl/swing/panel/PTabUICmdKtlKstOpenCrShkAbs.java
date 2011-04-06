@@ -11,19 +11,25 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     
 **/
 
-import com.google.code.p.keytooliui.ktl.io.*;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
-
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-
-import javax.swing.*;
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import javax.swing.Box;
+import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-import javax.swing.event.*;
-import javax.swing.text.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import java.awt.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import net.miginfocom.swing.MigLayout;
 
 abstract public class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs 
 {
@@ -270,7 +276,6 @@ abstract public class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs
     protected void _fillInPanelInput_()
     {        
         super._fillInPanelKst_(super._pnlInput_);
-        super._pnlInput_.add(Box.createRigidArea(new Dimension(1, 10)));
     }
 
     protected void _fillInPanelOutput_()
@@ -299,11 +304,11 @@ abstract public class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs
         
         gbc.gridx = 0;
         gbc.gridy = 0;
-        pnlAll.add(pnlOutputSK, gbc);
+        pnlAll.add(pnlOutputSK);
         
         
         //gbc.gridy ++;
-        //pnlAll.add(pnlOutputDistingName, gbc);
+        //pnlAll.add(pnlOutputDistingName);
         
         
         // ----
@@ -451,24 +456,9 @@ abstract public class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs
         JPanel pnl = new JPanel();
         pnl.setBorder(new TitledBorder("New Entry - Secret Key")); // shared key
         
-        pnl.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-
-        pnl.add(this._pnlSelectSigAlgo_, gbc);
-        
-        //gbc.gridy ++;
-        //pnl.add(this._pnlSelectValidityShk, gbc);
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(this._pnlSelectSigAlgo_);
+        //pnl.add(this._pnlSelectValidityShk);
         
         // ending
         return pnl;

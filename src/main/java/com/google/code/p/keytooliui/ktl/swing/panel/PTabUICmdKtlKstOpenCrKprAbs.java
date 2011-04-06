@@ -33,20 +33,29 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     
 **/
 
-import com.google.code.p.keytooliui.ktl.io.*;
-import com.google.code.p.keytooliui.ktl.swing.panel.PSelBtnTfdStrXlsCbxGender;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
-
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-
-import javax.swing.*;
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import javax.swing.Box;
+import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-import javax.swing.event.*;
-import javax.swing.text.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import java.awt.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdStrAbs;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdStrW10;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdStrW20;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdStrW30;
+import net.miginfocom.swing.MigLayout;
 
 abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs 
 {
@@ -1510,7 +1519,6 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
     protected void _fillInPanelInput_()
     {        
         super._fillInPanelKst_(super._pnlInput_);
-        super._pnlInput_.add(Box.createRigidArea(new Dimension(1, 10)));
     }
 
     protected void _fillInPanelOutput_()
@@ -2436,30 +2444,11 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         JPanel pnl = new JPanel();
         pnl.setBorder(new TitledBorder("Private Key")); // keypair
         
-        pnl.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        pnl.add(this._pnlSelectSizeKeypair_, gbc);
-        
-        
-        //gbc.gridy ++;
-        //pnl.add(this._pnlSelectVersionCert_, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectSigAlgoCert_, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectValidityKpr, gbc);
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(this._pnlSelectSizeKeypair_);
+        //pnl.add(this._pnlSelectVersionCert_);
+        pnl.add(this._pnlSelectSigAlgoCert_);
+        pnl.add(this._pnlSelectValidityKpr);
         
         // ending
         return pnl;
@@ -2470,39 +2459,12 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         JPanel pnl = new JPanel();
         pnl.setBorder(new TitledBorder("Cert. - X.520 Name"));
         
-        pnl.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = -1;
-        // ----
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectSURNAME, gbc);
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectGIVENNAME, gbc);
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectINITIALS, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectGENERATION, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectUNIQUE_IDENTIFIER, gbc);
-        
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(this._pnlSelectSURNAME);
+        pnl.add(this._pnlSelectGIVENNAME);
+        pnl.add(this._pnlSelectINITIALS);
+        pnl.add(this._pnlSelectGENERATION);
+        pnl.add(this._pnlSelectUNIQUE_IDENTIFIER);
         
         // ending
         return pnl;
@@ -2513,71 +2475,21 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         JPanel pnl = new JPanel();
         pnl.setBorder(new TitledBorder("Cert. - X.500 Distinguished Name ..."));
         
-        pnl.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = -1;
-        // ----
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectT, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectSN, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectBUSINESS_CATEGORY, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectDN_QUALIFIER, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectPSEUDONYM, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectGENDER, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectNAME_AT_BIRTH, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectDATE_OF_BIRTH, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectPLACE_OF_BIRTH, gbc);
-        
-        
-        
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectSTREET, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectPOSTAL_CODE, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectPOSTAL_ADDRESS, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectCOUNTRY_OF_RESIDENCE, gbc);
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectCOUNTRY_OF_CITIZENSHIP, gbc);
-        
-        
-        
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(this._pnlSelectT);
+        pnl.add(this._pnlSelectSN);
+        pnl.add(this._pnlSelectBUSINESS_CATEGORY);
+        pnl.add(this._pnlSelectDN_QUALIFIER);
+        pnl.add(this._pnlSelectPSEUDONYM);
+        pnl.add(this._pnlSelectGENDER);
+        pnl.add(this._pnlSelectNAME_AT_BIRTH);
+        pnl.add(this._pnlSelectDATE_OF_BIRTH);
+        pnl.add(this._pnlSelectPLACE_OF_BIRTH);
+        pnl.add(this._pnlSelectSTREET);
+        pnl.add(this._pnlSelectPOSTAL_CODE);
+        pnl.add(this._pnlSelectPOSTAL_ADDRESS);
+        pnl.add(this._pnlSelectCOUNTRY_OF_RESIDENCE);
+        pnl.add(this._pnlSelectCOUNTRY_OF_CITIZENSHIP);
         
         // ending
         return pnl;
@@ -2602,40 +2514,14 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         JPanel pnl = new JPanel();
         pnl.setBorder(new TitledBorder("Cert. - X.500 Distinguished Name"));
         
-        pnl.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        pnl.add(this._pnlSelectCN, gbc);
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectOU, gbc);
-        
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectO, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectL, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectST, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectC, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectE, gbc);
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(this._pnlSelectCN);
+        pnl.add(this._pnlSelectOU);
+        pnl.add(this._pnlSelectO);
+        pnl.add(this._pnlSelectL);
+        pnl.add(this._pnlSelectST);
+        pnl.add(this._pnlSelectC);
+        pnl.add(this._pnlSelectE);
         
         // ending
         return pnl;

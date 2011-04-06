@@ -36,7 +36,7 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
     
     // ----------------------
     // final static protected
-    final static protected boolean _F_BLN_SET_LAF_SWING_ = true;
+    final static protected boolean _F_BLN_SET_LAF_SWING_ = false;
     
     
     // ------

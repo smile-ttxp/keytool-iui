@@ -28,20 +28,21 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 **/
 
 
-import com.google.code.p.keytooliui.ktl.io.*;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
-
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKstSaveAbs;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKstSaveBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKstSaveJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKstSaveJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKstSavePkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKstSaveUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.button.BESPasswordAbs;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 
 final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
 {
@@ -382,7 +383,6 @@ final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
     protected void _fillInPanelOutput_()
     {   
         super._fillInPanelKst_(super._pnlOutput_);
-        super._pnlOutput_.add(Box.createRigidArea(new Dimension(1, 10)));
     }
     
     // -------

@@ -6,8 +6,9 @@
 	<artifactId>keytooliui</artifactId>
 	<version>2.5.0-SNAPSHOT</version>
 
-	<name>keytool-iui</name>
+	<name>KeyTool IUI</name>
 	<url>http://code.google.com/p/keytool-iui/</url>
+    <description>blablabla</description>
 
 	<licenses>
 		<license>
@@ -221,7 +222,14 @@
 			<version>2.0.02</version>
 		</dependency>
 
-		<!-- TEST -->
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout</artifactId>
+            <version>3.7.4</version>
+            <classifier>swing</classifier>
+        </dependency>
+
+      <!-- TEST -->
 
 		<dependency>
 			<groupId>junit</groupId>

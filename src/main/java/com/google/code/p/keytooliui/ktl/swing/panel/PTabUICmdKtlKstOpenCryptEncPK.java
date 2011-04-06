@@ -3,17 +3,17 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 /*
 */
 
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
-import com.google.code.p.keytooliui.ktl.io.*;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenEncRsaAbs;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenEncRsaBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenEncRsaJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenEncRsaJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenEncRsaPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenEncRsaUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelCmbAbs;
 
 final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryptEncAbs
 {
@@ -268,13 +268,9 @@ final public class PTabUICmdKtlKstOpenCryptEncPK extends PTabUICmdKtlKstOpenCryp
     // overrides superclass 's method
     protected void _fillInPanelInput_()
     {        
-        GridBagConstraints gbc = super._fillInPanelKst_(super._pnlInput_);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectCipherAlgo, gbc);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectFileDataOpen_, gbc);
+        super._fillInPanelKst_(super._pnlInput_);
+        super._pnlInput_.add(this._pnlSelectCipherAlgo);
+        super._pnlInput_.add(this._pnlSelectFileDataOpen_);
     }
 
     // -------

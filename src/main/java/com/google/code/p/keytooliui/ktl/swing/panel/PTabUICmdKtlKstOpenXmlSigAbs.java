@@ -34,15 +34,14 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     . PTabUICmdKtlKstOpenXmlSigExpAbs
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
+import java.awt.Component;
+import java.awt.Frame;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import javax.swing.*;
-import javax.swing.text.*;
-import javax.swing.event.*;
-
-import java.awt.*;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 
 abstract public class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAbs 
 {
@@ -328,10 +327,8 @@ abstract public class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAb
     
     protected void _fillInPanelInput_()
     {        
-        GridBagConstraints gbc = super._fillInPanelKst_(super._pnlInput_);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectFileDataIn_, gbc);
+        super._fillInPanelKst_(super._pnlInput_);
+        super._pnlInput_.add(this._pnlSelectFileDataIn_);
     }
     
     // -------

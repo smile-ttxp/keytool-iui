@@ -39,26 +39,27 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 **/
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Frame;
 import java.util.Vector;
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import com.google.code.p.keytooliui.shared.crypto.asnl.x509.MyKeyPurposeId;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import net.miginfocom.swing.MigLayout;
 import org.bouncycastle.asn1.DERObjectIdentifier;
 import org.bouncycastle.asn1.x509.KeyPurposeId;
 import org.bouncycastle.asn1.x509.KeyUsage;
-import com.google.code.p.keytooliui.shared.crypto.asnl.x509.MyKeyPurposeId;
-import com.google.code.p.keytooliui.ktl.io.*;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
-
-import java.awt.*;
-
-abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpenCrKprAbs implements
-        ChangeListener
+abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpenCrKprAbs implements ChangeListener
 {
      // --------------------
     // FINAL STATIC PRIVATE
@@ -437,32 +438,13 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
             this._pnlsCrtExtKUValue[i] = _createPanelCrtExtKUValue(i);
         }
 
-        pnl.setLayout(new GridBagLayout());
-
-        GridBagConstraints gbc = new GridBagConstraints();
-
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-
-        gbc.gridx = 0;
-        gbc.gridy = -1;
-
-
-
-        gbc.gridy ++;
-        pnl.add(pnlCrtExtKUEnabled, gbc);
-
-        gbc.gridy ++;
-        pnl.add(pnlCrtExtKUCritical, gbc);
-
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(pnlCrtExtKUEnabled);
+        pnl.add(pnlCrtExtKUCritical);
+        
         for (int i=0; i<this._pnlsCrtExtKUValue.length; i++)
         {
-            gbc.gridy ++;
-            pnl.add(this._pnlsCrtExtKUValue[i], gbc);
+            pnl.add(this._pnlsCrtExtKUValue[i]);
         }
 
         // ending
@@ -488,32 +470,13 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
             this._pnlsCrtExtEKUValue[i] = _createPanelCrtExtEKUValue(i);
         }
 
-        pnl.setLayout(new GridBagLayout());
-
-        GridBagConstraints gbc = new GridBagConstraints();
-
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-
-        gbc.gridx = 0;
-        gbc.gridy = -1;
-
-
-
-        gbc.gridy ++;
-        pnl.add(pnlCrtExtEKUEnabled, gbc);
-
-        gbc.gridy ++;
-        pnl.add(pnlCrtExtEKUCritical, gbc);
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(pnlCrtExtEKUEnabled);
+        pnl.add(pnlCrtExtEKUCritical);
 
         for (int i=0; i<this._pnlsCrtExtEKUValue.length; i++)
         {
-            gbc.gridy ++;
-            pnl.add(this._pnlsCrtExtEKUValue[i], gbc);
+            pnl.add(this._pnlsCrtExtEKUValue[i]);
         }
 
         // ending

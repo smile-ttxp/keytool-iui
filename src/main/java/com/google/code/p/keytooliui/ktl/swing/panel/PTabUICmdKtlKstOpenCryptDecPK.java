@@ -263,13 +263,9 @@ final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryp
     // overrides superclass 's method
     protected void _fillInPanelInput_()
     {        
-        GridBagConstraints gbc = super._fillInPanelKst_(super._pnlInput_);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectCipherAlgo, gbc);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectFileDataOpen_, gbc);
+        super._fillInPanelKst_(super._pnlInput_);
+        super._pnlInput_.add(this._pnlSelectCipherAlgo);
+        super._pnlInput_.add(this._pnlSelectFileDataOpen_);
     }
 
     // -------

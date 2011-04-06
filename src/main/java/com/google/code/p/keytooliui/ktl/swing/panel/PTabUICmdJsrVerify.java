@@ -26,19 +26,30 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ItemEvent;
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.swing.checkbox.*;
-
-import javax.swing.text.*;
-import javax.swing.event.*;
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenVerifyAbs;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenVerifyBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenVerifyJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenVerifyJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenVerifyPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenVerifyUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.dialog.DPasswordOpen;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import net.miginfocom.swing.MigLayout;
 
 final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
 {
@@ -465,24 +476,9 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
     
     protected void _fillInPanelInput_()
     {
-        super._pnlInput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        
-        super._pnlInput_.add(super._fssSelectSignedJar_, gbc);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(super._pnlSelectFileKst_, gbc);
+        super._pnlInput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlInput_.add(super._fssSelectSignedJar_);
+        super._pnlInput_.add(super._pnlSelectFileKst_);
 
     }
     
@@ -496,36 +492,12 @@ final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
         JPanel pnlEntryCertsX509SubjectDN = _createPanelEntryCertsX509SubjectDN();
         
         
-        super._pnlOutput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = -1;
-        
-        
-        
-        gbc.gridy ++;
-        super._pnlOutput_.add(pnlEntrySize, gbc);
-        
-        gbc.gridy ++;
-        super._pnlOutput_.add(pnlEntryDate, gbc);
-        
-        gbc.gridy ++;
-        super._pnlOutput_.add(pnlEntryCertsType, gbc);
-        
-        gbc.gridy ++;
-        super._pnlOutput_.add(pnlEntryCertsX509AlgoName, gbc);
-        
-        gbc.gridy ++;
-        super._pnlOutput_.add(pnlEntryCertsX509SubjectDN, gbc);
+        super._pnlOutput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlOutput_.add(pnlEntrySize);
+        super._pnlOutput_.add(pnlEntryDate);
+        super._pnlOutput_.add(pnlEntryCertsType);
+        super._pnlOutput_.add(pnlEntryCertsX509AlgoName);
+        super._pnlOutput_.add(pnlEntryCertsX509SubjectDN);
     }
     
     protected void _updateActionButtonDataChanged_(boolean blnFieldInserted)

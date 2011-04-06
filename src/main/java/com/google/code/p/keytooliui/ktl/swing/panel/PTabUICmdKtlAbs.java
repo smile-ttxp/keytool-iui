@@ -33,6 +33,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.panel.*;
+import net.miginfocom.swing.MigLayout;
 //import com.google.code.p.keytooliui.shared.swing.layout.*;
 
 
@@ -93,31 +94,11 @@ abstract public class PTabUICmdKtlAbs extends PTabUICmdAbs
     protected PSelBtnTfdPasswdXlsKstAny _pnlSelectPasswdKst_ = null;
     protected String _strPasswdKst_ = null;
     
-    protected GridBagConstraints _fillInPanelKst_(JPanel pnl)
+    protected void _fillInPanelKst_(JPanel pnl)
     {   
-        // ----
-        
-        pnl.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        
-        pnl.add(super._pnlSelectFileKst_, gbc);
-        
-        gbc.gridy ++;
-        pnl.add(this._pnlSelectPasswdKst_, gbc);
-        
-        
-        return gbc;
+        pnl.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        pnl.add(super._pnlSelectFileKst_);
+        pnl.add(this._pnlSelectPasswdKst_);
     }
     
     protected PTabUICmdKtlAbs(

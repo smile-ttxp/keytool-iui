@@ -26,19 +26,17 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 **/
 
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ItemEvent;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.dialog.*;
-import com.google.code.p.keytooliui.shared.swing.checkbox.*;
-
-import javax.swing.text.*;
-import javax.swing.event.*;
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.CmsVerif;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import net.miginfocom.swing.MigLayout;
 
 final public class PTabUICmdCmsSigVerify extends PTabUICmdCmsAbs
 {
@@ -270,27 +268,9 @@ final public class PTabUICmdCmsSigVerify extends PTabUICmdCmsAbs
     
     protected void _fillInPanelInput_()
     {
-        super._pnlInput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = -1;
-        
-        // ----
-        gbc.gridy ++;
-        super._pnlInput_.add(super._pnlSelectFileData_, gbc);
-        
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(super._fssSelectSignedCms_, gbc);
+        super._pnlInput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlInput_.add(super._pnlSelectFileData_);
+        super._pnlInput_.add(super._fssSelectSignedCms_);
     }
     
     protected void _fillInPanelOutput_() {}

@@ -12,6 +12,7 @@ import com.google.code.p.keytooliui.ktl.io.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.button.BESPasswordAbs;
 import com.google.code.p.keytooliui.shared.swing.panel.*;
+import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
 
@@ -367,29 +368,10 @@ final public class PTabUICmdKtlKstOpenKprFromKprPem extends PTabUICmdKtlKstOpenK
     
     protected void _fillInPanelInput_()
     {
-        super._pnlInput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-    
-        gbc.gridx = 0;
-        
-        gbc.gridy = 0;
-        super._pnlInput_.add(super._pnlSelectFileKpr_, gbc);
-        
-        
-        
-        
-        //gbc.gridy ++;
-        //super._pnlInput_.add(this._pnlSelectPasswordKpr, gbc);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(super._pnlSelectFileCrts_, gbc);
+        super._pnlInput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlInput_.add(super._pnlSelectFileKpr_);
+        //super._pnlInput_.add(this._pnlSelectPasswordKpr);
+        super._pnlInput_.add(super._pnlSelectFileCrts_);
     }
     
     

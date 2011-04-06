@@ -7,21 +7,24 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     . PTabUICmdJsrAbs ==> jarsigner (programmatically)
 **/
 
-import com.google.code.p.keytooliui.ktl.swing.button.*;
-
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.border.S_Border;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-
-
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.TitledBorder;
-import javax.swing.event.*;
-import javax.swing.text.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
-import java.awt.event.*;
-import java.awt.*;
+import com.google.code.p.keytooliui.ktl.swing.button.BIcnAction;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.border.S_Border;
+import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdAbs;
+import net.miginfocom.swing.MigLayout;
 
 abstract public class PTabUICmdAbs extends PTabUIAbs implements
     DocumentListener,
@@ -249,49 +252,27 @@ abstract public class PTabUICmdAbs extends PTabUIAbs implements
     
     private JPanel _createPanelContents()
     {
-        
-        this._pnlOutput_.setLayout(new BoxLayout(this._pnlOutput_, BoxLayout.Y_AXIS));
-        this._pnlOutput_.setAlignmentX(LEFT_ALIGNMENT);
-        this._pnlOutput_.setAlignmentY(TOP_ALIGNMENT);
-        
-        
-          
-        // ----
+        _pnlOutput_.setLayout(new BoxLayout(this._pnlOutput_, BoxLayout.Y_AXIS));
+        _pnlOutput_.setAlignmentX(LEFT_ALIGNMENT);
+        _pnlOutput_.setAlignmentY(TOP_ALIGNMENT);
         
         _fillInPanelInput_(); // done in subclasses
         _fillInPanelOutput_(); // done in subclasses
         
-        // ---
             
         JPanel pnlContents = new JPanel();
+        pnlContents.setLayout(new MigLayout("center, wrap 1", "[fill]"));
         
-        // ----
-        
-        pnlContents.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        
-        if (this._pnlInput_.getComponentCount() > 0)
+        if (_pnlInput_.getComponentCount() > 0)
         {    
-            pnlContents.add(this._pnlInput_, gbc);
-            gbc.gridy ++;
+            pnlContents.add(_pnlInput_);
         }
         
-        if (this._pnlOutput_.getComponentCount() > 0)
+        if (_pnlOutput_.getComponentCount() > 0)
         {
-            pnlContents.add(this._pnlOutput_, gbc);
+            pnlContents.add(_pnlOutput_);
         }
-               
+        
         return pnlContents;
     }
 }

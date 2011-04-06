@@ -31,16 +31,16 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     . PTabUICmdKtlKstOpenCryptExpAbs
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
+import java.awt.Component;
+import java.awt.Frame;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
+
+import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
-
-import javax.swing.*;
-import javax.swing.text.*;
-import javax.swing.event.*;
-
-import java.awt.*;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import net.miginfocom.swing.MigLayout;
 
 abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs 
 {
@@ -319,29 +319,14 @@ abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs
     
     protected void _fillInPanelInput_()
     {        
-        GridBagConstraints gbc = super._fillInPanelKst_(super._pnlInput_);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectFileDataOpen_, gbc);
+        super._fillInPanelKst_(super._pnlInput_);
+        super._pnlInput_.add(this._pnlSelectFileDataOpen_);
     }
     
     protected void _fillInPanelOutput_()
     {
-        super._pnlOutput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        
-        gbc.gridy = 0;
-        super._pnlOutput_.add(this._pnlSelectFileDataSave_, gbc);
+        super._pnlOutput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlOutput_.add(this._pnlSelectFileDataSave_);
     }
     
     // input file was assumed to be in ascii format

@@ -6,18 +6,48 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
     import entry
 **/
 
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
-
-import javax.swing.text.*;
-import javax.swing.event.*;
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromAbs;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromBksToKPBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromBksToKPJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromBksToKPJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromBksToKPUber;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromBksToPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJceksToKPBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJceksToKPJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJceksToKPJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJceksToKPUber;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJceksToPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJksToKPBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJksToKPJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJksToKPJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJksToKPUber;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromJksToPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromPkcs12ToKPBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromPkcs12ToKPJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromPkcs12ToKPJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromPkcs12ToKPUber;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromPkcs12ToPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromUberToKPBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromUberToKPJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromUberToKPJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromUberToKPUber;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprSaveFromUberToPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.button.BESPasswordAbs;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdAbs;
+import net.miginfocom.swing.MigLayout;
 
 final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenAbs 
 {
@@ -915,24 +945,9 @@ final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenA
     
     protected void _fillInPanelInput_()
     {
-        super._pnlInput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        
-        super._pnlInput_.add(this._pnlSelectFileKstSource, gbc);
-        
-        gbc.gridy = 1;
-        super._pnlInput_.add(this._pnlSelectPasswdKstSource, gbc);
+        super._pnlInput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlInput_.add(this._pnlSelectFileKstSource);
+        super._pnlInput_.add(this._pnlSelectPasswdKstSource);
     }
     
     protected void _fillInPanelOutput_()

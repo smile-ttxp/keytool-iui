@@ -25,21 +25,33 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 /**
 **/
 
-import com.google.code.p.keytooliui.ktl.util.jarsigner.*;
-import com.google.code.p.keytooliui.ktl.io.*;
-import com.google.code.p.keytooliui.ktl.swing.button.*;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
-import com.google.code.p.keytooliui.shared.swing.button.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-
-
-import javax.swing.event.*;
-import javax.swing.text.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI;
+import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarAbs;
+import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarApk;
+import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJar;
+import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJhr;
+import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarOhr;
+import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarRcr;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignAbs;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignBks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignJceks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignJks;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignPkcs12;
+import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignUber;
+import com.google.code.p.keytooliui.shared.lang.MySystem;
+import com.google.code.p.keytooliui.shared.swing.button.BESPasswordAbs;
+import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
+import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
+import net.miginfocom.swing.MigLayout;
 
 final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
 {
@@ -718,27 +730,10 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
     **/
     protected void _fillInPanelInput_()
     {
-        super._pnlInput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        
-        super._pnlInput_.add(this._pnlSelectFileJarUnsigned2Open, gbc);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(super._pnlSelectFileKst_, gbc);
-        
-        gbc.gridy ++;
-        super._pnlInput_.add(this._pnlSelectPasswdKst, gbc);
+        super._pnlInput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlInput_.add(this._pnlSelectFileJarUnsigned2Open);
+        super._pnlInput_.add(super._pnlSelectFileKst_);
+        super._pnlInput_.add(this._pnlSelectPasswdKst);
     }
 
     /**
@@ -750,24 +745,9 @@ final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
     **/
     protected void _fillInPanelOutput_()
     {
-        super._pnlOutput_.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        
-        //natural height, maximum width
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        
-        gbc.anchor = GridBagConstraints.WEST; // ? left side of space
-        //gbc.anchor = GridBagConstraints.NORTH; // ? left side of space
-        
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        
-        super._pnlOutput_.add(super._fssSelectSignedJar_, gbc);
-        
-        gbc.gridy ++;
-        super._pnlOutput_.add(_pnlSelectSigfileBasename, gbc);
+        super._pnlOutput_.setLayout(new MigLayout("fill, wrap 1", "[left]"));
+        super._pnlOutput_.add(super._fssSelectSignedJar_);
+        super._pnlOutput_.add(_pnlSelectSigfileBasename);
     }
 
     protected void _updateActionButtonDataChanged_(boolean blnFieldInserted)
