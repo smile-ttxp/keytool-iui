@@ -309,71 +309,7 @@ abstract public class S_FileChooserAbs
 			return null;
 	    }
 	    
-	    String strFileExtensionCur = ffe.getExtension(fleSelected);
-        
-        if (strFileExtensionCur == null)
-        {
-            File fleOpen = null;
-            
-            for (int i=0; i<strsExtension.length; i++)
-            {
-                String strAbsolutePath = fleSelected.getAbsolutePath() + "." + strsExtension[i];
-                
-                File fleOpenCur = new File(strAbsolutePath);
-                
-                if (fleOpenCur.exists())
-                {
-                    fleOpen = fleOpenCur;
-                    break;
-                }
-            }
-            
-           
-           
-            if (fleOpen == null)
-            {
-                Toolkit.getDefaultToolkit().beep();
-                String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
-                OPAbstract.s_showDialogError(cmpFrameParent, strBody);
-                return null;
-            }
-            
-            S_FileChooserAbs._s_fleParentDirLast = fleOpen.getParentFile();
-            return fleOpen;
-        }
-       
-        // there is an extension     
-        
-        boolean blnGotIt = false;
-        
-        for (int i=0; i<strsExtension.length; i++)
-        {
-            if (strFileExtensionCur.equalsIgnoreCase(strsExtension[i]))
-            {
-                blnGotIt = true;
-                break;
-            }
-        }
-            
-        if (! blnGotIt)        
-        { 
-            Toolkit.getDefaultToolkit().beep();
-            
-            String strBody = _s_strErrorWrongExtensionPrefix;
-            strBody += " " + strFileExtensionCur;
-            strBody += "\n" + _s_strErrorWrongExtensionSuffix;
-            
-            for (int i=0; i<strsExtension.length; i++)
-                strBody += "\n. " + strsExtension[i];
-            
-            
-            OPAbstract.s_showDialogError(cmpFrameParent, strBody);
-            return null;
-        }
-        
-        File fleOpen = new File(fleSelected.getAbsolutePath());
-           
-        if (! fleOpen.exists())
+        if (! fleSelected.exists())
         {
             Toolkit.getDefaultToolkit().beep();
             String strBody = _s_strErrorFileNotFound + fleSelected.getAbsolutePath();
@@ -381,8 +317,8 @@ abstract public class S_FileChooserAbs
             return null;
         }
         
-        S_FileChooserAbs._s_fleParentDirLast = fleOpen.getParentFile();
-        return fleOpen;   
+        S_FileChooserAbs._s_fleParentDirLast = fleSelected.getParentFile();
+        return fleSelected;   
     }
     
     // ----
