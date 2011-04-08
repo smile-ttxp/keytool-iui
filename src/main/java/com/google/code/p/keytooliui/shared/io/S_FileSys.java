@@ -282,7 +282,7 @@ public class S_FileSys
                 return null;
             }
             
-            File fleNew = new File(fle, ".rcp");
+            File fleNew = new File(fle, System.getProperty("_appli.cache"));
             
             if (! fleNew.exists())
             {

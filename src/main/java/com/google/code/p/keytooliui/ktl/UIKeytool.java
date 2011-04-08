@@ -52,7 +52,8 @@ final public class UIKeytool extends AppMainUIAbs
     {
         "_appli.title",
         "_appli.version",
-        "_appli.name.short"
+        "_appli.name.short",
+        "_appli.cache"
     };
     // --------------------
     // FINAL STATIC PRIVATE
