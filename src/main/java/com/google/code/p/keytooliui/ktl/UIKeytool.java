@@ -47,37 +47,28 @@ import java.awt.Color;
 
 final public class UIKeytool extends AppMainUIAbs
 {
+
+    final static private String[] _F_STRS_PROPS_REQUIRED =
+    {
+        "_appli.title",
+        "_appli.version",
+        "_appli.name.short"
+    };
     // --------------------
     // FINAL STATIC PRIVATE
 
     final static private String _F_STR_CLASS = "com.google.code.p.keytooliui.ktl.UIKeytool.";
-    
-    //final static public String _F_STR_NAME_SHORT_APPLI = "ktl";
 
     static
     {
-        // begin: prerequisites, java -D[key]="[value]"
-
-        if (System.getProperty("_appli.title") == null)
+        for (int i=0; i<UIKeytool._F_STRS_PROPS_REQUIRED.length; i++)
         {
-                System.err.println("missing property: _appli.title, exiting");
+            if (System.getProperty(UIKeytool._F_STRS_PROPS_REQUIRED[i]) == null)
+            {
+                System.err.println("missing property: " + UIKeytool._F_STRS_PROPS_REQUIRED[i] + ", exiting");
                 System.exit(1);
+            }
         }
-
-        if (System.getProperty("_appli.version") == null)
-        {
-                System.err.println("missing property: _appli.version, exiting");
-                System.exit(1);
-        }
-
-        if (System.getProperty("_appli.name.short") == null)
-        {
-                System.err.println("missing property: _appli.name.short, exiting");
-                System.exit(1);
-        }
-
-
-        // end: prerequisites, java -D[key]="[value]"
     }
     
     
@@ -108,71 +99,6 @@ final public class UIKeytool extends AppMainUIAbs
         if(UIKeytool._s_ktlInstance != null) 
             return UIKeytool._s_ktlInstance;
         
-        
-        
-        
-        /* BEG TEMPO */
-        
-        
-        /**
-         *in comments, coz tbrl with NetBeeans, with module, getting
-         *java.security.AccessControlException: access denied (java.security.SecurityPermission javax.crypto.CryptoAllPermission)
-        at java.security.AccessControlContext.checkPermission(AccessControlContext.java:264)
-        at java.security.AccessController.checkPermission(AccessController.java:427)
-
-         **/
-        
-  /*      String strPerm = "javax.crypto.CryptoAllPermission";
-        
-        
-        SecurityManager security = System.getSecurityManager();
-     
-        if (security != null) 
-        {
-            //security.checkXXX(argument,  . . . );
-            
-            java.security.SecurityPermission spm = new java.security.SecurityPermission(strPerm);
-            
-            try
-            {
-                security.checkPermission(spm);
-                java.security.AccessController.checkPermission(spm);
-                
-            }
-            
-            catch(SecurityException excSecurity)
-            {
-                excSecurity.printStackTrace();
-                System.err.println("excSecurity caught");
-                System.exit(1);
-            }
-        }
-*/
-        
-        
-        /* END TEMPO */
-        
-        // tempo
-/**
-        String[] strs = 
-        {
-          "deployment.user.security.trusted.cacerts",
-          "deployment.system.security.trusted.cacerts"
-        };
-
-        for (int i=0; i<strs.length; i++)
-        {
-           String str = System.getProperty(strs[i]);
-
-           if (str == null)
-             System.out.println(strs[i] + ": nil value");
-           else
-             System.out.println(strs[i] + ": " + str);
-        }
-
-
-        System.exit(1);
-       **/
       
       
       // -----------------
@@ -275,137 +201,17 @@ final public class UIKeytool extends AppMainUIAbs
         return UIKeytool._s_ktlInstance;
    }
     
-    /*static public String s_getTitleAppli()
-    {
-
-           
-           
-        return "UIKeytool._s_strTitleAppli";
-    }*/
-    
     // ----
     
     static private UIKeytool _s_ktlInstance = null;
-    //static private String _s_strTitleAppli = null;
-    
-    
-    
-    
-  
-    // -----------
-    // INITIALIZER
-    
-    /*static
-    {
-        String strMethod = _f_s_strClass + "initializer()";
-        
-        // ----
-        // check for specific classes in external packages or libraries
-        
-        try
-        {
-	        //  should be located in [jvm-home]/lib/tools.jar (to be verified!) for use with jarsigner tool programatically
-	        Class.forName("sun.security.util.SignatureFile");
-	        // sun.misc.BASE64Encoder
-	    }
-	    
-	    catch(ClassNotFoundException excClassNotFound)
-	    {
-	        excClassNotFound.printStackTrace();
-	        MySystem.s_printOutExit(strMethod, "excClassNotFound caught");
-	    }
-    }*/
-    
-    // -------------
-    // STATIC PUBLIC
-    
-   // static public boolean S_BLN_DUMPSECURITYPROVIDERJVM = true; //false; // !! should be static private !!
-   
+
     
     
     // BEG HIDDEN
     static public boolean S_BLN_FORCELOCALEEN = false; // should be private
     // END HIDDEN
     
-    
-    // ------------------
-    // STATIC INITIALIZER
-    /*
-    static
-    {
-        String strMethod = _f_s_strClass + "initializer";
-        
-        PropertyResourceBundle prbMagic = null;
-        
-        try
-        {
-            prbMagic = Shared.s_getPrbMagic();
-        }
-        
-        catch(MissingResourceException exc)
-        {
-            MySystem.s_printOutFlagDev(strMethod, exc.toString()); 
-        }
-        
-        
-        if (prbMagic != null)
-        {
-            String str = null;
-            */
-            // --
-            /*str = null;
-            try { str = prbMagic.getString(_f_s_strClass + "dumpSecurityProviderJvm"); }
-            catch (java.util.MissingResourceException excMissingResource) {}
-            
-            if (str != null) // else ignoring
-            {
-                str = str.toLowerCase();
-                
-                if (str.compareTo("false") == 0)
-                    UIKeytool.S_BLN_DUMPSECURITYPROVIDERJVM = false;
-                else if (str.compareTo("true") == 0)
-                    UIKeytool.S_BLN_DUMPSECURITYPROVIDERJVM = true;
-                else
-                    MySystem.s_printOutTrace(strMethod, "ignoring uncaught value, key=" + _f_s_strClass + "dumpSecurityProviderJvm" + ", value =" + str);
-
-            }
-            
-            */
-            
-            
-            // 
-            
-
-            
-        
- 
-            
-            //
- /*
-            
-            // --
-            str = null;
-            try { str = prbMagic.getString(_f_s_strClass + "forceLocaleEn"); }
-            catch (java.util.MissingResourceException excMissingResource) {}
-            
-            if (str != null) // else ignoring
-            {
-                str = str.toLowerCase();
-                
-                if (str.compareTo("false") == 0)
-                    UIKeytool.S_BLN_FORCELOCALEEN = false;
-                else if (str.compareTo("true") == 0)
-                    UIKeytool.S_BLN_FORCELOCALEEN = true;
-                else
-                    MySystem.s_printOutTrace(strMethod, "ignoring uncaught value, key=" + _f_s_strClass + "forceLocaleEn" + ", value =" + str);
-            }
-            
-            // --  
-        }
-    } 
-   */     
-    // -------------
-    // STATIC PUBLIC
+  
 
     static public void main(String[] strsArg)
     {
@@ -553,6 +359,7 @@ final public class UIKeytool extends AppMainUIAbs
     // ------
     // PUBLIC  
     
+    @Override
     public boolean start()
     {
         if (! super.start())
@@ -610,6 +417,7 @@ final public class UIKeytool extends AppMainUIAbs
     
     **/
     
+    @Override
     public void actionPerformed(ActionEvent evtAction)
     {
         String strMethod = "actionPerformed(evtAction)";

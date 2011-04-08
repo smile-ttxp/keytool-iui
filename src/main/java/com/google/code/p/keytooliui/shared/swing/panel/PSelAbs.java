@@ -182,7 +182,7 @@ abstract public class PSelAbs extends JPanel
         {    
             this._lbl.setToolTipText("required field");
             
-            String strName = null;
+            //String strName = null;
             
             String strNameWrong = "star_red.gif"; // tempo
             String strNameOk = "star_green.gif"; // tempo
