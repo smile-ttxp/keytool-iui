@@ -730,40 +730,10 @@ abstract public class AppMainAbs extends AppAbs implements
     protected void _exitNormally_()
     {
         final String strMethod = "_exitNormally_()";
-        //com.google.code.p.keytooliui.shared.lang.thread.MyThreadAbs.s_dumpThreadsActive();
 
-        
-        // -- begin test
-        
-        /*Thread thrCur = Thread.currentThread();
-        System.out.println("thrCur.getName()=" + thrCur.getName());
-        
-        ThreadGroup tgp = thrCur.getThreadGroup();
-        
-        if (tgp == null)
-            System.out.println("nil tgp");
-        else
-        {
-            System.out.println("! nil tgp, tgp.activeCount()=" + tgp.activeCount());
-            System.out.println("tgp.getName()=" + tgp.getName());
-            tgp.list();
-        }*/
-        
-        // -- end test
-        
-        //System.exit(0); // memo: convention, "0"=normal termination
-        
-        //if (this._blnAllowedCleanUpAllManagerMedia)
-          //  com.google.code.p.keytooliui.javax.media.MyManager.s_cleanUpAll();
-        
-        /*javax.swing.SwingUtilities.invokeLater(new Runnable()
-	    {
-	        public void run()
-	        {*/
-	            MySystem.s_printOutTrace(this, strMethod, "exit normally");
-	            System.exit(0);
-	        /*}
-	    }); */
+        MySystem.s_printOutTrace(this, strMethod, "exit normally");
+        System.exit(0);
+	
     }
     
     protected boolean _packAndShow_()
@@ -792,12 +762,19 @@ abstract public class AppMainAbs extends AppAbs implements
             MySystem.s_printOutError(this, strMethod, "excArrayIndexOutOfBounds caught");
             return false;
         }
+
+        /*
+         * modi, bantchao, coz on WIndows7, bottom part of frame hidden by window's taskbar
+         */
         
         // center the frame on the screen
-        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        /*Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension size = _fmaFrame_.getSize();
-        this._fmaFrame_.setLocation((screen.width - size.width) / 2, (screen.height - size.height) / 2);
-        
+        this._fmaFrame_.setLocation((screen.width - size.width) / 2, (screen.height - size.height) / 2);*/
+        _fmaFrame_.setLocationRelativeTo(null);
+        // end modif bantchao
+
+
         this._fmaFrame_.setVisible(true);
         
         // ending

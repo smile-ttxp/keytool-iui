@@ -32,27 +32,10 @@ import java.awt.print.PageFormat;
 import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
-import com.google.code.p.keytooliui.ktl.swing.panel.*;
- import com.google.code.p.keytooliui.ktl.swing.menubar.*;
 
  import com.google.code.p.keytooliui.shared.lang.*;
  import com.google.code.p.keytooliui.shared.swing.frame.*;
- import com.google.code.p.keytooliui.shared.util.eventlistener.*;
 
-
-// tempo, for new LAF
-/*import java.awt.*;
-
-import javax.swing.*;
-import javax.swing.plaf.metal.DefaultMetalTheme;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-
-//import com.jgoodies.clearlook.ClearLookManager;
-import com.jgoodies.plaf.Options;
-//import com.jgoodies.plaf.plastic.PlasticLookAndFeel;
-//import com.jgoodies.uif_lite.component.Factory;
-//import com.jgoodies.uif_lite.panel.SimpleInternalFrame;
-*/
 
 
  /**
@@ -103,7 +86,6 @@ import com.jgoodies.plaf.Options;
     public int print(Graphics g, PageFormat pft, int intPageIndex) 
         throws PrinterException
     { 
-        String strMethod = "print(g, pft, int intPageIndex)";
         
         Graphics2D g2 = (Graphics2D)g; 
         g2.setColor(Color.black);    //set default foreground color to black 
@@ -144,7 +126,6 @@ import com.jgoodies.plaf.Options;
 
         java.awt.Image imgIcon,
         java.awt.event.WindowListener winListenerParent,
-        //javax.help.HelpBroker hbrHelpStandard,
         String strHelpHomeID
         )
     {
@@ -152,56 +133,10 @@ import com.jgoodies.plaf.Options;
          
             imgIcon,
             winListenerParent,
-            //hbrHelpStandard, 
             strHelpHomeID,
             true // blnShowDialogLoadingProgress
             );
                   
         setTitle(System.getProperty("_appli.title"));
     }
-    
-    
-    // -------
-    // private
-    
-    /**
-     * Applique les paramètres de l'IHM en fonction des données du membre settings.
-     * Ce code est extrait de la demo Looks de jgoodies.com, voir en-tête du fichier.
-     * *
-     * @author Karsten Lentzsch
-     * @author Romain Guy
-     */
-  /**  private void configureUI() {
-        Options.setDefaultIconSize(new Dimension(18, 18));
-
-        UIManager.put(Options.USE_SYSTEM_FONTS_APP_KEY, settings.isUseSystemFonts());
-        Options.setGlobalFontSizeHints(settings.getFontSizeHints());
-        Options.setUseNarrowButtons(settings.isUseNarrowButtons());
-
-        Options.setTabIconsEnabled(settings.isTabIconsEnabled());
-        ClearLookManager.setMode(settings.getClearLookMode());
-        ClearLookManager.setPolicy(settings.getClearLookPolicyName());
-        UIManager.put(Options.POPUP_DROP_SHADOW_ENABLED_KEY, settings.isPopupDropShadowEnabled());
-
-        LookAndFeel selectedLaf = settings.getSelectedLookAndFeel();
-        if (selectedLaf instanceof PlasticLookAndFeel) {
-            PlasticLookAndFeel.setMyCurrentTheme(settings.getSelectedTheme());
-            PlasticLookAndFeel.setTabStyle(settings.getPlasticTabStyle());
-            PlasticLookAndFeel.setHighContrastFocusColorsEnabled(
-                settings.isPlasticHighContrastFocusEnabled());
-        } else if (selectedLaf.getClass() == MetalLookAndFeel.class) {
-            MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
-        }
-
-        JRadioButton radio = new JRadioButton();
-        radio.getUI().uninstallUI(radio);
-        JCheckBox checkBox = new JCheckBox();
-        checkBox.getUI().uninstallUI(checkBox);
-
-        try {
-            UIManager.setLookAndFeel(selectedLaf);
-        } catch (Exception e) {
-            System.out.println("Can't change L&F: " + e);
-        }
-    }**/
  }

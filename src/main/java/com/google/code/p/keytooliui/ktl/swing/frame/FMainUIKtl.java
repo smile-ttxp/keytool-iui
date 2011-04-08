@@ -27,8 +27,6 @@
  import com.google.code.p.keytooliui.ktl.swing.menubar.*;
 
  import com.google.code.p.keytooliui.shared.lang.*;
- import com.google.code.p.keytooliui.shared.swing.frame.*;
- import com.google.code.p.keytooliui.shared.util.eventlistener.*;
 
 
 
@@ -386,8 +384,6 @@
         java.awt.event.ActionListener actListenerParent,
         java.awt.event.ItemListener itmListenerParent,
         javax.swing.event.ChangeListener chgListenerParent, // tabbedPane
-
-        //javax.help.HelpBroker hbrHelpStandard,
         String strLic,
         boolean blnIsReg
         )
@@ -399,25 +395,8 @@
                 com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strAppliUIKtl16),
                 
             winListenerParent,
-            //hbrHelpStandard, 
             FMainUIKtl.s_strHelpHomeID
             );
-
-        /*
-            modif june 26, 2003
-            from v1.1 to v1.2: disabling all
-        */
-                
-        
-        /**
-        if (blnIsReg)
-            setTitle(com.google.code.p.keytooliui.ktl.UIKeytool.s_getTitleAppli());
-        else
-            setTitle(com.google.code.p.keytooliui.ktl.UIKeytool.s_getTitleAppli() + " (U" + "nr" + "egis" + "te" + "red" + ")");
-            **/
-            
-        // end modif   
-            
             
         // ---------------
         // create children
@@ -427,12 +406,11 @@
           
             actListenerParent,
             itmListenerParent,
-            //hbrHelpStandard,
             strLic);
 
         super._pcpContentPane_ = new PCPMainUIKtl(
             (java.awt.Frame) this,
         
-            actListenerParent, chgListenerParent/*, hbrHelpStandard*/);
+            actListenerParent, chgListenerParent);
     }
  }
