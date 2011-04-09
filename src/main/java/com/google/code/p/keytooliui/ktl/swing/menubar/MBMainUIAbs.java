@@ -35,7 +35,7 @@ import javax.swing.Box;
 
 
 
-abstract public class MBMainUIAbs extends MBMainAbstract
+public abstract class MBMainUIAbs extends MBMainAbstract
 {        
     // ------
     // PUBLIC

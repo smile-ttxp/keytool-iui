@@ -38,7 +38,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 
-abstract public class PSelCmbStrSigAlgoAbs extends PSelCmbStrAbs
+public abstract class PSelCmbStrSigAlgoAbs extends PSelCmbStrAbs
 {   
     // --------------------
     // PRIVATE STATIC FINAL

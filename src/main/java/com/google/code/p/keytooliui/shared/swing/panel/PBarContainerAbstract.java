@@ -36,7 +36,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PBarContainerAbstract extends JPanel 
+public abstract class PBarContainerAbstract extends JPanel 
 {
     // ----------------------
     // PROTECTED STATIC FINAL
@@ -46,8 +46,8 @@ abstract public class PBarContainerAbstract extends JPanel
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
  
     // ---------
     // PROTECTED

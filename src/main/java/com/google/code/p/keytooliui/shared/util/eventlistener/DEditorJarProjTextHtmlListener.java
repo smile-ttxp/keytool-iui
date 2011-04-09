@@ -29,5 +29,5 @@ public interface DEditorJarProjTextHtmlListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void fileModified(DEditorJarProjTextHtmlEvent evt);
+    public abstract void fileModified(DEditorJarProjTextHtmlEvent evt);
 }

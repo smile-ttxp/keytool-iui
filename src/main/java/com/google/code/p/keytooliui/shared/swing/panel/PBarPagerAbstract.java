@@ -37,7 +37,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PBarPagerAbstract extends JPanel 
+public abstract class PBarPagerAbstract extends JPanel 
 {    
     // --------------------
     // PRIVATE STATIC FINAL

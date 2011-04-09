@@ -51,7 +51,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
+public abstract class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL    

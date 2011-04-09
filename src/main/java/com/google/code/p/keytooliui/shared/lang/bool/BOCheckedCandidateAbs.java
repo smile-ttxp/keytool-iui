@@ -54,7 +54,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 
 
-abstract public class BOCheckedCandidateAbs extends BOCheckedAbs
+public abstract class BOCheckedCandidateAbs extends BOCheckedAbs
 {
     // ------
     // PUBLIC

@@ -52,13 +52,13 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenCrtInAbs extends KTLKprOpenCrtAbs
+public abstract class KTLKprOpenCrtInAbs extends KTLKprOpenCrtAbs
 {
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpenKst);
-    abstract protected DTblsKstSelPKAbs _getDialogSelectKpr_(KeyStore kstOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpenKst);
+    protected abstract DTblsKstSelPKAbs _getDialogSelectKpr_(KeyStore kstOpen);
     
     // ------
     // public

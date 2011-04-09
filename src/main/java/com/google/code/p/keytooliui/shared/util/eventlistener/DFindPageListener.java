@@ -29,5 +29,5 @@ public interface DFindPageListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void findNext(DFindPageEvent evt);
+    public abstract void findNext(DFindPageEvent evt);
 }

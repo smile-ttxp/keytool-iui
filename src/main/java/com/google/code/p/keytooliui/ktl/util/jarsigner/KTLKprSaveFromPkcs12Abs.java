@@ -34,14 +34,14 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprSaveFromPkcs12Abs extends KTLKprSaveAbs
+public abstract class KTLKprSaveFromPkcs12Abs extends KTLKprSaveAbs
 {
     // ------------------
     // ABSTRACT PROTECTED
     
     // definition in subclasses, called there
     
-    abstract protected boolean __createNewEntry__(
+    protected abstract boolean __createNewEntry__(
         KeyStore kstOpenTo, PrivateKey pkyPrivateFromPkcs12, Certificate[] crtsFromPkcs12);
     
     

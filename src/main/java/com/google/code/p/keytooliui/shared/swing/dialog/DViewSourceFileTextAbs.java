@@ -42,7 +42,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-abstract public class DViewSourceFileTextAbs extends DEscapeAbstract implements
+public abstract class DViewSourceFileTextAbs extends DEscapeAbstract implements
     ActionListener
 {
     // ---------------------------

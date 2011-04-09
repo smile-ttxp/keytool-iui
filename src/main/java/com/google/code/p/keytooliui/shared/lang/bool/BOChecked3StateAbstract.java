@@ -62,7 +62,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 
 
-abstract public class BOChecked3StateAbstract extends BOCheckedAbs
+public abstract class BOChecked3StateAbstract extends BOCheckedAbs
 {
     // ------------------------
     // PUBLIC STATIC FINAL INT

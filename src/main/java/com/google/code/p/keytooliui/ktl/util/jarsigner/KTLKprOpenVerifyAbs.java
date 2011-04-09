@@ -50,7 +50,7 @@ import java.util.jar.*;
 import java.util.*;
 import java.util.zip.*;
 
-abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
+public abstract class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
 {
     // --------------
     // PRIVATE STATIC

@@ -30,7 +30,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 import java.awt.Component;
 import com.google.code.p.keytooliui.shared.swing.panel.PTabHelpAppliAdvancedAbs;
 
-abstract public class BESAboutAppli24Abs extends BESAboutAppliAbs
+public abstract class BESAboutAppli24Abs extends BESAboutAppliAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL

@@ -38,7 +38,7 @@ import com.google.code.p.keytooliui.shared.swing.menu.*;
 
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 
-abstract public class MHelpAboutMainUIAbs extends MHelpAboutMainAbstract
+public abstract class MHelpAboutMainUIAbs extends MHelpAboutMainAbstract
 {
     // ---------
     // PROTECTED

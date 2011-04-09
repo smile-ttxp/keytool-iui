@@ -43,7 +43,7 @@ import javax.swing.text.Document;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 
-abstract public class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAbs 
+public abstract class PTabUICmdKtlKstOpenXmlSigAbs extends PTabUICmdKtlKstOpenAbs 
 {
     
     // ------

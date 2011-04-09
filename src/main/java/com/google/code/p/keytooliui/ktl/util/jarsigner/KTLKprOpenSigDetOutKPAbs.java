@@ -22,7 +22,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenSigDetOutKPAbs extends KTLKprOpenSigDetOutAbs
+public abstract class KTLKprOpenSigDetOutKPAbs extends KTLKprOpenSigDetOutAbs
 {
     // ---------
     // protected

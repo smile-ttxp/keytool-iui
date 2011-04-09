@@ -40,7 +40,7 @@
  import com.google.code.p.keytooliui.shared.lang.*;
  
  
- abstract public class RBMIAlignTopAbs extends RBMIAlignAbstract
+ public abstract class RBMIAlignTopAbs extends RBMIAlignAbstract
  { 
     // --------------------
     // PRIVATE STATIC FINAL

@@ -33,7 +33,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class DPasswordConfirmAbs extends DPasswordAbs
+public abstract class DPasswordConfirmAbs extends DPasswordAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL

@@ -35,7 +35,7 @@ import com.google.code.p.keytooliui.shared.swing.dialog.DPasswordOpen;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 import com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrtX509;
 
-abstract public class DTblsKstAbs extends DEscapeAbstract implements
+public abstract class DTblsKstAbs extends DEscapeAbstract implements
     ListSelectionListener,
     ActionListener,
     MouseListener // listener for mouse event on table

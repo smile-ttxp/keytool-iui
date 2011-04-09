@@ -54,7 +54,7 @@ import java.io.*;
 
 
 
-abstract public class KTLKstSaveAbs extends KTLKstAbs
+public abstract class KTLKstSaveAbs extends KTLKstAbs
 {
     // ---------
     // PROTECTED

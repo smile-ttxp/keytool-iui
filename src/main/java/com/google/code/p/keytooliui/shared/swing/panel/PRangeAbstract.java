@@ -36,19 +36,19 @@
 import javax.swing.*;
 
 
-abstract public class PRangeAbstract extends JPanel
+public abstract class PRangeAbstract extends JPanel
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
-    abstract public void setDefault();
-    abstract public int[] getValue();
-    abstract public void setValue(int[] intsValue);
+    public abstract boolean init();
+    public abstract void destroy();
+    public abstract void setDefault();
+    public abstract int[] getValue();
+    public abstract void setValue(int[] intsValue);
     
-    //abstract public void setDefaultValid(boolean bln);
-    //abstract public void changeDefault(int intVal);
+    //public abstract void setDefaultValid(boolean bln);
+    //public abstract void changeDefault(int intVal);
  
     
     // ------

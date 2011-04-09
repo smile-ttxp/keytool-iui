@@ -22,7 +22,7 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 import java.awt.*;
 
 
-abstract public class KTLKprSaveFromUberToKPAbs extends KTLKprSaveFromUberToAbs
+public abstract class KTLKprSaveFromUberToKPAbs extends KTLKprSaveFromUberToAbs
 {
     // ---------
     // PROTECTED

@@ -51,7 +51,7 @@
 
  import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class MHelpAllMainAbs extends MAbstract
+public abstract class MHelpAllMainAbs extends MAbstract
 {
     // --------------
     // PRIVATE STATIC

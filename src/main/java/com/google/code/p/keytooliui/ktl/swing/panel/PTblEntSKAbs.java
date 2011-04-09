@@ -14,7 +14,7 @@ import javax.swing.border.TitledBorder;
 
 
 
-abstract public class PTblEntSKAbs extends PTblEntAbs
+public abstract class PTblEntSKAbs extends PTblEntAbs
 {   
     // ---------
     // PROTECTED

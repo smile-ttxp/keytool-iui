@@ -29,6 +29,6 @@ public interface TBEditorAbstractListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void fileRecord(TBEditorAbstractEvent evt);
-    abstract public void fileDelete(TBEditorAbstractEvent evt);
+    public abstract void fileRecord(TBEditorAbstractEvent evt);
+    public abstract void fileDelete(TBEditorAbstractEvent evt);
 }

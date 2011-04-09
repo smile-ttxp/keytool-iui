@@ -26,22 +26,22 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdAbs;
 import net.miginfocom.swing.MigLayout;
 
-abstract public class PTabUICmdAbs extends PTabUIAbs implements
+public abstract class PTabUICmdAbs extends PTabUIAbs implements
     DocumentListener,
     ActionListener
 {    
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void insertUpdate(DocumentEvent e); 
-    abstract public void removeUpdate(DocumentEvent e); 
-    abstract public void actionPerformed(ActionEvent evtAction);
+    public abstract void insertUpdate(DocumentEvent e); 
+    public abstract void removeUpdate(DocumentEvent e); 
+    public abstract void actionPerformed(ActionEvent evtAction);
     
     // ------------------
     // ABSTRACT PROTECTED
 
-    abstract protected void _fillInPanelInput_();
-    abstract protected void _fillInPanelOutput_();
+    protected abstract void _fillInPanelInput_();
+    protected abstract void _fillInPanelOutput_();
     
     // ------
     // PUBLIC

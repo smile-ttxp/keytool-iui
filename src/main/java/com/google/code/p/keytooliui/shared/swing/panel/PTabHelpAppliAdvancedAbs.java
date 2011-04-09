@@ -42,7 +42,7 @@
  import java.util.*;
  import java.io.*;
  
- abstract public class PTabHelpAppliAdvancedAbs extends JPanel
+ public abstract class PTabHelpAppliAdvancedAbs extends JPanel
  {
     // --------------------
     // PRIVATE STATIC FINAL

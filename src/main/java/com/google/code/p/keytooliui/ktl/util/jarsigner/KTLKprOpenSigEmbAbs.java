@@ -16,7 +16,7 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import java.awt.*;
 
-abstract public class KTLKprOpenSigEmbAbs extends KTLKprOpenAbs
+public abstract class KTLKprOpenSigEmbAbs extends KTLKprOpenAbs
 {
     // ---------
     // PROTECTED

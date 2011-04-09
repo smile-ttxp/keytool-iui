@@ -15,7 +15,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.event.*;
 
-abstract public class MIHelpJHSourceAbstract extends MIHelpJHAbstract
+public abstract class MIHelpJHSourceAbstract extends MIHelpJHAbstract
 {   
     // ------
     // PUBLIC

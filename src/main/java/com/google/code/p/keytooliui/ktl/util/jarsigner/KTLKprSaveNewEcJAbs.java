@@ -51,7 +51,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprSaveNewEcJAbs extends KTLKprSaveNewEcAbs
+public abstract class KTLKprSaveNewEcJAbs extends KTLKprSaveNewEcAbs
 {
     // ---------
     // PROTECTED

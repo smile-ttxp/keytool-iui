@@ -43,18 +43,18 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import java.awt.event.*;
 import java.awt.*;
 
-abstract public class PTabUICmdArcAbs extends PTabUICmdAbs implements
+public abstract class PTabUICmdArcAbs extends PTabUICmdAbs implements
     ItemListener
 {       
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void itemStateChanged(ItemEvent evtItem);
+    public abstract void itemStateChanged(ItemEvent evtItem);
     
     // ------------------
     // ABSTRACT PROTECTED
     
-    abstract protected void _updateActionButtonDataChanged_(boolean blnFieldInserted);
+    protected abstract void _updateActionButtonDataChanged_(boolean blnFieldInserted);
     
     // ------
     // PUBLIC

@@ -21,7 +21,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 **/
 
 
-abstract public class PTblEntAbs extends JPanel
+public abstract class PTblEntAbs extends JPanel
 {
     // --------------------
     // PRIVATE STATIC FINAL

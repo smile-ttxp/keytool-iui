@@ -29,7 +29,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLTcrOpenCrtOutDMAbs extends KTLTcrOpenCrtOutAbs
+public abstract class KTLTcrOpenCrtOutDMAbs extends KTLTcrOpenCrtOutAbs
 {
     // ---------
     // protected

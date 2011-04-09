@@ -49,7 +49,7 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-abstract public class PSelBtnTfdFileSaveAbs extends PSelBtnTfdFileAbs
+public abstract class PSelBtnTfdFileSaveAbs extends PSelBtnTfdFileAbs
 {
     // ---------
     // PROTECTED

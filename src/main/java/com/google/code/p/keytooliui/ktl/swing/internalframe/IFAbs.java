@@ -8,7 +8,7 @@ import javax.swing.JInternalFrame;
 import com.google.code.p.keytooliui.ktl.swing.panel.PTabUIAbs;
 import com.google.code.p.keytooliui.shared.swing.panel.PTabAbstract;
 
-abstract public class IFAbs extends JInternalFrame
+public abstract class IFAbs extends JInternalFrame
 {
     // ------
     // public

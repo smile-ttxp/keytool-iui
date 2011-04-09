@@ -39,7 +39,7 @@ known subclasses:
 import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 
-abstract public class PSelCmbItgSizeKprAbs extends PSelCmbItgAbs
+public abstract class PSelCmbItgSizeKprAbs extends PSelCmbItgAbs
 {    
     // --------------------
     // PRIVATE STATIC FINAL

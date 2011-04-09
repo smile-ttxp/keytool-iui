@@ -34,15 +34,15 @@ import com.google.code.p.keytooliui.shared.util.eventlistener.*;
 
 import javax.swing.*;
 
-abstract public class MBEditorAbstract extends JMenuBar
+public abstract class MBEditorAbstract extends JMenuBar
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean doFileNew() throws Exception;
-    abstract public boolean doFileOpen() throws Exception;
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean doFileNew() throws Exception;
+    public abstract boolean doFileOpen() throws Exception;
+    public abstract boolean init();
+    public abstract void destroy();
     
     // ------
     // PUBLIC

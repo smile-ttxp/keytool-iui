@@ -34,7 +34,7 @@ import java.awt.event.ActionListener;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
-abstract public class MIToolKstAbs extends MIAbstract
+public abstract class MIToolKstAbs extends MIAbstract
 {
     public boolean init()
     {

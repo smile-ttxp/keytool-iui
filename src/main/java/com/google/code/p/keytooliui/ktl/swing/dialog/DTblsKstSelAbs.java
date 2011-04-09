@@ -10,7 +10,7 @@ import com.google.code.p.keytooliui.ktl.swing.panel.PTblEntPKTCSelAll;
 import com.google.code.p.keytooliui.ktl.swing.panel.PTblEntSKSelAll;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 
-abstract public class DTblsKstSelAbs extends DTblsKstAbs 
+public abstract class DTblsKstSelAbs extends DTblsKstAbs 
 {
     // --------------------
     // private static final

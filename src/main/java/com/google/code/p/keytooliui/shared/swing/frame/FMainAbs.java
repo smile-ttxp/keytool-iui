@@ -44,7 +44,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 import javax.swing.*;
 
-abstract public class FMainAbs extends FAbs
+public abstract class FMainAbs extends FAbs
 {
     // ------
     // PUBLIC

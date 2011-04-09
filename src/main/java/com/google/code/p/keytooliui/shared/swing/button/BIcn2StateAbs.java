@@ -37,7 +37,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-abstract public class BIcn2StateAbs extends BAbs
+public abstract class BIcn2StateAbs extends BAbs
 {
     // --------------
     // PRIVATE STATIC

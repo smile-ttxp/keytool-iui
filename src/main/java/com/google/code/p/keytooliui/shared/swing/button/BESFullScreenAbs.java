@@ -33,7 +33,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class BESFullScreenAbs extends BEnabledState
+public abstract class BESFullScreenAbs extends BEnabledState
 {    
     // --------------
     // PRIVATE STATIC

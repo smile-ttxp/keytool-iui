@@ -11,7 +11,7 @@ import com.google.code.p.keytooliui.shared.swing.dialog.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
 
-abstract public class DTblEntryAbs extends DEscapeAbstract implements
+public abstract class DTblEntryAbs extends DEscapeAbstract implements
     ActionListener
 {
     // ------
@@ -117,7 +117,7 @@ abstract public class DTblEntryAbs extends DEscapeAbstract implements
     // ------------------
     // ABSTRACT PROTECTED
     
-    abstract protected boolean _contentsOk_();
+    protected abstract boolean _contentsOk_();
     
     // ---------
     // protected 

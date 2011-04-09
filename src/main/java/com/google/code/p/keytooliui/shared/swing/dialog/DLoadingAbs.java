@@ -35,7 +35,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class DLoadingAbs extends DEscapeAbstract implements
+public abstract class DLoadingAbs extends DEscapeAbstract implements
     Runnable
 {
     // -------------

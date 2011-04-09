@@ -50,7 +50,7 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-abstract public class PSelBtnTfdFileAbs extends PSelBtnTfdAbs implements
+public abstract class PSelBtnTfdFileAbs extends PSelBtnTfdAbs implements
     ItemListener
 {
     // ----------------------

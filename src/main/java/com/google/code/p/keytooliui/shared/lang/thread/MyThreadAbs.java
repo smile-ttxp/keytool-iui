@@ -36,7 +36,7 @@ package com.google.code.p.keytooliui.shared.lang.thread;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class MyThreadAbs extends Thread
+public abstract class MyThreadAbs extends Thread
 {
     
     // -------------------

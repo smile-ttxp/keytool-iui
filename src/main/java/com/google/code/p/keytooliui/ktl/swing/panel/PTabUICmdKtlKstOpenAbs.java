@@ -38,7 +38,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs 
+public abstract class PTabUICmdKtlKstOpenAbs extends PTabUICmdKtlAbs 
 {
     // ---------
     // PROTECTED   

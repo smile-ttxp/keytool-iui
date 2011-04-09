@@ -30,7 +30,7 @@ package com.google.code.p.keytooliui.shared.swing.menu;
 
 
 
-abstract public class MToolAppliMainAbs extends MAppliMainAbstract 
+public abstract class MToolAppliMainAbs extends MAppliMainAbstract 
 {    
     // ---------
     // PROTECTED

@@ -24,7 +24,7 @@ package com.google.code.p.keytooliui.shared;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class Shared extends Object
+public abstract class Shared extends Object
 { 
     // -------------------
     // PUBLIC STATIC FINAL

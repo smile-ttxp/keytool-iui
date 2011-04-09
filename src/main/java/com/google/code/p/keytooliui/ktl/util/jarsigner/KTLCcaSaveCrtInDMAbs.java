@@ -28,7 +28,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLCcaSaveCrtInDMAbs extends KTLCcaSaveNewDMAbs
+public abstract class KTLCcaSaveCrtInDMAbs extends KTLCcaSaveNewDMAbs
 {    
     // ---------
     // PROTECTED

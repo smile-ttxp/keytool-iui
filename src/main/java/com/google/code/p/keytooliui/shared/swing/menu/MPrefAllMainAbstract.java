@@ -39,7 +39,7 @@ package com.google.code.p.keytooliui.shared.swing.menu;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class MPrefAllMainAbstract extends MAbstract 
+public abstract class MPrefAllMainAbstract extends MAbstract 
 {
     // --------------
     // PRIVATE STATIC

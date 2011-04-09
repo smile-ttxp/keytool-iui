@@ -10,12 +10,12 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.util.jarsigner.UtilJsrFile;
 
 
-abstract public class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
+public abstract class KTLKprOpenSignKPAbs extends KTLKprOpenSignAbs
 {
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpenKst);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpenKst);
     
     // ------
     // public

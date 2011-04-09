@@ -56,7 +56,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class DRangeAbstract extends DEscapeAbstract implements
+public abstract class DRangeAbstract extends DEscapeAbstract implements
     ActionListener,
     DRangeAbstractListener
 {

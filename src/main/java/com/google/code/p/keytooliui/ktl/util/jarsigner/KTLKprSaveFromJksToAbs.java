@@ -28,7 +28,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprSaveFromJksToAbs extends KTLKprSaveFromAbs
+public abstract class KTLKprSaveFromJksToAbs extends KTLKprSaveFromAbs
 {
     // ---------
     // PROTECTED

@@ -51,7 +51,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprSaveNewRsaJAbs extends KTLKprSaveNewRsaAbs
+public abstract class KTLKprSaveNewRsaJAbs extends KTLKprSaveNewRsaAbs
 {
     // ---------
     // PROTECTED

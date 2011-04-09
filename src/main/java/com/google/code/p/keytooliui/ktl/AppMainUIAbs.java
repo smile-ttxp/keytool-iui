@@ -24,7 +24,7 @@ import java.awt.event.*;
 import java.util.*;
 
 
-abstract public class AppMainUIAbs extends AppMainAbs implements
+public abstract class AppMainUIAbs extends AppMainAbs implements
     ChangeListener // tabbedPane ==> tab selected
 {
 

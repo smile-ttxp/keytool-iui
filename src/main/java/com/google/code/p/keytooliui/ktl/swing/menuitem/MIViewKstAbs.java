@@ -36,7 +36,7 @@ import java.util.ResourceBundle;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
-abstract public class MIViewKstAbs extends MIAbstract
+public abstract class MIViewKstAbs extends MIAbstract
 {
     // --------------
     // PRIVATE STATIC

@@ -38,7 +38,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.menu.*;
 import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
-abstract public class MChgAlignToolMainUIAbs extends MChgAlignToolAbstract
+public abstract class MChgAlignToolMainUIAbs extends MChgAlignToolAbstract
 {     
     // ---------
     // PROTECTED

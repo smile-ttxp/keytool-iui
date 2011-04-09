@@ -40,7 +40,7 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 
 import java.awt.*;
 
-abstract public class DEditorAbstract extends DEscapeAbstract implements
+public abstract class DEditorAbstract extends DEscapeAbstract implements
     PEditorAbstractListener,
     DEditorAbstractListener
 {

@@ -51,7 +51,7 @@ import java.util.*;
 import java.math.*;
 
 
-abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
+public abstract class KTLKprSaveNewAbs extends KTLKprSaveAbs
 {
     // -----------------------------
     // protected static final String

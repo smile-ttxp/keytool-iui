@@ -8,7 +8,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
  
 import java.awt.event.*;
  
-abstract public class RBTypeCrtPkcs7Abs extends RBTypeCrtAbs
+public abstract class RBTypeCrtPkcs7Abs extends RBTypeCrtAbs
 {    
     // ---------
     // protected

@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import com.google.code.p.keytooliui.ktl.lang.bool.BOEntryPKTC;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 
-abstract public class MISelTabCreateKprAbs extends MISelTabAbs
+public abstract class MISelTabCreateKprAbs extends MISelTabAbs
 {
     public boolean init()
     {

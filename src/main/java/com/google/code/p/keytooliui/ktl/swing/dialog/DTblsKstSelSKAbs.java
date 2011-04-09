@@ -23,17 +23,17 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BCancel;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
-abstract public class DTblsKstSelSKAbs extends DTblsKstSel 
+public abstract class DTblsKstSelSKAbs extends DTblsKstSel 
 {
     // ---------------
-    // abstract public
+    // public abstract
     
-    abstract public char[] getPassword();
+    public abstract char[] getPassword();
     
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected boolean _contentsOk_();
+    protected abstract boolean _contentsOk_();
     
     // ------
     // public

@@ -22,7 +22,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenKprFromKprPemKPAbs extends KTLKprOpenKprFromKprPemAbs
+public abstract class KTLKprOpenKprFromKprPemKPAbs extends KTLKprOpenKprFromKprPemAbs
 {
     // ---------
     // protected

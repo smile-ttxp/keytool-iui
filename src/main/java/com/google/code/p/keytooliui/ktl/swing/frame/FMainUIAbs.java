@@ -44,7 +44,7 @@ import java.awt.print.PrinterJob;
     . centered: 1 contentPane
  **/
 
- abstract public class FMainUIAbs extends FMainAbs implements
+ public abstract class FMainUIAbs extends FMainAbs implements
          Printable
  {
     public boolean doPrint()

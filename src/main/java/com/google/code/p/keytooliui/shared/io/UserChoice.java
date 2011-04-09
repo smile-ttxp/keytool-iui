@@ -43,17 +43,17 @@ package com.google.code.p.keytooliui.shared.io;
 
 import java.io.*;
 
-abstract public class UserChoice extends Object
+public abstract class UserChoice extends Object
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean assignLast();
-    abstract public boolean read(ObjectInputStream ois);
-    abstract public boolean write(ObjectOutputStream oos);
+    public abstract boolean assignLast();
+    public abstract boolean read(ObjectInputStream ois);
+    public abstract boolean write(ObjectOutputStream oos);
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
     
     // ---------
     // PROTECTED

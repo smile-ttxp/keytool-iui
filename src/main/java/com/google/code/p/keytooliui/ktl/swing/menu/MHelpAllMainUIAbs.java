@@ -44,7 +44,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-abstract public class MHelpAllMainUIAbs extends MHelpAllMainAbs
+public abstract class MHelpAllMainUIAbs extends MHelpAllMainAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL

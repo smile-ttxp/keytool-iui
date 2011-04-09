@@ -30,7 +30,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 
 
-abstract public class BESVerifyAbs extends BEnabledState
+public abstract class BESVerifyAbs extends BEnabledState
 {
 // --------------
     // PRIVATE STATIC

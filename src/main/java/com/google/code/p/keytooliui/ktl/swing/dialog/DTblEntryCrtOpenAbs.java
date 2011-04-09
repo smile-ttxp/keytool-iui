@@ -27,7 +27,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
-abstract public class DTblEntryCrtOpenAbs extends DTblEntryCrtAbs implements
+public abstract class DTblEntryCrtOpenAbs extends DTblEntryCrtAbs implements
     ListSelectionListener
 {
     // --------------------

@@ -36,7 +36,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenSigDetOCmsAbs extends KTLKprOpenSigDetAbs
+public abstract class KTLKprOpenSigDetOCmsAbs extends KTLKprOpenSigDetAbs
 {
     // --------------------
     // private static final
@@ -76,11 +76,11 @@ abstract public class KTLKprOpenSigDetOCmsAbs extends KTLKprOpenSigDetAbs
    
     
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpen);
     
-    abstract protected boolean _doJobSelectKpr_(
+    protected abstract boolean _doJobSelectKpr_(
         File fleSaveSig,
         File fleSaveCrt, // optional
         File fleOpenData,

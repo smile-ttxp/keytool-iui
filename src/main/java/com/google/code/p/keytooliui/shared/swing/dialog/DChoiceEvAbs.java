@@ -41,13 +41,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.beans.*; //Property change stuff
 
-abstract public class DChoiceEvAbs extends DEscapeAbstract implements
+public abstract class DChoiceEvAbs extends DEscapeAbstract implements
     PropertyChangeListener
 {     
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void propertyChange(PropertyChangeEvent evtPropertyChange);
+    public abstract void propertyChange(PropertyChangeEvent evtPropertyChange);
     
     // ----------------
     // PUBLIC ACCESSORS

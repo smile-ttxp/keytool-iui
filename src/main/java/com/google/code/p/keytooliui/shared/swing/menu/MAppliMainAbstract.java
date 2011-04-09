@@ -31,7 +31,7 @@ package com.google.code.p.keytooliui.shared.swing.menu;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class MAppliMainAbstract extends MAbstract 
+public abstract class MAppliMainAbstract extends MAbstract 
 {
     // --------------
     // PRIVATE STATIC
@@ -72,8 +72,8 @@ abstract public class MAppliMainAbstract extends MAbstract
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
     
     // ---------
     // PROTECTED

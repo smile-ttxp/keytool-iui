@@ -19,7 +19,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-abstract public class DTblEntryKprSaveAbs extends DTblEntryKprAbs
+public abstract class DTblEntryKprSaveAbs extends DTblEntryKprAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL

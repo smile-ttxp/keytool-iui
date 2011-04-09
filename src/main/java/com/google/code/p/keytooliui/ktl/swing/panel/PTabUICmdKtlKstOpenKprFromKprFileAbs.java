@@ -15,7 +15,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-abstract public class PTabUICmdKtlKstOpenKprFromKprFileAbs extends PTabUICmdKtlKstOpenKprAbs
+public abstract class PTabUICmdKtlKstOpenKprFromKprFileAbs extends PTabUICmdKtlKstOpenKprAbs
 {
     // protected
     

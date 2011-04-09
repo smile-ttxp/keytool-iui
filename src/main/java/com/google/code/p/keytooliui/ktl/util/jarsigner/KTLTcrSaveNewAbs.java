@@ -30,7 +30,7 @@ import java.util.*;
 
 
 
-abstract public class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
+public abstract class KTLTcrSaveNewAbs extends KTLTcrSaveAbs
 {
     // ------
     // public

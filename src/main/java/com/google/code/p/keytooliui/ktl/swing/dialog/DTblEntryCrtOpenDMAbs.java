@@ -19,7 +19,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-abstract public class DTblEntryCrtOpenDMAbs extends DTblEntryCrtOpenAbs 
+public abstract class DTblEntryCrtOpenDMAbs extends DTblEntryCrtOpenAbs 
 {        
     // ---------
     // PROTECTED

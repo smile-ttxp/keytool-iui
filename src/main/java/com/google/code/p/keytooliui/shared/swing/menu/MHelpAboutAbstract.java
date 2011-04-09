@@ -46,7 +46,7 @@ import java.awt.event.*;
 import java.awt.*;
 
 
-abstract public class MHelpAboutAbstract extends MAbstract implements
+public abstract class MHelpAboutAbstract extends MAbstract implements
     ActionListener
 {
     
@@ -87,7 +87,7 @@ abstract public class MHelpAboutAbstract extends MAbstract implements
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
+    public abstract boolean init();
     
     // ------
     // PUBLIC

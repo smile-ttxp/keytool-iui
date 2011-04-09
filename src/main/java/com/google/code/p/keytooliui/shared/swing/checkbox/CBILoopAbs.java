@@ -36,7 +36,7 @@ import javax.swing.*;
  
 import java.awt.event.*;
  
-abstract public class CBILoopAbs extends CBIcon
+public abstract class CBILoopAbs extends CBIcon
 {    
     // --------------
     // PRIVATE STATIC

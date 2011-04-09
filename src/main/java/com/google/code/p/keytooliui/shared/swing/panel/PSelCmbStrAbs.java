@@ -37,7 +37,7 @@ known subclasses:
 **/
 
 
-abstract public class PSelCmbStrAbs extends PSelCmbAbs
+public abstract class PSelCmbStrAbs extends PSelCmbAbs
 {       
     protected PSelCmbStrAbs(String strLabel, String[] strsValue, int intSelectedId)
     {

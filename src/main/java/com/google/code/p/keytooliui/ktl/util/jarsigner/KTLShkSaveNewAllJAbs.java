@@ -52,7 +52,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLShkSaveNewAllJAbs extends KTLShkSaveNewAllAbs
+public abstract class KTLShkSaveNewAllJAbs extends KTLShkSaveNewAllAbs
 {
     // ---------
     // PROTECTED

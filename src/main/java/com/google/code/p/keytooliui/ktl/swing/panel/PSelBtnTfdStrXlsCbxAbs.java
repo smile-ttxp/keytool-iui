@@ -39,20 +39,20 @@ import javax.swing.JComboBox;
 
 import com.google.code.p.keytooliui.shared.swing.textfield.TFAbstract;
 
-abstract public class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs implements FocusListener
+public abstract class PSelBtnTfdStrXlsCbxAbs extends PSelBtnTfdStrXlsAbs implements FocusListener
 {
  
     // ---------------
-    // abstract public
+    // public abstract
     
-    abstract public void focusGained(FocusEvent evtFocus);
+    public abstract void focusGained(FocusEvent evtFocus);
     
     public void actionPerformed(ActionEvent evtAction) { super.actionPerformed(evtAction); }
     
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected boolean _setValueDefault_();
+    protected abstract boolean _setValueDefault_();
     
     // ------
     // PUBLIC

@@ -38,7 +38,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-abstract public class TBPageSecAbs extends TBAbs
+public abstract class TBPageSecAbs extends TBAbs
 {
     // ------
     // PUBLIC

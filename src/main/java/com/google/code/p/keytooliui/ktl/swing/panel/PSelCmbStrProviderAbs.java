@@ -40,7 +40,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 
-abstract public class PSelCmbStrProviderAbs extends PSelCmbStrAbs
+public abstract class PSelCmbStrProviderAbs extends PSelCmbStrAbs
 {   
     protected PSelCmbStrProviderAbs(String strLabel, String[] strsValue)
     {        

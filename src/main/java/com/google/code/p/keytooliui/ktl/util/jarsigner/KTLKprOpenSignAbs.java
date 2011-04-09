@@ -35,7 +35,7 @@ import java.io.*;
 import java.util.*;
 import java.util.jar.*;
 
-abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
+public abstract class KTLKprOpenSignAbs extends KTLKprOpenAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL

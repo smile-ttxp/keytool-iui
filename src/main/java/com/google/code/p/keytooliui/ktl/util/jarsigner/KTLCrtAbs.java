@@ -24,7 +24,7 @@ import java.security.cert.X509Certificate;
 
 import java.awt.*;
 
-abstract public class KTLCrtAbs extends KTLAbs
+public abstract class KTLCrtAbs extends KTLAbs
 {
     // ---------
     // PROTECTED

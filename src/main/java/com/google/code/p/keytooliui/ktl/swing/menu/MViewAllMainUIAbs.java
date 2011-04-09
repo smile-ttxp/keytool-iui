@@ -19,7 +19,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-abstract public class MViewAllMainUIAbs extends MViewAllMainAbs
+public abstract class MViewAllMainUIAbs extends MViewAllMainAbs
 {
     // ------
     // PUBLIC

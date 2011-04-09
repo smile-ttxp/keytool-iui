@@ -31,7 +31,7 @@ import java.security.cert.X509Certificate;
 
 import java.awt.*;
 
-abstract public class KTLKprAbs extends KTLAbs
+public abstract class KTLKprAbs extends KTLAbs
 {
     // ----------------
     // PROTECTED STATIC

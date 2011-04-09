@@ -33,12 +33,12 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 
 
-abstract public class BESHelpJHAbstract extends BEnabledState
+public abstract class BESHelpJHAbstract extends BEnabledState
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void setEnabledHelp(javax.help.HelpBroker hbr);
+    public abstract void setEnabledHelp(javax.help.HelpBroker hbr);
     
     // ------
     // PUBLIC

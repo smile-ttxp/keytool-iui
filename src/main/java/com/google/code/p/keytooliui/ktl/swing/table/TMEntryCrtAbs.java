@@ -33,7 +33,7 @@ import com.google.code.p.keytooliui.shared.swing.table.*;
 import javax.swing.table.*;
 
 
-abstract public class TMEntryCrtAbs extends TMEntryAbs
+public abstract class TMEntryCrtAbs extends TMEntryAbs
 {   
     // ---------
     // PROTECTED

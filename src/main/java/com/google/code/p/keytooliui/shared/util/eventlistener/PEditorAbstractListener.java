@@ -29,7 +29,7 @@ public interface PEditorAbstractListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void fileRecord(PEditorAbstractEvent evt);
-    abstract public void fileDelete(PEditorAbstractEvent evt);
-    abstract public void exit(PEditorAbstractEvent evt);
+    public abstract void fileRecord(PEditorAbstractEvent evt);
+    public abstract void fileDelete(PEditorAbstractEvent evt);
+    public abstract void exit(PEditorAbstractEvent evt);
 }

@@ -21,13 +21,13 @@ import java.awt.event.*;
 import java.util.*;
 
 
-abstract public class MViewSelTabUIAbs extends MAbstract
+public abstract class MViewSelTabUIAbs extends MAbstract
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void destroy();
-    abstract public boolean init();
+    public abstract void destroy();
+    public abstract boolean init();
     
 
     // ---------

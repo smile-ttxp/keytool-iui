@@ -54,7 +54,7 @@ import java.awt.event.ActionListener;
 
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
-abstract public class MISelTabAbs extends MIAbstract
+public abstract class MISelTabAbs extends MIAbstract
 {
     public void destroy()
     {

@@ -36,7 +36,7 @@ import javax.swing.*;
  
 import java.awt.event.*;
  
-abstract public class CBIFullWindowAbs extends CBIcon
+public abstract class CBIFullWindowAbs extends CBIcon
 {    
     // --------------
     // PRIVATE STATIC

@@ -32,14 +32,14 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
+public abstract class KTLShkOpenCryptDecAbs extends KTLShkOpenCryptAbs
 {
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpen);
     
-    abstract protected boolean _doJobSelectShk_(
+    protected abstract boolean _doJobSelectShk_(
         File fleSaveDecrypted,
         File fleOpenCrypted,
         KeyStore kstOpen,

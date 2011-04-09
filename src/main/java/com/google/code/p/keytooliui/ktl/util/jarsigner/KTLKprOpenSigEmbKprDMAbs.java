@@ -21,7 +21,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenSigEmbKprDMAbs extends KTLKprOpenSigEmbKprAbs
+public abstract class KTLKprOpenSigEmbKprDMAbs extends KTLKprOpenSigEmbKprAbs
 {
     // ---------
     // protected

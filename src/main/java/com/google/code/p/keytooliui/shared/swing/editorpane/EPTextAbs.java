@@ -46,7 +46,7 @@ import java.beans.*; // for PropertyChangeListener
 import java.net.*;
 import java.util.*;
  
-abstract public class EPTextAbs extends JEditorPane implements
+public abstract class EPTextAbs extends JEditorPane implements
     // Serializable, // !!!!!!!!!!!!
     EPTextAbsListener,
     DFindPageListener,

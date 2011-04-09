@@ -32,7 +32,7 @@ import javax.swing.*;
 
 import java.io.*;
 
-abstract public class ChgLocMainUITabsAbs extends ChgLocMainUIAbs
+public abstract class ChgLocMainUITabsAbs extends ChgLocMainUIAbs
 {
     // ---------
     // PROTECTED

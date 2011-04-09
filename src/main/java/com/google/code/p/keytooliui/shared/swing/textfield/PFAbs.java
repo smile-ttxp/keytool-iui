@@ -34,7 +34,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 import java.awt.*;
 
-abstract public class PFAbs extends JPasswordField
+public abstract class PFAbs extends JPasswordField
 {   
     // --------------------------
     // PUBLIC STATIC FINAL STRING
@@ -45,8 +45,8 @@ abstract public class PFAbs extends JPasswordField
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void setDefault();
-    abstract public boolean isDefault();
+    public abstract void setDefault();
+    public abstract boolean isDefault();
    
 
     // ------

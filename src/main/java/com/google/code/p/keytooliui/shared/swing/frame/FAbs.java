@@ -36,7 +36,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class FAbs extends JFrame
+public abstract class FAbs extends JFrame
 {
     // ------
     // PUBLIC

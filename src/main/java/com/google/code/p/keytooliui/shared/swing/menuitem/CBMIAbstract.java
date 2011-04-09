@@ -31,7 +31,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-abstract public class CBMIAbstract extends JCheckBoxMenuItem
+public abstract class CBMIAbstract extends JCheckBoxMenuItem
 {
     // ------
     // PUBLIC

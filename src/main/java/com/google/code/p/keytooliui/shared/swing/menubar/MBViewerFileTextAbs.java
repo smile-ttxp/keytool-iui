@@ -34,7 +34,7 @@ import com.google.code.p.keytooliui.shared.swing.menu.*;
 
 import java.awt.event.*;
 
-abstract public class MBViewerFileTextAbs extends MBViewerFileAbs
+public abstract class MBViewerFileTextAbs extends MBViewerFileAbs
 {
     protected MBViewerFileTextAbs(ActionListener actListenerParentFrame, ActionListener actListenerParentPanel)
     {

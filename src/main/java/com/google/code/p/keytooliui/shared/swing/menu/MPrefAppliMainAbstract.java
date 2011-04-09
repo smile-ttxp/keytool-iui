@@ -36,7 +36,7 @@ package com.google.code.p.keytooliui.shared.swing.menu;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class MPrefAppliMainAbstract extends MAppliMainAbstract 
+public abstract class MPrefAppliMainAbstract extends MAppliMainAbstract 
 {
     
     // ------

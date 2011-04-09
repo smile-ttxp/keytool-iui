@@ -6,7 +6,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 import java.awt.Frame;
 import java.awt.event.ItemListener;
 
-abstract public class PTabUICmdKtlKstOpenSigVerAbs extends PTabUICmdKtlKstOpenSigAbs
+public abstract class PTabUICmdKtlKstOpenSigVerAbs extends PTabUICmdKtlKstOpenSigAbs
 {    
     // ---------
     // protected

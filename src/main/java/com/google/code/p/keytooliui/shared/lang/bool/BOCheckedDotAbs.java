@@ -53,7 +53,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 
 
-abstract public class BOCheckedDotAbs extends BOCheckedAbs
+public abstract class BOCheckedDotAbs extends BOCheckedAbs
 {
     // ------
     // PUBLIC

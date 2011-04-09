@@ -31,7 +31,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 import net.miginfocom.swing.MigLayout;
 
-abstract public class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs 
+public abstract class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs 
 {
     // --------------------
     // PRIVATE STATIC FINAL

@@ -37,7 +37,7 @@
  
  import java.awt.event.*;
  
- abstract public class RBTypeAbs extends JRadioButton
+ public abstract class RBTypeAbs extends JRadioButton
  {
     // ------
     // PUBLIC

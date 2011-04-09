@@ -32,7 +32,7 @@
 **/
 
 
-abstract public class TF4x20Abs extends TFAbstract
+public abstract class TF4x20Abs extends TFAbstract
 {  
     // --------------------
     // PRIVATE STATIC FINAL

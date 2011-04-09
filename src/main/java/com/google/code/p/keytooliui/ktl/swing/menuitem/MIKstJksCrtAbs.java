@@ -34,7 +34,7 @@ import java.awt.event.ActionListener;
 
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
-abstract public class MIKstJksCrtAbs extends MIAbstract
+public abstract class MIKstJksCrtAbs extends MIAbstract
 {
     public static String s_strSuffix = "Certificate store";
 

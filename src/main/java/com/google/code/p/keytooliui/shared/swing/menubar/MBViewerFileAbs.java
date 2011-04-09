@@ -34,7 +34,7 @@ import com.google.code.p.keytooliui.shared.swing.menu.*;
 import javax.swing.*;
 
 
-abstract public class MBViewerFileAbs extends JMenuBar
+public abstract class MBViewerFileAbs extends JMenuBar
 {
     // ------
     // PUBLIC

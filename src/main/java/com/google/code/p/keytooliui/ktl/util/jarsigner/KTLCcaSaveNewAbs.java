@@ -34,7 +34,7 @@ import java.io.*;
 
 
 
-abstract public class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
+public abstract class KTLCcaSaveNewAbs extends KTLTcrSaveAbs
 {
     // ------
     // public

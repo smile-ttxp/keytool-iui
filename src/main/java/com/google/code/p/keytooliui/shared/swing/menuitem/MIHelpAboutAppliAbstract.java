@@ -40,7 +40,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class MIHelpAboutAppliAbstract extends MIAbstract 
+public abstract class MIHelpAboutAppliAbstract extends MIAbstract 
 {
     // -------------
     // PUBLIC STATIC

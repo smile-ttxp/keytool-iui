@@ -37,12 +37,12 @@ import java.awt.*;
 
 
 
-abstract public class LCRAbstract extends DefaultListCellRenderer
+public abstract class LCRAbstract extends DefaultListCellRenderer
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public Component getListCellRendererComponent(
+    public abstract Component getListCellRendererComponent(
         JList lst, Object objValue, int intModelIndex,
         boolean blnIsSelected, boolean blnCellHasFocus);
     

@@ -19,7 +19,7 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import java.beans.*; //Property change stuff
 import java.awt.*;
 
-abstract public class DWChoice3Abs extends DWChoiceAbs 
+public abstract class DWChoice3Abs extends DWChoiceAbs 
 {
     // -----------------------
     // PUBLIC STATIC FINAL INT

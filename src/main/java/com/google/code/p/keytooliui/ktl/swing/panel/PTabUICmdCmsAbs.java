@@ -41,18 +41,18 @@ import java.awt.event.*;
 import java.awt.*;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 
-abstract public class PTabUICmdCmsAbs extends PTabUICmdAbs implements
+public abstract class PTabUICmdCmsAbs extends PTabUICmdAbs implements
     ItemListener
 {       
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void itemStateChanged(ItemEvent evtItem);
+    public abstract void itemStateChanged(ItemEvent evtItem);
     
     // ------------------
     // ABSTRACT PROTECTED
     
-    abstract protected void _updateActionButtonDataChanged_(boolean blnFieldInserted);
+    protected abstract void _updateActionButtonDataChanged_(boolean blnFieldInserted);
     
     // ------
     // PUBLIC

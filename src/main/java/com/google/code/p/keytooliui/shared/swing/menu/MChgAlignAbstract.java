@@ -39,7 +39,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
 
-abstract public class MChgAlignAbstract extends MAbstract
+public abstract class MChgAlignAbstract extends MAbstract
 { 
     // ------
     // PUBLIC

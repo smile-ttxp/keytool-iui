@@ -41,7 +41,7 @@ import java.awt.event.*;
 import com.google.code.p.keytooliui.shared.swing.checkbox.CBAbs;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 
-abstract public class DFindAbstract extends DEscapeAbstract implements
+public abstract class DFindAbstract extends DEscapeAbstract implements
     ActionListener,
     DocumentListener,
     KeyListener // test
@@ -103,7 +103,7 @@ abstract public class DFindAbstract extends DEscapeAbstract implements
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void keyReleased(KeyEvent evtKey);
+    public abstract void keyReleased(KeyEvent evtKey);
     
     
     // ------

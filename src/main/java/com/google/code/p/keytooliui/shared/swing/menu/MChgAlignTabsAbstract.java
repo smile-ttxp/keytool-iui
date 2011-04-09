@@ -37,7 +37,7 @@
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class MChgAlignTabsAbstract extends MChgAlignAbstract
+public abstract class MChgAlignTabsAbstract extends MChgAlignAbstract
 { 
     
     // ---------------------

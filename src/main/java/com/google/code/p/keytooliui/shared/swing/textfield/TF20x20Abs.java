@@ -35,7 +35,7 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class TF20x20Abs extends TFAbstract
+public abstract class TF20x20Abs extends TFAbstract
 {  
     // --------------------
     // PRIVATE STATIC FINAL

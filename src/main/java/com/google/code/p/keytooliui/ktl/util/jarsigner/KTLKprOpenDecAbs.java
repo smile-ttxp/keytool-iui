@@ -23,7 +23,7 @@ import java.security.cert.Certificate;
 
 import java.awt.*;
 
-abstract public class KTLKprOpenDecAbs extends KTLKprOpenAbs
+public abstract class KTLKprOpenDecAbs extends KTLKprOpenAbs
 {
     // ---------
     // PROTECTED

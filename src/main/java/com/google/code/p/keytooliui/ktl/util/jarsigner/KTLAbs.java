@@ -88,7 +88,7 @@ import java.security.cert.CertificateException;
 import java.io.*;
 import java.awt.*;
 
-abstract public class KTLAbs extends Object
+public abstract class KTLAbs extends Object
 {
     // --------------------
     // PRIVATE STATIC FINAL
@@ -707,7 +707,7 @@ abstract public class KTLAbs extends Object
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean doJob();
+    public abstract boolean doJob();
     
     // ---------
     // PROTECTED

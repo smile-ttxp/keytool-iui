@@ -50,13 +50,13 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class PSelBtnAbs extends PSelAbs implements ActionListener
+public abstract class PSelBtnAbs extends PSelAbs implements ActionListener
 {    
     // ------------------
     // ABSTRACT PROTECTED
     
     
-    abstract protected void _showDialog_();
+    protected abstract void _showDialog_();
     
     // ------
     // PUBLIC

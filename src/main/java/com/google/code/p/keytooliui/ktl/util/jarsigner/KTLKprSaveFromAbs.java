@@ -19,14 +19,14 @@ import java.security.cert.Certificate;
 
 import java.awt.*;
 
-abstract public class KTLKprSaveFromAbs extends KTLKprSaveAbs
+public abstract class KTLKprSaveFromAbs extends KTLKprSaveAbs
 {
         // ------------------
     // ABSTRACT PROTECTED
     
     // definition in subclasses, called there
     
-    abstract protected boolean __createNewEntry__(
+    protected abstract boolean __createNewEntry__(
         KeyStore kstOpenTarget, PrivateKey pkyPrivateSource, Certificate[] crtsSource);
     
     

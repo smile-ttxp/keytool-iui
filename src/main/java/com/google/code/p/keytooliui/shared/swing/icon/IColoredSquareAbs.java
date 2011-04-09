@@ -34,7 +34,7 @@ import java.awt.*;
 
 import javax.swing.*;
 
-abstract public class IColoredSquareAbs implements Icon
+public abstract class IColoredSquareAbs implements Icon
 {    
     // ------
 	// PUBLIC

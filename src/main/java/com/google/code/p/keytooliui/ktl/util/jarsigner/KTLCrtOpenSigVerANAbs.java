@@ -22,7 +22,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLCrtOpenSigVerANAbs extends KTLCrtOpenSigVerAbs
+public abstract class KTLCrtOpenSigVerANAbs extends KTLCrtOpenSigVerAbs
 {
     // ---------
     // protected

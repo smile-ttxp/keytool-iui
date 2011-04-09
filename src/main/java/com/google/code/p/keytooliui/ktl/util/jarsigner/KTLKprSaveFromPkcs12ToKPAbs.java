@@ -26,7 +26,7 @@ import java.awt.*;
 import java.util.*;
 
 // subclasses: Jceks or Jks
-abstract public class KTLKprSaveFromPkcs12ToKPAbs extends KTLKprSaveFromPkcs12ToAbs
+public abstract class KTLKprSaveFromPkcs12ToKPAbs extends KTLKprSaveFromPkcs12ToAbs
 {
     // ---------
     // PROTECTED

@@ -34,7 +34,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
+public abstract class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
 {
     // ---------------------------
     // private static final string
@@ -42,11 +42,11 @@ abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
     private static final String _STR_PROVIDERSIGINSTANCE = KTLAbs.f_s_strProviderKstBC; 
     
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpen);
     
-    abstract protected boolean _doJobSelectCrt_(
+    protected abstract boolean _doJobSelectCrt_(
         File fleOpenSig,
         File fleOpenData,
         KeyStore kstOpen,

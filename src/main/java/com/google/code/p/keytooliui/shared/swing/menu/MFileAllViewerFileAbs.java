@@ -36,7 +36,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-abstract public class MFileAllViewerFileAbs extends MFileAllAbstract
+public abstract class MFileAllViewerFileAbs extends MFileAllAbstract
 {
     // ------
     // PUBLIC

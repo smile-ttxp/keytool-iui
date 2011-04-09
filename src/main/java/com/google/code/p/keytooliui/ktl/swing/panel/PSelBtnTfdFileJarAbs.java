@@ -66,7 +66,7 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements ItemListener
+public abstract class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements ItemListener
 {   
     public void destroy()
     {

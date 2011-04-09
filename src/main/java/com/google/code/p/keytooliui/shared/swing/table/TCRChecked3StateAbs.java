@@ -31,7 +31,7 @@
  
  import javax.swing.*;
  
- abstract public class TCRChecked3StateAbs extends TCRCheckedAbs
+ public abstract class TCRChecked3StateAbs extends TCRCheckedAbs
  {    
     // ---------
     // PROTECTED

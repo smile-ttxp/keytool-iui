@@ -31,7 +31,7 @@ package com.google.code.p.keytooliui.ktl.swing.label;
 import com.google.code.p.keytooliui.shared.swing.label.*;
  
  
-abstract public class LabelCheckTypeJarAbs extends LabelCheck
+public abstract class LabelCheckTypeJarAbs extends LabelCheck
 {
     // ------
     // PUBLIC

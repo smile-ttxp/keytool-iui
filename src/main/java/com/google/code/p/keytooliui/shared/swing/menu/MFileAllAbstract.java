@@ -44,7 +44,7 @@ import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
 import java.awt.event.*;
 
-abstract public class MFileAllAbstract extends MAbstract
+public abstract class MFileAllAbstract extends MAbstract
 {    
     // --------------
     // PRIVATE STATIC
@@ -97,7 +97,7 @@ abstract public class MFileAllAbstract extends MAbstract
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void updateTreeUI();
+    public abstract void updateTreeUI();
     
     // ------
     // PUBLIC

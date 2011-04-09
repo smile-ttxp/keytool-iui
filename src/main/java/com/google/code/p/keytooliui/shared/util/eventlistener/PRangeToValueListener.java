@@ -29,5 +29,5 @@ public interface PRangeToValueListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void defaultSwapped(PRangeToValueEvent evt);
+    public abstract void defaultSwapped(PRangeToValueEvent evt);
 }

@@ -36,15 +36,15 @@ package com.google.code.p.keytooliui.shared.swing.menu;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class MProjCurAbs extends MAbstract
+public abstract class MProjCurAbs extends MAbstract
 {
     
     
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
     
     // ---------
     // PROTECTED

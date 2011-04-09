@@ -29,5 +29,5 @@ public interface DRangeAbstractListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void valueChanged(DRangeAbstractEvent evt);
+    public abstract void valueChanged(DRangeAbstractEvent evt);
 }

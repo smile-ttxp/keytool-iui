@@ -40,7 +40,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class PListDblClickAbs extends JPanel implements
+public abstract class PListDblClickAbs extends JPanel implements
     ListSelectionListener,
     MouseListener
 {

@@ -39,7 +39,7 @@ import com.google.code.p.keytooliui.shared.swing.dialog.DHelpAboutAppli;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIHelpAboutAppliAbstract;
 import com.google.code.p.keytooliui.shared.swing.panel.PTabHelpAppliAdvancedAbs;
 
-abstract public class BESAboutAppliAbs extends BEnabledState
+public abstract class BESAboutAppliAbs extends BEnabledState
 {    
     // --------------
     // PRIVATE STATIC

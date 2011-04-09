@@ -39,7 +39,7 @@
  
  import java.awt.event.*;
  
- abstract public class MIAbstract extends JMenuItem
+ public abstract class MIAbstract extends JMenuItem
  {
     // ------
     // PUBLIC

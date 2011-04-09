@@ -31,7 +31,7 @@ import javax.swing.*;
 
 import java.io.*;
 
-abstract public class ChgLocMainUIToolAbs extends ChgLocMainUIAbs
+public abstract class ChgLocMainUIToolAbs extends ChgLocMainUIAbs
 {
     // ---------
     // PROTECTED

@@ -32,7 +32,7 @@ package com.google.code.p.keytooliui.shared.swing.menu;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class MGoAllMainAbs extends MAbstract
+public abstract class MGoAllMainAbs extends MAbstract
 {
     // --------------
     // PRIVATE STATIC

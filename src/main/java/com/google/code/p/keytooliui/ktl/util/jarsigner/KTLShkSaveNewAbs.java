@@ -48,7 +48,7 @@ import java.util.*;
 import java.math.*;
 
 
-abstract public class KTLShkSaveNewAbs extends KTLShkSaveAbs
+public abstract class KTLShkSaveNewAbs extends KTLShkSaveAbs
 {    
     // ---------
     // PROTECTED

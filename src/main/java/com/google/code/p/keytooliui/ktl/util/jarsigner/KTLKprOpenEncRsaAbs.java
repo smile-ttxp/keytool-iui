@@ -32,14 +32,14 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenEncRsaAbs extends KTLKprOpenEncAbs
+public abstract class KTLKprOpenEncRsaAbs extends KTLKprOpenEncAbs
 {
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpen);
     
-    abstract protected boolean _doJobSelectKpr_(
+    protected abstract boolean _doJobSelectKpr_(
         File fleOpenData,
         File fleSaveData,
         KeyStore kstOpen,

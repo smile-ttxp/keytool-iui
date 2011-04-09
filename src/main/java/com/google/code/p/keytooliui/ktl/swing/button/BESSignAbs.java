@@ -11,7 +11,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 
-abstract public class BESSignAbs extends BEnabledState
+public abstract class BESSignAbs extends BEnabledState
 {    
     // --------------
     // PRIVATE STATIC

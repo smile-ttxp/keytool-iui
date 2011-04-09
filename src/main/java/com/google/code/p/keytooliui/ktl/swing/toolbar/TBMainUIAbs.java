@@ -35,7 +35,7 @@ import com.google.code.p.keytooliui.shared.swing.toolbar.*;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class TBMainUIAbs extends TBMainAbstract
+public abstract class TBMainUIAbs extends TBMainAbstract
 {
     @Override
     public boolean init()

@@ -30,7 +30,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLShkOpenCryptEncKPAbs extends KTLShkOpenCryptEncAbs
+public abstract class KTLShkOpenCryptEncKPAbs extends KTLShkOpenCryptEncAbs
 {
     // ---------
     // protected

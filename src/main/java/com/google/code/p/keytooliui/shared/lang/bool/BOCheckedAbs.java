@@ -25,12 +25,12 @@ package com.google.code.p.keytooliui.shared.lang.bool;
 import javax.swing.ImageIcon;
 
 
-abstract public class BOCheckedAbs extends BOAbs
+public abstract class BOCheckedAbs extends BOAbs
 {
     // --------
     // abstract
-    abstract public ImageIcon getIcon();
-    abstract public String getText();
+    public abstract ImageIcon getIcon();
+    public abstract String getText();
     
     // ---------
     // protected

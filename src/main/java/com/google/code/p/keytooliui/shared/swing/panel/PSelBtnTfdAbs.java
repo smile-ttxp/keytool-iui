@@ -58,7 +58,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class PSelBtnTfdAbs extends PSelBtnAbs 
+public abstract class PSelBtnTfdAbs extends PSelBtnAbs 
 {
     
     // ------

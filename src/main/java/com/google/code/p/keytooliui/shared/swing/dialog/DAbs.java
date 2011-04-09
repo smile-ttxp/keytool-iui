@@ -31,13 +31,13 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class DAbs extends DEscapeAbstract
+public abstract class DAbs extends DEscapeAbstract
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
     
     // ---------
     // PROTECTED

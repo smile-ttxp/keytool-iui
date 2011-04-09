@@ -39,7 +39,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import java.awt.event.*;
 import java.net.URI;
 
-abstract public class MIHelpOnlineAbstract extends MIAbstract 
+public abstract class MIHelpOnlineAbstract extends MIAbstract 
 {       
     // --------------
     // PRIVATE STATIC

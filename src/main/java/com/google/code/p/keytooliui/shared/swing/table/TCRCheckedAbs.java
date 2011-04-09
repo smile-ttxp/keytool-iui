@@ -32,12 +32,12 @@
  
  import javax.swing.*;
  
- abstract public class TCRCheckedAbs extends TCRAbs
+ public abstract class TCRCheckedAbs extends TCRAbs
  {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void setValue(Object obj);
+    public abstract void setValue(Object obj);
     
     // ---------
     // PROTECTED

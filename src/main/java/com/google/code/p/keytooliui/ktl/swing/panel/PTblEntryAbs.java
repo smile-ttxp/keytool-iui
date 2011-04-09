@@ -17,7 +17,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-abstract public class PTblEntryAbs extends JPanel
+public abstract class PTblEntryAbs extends JPanel
 {
     // --------------------
     // PRIVATE STATIC FINAL

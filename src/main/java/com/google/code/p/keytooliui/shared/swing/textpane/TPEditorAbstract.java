@@ -37,15 +37,15 @@ import javax.swing.*;
 import java.awt.print.*;
 import java.awt.*;
 
-abstract public class TPEditorAbstract extends JTextPane implements
+public abstract class TPEditorAbstract extends JTextPane implements
     Printable
 {    
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
-    abstract public boolean doFileNew() throws Exception;
+    public abstract boolean init();
+    public abstract void destroy();
+    public abstract boolean doFileNew() throws Exception;
     
     // ------
     // PUBLIC

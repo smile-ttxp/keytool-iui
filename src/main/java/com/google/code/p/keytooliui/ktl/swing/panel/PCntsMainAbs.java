@@ -15,13 +15,13 @@ import javax.swing.JPanel;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BESPrint16;
 
-abstract public class PCntsMainAbs extends JPanel implements ActionListener, Printable
+public abstract class PCntsMainAbs extends JPanel implements ActionListener, Printable
 {
     // ---------------
-    // abstract public 
+    // public abstract 
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
     
     // ------
     // public

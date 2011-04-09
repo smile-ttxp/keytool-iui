@@ -51,13 +51,13 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
+public abstract class KTLKprSaveNewRsaAbs extends KTLKprSaveNewAbs
 {
     // ------------------
     // ABSTRACT PROTECTED
     
     // definition in subclasses, called there
-    abstract protected boolean __doJob__(
+    protected abstract boolean __doJob__(
         KeyStore kstOpen, 
         // below: about PKTC (Private Key & Trusted Certificate)
         String[] strsAliasPKTC, 

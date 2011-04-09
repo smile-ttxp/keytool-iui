@@ -38,7 +38,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 
-abstract public class PSelCmbStrFormatFileCertAbs extends PSelCmbStrAbs
+public abstract class PSelCmbStrFormatFileCertAbs extends PSelCmbStrAbs
 {   
     protected PSelCmbStrFormatFileCertAbs(String strLabel, String[] strsValue)
     {        

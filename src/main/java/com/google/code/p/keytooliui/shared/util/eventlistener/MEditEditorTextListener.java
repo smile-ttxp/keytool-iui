@@ -29,5 +29,5 @@ public interface MEditEditorTextListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void insertTime(MEditEditorTextEvent evt);
+    public abstract void insertTime(MEditEditorTextEvent evt);
 }

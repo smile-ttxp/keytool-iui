@@ -13,7 +13,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys;
 import net.miginfocom.swing.MigLayout;
 
-abstract public class PTabUICmdKtlKstOpenXmlSigExpAbs extends PTabUICmdKtlKstOpenXmlSigAbs
+public abstract class PTabUICmdKtlKstOpenXmlSigExpAbs extends PTabUICmdKtlKstOpenXmlSigAbs
 {    
     // ------
     // public

@@ -18,7 +18,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class PTabUICmdKtlKstOpenCryptDecAbs extends PTabUICmdKtlKstOpenCryptAbs
+public abstract class PTabUICmdKtlKstOpenCryptDecAbs extends PTabUICmdKtlKstOpenCryptAbs
 {    
     // ---------
     // protected

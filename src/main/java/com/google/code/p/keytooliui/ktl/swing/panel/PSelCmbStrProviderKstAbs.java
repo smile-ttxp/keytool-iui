@@ -37,7 +37,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 **/
 
 
-abstract public class PSelCmbStrProviderKstAbs extends PSelCmbStrProviderAbs
+public abstract class PSelCmbStrProviderKstAbs extends PSelCmbStrProviderAbs
 {   
     // --------------------
     // PRIVATE STATIC FINAL

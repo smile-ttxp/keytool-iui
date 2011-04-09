@@ -6,7 +6,7 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import java.awt.Frame;
 
-abstract public class CmsAbs extends Object
+public abstract class CmsAbs extends Object
 {
     // -------------------
     // public static final

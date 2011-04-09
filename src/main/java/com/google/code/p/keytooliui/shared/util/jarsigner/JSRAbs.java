@@ -28,7 +28,7 @@ package com.google.code.p.keytooliui.shared.util.jarsigner;
 **/
 
 
-abstract public class JSRAbs extends Object
+public abstract class JSRAbs extends Object
 {
     // ----
     // void

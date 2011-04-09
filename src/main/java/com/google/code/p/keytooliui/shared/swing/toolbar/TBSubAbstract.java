@@ -49,7 +49,7 @@ package com.google.code.p.keytooliui.shared.swing.toolbar;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 
 
-abstract public class TBSubAbstract extends TBMSAbstract 
+public abstract class TBSubAbstract extends TBMSAbstract 
 {
     // ---------
     // PROTECTED

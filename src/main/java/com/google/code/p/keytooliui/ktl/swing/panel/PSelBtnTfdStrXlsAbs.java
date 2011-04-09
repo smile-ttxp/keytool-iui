@@ -37,7 +37,7 @@ import com.google.code.p.keytooliui.shared.swing.textfield.*;
 
 import java.awt.*;
 
-abstract public class PSelBtnTfdStrXlsAbs extends PSelBtnTfdStrAbs
+public abstract class PSelBtnTfdStrXlsAbs extends PSelBtnTfdStrAbs
 {
     // ------
     // PUBLIC

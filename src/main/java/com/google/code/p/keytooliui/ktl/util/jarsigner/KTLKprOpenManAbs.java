@@ -26,7 +26,7 @@ import java.security.KeyStoreException;
 
 import java.awt.*;
 
-abstract public class KTLKprOpenManAbs extends KTLKprOpenAbs
+public abstract class KTLKprOpenManAbs extends KTLKprOpenAbs
 {
     // ------
     // PUBLIC

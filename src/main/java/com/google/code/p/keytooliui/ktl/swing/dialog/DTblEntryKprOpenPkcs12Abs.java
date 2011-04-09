@@ -16,7 +16,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-abstract public class DTblEntryKprOpenPkcs12Abs extends DTblEntryKprOpenAbs 
+public abstract class DTblEntryKprOpenPkcs12Abs extends DTblEntryKprOpenAbs 
 {    
     // ------
     // PUBLIC

@@ -28,7 +28,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLTcrSaveCrtInDMAbs extends KTLTcrSaveNewDMAbs
+public abstract class KTLTcrSaveCrtInDMAbs extends KTLTcrSaveNewDMAbs
 {    
     // ---------
     // PROTECTED

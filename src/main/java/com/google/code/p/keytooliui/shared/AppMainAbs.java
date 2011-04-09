@@ -34,7 +34,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.frame.FMainAbs;
 import com.google.code.p.keytooliui.shared.util.changer.ChgLocAbstract;
 
-abstract public class AppMainAbs extends AppAbs implements
+public abstract class AppMainAbs extends AppAbs implements
     WindowListener,
     ActionListener,
     ItemListener
@@ -214,7 +214,7 @@ abstract public class AppMainAbs extends AppAbs implements
      // ---------------
     // ABSTRACT PUBLIC
     
-    abstract protected boolean _exitNow_();
+    protected abstract boolean _exitNow_();
     
     // ------
     // PUBLIC

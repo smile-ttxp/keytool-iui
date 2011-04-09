@@ -41,7 +41,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenKprOutAbs extends KTLKprOpenKprAbs
+public abstract class KTLKprOpenKprOutAbs extends KTLKprOpenKprAbs
 {
     // ---------------------------
     // private static final string
@@ -50,11 +50,11 @@ abstract public class KTLKprOpenKprOutAbs extends KTLKprOpenKprAbs
 
     
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpen);
     
-    abstract protected boolean _doJobSelectKpr_(
+    protected abstract boolean _doJobSelectKpr_(
         File fleSaveKpr,
         File fleSaveCrts,
         KeyStore kstOpen,

@@ -29,7 +29,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenCrtReqKPAbs extends KTLKprOpenCrtReqAbs
+public abstract class KTLKprOpenCrtReqKPAbs extends KTLKprOpenCrtReqAbs
 {
     // ---------
     // protected

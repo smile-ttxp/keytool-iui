@@ -29,6 +29,6 @@ public interface DEditorAbstractListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void fileRecord(DEditorAbstractEvent evt);
-    abstract public void fileDelete(DEditorAbstractEvent evt);
+    public abstract void fileRecord(DEditorAbstractEvent evt);
+    public abstract void fileDelete(DEditorAbstractEvent evt);
 }

@@ -60,7 +60,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.io.*;
 
-abstract public class PSelBtnTfdFileDirAbs extends PSelBtnTfdAbs
+public abstract class PSelBtnTfdFileDirAbs extends PSelBtnTfdAbs
 {   
     // --------------------
     // PRIVATE STATIC FINAL

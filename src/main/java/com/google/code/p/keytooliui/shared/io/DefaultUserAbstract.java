@@ -35,7 +35,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.io.*;
 
-abstract public class DefaultUserAbstract
+public abstract class DefaultUserAbstract
 {
     // --------------------------
     // PRIVATE STATIC FINAL STRING

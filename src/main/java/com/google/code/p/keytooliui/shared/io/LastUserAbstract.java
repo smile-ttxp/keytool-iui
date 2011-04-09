@@ -44,7 +44,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import java.io.*;
 import java.util.Arrays;
 
-abstract public class LastUserAbstract extends DefaultUserAbstract
+public abstract class LastUserAbstract extends DefaultUserAbstract
 {
     // ---------------------------
     // PRIVATE STATIC FINAL STRING

@@ -30,7 +30,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenKprFromKprDerKPAbs extends KTLKprOpenKprFromKprDerAbs
+public abstract class KTLKprOpenKprFromKprDerKPAbs extends KTLKprOpenKprFromKprDerAbs
 {
     // ---------
     // protected

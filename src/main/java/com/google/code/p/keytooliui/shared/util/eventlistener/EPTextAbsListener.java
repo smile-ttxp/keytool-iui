@@ -29,5 +29,5 @@ public interface EPTextAbsListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void setEnabledCopy(EPTextAbsEvent evt);
+    public abstract void setEnabledCopy(EPTextAbsEvent evt);
 }

@@ -40,7 +40,7 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class TBMSAbstract extends TBAbs 
+public abstract class TBMSAbstract extends TBAbs 
 {
     // ------
     // PUBLIC

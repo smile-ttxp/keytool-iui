@@ -34,13 +34,13 @@ import com.google.code.p.keytooliui.shared.swing.table.*;
 import javax.swing.table.*;
 
 
-abstract public class TMEntryAbs extends TMAbs
+public abstract class TMEntryAbs extends TMAbs
 {   
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public int getColumnCount();
-    abstract public String getColumnName(int col);
+    public abstract int getColumnCount();
+    public abstract String getColumnName(int col);
     
     // ------
     // PUBLIC

@@ -42,7 +42,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
 
-abstract public class TFAbstract extends JTextField
+public abstract class TFAbstract extends JTextField
 {   
     // --------------------------
     // PUBLIC STATIC FINAL STRING
@@ -52,8 +52,8 @@ abstract public class TFAbstract extends JTextField
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void setDefault();
-    abstract public boolean isDefault();
+    public abstract void setDefault();
+    public abstract boolean isDefault();
 
     public String getF_s_strDocPropKey() {
         return f_s_strDocPropKey;

@@ -36,7 +36,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class DPasswordAbs extends DEscapeAbstract implements 
+public abstract class DPasswordAbs extends DEscapeAbstract implements 
     ActionListener
 {
     // ---------------
@@ -47,7 +47,7 @@ abstract public class DPasswordAbs extends DEscapeAbstract implements
     // ------------------
     // ABSTRACT PROTECTED
     
-    abstract protected boolean _contentsOk_();
+    protected abstract boolean _contentsOk_();
     
     // ------
     // PUBLIC

@@ -44,7 +44,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
 
-abstract public class MHelpAboutMainAbstract extends MAbstract
+public abstract class MHelpAboutMainAbstract extends MAbstract
 {
     // --------------
     // PRIVATE STATIC

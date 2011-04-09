@@ -3,7 +3,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class BESClearEntryAbs extends BEnabledState
+public abstract class BESClearEntryAbs extends BEnabledState
 {    
     // --------------
     // PRIVATE STATIC

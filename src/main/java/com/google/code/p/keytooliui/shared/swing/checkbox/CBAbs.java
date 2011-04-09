@@ -32,7 +32,7 @@
  
  import java.awt.event.*;
  
- abstract public class CBAbs extends JCheckBox
+ public abstract class CBAbs extends JCheckBox
  {
      public void destroy()
      {

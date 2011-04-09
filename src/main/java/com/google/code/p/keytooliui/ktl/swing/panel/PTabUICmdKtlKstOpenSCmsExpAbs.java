@@ -12,7 +12,7 @@ import javax.swing.text.Document;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import net.miginfocom.swing.MigLayout;
 
-abstract public class PTabUICmdKtlKstOpenSCmsExpAbs extends PTabUICmdKtlKstOpenSCmsAbs
+public abstract class PTabUICmdKtlKstOpenSCmsExpAbs extends PTabUICmdKtlKstOpenSCmsAbs
 {    
     // ------
     // public

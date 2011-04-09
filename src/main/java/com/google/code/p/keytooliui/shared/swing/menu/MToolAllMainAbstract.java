@@ -38,7 +38,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-abstract public class MToolAllMainAbstract extends MAbstract 
+public abstract class MToolAllMainAbstract extends MAbstract 
 {
     // --------------
     // PRIVATE STATIC

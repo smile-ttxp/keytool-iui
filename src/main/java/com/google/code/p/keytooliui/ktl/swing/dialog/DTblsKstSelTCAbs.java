@@ -23,7 +23,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BCancel;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
-abstract public class DTblsKstSelTCAbs extends DTblsKstSel 
+public abstract class DTblsKstSelTCAbs extends DTblsKstSel 
 {
     // ------
     // public

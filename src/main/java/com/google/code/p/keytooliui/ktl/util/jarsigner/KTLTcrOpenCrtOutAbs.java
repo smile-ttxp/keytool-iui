@@ -27,14 +27,14 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
+public abstract class KTLTcrOpenCrtOutAbs extends KTLTcrOpenCrtAbs
 {
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpen);
     
-    abstract protected boolean _doJobSelectTcr_(
+    protected abstract boolean _doJobSelectTcr_(
         File fleSaveCrt,
         KeyStore kstOpen,
             

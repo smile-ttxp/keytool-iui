@@ -50,7 +50,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PSelBtnTfdPasswdXlsKstAbs extends PSelBtnTfdPasswdXlsAbs
+public abstract class PSelBtnTfdPasswdXlsKstAbs extends PSelBtnTfdPasswdXlsAbs
 {
     protected PSelBtnTfdPasswdXlsKstAbs(
         String strLabel,

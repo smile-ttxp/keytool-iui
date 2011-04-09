@@ -18,7 +18,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 import java.awt.*;
 
-abstract public class PCPMainUIAbs extends PCPMainAbs
+public abstract class PCPMainUIAbs extends PCPMainAbs
 {   
     // ------
     // PUBLIC

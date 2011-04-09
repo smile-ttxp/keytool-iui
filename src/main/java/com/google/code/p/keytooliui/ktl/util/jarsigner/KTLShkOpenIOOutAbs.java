@@ -33,14 +33,14 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
+public abstract class KTLShkOpenIOOutAbs extends KTLShkOpenIOAbs
 {
     // ------------------
-    // abstract protected
+    // protected abstract
     
-    abstract protected KeyStore _getKeystoreOpen_(File fleOpen);
+    protected abstract KeyStore _getKeystoreOpen_(File fleOpen);
     
-    abstract protected boolean _doJobSelectShk_(
+    protected abstract boolean _doJobSelectShk_(
         File fleSaveIO,
         KeyStore kstOpen,
             

@@ -18,7 +18,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-abstract public class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs 
+public abstract class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs 
 {
     // --------------------
     // PRIVATE STATIC FINAL

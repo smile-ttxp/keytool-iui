@@ -33,12 +33,12 @@ package com.google.code.p.keytooliui.shared.swing.menuitem;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class MIHelpJHAbstract extends MIAbstract
+public abstract class MIHelpJHAbstract extends MIAbstract
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void setEnabledHelp(javax.help.HelpBroker hbr);
+    public abstract void setEnabledHelp(javax.help.HelpBroker hbr);
     
     // ---------
     // PROTECTED

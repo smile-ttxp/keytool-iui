@@ -48,7 +48,7 @@ import java.awt.event.*;
 
 //import java.beans.*; // used for PropertChangeListener
 
-abstract public class TBMainAbstract extends TBMSAbstract
+public abstract class TBMainAbstract extends TBMSAbstract
 {
     // ---------------------------
     // PRIVATE STATIC FINAL STRING

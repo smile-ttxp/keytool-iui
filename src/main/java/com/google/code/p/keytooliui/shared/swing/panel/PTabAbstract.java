@@ -31,14 +31,14 @@ package com.google.code.p.keytooliui.shared.swing.panel;
 
 import javax.swing.*;
 
-abstract public class PTabAbstract extends JPanel
+public abstract class PTabAbstract extends JPanel
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
-    abstract public void setContextualHelpID();
+    public abstract boolean init();
+    public abstract void destroy();
+    public abstract void setContextualHelpID();
     
     // ---------
     // PROTECTED

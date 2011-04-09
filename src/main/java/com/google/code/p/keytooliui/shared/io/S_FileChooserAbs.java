@@ -39,7 +39,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.lang.system.S_SystemShared;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
-abstract public class S_FileChooserAbs
+public abstract class S_FileChooserAbs
 {
     // ---------------------------
     // PRIVATE STATIC FINAL STRING

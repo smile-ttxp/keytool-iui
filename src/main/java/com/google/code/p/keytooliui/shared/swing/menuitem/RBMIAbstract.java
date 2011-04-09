@@ -33,13 +33,13 @@
  
  import javax.swing.*;
  
- abstract public class RBMIAbstract extends JRadioButtonMenuItem
+ public abstract class RBMIAbstract extends JRadioButtonMenuItem
  {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
  
     // ---------
     // PROTECTED

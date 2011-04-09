@@ -37,7 +37,7 @@ import javax.swing.*;
 import java.awt.*;
 import com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys;
 
-abstract public class OPAbstract extends JOptionPane
+public abstract class OPAbstract extends JOptionPane
 { 
     // --------------------
     // PRIVATE STATIC FINAL

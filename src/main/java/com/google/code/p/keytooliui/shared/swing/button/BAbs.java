@@ -7,7 +7,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-abstract public class BAbs extends JButton
+public abstract class BAbs extends JButton
 {    
     // ------
     // public

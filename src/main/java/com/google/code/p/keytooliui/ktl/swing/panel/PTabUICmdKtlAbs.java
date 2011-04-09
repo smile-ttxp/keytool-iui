@@ -42,7 +42,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PTabUICmdKtlAbs extends PTabUICmdAbs 
+public abstract class PTabUICmdKtlAbs extends PTabUICmdAbs 
 {
     // ------
     // PUBLIC

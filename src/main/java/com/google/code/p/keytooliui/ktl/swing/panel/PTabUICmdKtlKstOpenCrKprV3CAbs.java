@@ -59,7 +59,7 @@ import org.bouncycastle.asn1.DERObjectIdentifier;
 import org.bouncycastle.asn1.x509.KeyPurposeId;
 import org.bouncycastle.asn1.x509.KeyUsage;
 
-abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpenCrKprAbs implements ChangeListener
+public abstract class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpenCrKprAbs implements ChangeListener
 {
      // --------------------
     // PRIVATE STATIC FINAL

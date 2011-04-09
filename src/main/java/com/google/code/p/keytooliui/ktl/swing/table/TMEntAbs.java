@@ -31,7 +31,7 @@ import com.google.code.p.keytooliui.shared.lang.bool.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-abstract public class TMEntAbs extends TMEntryAbs
+public abstract class TMEntAbs extends TMEntryAbs
 {
     // ----------------------
     // protected static final
@@ -42,10 +42,10 @@ abstract public class TMEntAbs extends TMEntryAbs
     protected static final int _INT_W_MODIFIEDDATE_ = 90;
 
     // ---------------
-    // abstract public
+    // public abstract
     
-    abstract public int getColumnCount();
-    abstract public String getColumnName(int col);
+    public abstract int getColumnCount();
+    public abstract String getColumnName(int col);
    
     // ---------
     // protected

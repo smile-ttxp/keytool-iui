@@ -28,13 +28,13 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLTcrSaveNewDMAbs extends KTLTcrSaveNewAbs
+public abstract class KTLTcrSaveNewDMAbs extends KTLTcrSaveNewAbs
 {
     // ------------------
     // ABSTRACT PROTECTED
     
     // definition in subclasses, call right there
-    abstract protected boolean __doJob__(
+    protected abstract boolean __doJob__(
         KeyStore kstOpen,
         
         // below: about PKTC (Private Key & Trusted Certificate)

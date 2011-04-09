@@ -2,7 +2,7 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import java.awt.Frame;
 
-abstract public class XmlAbs extends Object
+public abstract class XmlAbs extends Object
 {
     // -------------------
     // public static final

@@ -31,7 +31,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
 
-abstract public class DWaitProgressAbs extends DEscapeAbstract 
+public abstract class DWaitProgressAbs extends DEscapeAbstract 
 {    
     
         

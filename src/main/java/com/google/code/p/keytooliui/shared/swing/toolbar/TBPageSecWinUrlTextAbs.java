@@ -37,7 +37,7 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 
 import java.awt.event.*;
 
-abstract public class TBPageSecWinUrlTextAbs extends TBPageSecAbs
+public abstract class TBPageSecWinUrlTextAbs extends TBPageSecAbs
 {
     // ------
     // PUBLIC

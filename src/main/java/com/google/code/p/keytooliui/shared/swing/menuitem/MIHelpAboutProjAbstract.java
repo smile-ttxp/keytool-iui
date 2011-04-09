@@ -36,7 +36,7 @@ package com.google.code.p.keytooliui.shared.swing.menuitem;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class MIHelpAboutProjAbstract extends MIAbstract
+public abstract class MIHelpAboutProjAbstract extends MIAbstract
 {
     // ------
     // PUBLIC

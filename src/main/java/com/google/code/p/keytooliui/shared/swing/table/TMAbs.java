@@ -11,7 +11,7 @@ package com.google.code.p.keytooliui.shared.swing.table;
  
  import javax.swing.table.*;
  
- abstract public class TMAbs extends AbstractTableModel
+ public abstract class TMAbs extends AbstractTableModel
  {
     // ---------
     // PROTECTED

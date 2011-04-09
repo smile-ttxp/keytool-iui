@@ -44,7 +44,7 @@ import javax.swing.SwingConstants;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import net.miginfocom.swing.MigLayout;
 
-abstract public class PSelAbs extends JPanel
+public abstract class PSelAbs extends JPanel
 {
     // -------------------
     // PUBLIC STATIC FINAL

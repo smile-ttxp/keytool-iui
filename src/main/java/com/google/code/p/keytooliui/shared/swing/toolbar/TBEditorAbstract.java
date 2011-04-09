@@ -41,7 +41,7 @@ import java.awt.event.*;
 import java.awt.*;
 
 
-abstract public class TBEditorAbstract extends TBAbs implements
+public abstract class TBEditorAbstract extends TBAbs implements
     ActionListener,
     TBEditorAbstractListener
 {        
@@ -84,10 +84,10 @@ abstract public class TBEditorAbstract extends TBAbs implements
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
-    abstract public boolean doFileNew() throws Exception;
-    abstract public boolean doFileOpen() throws Exception;
+    public abstract boolean init();
+    public abstract void destroy();
+    public abstract boolean doFileNew() throws Exception;
+    public abstract boolean doFileOpen() throws Exception;
     
     // ------
     // PUBLIC

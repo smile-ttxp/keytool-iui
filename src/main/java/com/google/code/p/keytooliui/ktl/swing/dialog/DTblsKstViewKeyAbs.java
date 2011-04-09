@@ -22,7 +22,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BCancel;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
-abstract public class DTblsKstViewKeyAbs extends DTblsKstView 
+public abstract class DTblsKstViewKeyAbs extends DTblsKstView 
 {
     // ---------------------------
     // private static final String

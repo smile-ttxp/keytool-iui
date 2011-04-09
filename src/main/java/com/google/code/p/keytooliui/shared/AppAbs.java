@@ -31,7 +31,7 @@ package com.google.code.p.keytooliui.shared;
     . AppMainAbs
 **/
 
-abstract public class AppAbs extends Object
+public abstract class AppAbs extends Object
 {
     // -------------------
     // public static final

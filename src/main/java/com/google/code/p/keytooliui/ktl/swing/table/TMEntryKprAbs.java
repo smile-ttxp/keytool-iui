@@ -34,7 +34,7 @@ import com.google.code.p.keytooliui.shared.swing.table.*;
 import javax.swing.table.*;
 
 
-abstract public class TMEntryKprAbs extends TMEntryAbs
+public abstract class TMEntryKprAbs extends TMEntryAbs
 {   
     // ---------
     // PROTECTED

@@ -50,7 +50,7 @@ import java.security.cert.X509Certificate;
 import java.awt.*;
 import java.util.*;
 
-abstract public class KTLShkAbs extends KTLAbs
+public abstract class KTLShkAbs extends KTLAbs
 {
     // -------------
     // public static

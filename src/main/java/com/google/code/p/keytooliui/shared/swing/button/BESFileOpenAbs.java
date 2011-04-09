@@ -31,7 +31,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class BESFileOpenAbs extends BEnabledState
+public abstract class BESFileOpenAbs extends BEnabledState
 {
     // --------------------
     // PRIVATE STATIC FINAL

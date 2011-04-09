@@ -41,7 +41,7 @@ import javax.swing.event.*;
 
 import java.awt.*;
 
-abstract public class PTabUICmdKtlKstOpenIOShkAbs extends PTabUICmdKtlKstOpenAbs 
+public abstract class PTabUICmdKtlKstOpenIOShkAbs extends PTabUICmdKtlKstOpenAbs 
 {
     
     // ------

@@ -22,7 +22,7 @@ import java.security.cert.X509Certificate;
 import java.awt.*;
 import java.util.*;
 
-abstract public class KTLKprSaveNewDsaJAbs extends KTLKprSaveNewDsaAbs
+public abstract class KTLKprSaveNewDsaJAbs extends KTLKprSaveNewDsaAbs
 {    
     // ---------
     // PROTECTED

@@ -31,7 +31,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-abstract public class BESPasswordAbs extends BEnabledState
+public abstract class BESPasswordAbs extends BEnabledState
 {
     // -------------------
     // PUBLIC STATIC FINAL

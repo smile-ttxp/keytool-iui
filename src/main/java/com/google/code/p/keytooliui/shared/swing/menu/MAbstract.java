@@ -31,13 +31,13 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
 
-abstract public class MAbstract extends JMenu
+public abstract class MAbstract extends JMenu
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
-    abstract public void destroy();
+    public abstract boolean init();
+    public abstract void destroy();
     
     // ---------
     // PROTECTED

@@ -52,12 +52,12 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-abstract public class PSelBtnTfdStrAbs extends PSelBtnTfdAbs
+public abstract class PSelBtnTfdStrAbs extends PSelBtnTfdAbs
 {
     // ------------------
     // ABSTRACT PROTECTED
     
-    abstract protected boolean _validateText_(String str);
+    protected abstract boolean _validateText_(String str);
  
 	// ------
 	// PUBLIC

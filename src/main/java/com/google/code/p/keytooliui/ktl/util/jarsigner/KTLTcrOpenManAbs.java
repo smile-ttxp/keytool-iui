@@ -27,7 +27,7 @@ import java.security.cert.Certificate;
 
 import java.awt.*;
 
-abstract public class KTLTcrOpenManAbs extends KTLTcrOpenAbs
+public abstract class KTLTcrOpenManAbs extends KTLTcrOpenAbs
 {
     // ------
     // PUBLIC

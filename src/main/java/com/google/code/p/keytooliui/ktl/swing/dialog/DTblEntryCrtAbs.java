@@ -25,7 +25,7 @@ import java.security.KeyStoreException;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class DTblEntryCrtAbs extends DTblEntryAbs
+public abstract class DTblEntryCrtAbs extends DTblEntryAbs
 {
     // ---------
     // PROTECTED

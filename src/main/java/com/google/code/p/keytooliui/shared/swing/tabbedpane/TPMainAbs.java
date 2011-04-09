@@ -37,7 +37,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 import javax.swing.*;
 
-abstract public class TPMainAbs extends JTabbedPane 
+public abstract class TPMainAbs extends JTabbedPane 
 {
     // ---------------------
     // PRIVATE STATIC STRING

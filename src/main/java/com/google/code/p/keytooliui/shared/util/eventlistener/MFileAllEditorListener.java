@@ -29,6 +29,6 @@ public interface MFileAllEditorListener extends java.util.EventListener
     // --------------------
     // ABSTRACT PUBLIC VOID
     
-    abstract public void fileRecord(MFileAllEditorEvent evt);
-    abstract public void fileDelete(MFileAllEditorEvent evt);
+    public abstract void fileRecord(MFileAllEditorEvent evt);
+    public abstract void fileDelete(MFileAllEditorEvent evt);
 }

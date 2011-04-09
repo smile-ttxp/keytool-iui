@@ -30,7 +30,7 @@
 
 
 
-abstract public class S_StyleSheetLoaderAbstract
+public abstract class S_StyleSheetLoaderAbstract
 {
     // --------------------
     // PRIVATE STATIC FINAL

@@ -42,7 +42,7 @@ import javax.swing.JComboBox;
 
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 
-abstract public class PSelCmbAbs extends PSelAbs
+public abstract class PSelCmbAbs extends PSelAbs
 {
     // ------
     // PUBLIC   

@@ -26,7 +26,7 @@ import java.security.cert.Certificate;
 
 import java.awt.*;
 
-abstract public class KTLShkOpenCryptAbs extends KTLShkOpenAbs
+public abstract class KTLShkOpenCryptAbs extends KTLShkOpenAbs
 {
     // ---------
     // PROTECTED

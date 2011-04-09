@@ -8,7 +8,7 @@ import java.awt.event.ItemListener;
 
 import net.miginfocom.swing.MigLayout;
 
-abstract public class PTabUICmdKtlKstOpenIOShkOutAbs extends PTabUICmdKtlKstOpenIOShkAbs
+public abstract class PTabUICmdKtlKstOpenIOShkOutAbs extends PTabUICmdKtlKstOpenIOShkAbs
 {    
     // ---------
     // protected

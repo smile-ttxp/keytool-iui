@@ -32,7 +32,7 @@ import javax.swing.*;
 
 import java.io.*;
 
-abstract public class ChgLocMainUIAbs extends ChgLocAbstract
+public abstract class ChgLocMainUIAbs extends ChgLocAbstract
 {
     // --------------------------
     // PROTECTED STATIC FINAL INT
@@ -44,7 +44,7 @@ abstract public class ChgLocMainUIAbs extends ChgLocAbstract
     // ------------------
     // ABSTRACT PROTECTED
     
-    abstract protected boolean __set__(int intValue);
+    protected abstract boolean __set__(int intValue);
    
     
     // ------

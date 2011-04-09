@@ -33,7 +33,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 import javax.swing.*;
 
-abstract public class PTabUIAbs extends PTabAbstract 
+public abstract class PTabUIAbs extends PTabAbstract 
 {   
     // ----------------
     // PROTECTED STATIC

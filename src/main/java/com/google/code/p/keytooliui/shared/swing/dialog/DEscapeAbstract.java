@@ -62,13 +62,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class DEscapeAbstract extends JDialog implements
+public abstract class DEscapeAbstract extends JDialog implements
     WindowListener
 {
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean init();
+    public abstract boolean init();
     
     
     // ------

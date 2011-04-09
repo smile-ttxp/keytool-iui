@@ -35,7 +35,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class PSelBtnTfdFileJarSaveAbs extends PSelBtnTfdFileJarAbs 
+public abstract class PSelBtnTfdFileJarSaveAbs extends PSelBtnTfdFileJarAbs 
 {   
     
     // ---------

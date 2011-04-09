@@ -35,7 +35,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PBarContainerPathAbstract extends PBarContainerAbstract 
+public abstract class PBarContainerPathAbstract extends PBarContainerAbstract 
 { 
     // ------
     // PUBLIC

@@ -40,7 +40,7 @@
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class MChgAlignToolAbstract extends MChgAlignAbstract
+public abstract class MChgAlignToolAbstract extends MChgAlignAbstract
 { 
     
     // ---------------------

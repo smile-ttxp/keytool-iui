@@ -29,7 +29,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprSaveFromPkcs12ToAbs extends KTLKprSaveFromAbs
+public abstract class KTLKprSaveFromPkcs12ToAbs extends KTLKprSaveFromAbs
 {
 
     // ---------

@@ -46,7 +46,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.beans.*; //Property change stuff
 
-abstract public class DWChoiceAbs extends DEscapeAbstract implements
+public abstract class DWChoiceAbs extends DEscapeAbstract implements
     PropertyChangeListener
 {   
     // ---------------------
@@ -90,7 +90,7 @@ abstract public class DWChoiceAbs extends DEscapeAbstract implements
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void propertyChange(PropertyChangeEvent evtPropertyChange);
+    public abstract void propertyChange(PropertyChangeEvent evtPropertyChange);
     
     // ----------------
     // PUBLIC ACCESSORS

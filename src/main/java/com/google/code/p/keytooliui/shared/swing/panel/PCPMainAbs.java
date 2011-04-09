@@ -46,7 +46,7 @@ import com.google.code.p.keytooliui.shared.util.changer.*;
 
 import javax.swing.*;
 
-abstract public class PCPMainAbs extends JPanel
+public abstract class PCPMainAbs extends JPanel
 {
     // ------------------------
     // PRIVATE STATIC FINAL INT
@@ -57,7 +57,7 @@ abstract public class PCPMainAbs extends JPanel
     
     // ---------------
     // ABSTRACT PUBLIC
-    abstract public void setContextualHelpID();
+    public abstract void setContextualHelpID();
     
     // ------
     // PUBLIC

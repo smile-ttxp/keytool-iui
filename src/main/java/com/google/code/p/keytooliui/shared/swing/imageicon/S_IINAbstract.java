@@ -38,7 +38,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.ImageIcon;
 
-abstract public class S_IINAbstract
+public abstract class S_IINAbstract
 {
     
     

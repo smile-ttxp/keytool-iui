@@ -30,7 +30,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLKprOpenSigDetOCmsKPAbs extends KTLKprOpenSigDetOCmsAbs
+public abstract class KTLKprOpenSigDetOCmsKPAbs extends KTLKprOpenSigDetOCmsAbs
 {
     // ---------
     // protected

@@ -49,7 +49,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-abstract public class PSelBtnTfdStrWAbs extends PSelBtnTfdStrAbs
+public abstract class PSelBtnTfdStrWAbs extends PSelBtnTfdStrAbs
 {
     // ------
     // PUBLIC

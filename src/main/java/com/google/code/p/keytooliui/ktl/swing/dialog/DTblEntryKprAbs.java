@@ -26,7 +26,7 @@ import java.security.KeyStoreException;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class DTblEntryKprAbs extends DTblEntryAbs 
+public abstract class DTblEntryKprAbs extends DTblEntryAbs 
 {
     // -------------
     // PUBLIC ACCESS

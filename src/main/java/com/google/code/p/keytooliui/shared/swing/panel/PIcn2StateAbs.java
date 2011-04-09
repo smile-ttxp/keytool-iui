@@ -40,7 +40,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-abstract public class PIcn2StateAbs extends JPanel 
+public abstract class PIcn2StateAbs extends JPanel 
 {     
     // ------
     // PUBLIC

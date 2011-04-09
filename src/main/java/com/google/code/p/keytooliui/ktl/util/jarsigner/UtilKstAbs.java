@@ -36,7 +36,7 @@ import java.io.*;
 import java.awt.*;
 import java.util.*;
 
-abstract public class UtilKstAbs
+public abstract class UtilKstAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL

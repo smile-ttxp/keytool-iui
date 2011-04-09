@@ -42,7 +42,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-abstract public class PEditorAbstract extends JPanel implements
+public abstract class PEditorAbstract extends JPanel implements
     MFileAllEditorListener,
     TBEditorAbstractListener,
     PEditorAbstractListener,
@@ -51,7 +51,7 @@ abstract public class PEditorAbstract extends JPanel implements
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public void destroy();
+    public abstract void destroy();
     
     // ------
     // PUBLIC

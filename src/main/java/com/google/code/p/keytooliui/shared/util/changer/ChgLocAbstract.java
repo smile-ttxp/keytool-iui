@@ -44,7 +44,7 @@ import javax.swing.*;
 
 import java.io.*;
 
-abstract public class ChgLocAbstract extends UserChoice
+public abstract class ChgLocAbstract extends UserChoice
 {
     // -----------------------
     // PUBLIC STATIC FINAL INT   
@@ -60,13 +60,13 @@ abstract public class ChgLocAbstract extends UserChoice
     // ---------------
     // ABSTRACT PUBLIC
     
-    abstract public boolean setTop();
-    abstract public boolean setBottom();
-    abstract public boolean setLeft();
-    abstract public boolean setRight();
-    abstract public boolean assignLast();
-    abstract public boolean read(ObjectInputStream ois);
-    abstract public boolean write(ObjectOutputStream oos);
+    public abstract boolean setTop();
+    public abstract boolean setBottom();
+    public abstract boolean setLeft();
+    public abstract boolean setRight();
+    public abstract boolean assignLast();
+    public abstract boolean read(ObjectInputStream ois);
+    public abstract boolean write(ObjectOutputStream oos);
     
     
     // ------

@@ -42,7 +42,7 @@ import com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 import net.miginfocom.swing.MigLayout;
 
-abstract public class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs 
+public abstract class PTabUICmdKtlKstOpenCryptAbs extends PTabUICmdKtlKstOpenAbs 
 {
     
     // ------

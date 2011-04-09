@@ -38,7 +38,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.*;
 
-abstract public class PViewerFileAbs extends JPanel
+public abstract class PViewerFileAbs extends JPanel
 {   
     // ------
     // PUBLIC

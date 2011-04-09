@@ -38,7 +38,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.JEditorPane;
 
-abstract public class S_EPEAbs
+public abstract class S_EPEAbs
 {
     
     

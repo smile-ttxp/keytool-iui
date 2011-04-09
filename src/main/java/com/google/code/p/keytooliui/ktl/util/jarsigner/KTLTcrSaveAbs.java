@@ -12,7 +12,7 @@ package com.google.code.p.keytooliui.ktl.util.jarsigner;
 
 import java.awt.*;
 
-abstract public class KTLTcrSaveAbs extends KTLTcrAbs
+public abstract class KTLTcrSaveAbs extends KTLTcrAbs
 {
     // ---------
     // PROTECTED

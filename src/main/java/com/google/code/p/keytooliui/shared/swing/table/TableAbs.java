@@ -37,7 +37,7 @@
  import javax.swing.table.*;
  
 
- abstract public class TableAbs extends JTable
+ public abstract class TableAbs extends JTable
  {
     // ---------
     // PROTECTED

@@ -30,7 +30,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-abstract public class KTLShkOpenIOOutKPAbs extends KTLShkOpenIOOutAbs
+public abstract class KTLShkOpenIOOutKPAbs extends KTLShkOpenIOOutAbs
 {
     // ---------
     // protected

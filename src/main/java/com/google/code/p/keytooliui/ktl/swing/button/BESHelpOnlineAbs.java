@@ -34,7 +34,7 @@ import java.net.URI;
 
 
 
-abstract public class BESHelpOnlineAbs extends BEnabledState
+public abstract class BESHelpOnlineAbs extends BEnabledState
 {
     // --------------
     // PRIVATE STATIC

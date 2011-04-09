@@ -13,7 +13,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 
-abstract public class BESMoreAbs extends BEnabledState
+public abstract class BESMoreAbs extends BEnabledState
 {    
     // --------------
     // PRIVATE STATIC

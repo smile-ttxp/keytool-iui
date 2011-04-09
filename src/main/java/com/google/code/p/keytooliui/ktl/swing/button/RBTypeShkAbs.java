@@ -13,7 +13,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
   
  import java.awt.event.*;
  
- abstract public class RBTypeShkAbs extends RBTypeAbs
+ public abstract class RBTypeShkAbs extends RBTypeAbs
  {
     // ------
     // PUBLIC

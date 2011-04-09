@@ -41,7 +41,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PSelCbxAbs extends PSelAbs
+public abstract class PSelCbxAbs extends PSelAbs
 {
     // ------
     // PUBLIC   

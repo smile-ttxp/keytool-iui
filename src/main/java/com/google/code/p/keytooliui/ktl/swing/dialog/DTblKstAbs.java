@@ -34,7 +34,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
-abstract public class DTblKstAbs extends DEscapeAbstract implements
+public abstract class DTblKstAbs extends DEscapeAbstract implements
     ListSelectionListener,
     ActionListener
 {

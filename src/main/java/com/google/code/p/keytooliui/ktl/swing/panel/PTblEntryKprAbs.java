@@ -17,7 +17,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-abstract public class PTblEntryKprAbs extends PTblEntryAbs
+public abstract class PTblEntryKprAbs extends PTblEntryAbs
 {   
     // ---------
     // PROTECTED

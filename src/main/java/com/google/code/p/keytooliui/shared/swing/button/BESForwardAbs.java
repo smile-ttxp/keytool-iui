@@ -33,7 +33,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-abstract public class BESForwardAbs extends BEnabledState
+public abstract class BESForwardAbs extends BEnabledState
 {    
     // --------------
     // PRIVATE STATIC

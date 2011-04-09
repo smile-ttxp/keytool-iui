@@ -35,7 +35,7 @@
  
  import java.awt.event.*;
  
- abstract public class RBTypeJarAbs extends RBTypeAbs
+ public abstract class RBTypeJarAbs extends RBTypeAbs
  {
     // ---------
     // PROTECTED

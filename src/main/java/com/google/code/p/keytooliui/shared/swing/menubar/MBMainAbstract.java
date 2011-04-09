@@ -46,7 +46,7 @@ import com.google.code.p.keytooliui.shared.swing.menu.*;
 
 import javax.swing.*;
 
-abstract public class MBMainAbstract extends JMenuBar 
+public abstract class MBMainAbstract extends JMenuBar 
         // test
         implements MouseListener
 {

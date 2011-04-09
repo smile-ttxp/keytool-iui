@@ -36,7 +36,7 @@
   
  import java.awt.event.*;
  
- abstract public class RBTypeKstAbs extends RBTypeAbs
+ public abstract class RBTypeKstAbs extends RBTypeAbs
  {
     // ------
     // PUBLIC

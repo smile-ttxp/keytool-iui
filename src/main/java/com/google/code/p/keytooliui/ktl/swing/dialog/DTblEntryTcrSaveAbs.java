@@ -16,7 +16,7 @@ import javax.swing.border.*;
 import java.awt.*;
 import java.util.*;
 
-abstract public class DTblEntryTcrSaveAbs extends DTblEntryTcrAbs
+public abstract class DTblEntryTcrSaveAbs extends DTblEntryTcrAbs
 {
     // --------------------
     // PRIVATE STATIC FINAL

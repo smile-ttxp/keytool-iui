@@ -35,7 +35,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
 
-abstract public class SPEditorAbstract extends JScrollPane
+public abstract class SPEditorAbstract extends JScrollPane
 {    
     // ---------------
     // ABSTRACT PUBLIC

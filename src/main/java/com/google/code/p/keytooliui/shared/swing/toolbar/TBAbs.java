@@ -36,7 +36,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class TBAbs extends JToolBar
+public abstract class TBAbs extends JToolBar
 {
     // ----------------------
     // PROTECTED STATIC FINAL

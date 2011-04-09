@@ -37,7 +37,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-abstract public class PBarPathAbstract extends JPanel 
+public abstract class PBarPathAbstract extends JPanel 
 {    
     // --------------------
     // PRIVATE STATIC FINAL
