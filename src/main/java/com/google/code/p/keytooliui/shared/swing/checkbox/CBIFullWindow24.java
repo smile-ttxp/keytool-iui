@@ -33,12 +33,12 @@ import javax.swing.*;
  
 import java.awt.event.*;
  
-final public class CBIFullWindow24 extends CBIFullWindowAbs
+public final class CBIFullWindow24 extends CBIFullWindowAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "zoom24.gif";
+    private static final String _f_s_strIcon = "zoom24.gif";
     
     
     // ------

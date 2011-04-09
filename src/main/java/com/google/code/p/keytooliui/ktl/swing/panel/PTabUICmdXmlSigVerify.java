@@ -38,20 +38,20 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 import net.miginfocom.swing.MigLayout;
 
-final public class PTabUICmdXmlSigVerify extends PTabUICmdXmlAbs
+public final class PTabUICmdXmlSigVerify extends PTabUICmdXmlAbs
 {
-    final static public String STR_TITLETASK = "Verify signed XML document with DSA_SHA1 or RSA_SHA1 signature algorithm";
+    public static final String STR_TITLETASK = "Verify signed XML document with DSA_SHA1 or RSA_SHA1 signature algorithm";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
 
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    //static private String _s_strDlgErrorActionBody = null;
+    //private static String _s_strDlgErrorActionBody = null;
     
     // ------------------
     // STATIC INITIALIZER

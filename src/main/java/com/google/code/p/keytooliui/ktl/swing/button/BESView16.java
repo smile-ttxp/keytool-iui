@@ -1,12 +1,12 @@
 package com.google.code.p.keytooliui.ktl.swing.button;
 
 
-final public class BESView16 extends BESViewAbs
+public final class BESView16 extends BESViewAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strImage = "find16.gif";
+    public static final String f_s_strImage = "find16.gif";
     
     // ------
     // PUBLIC

@@ -42,7 +42,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenSignJceks extends KTLKprOpenSignKPAbs
+public final class KTLKprOpenSignJceks extends KTLKprOpenSignKPAbs
 {
     // ------
     // PUBLIC

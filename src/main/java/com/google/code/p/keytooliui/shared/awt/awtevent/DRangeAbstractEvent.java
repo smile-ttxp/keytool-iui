@@ -27,17 +27,17 @@
 public class DRangeAbstractEvent extends java.awt.AWTEvent
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intIdFirst = PRangeToValueEvent.PRANGETOVALUEEVENT_LAST + 1;
+    private static final int _f_s_intIdFirst = PRangeToValueEvent.PRANGETOVALUEEVENT_LAST + 1;
     
     
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int DRANGEABSTRACTEVENT_LAST = _f_s_intIdFirst;
+    public static final int DRANGEABSTRACTEVENT_LAST = _f_s_intIdFirst;
     
-    final static public int DRANGEABSTRACTEVENT_VALUECHANGED = _f_s_intIdFirst;
+    public static final int DRANGEABSTRACTEVENT_VALUECHANGED = _f_s_intIdFirst;
      
     // ----------------
     // PUBLIC ACCESSORS

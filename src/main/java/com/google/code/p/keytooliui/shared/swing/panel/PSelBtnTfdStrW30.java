@@ -40,7 +40,7 @@ import com.google.code.p.keytooliui.shared.swing.textfield.*;
 
 import java.awt.*;
 
-final public class PSelBtnTfdStrW30 extends PSelBtnTfdStrWAbs
+public final class PSelBtnTfdStrW30 extends PSelBtnTfdStrWAbs
 {
     // ------
     // PUBLIC

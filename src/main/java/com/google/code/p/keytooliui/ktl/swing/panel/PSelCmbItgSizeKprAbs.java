@@ -42,9 +42,9 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 abstract public class PSelCmbItgSizeKprAbs extends PSelCmbItgAbs
 {    
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTextLabel = "Key size (bits):";
+    private static final String _f_s_strTextLabel = "Key size (bits):";
     
     // ---------
     // PROTECTED   

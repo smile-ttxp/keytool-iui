@@ -31,7 +31,7 @@ import java.io.*;
 import java.util.*;
 
 
-final public class FVExtended extends FileView
+public final class FVExtended extends FileView
 {
     public boolean init()
     {

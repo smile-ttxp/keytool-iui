@@ -26,12 +26,12 @@
 package com.google.code.p.keytooliui.ktl.swing.button;
 
 
-final public class BESView24 extends BESViewAbs
+public final class BESView24 extends BESViewAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _STR_NAME_ICON = "find24.gif";
+    private static final String _STR_NAME_ICON = "find24.gif";
     
     // ------
     // PUBLIC

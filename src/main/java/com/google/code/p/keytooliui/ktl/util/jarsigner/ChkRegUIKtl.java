@@ -62,17 +62,17 @@ import java.util.*;
 import java.awt.*;
 import java.util.jar.*;
 
-final public class ChkRegUIKtl
+public final class ChkRegUIKtl
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strKeyName = "na" + "me =";
-    final static private String _f_s_strKeyOrg = "or" + "g =";
-    final static private String _f_s_strKeyProdId = "pr" + "o" + "d" + "I" + "d =";
+    private static final String _f_s_strKeyName = "na" + "me =";
+    private static final String _f_s_strKeyOrg = "or" + "g =";
+    private static final String _f_s_strKeyProdId = "pr" + "o" + "d" + "I" + "d =";
     
     // eg: _sreg_xls11.jar
-    final static private String _f_s_strNameLibReg = 
+    private static final String _f_s_strNameLibReg = 
         "_" + "s" + "r" + "eg" + "_" + 
         System.getProperty("_appli.name.short") +
         Shared.f_s_strPackLibVersionXP +
@@ -80,11 +80,11 @@ final public class ChkRegUIKtl
         com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strJARDocument.toLowerCase();
     
     
-    final static private String _f_s_strNameLicReg = "_res.properties";
-    //final static private int _f_s_intNbDayEval = 3; // + 1; // Ob fus ca ting!
-    final static private int _f_s_intNbDayEval = 3 + 1; // Ob fus ca ting!
+    private static final String _f_s_strNameLicReg = "_res.properties";
+    //private static final int _f_s_intNbDayEval = 3; // + 1; // Ob fus ca ting!
+    private static final int _f_s_intNbDayEval = 3 + 1; // Ob fus ca ting!
     
-    final static private String[] _f_s_strsPubKeyReg =
+    private static final String[] _f_s_strsPubKeyReg =
     {
         "48",
         "-126",

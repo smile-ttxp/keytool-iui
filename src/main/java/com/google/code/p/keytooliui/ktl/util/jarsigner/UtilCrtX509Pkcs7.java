@@ -25,24 +25,24 @@ import java.io.*;
 import java.awt.*;
 import java.util.Arrays;
 
-final public class UtilCrtX509Pkcs7 extends UtilCrtX509
+public final class UtilCrtX509Pkcs7 extends UtilCrtX509
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilCrtX509Pkcs7";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilCrtX509Pkcs7";
     
 
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         MEMO: strProviderSignature: 
         . ? supported:     "BC"
         . ? NOT supported: "SunRsaSign"
     **/
-    static public byte[] s_generateCrt(
+    public static byte[] s_generateCrt(
         Frame frmOwner, 
         X509Certificate crt, 
         String strProviderSignature
@@ -88,7 +88,7 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
     }
     
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         File fleCrt)
     {
@@ -115,7 +115,7 @@ final public class UtilCrtX509Pkcs7 extends UtilCrtX509
         
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilCrtX509Pkcs7._f_s_strClass + "." + "s_showFile(...)";

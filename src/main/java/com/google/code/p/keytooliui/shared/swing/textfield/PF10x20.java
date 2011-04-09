@@ -32,17 +32,17 @@
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class PF10x20 extends PFAbs
+public final class PF10x20 extends PFAbs
 {  
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intColumns = 10; // 75; // 10;
-    final static private int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 10; // 75; // 10;
+    private static final int _f_s_intH = 20;
     
     
-    final static private String _f_s_strTip = "current password value (not editable textfield)";
-    final static private String _f_s_strDefault = "";
+    private static final String _f_s_strTip = "current password value (not editable textfield)";
+    private static final String _f_s_strDefault = "";
     
     // ------
     // PUBLIC

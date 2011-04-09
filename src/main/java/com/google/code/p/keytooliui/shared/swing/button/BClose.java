@@ -5,13 +5,13 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 //import javax.swing.*;
 
-final public class BClose extends BAbs
+public final class BClose extends BAbs
 {    
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strText = null;
-    static private String _s_strTip = null;
+    private static String _s_strText = null;
+    private static String _s_strTip = null;
     
     // ------------------
     // STATIC INITIALIZER

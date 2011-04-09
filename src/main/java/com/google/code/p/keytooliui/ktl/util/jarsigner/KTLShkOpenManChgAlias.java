@@ -28,7 +28,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
+public final class KTLShkOpenManChgAlias extends KTLShkOpenManAbs
 {
     // ------
     // PUBLIC

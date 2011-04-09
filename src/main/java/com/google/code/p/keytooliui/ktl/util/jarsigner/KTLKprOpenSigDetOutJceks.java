@@ -16,7 +16,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenSigDetOutJceks extends KTLKprOpenSigDetOutKPAbs
+public final class KTLKprOpenSigDetOutJceks extends KTLKprOpenSigDetOutKPAbs
 {
     // ------
     // PUBLIC

@@ -33,17 +33,17 @@ import java.util.*;
 public class StrSortVector
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.sort.StrSortVector.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.sort.StrSortVector.";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         if any error, returning nil
     **/
-    static public String[] s_sort(String[] strsOri)
+    public static String[] s_sort(String[] strsOri)
     {
         String f_strMethod = _f_s_strClass + "s_sort(strsOri)";
         
@@ -102,7 +102,7 @@ public class StrSortVector
     }
     
     // Test it:
-    static public void main(String[] args)
+    public static void main(String[] args)
     {
         StrSortVector sv = new StrSortVector();
         sv.addElement("d");

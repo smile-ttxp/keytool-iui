@@ -91,76 +91,76 @@ import java.awt.*;
 abstract public class KTLAbs extends Object
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs.";
     
     // "Kpr" means "keypair"
-    final static private int _f_s_intSizeMinKprDsa = 512;
-    final static private int _f_s_intSizeMinKprRsa = 512;
-    final static private int _f_s_intSizeMinKprEc = 192; // prime192v1
+    private static final int _f_s_intSizeMinKprDsa = 512;
+    private static final int _f_s_intSizeMinKprRsa = 512;
+    private static final int _f_s_intSizeMinKprEc = 192; // prime192v1
 
-    final static private int _f_s_intSizeMaxKprDsa = 1024;
-    final static private int _f_s_intSizeMaxKprRsa = 65536; // 2048;
-    final static private int _f_s_intSizeMaxKprEc = 256; // prime256v1
+    private static final int _f_s_intSizeMaxKprDsa = 1024;
+    private static final int _f_s_intSizeMaxKprRsa = 65536; // 2048;
+    private static final int _f_s_intSizeMaxKprEc = 256; // prime256v1
     
-    final static private int _f_s_intSizeStepKprDsa = 64;
-    final static private int _f_s_intSizeStepKprRsa = 64;
+    private static final int _f_s_intSizeStepKprDsa = 64;
+    private static final int _f_s_intSizeStepKprRsa = 64;
     
     
-    final static private int _f_s_intSizeMidKprEc = 239; // prime239v1
+    private static final int _f_s_intSizeMidKprEc = 239; // prime239v1
     
-    //final static private String _F_STR_propKeyPolicyExtended = "_rcp_.policy.extended";
+    //private static final String _F_STR_propKeyPolicyExtended = "_rcp_.policy.extended";
     
     // -------------------
-    // final static public 
+    // public static final 
     
-    final static public String f_s_strFormatFileShkDer = "DER";
-    final static public String f_s_strFormatFileShkPem = "PEM"; // ascii, or "PEM"
+    public static final String f_s_strFormatFileShkDer = "DER";
+    public static final String f_s_strFormatFileShkPem = "PEM"; // ascii, or "PEM"
     
-    final static public String f_s_strFormatFileKprDer = "DER";
-    final static public String f_s_strFormatFileKprPem = "PEM"; // ascii, or "PEM"
+    public static final String f_s_strFormatFileKprDer = "DER";
+    public static final String f_s_strFormatFileKprPem = "PEM"; // ascii, or "PEM"
        
-    final static public String f_s_strFormatFileCrtDer = "DER";
-    final static public String f_s_strFormatFileCrtPkcs7 = "PKCS#7";
-    final static public String f_s_strFormatFileCrtPem = "PEM"; // ascii, or "PEM"
-    final static public String f_s_strFormatFileCsrPkcs10 = "PKCS#10";
-    final static public String f_s_strFormatFileCrtPkcs12 = "PKCS#12"; // not yet in use !!!! DIFFERENT FROM "PKCS12" keystore type
-    final static public String f_s_strFormatFileCrtOther = "Other"; // any other, not listed
-    final static public String f_s_strFormatFileCrtCms = "P7C"; // Cryptographic Message Syntax
+    public static final String f_s_strFormatFileCrtDer = "DER";
+    public static final String f_s_strFormatFileCrtPkcs7 = "PKCS#7";
+    public static final String f_s_strFormatFileCrtPem = "PEM"; // ascii, or "PEM"
+    public static final String f_s_strFormatFileCsrPkcs10 = "PKCS#10";
+    public static final String f_s_strFormatFileCrtPkcs12 = "PKCS#12"; // not yet in use !!!! DIFFERENT FROM "PKCS12" keystore type
+    public static final String f_s_strFormatFileCrtOther = "Other"; // any other, not listed
+    public static final String f_s_strFormatFileCrtCms = "P7C"; // Cryptographic Message Syntax
     
-    final static public String f_s_strFormatFileXmlXml = "XML";
+    public static final String f_s_strFormatFileXmlXml = "XML";
     
-    final static public String f_s_strFormatFileSigDer = KTLAbs.f_s_strFormatFileCrtDer;
-    final static public String f_s_strFormatFileSigPkcs7 = KTLAbs.f_s_strFormatFileCrtPkcs7;
-    final static public String f_s_strFormatFileSigPem = KTLAbs.f_s_strFormatFileCrtPem;
+    public static final String f_s_strFormatFileSigDer = KTLAbs.f_s_strFormatFileCrtDer;
+    public static final String f_s_strFormatFileSigPkcs7 = KTLAbs.f_s_strFormatFileCrtPkcs7;
+    public static final String f_s_strFormatFileSigPem = KTLAbs.f_s_strFormatFileCrtPem;
     
-    final static public String f_s_strFormatFileSCmsP7m = "P7M";
-    final static public String f_s_strFormatFileSCmsP7s = "P7S";
+    public static final String f_s_strFormatFileSCmsP7m = "P7M";
+    public static final String f_s_strFormatFileSCmsP7s = "P7S";
     
-    final static public String f_s_strProviderKstJks = 
+    public static final String f_s_strProviderKstJks = 
         "SUN"; // !!!! IMPORTANT: all instanciations other than KeyPairGenerator should use this one
         
-    final static public String f_s_strProviderKstJceks = 
+    public static final String f_s_strProviderKstJceks = 
         "SunJCE"; // !!!! IMPORTANT: all instanciations other than KeyPairGenerator should use this one
  
-    final static public String f_s_strProviderKstBks = 
+    public static final String f_s_strProviderKstBks = 
         "BC";  // !!!! IMPORTANT: only used to get instance of class KeyPairGenerator
  
-    final static public String f_s_strProviderKstUber = 
+    public static final String f_s_strProviderKstUber = 
         "BC";  // !!!! IMPORTANT: only used to get instance of class KeyPairGenerator
         
-    final static public String f_s_strProviderKstPkcs12 = 
+    public static final String f_s_strProviderKstPkcs12 = 
         "BC";  // !!!! IMPORTANT: only used to get instance of class KeyPairGenerator
  
-    final static public String f_s_strProviderKstBC = 
+    public static final String f_s_strProviderKstBC = 
         "BC";  // !!!! IMPORTANT: only used to get instance of class KeyPairGenerator
     
-    final static public String f_s_strSecurityProviderSunRsaSign = 
+    public static final String f_s_strSecurityProviderSunRsaSign = 
         //"SunJSSE"; // !!!! IMPORTANT: only used to get instance of class KeyPairGenerator
         "SunRsaSign"; // test, may 17, 07
     
-     final static public String f_s_strSecurityProviderBC = 
+     public static final String f_s_strSecurityProviderBC = 
         "BC";
     
     
@@ -168,7 +168,7 @@ abstract public class KTLAbs extends Object
         provider(s) below just can read
     **/
     
-    final static public String[] f_s_strsProviderKstPkcs12R =
+    public static final String[] f_s_strsProviderKstPkcs12R =
     {
         KTLAbs.f_s_strSecurityProviderSunRsaSign,
         KTLAbs.f_s_strProviderKstBC
@@ -178,7 +178,7 @@ abstract public class KTLAbs extends Object
     /**
         provider(s) below can write
     **/
-    final static public String[] f_s_strsProviderKstPkcs12RW =
+    public static final String[] f_s_strsProviderKstPkcs12RW =
     {
         KTLAbs.f_s_strProviderKstBC
     };
@@ -186,7 +186,7 @@ abstract public class KTLAbs extends Object
     /**
         provider(s) below can write
     **/
-    final static public String[] f_s_strsProviderKstBksRW =
+    public static final String[] f_s_strsProviderKstBksRW =
     {
         KTLAbs.f_s_strProviderKstBC
     };
@@ -194,59 +194,59 @@ abstract public class KTLAbs extends Object
     /**
         provider(s) below can write
     **/
-    final static public String[] f_s_strsProviderKstUberRW =
+    public static final String[] f_s_strsProviderKstUberRW =
     {
         KTLAbs.f_s_strProviderKstBC
     };
     
     
     // "Kpg" means "keypair Generator"
-    final static public String[] f_s_strsProviderKpgDsa =
+    public static final String[] f_s_strsProviderKpgDsa =
     {
         KTLAbs.f_s_strProviderKstJks,
         KTLAbs.f_s_strProviderKstBC
     };
     
-    final static public String[] f_s_strsProviderKpgEc =
+    public static final String[] f_s_strsProviderKpgEc =
     {
         KTLAbs.f_s_strProviderKstBC
     };
     
-    final static public String[] f_s_strsProviderKpgRsa =
+    public static final String[] f_s_strsProviderKpgRsa =
     {
         KTLAbs.f_s_strProviderKstBC,
         KTLAbs.f_s_strSecurityProviderSunRsaSign
     };
     
     // "Sig" for "Signature"
-    final static public String[] f_s_strsProviderSigRsa =
+    public static final String[] f_s_strsProviderSigRsa =
     {
         KTLAbs.f_s_strProviderKstBC
     };
     
     
-    final static public String f_s_strTypeKeypairDsa = "DSA";
-    final static public String f_s_strTypeKeypairRsa = "RSA";
+    public static final String f_s_strTypeKeypairDsa = "DSA";
+    public static final String f_s_strTypeKeypairRsa = "RSA";
     
-    final static public String f_s_strTypeKeypairEc = "EC";
+    public static final String f_s_strTypeKeypairEc = "EC";
     
-    final static public String f_s_strTypeCrtDsa = KTLAbs.f_s_strTypeKeypairDsa;
-    final static public String f_s_strTypeCrtRsa = KTLAbs.f_s_strTypeKeypairRsa;
+    public static final String f_s_strTypeCrtDsa = KTLAbs.f_s_strTypeKeypairDsa;
+    public static final String f_s_strTypeCrtRsa = KTLAbs.f_s_strTypeKeypairRsa;
     
     
-    final static public String[] f_s_strsFormatFileCertReqBc =
+    public static final String[] f_s_strsFormatFileCertReqBc =
     {
         KTLAbs.f_s_strFormatFileCsrPkcs10 // same as the one mentionned in j2sdk-1.4.0's doc, keytool
     };
     
-    final static public String[] f_s_strsFormatFileCertOutBc =
+    public static final String[] f_s_strsFormatFileCertOutBc =
     {
         KTLAbs.f_s_strFormatFileCrtDer, // use this one, eg to import to keystore
         KTLAbs.f_s_strFormatFileCrtPem, // ascii, also named PEM, same as the one mentionned in j2sdk-1.5.0's doc, keytool, option -rfc
         KTLAbs.f_s_strFormatFileCrtPkcs7 // binary
     };
     
-    final static public String[] f_s_strsFormatFileCertImportBc =
+    public static final String[] f_s_strsFormatFileCertImportBc =
     {
         KTLAbs.f_s_strFormatFileCrtPkcs7,
         KTLAbs.f_s_strFormatFileCrtOther
@@ -259,7 +259,7 @@ abstract public class KTLAbs extends Object
        list of supported algos for generating CSR
        different from list of supported algos for generating keypair!
     */ 
-    final static public String[] f_s_strsCertSigAlgoRsaBc2Csr =
+    public static final String[] f_s_strsCertSigAlgoRsaBc2Csr =
     {
         UtilCrtX509.f_s_strDigestAlgoMD5 + "withRSA",  // mentionned in j2sdk-1.4.0's doc, Signature.class, default in (RSA) jarsigner tool 
         UtilCrtX509.f_s_strDigestAlgoMD2 + "withRSA",  // mentionned in j2sdk-1.4.0's doc, Signature.class
@@ -287,7 +287,7 @@ abstract public class KTLAbs extends Object
        list of supported algos for generating certificate
        different from list of supported algos for generating keypair!
     */ 
-    final static public String[] f_s_strsCertSigAlgoKprBc2Crt =
+    public static final String[] f_s_strsCertSigAlgoKprBc2Crt =
     {
         UtilCrtX509.f_s_strDigestAlgoSHA1 + "withDSA",
         
@@ -303,13 +303,13 @@ abstract public class KTLAbs extends Object
         //"RIPEMD160withRSA"
     };
     
-    final static public String[] f_s_strsCertSigAlgoTcrBc2Crt = KTLAbs.f_s_strsCertSigAlgoKprBc2Crt;
+    public static final String[] f_s_strsCertSigAlgoTcrBc2Crt = KTLAbs.f_s_strsCertSigAlgoKprBc2Crt;
     
     /*
         provider: either Sun or BC (BouncyCastle)
         "Any" means "Any provider"
     */ 
-    final static public String[] f_s_strsCertSigAlgoDsaAny =
+    public static final String[] f_s_strsCertSigAlgoDsaAny =
     {
         UtilCrtX509.f_s_strDigestAlgoSHA1 + "withDSA"//,  // mentionned in j2sdk-1.4.0's doc, Signature.class, default in (DSA) jarsigner tool 
         
@@ -327,7 +327,7 @@ abstract public class KTLAbs extends Object
      *  "PK" means "Private Key" (keypair)
         provider: BC (KeyGenerator instances)
     */ 
-    final static public String[] f_s_strsSigAlgoPKBC =
+    public static final String[] f_s_strsSigAlgoPKBC =
     {
         "DSA",
         "RSA",
@@ -338,7 +338,7 @@ abstract public class KTLAbs extends Object
      *  "SK" means "Secret Key" (shared key)
         provider: JCEKS (KeyGenerator instances)
     */ 
-    final static public String[] f_s_strsSigAlgoSKJceks =
+    public static final String[] f_s_strsSigAlgoSKJceks =
     {
         // coz no current xxxKeySpec, with SunRsaSign (PKCS11 should be OK)
         "AES",
@@ -356,7 +356,7 @@ abstract public class KTLAbs extends Object
     
     
     // !!! BC PROVIDERS for the 2 others in the list
-    final static public String[] f_s_strsCipherRsaAlgoJceks =
+    public static final String[] f_s_strsCipherRsaAlgoJceks =
     {
         "RSA/ECB/PKCS1Padding",
         "RSA/NONE/PKCS1Padding",
@@ -366,7 +366,7 @@ abstract public class KTLAbs extends Object
     /*
         provider: BC (BouncyCastle)
     */ 
-    final static public String[] f_s_strsCertSigAlgoRsaBc =
+    public static final String[] f_s_strsCertSigAlgoRsaBc =
     {
         UtilCrtX509.f_s_strDigestAlgoSHA1 + "withRSA",// // mentionned in j2sdk-1.4.0's doc, Signature.class
         UtilCrtX509.f_s_strDigestAlgoMD2 + "withRSA",  // mentionned in j2sdk-1.4.0's doc, Signature.class
@@ -390,7 +390,7 @@ abstract public class KTLAbs extends Object
     /*
         provider: BC (BouncyCastle)
     */ 
-    final static public String[] f_s_strsCertSigAlgoEcBc =
+    public static final String[] f_s_strsCertSigAlgoEcBc =
     {
         UtilCrtX509.f_s_strDigestAlgoSHA1 + "withECDSA",
         "SHA224" + "withECDSA",
@@ -405,22 +405,22 @@ abstract public class KTLAbs extends Object
                  */
     };
     
-    final static public String f_s_strCertSigAlgoUnknown = "Unknown!";
+    public static final String f_s_strCertSigAlgoUnknown = "Unknown!";
     
     
-    final static public Integer[] f_s_itgsCertVersion =
+    public static final Integer[] f_s_itgsCertVersion =
     {
         new Integer(1),
         new Integer(3)
     };
     
-    final static public int f_s_intCertValidityMin = 180;      // approx half year
-    final static public int f_s_intCertValidityMax = 14600;     // approx 40 years
+    public static final int f_s_intCertValidityMin = 180;      // approx half year
+    public static final int f_s_intCertValidityMax = 14600;     // approx 40 years
     // changing default coz Google wants Android's related to be signed for at least 25 years
-    final static public int f_s_intCertValidityDefault = 9125; // approx 25 years 
+    public static final int f_s_intCertValidityDefault = 9125; // approx 25 years 
     
     // --------------
-    // static private
+    // private static
     
         /**
         * Encode bytes array to BASE64 string
@@ -450,14 +450,14 @@ abstract public class KTLAbs extends Object
         }
 
     // ----------------
-    // static protected
+    // protected static
     
     /*
      *MEMO: (intKeySize/8) - 11 = intDataSize
      *where "11" is padding in bytes
      *ie keySize = 2048 ==> limitation for file encrypting = 245
      */
-    static protected boolean _s_can_encryptRsa_(
+    protected static boolean _s_can_encryptRsa_(
             Frame frmOwner, X509Certificate crtX509, int intSizeFileInput)
     {
         int intSizeKey = UtilCrtX509.s_getSizeKey(crtX509);
@@ -487,7 +487,7 @@ abstract public class KTLAbs extends Object
     
   
     
-    static protected void _s_encryptRsa_(
+    protected static void _s_encryptRsa_(
             PublicKey pky, 
             InputStream ism, 
             OutputStream osm,
@@ -535,7 +535,7 @@ abstract public class KTLAbs extends Object
     }
     
     
-    static protected void _s_decryptRsa_(
+    protected static void _s_decryptRsa_(
             PrivateKey pky, 
             InputStream ism, 
             OutputStream osm,
@@ -572,7 +572,7 @@ abstract public class KTLAbs extends Object
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     
     
@@ -582,7 +582,7 @@ abstract public class KTLAbs extends Object
      *RSA: should point to 2048
      * ((2048-min) / step)
      */
-    static public Integer s_getItgDefaultKprDsa()
+    public static Integer s_getItgDefaultKprDsa()
     {
         int intVal = 1024;
         intVal -= KTLAbs._f_s_intSizeMinKprDsa;
@@ -590,7 +590,7 @@ abstract public class KTLAbs extends Object
         return new Integer(intVal); 
     }
     
-    static public Integer s_getItgDefaultKprRsa()
+    public static Integer s_getItgDefaultKprRsa()
     {
         int intVal = 2048;
         intVal -= KTLAbs._f_s_intSizeMinKprRsa;
@@ -598,13 +598,13 @@ abstract public class KTLAbs extends Object
         return new Integer(intVal); 
     }
     
-    static public Integer s_getItgDefaultKprEc()
+    public static Integer s_getItgDefaultKprEc()
     {
         Integer[] itgs = KTLAbs.s_getItgsListSizeKprEc();
         return new Integer(itgs.length-1); // max value 
     }
     
-    static public Integer[] s_getItgsListSizeKprDsa()
+    public static Integer[] s_getItgsListSizeKprDsa()
     {
         return _s_getItgsListSizeKpr(
             KTLAbs._f_s_intSizeMinKprDsa, 
@@ -612,7 +612,7 @@ abstract public class KTLAbs extends Object
             KTLAbs._f_s_intSizeStepKprDsa);
     }
     
-    static public Integer[] s_getItgsListSizeKprRsa()
+    public static Integer[] s_getItgsListSizeKprRsa()
     {
         return _s_getItgsListSizeKpr(
             KTLAbs._f_s_intSizeMinKprRsa, 
@@ -620,7 +620,7 @@ abstract public class KTLAbs extends Object
             KTLAbs._f_s_intSizeStepKprRsa);
     }
     
-    static public Integer[] s_getItgsListSizeKprEc()
+    public static Integer[] s_getItgsListSizeKprEc()
     {
         Integer[] itgs = new Integer[3];
         
@@ -631,7 +631,7 @@ abstract public class KTLAbs extends Object
         return itgs;
     }
     
-    /*static public boolean s_isPolicyExtended()
+    /*public static boolean s_isPolicyExtended()
     {
         String strMethod = KTLAbs._f_s_strClass + "s_isPolicyExtended()";
        
@@ -680,11 +680,11 @@ abstract public class KTLAbs extends Object
     
     
     // -------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    //static private Boolean _s_booPolicyExtended = null;
+    //private static Boolean _s_booPolicyExtended = null;
     
-    static private Integer[] _s_getItgsListSizeKpr(
+    private static Integer[] _s_getItgsListSizeKpr(
         int intSizeMin,
         int intSizeMax,
         int intStep)

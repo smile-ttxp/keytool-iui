@@ -27,17 +27,17 @@ import com.google.code.p.keytooliui.shared.swing.dialog.*;
 public class DEditorAbstractEvent extends java.awt.AWTEvent
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intIdFirst = PEditorAbstractEvent.PEDITORABSTRACTEVENT_LAST + 1;
+    private static final int _f_s_intIdFirst = PEditorAbstractEvent.PEDITORABSTRACTEVENT_LAST + 1;
     
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int DEDITORABSTRACTEVENT_LAST = _f_s_intIdFirst + 1;
+    public static final int DEDITORABSTRACTEVENT_LAST = _f_s_intIdFirst + 1;
 
-    final static public int DEDITORABSTRACTEVENT_FILERECORD = _f_s_intIdFirst;
-    final static public int DEDITORABSTRACTEVENT_FILEDELETE = _f_s_intIdFirst + 1;
+    public static final int DEDITORABSTRACTEVENT_FILERECORD = _f_s_intIdFirst;
+    public static final int DEDITORABSTRACTEVENT_FILEDELETE = _f_s_intIdFirst + 1;
       
     // -------------
     // PUBLIC ACCESS

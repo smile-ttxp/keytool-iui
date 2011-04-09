@@ -36,11 +36,11 @@ abstract public class DWaitProgressAbs extends DEscapeAbstract
     
         
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTitleSuffix = null; 
-	//static private String _s_strLabel1 = null; 
-	static private String _s_strLabel2 = null; 
+    private static String _s_strTitleSuffix = null; 
+	//private static String _s_strLabel1 = null; 
+	private static String _s_strLabel2 = null; 
     
     // ------------------
     // STATIC INITIALIZER

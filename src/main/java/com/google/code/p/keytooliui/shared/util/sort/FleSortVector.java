@@ -46,17 +46,17 @@ import java.io.File;
 public class FleSortVector
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.sort.FleSortVector.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.sort.FleSortVector.";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         if any error, returning nil
     **/
-    static public File[] s_sort(File[] flesOri)
+    public static File[] s_sort(File[] flesOri)
     {
         String f_strMethod = _f_s_strClass + "s_sort(flesOri)";
         

@@ -22,12 +22,12 @@
  
 package com.google.code.p.keytooliui.shared.lang.thread;
 
-final public class MyThreadShared extends MyThreadAbs
+public final class MyThreadShared extends MyThreadAbs
 {
     // --------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strNamePrefix = 
+    private static final String _f_s_strNamePrefix = 
         "shared"; // comes form package: "com.google.code.p.keytooliui.shared"
     
     // ------

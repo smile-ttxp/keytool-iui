@@ -31,17 +31,17 @@ import com.google.code.p.keytooliui.shared.lang.bool.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-final public class TMEntSKShowAll extends TMEntAbs
+public final class TMEntSKShowAll extends TMEntAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
     // see array of integers right below
     // tempo, should be rewritten, in order to handle subclasses of SK
-    final static public int f_s_intColumnIdIsSKEntry = 1;        
+    public static final int f_s_intColumnIdIsSKEntry = 1;        
     
     // preferred columns width 
-    final static public int[] f_s_intsColW = 
+    public static final int[] f_s_intsColW = 
     { 
         TMEntAbs._INT_W_ALIAS_, // strAlias
         30,  // // SK versus [XXX] tempo
@@ -49,7 +49,7 @@ final public class TMEntSKShowAll extends TMEntAbs
     }; // sum: ?
     
     
-    final static public String[] f_s_strsColumnNames =
+    public static final String[] f_s_strsColumnNames =
     { 
         TMEntAbs._STR_ALIAS_,
         "Entry", // SK versus [XXX] tempo

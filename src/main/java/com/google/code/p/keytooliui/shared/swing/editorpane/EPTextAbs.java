@@ -56,9 +56,9 @@ abstract public class EPTextAbs extends JEditorPane implements
     MouseListener
  {
         // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strDlgPageNotFullyLoaded = null;
+    private static String _s_strDlgPageNotFullyLoaded = null;
     
     // ------------------
     // STATIC INITIALIZER

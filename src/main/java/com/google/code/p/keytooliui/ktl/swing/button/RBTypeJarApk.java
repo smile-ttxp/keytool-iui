@@ -30,14 +30,14 @@
  
  import java.awt.event.*;
  
- final public class RBTypeJarApk extends RBTypeJarAbs
+ public final class RBTypeJarApk extends RBTypeJarAbs
  {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDesc = "APK"; // Any Android archive file";
+    public static final String f_s_strDesc = "APK"; // Any Android archive file";
     
-    final static public String[] f_s_strsFileExt = { com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strAPKDocument };
+    public static final String[] f_s_strsFileExt = { com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strAPKDocument };
     
     // ---------
     // PUBLIC

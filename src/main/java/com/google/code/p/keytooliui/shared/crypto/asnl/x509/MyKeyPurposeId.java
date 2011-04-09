@@ -114,10 +114,10 @@ import org.bouncycastle.asn1.DERObjectIdentifier;
 
 public class MyKeyPurposeId extends DERObjectIdentifier
 {
-    final static private String _STR_MICROSOFT = "1.3.6.1.4.1.311";
-    final static private String _STR_MS_CRYPTO20 = MyKeyPurposeId._STR_MICROSOFT + ".10";
+    private static final String _STR_MICROSOFT = "1.3.6.1.4.1.311";
+    private static final String _STR_MS_CRYPTO20 = MyKeyPurposeId._STR_MICROSOFT + ".10";
     
-    final static private String _STR_ADOBE_CDS_PKI = "1.2.840.113583.1.1.5";
+    private static final String _STR_ADOBE_CDS_PKI = "1.2.840.113583.1.1.5";
     
     
     /*
@@ -131,7 +131,7 @@ public class MyKeyPurposeId extends DERObjectIdentifier
     
     // other than Microsoft
     
-    final static public MyKeyPurposeId id_kp_unknownKeyUsage = 
+    public static final MyKeyPurposeId id_kp_unknownKeyUsage = 
             new MyKeyPurposeId("2.16.840.1.113730.4.1");
     
     //
@@ -140,21 +140,21 @@ public class MyKeyPurposeId extends DERObjectIdentifier
     
     
     
-    final static public MyKeyPurposeId szOID_SERVER_GATED_CRYPTO = 
+    public static final MyKeyPurposeId szOID_SERVER_GATED_CRYPTO = 
             new MyKeyPurposeId(MyKeyPurposeId._STR_MS_CRYPTO20 + ".3.3");
     
-    final static public MyKeyPurposeId szOID_SERIALIZED = 
+    public static final MyKeyPurposeId szOID_SERIALIZED = 
             new MyKeyPurposeId(MyKeyPurposeId._STR_MS_CRYPTO20 + ".3.3.1");
     
-    final static public MyKeyPurposeId szOID_EFS_CRYPTO = 
+    public static final MyKeyPurposeId szOID_EFS_CRYPTO = 
             new MyKeyPurposeId(MyKeyPurposeId._STR_MS_CRYPTO20 + ".3.4");
     
-    final static public MyKeyPurposeId szOID_EFS_RECOVERY = 
+    public static final MyKeyPurposeId szOID_EFS_RECOVERY = 
             new MyKeyPurposeId(MyKeyPurposeId._STR_MS_CRYPTO20 + ".3.4.1");
     
     // got from http://www.adobe.com/misc/pdfs/Adobe_CDS_CPv011604clean.pdf
     // CDS: Certified Document Services
-    final static public MyKeyPurposeId szOID_CDS_PKI = 
+    public static final MyKeyPurposeId szOID_CDS_PKI = 
             new MyKeyPurposeId(MyKeyPurposeId._STR_ADOBE_CDS_PKI);
     
     private MyKeyPurposeId(String strId)

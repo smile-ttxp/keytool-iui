@@ -23,12 +23,12 @@
 package com.google.code.p.keytooliui.shared.swing.button;
 
 
-final public class BESFullScreen24 extends BESFullScreenAbs
+public final class BESFullScreen24 extends BESFullScreenAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "zoomin24.gif"; // tempo
+    private static final String _f_s_strImage = "zoomin24.gif"; // tempo
     
     // ------
     // PUBLIC

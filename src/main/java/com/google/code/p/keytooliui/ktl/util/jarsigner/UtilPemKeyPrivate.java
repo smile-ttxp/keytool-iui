@@ -33,22 +33,22 @@ import java.security.cert.X509Certificate;
 import java.io.*;
 import java.awt.*;
 
-final public class UtilPemKeyPrivate
+public final class UtilPemKeyPrivate
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilPemKeyPrivate";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilPemKeyPrivate";
     
-    final static private String _f_s_strLineBeg = "-----BEGIN PRIVATE KEY-----";
-    final static private String _f_s_strLineEnd = "-----END PRIVATE KEY-----";
-    final static private int _f_s_intLineLengthMax = 76;
+    private static final String _f_s_strLineBeg = "-----BEGIN PRIVATE KEY-----";
+    private static final String _f_s_strLineEnd = "-----END PRIVATE KEY-----";
+    private static final int _f_s_intLineLengthMax = 76;
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
  
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         File fle)
     {
@@ -89,7 +89,7 @@ final public class UtilPemKeyPrivate
             MySystem.s_printOutExit(strMethod, "failed"); 
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilPemKeyPrivate._f_s_strClass + "." + "s_showFile(...)";
@@ -117,7 +117,7 @@ final public class UtilPemKeyPrivate
         . supported:     "BC"
         . NOT supported: "SunRsaSign"
     **/
-    static public String s_generateKpr(
+    public static String s_generateKpr(
         Frame frmOwner, 
         PrivateKey pky
             )

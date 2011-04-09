@@ -34,14 +34,14 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileOpenSig extends PSelBtnTfdFileOpenAbs
+public final class PSelBtnTfdFileOpenSig extends PSelBtnTfdFileOpenAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_sig_open";
-    final static public String s_strDirNameDefault = "mysigs";
-    final static public String f_s_strLabel = "(detached) Signature file:"; 
+    public static final String f_s_strDocPropVal = "select_file_sig_open";
+    public static final String s_strDirNameDefault = "mysigs";
+    public static final String f_s_strLabel = "(detached) Signature file:"; 
     
     // ------
     // PUBLIC

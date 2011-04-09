@@ -36,22 +36,22 @@ import java.util.EventListener;
 public class DFindPageEventMulticaster extends java.awt.AWTEventMulticaster implements DFindPageListener
 {
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public DFindPageListener add(DFindPageListener aflA, DFindPageListener aflB)
+    public static DFindPageListener add(DFindPageListener aflA, DFindPageListener aflB)
 	{
         return (DFindPageListener) addInternal(aflA, aflB);
 	}
   
-	static public DFindPageListener remove(DFindPageListener aflA, DFindPageListener aflB)
+	public static DFindPageListener remove(DFindPageListener aflA, DFindPageListener aflB)
 	{
         return (DFindPageListener) removeInternal(aflA, aflB);
 	}
 	
 	// ----------------
-	// STATIC PROTECTED
+	// PROTECTED STATIC
 	
-	static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+	protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

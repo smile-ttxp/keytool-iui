@@ -33,23 +33,23 @@ import java.awt.*;
 public class S_Border
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.border.S_Border.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.border.S_Border.";
     
-    final static private Border _f_s_brdEmpty5 = new EmptyBorder(5,5,5,5);
-    final static private Border _f_s_brdEmpty0 = new EmptyBorder(0, 0, 0, 0);
-    final static private Border _f_s_brdEmpty2 = new EmptyBorder(2, 2, 2, 2);
-    final static private Border _f_s_brdEtched = new EtchedBorder();
+    private static final Border _f_s_brdEmpty5 = new EmptyBorder(5,5,5,5);
+    private static final Border _f_s_brdEmpty0 = new EmptyBorder(0, 0, 0, 0);
+    private static final Border _f_s_brdEmpty2 = new EmptyBorder(2, 2, 2, 2);
+    private static final Border _f_s_brdEtched = new EtchedBorder();
     
-    final static private Border _f_s_brdLightLowered = new BevelBorder(BevelBorder.LOWERED, 
+    private static final Border _f_s_brdLightLowered = new BevelBorder(BevelBorder.LOWERED, 
         Color.white, Color.gray);
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
 
 
-    static public void s_setRaised(JPanel pnl)
+    public static void s_setRaised(JPanel pnl)
     {
         String strMethod = _f_s_strClass + "s_setRaised(pnl)";
         
@@ -62,7 +62,7 @@ public class S_Border
 	    pnl.setBorder(raisedbevel);
     }
     
-    static public void s_setEtched(JPanel pnl)
+    public static void s_setEtched(JPanel pnl)
     {
         String strMethod = _f_s_strClass + "s_setEtched(pnl)";
         
@@ -73,7 +73,7 @@ public class S_Border
 	    pnl.setBorder(brdCompound);
     }
     
-    static public void s_setEmpty(JPanel pnl)
+    public static void s_setEmpty(JPanel pnl)
     {
         String strMethod = _f_s_strClass + "s_setEmpty(pnl)";
         
@@ -83,7 +83,7 @@ public class S_Border
         pnl.setBorder(_f_s_brdEmpty5);
     }
     
-    static public void s_setEmptyLightLowered2(JPanel pnl)
+    public static void s_setEmptyLightLowered2(JPanel pnl)
     {
         String strMethod = _f_s_strClass + "s_setEmptyLightLowered2(pnl)";
         
@@ -94,7 +94,7 @@ public class S_Border
 	    pnl.setBorder(brdCompound);
     }
     
-    static public void s_setEmptyLightLowered0(JPanel pnl)
+    public static void s_setEmptyLightLowered0(JPanel pnl)
     {
         String strMethod = _f_s_strClass + "s_setEmptyLightLowered0(pnl)";
         
@@ -105,7 +105,7 @@ public class S_Border
 	    pnl.setBorder(brdCompound);
     }
     
-    static public void s_setEmptyLightLowered5(JPanel pnl)
+    public static void s_setEmptyLightLowered5(JPanel pnl)
     {
         String strMethod = _f_s_strClass + "s_setEmptyLightLowered5(pnl)";
         

@@ -16,17 +16,17 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-final public class PTabUICmdKtlKstOpenKprFromKprDer extends PTabUICmdKtlKstOpenKprFromKprFileAbs
+public final class PTabUICmdKtlKstOpenKprFromKprDer extends PTabUICmdKtlKstOpenKprFromKprFileAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Import private key entry from DER private key file & certs chain file";
+    public static final String STR_TITLETASK = "Import private key entry from DER private key file & certs chain file";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
     
     // ------------------

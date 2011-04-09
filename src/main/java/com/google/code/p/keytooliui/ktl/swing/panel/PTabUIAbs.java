@@ -36,9 +36,9 @@ import javax.swing.*;
 abstract public class PTabUIAbs extends PTabAbstract 
 {   
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected void _s_addVerticalStrut_(JPanel pnl)
+    protected static void _s_addVerticalStrut_(JPanel pnl)
     {
          pnl.add(Box.createVerticalStrut(4));
     }

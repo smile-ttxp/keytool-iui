@@ -18,17 +18,17 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import net.miginfocom.swing.MigLayout;
 
 
-final public class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAbs
+public final class PTabUICmdKtlKstOpenCCaImpTcr extends PTabUICmdKtlKstOpenCCaAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Import root CA certificate file as new trusted certificate entry to CA certs store";
+    public static final String STR_TITLETASK = "Import root CA certificate file as new trusted certificate entry to CA certs store";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
     
     // ------------------

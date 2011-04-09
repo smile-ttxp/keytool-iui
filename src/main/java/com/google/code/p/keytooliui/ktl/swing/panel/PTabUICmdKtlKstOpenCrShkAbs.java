@@ -34,7 +34,7 @@ import net.miginfocom.swing.MigLayout;
 abstract public class PTabUICmdKtlKstOpenCrShkAbs extends PTabUICmdKtlKstOpenAbs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     
     // ------

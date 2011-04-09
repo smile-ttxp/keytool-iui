@@ -36,7 +36,7 @@ import java.util.*;
 public class METextAlignmentEditorText extends MAbstract
 {     
     /** ##############
-        STATIC PRIVATE
+        PRIVATE STATIC
         ##############
     **/
     
@@ -45,15 +45,15 @@ public class METextAlignmentEditorText extends MAbstract
     final private static int _S_INT_RIGHT = 3;
     final private static int _S_INT_DEFAULT = _S_INT_LEFT;
     
-    static private java.util.ResourceBundle _s_rbeResources;
+    private static java.util.ResourceBundle _s_rbeResources;
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".METextAlignmentEditorText" // class name
         ;
     
     
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
 
     static
     {

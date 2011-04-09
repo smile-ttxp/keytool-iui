@@ -27,7 +27,7 @@
 
  **/ 
  
- final public class RBMIAlignLeftTabsMain extends RBMIAlignLeftAbs
+ public final class RBMIAlignLeftTabsMain extends RBMIAlignLeftAbs
  {     
     // ------
     // PUBLIC

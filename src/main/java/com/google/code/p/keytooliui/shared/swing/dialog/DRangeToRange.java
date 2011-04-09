@@ -30,7 +30,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import java.awt.*;
 
 
-final public class DRangeToRange extends DRangeAbstract
+public final class DRangeToRange extends DRangeAbstract
 {
     // ------
     // PUBLIC

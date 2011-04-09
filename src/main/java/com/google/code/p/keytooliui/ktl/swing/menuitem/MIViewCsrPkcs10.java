@@ -28,12 +28,12 @@ import java.util.Locale;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
-final public class MIViewCsrPkcs10 extends MIAbstract
+public final class MIViewCsrPkcs10 extends MIAbstract
 {
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
 
-    static public String STR_TEXT = null;
+    public static String STR_TEXT = null;
 
     // ------------------
     // STATIC INITIALIZER

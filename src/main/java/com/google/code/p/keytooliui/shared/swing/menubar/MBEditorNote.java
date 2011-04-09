@@ -28,22 +28,22 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
 
-final public class MBEditorNote extends MBEditorAbstract
+public final class MBEditorNote extends MBEditorAbstract
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".MBEditorNote" // class name
         ;
     
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private java.util.ResourceBundle _s_rbeResources;
+    private static java.util.ResourceBundle _s_rbeResources;
     
     // ------------------
     // STATIC INITIALIZER

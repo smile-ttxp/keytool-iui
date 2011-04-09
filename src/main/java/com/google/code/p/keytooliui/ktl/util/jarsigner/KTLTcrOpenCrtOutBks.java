@@ -17,7 +17,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLTcrOpenCrtOutBks extends KTLTcrOpenCrtOutDMAbs
+public final class KTLTcrOpenCrtOutBks extends KTLTcrOpenCrtOutDMAbs
 {
     // ------
     // PUBLIC

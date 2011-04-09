@@ -35,10 +35,10 @@
 abstract public class TF4x20Abs extends TFAbstract
 {  
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intColumns = 4; //30; //4;
-    final static private int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 4; //30; //4;
+    private static final int _f_s_intH = 20;
     
     // ---------
     // PROTECTED

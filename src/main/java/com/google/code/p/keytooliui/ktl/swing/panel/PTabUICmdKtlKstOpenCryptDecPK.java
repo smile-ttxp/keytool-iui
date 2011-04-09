@@ -15,21 +15,21 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryptDecAbs
+public final class PTabUICmdKtlKstOpenCryptDecPK extends PTabUICmdKtlKstOpenCryptDecAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Decrypt data file with RSA private key entry";
+    public static final String STR_TITLETASK = "Decrypt data file with RSA private key entry";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    //static private String _s_strDlgInfoActionBodyBeg = null;
-    //static private String _s_strDlgInfoActionBodyCrypt = null;
-    //static private String _s_strDlgInfoActionBodyQuery = null;
+    //private static String _s_strDlgInfoActionBodyBeg = null;
+    //private static String _s_strDlgInfoActionBodyCrypt = null;
+    //private static String _s_strDlgInfoActionBodyQuery = null;
     
     // ------------------
     // STATIC INITIALIZER

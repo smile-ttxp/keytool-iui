@@ -31,23 +31,23 @@ import java.net.*;
 public class S_FileSys
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileSys";
-    final static private String _f_s_strDirTmp = "temp";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileSys";
+    private static final String _f_s_strDirTmp = "temp";
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".S_FileSys" // class name
         ;
         
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strDialogFileProtectedTitle = null;
-    static private String _s_strDialogFileProtectedBodyR = null;
-    static private String _s_strDialogFileProtectedBodyW = null;
+    private static String _s_strDialogFileProtectedTitle = null;
+    private static String _s_strDialogFileProtectedBodyR = null;
+    private static String _s_strDialogFileProtectedBodyW = null;
     
 
     // ------------------
@@ -73,12 +73,12 @@ public class S_FileSys
     } 
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         if any error, return nil
     **/
-    static public byte[] s_getFileResource(File fle)
+    public static byte[] s_getFileResource(File fle)
     {
         String strMethod = _f_s_strClass + "s_getFileResource(fle)";
 
@@ -169,7 +169,7 @@ public class S_FileSys
     /**
         if any error, return nil
     **/
-    static public byte[] s_getFileResource(String strPathAbs)
+    public static byte[] s_getFileResource(String strPathAbs)
     {
         String strMethod = _f_s_strClass + "s_getFileResource(strPathAbs)";
 
@@ -184,7 +184,7 @@ public class S_FileSys
         return S_FileSys.s_getFileResource(fle);
     }
     
-    static public boolean s_contains(
+    public static boolean s_contains(
         String strPathAbsDirParent, 
         String strNameChild)
     {
@@ -208,7 +208,7 @@ public class S_FileSys
         
     }
     
-    static public String s_getPathAbsoluteFolderTemp()
+    public static String s_getPathAbsoluteFolderTemp()
     {
         String strMethod = _f_s_strClass + "." + "s_getPathAbsoluteFolderTemp()";
         
@@ -242,7 +242,7 @@ public class S_FileSys
     
     
     // should be renamed: stg like s_getPathAbsParentAppliCache
-    static public File s_getPathAbsParentAppli(boolean blnReadOnlyAllowed)
+    public static File s_getPathAbsParentAppli(boolean blnReadOnlyAllowed)
     {
         String strMethod = _f_s_strClass + "." + "s_getPathAbsParentAppli(blnReadOnlyAllowed)";
         
@@ -379,11 +379,11 @@ public class S_FileSys
    
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     /**
         if any error, exiting
     **/
-    static public boolean s_tryRename(String strParentPathAbsolute, String strNameFrom, String strNameTo)
+    public static boolean s_tryRename(String strParentPathAbsolute, String strNameFrom, String strNameTo)
     {
         final String f_strWhere = _f_s_strClass + "." + "s_tryRename(strParentPathAbsolute, strNameFrom, strNameTo)";
         
@@ -458,7 +458,7 @@ public class S_FileSys
         return true;
     }
     
-    static public boolean s_rename(String strParentPathAbsolute, String strNameFrom, String strNameTo)
+    public static boolean s_rename(String strParentPathAbsolute, String strNameFrom, String strNameTo)
     {
         final String f_strWhere = _f_s_strClass + "." + "s_rename(strParentPathAbsolute, strNameFrom, strNameTo)";
         
@@ -547,7 +547,7 @@ public class S_FileSys
         creating a temporary file from buffer "byte[]"
         finally returns (temporary file's) absolute path.
     **/
-    static public File s_getFileTempFromBytes(byte[] bytsBuffer, String strFileSuffix)
+    public static File s_getFileTempFromBytes(byte[] bytsBuffer, String strFileSuffix)
     {
         String strMethod = _f_s_strClass + "." + "s_getFileTempFromBytes(bytsBuffer, strFileSuffix)";
         
@@ -600,7 +600,7 @@ public class S_FileSys
         
         create a temp file, deleted on exit
     **/
-    static public File s_createTemp(String strPrefix, String strSuffix)
+    public static File s_createTemp(String strPrefix, String strSuffix)
     {
         String strMethod = _f_s_strClass + "." + "s_createTemp(strPrefix, strSuffix)";
         
@@ -705,7 +705,7 @@ public class S_FileSys
         
         eg: strNameDirJarJhr = "foo.jhr"
     **/
-    static public String s_getTempDirPathAbs(String strNameDirJarJhr)
+    public static String s_getTempDirPathAbs(String strNameDirJarJhr)
     {
         String strMethod = _f_s_strClass + "." + "s_getTempDirPathAbs(strNameDirJarJhr)";
         
@@ -802,7 +802,7 @@ public class S_FileSys
         
         create a temp file, deleted on exit
     **/
-    static public File s_createTemp()
+    public static File s_createTemp()
     {
         String strMethod = _f_s_strClass + "." + "s_createTemp()";
         
@@ -826,7 +826,7 @@ public class S_FileSys
         deleteFile, meaning file is NOT a directory!
     **/
     
-    static public boolean s_deleteFile(String strFileAbsolutePath)
+    public static boolean s_deleteFile(String strFileAbsolutePath)
     {
         final String f_strWhere = _f_s_strClass + "." + "s_deleteFile(strFileAbsolutePath)";
         
@@ -871,7 +871,7 @@ public class S_FileSys
         return true;
     }
     
-    static public File s_mkdir(File fleParent, String strName)
+    public static File s_mkdir(File fleParent, String strName)
     {
         String strWhere = _f_s_strClass + "." + "s_mkdir(fleParent, strName)";
         
@@ -894,7 +894,7 @@ public class S_FileSys
         return s_mkdir(strAbsolutePath);
     }
     
-    static public File s_mkdir(String strAbsolutePath)
+    public static File s_mkdir(String strAbsolutePath)
     {
         String strWhere = _f_s_strClass + "." + "s_mkdir(strAbsolutePath)";
         
@@ -940,7 +940,7 @@ public class S_FileSys
     /**
         if no parentTo, generate direct parents (till reaching fleAncestorTo)
     **/
-    static public boolean s_copyFile(String strPathAbsoluteFrom, File fleAncestorTo, String strPathRelativeTo)
+    public static boolean s_copyFile(String strPathAbsoluteFrom, File fleAncestorTo, String strPathRelativeTo)
     {
         String strWhere = _f_s_strClass + "." + "s_copyFile(strPathAbsoluteFrom, fleAncestorTo, strPathRelativeTo)";
         
@@ -1040,7 +1040,7 @@ public class S_FileSys
     /* ?? file, NOT folder
         parentFolderTo should exist
     */
-    static public boolean s_copyFile(String strPathAbsoluteFrom, String strPathAbsoluteTo)
+    public static boolean s_copyFile(String strPathAbsoluteFrom, String strPathAbsoluteTo)
     {
         String strWhere = _f_s_strClass + "." + "s_copyFile(strPathAbsoluteFrom, strPathAbsoluteTo)";
         
@@ -1088,7 +1088,7 @@ public class S_FileSys
     
     
     // ?? file, NOT folder
-    static public boolean s_copyFile(File fleFrom, File fleTo)
+    public static boolean s_copyFile(File fleFrom, File fleTo)
     {
         String strWhere = _f_s_strClass + "." + "s_copyFile(fleFrom, fleTo)";
         
@@ -1148,7 +1148,7 @@ public class S_FileSys
     /**
         copying files, NOT folders
     **/
-    static public boolean s_copyFile(String strParentPathAbsoluteFrom, String strParentPathAbsoluteTo, String strFileName)
+    public static boolean s_copyFile(String strParentPathAbsoluteFrom, String strParentPathAbsoluteTo, String strFileName)
     {
         String strWhere = _f_s_strClass + "." + "s_copyFile(strParentPathAbsoluteFrom, strParentPathAbsoluteTo, strFileName)";
         
@@ -1190,11 +1190,11 @@ public class S_FileSys
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private File _s_fleParentAppli = null; // !!!
+    private static File _s_fleParentAppli = null; // !!!
     
-    static private File _s_getPathAbsParentAppliFromUrlFile(URL urlResource, boolean blnReadOnlyAllowed)
+    private static File _s_getPathAbsParentAppliFromUrlFile(URL urlResource, boolean blnReadOnlyAllowed)
 	{
 	    String strMethod = _f_s_strClass + "." + "_s_getPathAbsParentAppliFromUrlFile(urlResource, blnReadOnlyAllowed)";
 	    
@@ -1286,7 +1286,7 @@ public class S_FileSys
 	    return fleFolderAbsolute;
 	}
     
-    static private File _s_getPathAbsParentAppliFromUrlJar(URL urlResource, boolean blnReadOnlyAllowed)
+    private static File _s_getPathAbsParentAppliFromUrlJar(URL urlResource, boolean blnReadOnlyAllowed)
     {
         String strMethod = _f_s_strClass + "." + "_s_getPathAbsParentAppliFromUrlJar(urlResource, blnReadOnlyAllowed)";
 	
@@ -1492,7 +1492,7 @@ public class S_FileSys
 	    
 	    if anything wrong, displays a warning dialog window
 	**/
-	static private boolean _s_canWriteDir(File fle)
+	private static boolean _s_canWriteDir(File fle)
 	{
 	    String strMethod = _f_s_strClass + "." + "_s_canWriteDir(fle)";
 	    
@@ -1559,7 +1559,7 @@ public class S_FileSys
 	    
 	    if anything wrong, displays a warning dialog window
 	**/
-	static private boolean _s_canReadDir(File fle)
+	private static boolean _s_canReadDir(File fle)
 	{
 	    String strMethod = _f_s_strClass + "." + "_s_canReadDir(fle)";
 	    

@@ -2,7 +2,7 @@ package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 import java.awt.event.ActionListener;
 
-final public class MISelTabXmlToSig extends MISelTabAbs
+public final class MISelTabXmlToSig extends MISelTabAbs
 {
     public MISelTabXmlToSig(ActionListener actListenerParent)
     {

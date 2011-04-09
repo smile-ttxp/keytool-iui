@@ -34,24 +34,24 @@ import javax.swing.*;
 
 import java.util.*;
 
-final public class CRStringFileDoc extends CRStringAbstract
+public final class CRStringFileDoc extends CRStringAbstract
 {
     // --------------------
-    // final static private
+    // private static final
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.cellrenderer.CRStringFileDoc.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.cellrenderer.CRStringFileDoc.";
     
-    final static private ImageIcon _f_s_iin = com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get(
+    private static final ImageIcon _f_s_iin = com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get(
         com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.f_s_strFileProjRcr16);
 
     
     // -------------
-    // static public
+    // public static
     
     /**
         from a vector of String, constructs then returns an array of CRStringFileDoc
     **/
-    static public CRStringAbstract[] s_get(Vector vecString)
+    public static CRStringAbstract[] s_get(Vector vecString)
     {
         String strWhere = _f_s_strClass + "s_get(vecString)";
         

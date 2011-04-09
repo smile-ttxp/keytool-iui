@@ -43,10 +43,10 @@ import java.awt.event.*;
 abstract public class MIHelpAboutAppliAbstract extends MIAbstract 
 {
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public String s_strTitlePrefix = null;
-    static public String s_strDlgBodyCopyright = null;
+    public static String s_strTitlePrefix = null;
+    public static String s_strDlgBodyCopyright = null;
     
     // ------------------
     // STATIC INITIALIZER

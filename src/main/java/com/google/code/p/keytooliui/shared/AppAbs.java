@@ -34,24 +34,24 @@ package com.google.code.p.keytooliui.shared;
 abstract public class AppAbs extends Object
 {
     // -------------------
-    // final static public
+    // public static final
     
-    final static public String F_STR_propKeyLauncherNetbeansModule = "launcher_netbeans_module";
-    final static public String F_STR_propKeyLauncherEclipsePlugin = "launcher_eclipse_plugin";
+    public static final String F_STR_propKeyLauncherNetbeansModule = "launcher_netbeans_module";
+    public static final String F_STR_propKeyLauncherEclipsePlugin = "launcher_eclipse_plugin";
     
     // --------------------
-    // final static private
+    // private static final
     
     // trick!
-    final static private String _F_STR_propKeyLauncherJWS = "javawebstart.version";
+    private static final String _F_STR_propKeyLauncherJWS = "javawebstart.version";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         tempo! for dev only
     **/
-    static public boolean DUMMY_s_isDeployedWithJws()
+    public static boolean DUMMY_s_isDeployedWithJws()
     {
         String str = System.getProperty("dummy_" + AppAbs._F_STR_propKeyLauncherJWS);
         
@@ -65,7 +65,7 @@ abstract public class AppAbs extends Object
         return true;
     }
     
-    static public boolean s_isDeployedWithEcp() // Eclipse plugin
+    public static boolean s_isDeployedWithEcp() // Eclipse plugin
     {
         String str = System.getProperty(AppAbs.F_STR_propKeyLauncherEclipsePlugin);
         
@@ -81,7 +81,7 @@ abstract public class AppAbs extends Object
         return false;
     }
     
-    static public boolean s_isDeployedWithNbm() // NetBeans IDE module
+    public static boolean s_isDeployedWithNbm() // NetBeans IDE module
     {
         String str = System.getProperty(AppAbs.F_STR_propKeyLauncherNetbeansModule);
         
@@ -100,7 +100,7 @@ abstract public class AppAbs extends Object
     /**
         javawebstart.version
     **/
-    static public boolean s_isDeployedWithJws()
+    public static boolean s_isDeployedWithJws()
     {
         String str = System.getProperty(AppAbs._F_STR_propKeyLauncherJWS);
         

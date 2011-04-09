@@ -9,14 +9,14 @@ public class S_IINUI extends S_IINShared
 {
     // trick to handle JavaWebStart's cache resources
     public S_IINUI() {}
-    final static private S_IINUI _f_s_iin = new S_IINUI();
+    private static final S_IINUI _f_s_iin = new S_IINUI();
     
     
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strResourcePathRelativeSystem =
+    private static final String _f_s_strResourcePathRelativeSystem =
         "com" +
         File.separator +
         "google" +
@@ -35,7 +35,7 @@ public class S_IINUI extends S_IINShared
     
     
     
-    final static private String _f_s_strResourcePathRelativeJar =
+    private static final String _f_s_strResourcePathRelativeJar =
         "com" +
         "/" +
          "google" +
@@ -54,9 +54,9 @@ public class S_IINUI extends S_IINShared
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public javax.swing.ImageIcon s_get(String strFileName)
+    public static javax.swing.ImageIcon s_get(String strFileName)
     {
         ClassLoader cld = _f_s_iin.getClass().getClassLoader();
         return S_IINAbstract._s_get_(cld, strFileName, _f_s_strResourcePathRelativeSystem, _f_s_strResourcePathRelativeJar);

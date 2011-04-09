@@ -7,13 +7,13 @@ package com.google.code.p.keytooliui.ktl.swing.dialog;
 
 import java.awt.*;
 
-final public class DTblKstView extends DTblKstAbs
+public final class DTblKstView extends DTblKstAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTitleThisPrefix = "view";
-    final static private String _f_s_strTitleThisSuffix = "keystore";
+    private static final String _f_s_strTitleThisPrefix = "view";
+    private static final String _f_s_strTitleThisSuffix = "keystore";
 
     public String get_f_s_strTitleThisPrefix() {
         return _f_s_strTitleThisPrefix;

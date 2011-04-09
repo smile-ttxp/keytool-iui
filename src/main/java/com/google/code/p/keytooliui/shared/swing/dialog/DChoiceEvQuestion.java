@@ -37,24 +37,24 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import java.beans.*; //Property change stuff
 
 
-final public class DChoiceEvQuestion extends DChoiceEvAbs 
+public final class DChoiceEvQuestion extends DChoiceEvAbs 
 {
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int f_s_intInstall = 1;
-    final static public int f_s_intContinue = 2;
+    public static final int f_s_intInstall = 1;
+    public static final int f_s_intContinue = 2;
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTitleSuffix = null;
-    static private String _s_strBodyWhat = null;
-    static private String _s_strButtonTextInstall = null; // "YES";
-    static private String _s_strButtonTextContinue = null; //"CLOSE";
+    private static String _s_strTitleSuffix = null;
+    private static String _s_strBodyWhat = null;
+    private static String _s_strButtonTextInstall = null; // "YES";
+    private static String _s_strButtonTextContinue = null; //"CLOSE";
     
     
-    static private Object[] _s_objsOption = null;
+    private static Object[] _s_objsOption = null;
     
     
     // ------------------

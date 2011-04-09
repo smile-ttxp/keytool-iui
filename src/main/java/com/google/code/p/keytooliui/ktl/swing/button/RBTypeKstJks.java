@@ -30,7 +30,7 @@
  
  import java.awt.event.*;
  
- final public class RBTypeKstJks extends RBTypeKstAbs
+ public final class RBTypeKstJks extends RBTypeKstAbs
  {
     // ------
     // PUBLIC

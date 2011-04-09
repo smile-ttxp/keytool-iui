@@ -7,15 +7,15 @@ import com.google.code.p.keytooliui.ktl.swing.panel.PTabHelpAppliAdvancedUI;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIHelpAboutAppliAbstract;
 
-final public class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
+public final class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
 {
-    final static public String f_s_strDlgBodyVersion = "2.5";
+    public static final String f_s_strDlgBodyVersion = "2.5";
 
 
-    static public String STR_DLG_BODY_SUFFIX = null;
+    public static String STR_DLG_BODY_SUFFIX = null;
 
 
-    final static private String _F_STR_NAME_ICON = "aboutappli16.gif";
+    private static final String _F_STR_NAME_ICON = "aboutappli16.gif";
 
     // ------------------
     // STATIC INITIALIZER

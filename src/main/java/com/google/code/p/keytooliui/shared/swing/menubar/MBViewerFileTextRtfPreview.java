@@ -27,7 +27,7 @@ import com.google.code.p.keytooliui.shared.swing.menu.*;
 
 import java.awt.event.*;
 
-final public class MBViewerFileTextRtfPreview extends MBViewerFileTextAbs
+public final class MBViewerFileTextRtfPreview extends MBViewerFileTextAbs
 {
     // ------
     // PUBLIC

@@ -15,21 +15,21 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCrtExpTcr extends PTabUICmdKtlKstOpenCrtExpAbs
+public final class PTabUICmdKtlKstOpenCrtExpTcr extends PTabUICmdKtlKstOpenCrtExpAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Export trusted certificate entry as certificate file";
+    public static final String STR_TITLETASK = "Export trusted certificate entry as certificate file";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    static private String _s_strDlgInfoActionBodyBeg = null;
-    static private String _s_strDlgInfoActionBodyCrt = null;
-    static private String _s_strDlgInfoActionBodyQuery = null;
+    private static String _s_strDlgInfoActionBodyBeg = null;
+    private static String _s_strDlgInfoActionBodyCrt = null;
+    private static String _s_strDlgInfoActionBodyQuery = null;
     
     // ------------------
     // STATIC INITIALIZER

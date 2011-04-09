@@ -36,10 +36,10 @@ import java.awt.*;
 abstract public class DPasswordConfirmAbs extends DPasswordAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTextLabelEnterNew = "Enter new password:";
-    final static private String _f_s_strTextLabelConfirmNew = "Confirm new password:";
+    private static final String _f_s_strTextLabelEnterNew = "Enter new password:";
+    private static final String _f_s_strTextLabelConfirmNew = "Confirm new password:";
     
     // ------
     // PUBLIC

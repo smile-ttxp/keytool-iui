@@ -32,19 +32,19 @@ import javax.swing.*;
 
 import java.io.*;
 
-final public class ChgLocMainUITabsKtl extends ChgLocMainUITabsAbs
+public final class ChgLocMainUITabsKtl extends ChgLocMainUITabsAbs
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
     // memo: not necessary, BUT shows how to assign a non default location
     // in such a case, should use the default value assigned in this class, NOT in the superclass
-    //final static private int _f_s_intDefault = ChgLocAbstract.F_S_INT_TOP; // ChgLocAbstract.F_S_INT_LEFT;
+    //private static final int _f_s_intDefault = ChgLocAbstract.F_S_INT_TOP; // ChgLocAbstract.F_S_INT_LEFT;
     
     // -----------------
-    // STATIC PUBLIC INT   
+    // PUBLIC STATIC INT   
     
-    static public int S_INT_LAST = ChgLocMainUIAbs._f_s_intDefault;
+    public static int S_INT_LAST = ChgLocMainUIAbs._f_s_intDefault;
     
     // ------
     // PUBLIC

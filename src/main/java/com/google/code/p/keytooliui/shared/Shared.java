@@ -34,58 +34,58 @@ import java.util.*;
 abstract public class Shared extends Object
 { 
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
     // !!! "1.5" ==> "15", value should be checked in a static method
-    final static public String f_s_strPackLibVersionXP = "15"; 
+    public static final String f_s_strPackLibVersionXP = "15"; 
     
-    final static public String f_s_strLibNameShortXPBeans = "bns";
-    final static public String f_s_strLibNameShortXPApplets = "app";
+    public static final String f_s_strLibNameShortXPBeans = "bns";
+    public static final String f_s_strLibNameShortXPApplets = "app";
     
-    final static public String f_s_strLibSeparator = "_";
+    public static final String f_s_strLibSeparator = "_";
     
     // ----------------------
-    // FINAL STATIC PROTECTED
+    // PROTECTED STATIC FINAL
     
-    final static protected String _f_s_strPackLibNameXP_ = "rc"; // RagingCat Project 
+    protected static final String _f_s_strPackLibNameXP_ = "rc"; // RagingCat Project 
 
     
-    final static protected String _f_s_strLibSuffix_ = "." + 
+    protected static final String _f_s_strLibSuffix_ = "." + 
         com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strJARDocument.toLowerCase(); // memo: already lowcase
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.Shared.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.Shared.";
     
-    final static private String _f_s_strBundleFileShortMagic = "_magic_rcp";
+    private static final String _f_s_strBundleFileShortMagic = "_magic_rcp";
     
     
     // -- package name
     
-    final static private String _f_s_strPackLibNameJH = "jh";   // JavaSoft's JavaHelp
-    final static private String _f_s_strPackLibNameOH = "oh";   // Oracle Help for Java
+    private static final String _f_s_strPackLibNameJH = "jh";   // JavaSoft's JavaHelp
+    private static final String _f_s_strPackLibNameOH = "oh";   // Oracle Help for Java
     
     // -- package version
-    final static private String _f_s_strPackLibVersionJH = "2004"; // changed march  25, 2007 (jh2002: from oct 23, 2005, previous: jh2001)
-    final static private String _f_s_strPackLibVersionOH = "427";  // changed dec 01, 2004 (old:"423") 
+    private static final String _f_s_strPackLibVersionJH = "2004"; // changed march  25, 2007 (jh2002: from oct 23, 2005, previous: jh2001)
+    private static final String _f_s_strPackLibVersionOH = "427";  // changed dec 01, 2004 (old:"423") 
     
     // -- lib short name
     
-    final static private String _f_s_strLibNameShortXPsharedCls = "shr";
-    final static private String _f_s_strLibNameShortXPsharedRes = Shared._f_s_strLibNameShortXPsharedCls + "_rs";
+    private static final String _f_s_strLibNameShortXPsharedCls = "shr";
+    private static final String _f_s_strLibNameShortXPsharedRes = Shared._f_s_strLibNameShortXPsharedCls + "_rs";
     
-    final static private String _f_s_strLibNameShortOHh = "h";
-    final static private String _f_s_strLibNameShortOHi = "i";
-    final static private String _f_s_strLibNameShortOHj = "j";
-    final static private String _f_s_strLibNameShortJHjh = "jh";
-    final static private String _f_s_strLibNameShortJHjsearch = "jsearch"; // used in XLBuilder
+    private static final String _f_s_strLibNameShortOHh = "h";
+    private static final String _f_s_strLibNameShortOHi = "i";
+    private static final String _f_s_strLibNameShortOHj = "j";
+    private static final String _f_s_strLibNameShortJHjh = "jh";
+    private static final String _f_s_strLibNameShortJHjsearch = "jsearch"; // used in XLBuilder
     
     // --------------------------
-    // FINAL STATIC PUBLIC STRING  
+    // PUBLIC STATIC FINAL STRING  
     
     // eg: oh[javahelp.version]h.jar
-    final static public String f_s_strLibOHh = 
+    public static final String f_s_strLibOHh = 
         Shared._f_s_strPackLibNameOH + // package name
         Shared._f_s_strPackLibVersionOH + // package version
         Shared._f_s_strLibNameShortOHh + // library short name
@@ -93,7 +93,7 @@ abstract public class Shared extends Object
         ; 
         
     // eg: oh[javahelp.version]i.jar
-    final static public String f_s_strLibOHi = 
+    public static final String f_s_strLibOHi = 
         Shared._f_s_strPackLibNameOH + // package name
         Shared._f_s_strPackLibVersionOH + // package version
         Shared._f_s_strLibNameShortOHi + // library short name
@@ -101,7 +101,7 @@ abstract public class Shared extends Object
         ; 
         
     // eg: oh[javahelp.version]j.jar
-    final static public String f_s_strLibOHj = 
+    public static final String f_s_strLibOHj = 
         Shared._f_s_strPackLibNameOH + // package name
         Shared._f_s_strPackLibVersionOH + // package version
         Shared._f_s_strLibNameShortOHj + // library short name
@@ -109,7 +109,7 @@ abstract public class Shared extends Object
         ; 
     
     // eg: jh[javahelp.version]jh.jar
-    final static public String f_s_strLibJHjh = 
+    public static final String f_s_strLibJHjh = 
         Shared._f_s_strPackLibNameJH + // package name
         Shared._f_s_strPackLibVersionJH + // package version
         Shared._f_s_strLibNameShortJHjh + // library short name
@@ -117,14 +117,14 @@ abstract public class Shared extends Object
         ; 
     
     // eg: jh[javahelp.version]_srh.jar, may not be in used for now (this lib is used by XLBuilder)
-    final static public String f_s_strLibJHjsearch =
+    public static final String f_s_strLibJHjsearch =
         Shared._f_s_strPackLibNameJH + // package name
         Shared._f_s_strPackLibVersionJH + // package version
         Shared._f_s_strLibNameShortJHjsearch + // library short name
         Shared._f_s_strLibSuffix_
         ; 
     
-    final static public String f_s_strBundleDir = "com.google.code.p.keytooliui.shared.bundle";
+    public static final String f_s_strBundleDir = "com.google.code.p.keytooliui.shared.bundle";
     
     /*
         ==> public released:
@@ -160,9 +160,9 @@ abstract public class Shared extends Object
           . OHReader (Through XLApplets)
     */
     
-    final static public String f_s_strVersionCurr = "1.5"; // released: [month] [day], [year]
+    public static final String f_s_strVersionCurr = "1.5"; // released: [month] [day], [year]
     
-    final static public String[] f_s_strsVersionPrev =
+    public static final String[] f_s_strsVersionPrev =
     { 
         "1.01b",      // released: april 22, 2001 ==> public release
         "1.0.2-beta", // released: april 30, 2001 ==> for 2001 JavaOne Conference, as a demo only
@@ -175,12 +175,12 @@ abstract public class Shared extends Object
         "1.4"
     };
     
-    final static public String f_s_strValueNil = "_void_";
+    public static final String f_s_strValueNil = "_void_";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static private PropertyResourceBundle _s_prbMagic = null;
+    private static PropertyResourceBundle _s_prbMagic = null;
     static boolean _s_blnFirstRun = true;
     // --
     /**
@@ -188,7 +188,7 @@ abstract public class Shared extends Object
         missing file allowed!
     **/
     // in comments, april 11, 07
-    /*static public PropertyResourceBundle s_getPrbMagic()
+    /*public static PropertyResourceBundle s_getPrbMagic()
     {
         String strMethod = Shared._f_s_strClass + "s_getPrbMagic()";
         
@@ -271,7 +271,7 @@ abstract public class Shared extends Object
         eg: strAppliLibNameShort="rcr"
         ==> rc[version]rcr
     */
-    static public String s_getNameShortLibClass(String strAppliLibNameShort)
+    public static String s_getNameShortLibClass(String strAppliLibNameShort)
     {
         String strMethod = "s_getNameShortLibClass(strAppliLibNameShort)";
         
@@ -293,7 +293,7 @@ abstract public class Shared extends Object
         eg: strAppliLibNameShort="rcr_rs"
         ==> rc[version]rcr_rs
     */
-    static public String s_getNameShortLibResource(String strAppliLibNameShort)
+    public static String s_getNameShortLibResource(String strAppliLibNameShort)
     {
         String strMethod = "s_getNameShortLibResource(strAppliLibNameShort)";
         
@@ -312,7 +312,7 @@ abstract public class Shared extends Object
     }
     
     // eg: rc[version]rcr_rs.jar
-    static public String s_getNameLibResource(String strAppliLibNameShort)
+    public static String s_getNameLibResource(String strAppliLibNameShort)
     {
         String strMethod = "s_getNameLibResource(strAppliLibNameShort)";
         
@@ -325,7 +325,7 @@ abstract public class Shared extends Object
     }
     
     // eg: rc[version]rcr.jar
-    static public String s_getNameLibClass(String strAppliLibNameShort)
+    public static String s_getNameLibClass(String strAppliLibNameShort)
     {
         String strMethod = "s_getNameLibClass(strAppliLibNameShort)";
         
@@ -338,13 +338,13 @@ abstract public class Shared extends Object
     }
     
     // eg: rc[version]shr.jar
-    static public String s_getNameLibClass()
+    public static String s_getNameLibClass()
     {
         return Shared.s_getNameLibClass(Shared._f_s_strLibNameShortXPsharedCls);
     }
     
     // eg: rc[version]shr.jar
-    static public String s_getNameLibResource()
+    public static String s_getNameLibResource()
     {
         return Shared.s_getNameLibResource(Shared._f_s_strLibNameShortXPsharedRes);
     }

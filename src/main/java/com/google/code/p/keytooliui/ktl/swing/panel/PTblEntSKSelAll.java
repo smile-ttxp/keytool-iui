@@ -40,13 +40,13 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class PTblEntSKSelAll extends PTblEntSKAbs 
+public final class PTblEntSKSelAll extends PTblEntSKAbs 
 {
     // --------------
-    // static private
+    // private static
     
     // not working coz not taking into account length of columns' titles
-    static private int _s_getWidth()
+    private static int _s_getWidth()
     {
         int intVal = 0;
         
@@ -60,9 +60,9 @@ final public class PTblEntSKSelAll extends PTblEntSKAbs
     }
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    //final static private int _f_s_intDeltaW = 0; // using default width assigned in superclass
+    //private static final int _f_s_intDeltaW = 0; // using default width assigned in superclass
     
     // ------
     // PUBLIC

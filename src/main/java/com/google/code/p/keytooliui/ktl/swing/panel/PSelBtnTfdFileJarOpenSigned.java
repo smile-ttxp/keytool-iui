@@ -42,17 +42,17 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-final public class PSelBtnTfdFileJarOpenSigned extends PSelBtnTfdFileJarOpenAbs
+public final class PSelBtnTfdFileJarOpenSigned extends PSelBtnTfdFileJarOpenAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC 
+    // PUBLIC STATIC FINAL 
     
-    final static public String f_s_strDocPropVal = "select_file_jar_open_signed";
+    public static final String f_s_strDocPropVal = "select_file_jar_open_signed";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabel = "Signed JAR file:";
+    private static final String _f_s_strLabel = "Signed JAR file:";
     
     // ------
     // PUBLIC

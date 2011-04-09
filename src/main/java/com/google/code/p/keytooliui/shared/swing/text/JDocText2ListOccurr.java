@@ -51,10 +51,10 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.text.*;
 
-final public class JDocText2ListOccurr
+public final class JDocText2ListOccurr
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
     final private static String _f_s_strWordDelimiter = " =.,;:!?\"'(){}[]";
     

@@ -27,20 +27,20 @@ import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 
-final public class PlainDocumentFilter extends PlainDocument
+public final class PlainDocumentFilter extends PlainDocument
 {
    // -------------------
-   // FINAL STATIC PUBLIC
+   // PUBLIC STATIC FINAL
                
         
-   final static public String f_s_strLowerCase = "abcdefghijklmnopqrstuvwxyz";
-   final static public String f_s_strUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-   final static public String f_s_strAlpha = f_s_strLowerCase + f_s_strUpperCase;
-   final static public String f_s_strNumeric = "0123456789";
-   final static public String f_s_strFloat = f_s_strNumeric + ".";
-   final static public String f_s_strAlphaNumeric = f_s_strAlpha + f_s_strNumeric;
+   public static final String f_s_strLowerCase = "abcdefghijklmnopqrstuvwxyz";
+   public static final String f_s_strUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   public static final String f_s_strAlpha = f_s_strLowerCase + f_s_strUpperCase;
+   public static final String f_s_strNumeric = "0123456789";
+   public static final String f_s_strFloat = f_s_strNumeric + ".";
+   public static final String f_s_strAlphaNumeric = f_s_strAlpha + f_s_strNumeric;
     
-   final static public String f_s_strFilePrefix =  f_s_strAlphaNumeric + "_";
+   public static final String f_s_strFilePrefix =  f_s_strAlphaNumeric + "_";
    
    // ------
    // PUBLIC

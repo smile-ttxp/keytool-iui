@@ -44,9 +44,9 @@ abstract public class MChgAlignToolAbstract extends MChgAlignAbstract
 { 
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

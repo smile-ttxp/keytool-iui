@@ -24,12 +24,12 @@
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class MIHelpJHSourceExpert extends MIHelpJHSourceAbstract
+public final class MIHelpJHSourceExpert extends MIHelpJHSourceAbstract
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

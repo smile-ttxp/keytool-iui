@@ -20,64 +20,64 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener, TreeExpansionListener
 {   
     // -------------------
-    // final static public
+    // public static final
     
     // temp
     
-    final static public String STR_NODE_KW_PKDER = "DER file format";
-    final static public String STR_NODE_KW_PKPEM = "PEM file format";
+    public static final String STR_NODE_KW_PKDER = "DER file format";
+    public static final String STR_NODE_KW_PKPEM = "PEM file format";
     
-    final static public String STR_NODE_KW_SK = "Secret key";
-    final static public String STR_NODE_KW_TC = "Trusted certificate";
-    final static public String STR_NODE_KW_PK = "Private key";
-    final static public String STR_NODE_KW_PK_V1C = STR_NODE_KW_PK + ", with vers. #1 cert.";
-    final static public String STR_NODE_KW_PK_V3C = STR_NODE_KW_PK + ", with vers. #3 cert.";
-    final static public String STR_NODE_KW_ENTRY = "Keystore's entry";
+    public static final String STR_NODE_KW_SK = "Secret key";
+    public static final String STR_NODE_KW_TC = "Trusted certificate";
+    public static final String STR_NODE_KW_PK = "Private key";
+    public static final String STR_NODE_KW_PK_V1C = STR_NODE_KW_PK + ", with vers. #1 cert.";
+    public static final String STR_NODE_KW_PK_V3C = STR_NODE_KW_PK + ", with vers. #3 cert.";
+    public static final String STR_NODE_KW_ENTRY = "Keystore's entry";
     
-    final static public String STR_NODE_KW_TCREGULAR = "Regular certificate";
-    final static public String STR_NODE_KW_TCROOTCA = "Root CA certificate";
-    
-    
-    final static public String STR_NODE_CREATE = "Create";
-    final static public String STR_NODE_CRKST = "Keystore";
-    final static public String STR_NODE_CRENTPKDSA = "DSA";
-    final static public String STR_NODE_CRENTPKRSA = "RSA";
-    final static public String STR_NODE_CRENTPKEC = "EC";
-    
-    final static public String STR_NODE_CIPHERSIGN = "Sign file with private key";
-    final static public String STR_NODE_CIPHERVERIFY = "Verify signed file";
-    final static public String STR_NODE_CIPHERDET = "Detached signature";
-    final static public String STR_NODE_CIPHERDETOTHER = "Other";
-    final static public String STR_NODE_CIPHERDETCMS = "CMS";
-    final static public String STR_NODE_CIPHEREMB = "Embedded signature";
-    final static public String STR_NODE_CIPHEREMBXML = "XML";
-    final static public String STR_NODE_CIPHEREMBJAR = "JAR";
-    
-    final static public String STR_NODE_ARCDIR = "Directory"; // archiving directory
+    public static final String STR_NODE_KW_TCREGULAR = "Regular certificate";
+    public static final String STR_NODE_KW_TCROOTCA = "Root CA certificate";
     
     
-    final static public String STR_NODE_CRYPTENC = "Encrypt file with keystore's entry";
-    final static public String STR_NODE_CRYPTDEC = "Decrypt file with keystore's entry";
-    final static public String STR_NODE_CRYPTSK = "Use secret key";
-    final static public String STR_NODE_CRYPTPK = "Use RSA private key";
-    final static public String STR_NODE_CRYPTTC = "Use RSA trusted certificate";
+    public static final String STR_NODE_CREATE = "Create";
+    public static final String STR_NODE_CRKST = "Keystore";
+    public static final String STR_NODE_CRENTPKDSA = "DSA";
+    public static final String STR_NODE_CRENTPKRSA = "RSA";
+    public static final String STR_NODE_CRENTPKEC = "EC";
+    
+    public static final String STR_NODE_CIPHERSIGN = "Sign file with private key";
+    public static final String STR_NODE_CIPHERVERIFY = "Verify signed file";
+    public static final String STR_NODE_CIPHERDET = "Detached signature";
+    public static final String STR_NODE_CIPHERDETOTHER = "Other";
+    public static final String STR_NODE_CIPHERDETCMS = "CMS";
+    public static final String STR_NODE_CIPHEREMB = "Embedded signature";
+    public static final String STR_NODE_CIPHEREMBXML = "XML";
+    public static final String STR_NODE_CIPHEREMBJAR = "JAR";
+    
+    public static final String STR_NODE_ARCDIR = "Directory"; // archiving directory
     
     
-    final static public String STR_NODE_IOIN = "Import";
-    final static public String STR_NODE_IOOUT = "Export";
+    public static final String STR_NODE_CRYPTENC = "Encrypt file with keystore's entry";
+    public static final String STR_NODE_CRYPTDEC = "Decrypt file with keystore's entry";
+    public static final String STR_NODE_CRYPTSK = "Use secret key";
+    public static final String STR_NODE_CRYPTPK = "Use RSA private key";
+    public static final String STR_NODE_CRYPTTC = "Use RSA trusted certificate";
     
-    final static public String STR_NODE_IOENTPKOTHER = "From other keystore"; // IN !
-    final static public String STR_NODE_IOCACRTREPLY = "Private key's cert. from CA cert. reply"; // IN !
-    final static public String STR_NODE_IOPKZCRT = "Private key's first certificate in chain"; // OUT !
-    final static public String STR_NODE_IOPKZCRT2CSR = "As certificate signing request file"; // OUT !
-    final static public String STR_NODE_IOPKZCRT2CRT = "As simple certificate file"; // OUT !
+    
+    public static final String STR_NODE_IOIN = "Import";
+    public static final String STR_NODE_IOOUT = "Export";
+    
+    public static final String STR_NODE_IOENTPKOTHER = "From other keystore"; // IN !
+    public static final String STR_NODE_IOCACRTREPLY = "Private key's cert. from CA cert. reply"; // IN !
+    public static final String STR_NODE_IOPKZCRT = "Private key's first certificate in chain"; // OUT !
+    public static final String STR_NODE_IOPKZCRT2CSR = "As certificate signing request file"; // OUT !
+    public static final String STR_NODE_IOPKZCRT2CRT = "As simple certificate file"; // OUT !
             
     // --------------------
-    // final static private
+    // private static final
     
-    final static private String _STR_NODEMANAGEKST = "Manage keystore file";
+    private static final String _STR_NODEMANAGEKST = "Manage keystore file";
     
-    final static public String STR_NODE_WELCOME = "Welcome";
+    public static final String STR_NODE_WELCOME = "Welcome";
 
     
     

@@ -27,7 +27,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 
 
-final public class MRangeToValue extends DefaultBoundedRangeModel
+public final class MRangeToValue extends DefaultBoundedRangeModel
 {
     // ------------------------
     // FINAL PRIVATE STATIC INT

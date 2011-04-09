@@ -28,12 +28,12 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MIFileExit extends MIAbstract 
+public final class MIFileExit extends MIAbstract 
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

@@ -15,9 +15,9 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 abstract public class BESFolderCloseAbs extends BEnabledState
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipText = "Collapse all from highlighted folder"; //null;
+    private static String _s_strToolTipText = "Collapse all from highlighted folder"; //null;
     
     // ------------------
     // STATIC INITIALIZER

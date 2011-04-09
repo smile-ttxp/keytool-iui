@@ -47,9 +47,9 @@ import java.awt.*;
 abstract public class MHelpAllMainUIAbs extends MHelpAllMainAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTextHelpOfflineSource = "User's Guide ...";
+    private static final String _f_s_strTextHelpOfflineSource = "User's Guide ...";
     
     // ------
     // PUBLIC

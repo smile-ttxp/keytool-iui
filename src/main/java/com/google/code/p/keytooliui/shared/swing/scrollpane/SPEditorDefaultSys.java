@@ -27,7 +27,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.textpane.*;
 
 
-final public class SPEditorDefaultSys extends SPEditorAbstract
+public final class SPEditorDefaultSys extends SPEditorAbstract
 {    
     // ------
     // PUBLIC

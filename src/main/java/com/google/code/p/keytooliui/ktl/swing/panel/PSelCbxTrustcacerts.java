@@ -12,10 +12,10 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 import com.google.code.p.keytooliui.shared.swing.panel.*;
 
-final public class PSelCbxTrustcacerts extends PSelCbxAbs
+public final class PSelCbxTrustcacerts extends PSelCbxAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     // JDK's related: keytool -import "-trustcacerts"
     /*
@@ -31,7 +31,7 @@ final public class PSelCbxTrustcacerts extends PSelCbxAbs
 	(the jre directory in the SDK or the top-level directory of the Java 2 Runtime Environment). 
 	The "cacerts" file represents a system-wide keystore with CA certificates."
     */
-    final static private String _f_s_strLabel = "Check root CA certs store:"; 
+    private static final String _f_s_strLabel = "Check root CA certs store:"; 
     
     // ------
     // PUBLIC   

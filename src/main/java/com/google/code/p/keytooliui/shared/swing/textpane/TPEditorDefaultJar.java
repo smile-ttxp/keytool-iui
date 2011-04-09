@@ -26,7 +26,7 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.io.*;
 
-final public class TPEditorDefaultJar extends TPEditorAbstract 
+public final class TPEditorDefaultJar extends TPEditorAbstract 
 {    
    
     

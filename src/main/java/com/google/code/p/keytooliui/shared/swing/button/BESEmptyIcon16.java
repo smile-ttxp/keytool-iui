@@ -30,12 +30,12 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class BESEmptyIcon16 extends BEnabledState
+public final class BESEmptyIcon16 extends BEnabledState
 {  
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
    
-    final static private String _s_strImage = "emptyicon16.gif";
+    private static final String _s_strImage = "emptyicon16.gif";
     
     // ---------
     // PROTECTED

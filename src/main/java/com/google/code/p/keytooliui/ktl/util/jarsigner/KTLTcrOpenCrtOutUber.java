@@ -28,7 +28,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLTcrOpenCrtOutUber extends KTLTcrOpenCrtOutDMAbs
+public final class KTLTcrOpenCrtOutUber extends KTLTcrOpenCrtOutDMAbs
 {
     // ------
     // PUBLIC

@@ -19,19 +19,19 @@ import java.io.*;
 import java.awt.*;
 
 
-final public class UtilKstAll extends UtilKstAbs
+public final class UtilKstAll extends UtilKstAbs
 {
     // --------------------
-    // final static private
+    // private static final
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstAll";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstAll";
     
     // -------------
-    // static public
+    // public static
     
     
     
-    static public void s_manageFile(
+    public static void s_manageFile(
         Frame frmParent)
     {
         String strMethod = UtilKstAll._f_s_strClass + "." + "s_manageFile(...)";
@@ -175,7 +175,7 @@ final public class UtilKstAll extends UtilKstAbs
     }
     
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilKstAll._f_s_strClass + "." + "s_showFile(...)";
@@ -254,9 +254,9 @@ final public class UtilKstAll extends UtilKstAbs
     }
     
     // --------------
-    // static private
+    // private static
     
-    static private char[] _s_getPassword(Frame frmParent)
+    private static char[] _s_getPassword(Frame frmParent)
     {
         String strMethod = "UtilKstAll._s_getPassword(...)";
         

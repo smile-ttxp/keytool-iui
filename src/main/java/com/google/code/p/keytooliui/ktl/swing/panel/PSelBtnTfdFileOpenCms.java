@@ -34,16 +34,16 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileOpenCms extends PSelBtnTfdFileOpenAbs
+public final class PSelBtnTfdFileOpenCms extends PSelBtnTfdFileOpenAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_cms_open";
-    final static public String s_strDirNameDefault = "mycmss";
+    public static final String f_s_strDocPropVal = "select_file_cms_open";
+    public static final String s_strDirNameDefault = "mycmss";
     
     
-    final static private String _STR_LABELSUFFIX = "(detached) CMS signature file:"; 
+    private static final String _STR_LABELSUFFIX = "(detached) CMS signature file:"; 
     
     // ------
     // PUBLIC

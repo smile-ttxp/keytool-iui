@@ -9,12 +9,12 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 public class S_StringShared
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.lang.string.S_StringShared.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.lang.string.S_StringShared.";
     
     // -------------
-    // STATIC PUBLIC 
+    // PUBLIC STATIC 
     
     /*
         eg: input = { "foo", "foo2", "foo3" }
@@ -22,7 +22,7 @@ public class S_StringShared
         if any error, return nil
     */
     
-    static public String s_get(String[] strs)
+    public static String s_get(String[] strs)
     {
         if (strs == null)
             return null;
@@ -68,7 +68,7 @@ public class S_StringShared
     
     **/
     
-    static public String s_getFileRelativeLocation(String strFolderAncestor, java.io.File fle)
+    public static String s_getFileRelativeLocation(String strFolderAncestor, java.io.File fle)
     {
         String strWhere = S_StringShared._f_s_strClass + "s_getFileRelativeLocation(strFolderAncestor, fle)";
        
@@ -87,7 +87,7 @@ public class S_StringShared
     
     
     
-    static public String[] s_getArrayFromStringSeparator(String str2Split, String strSeparator)
+    public static String[] s_getArrayFromStringSeparator(String str2Split, String strSeparator)
     {
         String strWhere = S_StringShared._f_s_strClass + "s_getArrayFromStringSeparator(str2Split, strSeparator)";
    
@@ -112,7 +112,7 @@ public class S_StringShared
         return strs;
     }
     
-    static public String s_getExtension(String str)
+    public static String s_getExtension(String str)
     {
         String strMethod = S_StringShared._f_s_strClass + "s_getExtension(str)";
         
@@ -152,7 +152,7 @@ public class S_StringShared
         
         if any error, returning nil
     */
-    static public String[] s_getArrayFromStringFileSeparatorSystem(String str)
+    public static String[] s_getArrayFromStringFileSeparatorSystem(String str)
     {
         return S_StringShared.s_getArrayFromStringSeparator(str, File.separator);
     }
@@ -170,7 +170,7 @@ public class S_StringShared
         
         if any error, returning nil
     */
-    static public String[] s_getArrayFromStringFileSeparatorJava(String str)
+    public static String[] s_getArrayFromStringFileSeparatorJava(String str)
     {
         return s_getArrayFromStringSeparator(str, "/");
     }
@@ -188,7 +188,7 @@ public class S_StringShared
     **/
     
     /**
-    static public String s_get(java.awt.Color col)
+    public static String s_get(java.awt.Color col)
     {    
         if (col == null)
             return com.google.code.p.keytooliui.shared.Shared.f_s_strValueNil;
@@ -209,7 +209,7 @@ public class S_StringShared
     **/
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     /**
         EG:
@@ -221,7 +221,7 @@ public class S_StringShared
         WARNING: if the same, returning :"", instead of for ex. in Windows: "\"
     **/
     
-    static private String _s_getFolderRelativeLocation(String strFolderAncestor, String strFolderTarget)
+    private static String _s_getFolderRelativeLocation(String strFolderAncestor, String strFolderTarget)
     {
         String strWhere = S_StringShared._f_s_strClass + "_s_getFolderRelativeLocation(strFolderAncestor, strFolderTarget)";
     

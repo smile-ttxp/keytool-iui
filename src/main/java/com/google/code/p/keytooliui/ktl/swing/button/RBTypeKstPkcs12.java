@@ -8,7 +8,7 @@
  
  import java.awt.event.*;
  
- final public class RBTypeKstPkcs12 extends RBTypeKstAbs
+ public final class RBTypeKstPkcs12 extends RBTypeKstAbs
  {   
     // ------
     // PUBLIC

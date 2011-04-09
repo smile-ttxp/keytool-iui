@@ -32,7 +32,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 
 
-final public class PSelCmbStrCipherRsaAlgoAll extends PSelCmbStrCipherRsaAlgoAbs
+public final class PSelCmbStrCipherRsaAlgoAll extends PSelCmbStrCipherRsaAlgoAbs
 {       
     // ---------
     // PUBLIC   

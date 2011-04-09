@@ -30,22 +30,22 @@ import java.util.EventListener;
 public class DRangeAbstractEventMulticaster extends java.awt.AWTEventMulticaster implements DRangeAbstractListener
 {
     // -----------------------
-    // STATIC PUBLIC ~Listener
+    // PUBLIC STATIC ~Listener
     
-    static public DRangeAbstractListener add(DRangeAbstractListener amlA, DRangeAbstractListener amlB)
+    public static DRangeAbstractListener add(DRangeAbstractListener amlA, DRangeAbstractListener amlB)
 	{
         return (DRangeAbstractListener) addInternal(amlA, amlB);
 	}
   
-	static public DRangeAbstractListener remove(DRangeAbstractListener aml, DRangeAbstractListener amlOld)
+	public static DRangeAbstractListener remove(DRangeAbstractListener aml, DRangeAbstractListener amlOld)
 	{
         return (DRangeAbstractListener) removeInternal(aml, amlOld);
 	}
 	
 	// ----------------
-	// STATIC PROTECTED
+	// PROTECTED STATIC
 	
-	static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+	protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

@@ -30,14 +30,14 @@ import java.io.*;
 public class S_FileFilterSys
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String  _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileFilterSys.";
+    private static final String  _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileFilterSys.";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public String[] s_list(String strPathAbsFolderParent)
+    public static String[] s_list(String strPathAbsFolderParent)
     {
         String strWhere = _f_s_strClass + "s_list(strPathAbsFolderParent)";
         
@@ -78,7 +78,7 @@ public class S_FileFilterSys
         return strsList;
     }
     
-    static public File[] s_getChildrenDirectoryOnly(String strPathAbsFolderParent)
+    public static File[] s_getChildrenDirectoryOnly(String strPathAbsFolderParent)
     {
         String strWhere = _f_s_strClass + "s_getChildrenDirectoryOnly(strPathAbsFolderParent)";
         
@@ -141,7 +141,7 @@ public class S_FileFilterSys
     /**
         if returning nil, error
     **/
-    static public File[] s_getChildrenDirectoryAndFile(File fleFolderParent, String[] strsFileExtension)
+    public static File[] s_getChildrenDirectoryAndFile(File fleFolderParent, String[] strsFileExtension)
     {
         String strWhere = _f_s_strClass + "s_getChildrenDirectoryAndFile(fleFolderParent, strsFileExtension)";
         
@@ -193,7 +193,7 @@ public class S_FileFilterSys
         return flesChildFiltered;
     }
     
-    static public File[] s_getChildrenDirectoryAndFile(String strFolderParent)
+    public static File[] s_getChildrenDirectoryAndFile(String strFolderParent)
     {
         String strWhere = _f_s_strClass + "s_getChildrenDirectoryAndFile(strFolderParent)";
         
@@ -209,7 +209,7 @@ public class S_FileFilterSys
     /**
         if returning nil, error
     **/
-    static public File[] s_getChildrenDirectoryAndFile(File fleFolderParent)
+    public static File[] s_getChildrenDirectoryAndFile(File fleFolderParent)
     {
         String strWhere = _f_s_strClass + "s_getChildrenDirectoryAndFile(fleFolderParent)";
         
@@ -293,7 +293,7 @@ public class S_FileFilterSys
     // returns all children files (which have the extension in the strsFileExtension list)
     // included in folderParent
     // BUT no directories!
-    static public File[] s_getChildrenFileOnly(String strFolderParent, String[] strsFileExtensionLeaf)
+    public static File[] s_getChildrenFileOnly(String strFolderParent, String[] strsFileExtensionLeaf)
     {
         String strWhere = _f_s_strClass + "s_getChildrenFileOnly(strFolderParent, strsFileExtensionLeaf)";
         
@@ -339,12 +339,12 @@ public class S_FileFilterSys
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
      /**
         if returning nil, error
     **/
-    static private File[] _s_getChildrenDirectoryAndFile(String strFolderParent)
+    private static File[] _s_getChildrenDirectoryAndFile(String strFolderParent)
     {
         String strWhere = _f_s_strClass + "_s_getChildrenDirectoryAndFile(strFolderParent)";
         
@@ -406,7 +406,7 @@ public class S_FileFilterSys
     }
     
     // removing all "directory" files
-    static private File[] _s_getFileOnly(File[] flesAll)
+    private static File[] _s_getFileOnly(File[] flesAll)
     {
         String strWhere = _f_s_strClass + "_s_getFileOnly(flesAll)";
         
@@ -450,7 +450,7 @@ public class S_FileFilterSys
     }
     
      // assuming there are just files (not folders), creating a new file list from the extension list
-    static private File[] _s_getFileOnlyFiltered(File[] flesFileOnly, String[] strsFileExtensionLeaf)
+    private static File[] _s_getFileOnlyFiltered(File[] flesFileOnly, String[] strsFileExtensionLeaf)
     {
         String strWhere = _f_s_strClass + "_s_getFileOnlyFiltered(flesFileOnly, strsFileExtensionLeaf)";
         

@@ -23,7 +23,7 @@ package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 import java.awt.event.ActionListener;
 
-final public class MISelTabJarVerify extends MISelTabAbs
+public final class MISelTabJarVerify extends MISelTabAbs
 {
     public MISelTabJarVerify(ActionListener actListenerParent)
     {

@@ -31,9 +31,9 @@ abstract public class DTblEntryTcrOpenAbs extends DTblEntryTcrAbs implements
     ListSelectionListener
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabelAliasSelected = 
+    private static final String _f_s_strLabelAliasSelected = 
         "Selected alias:";
     
     // ------

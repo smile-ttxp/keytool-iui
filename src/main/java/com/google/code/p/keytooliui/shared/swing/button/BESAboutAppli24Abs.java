@@ -33,9 +33,9 @@ import com.google.code.p.keytooliui.shared.swing.panel.PTabHelpAppliAdvancedAbs;
 abstract public class BESAboutAppli24Abs extends BESAboutAppliAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "aboutappli24.gif";
+    private static final String _f_s_strImage = "aboutappli24.gif";
     
     // ---------
     // PROTECTED

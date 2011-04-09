@@ -46,21 +46,21 @@ abstract public class S_IINAbstract
     
     
     // --------------------------
-    // FINAL STATIC PUBLIC STRING
+    // PUBLIC STATIC FINAL STRING
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.imageicon.S_IINAbstract.";   
+    // PRIVATE STATIC FINAL STRING
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.imageicon.S_IINAbstract.";   
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
 
     /*
         1) development
         2) jarred, development or release
         3) JavaWebStart's cache resources
     */
-    static protected javax.swing.ImageIcon _s_get_(
+    protected static javax.swing.ImageIcon _s_get_(
         ClassLoader cldSubClass,
         String strFileName,
         String strResourcePathRelativeSystem,

@@ -18,19 +18,19 @@ public class MyCSH extends CSH
     
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.help.MyCSH.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.help.MyCSH.";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private java.util.Vector<Component> _s_vecCmpSetID = new java.util.Vector<Component>();
+    private static java.util.Vector<Component> _s_vecCmpSetID = new java.util.Vector<Component>();
     
     // ------
     // STATIC
     
-    static private boolean _S_BLN_DUMPCMP2ID = true;
+    private static boolean _S_BLN_DUMPCMP2ID = true;
     // in comments, april 11, 07
     /*static
     {
@@ -64,9 +64,9 @@ public class MyCSH extends CSH
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public boolean s_checkAndDumpCmp2ID()
+    public static boolean s_checkAndDumpCmp2ID()
     {
         String strMethod = _f_s_strClass + "s_checkAndDumpCmp2ID()";
         
@@ -117,7 +117,7 @@ public class MyCSH extends CSH
     /**
         overwrites superclass's method
     **/
-    static public void setHelpIDString(Component cmpTarget, String strID)
+    public static void setHelpIDString(Component cmpTarget, String strID)
     {
         String strMethod = _f_s_strClass + "setHelpIDString(cmpTarget, strID)";
         
@@ -139,7 +139,7 @@ public class MyCSH extends CSH
     // -----------------------------------------
     // BEGIN STATIC CLASS MyDisplayHelpFromFocus
     
-    static public class MyDisplayHelpFromFocus implements ActionListener 
+    public static class MyDisplayHelpFromFocus implements ActionListener 
     {
         String strClassSub = "MyDisplayHelpFromFocus.";
         
@@ -219,7 +219,7 @@ public class MyCSH extends CSH
     // ---------------------------------------------
     // BEGIN STATIC CLASS MyDisplayHelpAfterTracking
     
-    static public class MyDisplayHelpAfterTracking implements ActionListener 
+    public static class MyDisplayHelpAfterTracking implements ActionListener 
             , MouseListener // test
     {
         String strClassSub = "MyDisplayHelpAfterTracking.";
@@ -330,7 +330,7 @@ public class MyCSH extends CSH
     // ------------------------------------------
     // BEGIN STATIC CLASS MyDisplayHelpFromSource
     
-    static public class MyDisplayHelpFromSource implements ActionListener 
+    public static class MyDisplayHelpFromSource implements ActionListener 
     {
         String strClassSub = "MyDisplayHelpFromSource.";
         

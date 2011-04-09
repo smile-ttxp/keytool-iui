@@ -24,14 +24,14 @@ import java.beans.*; //Property change stuff
 import java.awt.*;
 import java.awt.event.*;
 
-final public class DGenKeypair extends DEscapeAbstract implements
+public final class DGenKeypair extends DEscapeAbstract implements
     ActionListener
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTitle = "generate keypair";
-    final static private String _f_s_strLabel1 = "Now generating keypair";
+    private static final String _f_s_strTitle = "generate keypair";
+    private static final String _f_s_strLabel1 = "Now generating keypair";
     
     // ------
     // PUBLIC

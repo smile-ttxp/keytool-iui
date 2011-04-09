@@ -23,7 +23,7 @@ package com.google.code.p.keytooliui.ktl.swing.label;
 
 import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarApk;
 
-final public class LabelCheckTypeJarApk extends LabelCheckTypeJarAbs
+public final class LabelCheckTypeJarApk extends LabelCheckTypeJarAbs
 {
     public LabelCheckTypeJarApk()
     {

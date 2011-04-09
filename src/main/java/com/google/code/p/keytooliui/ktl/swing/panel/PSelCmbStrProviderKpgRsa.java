@@ -32,7 +32,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 
 
-final public class PSelCmbStrProviderKpgRsa extends PSelCmbStrProviderKpgAbs
+public final class PSelCmbStrProviderKpgRsa extends PSelCmbStrProviderKpgAbs
 {       
     // ---------
     // PUBLIC   

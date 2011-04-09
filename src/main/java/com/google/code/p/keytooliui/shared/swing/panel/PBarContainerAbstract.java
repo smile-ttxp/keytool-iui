@@ -39,9 +39,9 @@ import java.awt.*;
 abstract public class PBarContainerAbstract extends JPanel 
 {
     // ----------------------
-    // FINAL STATIC PROTECTED
+    // PROTECTED STATIC FINAL
     
-    final static protected int _f_s_intH_ = 28;
+    protected static final int _f_s_intH_ = 28;
 
     // ---------------
     // ABSTRACT PUBLIC

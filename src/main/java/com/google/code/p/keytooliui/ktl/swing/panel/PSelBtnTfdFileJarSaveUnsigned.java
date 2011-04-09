@@ -41,17 +41,17 @@ import javax.swing.*;
 import java.awt.*;
 
 
-final public class PSelBtnTfdFileJarSaveUnsigned extends PSelBtnTfdFileJarSaveAbs
+public final class PSelBtnTfdFileJarSaveUnsigned extends PSelBtnTfdFileJarSaveAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC 
+    // PUBLIC STATIC FINAL 
     
-    final static public String f_s_strDocPropVal = "select_file_jar_save_unsigned";
+    public static final String f_s_strDocPropVal = "select_file_jar_save_unsigned";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabel = "Unsigned JAR file:";
+    private static final String _f_s_strLabel = "Unsigned JAR file:";
     
     // ------
     // PUBLIC

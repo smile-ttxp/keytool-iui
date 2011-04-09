@@ -31,7 +31,7 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 
 import java.awt.event.*;
 
-final public class PIcn2StateRtpStreaming extends PIcn2StateAbs
+public final class PIcn2StateRtpStreaming extends PIcn2StateAbs
 {     
     // ------
     // PUBLIC

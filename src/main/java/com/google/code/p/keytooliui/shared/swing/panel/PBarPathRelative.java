@@ -25,13 +25,13 @@
 
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 
-final public class PBarPathRelative extends PBarPathAbstract
+public final class PBarPathRelative extends PBarPathAbstract
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     
-    static private String _s_strLabelTip;
+    private static String _s_strLabelTip;
     
     // ------------------
     // STATIC INITIALIZER

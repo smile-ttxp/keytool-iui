@@ -24,12 +24,12 @@
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class MIHelpJHSourceForward extends MIHelpJHSourceAbstract
+public final class MIHelpJHSourceForward extends MIHelpJHSourceAbstract
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

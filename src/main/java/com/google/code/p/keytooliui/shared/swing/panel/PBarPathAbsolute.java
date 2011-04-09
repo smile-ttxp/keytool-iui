@@ -30,13 +30,13 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class PBarPathAbsolute extends PBarPathAbstract
+public final class PBarPathAbsolute extends PBarPathAbstract
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     
-    static private String _s_strLabelTip;
+    private static String _s_strLabelTip;
     
     
     // ------------------

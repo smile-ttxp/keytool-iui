@@ -39,9 +39,9 @@ import java.awt.event.*;
 abstract public class CBILoopAbs extends CBIcon
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTip = null;
+    private static String _s_strTip = null;
     
     // ------------------
     // STATIC INITIALIZER

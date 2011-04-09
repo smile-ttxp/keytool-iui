@@ -7,9 +7,9 @@ import java.util.*;
 public class StringFilter
 {
     // -------------
-    // static public
+    // public static
     
-    static public String s_getExtension(String strFileName)
+    public static String s_getExtension(String strFileName)
     {
 	    if (strFileName == null)
 	        return null;

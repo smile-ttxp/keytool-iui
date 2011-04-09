@@ -16,7 +16,7 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 
 public class UtilSK
 {
-    static private String _s_dumpIt(
+    private static String _s_dumpIt(
         Frame frmParent, 
     
         KeyStore kst,
@@ -87,7 +87,7 @@ public class UtilSK
     }
     
     
-    static public void s_show(
+    public static void s_show(
         Frame frmParent, 
     
         KeyStore kst,

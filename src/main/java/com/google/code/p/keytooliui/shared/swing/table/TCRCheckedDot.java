@@ -30,7 +30,7 @@ package com.google.code.p.keytooliui.shared.swing.table;
 import com.google.code.p.keytooliui.shared.lang.bool.*;
  
  
-final public class TCRCheckedDot extends TCRCheckedAbs
+public final class TCRCheckedDot extends TCRCheckedAbs
 {
     // ------
     // PUBLIC

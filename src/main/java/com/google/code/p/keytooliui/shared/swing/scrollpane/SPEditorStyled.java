@@ -31,7 +31,7 @@ import javax.swing.*;
 import java.util.*;
 
 
-final public class SPEditorStyled extends SPEditorAbstract
+public final class SPEditorStyled extends SPEditorAbstract
 {    
     // ------
     // PUBLIC

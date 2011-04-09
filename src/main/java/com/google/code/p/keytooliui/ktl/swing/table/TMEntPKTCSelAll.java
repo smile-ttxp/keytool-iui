@@ -31,19 +31,19 @@ import com.google.code.p.keytooliui.shared.lang.bool.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-final public class TMEntPKTCSelAll extends TMEntAbs
+public final class TMEntPKTCSelAll extends TMEntAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public int f_s_intColumnIdIsCandidate = 0;
-    final static public int f_s_intColumnIdIsTCEntry = 2;        // see array of integers right below
-    final static public int f_s_intColumnIdIsValidDate = TMEntPKTCSelAll.f_s_intColumnIdIsTCEntry + 1;      // see array of integers right below
-    final static public int f_s_intColumnIdIsSelfSignedCert = TMEntPKTCSelAll.f_s_intColumnIdIsValidDate + 1; // see array of integers right below
-    final static public int f_s_intColumnIdIsTrustedCACert = TMEntPKTCSelAll.f_s_intColumnIdIsSelfSignedCert + 1;    // see array of integers right below
+    public static final int f_s_intColumnIdIsCandidate = 0;
+    public static final int f_s_intColumnIdIsTCEntry = 2;        // see array of integers right below
+    public static final int f_s_intColumnIdIsValidDate = TMEntPKTCSelAll.f_s_intColumnIdIsTCEntry + 1;      // see array of integers right below
+    public static final int f_s_intColumnIdIsSelfSignedCert = TMEntPKTCSelAll.f_s_intColumnIdIsValidDate + 1; // see array of integers right below
+    public static final int f_s_intColumnIdIsTrustedCACert = TMEntPKTCSelAll.f_s_intColumnIdIsSelfSignedCert + 1;    // see array of integers right below
     
     // preferred columns width 
-    final static public int[] f_s_intsColW = 
+    public static final int[] f_s_intsColW = 
     { 
         30,  // booIsCandidate (for selection)
         TMEntAbs._INT_W_ALIAS_, // strAlias
@@ -58,7 +58,7 @@ final public class TMEntPKTCSelAll extends TMEntAbs
     }; // sum: ?
     
     
-    final static public String[] f_s_strsColumnNames =
+    public static final String[] f_s_strsColumnNames =
     { 
         "Candidate ?",
         TMEntAbs._STR_ALIAS_,

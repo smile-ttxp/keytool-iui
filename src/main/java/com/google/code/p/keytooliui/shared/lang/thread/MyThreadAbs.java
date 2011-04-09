@@ -40,24 +40,24 @@ abstract public class MyThreadAbs extends Thread
 {
     
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strSeparatorWord = "_"; // 1 underline 
+    public static final String f_s_strSeparatorWord = "_"; // 1 underline 
     
-    final static public int f_s_intIdMin = 1; // memo: integer size = 2pow16 = 65536
-    final static public int f_s_intIdMax = 30000; // memo: integer size = 2pow16 = 65536
+    public static final int f_s_intIdMin = 1; // memo: integer size = 2pow16 = 65536
+    public static final int f_s_intIdMax = 30000; // memo: integer size = 2pow16 = 65536
     
     // --------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strNamePrefix = "rcreader"; // comes from "com.google.code.p.keytooliui" package
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.lang.thread.MyThreadAbs.";
+    private static final String _f_s_strNamePrefix = "rcreader"; // comes from "com.google.code.p.keytooliui" package
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.lang.thread.MyThreadAbs.";
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public void s_interruptThreadsActive()
+    public static void s_interruptThreadsActive()
     {
         String strMethod = _f_s_strClass + "s_interruptThreadsActive()";
         
@@ -113,7 +113,7 @@ abstract public class MyThreadAbs extends Thread
         }
     }
     
-    static public void s_dumpThreadsActive()
+    public static void s_dumpThreadsActive()
     {
         String strMethod = _f_s_strClass + "s_dumpThreadsActive()";
         
@@ -138,9 +138,9 @@ abstract public class MyThreadAbs extends Thread
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-     static private int _s_intThreadID = f_s_intIdMin - 1; // = "0"
+     private static int _s_intThreadID = f_s_intIdMin - 1; // = "0"
     
     
     // ------

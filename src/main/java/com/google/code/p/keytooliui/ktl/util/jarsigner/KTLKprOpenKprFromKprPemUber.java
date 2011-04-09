@@ -13,7 +13,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenKprFromKprPemUber extends KTLKprOpenKprFromKprPemKPAbs
+public final class KTLKprOpenKprFromKprPemUber extends KTLKprOpenKprFromKprPemKPAbs
 {
     // ------
     // PUBLIC

@@ -22,26 +22,26 @@ import java.awt.*;
 abstract public class DWChoice3Abs extends DWChoiceAbs 
 {
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int f_s_intYes = 1;
-    final static public int f_s_intYesAllways = 2;
-    final static public int f_s_intClose = 3;
+    public static final int f_s_intYes = 1;
+    public static final int f_s_intYesAllways = 2;
+    public static final int f_s_intClose = 3;
     
    
     
     // --------------
-    // STATIC PRIVATE 
+    // PRIVATE STATIC 
     
-    final static private String _f_s_strBodyQuestion = "Continue anyway?";
-    final static private String _f_s_strBtnOk = "OK"; // "YES";
-    final static private String _f_s_strBtnOkAllways = "OK, dont't ask again"; 
-    final static private String _f_s_strBtnClose = "Cancel";
+    private static final String _f_s_strBodyQuestion = "Continue anyway?";
+    private static final String _f_s_strBtnOk = "OK"; // "YES";
+    private static final String _f_s_strBtnOkAllways = "OK, dont't ask again"; 
+    private static final String _f_s_strBtnClose = "Cancel";
     
     
     // ------------------
     // STATIC INITIALIZER
-    static private Object[] _s_objsOption = new String[3];
+    private static Object[] _s_objsOption = new String[3];
     
     static
     {        

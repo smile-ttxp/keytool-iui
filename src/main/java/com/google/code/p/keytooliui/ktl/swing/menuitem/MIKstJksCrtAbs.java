@@ -36,7 +36,7 @@ import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
 abstract public class MIKstJksCrtAbs extends MIAbstract
 {
-    static public String s_strSuffix = "Certificate store";
+    public static String s_strSuffix = "Certificate store";
 
     protected MIKstJksCrtAbs(String strPrefix, ActionListener actListenerParent)
     {

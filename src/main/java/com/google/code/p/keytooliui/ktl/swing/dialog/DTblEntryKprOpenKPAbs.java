@@ -21,10 +21,10 @@ import java.util.*;
 abstract public class DTblEntryKprOpenKPAbs extends DTblEntryKprOpenAbs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     
-    final static private String _f_s_strLabelPasswdRespective = "Enter respective password:";
+    private static final String _f_s_strLabelPasswdRespective = "Enter respective password:";
     
     // ------
     // PUBLIC

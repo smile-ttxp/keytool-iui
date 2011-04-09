@@ -38,20 +38,20 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 import net.miginfocom.swing.MigLayout;
 
-final public class PTabUICmdCmsSigVerify extends PTabUICmdCmsAbs
+public final class PTabUICmdCmsSigVerify extends PTabUICmdCmsAbs
 {
-    final static public String STR_TITLETASK = "Verify signed data with CMS detached signature file";
+    public static final String STR_TITLETASK = "Verify signed data with CMS detached signature file";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
 
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    //static private String _s_strDlgErrorActionBody = null;
+    //private static String _s_strDlgErrorActionBody = null;
     
     // ------------------
     // STATIC INITIALIZER

@@ -49,18 +49,18 @@ import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelBtnTfdAbs;
 import net.miginfocom.swing.MigLayout;
 
-final public class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenAbs 
+public final class PTabUICmdKtlKstOpenKprFromKprKst extends PTabUICmdKtlKstOpenAbs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static public String STR_TITLETASK = "Import private key entry from private key entry in other keystore";
-    final static private String _f_s_strSuffixDocPropValSource = "_source";
+    public static final String STR_TITLETASK = "Import private key entry from private key entry in other keystore";
+    private static final String _f_s_strSuffixDocPropValSource = "_source";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
     // ------------------
     // STATIC INITIALIZER

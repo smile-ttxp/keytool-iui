@@ -23,7 +23,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprSaveFromPkcs12Uber extends KTLKprSaveFromPkcs12JAbs
+public final class KTLKprSaveFromPkcs12Uber extends KTLKprSaveFromPkcs12JAbs
 {
     // ------
     // PUBLIC

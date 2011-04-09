@@ -34,17 +34,17 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 import java.awt.*;
 
 
-final public class PSelBtnTfdPasswdXlsKpr extends PSelBtnTfdPasswdXlsAbs
+public final class PSelBtnTfdPasswdXlsKpr extends PSelBtnTfdPasswdXlsAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_password_keypair";
+    public static final String f_s_strDocPropVal = "select_password_keypair";
 
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
 
-    final static private String _f_s_strLabelPrefix = "Private key";
+    private static final String _f_s_strLabelPrefix = "Private key";
      
     // ------
     // PUBLIC

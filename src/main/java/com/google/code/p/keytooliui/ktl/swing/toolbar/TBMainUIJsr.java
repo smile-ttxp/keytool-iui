@@ -34,7 +34,7 @@ import com.google.code.p.keytooliui.shared.swing.toolbar.*;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class TBMainUIJsr extends TBMainUIAbs
+public final class TBMainUIJsr extends TBMainUIAbs
 {
     
     // ------

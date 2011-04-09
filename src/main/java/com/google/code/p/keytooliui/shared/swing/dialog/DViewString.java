@@ -30,7 +30,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-final public class DViewString extends DEscapeAbstract implements
+public final class DViewString extends DEscapeAbstract implements
     ActionListener
 {
     // ------

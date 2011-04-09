@@ -43,7 +43,7 @@ import com.google.code.p.keytooliui.shared.swing.menuitem.MIHelpOnlineHome;
 
 
 
-final public class MHelpAllMainUIKtl extends MHelpAllMainUIAbs
+public final class MHelpAllMainUIKtl extends MHelpAllMainUIAbs
 {    
     private MIAbstract _mimHomePage = null;
     

@@ -39,10 +39,10 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class TF10x20Abs extends TFAbstract
 {  
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intColumns = 10; // 75; //10;
-    final static private int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 10; // 75; //10;
+    private static final int _f_s_intH = 20;
     
     // ---------
     // PROTECTED

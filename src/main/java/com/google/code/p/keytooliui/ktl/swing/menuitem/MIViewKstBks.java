@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstBks;
 
-final public class MIViewKstBks extends MIViewKstAbs
+public final class MIViewKstBks extends MIViewKstAbs
 {
     public MIViewKstBks(ActionListener actListenerParent)
     {

@@ -13,7 +13,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLShkOpenCryptEncBks extends KTLShkOpenCryptEncKPAbs
+public final class KTLShkOpenCryptEncBks extends KTLShkOpenCryptEncKPAbs
 {
     // ------
     // PUBLIC

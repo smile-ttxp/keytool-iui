@@ -41,14 +41,14 @@ abstract public class DTblsKstAbs extends DEscapeAbstract implements
     MouseListener // listener for mouse event on table
 {
     // --------------------
-    // final static private
+    // private static final
     
-    final static private String _STR_BODYBUTTONUSAGE = "Usage:\n  Mouse-right click on entry's row to display popup menu.";
+    private static final String _STR_BODYBUTTONUSAGE = "Usage:\n  Mouse-right click on entry's row to display popup menu.";
     
     // ATTN: should not have the same value!
-    final static private String _STR_viewEntryTCCrt = "View certificate ...";
-    final static private String _STR_viewEntryPKCrtChain = "View certificates chain ...";
-    final static private String _STR_viewEntrySKInfo = "View infos ...";
+    private static final String _STR_viewEntryTCCrt = "View certificate ...";
+    private static final String _STR_viewEntryPKCrtChain = "View certificates chain ...";
+    private static final String _STR_viewEntrySKInfo = "View infos ...";
 
     // ------
     // public

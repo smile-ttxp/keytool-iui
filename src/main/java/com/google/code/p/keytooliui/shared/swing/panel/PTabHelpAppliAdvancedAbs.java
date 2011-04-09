@@ -45,23 +45,23 @@
  abstract public class PTabHelpAppliAdvancedAbs extends JPanel
  {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intTextFieldColumns = 340;
-    final static private int _f_s_intTextFieldH = 30;
-    final static private String _s_strLabelPathAbsApplicationHome = "Application's cache dir.:";
-    final static private String _s_strLabelUserName = "User name:";
+    private static final int _f_s_intTextFieldColumns = 340;
+    private static final int _f_s_intTextFieldH = 30;
+    private static final String _s_strLabelPathAbsApplicationHome = "Application's cache dir.:";
+    private static final String _s_strLabelUserName = "User name:";
 
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTitleMode = null;
-    static private String _s_strTitleLaunchBy = null;
+    private static String _s_strTitleMode = null;
+    private static String _s_strTitleLaunchBy = null;
     
-    static private String _s_strTextNBModule = null;
-    static private String _s_strTextEcPlugin = null;
-    static private String _s_strTextJWS = null;
-    static private String _s_strTextStandalone = null;
+    private static String _s_strTextNBModule = null;
+    private static String _s_strTextEcPlugin = null;
+    private static String _s_strTextJWS = null;
+    private static String _s_strTextStandalone = null;
     
     // ------------------
     // STATIC INITIALIZER

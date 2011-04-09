@@ -35,9 +35,9 @@ import java.awt.*;
 public class MHelpAboutViewerHtmlPreview extends MHelpAboutAbstract 
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strInfoAboutBody = null;
+    private static String _s_strInfoAboutBody = null;
     
 
     // ------------------

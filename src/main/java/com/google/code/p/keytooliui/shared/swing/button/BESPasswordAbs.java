@@ -34,18 +34,18 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class BESPasswordAbs extends BEnabledState
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public int f_s_intModeSave = 1; // create
-    final static public int f_s_intModeOpen = 2; // enter-select
-    final static public int f_s_intModeChange = 3; // change password
+    public static final int f_s_intModeSave = 1; // create
+    public static final int f_s_intModeOpen = 2; // enter-select
+    public static final int f_s_intModeChange = 3; // change password
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTipSave = "click to create new password";
-    final static private String _f_s_strTipOpen = "click to enter password";
-    final static private String _f_s_strTipChange = "change password";
+    private static final String _f_s_strTipSave = "click to create new password";
+    private static final String _f_s_strTipOpen = "click to enter password";
+    private static final String _f_s_strTipChange = "change password";
     
     // ------
     // PUBLIC

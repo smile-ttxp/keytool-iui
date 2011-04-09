@@ -35,9 +35,9 @@ import javax.swing.*;
 public class MAdvanced extends MAbstract
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

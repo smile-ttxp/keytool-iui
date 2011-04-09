@@ -34,7 +34,7 @@
  import java.awt.*;
  import java.awt.event.*;
  
- final public class RBColor extends JRadioButton
+ public final class RBColor extends JRadioButton
  {
     public boolean init() { return true; }
     

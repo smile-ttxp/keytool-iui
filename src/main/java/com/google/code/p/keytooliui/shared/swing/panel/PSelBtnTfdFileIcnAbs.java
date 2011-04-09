@@ -63,9 +63,9 @@ import java.io.*;
 abstract public class PSelBtnTfdFileIcnAbs extends PSelBtnTfdAbs
 {   
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strFileDescIcn = "GIF-JPEG-PNG icons";
+    private static final String _f_s_strFileDescIcn = "GIF-JPEG-PNG icons";
     
     // ------
     // public

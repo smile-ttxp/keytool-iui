@@ -4,7 +4,7 @@ package com.google.code.p.keytooliui.ktl.swing.menubar;
 import com.google.code.p.keytooliui.ktl.swing.menu.MHelpAllMainUIKtl;
 import com.google.code.p.keytooliui.ktl.swing.menu.MViewAllMainUIKtl;
 
-final public class MBMainUIKtl extends MBMainUIAbs
+public final class MBMainUIKtl extends MBMainUIAbs
 {        
     public MBMainUIKtl(
         java.awt.Component cmpFrameOwner,

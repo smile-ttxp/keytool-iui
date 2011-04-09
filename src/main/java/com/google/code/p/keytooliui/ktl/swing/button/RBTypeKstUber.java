@@ -8,7 +8,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
  
  import java.awt.event.*;
  
- final public class RBTypeKstUber extends RBTypeKstAbs
+ public final class RBTypeKstUber extends RBTypeKstAbs
  {   
     // ------
     // PUBLIC

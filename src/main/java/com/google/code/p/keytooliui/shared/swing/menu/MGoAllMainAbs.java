@@ -35,10 +35,10 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class MGoAllMainAbs extends MAbstract
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTextThis;
-    static private char _s_chrMnemoThis;
+    private static String _s_strTextThis;
+    private static char _s_chrMnemoThis;
     
     // ------------------
     // STATIC INITIALIZER

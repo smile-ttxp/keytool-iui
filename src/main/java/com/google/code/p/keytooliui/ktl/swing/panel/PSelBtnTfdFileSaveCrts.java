@@ -34,17 +34,17 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileSaveCrts extends PSelBtnTfdFileSaveAbs
+public final class PSelBtnTfdFileSaveCrts extends PSelBtnTfdFileSaveAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_crts_save";
-    final static public String s_strDirNameDefault = "mycrtss";      // !!! already defined
-    final static public String f_s_strLabel = "Certificates chain file:"; // !!! already defined
+    public static final String f_s_strDocPropVal = "select_file_crts_save";
+    public static final String s_strDirNameDefault = "mycrtss";      // !!! already defined
+    public static final String f_s_strLabel = "Certificates chain file:"; // !!! already defined
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
     
     // ------

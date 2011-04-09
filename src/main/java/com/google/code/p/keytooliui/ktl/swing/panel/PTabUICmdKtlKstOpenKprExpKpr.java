@@ -16,21 +16,21 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprExpAbs
+public final class PTabUICmdKtlKstOpenKprExpKpr extends PTabUICmdKtlKstOpenKprExpAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Export private key entry as private key & certificates chain files";
+    public static final String STR_TITLETASK = "Export private key entry as private key & certificates chain files";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    static private String _s_strDlgInfoActionBodyBeg = null;
-    static private String _s_strDlgInfoActionBodyKpr = null;
-    static private String _s_strDlgInfoActionBodyQuery = null;
+    private static String _s_strDlgInfoActionBodyBeg = null;
+    private static String _s_strDlgInfoActionBodyKpr = null;
+    private static String _s_strDlgInfoActionBodyQuery = null;
     
     // ------------------
     // STATIC INITIALIZER

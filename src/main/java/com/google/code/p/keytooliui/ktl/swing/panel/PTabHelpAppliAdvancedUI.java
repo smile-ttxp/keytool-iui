@@ -23,7 +23,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
  import java.util.*;
  import java.io.*;
  
- final public class PTabHelpAppliAdvancedUI extends PTabHelpAppliAdvancedAbs
+ public final class PTabHelpAppliAdvancedUI extends PTabHelpAppliAdvancedAbs
  {
 
     // ------

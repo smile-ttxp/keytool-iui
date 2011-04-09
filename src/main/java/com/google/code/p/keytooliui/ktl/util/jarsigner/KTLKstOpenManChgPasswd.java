@@ -27,7 +27,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLKstOpenManChgPasswd extends KTLKstOpenAbs
+public final class KTLKstOpenManChgPasswd extends KTLKstOpenAbs
 {
     // ------
     // PUBLIC

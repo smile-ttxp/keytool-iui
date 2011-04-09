@@ -47,7 +47,7 @@ import java.io.*;
 
 
 
-final public class KTLKstSaveUber extends KTLKstSaveAbs
+public final class KTLKstSaveUber extends KTLKstSaveAbs
 {
     // ------
     // PUBLIC

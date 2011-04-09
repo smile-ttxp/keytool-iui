@@ -43,9 +43,9 @@ import java.io.*;
 public class PSelBtnTfdFileOpenAnyDir extends PSelBtnTfdFileOpenAbs 
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_any_open_dir"; // ~_dir v/s ~_file
+    public static final String f_s_strDocPropVal = "select_file_any_open_dir"; // ~_dir v/s ~_file
     
     
     // ------

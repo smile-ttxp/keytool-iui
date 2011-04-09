@@ -32,7 +32,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import java.awt.*;
 
 
-final public class DRangeToValue extends DRangeAbstract implements
+public final class DRangeToValue extends DRangeAbstract implements
     PRangeToValueListener
 {
     // ------

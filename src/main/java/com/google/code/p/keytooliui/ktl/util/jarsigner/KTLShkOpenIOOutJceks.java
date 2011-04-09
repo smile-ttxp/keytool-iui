@@ -13,7 +13,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLShkOpenIOOutJceks extends KTLShkOpenIOOutKPAbs
+public final class KTLShkOpenIOOutJceks extends KTLShkOpenIOOutKPAbs
 {
     // ------
     // PUBLIC

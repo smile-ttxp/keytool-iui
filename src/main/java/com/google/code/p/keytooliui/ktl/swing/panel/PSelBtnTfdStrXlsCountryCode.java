@@ -47,11 +47,11 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 import com.google.code.p.keytooliui.shared.swing.textfield.TF2x20SelString;
 
-final public class PSelBtnTfdStrXlsCountryCode extends PSelBtnTfdStrXlsCbxAbs 
+public final class PSelBtnTfdStrXlsCountryCode extends PSelBtnTfdStrXlsCbxAbs 
 {
-    static private String defaultCountry;
+    private static String defaultCountry;
 
-    final static private String[] countries; 
+    private static final String[] countries; 
 
     static {
         String[] isoCountries = Locale.getISOCountries();

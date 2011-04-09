@@ -48,48 +48,48 @@ import java.math.BigInteger;
 public class UtilCrtX509 extends UtilCrt
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strType = "X.509";
-    final static public String f_s_strDigestAlgoSHA1 = "SHA1";
-    final static public String f_s_strDigestAlgoMD2 = "MD2";
-    final static public String f_s_strDigestAlgoMD5 = "MD5";
+    public static final String f_s_strType = "X.509";
+    public static final String f_s_strDigestAlgoSHA1 = "SHA1";
+    public static final String f_s_strDigestAlgoMD2 = "MD2";
+    public static final String f_s_strDigestAlgoMD5 = "MD5";
     
     // added with KTL/J2SE6.0, KTL#1.3
     // added may 17, 07
-    final static public String f_s_strDigestAlgoSHA256 = "SHA256"; // RSA sig algo
-    final static public String f_s_strDigestAlgoSHA384 = "SHA384"; // RSA sig algo
-    final static public String f_s_strDigestAlgoSHA512 = "SHA512"; // RSA sig algo
-    final static public String f_s_strDigestAlgoNONE = "NONE";     // DSA sig algo
+    public static final String f_s_strDigestAlgoSHA256 = "SHA256"; // RSA sig algo
+    public static final String f_s_strDigestAlgoSHA384 = "SHA384"; // RSA sig algo
+    public static final String f_s_strDigestAlgoSHA512 = "SHA512"; // RSA sig algo
+    public static final String f_s_strDigestAlgoNONE = "NONE";     // DSA sig algo
      
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrtX509";
-    final static private String _f_s_strProvider = "SUN";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrtX509";
+    private static final String _f_s_strProvider = "SUN";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strDumpMoreUnknown = null; 
+    private static String _s_strDumpMoreUnknown = null; 
     
-    static private String _s_strDumpMoreCertsChainNb = null;
-    static private String _s_strDumpMoreCertsChainBegin = null; 
-    static private String _s_strDumpMoreCertsChainEnd = null; 
-    static private String _s_strDumpMoreOwner = null; 
-    static private String _s_strDumpMoreIssuer = null; 
-    static private String _s_strDumpMoreVersion = null; 
-    static private String _s_strDumpMoreSerialNumber = null; 
-    static private String _s_strDumpMoreDateStart = null; 
-    static private String _s_strDumpMoreDateEnd = null; 
-    static private String _s_strDumpMoreSignatureAlgorithm = null; 
-    static private String _s_strDumpMoreFingerprints = null; 
+    private static String _s_strDumpMoreCertsChainNb = null;
+    private static String _s_strDumpMoreCertsChainBegin = null; 
+    private static String _s_strDumpMoreCertsChainEnd = null; 
+    private static String _s_strDumpMoreOwner = null; 
+    private static String _s_strDumpMoreIssuer = null; 
+    private static String _s_strDumpMoreVersion = null; 
+    private static String _s_strDumpMoreSerialNumber = null; 
+    private static String _s_strDumpMoreDateStart = null; 
+    private static String _s_strDumpMoreDateEnd = null; 
+    private static String _s_strDumpMoreSignatureAlgorithm = null; 
+    private static String _s_strDumpMoreFingerprints = null; 
     
-    static private String _s_strDumpMoreExtKeyUsage = "Extended Key Usage";
+    private static String _s_strDumpMoreExtKeyUsage = "Extended Key Usage";
     
-    static private String _s_strDumpMoreKeyUsage = "Key Usage";
+    private static String _s_strDumpMoreKeyUsage = "Key Usage";
     
-    static private String[] _s_strsKeyUsage =
+    private static String[] _s_strsKeyUsage =
     {
         "digitalSignature",
         "nonRepudation",
@@ -142,7 +142,7 @@ public class UtilCrtX509 extends UtilCrt
     } 
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     // if any error, returns -1
     // this code comes from ?don't remember
@@ -228,7 +228,7 @@ public class UtilCrtX509 extends UtilCrt
     }
     
     
-    static public void s_show(
+    public static void s_show(
         Frame frmParent, 
         X509Certificate crt)
     {
@@ -271,7 +271,7 @@ public class UtilCrtX509 extends UtilCrt
         vsg.setVisible(true);
     }
     
-    static public void s_showChain(
+    public static void s_showChain(
         Frame frmParent, 
         X509Certificate[] crts)
     {
@@ -315,7 +315,7 @@ public class UtilCrtX509 extends UtilCrt
     }
     
     // if any error, return nil, then calling method should exit immediately!
-    static public X509Certificate s_getX509Certificate(
+    public static X509Certificate s_getX509Certificate(
         KeyStore kstOpen,
         String strAliasKpr
         )
@@ -358,7 +358,7 @@ public class UtilCrtX509 extends UtilCrt
     
     
     // if any error, return nil, then calling method should exit immediately!
-    static public X509Certificate[] s_getX509CertificateChain(
+    public static X509Certificate[] s_getX509CertificateChain(
         KeyStore kstOpen,
         String strAliasKpr,
         boolean blnOrderChain // true for certReq & certImport, false for jarSign
@@ -436,7 +436,7 @@ public class UtilCrtX509 extends UtilCrt
     // ----------
     // 2) serial number
     // memo: hexadecimal value
-    static public String s_dumpSerialNumber(X509Certificate cer)
+    public static String s_dumpSerialNumber(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "s_dumpSerialNumber(cer)";
         
@@ -469,7 +469,7 @@ public class UtilCrtX509 extends UtilCrt
         **/
     }
     
-    static public String s_dumpIt(X509Certificate[] crts)
+    public static String s_dumpIt(X509Certificate[] crts)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "s_dumpIt(crts)";
         
@@ -538,7 +538,7 @@ public class UtilCrtX509 extends UtilCrt
         return sbr.toString();
     }
     
-    static public String s_dumpIt(X509Certificate crt)
+    public static String s_dumpIt(X509Certificate crt)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "s_dumpIt(crt)";
         
@@ -650,7 +650,7 @@ public class UtilCrtX509 extends UtilCrt
      *                               be opened for reading.
      * @throws IOException An I/O error occurred.
      */
-    static public X509Certificate[] s_load(
+    public static X509Certificate[] s_load(
         Frame frmOwner, 
         File fleCrt
         )
@@ -846,7 +846,7 @@ public class UtilCrtX509 extends UtilCrt
     /**
         reordering from root (issuer == subject)
     **/
-    static public X509Certificate[] s_orderChain(
+    public static X509Certificate[] s_orderChain(
         X509Certificate crtsSource[]
         )
     {
@@ -945,12 +945,12 @@ public class UtilCrtX509 extends UtilCrt
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     // ----------
     // 0) type
     
-    /*static private String _s_dumpType(X509Certificate cer)
+    /*private static String _s_dumpType(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpType(cer)";
         
@@ -963,7 +963,7 @@ public class UtilCrtX509 extends UtilCrt
     // ----------
     // 1) version
 
-    static private String _s_dumpVersion(X509Certificate cer)
+    private static String _s_dumpVersion(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpVersion(cer)";
         
@@ -979,7 +979,7 @@ public class UtilCrtX509 extends UtilCrt
     
     // ----------
     // 3) algorithm signature
-    static private String _s_dumpSignatureAlgo(X509Certificate cer)
+    private static String _s_dumpSignatureAlgo(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpSignatureAlgo(cer)";
         
@@ -1002,7 +1002,7 @@ public class UtilCrtX509 extends UtilCrt
     
     // ----------
     // 4) issuer
-    static private String _s_dumpIssuer(X509Certificate cer)
+    private static String _s_dumpIssuer(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpIssuer(cer)";
         
@@ -1016,7 +1016,7 @@ public class UtilCrtX509 extends UtilCrt
     
     // ----------
     // 5) start date
-    static private String _s_dumpDateStart(X509Certificate cer)
+    private static String _s_dumpDateStart(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpDateStart(cer)";
         
@@ -1029,7 +1029,7 @@ public class UtilCrtX509 extends UtilCrt
     
     // ----------
     // 6) end date
-    static private String _s_dumpDateEnd(X509Certificate cer)
+    private static String _s_dumpDateEnd(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpDateEnd(cer)";
         
@@ -1042,7 +1042,7 @@ public class UtilCrtX509 extends UtilCrt
     
     // ----------
     // 7) subject
-    static private String _s_dumpSubject(X509Certificate cer)
+    private static String _s_dumpSubject(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpSubject(cer)";
         
@@ -1056,7 +1056,7 @@ public class UtilCrtX509 extends UtilCrt
     
     // ----------
     // 9) fingerprints
-    static private String _s_dumpCertFingerprints(X509Certificate cer)
+    private static String _s_dumpCertFingerprints(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpCertFingerprints(cer)";
         
@@ -1123,7 +1123,7 @@ public class UtilCrtX509 extends UtilCrt
         return strResult;
     }
     
-    static private String _s_dumpKeyUsage(X509Certificate cer)
+    private static String _s_dumpKeyUsage(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpKeyUsage(cer)";
 
@@ -1202,7 +1202,7 @@ public class UtilCrtX509 extends UtilCrt
     }
     
 
-    static private String _s_dumpExtKeyUsage(X509Certificate cer)
+    private static String _s_dumpExtKeyUsage(X509Certificate cer)
     {
         String strMethod = UtilCrtX509._f_s_strClass + "." + "_s_dumpExtKeyUsage(cer)";
 
@@ -1394,7 +1394,7 @@ public class UtilCrtX509 extends UtilCrt
         return strResult;
     }
     
-    static private String _s_getFingerprint(
+    private static String _s_getFingerprint(
         byte[] bytsCertificate,
         String strAlgorithm) 
     {
@@ -1448,7 +1448,7 @@ public class UtilCrtX509 extends UtilCrt
     
 
     
-    static public X509Certificate s_generateCertX509V3(
+    public static X509Certificate s_generateCertX509V3(
         PublicKey pkyKeyPublic,
         PrivateKey pkyKeyPrivate,
         Date dteCertNotBefore,

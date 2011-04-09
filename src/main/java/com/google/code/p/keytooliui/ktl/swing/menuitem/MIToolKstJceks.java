@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks;
 
-final public class MIToolKstJceks extends MIToolKstAbs
+public final class MIToolKstJceks extends MIToolKstAbs
 {
     public MIToolKstJceks(ActionListener actListenerParent)
     {

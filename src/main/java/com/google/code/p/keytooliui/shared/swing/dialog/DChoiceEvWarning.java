@@ -30,25 +30,25 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import java.beans.*; //Property change stuff
 
 
-final public class DChoiceEvWarning extends DChoiceEvAbs 
+public final class DChoiceEvWarning extends DChoiceEvAbs 
 {
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int f_s_intInstall = 1;
-    final static public int f_s_intQuit = 2;
+    public static final int f_s_intInstall = 1;
+    public static final int f_s_intQuit = 2;
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTitleSuffix = null;
-    static private String _s_strBodyWhat1 = null;
-    static private String _s_strBodyWhat2 = null;
-    static private String _s_strButtonTextInstall = null; // "YES";
-    static private String _s_strButtonTextQuit = null; //"CLOSE";
+    private static String _s_strTitleSuffix = null;
+    private static String _s_strBodyWhat1 = null;
+    private static String _s_strBodyWhat2 = null;
+    private static String _s_strButtonTextInstall = null; // "YES";
+    private static String _s_strButtonTextQuit = null; //"CLOSE";
     
     
-    static private Object[] _s_objsOption = null;
+    private static Object[] _s_objsOption = null;
     
     
     // ------------------

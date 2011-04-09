@@ -36,12 +36,12 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class PEditorDefaultJar extends PEditorAbstract
+public final class PEditorDefaultJar extends PEditorAbstract
 {   
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.panel.PEditorDefaultJar.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.panel.PEditorDefaultJar.";
     
     // ------
     // PUBLIC
@@ -178,7 +178,7 @@ final public class PEditorDefaultJar extends PEditorAbstract
         super._destroy_();
     }
     
-    static public void main(String[] args)
+    public static void main(String[] args)
     {
         final String f_strWhere = _f_s_strClass + "main(strsArg)";
         

@@ -23,12 +23,12 @@
 package com.google.code.p.keytooliui.shared.swing.button;
 
 
-final public class BESBack24 extends BESBackAbs
+public final class BESBack24 extends BESBackAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "back24.gif";
+    private static final String _f_s_strImage = "back24.gif";
     
     // ------
     // PUBLIC

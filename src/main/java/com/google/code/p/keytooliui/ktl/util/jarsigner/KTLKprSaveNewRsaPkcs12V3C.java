@@ -29,7 +29,7 @@ import java.util.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrtX509;
 
 
-final public class KTLKprSaveNewRsaPkcs12V3C extends KTLKprSaveNewRsaPkcs12
+public final class KTLKprSaveNewRsaPkcs12V3C extends KTLKprSaveNewRsaPkcs12
 {
     // ------
     // public

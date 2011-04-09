@@ -26,12 +26,12 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-final public class MHelpAboutViewerHtmlPreviewJar extends MHelpAboutViewerHtmlPreview 
+public final class MHelpAboutViewerHtmlPreviewJar extends MHelpAboutViewerHtmlPreview 
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strInfoAboutBodySuffix = null;
+    private static String _s_strInfoAboutBodySuffix = null;
 
     static
     {

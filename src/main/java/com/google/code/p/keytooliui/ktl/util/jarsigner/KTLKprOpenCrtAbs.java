@@ -37,7 +37,7 @@ abstract public class KTLKprOpenCrtAbs extends KTLKprOpenAbs
     protected String _strFormatFileIO_ = null;
     
     // if any error, return nil, then calling method should exit immediately!
-    static public X509Certificate s_getCertX509FirstInChain(
+    public static X509Certificate s_getCertX509FirstInChain(
         KeyStore kstOpen,
         String strAliasKpr
         )

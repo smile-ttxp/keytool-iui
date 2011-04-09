@@ -53,15 +53,15 @@ import java.util.zip.*;
 abstract public class KTLKprOpenVerifyAbs extends KTLKprOpenAbs
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strDlgWarnBodyFNF = null;
-    static private String _s_strDlgWarnBodyIO = null;
-    static private String _s_strDlgWarnBodyZip = null;
-    static private String _s_strDlgWarnBodySecurity = null;
+    private static String _s_strDlgWarnBodyFNF = null;
+    private static String _s_strDlgWarnBodyIO = null;
+    private static String _s_strDlgWarnBodyZip = null;
+    private static String _s_strDlgWarnBodySecurity = null;
     
     
-    static private String _s_strDumpCheckOk = "Signed file verified.";
+    private static String _s_strDumpCheckOk = "Signed file verified.";
     
     // ------
     // STATIC

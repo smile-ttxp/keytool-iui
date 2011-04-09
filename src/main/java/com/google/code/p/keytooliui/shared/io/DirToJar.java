@@ -36,9 +36,9 @@ import java.util.jar.Manifest;
 public class DirToJar 
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static private String _STR_MANIFESTVERSION = "1.0";
+    private static final String _STR_MANIFESTVERSION = "1.0";
     
     
     /** Creates a new instance of DirToJar */

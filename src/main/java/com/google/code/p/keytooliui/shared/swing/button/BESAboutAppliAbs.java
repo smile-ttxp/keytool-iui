@@ -42,9 +42,9 @@ import com.google.code.p.keytooliui.shared.swing.panel.PTabHelpAppliAdvancedAbs;
 abstract public class BESAboutAppliAbs extends BEnabledState
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipTextPrefix = null;
+    private static String _s_strToolTipTextPrefix = null;
     
     // ------------------
     // STATIC INITIALIZER

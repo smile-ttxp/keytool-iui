@@ -28,13 +28,13 @@
 package com.google.code.p.keytooliui.shared.io;
 
 
-final public class LastUserProj extends LastUserAbstract
+public final class LastUserProj extends LastUserAbstract
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strFileNameIni = new String("proj.ini");
-    final static private String _f_s_strFileNameBak = new String("proj.bak");
+    private static final String _f_s_strFileNameIni = new String("proj.ini");
+    private static final String _f_s_strFileNameBak = new String("proj.bak");
     
     
     // ------

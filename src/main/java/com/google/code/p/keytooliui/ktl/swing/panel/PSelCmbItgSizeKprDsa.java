@@ -31,7 +31,7 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 **/
 
 
-final public class PSelCmbItgSizeKprDsa extends PSelCmbItgSizeKprAbs
+public final class PSelCmbItgSizeKprDsa extends PSelCmbItgSizeKprAbs
 {   
     // ------
     // PUBLIC   

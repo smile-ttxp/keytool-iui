@@ -28,13 +28,13 @@ import javax.help.*;
 public class MyHelpSet extends HelpSet
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.help.MyHelpSet.";
+    // PRIVATE STATIC FINAL STRING
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.help.MyHelpSet.";
 
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
 
-    static public boolean s_assignStyleSheet(HelpSet hst)
+    public static boolean s_assignStyleSheet(HelpSet hst)
     {
         String strMethod = MyHelpSet._f_s_strClass + "s_assignStyleSheet(hst)";
 

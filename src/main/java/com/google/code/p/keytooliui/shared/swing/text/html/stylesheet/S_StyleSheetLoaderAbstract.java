@@ -33,7 +33,7 @@
 abstract public class S_StyleSheetLoaderAbstract
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
 
-    //final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.text.html.stylesheet.S_StyleSheetLoaderAbstract.";
+    //private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.text.html.stylesheet.S_StyleSheetLoaderAbstract.";
 }

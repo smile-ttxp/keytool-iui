@@ -31,12 +31,12 @@ import javax.swing.*;
 
 import java.io.*;
 
-final public class ChgLocMainUIToolJsr extends ChgLocMainUIToolAbs
+public final class ChgLocMainUIToolJsr extends ChgLocMainUIToolAbs
 {   
     // -----------------
-    // STATIC PUBLIC INT   
+    // PUBLIC STATIC INT   
     
-    static public int S_INT_LAST = ChgLocMainUIAbs._f_s_intDefault; // ChgLocAbstract.F_S_INT_DEFAULT;
+    public static int S_INT_LAST = ChgLocMainUIAbs._f_s_intDefault; // ChgLocAbstract.F_S_INT_DEFAULT;
     
     
     // ------

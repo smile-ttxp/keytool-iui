@@ -25,12 +25,12 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import java.awt.event.*;
 
-final public class BESFindText16 extends BESFindTextAbs
+public final class BESFindText16 extends BESFindTextAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "findtext16.gif"; // tempo
+    private static final String _f_s_strImage = "findtext16.gif"; // tempo
     
     // ------
     // PUBLIC

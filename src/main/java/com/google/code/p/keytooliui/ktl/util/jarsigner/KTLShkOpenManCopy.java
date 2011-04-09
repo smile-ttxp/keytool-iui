@@ -50,7 +50,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLShkOpenManCopy extends KTLShkOpenManAbs
+public final class KTLShkOpenManCopy extends KTLShkOpenManAbs
 {
     // ------
     // PUBLIC

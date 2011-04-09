@@ -37,10 +37,10 @@ import java.awt.*;
 abstract public class PFAbs extends JPasswordField
 {   
     // --------------------------
-    // FINAL STATIC PUBLIC STRING
+    // PUBLIC STATIC FINAL STRING
     
     // !!!!!!!!!!!!!!!!!!!!!!!!
-    final static public String f_s_strDocPropKey = PFAbs.f_s_strDocPropKey; 
+    public static final String f_s_strDocPropKey = PFAbs.f_s_strDocPropKey; 
     
     // ---------------
     // ABSTRACT PUBLIC

@@ -65,11 +65,11 @@ import javax.swing.*;
 abstract public class BOChecked3StateAbstract extends BOCheckedAbs
 {
     // ------------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int f_s_intChecked = 1;
-    final static public int f_s_intUnchecked = 2;
-    final static public int f_s_intNotApplicable = 3;
+    public static final int f_s_intChecked = 1;
+    public static final int f_s_intUnchecked = 2;
+    public static final int f_s_intNotApplicable = 3;
     
     
     // -------------

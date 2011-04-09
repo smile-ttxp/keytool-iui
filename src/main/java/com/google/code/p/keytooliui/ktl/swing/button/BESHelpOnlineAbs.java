@@ -37,9 +37,9 @@ import java.net.URI;
 abstract public class BESHelpOnlineAbs extends BEnabledState
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
 
-    //static private String _STR_TOOL_TIP_TEXT = null;
+    //private static String _STR_TOOL_TIP_TEXT = null;
 
     // ------------------
     // STATIC INITIALIZER

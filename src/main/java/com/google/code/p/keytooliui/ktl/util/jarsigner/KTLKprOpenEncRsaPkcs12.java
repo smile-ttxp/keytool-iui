@@ -29,7 +29,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenEncRsaPkcs12 extends KTLKprOpenEncRsaAbs
+public final class KTLKprOpenEncRsaPkcs12 extends KTLKprOpenEncRsaAbs
 {
     // ------
     // PUBLIC

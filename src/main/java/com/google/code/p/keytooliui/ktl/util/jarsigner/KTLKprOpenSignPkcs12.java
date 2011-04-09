@@ -49,7 +49,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
+public final class KTLKprOpenSignPkcs12 extends KTLKprOpenSignAbs
 {
     // ------
     // PUBLIC

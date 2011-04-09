@@ -9,12 +9,12 @@ package com.google.code.p.keytooliui.ktl.swing.dialog;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.dialog.*;
 
-final public class DWChoice3DNameMiss extends DWChoice3Abs
+public final class DWChoice3DNameMiss extends DWChoice3Abs
 {    
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strWhat = "At least one of optional Distinguished Name field is not filled.";
+    private static String _s_strWhat = "At least one of optional Distinguished Name field is not filled.";
 
     // ------
     // PUBLIC

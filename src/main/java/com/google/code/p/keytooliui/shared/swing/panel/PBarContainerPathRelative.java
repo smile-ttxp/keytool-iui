@@ -26,7 +26,7 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-final public class PBarContainerPathRelative extends PBarContainerPathAbstract 
+public final class PBarContainerPathRelative extends PBarContainerPathAbstract 
 {
     // ------
     // PUBLIC

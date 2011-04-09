@@ -40,9 +40,9 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 abstract public class BESViewAbs extends BEnabledState
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _STR_TOOL_TIP_TEXT = null;
+    private static String _STR_TOOL_TIP_TEXT = null;
     
     // ------------------
     // STATIC INITIALIZER

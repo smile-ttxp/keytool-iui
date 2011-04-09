@@ -23,7 +23,7 @@ package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 import java.awt.event.ActionListener;
 
-final public class MISelTabJarSign extends MISelTabAbs
+public final class MISelTabJarSign extends MISelTabAbs
 {
     public MISelTabJarSign(ActionListener actListenerParent)
     {

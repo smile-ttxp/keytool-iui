@@ -30,7 +30,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MFileAllUI extends MFileAllAbstract 
+public final class MFileAllUI extends MFileAllAbstract 
 {   
     // ------
     // PUBLIC

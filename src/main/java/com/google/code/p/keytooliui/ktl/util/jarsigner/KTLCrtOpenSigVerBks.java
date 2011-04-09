@@ -20,7 +20,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLCrtOpenSigVerBks extends KTLCrtOpenSigVerANAbs
+public final class KTLCrtOpenSigVerBks extends KTLCrtOpenSigVerANAbs
 {
     // ------
     // PUBLIC

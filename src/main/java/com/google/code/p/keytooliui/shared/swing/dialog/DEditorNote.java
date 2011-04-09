@@ -31,13 +31,13 @@ import com.google.code.p.keytooliui.shared.awt.awtevent.*;
 import java.awt.*;
 import java.io.*;
 
-final public class DEditorNote extends DEditorAbstract 
+public final class DEditorNote extends DEditorAbstract 
 {    
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTitleSuffix = null;
+    private static String _s_strTitleSuffix = null;
     
     // ------------------
     // STATIC INITIALIZER

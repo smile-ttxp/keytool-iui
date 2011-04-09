@@ -46,10 +46,10 @@ abstract public class DViewSourceFileTextAbs extends DEscapeAbstract implements
     ActionListener
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strFilePathNo = "file path: dummy";
-    final static private String _f_s_strFileSourceNo = "file source: dummy";
+    private static final String _f_s_strFilePathNo = "file path: dummy";
+    private static final String _f_s_strFileSourceNo = "file source: dummy";
     
     
     // ------

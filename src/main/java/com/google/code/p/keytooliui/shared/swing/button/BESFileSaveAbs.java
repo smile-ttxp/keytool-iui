@@ -34,9 +34,9 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class BESFileSaveAbs extends BEnabledState
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTip = "click to select file to save";
+    private static final String _f_s_strTip = "click to select file to save";
     
     // ---------
     // PROTECTED

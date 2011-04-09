@@ -60,67 +60,67 @@ import net.miginfocom.swing.MigLayout;
 abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     // properties 
-    final static private String _f_s_strDocPropValCN = "cn";
-    final static private String _f_s_strDocPropValOU = "ou";
-    final static private String _f_s_strDocPropValO = "o";
-    final static private String _f_s_strDocPropValL = "l";
-    final static private String _f_s_strDocPropValST = "st";
-    final static private String _f_s_strDocPropValEMAIL = "email";
-    final static private String _f_s_strDocPropValC = "c";
+    private static final String _f_s_strDocPropValCN = "cn";
+    private static final String _f_s_strDocPropValOU = "ou";
+    private static final String _f_s_strDocPropValO = "o";
+    private static final String _f_s_strDocPropValL = "l";
+    private static final String _f_s_strDocPropValST = "st";
+    private static final String _f_s_strDocPropValEMAIL = "email";
+    private static final String _f_s_strDocPropValC = "c";
     
-    final static private String _f_s_strDocPropValT = "t";
-    final static private String _f_s_strDocPropValSN = "sn";
-    final static private String _f_s_strDocPropValSTREET = "street";
-    final static private String _f_s_strDocPropValBUSINESS_CATEGORY = "business_category";
-    final static private String _f_s_strDocPropValPOSTAL_CODE = "postal_code";
-    final static private String _f_s_strDocPropValDN_QUALIFIER = "dn_qualifier";
-    final static private String _f_s_strDocPropValPSEUDONYM = "pseudonym";
-    final static private String _f_s_strDocPropValDATE_OF_BIRTH = "date_of_birth";
-    final static private String _f_s_strDocPropValPLACE_OF_BIRTH = "place_of_birth";
-    final static private String _f_s_strDocPropValGENDER = "gender";
-    final static private String _f_s_strDocPropValCOUNTRY_OF_CITIZENSHIP = "country_of_citizenship";
-    final static private String _f_s_strDocPropValCOUNTRY_OF_RESIDENCE = "country_of_residence";
-    final static private String _f_s_strDocPropValNAME_AT_BIRTH = "name_at_birth";
-    final static private String _f_s_strDocPropValPOSTAL_ADDRESS = "postal_address";
+    private static final String _f_s_strDocPropValT = "t";
+    private static final String _f_s_strDocPropValSN = "sn";
+    private static final String _f_s_strDocPropValSTREET = "street";
+    private static final String _f_s_strDocPropValBUSINESS_CATEGORY = "business_category";
+    private static final String _f_s_strDocPropValPOSTAL_CODE = "postal_code";
+    private static final String _f_s_strDocPropValDN_QUALIFIER = "dn_qualifier";
+    private static final String _f_s_strDocPropValPSEUDONYM = "pseudonym";
+    private static final String _f_s_strDocPropValDATE_OF_BIRTH = "date_of_birth";
+    private static final String _f_s_strDocPropValPLACE_OF_BIRTH = "place_of_birth";
+    private static final String _f_s_strDocPropValGENDER = "gender";
+    private static final String _f_s_strDocPropValCOUNTRY_OF_CITIZENSHIP = "country_of_citizenship";
+    private static final String _f_s_strDocPropValCOUNTRY_OF_RESIDENCE = "country_of_residence";
+    private static final String _f_s_strDocPropValNAME_AT_BIRTH = "name_at_birth";
+    private static final String _f_s_strDocPropValPOSTAL_ADDRESS = "postal_address";
     
     
-    final static private String _f_s_strDocPropValSURNAME = "surname";
-    final static private String _f_s_strDocPropValGIVENNAME = "givenname";
-    final static private String _f_s_strDocPropValINITIALS = "initials";
-    final static private String _f_s_strDocPropValGENERATION = "generation";
-    final static private String _f_s_strDocPropValUNIQUE_IDENTIFIER = "unique_identifier";
+    private static final String _f_s_strDocPropValSURNAME = "surname";
+    private static final String _f_s_strDocPropValGIVENNAME = "givenname";
+    private static final String _f_s_strDocPropValINITIALS = "initials";
+    private static final String _f_s_strDocPropValGENERATION = "generation";
+    private static final String _f_s_strDocPropValUNIQUE_IDENTIFIER = "unique_identifier";
     
-    final static private boolean _f_s_blnReqFieldCN = true;
-    final static private boolean _f_s_blnReqFieldOU = false;
-    final static private boolean _f_s_blnReqFieldO = false;
-    final static private boolean _f_s_blnReqFieldL = false;
-    final static private boolean _f_s_blnReqFieldST = false;
-    final static private boolean _f_s_blnReqFieldC = true; // MEMO: required for SLL cert reply from Geotrust!
-    final static private boolean _f_s_blnReqFieldEMAIL = false;
+    private static final boolean _f_s_blnReqFieldCN = true;
+    private static final boolean _f_s_blnReqFieldOU = false;
+    private static final boolean _f_s_blnReqFieldO = false;
+    private static final boolean _f_s_blnReqFieldL = false;
+    private static final boolean _f_s_blnReqFieldST = false;
+    private static final boolean _f_s_blnReqFieldC = true; // MEMO: required for SLL cert reply from Geotrust!
+    private static final boolean _f_s_blnReqFieldEMAIL = false;
     
-    final static private boolean _f_s_blnReqFieldT = false;
-    final static private boolean _f_s_blnReqFieldSN = false;
-    final static private boolean _f_s_blnReqFieldSTREET = false;
-    final static private boolean _f_s_blnReqFieldBUSINESS_CATEGORY = false;
-    final static private boolean _f_s_blnReqFieldPOSTAL_CODE = false;
-    final static private boolean _f_s_blnReqFieldDN_QUALIFIER = false;
-    final static private boolean _f_s_blnReqFieldPSEUDONYM = false;
-    final static private boolean _f_s_blnReqFieldDATE_OF_BIRTH = false;
-    final static private boolean _f_s_blnReqFieldPLACE_OF_BIRTH = false;
-    final static private boolean _f_s_blnReqFieldGENDER = false;
-    final static private boolean _f_s_blnReqFieldCOUNTRY_OF_CITIZENSHIP = false;
-    final static private boolean _f_s_blnReqFieldCOUNTRY_OF_RESIDENCE = false;
-    final static private boolean _f_s_blnReqFieldNAME_AT_BIRTH = false;
-    final static private boolean _f_s_blnReqFieldPOSTAL_ADDRESS = false;
+    private static final boolean _f_s_blnReqFieldT = false;
+    private static final boolean _f_s_blnReqFieldSN = false;
+    private static final boolean _f_s_blnReqFieldSTREET = false;
+    private static final boolean _f_s_blnReqFieldBUSINESS_CATEGORY = false;
+    private static final boolean _f_s_blnReqFieldPOSTAL_CODE = false;
+    private static final boolean _f_s_blnReqFieldDN_QUALIFIER = false;
+    private static final boolean _f_s_blnReqFieldPSEUDONYM = false;
+    private static final boolean _f_s_blnReqFieldDATE_OF_BIRTH = false;
+    private static final boolean _f_s_blnReqFieldPLACE_OF_BIRTH = false;
+    private static final boolean _f_s_blnReqFieldGENDER = false;
+    private static final boolean _f_s_blnReqFieldCOUNTRY_OF_CITIZENSHIP = false;
+    private static final boolean _f_s_blnReqFieldCOUNTRY_OF_RESIDENCE = false;
+    private static final boolean _f_s_blnReqFieldNAME_AT_BIRTH = false;
+    private static final boolean _f_s_blnReqFieldPOSTAL_ADDRESS = false;
     
-    final static private boolean _f_s_blnReqFieldSURNAME = false;
-    final static private boolean _f_s_blnReqFieldGIVENNAME = false;
-    final static private boolean _f_s_blnReqFieldINITIALS = false;
-    final static private boolean _f_s_blnReqFieldGENERATION = false;
-    final static private boolean _f_s_blnReqFieldUNIQUE_IDENTIFIER = false;
+    private static final boolean _f_s_blnReqFieldSURNAME = false;
+    private static final boolean _f_s_blnReqFieldGIVENNAME = false;
+    private static final boolean _f_s_blnReqFieldINITIALS = false;
+    private static final boolean _f_s_blnReqFieldGENERATION = false;
+    private static final boolean _f_s_blnReqFieldUNIQUE_IDENTIFIER = false;
     
     // ------
     // PUBLIC
@@ -2527,7 +2527,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprAbs extends PTabUICmdKtlKstOpenAbs
         return pnl;
     }
     
-    //static protected boolean _blnShowDlgWarnOptDnameMiss_ = true;
+    //protected static boolean _blnShowDlgWarnOptDnameMiss_ = true;
     
     /*protected boolean _showDlgWarnOptDnameMiss_()
     {

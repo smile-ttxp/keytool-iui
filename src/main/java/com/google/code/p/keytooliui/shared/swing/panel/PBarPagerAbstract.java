@@ -40,28 +40,28 @@ import java.awt.*;
 abstract public class PBarPagerAbstract extends JPanel 
 {    
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intW = 100;
+    private static final int _f_s_intW = 100;
     
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".PBarPagerAbstract" // class name
         ;
     
     
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
 
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected String _s_strLabelTextPrefix_;
+    protected static String _s_strLabelTextPrefix_;
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strLabelTip;
+    private static String _s_strLabelTip;
     
     // ------
     // STATIC

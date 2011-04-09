@@ -34,14 +34,14 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileSaveSCms extends PSelBtnTfdFileSaveAbs
+public final class PSelBtnTfdFileSaveSCms extends PSelBtnTfdFileSaveAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_sig_save";
-    final static public String s_strDirNameDefault = "mysigs";
-    final static public String f_s_strLabel = "(detached) CMS signature file:"; 
+    public static final String f_s_strDocPropVal = "select_file_sig_save";
+    public static final String s_strDirNameDefault = "mysigs";
+    public static final String f_s_strLabel = "(detached) CMS signature file:"; 
     
     // ------
     // PUBLIC

@@ -22,7 +22,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenKprOutPkcs12 extends KTLKprOpenKprOutAbs
+public final class KTLKprOpenKprOutPkcs12 extends KTLKprOpenKprOutAbs
 {
     // ------
     // PUBLIC

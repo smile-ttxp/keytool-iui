@@ -40,26 +40,26 @@ import com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys;
 abstract public class OPAbstract extends JOptionPane
 { 
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract.";
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".OPAbstract" // class name
         ;
         
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
 
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTitleInfo = null;
-    static private String _s_strTitleWarning = null;
-    static private String _s_strTitleError = null;
-    static private String _s_strButtonClose = null;
-    static private String _s_strButtonOk = null;
-    static private String _s_strButtonCancel = null;
+    private static String _s_strTitleInfo = null;
+    private static String _s_strTitleWarning = null;
+    private static String _s_strTitleError = null;
+    private static String _s_strButtonClose = null;
+    private static String _s_strButtonOk = null;
+    private static String _s_strButtonCancel = null;
     
     // ------------------
     // STATIC INITIALIZER
@@ -88,9 +88,9 @@ abstract public class OPAbstract extends JOptionPane
     } 
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public void s_showDialogWarning(Component cmpParent, String strBody)
+    public static void s_showDialogWarning(Component cmpParent, String strBody)
     {    
         String strTitle = null;
         
@@ -104,7 +104,7 @@ abstract public class OPAbstract extends JOptionPane
                 null, objsOption, objsOption[0]);
     }
     
-    static public void s_showDialogInfo(Component cmpParent, String strBody)
+    public static void s_showDialogInfo(Component cmpParent, String strBody)
     {  
         String strTitle = System.getProperty("_appli.title") + " - " + OPAbstract._s_strTitleInfo;
         
@@ -124,7 +124,7 @@ abstract public class OPAbstract extends JOptionPane
     
 
     
-    static public void s_showDialogError(Component cmpParent, String strBody)
+    public static void s_showDialogError(Component cmpParent, String strBody)
     {        
         String strTitle = System.getProperty("_appli.title") + " - " + OPAbstract._s_strTitleError;
     
@@ -198,7 +198,7 @@ abstract public class OPAbstract extends JOptionPane
     /**
         if any error, exiting
     **/
-    static public boolean s_showConfirmDialog(Component cmpParent, String strBody)
+    public static boolean s_showConfirmDialog(Component cmpParent, String strBody)
     {
         String strWhere = OPAbstract._f_s_strClass + "s_showConfirmDialog(cmpParent, strBody)";    
           
@@ -223,7 +223,7 @@ abstract public class OPAbstract extends JOptionPane
     // there is a warning, the user may choose to solve the problem
     // icon=warning
     // buttons: choice between Y/N
-    static public boolean s_showWarningConfirmDialog(Component cmpParent, String strBody)
+    public static boolean s_showWarningConfirmDialog(Component cmpParent, String strBody)
     {
         String strWhere = OPAbstract._f_s_strClass + "s_showWarningConfirmDialog(cmpParent, strBody)";    
           
@@ -248,7 +248,7 @@ abstract public class OPAbstract extends JOptionPane
         return true;
     }
     
-    static public String s_showQuestionInputDialog(
+    public static String s_showQuestionInputDialog(
         Component cmpParent, // nil value allowed 
    
         String strBody, 

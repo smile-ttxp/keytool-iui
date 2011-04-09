@@ -40,17 +40,17 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileOpenKprKpr extends PSelBtnTfdFileOpenAbs 
+public final class PSelBtnTfdFileOpenKprKpr extends PSelBtnTfdFileOpenAbs 
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_kpr_kpr_open";
+    public static final String f_s_strDocPropVal = "select_file_kpr_kpr_open";
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strLabel = "Private key file:";
+    private static final String _f_s_strLabel = "Private key file:";
     
     // ------
     // PUBLIC

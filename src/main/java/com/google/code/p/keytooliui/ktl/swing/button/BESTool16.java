@@ -1,12 +1,12 @@
 package com.google.code.p.keytooliui.ktl.swing.button;
 
 
-final public class BESTool16 extends BESToolAbs
+public final class BESTool16 extends BESToolAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strImage = "hammer16.gif";
+    public static final String f_s_strImage = "hammer16.gif";
     
     // ------
     // PUBLIC

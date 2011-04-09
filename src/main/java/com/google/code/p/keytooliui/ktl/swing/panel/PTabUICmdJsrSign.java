@@ -53,25 +53,25 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 import net.miginfocom.swing.MigLayout;
 
-final public class PTabUICmdJsrSign extends PTabUICmdJsrAbs
+public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
 {
     // --------------------------
-    // final static public String
+    // public static final String
     
-    final static public String STR_TITLETASK = "Sign JAR file with private key entry";
+    public static final String STR_TITLETASK = "Sign JAR file with private key entry";
     
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
 
-    static private String _s_strHelpID = null;
-
-
-    static private String _s_strDlgInfoActionBodyOK = null;
-    static private String _s_strDlgInfoActionBodyQueryRCRPrefix = null;
+    private static String _s_strHelpID = null;
 
 
-    static private String _s_strDlgInfoActionBodyQueryRCRSuffix =
+    private static String _s_strDlgInfoActionBodyOK = null;
+    private static String _s_strDlgInfoActionBodyQueryRCRPrefix = null;
+
+
+    private static String _s_strDlgInfoActionBodyQueryRCRSuffix =
         " " +
         com.google.code.p.keytooliui.shared.Shared.f_s_strVersionCurr +
         "?";

@@ -27,12 +27,12 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-final public class MHelpAboutViewerAudioPreview extends MHelpAboutAbstract 
+public final class MHelpAboutViewerAudioPreview extends MHelpAboutAbstract 
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strInfoAboutBody = null;
+    private static String _s_strInfoAboutBody = null;
     
 
     // ------------------

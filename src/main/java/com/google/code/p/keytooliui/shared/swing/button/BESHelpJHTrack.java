@@ -28,17 +28,17 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class BESHelpJHTrack extends BESHelpJHAbstract
+public final class BESHelpJHTrack extends BESHelpJHAbstract
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "contextualhelp24.gif";
+    private static final String _f_s_strImage = "contextualhelp24.gif";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipText = null;
+    private static String _s_strToolTipText = null;
     
     // ------------------
     // STATIC INITIALIZER

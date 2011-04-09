@@ -31,7 +31,7 @@ import java.util.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrtX509;
 
 
-final public class KTLKprSaveNewDsaPkcs12V3C extends KTLKprSaveNewDsaPkcs12
+public final class KTLKprSaveNewDsaPkcs12V3C extends KTLKprSaveNewDsaPkcs12
 {
     // ------
     // public

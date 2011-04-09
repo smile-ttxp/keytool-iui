@@ -28,7 +28,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLShkOpenManDelete extends KTLShkOpenManAbs
+public final class KTLShkOpenManDelete extends KTLShkOpenManAbs
 {
     // ------
     // PUBLIC

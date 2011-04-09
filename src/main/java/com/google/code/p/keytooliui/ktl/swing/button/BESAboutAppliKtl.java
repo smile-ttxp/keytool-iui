@@ -29,7 +29,7 @@ import com.google.code.p.keytooliui.ktl.swing.menuitem.MIHelpAboutAppliUIKtl;
 import com.google.code.p.keytooliui.ktl.swing.panel.PTabHelpAppliAdvancedUI;
 import com.google.code.p.keytooliui.shared.swing.button.*;
 
-final public class BESAboutAppliKtl extends BESAboutAppli24Abs
+public final class BESAboutAppliKtl extends BESAboutAppli24Abs
 {
 
     

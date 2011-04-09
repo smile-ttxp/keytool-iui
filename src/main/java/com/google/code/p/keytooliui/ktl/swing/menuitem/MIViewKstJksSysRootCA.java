@@ -2,12 +2,12 @@ package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 import java.awt.event.ActionListener;
 
-final public class MIViewKstJksSysRootCA extends MIKstJksCrtAbs
+public final class MIViewKstJksSysRootCA extends MIKstJksCrtAbs
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
 
-    static public String s_strPrefix = "System-level root CA";
+    public static String s_strPrefix = "System-level root CA";
 
     // ------
     // PUBLIC

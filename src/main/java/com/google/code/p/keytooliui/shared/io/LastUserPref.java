@@ -32,13 +32,13 @@ package com.google.code.p.keytooliui.shared.io;
 
 
 
-final public class LastUserPref extends LastUserAbstract
+public final class LastUserPref extends LastUserAbstract
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strFileNameIni = new String("pref.ini");
-    final static private String _f_s_strFileNameBak = new String("pref.bak");
+    private static final String _f_s_strFileNameIni = new String("pref.ini");
+    private static final String _f_s_strFileNameBak = new String("pref.bak");
     
     // ------
     // PUBLIC

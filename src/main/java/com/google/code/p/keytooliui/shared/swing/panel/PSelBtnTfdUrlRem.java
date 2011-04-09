@@ -42,12 +42,12 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-final public class PSelBtnTfdUrlRem extends PSelBtnTfdStrWAbs
+public final class PSelBtnTfdUrlRem extends PSelBtnTfdStrWAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intNbCharMin = 9;
+    private static final int _f_s_intNbCharMin = 9;
     
     // ------
     // PUBLIC

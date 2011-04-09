@@ -45,9 +45,9 @@ import java.awt.*;
 abstract public class TFAbstract extends JTextField
 {   
     // --------------------------
-    // FINAL STATIC PUBLIC STRING
+    // PUBLIC STATIC FINAL STRING
     
-    final static public String f_s_strDocPropKey = "doc_prop_key";
+    public static final String f_s_strDocPropKey = "doc_prop_key";
     
     // ---------------
     // ABSTRACT PUBLIC

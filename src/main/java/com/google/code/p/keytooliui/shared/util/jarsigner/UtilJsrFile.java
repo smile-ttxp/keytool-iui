@@ -37,27 +37,27 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import java.io.*;
 import java.awt.*;
 
-final public class UtilJsrFile
+public final class UtilJsrFile
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.jarsigner.UtilJsrFile";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.jarsigner.UtilJsrFile";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private boolean _s_blnFileSaveOverwriteAlways = false;
+    private static boolean _s_blnFileSaveOverwriteAlways = false;
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     
     /**
         if any code or config error, exiting
         else if any other type of error, show warning/error dialog, then return null
     **/
-    static public File s_getFileSave(
+    public static File s_getFileSave(
         Frame frmOwner, 
         String strPathAbs,
         boolean blnShowDlgOverwrite
@@ -146,7 +146,7 @@ final public class UtilJsrFile
         if any code or config error, exiting
         else if any other type of error, show warning/error dialog, then return null
     **/
-    static public File s_getFileOpen(
+    public static File s_getFileOpen(
         Frame frmOwner, 
         String strPathAbs
         )

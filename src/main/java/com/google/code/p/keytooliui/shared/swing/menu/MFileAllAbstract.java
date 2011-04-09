@@ -47,10 +47,10 @@ import java.awt.event.*;
 abstract public class MFileAllAbstract extends MAbstract
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strThisText = null;
-    static private char _s_chrThisMnemo;
+    private static String _s_strThisText = null;
+    private static char _s_chrThisMnemo;
     
     // -----------------
     // STATIC INTIALIZER

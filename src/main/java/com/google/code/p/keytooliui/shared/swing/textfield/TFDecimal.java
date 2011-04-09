@@ -31,13 +31,13 @@ import javax.swing.text.*;
 
 import java.text.*;
 
-final public class TFDecimal extends TFAbstract
+public final class TFDecimal extends TFAbstract
 {
     // --------------------
-    // FINAL STATIC PRIVATE
-    final static private String _f_s_strToolTipText = "text field, displays decimal value";
-    final static private int _f_s_intH = 20;
-    final static private int _f_s_intColumns = 40; // 30; //4;
+    // PRIVATE STATIC FINAL
+    private static final String _f_s_strToolTipText = "text field, displays decimal value";
+    private static final int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 40; // 30; //4;
     
     // ------
     // PUBLIC

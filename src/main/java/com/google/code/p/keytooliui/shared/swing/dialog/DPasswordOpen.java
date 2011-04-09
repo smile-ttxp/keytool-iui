@@ -32,14 +32,14 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class DPasswordOpen extends DPasswordAbs
+public final class DPasswordOpen extends DPasswordAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTitleThis = "get password";
+    private static final String _f_s_strTitleThis = "get password";
     
-    final static private String _f_s_strTextLabel = "Enter password:";
+    private static final String _f_s_strTextLabel = "Enter password:";
     
     // ------
     // PUBLIC

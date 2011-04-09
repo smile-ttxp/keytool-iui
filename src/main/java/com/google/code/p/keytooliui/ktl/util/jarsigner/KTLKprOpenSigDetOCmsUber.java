@@ -16,7 +16,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenSigDetOCmsUber extends KTLKprOpenSigDetOCmsKPAbs
+public final class KTLKprOpenSigDetOCmsUber extends KTLKprOpenSigDetOCmsKPAbs
 {
     // ------
     // PUBLIC

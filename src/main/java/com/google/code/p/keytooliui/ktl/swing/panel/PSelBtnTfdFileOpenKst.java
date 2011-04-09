@@ -62,17 +62,17 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
+public final class PSelBtnTfdFileOpenKst extends PSelBtnTfdFileOpenAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_kst_open";
-    final static public String s_strDirNameDefault = "mykeystores";
-    final static public String f_s_strLabel = "Keystore file:";
+    public static final String f_s_strDocPropVal = "select_file_kst_open";
+    public static final String s_strDirNameDefault = "mykeystores";
+    public static final String f_s_strLabel = "Keystore file:";
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
     
     // ------

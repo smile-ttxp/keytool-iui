@@ -48,23 +48,23 @@ import java.awt.*;
 import java.util.*;
 
 
-final public class UtilKstJceks extends UtilKstAbs
+public final class UtilKstJceks extends UtilKstAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strKeystoreType = "JCEKS"; // default type
-    final static public String f_s_strKeystoreProvider = "SunJCE"; // default type
+    public static final String f_s_strKeystoreType = "JCEKS"; // default type
+    public static final String f_s_strKeystoreProvider = "SunJCE"; // default type
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJceks";
 
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public void s_manageFile(
+    public static void s_manageFile(
         Frame frmParent)
     {
         String strMethod = UtilKstJceks._f_s_strClass + "." + "s_manageFile(...)";
@@ -191,7 +191,7 @@ final public class UtilKstJceks extends UtilKstAbs
             UtilKstJceks.f_s_strKeystoreProvider);
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilKstJceks._f_s_strClass + "." + "s_showFile(...)";
@@ -249,7 +249,7 @@ final public class UtilKstJceks extends UtilKstAbs
         UtilKstJceks._s_showFile_(frmParent, fleOpenKst/*, chrsPasswdKst*/);
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         String strPathAbs/*,
         char[] chrsPasswdKst*/)
@@ -288,7 +288,7 @@ final public class UtilKstJceks extends UtilKstAbs
     
     // ----
     
-    static protected void _s_showFile_(
+    protected static void _s_showFile_(
         Frame frmParent,
         File fle/*,
         char[] chrsPassword*/)
@@ -361,7 +361,7 @@ final public class UtilKstJceks extends UtilKstAbs
         UtilKstAbs._s_showKstOpen_(frmParent, kstOpen, fle.getAbsolutePath());
     }                   
     
-    static public KeyStore s_getKeystoreOpen(
+    public static KeyStore s_getKeystoreOpen(
         Frame frmOwner, 
         File fleOpen,
         char[] chrsPassword // nil value allowed (eg: verify signed jarred file)
@@ -378,7 +378,7 @@ final public class UtilKstJceks extends UtilKstAbs
     
     
     
-    static public KeyStore s_getKeystoreNew(
+    public static KeyStore s_getKeystoreNew(
         Frame frmOwner
         )
     {
@@ -389,7 +389,7 @@ final public class UtilKstJceks extends UtilKstAbs
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     
     

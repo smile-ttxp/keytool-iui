@@ -39,21 +39,21 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.dialog.DViewSourceFileTextSys;
 import net.miginfocom.swing.MigLayout;
 
-final public class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAbs
+public final class PTabUICmdKtlKstOpenCrtSigReq extends PTabUICmdKtlKstOpenCrtAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Export certificate from private key entry as CSR (Certificate Signing Request) file";
+    public static final String STR_TITLETASK = "Export certificate from private key entry as CSR (Certificate Signing Request) file";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    static private String _s_strDlgInfoActionBodyBeg = null;
-    static private String _s_strDlgInfoActionBodyCSR = null;
-    static private String _s_strDlgInfoActionBodyQuery = null;
+    private static String _s_strDlgInfoActionBodyBeg = null;
+    private static String _s_strDlgInfoActionBodyCSR = null;
+    private static String _s_strDlgInfoActionBodyQuery = null;
     
     // ------------------
     // STATIC INITIALIZER

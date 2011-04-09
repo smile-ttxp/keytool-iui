@@ -28,13 +28,13 @@ package com.google.code.p.keytooliui.shared.swing.button;
 **/
 
 
-final public class BIcn2StateRtpStreaming extends BIcn2StateAbs
+public final class BIcn2StateRtpStreaming extends BIcn2StateAbs
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTip0 = "not receiving stream";
-    static private String _s_strTip1 = "receiving stream";
+    private static String _s_strTip0 = "not receiving stream";
+    private static String _s_strTip1 = "receiving stream";
     
     // ------
     // PUBLIC

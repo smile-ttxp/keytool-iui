@@ -38,7 +38,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.menu.*;
 import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 
-final public class MChgAlignTabsMainUIKtl extends MChgAlignTabsMainUIAbs
+public final class MChgAlignTabsMainUIKtl extends MChgAlignTabsMainUIAbs
 {     
     // ------
     // PUBLIC    

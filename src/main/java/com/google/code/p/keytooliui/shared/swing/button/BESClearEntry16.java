@@ -3,7 +3,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class BESClearEntry16 extends BESClearEntryAbs
+public final class BESClearEntry16 extends BESClearEntryAbs
 {    
 
     // ------

@@ -36,10 +36,10 @@
 public class TCRData extends TCRAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public Color f_s_colFgDefault = Color.black;
-    final static public Color f_s_colBgDefault = new Color(255, 255, 255);
+    public static final Color f_s_colFgDefault = Color.black;
+    public static final Color f_s_colBgDefault = new Color(255, 255, 255);
     
     // ------
     // PUBLIC

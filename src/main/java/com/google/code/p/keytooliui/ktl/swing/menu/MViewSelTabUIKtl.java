@@ -14,7 +14,7 @@ import java.awt.event.*;
 import java.util.*;
 
 
-final public class MViewSelTabUIKtl extends MViewSelTabUIAbs
+public final class MViewSelTabUIKtl extends MViewSelTabUIAbs
 {
     // ------
     // PUBLIC

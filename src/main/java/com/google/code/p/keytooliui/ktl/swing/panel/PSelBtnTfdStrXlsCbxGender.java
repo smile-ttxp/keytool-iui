@@ -44,15 +44,15 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 import com.google.code.p.keytooliui.shared.swing.textfield.TF2x20SelString;
 
-final public class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs 
+public final class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     
-    final static private String _f_s_strListMale = "M";
+    private static final String _f_s_strListMale = "M";
     
-    final static private String[] _f_s_strsList = 
+    private static final String[] _f_s_strsList = 
     {
         "M",
         "F"

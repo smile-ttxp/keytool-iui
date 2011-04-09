@@ -2,7 +2,7 @@ package com.google.code.p.keytooliui.ktl.swing.toolbar;
 
 import com.google.code.p.keytooliui.ktl.swing.button.BESHelpOnlineHome24;
 
-final public class TBMainUIKtl extends TBMainUIAbs
+public final class TBMainUIKtl extends TBMainUIAbs
 {
     
     // ------

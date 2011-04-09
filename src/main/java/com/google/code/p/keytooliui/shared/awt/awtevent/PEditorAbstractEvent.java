@@ -27,18 +27,18 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 public class PEditorAbstractEvent extends java.awt.AWTEvent
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intIdFirst = MEditEditorTextEvent.MEDITEDITORTEXTEVENT_LAST + 1;
+    private static final int _f_s_intIdFirst = MEditEditorTextEvent.MEDITEDITORTEXTEVENT_LAST + 1;
     
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int PEDITORABSTRACTEVENT_LAST = _f_s_intIdFirst + 2;
+    public static final int PEDITORABSTRACTEVENT_LAST = _f_s_intIdFirst + 2;
 
-    final static public int PEDITORABSTRACTEVENT_FILERECORD = _f_s_intIdFirst;
-    final static public int PEDITORABSTRACTEVENT_FILEDELETE = _f_s_intIdFirst + 1;
-    final static public int PEDITORABSTRACTEVENT_EXIT = _f_s_intIdFirst + 2;
+    public static final int PEDITORABSTRACTEVENT_FILERECORD = _f_s_intIdFirst;
+    public static final int PEDITORABSTRACTEVENT_FILEDELETE = _f_s_intIdFirst + 1;
+    public static final int PEDITORABSTRACTEVENT_EXIT = _f_s_intIdFirst + 2;
       
     // ------
     // PUBLIC

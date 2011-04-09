@@ -32,7 +32,7 @@ import java.beans.*; //Property change stuff
 import java.awt.*;
 import java.awt.event.*;
 
-final public class DSelectString extends DEscapeAbstract
+public final class DSelectString extends DEscapeAbstract
 {
     // ------
     // PUBLIC

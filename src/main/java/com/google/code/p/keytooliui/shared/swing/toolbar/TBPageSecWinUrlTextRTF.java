@@ -25,7 +25,7 @@ package com.google.code.p.keytooliui.shared.swing.toolbar;
 
 import java.awt.event.*;
 
-final public class TBPageSecWinUrlTextRTF extends TBPageSecWinUrlTextAbs
+public final class TBPageSecWinUrlTextRTF extends TBPageSecWinUrlTextAbs
 {
     // ------
     // PUBLIC

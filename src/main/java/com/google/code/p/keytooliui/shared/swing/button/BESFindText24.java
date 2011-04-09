@@ -23,12 +23,12 @@
 package com.google.code.p.keytooliui.shared.swing.button;
 
 
-final public class BESFindText24 extends BESFindTextAbs
+public final class BESFindText24 extends BESFindTextAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "findtext24.gif"; // tempo
+    private static final String _f_s_strImage = "findtext24.gif"; // tempo
     
     // ------
     // PUBLIC

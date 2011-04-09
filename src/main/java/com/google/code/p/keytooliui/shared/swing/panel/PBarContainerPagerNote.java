@@ -25,7 +25,7 @@ import java.awt.BorderLayout;
 
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 
-final public class PBarContainerPagerNote extends PBarContainerPagerAbstract 
+public final class PBarContainerPagerNote extends PBarContainerPagerAbstract 
 {
     public PBarContainerPagerNote()
     {

@@ -38,12 +38,12 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class PTblEntryKprShowAll extends PTblEntryKprAbs 
+public final class PTblEntryKprShowAll extends PTblEntryKprAbs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intDeltaW = 0; // using default width assigned in superclass
+    private static final int _f_s_intDeltaW = 0; // using default width assigned in superclass
     
     // ------
     // PUBLIC

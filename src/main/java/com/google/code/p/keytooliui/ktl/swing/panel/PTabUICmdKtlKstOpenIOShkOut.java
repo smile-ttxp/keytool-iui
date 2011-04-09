@@ -15,21 +15,21 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkOutAbs
+public final class PTabUICmdKtlKstOpenIOShkOut extends PTabUICmdKtlKstOpenIOShkOutAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Export secret key entry as secret key file";
+    public static final String STR_TITLETASK = "Export secret key entry as secret key file";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    //static private String _s_strDlgInfoActionBodyBeg = null;
-    //static private String _s_strDlgInfoActionBodyCrypt = null;
-    //static private String _s_strDlgInfoActionBodyQuery = null;
+    //private static String _s_strDlgInfoActionBodyBeg = null;
+    //private static String _s_strDlgInfoActionBodyCrypt = null;
+    //private static String _s_strDlgInfoActionBodyQuery = null;
     
     // ------------------
     // STATIC INITIALIZER

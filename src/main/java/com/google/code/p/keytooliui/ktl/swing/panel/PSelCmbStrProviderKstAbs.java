@@ -40,9 +40,9 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 abstract public class PSelCmbStrProviderKstAbs extends PSelCmbStrProviderAbs
 {   
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTextLabelSuffix = "keystore provider:";
+    private static final String _f_s_strTextLabelSuffix = "keystore provider:";
     
     // ---------
     // PROTECTED   

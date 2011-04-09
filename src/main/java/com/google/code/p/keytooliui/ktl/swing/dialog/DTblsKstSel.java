@@ -5,10 +5,10 @@ import java.awt.Component;
 public class DTblsKstSel extends DTblsKstSelAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
    
-    final static private String _f_s_strTitleThisPrefix = "select entry in";
-    final static private String _f_s_strTitleThisSuffix = "keystore";
+    private static final String _f_s_strTitleThisPrefix = "select entry in";
+    private static final String _f_s_strTitleThisSuffix = "keystore";
     
     // ------
     // PUBLIC

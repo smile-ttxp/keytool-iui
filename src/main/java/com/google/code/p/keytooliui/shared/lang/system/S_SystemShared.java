@@ -30,18 +30,18 @@ import com.google.code.p.keytooliui.shared.lang.string.S_StringShared;
 public class S_SystemShared
 {
     // -------------------
-    // FINAL STATIC PUBLIC 
+    // PUBLIC STATIC FINAL 
     
-    final static public String f_s_strPrefixFolderJWS = "DM";
-    final static public String f_s_strPrefixFileJWS = "RM";
+    public static final String f_s_strPrefixFolderJWS = "DM";
+    public static final String f_s_strPrefixFileJWS = "RM";
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _s_f_strClass = "com.google.code.p.keytooliui.shared.lang.system.S_SystemShared.";
+    private static final String _s_f_strClass = "com.google.code.p.keytooliui.shared.lang.system.S_SystemShared.";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         converting EG: 
@@ -52,7 +52,7 @@ public class S_SystemShared
         usage: com.google.code.p.keytooliui.shared.lang.system.S_SystemShared.s_javaPathToJWSPath(strPathJava)
     **/
     
-    static public String s_javaPathToJWSPath(String strPathJava)
+    public static String s_javaPathToJWSPath(String strPathJava)
     {
         String strMethod = _s_f_strClass + "s_javaPathToJWSPath(strPathJava)";
         
@@ -117,7 +117,7 @@ public class S_SystemShared
         output = ".\foo1\foo2"
     **/
     
-    static public String s_javaPathToSystemPath(String strPathJava)
+    public static String s_javaPathToSystemPath(String strPathJava)
     {
         String strMethod = _s_f_strClass + "s_javaPathToSystemPath(strPathJava)";
         
@@ -180,7 +180,7 @@ public class S_SystemShared
         output = "./foo1/foo2"
     **/
     
-    static public String s_systemPathToJavaPath(String strPathSystem)
+    public static String s_systemPathToJavaPath(String strPathSystem)
     {
         String strMethod = _s_f_strClass + "s_systemPathToJavaPath(strPathSystem)";
         

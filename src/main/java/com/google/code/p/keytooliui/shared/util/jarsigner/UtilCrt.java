@@ -46,14 +46,14 @@ import java.security.cert.CertificateException;
 public class UtilCrt
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrt";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrt";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public boolean s_isSelfSigned(Certificate crt)
+    public static boolean s_isSelfSigned(Certificate crt)
     {
         String strMethod = UtilCrt._f_s_strClass + "." + "s_isSelfSigned(crt)";
         
@@ -68,7 +68,7 @@ public class UtilCrt
     /**
         crtSigned & crtSigner could be the same
     **/
-    static public boolean s_isSignedBy(Certificate crtSigned, Certificate crtSigner)
+    public static boolean s_isSignedBy(Certificate crtSigned, Certificate crtSigner)
     {
         String strMethod = UtilCrt._f_s_strClass + "." + "s_isSignedBy(...)";
         

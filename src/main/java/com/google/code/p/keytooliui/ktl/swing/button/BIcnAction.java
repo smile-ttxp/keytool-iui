@@ -35,21 +35,21 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
 
-final public class BIcnAction extends JButton
+public final class BIcnAction extends JButton
 {   
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIconEnabled = "_bluelgt.gif";
-    final static private String _f_s_strIconDisabled = "_graylgt.gif";
-    final static private String _f_s_strIconRollover = "_blue.gif";
-    final static private String _f_s_strIconPressed = "_bluedrk.gif";
+    private static final String _f_s_strIconEnabled = "_bluelgt.gif";
+    private static final String _f_s_strIconDisabled = "_graylgt.gif";
+    private static final String _f_s_strIconRollover = "_blue.gif";
+    private static final String _f_s_strIconPressed = "_bluedrk.gif";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTipEnabled = "action button enabled";
-    static private String _s_strTipDisabled = "action button disabled, becomes enabled once all required fields are filled";
+    private static String _s_strTipEnabled = "action button enabled";
+    private static String _s_strTipDisabled = "action button disabled, becomes enabled once all required fields are filled";
         
     // ------
     // PUBLIC

@@ -24,10 +24,10 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 abstract public class PTblEntAbs extends JPanel
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    //final static private int _f_s_intWidth = 590;
-    final static private int _f_s_intHeight = 240;
+    //private static final int _f_s_intWidth = 590;
+    private static final int _f_s_intHeight = 240;
     
     // ------
     // PUBLIC

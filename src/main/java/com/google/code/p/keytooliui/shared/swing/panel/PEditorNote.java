@@ -36,7 +36,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class PEditorNote extends PEditorAbstract implements
+public final class PEditorNote extends PEditorAbstract implements
     MEditEditorTextListener
 {    
     // ------
@@ -246,7 +246,7 @@ final public class PEditorNote extends PEditorAbstract implements
         _destroyListeners();
     }
     
-    static public void main(String[] args)
+    public static void main(String[] args)
     {
         final String f_strWhere = "main(strsArg)";
         

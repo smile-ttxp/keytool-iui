@@ -3,7 +3,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 
 import java.awt.event.*;
  
-final public class RBTypeCrtCms extends RBTypeCrtAbs
+public final class RBTypeCrtCms extends RBTypeCrtAbs
 {    
     // ------
     // PUBLIC

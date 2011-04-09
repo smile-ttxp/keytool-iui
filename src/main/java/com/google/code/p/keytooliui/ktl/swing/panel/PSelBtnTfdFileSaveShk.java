@@ -34,17 +34,17 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileSaveShk extends PSelBtnTfdFileSaveAbs
+public final class PSelBtnTfdFileSaveShk extends PSelBtnTfdFileSaveAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_shk_save";
-    final static public String s_strDirNameDefault = "myshks";      // !!! already defined
-    final static public String f_s_strLabel = "Secret key file:"; // !!! already defined
+    public static final String f_s_strDocPropVal = "select_file_shk_save";
+    public static final String s_strDirNameDefault = "myshks";      // !!! already defined
+    public static final String f_s_strLabel = "Secret key file:"; // !!! already defined
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
     
     // ------

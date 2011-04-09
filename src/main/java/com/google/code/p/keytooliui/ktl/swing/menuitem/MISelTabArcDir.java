@@ -26,7 +26,7 @@ import java.awt.event.ActionListener;
 /**
  * @author bantchao
  */
-final public class MISelTabArcDir extends MISelTabAbs
+public final class MISelTabArcDir extends MISelTabAbs
 {
     public MISelTabArcDir(ActionListener actListenerParent)
     {

@@ -29,7 +29,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenDecRsaUber extends KTLKprOpenDecRsaDMAbs
+public final class KTLKprOpenDecRsaUber extends KTLKprOpenDecRsaDMAbs
 {
     // ------
     // PUBLIC

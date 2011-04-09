@@ -30,44 +30,44 @@ import com.google.code.p.keytooliui.shared.lang.*;
 public class S_FileExtension
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
 
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileExtension.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileExtension.";
 
     // --------------------------
-    // FINAL STATIC PUBLIC STRING
+    // PUBLIC STATIC FINAL STRING
 
-    final static public String f_s_strJarDocRcrScript = "txt"; // script.txt
-    final static public String f_s_strJarDocJhrHelpset = "hs"; // helpset.hs
+    public static final String f_s_strJarDocRcrScript = "txt"; // script.txt
+    public static final String f_s_strJarDocJhrHelpset = "hs"; // helpset.hs
     
 
 
-    final static public String f_s_strProjectReaderDocument = "jar"; // jarred RCReader document
-    final static public String f_s_strProjectReaderTemplate = "tpr";
-    final static public String f_s_strProjectReaderHelpSun = "jar"; // jarred JavaHelp document
-    final static public String f_s_strProjectReaderHelpOracle = "jar"; // jarred OracleHelp document
+    public static final String f_s_strProjectReaderDocument = "jar"; // jarred RCReader document
+    public static final String f_s_strProjectReaderTemplate = "tpr";
+    public static final String f_s_strProjectReaderHelpSun = "jar"; // jarred JavaHelp document
+    public static final String f_s_strProjectReaderHelpOracle = "jar"; // jarred OracleHelp document
 
-    final static public String f_s_strProjectBuilderDocument = "xlb";
-    final static public String f_s_strProjectBuilderTemplate = "tpb";
+    public static final String f_s_strProjectBuilderDocument = "xlb";
+    public static final String f_s_strProjectBuilderTemplate = "tpb";
 
-    final static public String f_s_strProjectBuilderAsciiDoc = "dtx";
-    final static public String f_s_strProjectBuilderAsciiTpl = "ttx";
+    public static final String f_s_strProjectBuilderAsciiDoc = "dtx";
+    public static final String f_s_strProjectBuilderAsciiTpl = "ttx";
 
-    final static public String f_s_strJARDocument = "jar";
-    final static public String f_s_strAPKDocument = "apk";
+    public static final String f_s_strJARDocument = "jar";
+    public static final String f_s_strAPKDocument = "apk";
 
-    final static public String[] f_s_strsImage = { "gif", "jpg", "jpeg", "png" };
-    final static public String[] f_s_strsSndfx =  {"aif", "aiff", "au", "wav"};
-    final static public String[] f_s_strsCSS =  { "css" };
+    public static final String[] f_s_strsImage = { "gif", "jpg", "jpeg", "png" };
+    public static final String[] f_s_strsSndfx =  {"aif", "aiff", "au", "wav"};
+    public static final String[] f_s_strsCSS =  { "css" };
 
 
-    final static public String[] f_s_strsPageTextHTML = { "htm", "html" };
-    final static public String[] f_s_strsPageTextRTF = { "rtf" };
+    public static final String[] f_s_strsPageTextHTML = { "htm", "html" };
+    public static final String[] f_s_strsPageTextRTF = { "rtf" };
 
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
 
-    static public boolean s_isHtml(String strFile)
+    public static boolean s_isHtml(String strFile)
     {
         String strMethod = _f_s_strClass + "s_isHtml(strFile)";
 
@@ -88,7 +88,7 @@ public class S_FileExtension
         return false;
     }
 
-    static public boolean s_kindOfTemplate(String strFile)
+    public static boolean s_kindOfTemplate(String strFile)
     {
         if (strFile == null)
             return false;

@@ -24,12 +24,12 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 
 
-final public class BESPageReload24 extends BESPageReloadAbs
+public final class BESPageReload24 extends BESPageReloadAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "refresh24.gif";
+    private static final String _f_s_strImage = "refresh24.gif";
     
     // ------
     // PUBLIC

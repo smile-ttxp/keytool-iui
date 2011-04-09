@@ -32,10 +32,10 @@ import javax.swing.text.*;
 import java.awt.*;
 
 
-final public class METextFgColorEditorText extends MAbstract 
+public final class METextFgColorEditorText extends MAbstract 
 {     
     /** ##############
-        STATIC PRIVATE
+        PRIVATE STATIC
         ##############
     **/
     
@@ -46,15 +46,15 @@ final public class METextFgColorEditorText extends MAbstract
     final private static Color _S_COL_BLACK = java.awt.Color.black; // new Color(204, 204, 204);
     final private static Color _S_COL_DEFAULT = _S_COL_BLACK;
     
-    static private java.util.ResourceBundle _s_rbeResources;
+    private static java.util.ResourceBundle _s_rbeResources;
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".METextFgColorEditorText" // class name
         ;
     
     
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
 
     static
     {

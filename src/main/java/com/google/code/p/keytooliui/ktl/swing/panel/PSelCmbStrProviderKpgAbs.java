@@ -41,9 +41,9 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 abstract public class PSelCmbStrProviderKpgAbs extends PSelCmbStrProviderAbs
 {   
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTextLabel = "Keypair Generator Provider:"; // memo: java.security.KeyPairGenerator
+    private static final String _f_s_strTextLabel = "Keypair Generator Provider:"; // memo: java.security.KeyPairGenerator
     
     // ---------
     // PROTECTED   

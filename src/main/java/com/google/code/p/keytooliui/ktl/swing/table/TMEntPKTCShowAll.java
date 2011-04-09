@@ -31,18 +31,18 @@ import com.google.code.p.keytooliui.shared.lang.bool.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-final public class TMEntPKTCShowAll extends TMEntAbs
+public final class TMEntPKTCShowAll extends TMEntAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public int f_s_intColumnIdIsTCEntry = 1;        // see array of integers right below
-    final static public int f_s_intColumnIdIsValidDate = TMEntPKTCShowAll.f_s_intColumnIdIsTCEntry + 1;      // see array of integers right below
-    final static public int f_s_intColumnIdIsSelfSignedCert = TMEntPKTCShowAll.f_s_intColumnIdIsValidDate + 1; // see array of integers right below
-    final static public int f_s_intColumnIdIsTrustedCACert = TMEntPKTCShowAll.f_s_intColumnIdIsSelfSignedCert + 1;    // see array of integers right below
+    public static final int f_s_intColumnIdIsTCEntry = 1;        // see array of integers right below
+    public static final int f_s_intColumnIdIsValidDate = TMEntPKTCShowAll.f_s_intColumnIdIsTCEntry + 1;      // see array of integers right below
+    public static final int f_s_intColumnIdIsSelfSignedCert = TMEntPKTCShowAll.f_s_intColumnIdIsValidDate + 1; // see array of integers right below
+    public static final int f_s_intColumnIdIsTrustedCACert = TMEntPKTCShowAll.f_s_intColumnIdIsSelfSignedCert + 1;    // see array of integers right below
     
     // preferred columns width 
-    final static public int[] f_s_intsColW = 
+    public static final int[] f_s_intsColW = 
     { 
         TMEntAbs._INT_W_ALIAS_, // strAlias
         30,  // booIsTCEntry
@@ -56,7 +56,7 @@ final public class TMEntPKTCShowAll extends TMEntAbs
     }; // sum: ?
     
     
-    final static public String[] f_s_strsColumnNames =
+    public static final String[] f_s_strsColumnNames =
     { 
         TMEntAbs._STR_ALIAS_,
         "Entry", // PK versus TC

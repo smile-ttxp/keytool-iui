@@ -51,9 +51,9 @@ import java.awt.event.*;
 abstract public class TBMainAbstract extends TBMSAbstract
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    //final static private Dimension _f_s_dimSeparator2 = new Dimension(3, 3);
+    //private static final Dimension _f_s_dimSeparator2 = new Dimension(3, 3);
     
     // ------
     // PUBLIC

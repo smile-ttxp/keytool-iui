@@ -4,12 +4,12 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 
  */
 
-final public class BESFolderOpen16 extends BESFolderOpenAbs
+public final class BESFolderOpen16 extends BESFolderOpenAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strImage = "folderopen16.gif";
+    public static final String f_s_strImage = "folderopen16.gif";
     
     // ------
     // PUBLIC

@@ -38,7 +38,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MToolAllMainUI extends MToolAllMainAbstract
+public final class MToolAllMainUI extends MToolAllMainAbstract
 {
 
     // ------

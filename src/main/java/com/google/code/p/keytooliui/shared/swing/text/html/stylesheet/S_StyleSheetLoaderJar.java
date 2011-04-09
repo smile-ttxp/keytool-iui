@@ -29,18 +29,18 @@ import javax.swing.text.html.*;
 
 import java.io.*;
 
-final public class S_StyleSheetLoaderJar extends S_StyleSheetLoaderAbstract
+public final class S_StyleSheetLoaderJar extends S_StyleSheetLoaderAbstract
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
       
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.text.html.stylesheet.S_StyleSheetLoaderJar.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.text.html.stylesheet.S_StyleSheetLoaderJar.";
     
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         memo: fjr either from docJar or from templateJar inside docJar
@@ -49,7 +49,7 @@ final public class S_StyleSheetLoaderJar extends S_StyleSheetLoaderAbstract
         load StyleSheet
     **/
     
-    static public StyleSheet s_load(String strTitleApplication, java.awt.Component cmpFrameOwner, FileJar fjr, String strPathRelative)
+    public static StyleSheet s_load(String strTitleApplication, java.awt.Component cmpFrameOwner, FileJar fjr, String strPathRelative)
     {
         String f_strMethod = _f_s_strClass + "s_load(strTitleApplication, cmpFrameOwner, fjr, strPathRelative)";
         

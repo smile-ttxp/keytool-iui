@@ -37,9 +37,9 @@ import java.util.*;
 abstract public class KTLKprOpenSigDetOutAbs extends KTLKprOpenSigDetAbs
 {
     // ---------------------------
-    // final static private string
+    // private static final string
     
-    final static private String _STR_PROVIDERSIGINSTANCE = KTLAbs.f_s_strProviderKstBC; 
+    private static final String _STR_PROVIDERSIGINSTANCE = KTLAbs.f_s_strProviderKstBC; 
     
     // ------------------
     // abstract protected
@@ -684,7 +684,7 @@ abstract public class KTLKprOpenSigDetOutAbs extends KTLKprOpenSigDetAbs
         return true;
     }
     
-    static private void _s_byteToFile(byte[] bytes, File file) throws IOException 
+    private static void _s_byteToFile(byte[] bytes, File file) throws IOException 
     {
         FileOutputStream fos = new FileOutputStream(file);
         OutputStream out = new BufferedOutputStream(fos);

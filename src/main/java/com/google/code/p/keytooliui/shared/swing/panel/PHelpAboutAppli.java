@@ -54,21 +54,21 @@
  import java.awt.*;
  import java.awt.event.*;
  
- final public class PHelpAboutAppli extends JPanel 
+ public final class PHelpAboutAppli extends JPanel 
  {
     // --------------------
-    // STATIC PUBLIC STRING
+    // PUBLIC STATIC STRING
     
-    static public String s_strContactPoints = null;
+    public static String s_strContactPoints = null;
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTabTextGeneral = null;
-    static private String _s_strTabTextAdvanced = null;
+    private static String _s_strTabTextGeneral = null;
+    private static String _s_strTabTextAdvanced = null;
     
-    static private String _s_strTabTipGeneral = null;
-    static private String _s_strTabTipAdvanced = null;
+    private static String _s_strTabTipGeneral = null;
+    private static String _s_strTabTipAdvanced = null;
     
     
     

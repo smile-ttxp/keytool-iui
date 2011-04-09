@@ -30,13 +30,13 @@
  
  import java.awt.event.*;
  
- final public class RBTypeJarRcr extends RBTypeJarAbs
+ public final class RBTypeJarRcr extends RBTypeJarAbs
  {
     // -------------------
-    // FINAL STATIC PUBLIC 
+    // PUBLIC STATIC FINAL 
     
-    final static public String f_s_strDesc = "RCReader doc";    
-    final static public String[] f_s_strsFileExt = { com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectReaderDocument };
+    public static final String f_s_strDesc = "RCReader doc";    
+    public static final String[] f_s_strsFileExt = { com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectReaderDocument };
    
     
     // ------

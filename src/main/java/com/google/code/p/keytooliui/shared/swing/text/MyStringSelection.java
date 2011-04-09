@@ -27,7 +27,7 @@ import com.google.code.p.keytooliui.shared.lang.thread.*;
 
 import javax.swing.*;
 
-final public class MyStringSelection extends Object
+public final class MyStringSelection extends Object
     implements Runnable
 {
     // ------

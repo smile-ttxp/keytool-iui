@@ -30,7 +30,7 @@
  
  import java.awt.event.*;
  
- final public class RBTypeCrtPkcs12 extends RBTypeCrtAbs
+ public final class RBTypeCrtPkcs12 extends RBTypeCrtAbs
  {
     // ------
     // PUBLIC

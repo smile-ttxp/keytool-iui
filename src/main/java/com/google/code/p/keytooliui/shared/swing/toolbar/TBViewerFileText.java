@@ -35,7 +35,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class TBViewerFileText extends TBViewerFileAbs
+public final class TBViewerFileText extends TBViewerFileAbs
 {      
     // ------
     // PUBLIC

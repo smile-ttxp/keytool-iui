@@ -9,9 +9,9 @@ import java.awt.Frame;
 abstract public class CmsAbs extends Object
 {
     // -------------------
-    // final static public
+    // public static final
     
-    //final static public String STR_INSTANCESIGNATURE = "DOM";
+    //public static final String STR_INSTANCESIGNATURE = "DOM";
      
     // ---------
     // protected

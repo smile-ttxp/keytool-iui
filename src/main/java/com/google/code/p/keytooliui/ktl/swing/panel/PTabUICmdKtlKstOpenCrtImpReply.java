@@ -22,17 +22,17 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import net.miginfocom.swing.MigLayout;
 
 
-final public class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrtAbs
+public final class PTabUICmdKtlKstOpenCrtImpReply extends PTabUICmdKtlKstOpenCrtAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Import CA (Certificate Authority) certificate reply to private key entry";
+    public static final String STR_TITLETASK = "Import CA (Certificate Authority) certificate reply to private key entry";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
     
     // ------------------

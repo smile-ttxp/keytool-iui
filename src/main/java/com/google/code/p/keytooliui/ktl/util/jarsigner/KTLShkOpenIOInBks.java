@@ -21,7 +21,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLShkOpenIOInBks extends KTLShkOpenIOInKPAbs
+public final class KTLShkOpenIOInBks extends KTLShkOpenIOInKPAbs
 {
     // ------
     // PUBLIC

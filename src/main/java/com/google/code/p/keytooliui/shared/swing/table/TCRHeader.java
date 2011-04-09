@@ -32,18 +32,18 @@
  
  import java.awt.*;
  
- final public class TCRHeader extends TCRAbs
+ public final class TCRHeader extends TCRAbs
  {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public Color f_s_colFgDefault = Color.black;
-    final static public Color f_s_colBgDefault = new Color(240, 230, 220);
+    public static final Color f_s_colFgDefault = Color.black;
+    public static final Color f_s_colBgDefault = new Color(240, 230, 220);
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTip = null;
+    private static String _s_strTip = null;
     
     // ------------------
     // STATIC INITIALIZER

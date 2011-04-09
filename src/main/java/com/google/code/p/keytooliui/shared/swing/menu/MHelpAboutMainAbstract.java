@@ -47,9 +47,9 @@ import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 abstract public class MHelpAboutMainAbstract extends MAbstract
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

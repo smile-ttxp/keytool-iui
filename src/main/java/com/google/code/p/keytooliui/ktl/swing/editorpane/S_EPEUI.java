@@ -9,14 +9,14 @@ public class S_EPEUI extends S_EPEShared
 {
     // trick to handle JavaWebStart's cache resources
     public S_EPEUI() {}
-    final static private S_EPEUI _f_s_epe = new S_EPEUI();
+    private static final S_EPEUI _f_s_epe = new S_EPEUI();
     
     
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strResourcePathRelativeSystem =
+    private static final String _f_s_strResourcePathRelativeSystem =
         "com" +
         File.separator +
         "google" +
@@ -35,7 +35,7 @@ public class S_EPEUI extends S_EPEShared
     
     
     
-    final static private String _f_s_strResourcePathRelativeJar =
+    private static final String _f_s_strResourcePathRelativeJar =
         "com" +
         "/" +
          "google" +
@@ -54,9 +54,9 @@ public class S_EPEUI extends S_EPEShared
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public javax.swing.JEditorPane s_get(String strFileName)
+    public static javax.swing.JEditorPane s_get(String strFileName)
     {
         ClassLoader cld = _f_s_epe.getClass().getClassLoader();
         return S_EPEAbs._s_get_(cld, strFileName, _f_s_strResourcePathRelativeSystem, _f_s_strResourcePathRelativeJar);

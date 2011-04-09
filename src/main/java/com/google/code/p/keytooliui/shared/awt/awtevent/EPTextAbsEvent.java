@@ -27,16 +27,16 @@ import com.google.code.p.keytooliui.shared.swing.editorpane.*;
 public class EPTextAbsEvent extends java.awt.AWTEvent
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intIdFirst = DFindPageEvent.DFINDPAGEEVENT_LAST + 1;
+    private static final int _f_s_intIdFirst = DFindPageEvent.DFINDPAGEEVENT_LAST + 1;
     
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
-    final static public int EPTEXTABSEVENT_LAST = _f_s_intIdFirst;
+    public static final int EPTEXTABSEVENT_LAST = _f_s_intIdFirst;
 
-    final static public int EPTEXTABSEVENT_SETENABLEDCOPY = _f_s_intIdFirst;
+    public static final int EPTEXTABSEVENT_SETENABLEDCOPY = _f_s_intIdFirst;
    
     // ------
     // PUBLIC

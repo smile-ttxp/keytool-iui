@@ -36,12 +36,12 @@
     . centered: 1 contentPane
  **/
 
- final public class FMainUIKtl extends FMainUIAbs
+ public final class FMainUIKtl extends FMainUIAbs
  {
     // --------------------
-    // STATIC PUBLIC STRING
+    // PUBLIC STATIC STRING
 
-    static public String s_strHelpHomeID = null;
+    public static String s_strHelpHomeID = null;
 
     // ------------------
     // STATIC INITIALIZER

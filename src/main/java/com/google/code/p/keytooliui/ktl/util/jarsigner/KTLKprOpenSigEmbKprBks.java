@@ -18,7 +18,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenSigEmbKprBks extends KTLKprOpenSigEmbKprDMAbs
+public final class KTLKprOpenSigEmbKprBks extends KTLKprOpenSigEmbKprDMAbs
 {
     // ------
     // PUBLIC

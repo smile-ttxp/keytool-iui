@@ -28,7 +28,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenCrtInUber extends KTLKprOpenCrtInKPAbs
+public final class KTLKprOpenCrtInUber extends KTLKprOpenCrtInKPAbs
 {
     // ------
     // PUBLIC

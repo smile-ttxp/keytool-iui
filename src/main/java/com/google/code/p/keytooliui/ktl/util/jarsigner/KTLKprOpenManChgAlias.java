@@ -27,7 +27,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLKprOpenManChgAlias extends KTLKprOpenManAbs
+public final class KTLKprOpenManChgAlias extends KTLKprOpenManAbs
 {
     // ------
     // PUBLIC

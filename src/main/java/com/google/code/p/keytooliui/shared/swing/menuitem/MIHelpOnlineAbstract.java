@@ -42,9 +42,9 @@ import java.net.URI;
 abstract public class MIHelpOnlineAbstract extends MIAbstract 
 {       
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static public String STR_DLG_ERROR_BODY = null;
+    public static String STR_DLG_ERROR_BODY = null;
     
     // ------------------
     // STATIC INITIALIZER

@@ -29,7 +29,7 @@
  **/
  
  
- final public class LabelCheckTypeJarRcr extends LabelCheckTypeJarAbs
+ public final class LabelCheckTypeJarRcr extends LabelCheckTypeJarAbs
  {
     // ---------
     // PUBLIC

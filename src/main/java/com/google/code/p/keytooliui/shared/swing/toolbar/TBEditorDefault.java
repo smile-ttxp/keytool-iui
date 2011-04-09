@@ -26,7 +26,7 @@
 import com.google.code.p.keytooliui.shared.util.eventlistener.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class TBEditorDefault extends TBEditorAbstract
+public final class TBEditorDefault extends TBEditorAbstract
 {    
     // ------
     // PUBLIC

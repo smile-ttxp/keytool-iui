@@ -20,37 +20,37 @@ import java.io.*;
 import java.awt.*;
 
 
-final public class UtilKstJks extends UtilKstAbs
+public final class UtilKstJks extends UtilKstAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strKeystoreType = "JKS"; // default type
-    final static public String f_s_strKeystoreProvider = "SUN"; // default type
+    public static final String f_s_strKeystoreType = "JKS"; // default type
+    public static final String f_s_strKeystoreProvider = "SUN"; // default type
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks";
     
     // "changeit"
-    /*final static private char[] _f_s_chrsPasswdCacertsDefault = 
+    /*private static final char[] _f_s_chrsPasswdCacertsDefault = 
     {
         'c', 'h', 'a', 'n', 'g', 'e', 'i', 't'
     };*/
     
-    final static private String _f_s_strNameKstCertsCASys = "cacerts"; // memo, default passwd: "changeit"
+    private static final String _f_s_strNameKstCertsCASys = "cacerts"; // memo, default passwd: "changeit"
     
-    final static private String[] _f_s_strsDirKstCertsCASys =
+    private static final String[] _f_s_strsDirKstCertsCASys =
     {
         "lib",
         "security"
     };
     
-    final static private String _f_s_strNameKstCertsTrustUsr = "trusted.certs"; // memo, default passwd: ""
+    private static final String _f_s_strNameKstCertsTrustUsr = "trusted.certs"; // memo, default passwd: ""
     
     // eg: C:\Documents and Settings\jsmith\Application Data\Sun\Java\Deployment\security\
-    final static private String[] _f_s_strsDirKstCertsTrustUsrWinUS =
+    private static final String[] _f_s_strsDirKstCertsTrustUsrWinUS =
     {
         "Application Data", // TBRL, eg: French: "Donn�es d'applications"
         "Sun",
@@ -59,7 +59,7 @@ final public class UtilKstJks extends UtilKstAbs
         "security"
     };
     
-    final static private String[] _f_s_strsDirKstCertsTrustUsrWinFR =
+    private static final String[] _f_s_strsDirKstCertsTrustUsrWinFR =
     {
         "Donn�es d'applications", // TBRL, eg: French: "Donn�es d'applications"
         "Sun",
@@ -70,7 +70,7 @@ final public class UtilKstJks extends UtilKstAbs
     
     // Unix & Linux
     // eg: /home/bjones/.java/deployment/deployment.properties\security\
-    final static private String[] _f_s_strsDirKstCertsTrustUsrUnix =
+    private static final String[] _f_s_strsDirKstCertsTrustUsrUnix =
     {
         ".java",
         "deployment",
@@ -78,9 +78,9 @@ final public class UtilKstJks extends UtilKstAbs
     };
 
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public void s_manageFile(
+    public static void s_manageFile(
         Frame frmParent)
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_manageFile(...)";
@@ -139,7 +139,7 @@ final public class UtilKstJks extends UtilKstAbs
    
     }
     
-    static private void _s_manageFileOpen(
+    private static void _s_manageFileOpen(
         Frame frmParent,
         File fleOpenKst)
     {
@@ -222,7 +222,7 @@ final public class UtilKstJks extends UtilKstAbs
     
     
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         String strPathAbs)
     {
@@ -258,7 +258,7 @@ final public class UtilKstJks extends UtilKstAbs
         UtilKstJks._s_showFile_(frmParent, fleOpenKst/*, chrsPasswdKst*/); 
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_showFile(...)";
@@ -324,7 +324,7 @@ final public class UtilKstJks extends UtilKstAbs
         UtilKstJks._s_showFile_(frmParent, fleOpenKst/*, chrsPasswdKst*/);
     }
     
-    static public void s_manageFileKstCertsTrustSys(
+    public static void s_manageFileKstCertsTrustSys(
         Frame frmParent)
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_manageFileKstCertsTrustSys(...)";
@@ -362,7 +362,7 @@ final public class UtilKstJks extends UtilKstAbs
         
     }
     
-    static public void s_showFileKstCertsTrustSys(
+    public static void s_showFileKstCertsTrustSys(
         Frame frmParent)
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_showFileKstCertsTrustSys(...)";
@@ -391,7 +391,7 @@ final public class UtilKstJks extends UtilKstAbs
             UtilKstAbs._s_showKstOpen_(frmParent, kstOpen, fleOpen.getAbsolutePath());
     }
     
-    static public void s_showFileKstCertsTrustUsr(
+    public static void s_showFileKstCertsTrustUsr(
         Frame frmParent)
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_showFileKstCertsTrustUsr(...)";
@@ -422,7 +422,7 @@ final public class UtilKstJks extends UtilKstAbs
             UtilKstAbs._s_showKstOpen_(frmParent, kstOpen, fleOpen.getAbsolutePath());
     }
     
-    static public void s_manageFileKstCertsTrustUsr(
+    public static void s_manageFileKstCertsTrustUsr(
         Frame frmParent)
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_manageFileKstCertsTrustUsr(...)";
@@ -468,7 +468,7 @@ final public class UtilKstJks extends UtilKstAbs
                 strPathAbsOpenKst, chrsPasswdOpenKst, strKeystoreProvider);
     }
     
-     static public KeyStore s_getKstOpenCertsTrustCASys(
+     public static KeyStore s_getKstOpenCertsTrustCASys(
         Frame frmOwner,       
         boolean blnShowDialogError
         )
@@ -504,7 +504,7 @@ final public class UtilKstJks extends UtilKstAbs
             UtilKstJks.f_s_strKeystoreProvider);
     }
     
-    static public KeyStore s_getKstOpenCertsTrustUsr(
+    public static KeyStore s_getKstOpenCertsTrustUsr(
         Frame frmOwner,       
         boolean blnShowDialogError
         )
@@ -542,7 +542,7 @@ final public class UtilKstJks extends UtilKstAbs
           
                        
     
-    static public KeyStore s_getKeystoreOpen(
+    public static KeyStore s_getKeystoreOpen(
         Frame frmOwner, 
         File fleOpen,
         char[] chrsPassword // nil value allowed (eg: verify signed jarred file)
@@ -557,7 +557,7 @@ final public class UtilKstJks extends UtilKstAbs
     }
     
     
-    static public KeyStore s_getKeystoreNew(
+    public static KeyStore s_getKeystoreNew(
         Frame frmOwner
         )
     {
@@ -570,7 +570,7 @@ final public class UtilKstJks extends UtilKstAbs
     
     // memo:
     // cacerts, keystore of type JKS, password: "changeit"
-    static public File s_getFileKstCertsTrustCASys()
+    public static File s_getFileKstCertsTrustCASys()
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_getFileKstCertsTrustCASys()";
         File fleKeystore = null;
@@ -623,7 +623,7 @@ final public class UtilKstJks extends UtilKstAbs
     }
     
     // OS is Windows
-    static private File _s_getFileKstCertsTrustUsrFrWindows() // "Fr": French
+    private static File _s_getFileKstCertsTrustUsrFrWindows() // "Fr": French
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "_s_getFileKstCertsTrustUsrFrWindows()";
         File fleKeystore = null;
@@ -683,7 +683,7 @@ final public class UtilKstJks extends UtilKstAbs
     
     // if Unix or Linux or Windows, OK, else: returns NIL
     // more: http://java.sun.com/j2se/1.5.0/docs/guide/deployment/deployment-guide/properties.html
-    static public File s_getFileKstCertsTrustUsr()
+    public static File s_getFileKstCertsTrustUsr()
     {
         String strMethod = UtilKstJks._f_s_strClass + "." + "s_getFileKstCertsTrustUsr()";
         File fleKeystore = null;
@@ -788,9 +788,9 @@ final public class UtilKstJks extends UtilKstAbs
     }
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected void _s_showFile_(
+    protected static void _s_showFile_(
         Frame frmParent,
         File fle)
     {

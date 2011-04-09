@@ -38,7 +38,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class DHelpAboutAppli extends DEscapeAbstract implements ActionListener
+public final class DHelpAboutAppli extends DEscapeAbstract implements ActionListener
 {
     // ------
     // PUBLIC

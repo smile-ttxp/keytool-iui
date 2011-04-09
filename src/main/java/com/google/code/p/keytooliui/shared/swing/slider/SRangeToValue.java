@@ -27,7 +27,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
 
-final public class SRangeToValue extends JSlider
+public final class SRangeToValue extends JSlider
 {
     // ------
     // PUBLIC

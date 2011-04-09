@@ -30,14 +30,14 @@
  
  import java.awt.event.*;
  
- final public class RBTypeJarJar extends RBTypeJarAbs
+ public final class RBTypeJarJar extends RBTypeJarAbs
  {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDesc = "JAR"; // Any JAR file";
+    public static final String f_s_strDesc = "JAR"; // Any JAR file";
     
-    final static public String[] f_s_strsFileExt = { com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strJARDocument };
+    public static final String[] f_s_strsFileExt = { com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strJARDocument };
     
     // ---------
     // PUBLIC

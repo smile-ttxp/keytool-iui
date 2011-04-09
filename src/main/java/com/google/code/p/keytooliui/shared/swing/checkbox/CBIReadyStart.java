@@ -36,14 +36,14 @@ import java.awt.event.*;
 public class CBIReadyStart extends CBIcon
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "forward_blue16.gif";
+    private static final String _f_s_strIcon = "forward_blue16.gif";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTip = null;
+    private static String _s_strTip = null;
     
     // ------------------
     // STATIC INITIALIZER

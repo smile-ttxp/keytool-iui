@@ -1,12 +1,12 @@
 package com.google.code.p.keytooliui.ktl.swing.button;
 
 
-final public class BESVerify24 extends BESVerifyAbs
+public final class BESVerify24 extends BESVerifyAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "hammer24.gif"; // tempo
+    private static final String _f_s_strImage = "hammer24.gif"; // tempo
     
     // ------
     // PUBLIC

@@ -39,15 +39,15 @@ import java.util.*;
 abstract public class UtilKstAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstAbs";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstAbs";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     
-     static public PublicKey s_getKeyPublic(
+     public static PublicKey s_getKeyPublic(
         Component cmpOwner, 
        
         KeyStore kseLoaded,
@@ -119,7 +119,7 @@ abstract public class UtilKstAbs
     }
      
     // "PKTC": Private key entry and trusted certificate entry
-    static public Boolean[] s_getBoosValidDatePKTC(
+    public static Boolean[] s_getBoosValidDatePKTC(
         Component cmpOwner, 
        
         KeyStore kstOpen, 
@@ -291,7 +291,7 @@ abstract public class UtilKstAbs
         return boosValidDatePKTC;
     }
      
-     static public boolean s_checkValidDateCert(
+     public static boolean s_checkValidDateCert(
         Component cmpOwner, 
       
         KeyStore kseLoaded,
@@ -412,7 +412,7 @@ abstract public class UtilKstAbs
         return true;
      }
     
-    static public String s_getCertSigAlgo(
+    public static String s_getCertSigAlgo(
         Component cmpOwner, 
       
         KeyStore kseLoaded,
@@ -500,7 +500,7 @@ abstract public class UtilKstAbs
         if any code or config error, exiting
         else if any other type of error, show warning/error dialog, then return null
     **/
-    static public Key s_getKey(
+    public static Key s_getKey(
         Component cmpOwner, 
       
         KeyStore kseLoaded,
@@ -595,7 +595,7 @@ abstract public class UtilKstAbs
     }
     
     
-    static public boolean s_setKeyEntry(
+    public static boolean s_setKeyEntry(
         Frame frmOwner, 
      
         
@@ -641,7 +641,7 @@ abstract public class UtilKstAbs
         return true;
      } 
     
-    static public Date[] s_getDtesLastModified(
+    public static Date[] s_getDtesLastModified(
         Component cmpOwner, 
       
         KeyStore kstOpen, 
@@ -684,7 +684,7 @@ abstract public class UtilKstAbs
     /**
         assuming all certs in certs chain have the same signature algorithm name
     **/
-    static public String[] s_getStrsAlgoSigCertPKTC(
+    public static String[] s_getStrsAlgoSigCertPKTC(
         Component cmpOwner, 
    
         KeyStore kstOpen, 
@@ -733,7 +733,7 @@ abstract public class UtilKstAbs
         return strsAlgoSigCert;
     }
     
-    static public String[] s_getStrsTypeCertificatePKTC(
+    public static String[] s_getStrsTypeCertificatePKTC(
         Component cmpOwner, 
       
         KeyStore kstOpen, 
@@ -784,7 +784,7 @@ abstract public class UtilKstAbs
         return strsTypeCert;
     }
     
-    static public String[] s_getStrsAlgoKeyPubl(
+    public static String[] s_getStrsAlgoKeyPubl(
         Component cmpOwner, 
       
         KeyStore kstOpen, 
@@ -838,7 +838,7 @@ abstract public class UtilKstAbs
         return strsAlgoKpu;
     }
     
-    static public String[] s_getStrsSizeKeyPubl(
+    public static String[] s_getStrsSizeKeyPubl(
         Component cmpOwner, 
       
         KeyStore kstOpen, 
@@ -905,7 +905,7 @@ abstract public class UtilKstAbs
         based on keystore containing default cacerts  
     **/
     
-    static public Boolean[] s_getBoosTrusted(
+    public static Boolean[] s_getBoosTrusted(
         Component cmpOwner, 
    
         KeyStore kstOpen, 
@@ -1040,7 +1040,7 @@ abstract public class UtilKstAbs
         return boosTrusted;
     }
     
-    static public Boolean[] s_getBoosEntryKpr(
+    public static Boolean[] s_getBoosEntryKpr(
         Component cmpOwner, 
        
         KeyStore kstOpen, 
@@ -1094,7 +1094,7 @@ abstract public class UtilKstAbs
         return boosEntryKpr;
     }
     
-    static public Boolean[] s_getBoosEntryTcr(
+    public static Boolean[] s_getBoosEntryTcr(
         Component cmpOwner, 
      
         KeyStore kstOpen, 
@@ -1137,7 +1137,7 @@ abstract public class UtilKstAbs
         return boosEntryTcr;
     }
     
-    static public Boolean[] s_getBoosEntryTcrRsa(
+    public static Boolean[] s_getBoosEntryTcrRsa(
         Component cmpOwner, 
       
         KeyStore kstOpen, 
@@ -1233,7 +1233,7 @@ abstract public class UtilKstAbs
         return boosEntryTcrRsa;
     }
     
-    static public Boolean[] s_getBoosEntryKprRsa(
+    public static Boolean[] s_getBoosEntryKprRsa(
         Component cmpOwner, 
      
         KeyStore kstOpen, 
@@ -1344,7 +1344,7 @@ abstract public class UtilKstAbs
      * ==> instead of sig algo "SHA1withDSA", getting "DSA"
      * ==> instead of sig algo "SHA1withRSA", getting "SHA1withRSAEncryption"
      */
-    static public Boolean[] s_getBoosEntryKprXmlSign(
+    public static Boolean[] s_getBoosEntryKprXmlSign(
         Component cmpOwner, 
        
         KeyStore kstOpen, 
@@ -1456,7 +1456,7 @@ abstract public class UtilKstAbs
         return boosEntryKprXmlSign;
     }
     
-    static public Boolean[] s_getBoosSelfSigned(
+    public static Boolean[] s_getBoosSelfSigned(
         Component cmpOwner, 
        
         KeyStore kstOpen, 
@@ -1514,7 +1514,7 @@ abstract public class UtilKstAbs
         return boosSelfSigned;
     }
     
-    static public String[] s_getStrsAlias(
+    public static String[] s_getStrsAlias(
         Component cmpOwner, 
       
         KeyStore kstOpen)
@@ -1585,7 +1585,7 @@ abstract public class UtilKstAbs
      * "PK" means "Private Key" (keypair), different from "Secret Key" (shared key)
      * "TC" means "Trusted Certificate" 
      */
-    static public String[] s_getStrsAliasPKTC(
+    public static String[] s_getStrsAliasPKTC(
         Component cmpOwner, 
      
         KeyStore kstOpen)
@@ -1678,7 +1678,7 @@ abstract public class UtilKstAbs
     /*
      * "SK" means "Secret Key" (shared key), different from "Private Key" (keypair)
      */
-    static public String[] s_getStrsAliasSK(
+    public static String[] s_getStrsAliasSK(
         Component cmpOwner, 
       
         KeyStore kstOpen)
@@ -1769,9 +1769,9 @@ abstract public class UtilKstAbs
     }
     
     // ----------------
-    // STATIC PROTECTED 
+    // PROTECTED STATIC 
     
-    static protected KeyStore _s_getKeystoreNew_(
+    protected static KeyStore _s_getKeystoreNew_(
         Frame frmOwner, 
       
         String strKeystoreType, 
@@ -1827,7 +1827,7 @@ abstract public class UtilKstAbs
         if code error, exiting
         else if any error, show warning dialog and return false
     **/
-    static protected KeyStore _s_getKeystoreOpen_(
+    protected static KeyStore _s_getKeystoreOpen_(
         Frame frmOwner, 
      
         File fleOpen,
@@ -2013,7 +2013,7 @@ abstract public class UtilKstAbs
     /**
         in case of error, return nil, therefore calling method should perform an exit!
     **/
-    static protected KeyStore _s_getInstance_(String strType, String strProvider)
+    protected static KeyStore _s_getInstance_(String strType, String strProvider)
     {
         String strMethod = UtilKstAbs._f_s_strClass + "." + "_s_getInstance_(strType, strProvider)";
         
@@ -2048,7 +2048,7 @@ abstract public class UtilKstAbs
         return kse;
     }
     
-    static protected void _s_manageKstOpen_(
+    protected static void _s_manageKstOpen_(
       
         Frame frmParent,
         KeyStore kstOpen,
@@ -2198,7 +2198,7 @@ abstract public class UtilKstAbs
     
    
     
-    static protected void _s_showKstOpen_(
+    protected static void _s_showKstOpen_(
      
         Frame frmParent,
         KeyStore kstOpen,
@@ -2343,9 +2343,9 @@ abstract public class UtilKstAbs
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private boolean _s_isTrustedCertsChain(Certificate[] crtsChain2check, HashSet<Certificate> hstCrtTrusted)
+    private static boolean _s_isTrustedCertsChain(Certificate[] crtsChain2check, HashSet<Certificate> hstCrtTrusted)
     {
         String strMethod = UtilKstAbs._f_s_strClass + "." + "_s_isTrustedCertsChain(...)";
         
@@ -2368,7 +2368,7 @@ abstract public class UtilKstAbs
         return false;
     }
     
-    static private boolean _s_isTrustedCert(Certificate crt2check, HashSet<Certificate> hstCrtTrusted)
+    private static boolean _s_isTrustedCert(Certificate crt2check, HashSet<Certificate> hstCrtTrusted)
     {
         String strMethod = UtilKstAbs._f_s_strClass + "." + "_s_isTrustedCert(...)";
         

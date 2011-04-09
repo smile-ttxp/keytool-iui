@@ -35,11 +35,11 @@ import java.io.*;
 abstract public class ChgLocMainUIAbs extends ChgLocAbstract
 {
     // --------------------------
-    // FINAL STATIC PROTECTED INT
+    // PROTECTED STATIC FINAL INT
     
     // memo: not necessary, BUT shows how to assign a non default location
     // in such a case, should use the default value assigned in this class, NOT in the superclass
-    final static protected int _f_s_intDefault = ChgLocAbstract.F_S_INT_TOP; // ChgLocAbstract.F_S_INT_LEFT;
+    protected static final int _f_s_intDefault = ChgLocAbstract.F_S_INT_TOP; // ChgLocAbstract.F_S_INT_LEFT;
     
     // ------------------
     // ABSTRACT PROTECTED

@@ -30,7 +30,7 @@ package com.google.code.p.keytooliui.shared.swing.table;
 import com.google.code.p.keytooliui.shared.lang.bool.*;
  
  
-final public class TCRChecked3StateUnchecked extends TCRChecked3StateAbs
+public final class TCRChecked3StateUnchecked extends TCRChecked3StateAbs
 {
     // ------
     // PUBLIC

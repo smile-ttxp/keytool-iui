@@ -40,21 +40,21 @@
  public class LabelCheck extends JLabel
  {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private ImageIcon _f_s_iinChecked = 
+    private static final ImageIcon _f_s_iinChecked = 
         //com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("tick_red9x11.gif"); 
         com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("checked16.gif");
         
-    final static private ImageIcon _f_s_iinUnchecked = 
+    private static final ImageIcon _f_s_iinUnchecked = 
         //com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("transp9x11.gif");
         com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("emptyicon16.gif");
         
    
-    //final static private Font _f_s_fntChecked = 
+    //private static final Font _f_s_fntChecked = 
       //  new Font("serif", Font.BOLD, 14);
         
-    //final static private Font _f_s_fntUnchecked = 
+    //private static final Font _f_s_fntUnchecked = 
       //  new Font("serif", Font.PLAIN, 14);
         
     // ------

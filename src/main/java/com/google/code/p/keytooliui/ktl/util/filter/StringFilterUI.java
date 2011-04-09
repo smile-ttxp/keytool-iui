@@ -45,39 +45,39 @@
  import com.google.code.p.keytooliui.shared.lang.*;
  
  
- final public class StringFilterUI
+ public final class StringFilterUI
  {
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI.";
     
     // KeyStore, KeyPair
-    final static private int _f_s_intMinPassword = 6; 
-    final static private int _f_s_intMaxPassword = 40;
+    private static final int _f_s_intMinPassword = 6; 
+    private static final int _f_s_intMaxPassword = 40;
 
     // KeyPair
-    final static private int _f_s_intMinAlias = 1;
-    final static private int _f_s_intMaxAlias = 40;
+    private static final int _f_s_intMinAlias = 1;
+    private static final int _f_s_intMaxAlias = 40;
     
     // while signing, sigfile base name
-    final static private int _f_s_intMinSigfile = 1;
-    final static private int _f_s_intMaxSigfile = 8;
+    private static final int _f_s_intMinSigfile = 1;
+    private static final int _f_s_intMaxSigfile = 8;
     
-    final static private int _f_s_intMinFilename = 1;
-    final static private int _f_s_intMaxFilename = 40;
+    private static final int _f_s_intMinFilename = 1;
+    private static final int _f_s_intMaxFilename = 40;
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /**
         if any error, exiting
     **/
-    static public boolean s_isAllowedCbxGender(String strValue)
+    public static boolean s_isAllowedCbxGender(String strValue)
     {
         String strMethod = _f_s_strClass + "s_isAllowedCbxGender(strValue)";
         
@@ -123,7 +123,7 @@
     /**
         if any error, exiting
     **/
-    static public boolean s_isAllowedDateBirth(String strValue)
+    public static boolean s_isAllowedDateBirth(String strValue)
     {
         String strMethod = _f_s_strClass + "s_isAllowedDateBirth(strValue)";
         
@@ -170,7 +170,7 @@
     /**
         if any error, exiting
     **/
-    static public boolean s_isAllowedCountryCode(String strValue)
+    public static boolean s_isAllowedCountryCode(String strValue)
     {
         String strMethod = _f_s_strClass + "s_isAllowedCountryCode(strValue)";
         
@@ -216,7 +216,7 @@
     }
     
     // string to be displayed for eg in infoDialog, errorDialog, ...
-    static public String s_getRuleCbxGender()
+    public static String s_getRuleCbxGender()
     {
         String strRule = "Value rules:";
         
@@ -232,7 +232,7 @@
     }
     
     // string to be displayed for eg in infoDialog, errorDialog, ...
-    static public String s_getRuleDateBirth()
+    public static String s_getRuleDateBirth()
     {
         String strRule = "Value rules:";
         
@@ -248,7 +248,7 @@
     }
     
     // string to be displayed for eg in infoDialog, errorDialog, ...
-    static public String s_getRuleCountryCode()
+    public static String s_getRuleCountryCode()
     {
         String strRule = "Value rules:";
         
@@ -268,7 +268,7 @@
         
         This was the code used for filenames used in DOS or SHELL commands!
     **/
-    /**static public boolean s_isAllowedFileName(String strValue)
+    /**public static boolean s_isAllowedFileName(String strValue)
     {
         String strMethod = _f_s_strClass + "s_isAllowedFileName(strValue)";
         
@@ -307,7 +307,7 @@
     
     // string to be displayed for eg in infoDialog, errorDialog, ...
     // should be removed once no more calls to keytool (to do) or jarsigner (done) throw command line
-    static public String s_getRuleFileName()
+    public static String s_getRuleFileName()
     {
         String strRule = "Value rule:";
         
@@ -334,7 +334,7 @@
     /**
     
     **/
-    static public boolean s_isAllowedPassword(String strValue)
+    public static boolean s_isAllowedPassword(String strValue)
     {
         String strMethod = _f_s_strClass + "s_isAllowedPassword(strValue)";
         
@@ -379,7 +379,7 @@
     /**
     
     **/
-    static public boolean s_isAllowedAlias(String strValue)
+    public static boolean s_isAllowedAlias(String strValue)
     {
         String strMethod = _f_s_strClass + "s_isAllowedAlias(strValue)";
         
@@ -423,7 +423,7 @@
     }
     
     // string to be displayed for eg in infoDialog, errorDialog, ...
-    static public String s_getRulePassword()
+    public static String s_getRulePassword()
     {
         String strRule = "Value rules:";
         
@@ -438,7 +438,7 @@
     }
     
     // string to be displayed for eg in infoDialog, errorDialog, ...
-    static public String s_getRuleAlias()
+    public static String s_getRuleAlias()
     {
         String strRule = "Value rules:";
         
@@ -464,7 +464,7 @@
           0, ..., 9
           -, _
     **/
-    static public boolean s_isAllowedSigfile(String strValue)
+    public static boolean s_isAllowedSigfile(String strValue)
     {
         String strMethod = _f_s_strClass + "s_isAllowedSigfile(strValue)";
         
@@ -519,7 +519,7 @@
     }
     
     // string to be displayed for eg in infoDialog, errorDialog, ...
-    static public String s_getRuleSigfile()
+    public static String s_getRuleSigfile()
     {
         String strRule = "Value rules:";
         
@@ -540,11 +540,11 @@
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     
     
-    static private boolean _s_check(String strReference, String strRequest)
+    private static boolean _s_check(String strReference, String strRequest)
     {
         String strMethod = _f_s_strClass + "_s_check(strReference, strRequest)";
         

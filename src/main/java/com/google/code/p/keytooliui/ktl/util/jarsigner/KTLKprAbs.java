@@ -34,10 +34,10 @@ import java.awt.*;
 abstract public class KTLKprAbs extends KTLAbs
 {
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
     // test
-    static protected PrivateKey _s_readKey_(File fleOpen, String strSignatureAlgoCandidate)
+    protected static PrivateKey _s_readKey_(File fleOpen, String strSignatureAlgoCandidate)
         throws Exception
     {
         String strMethod = "_s_readKey_(...)";
@@ -161,7 +161,7 @@ abstract public class KTLKprAbs extends KTLAbs
     
     // "Kpg" means "KeyPair Generator"
     // !!!! should be in subclass named KTLKprSaveNewAbs or? KTLKprSaveAbs !!!!
-    static protected boolean _s_isProviderKpgAllowed_(String strTypeKpr, String strProvider)
+    protected static boolean _s_isProviderKpgAllowed_(String strTypeKpr, String strProvider)
     {
         if (strTypeKpr==null || strProvider==null)
             return false;

@@ -34,12 +34,12 @@ import javax.swing.table.*;
 abstract public class TMEntAbs extends TMEntryAbs
 {
     // ----------------------
-    // final static protected
+    // protected static final
     
-    final static protected String _STR_ALIAS_ = "Alias";
-    final static protected String _STR_MODIFIEDDATE_ = "Modified Date";
-    final static protected int _INT_W_ALIAS_ = 120;
-    final static protected int _INT_W_MODIFIEDDATE_ = 90;
+    protected static final String _STR_ALIAS_ = "Alias";
+    protected static final String _STR_MODIFIEDDATE_ = "Modified Date";
+    protected static final int _INT_W_ALIAS_ = 120;
+    protected static final int _INT_W_MODIFIEDDATE_ = 90;
 
     // ---------------
     // abstract public

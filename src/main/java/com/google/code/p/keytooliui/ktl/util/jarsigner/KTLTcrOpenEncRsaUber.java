@@ -29,7 +29,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLTcrOpenEncRsaUber extends KTLTcrOpenEncRsaDMAbs
+public final class KTLTcrOpenEncRsaUber extends KTLTcrOpenEncRsaDMAbs
 {
     // ------
     // PUBLIC

@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 import com.google.code.p.keytooliui.ktl.swing.panel.PCntsMainLeft;
 
-final public class MISelTabTcrFromCCa extends MISelTabAbs
+public final class MISelTabTcrFromCCa extends MISelTabAbs
 {
     public MISelTabTcrFromCCa(ActionListener actListenerParent)
     {

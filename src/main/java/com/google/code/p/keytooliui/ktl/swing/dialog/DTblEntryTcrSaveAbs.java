@@ -19,9 +19,9 @@ import java.util.*;
 abstract public class DTblEntryTcrSaveAbs extends DTblEntryTcrAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabelAliasEnter = "Enter new alias:";
+    private static final String _f_s_strLabelAliasEnter = "Enter new alias:";
     
     // ------
     // PUBLIC

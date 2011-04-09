@@ -50,10 +50,10 @@ abstract public class DWChoiceAbs extends DEscapeAbstract implements
     PropertyChangeListener
 {   
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTitleSuffix = null;
-    static private String _s_strBodySuffix = null;
+    private static String _s_strTitleSuffix = null;
+    private static String _s_strBodySuffix = null;
     
     // ------------------
     // STATIC INITIALIZER

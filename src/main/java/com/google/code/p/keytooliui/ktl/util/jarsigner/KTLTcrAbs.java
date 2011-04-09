@@ -32,12 +32,12 @@ import java.util.*;
 abstract public class KTLTcrAbs extends KTLAbs
 {
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
     
     // "Kpg" means "KeyPair Generator"
     // !!!! should be in subclass named KTLTcrSaveNewAbs or? KTLTcrSaveAbs !!!!
-    static protected boolean _s_isProviderKpgAllowed_(String strTypeTcr, String strProvider)
+    protected static boolean _s_isProviderKpgAllowed_(String strTypeTcr, String strProvider)
     {
         if (strTypeTcr==null || strProvider==null)
             return false;

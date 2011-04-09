@@ -26,7 +26,7 @@ package com.google.code.p.keytooliui.shared.swing.optionpane;
 **/
 
 
-final public class OPInputWarning extends OPAbstract
+public final class OPInputWarning extends OPAbstract
 { 
     // ------
     // PUBLIC

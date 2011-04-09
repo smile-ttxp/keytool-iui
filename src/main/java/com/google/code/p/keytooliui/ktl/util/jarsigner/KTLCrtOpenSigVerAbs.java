@@ -37,9 +37,9 @@ import java.util.*;
 abstract public class KTLCrtOpenSigVerAbs extends KTLCrtOpenSigAbs
 {
     // ---------------------------
-    // final static private string
+    // private static final string
     
-    final static private String _STR_PROVIDERSIGINSTANCE = KTLAbs.f_s_strProviderKstBC; 
+    private static final String _STR_PROVIDERSIGINSTANCE = KTLAbs.f_s_strProviderKstBC; 
     
     // ------------------
     // abstract protected

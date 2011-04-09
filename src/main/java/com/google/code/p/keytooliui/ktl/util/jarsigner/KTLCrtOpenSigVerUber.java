@@ -30,7 +30,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLCrtOpenSigVerUber extends KTLCrtOpenSigVerANAbs
+public final class KTLCrtOpenSigVerUber extends KTLCrtOpenSigVerANAbs
 {
     // ------
     // PUBLIC

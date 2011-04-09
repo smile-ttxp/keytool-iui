@@ -45,12 +45,12 @@
 
 
 
-final public class BOCheckedWarnBlack extends BOCheckedWarnAbs
+public final class BOCheckedWarnBlack extends BOCheckedWarnAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "checked16.gif";;
+    private static final String _f_s_strIcon = "checked16.gif";;
     
     // ------
     // PUBLIC

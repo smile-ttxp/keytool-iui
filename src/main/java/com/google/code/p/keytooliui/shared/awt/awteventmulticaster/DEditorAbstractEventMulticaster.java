@@ -36,22 +36,22 @@ import java.util.EventListener;
 public class DEditorAbstractEventMulticaster extends java.awt.AWTEventMulticaster implements DEditorAbstractListener
 {
     // --------------------------
-    // STATIC PUBLIC [XX]Listener
+    // PUBLIC STATIC [XX]Listener
     
-    static public DEditorAbstractListener add(DEditorAbstractListener pwlA, DEditorAbstractListener pwlB)
+    public static DEditorAbstractListener add(DEditorAbstractListener pwlA, DEditorAbstractListener pwlB)
 	{
         return (DEditorAbstractListener) addInternal(pwlA, pwlB);
 	}
   
-	static public DEditorAbstractListener remove(DEditorAbstractListener pwlA, DEditorAbstractListener pwlB)
+	public static DEditorAbstractListener remove(DEditorAbstractListener pwlA, DEditorAbstractListener pwlB)
 	{
         return (DEditorAbstractListener) removeInternal(pwlA, pwlB);
 	}
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+    protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

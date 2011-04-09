@@ -36,9 +36,9 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
  *ALSO: should create abstract class PSelCmbStrAlgoAbs (subclasses: ~KeyAbs & ~SigAbs)
  */
 
-final public class PSelCmbStrSigAlgoSKAll extends PSelCmbStrAlgoKeyAbs
+public final class PSelCmbStrSigAlgoSKAll extends PSelCmbStrAlgoKeyAbs
 {       
-    final static private String _STR_SUFFIXLABEL = "Secret";
+    private static final String _STR_SUFFIXLABEL = "Secret";
     
     // ---------
     // PUBLIC   

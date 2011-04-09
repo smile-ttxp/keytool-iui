@@ -24,32 +24,32 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
-final public class DTblsKstManage extends DTblsKstViewAbs
+public final class DTblsKstManage extends DTblsKstViewAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strTitleThisSuffix = "keystore manager";
+    public static final String f_s_strTitleThisSuffix = "keystore manager";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _STR_importSK2Kst = "Import secret key entry from file in signature algorithm";
+    private static final String _STR_importSK2Kst = "Import secret key entry from file in signature algorithm";
     
-    final static private String _STR_deleteEntryPK = "Delete private key entry ...";
-    final static private String _STR_deleteEntryTC = "Delete trusted certificate entry ...";
-    final static private String _STR_deleteEntrySK = "Delete secret key entry ...";
+    private static final String _STR_deleteEntryPK = "Delete private key entry ...";
+    private static final String _STR_deleteEntryTC = "Delete trusted certificate entry ...";
+    private static final String _STR_deleteEntrySK = "Delete secret key entry ...";
     
-    final static private String _STR_renameAliasPK = "Rename private key alias ...";
-    final static private String _STR_renameAliasTC = "Rename trusted certificate alias ...";
-    final static private String _STR_renameAliasSK = "Rename secret key alias ...";
+    private static final String _STR_renameAliasPK = "Rename private key alias ...";
+    private static final String _STR_renameAliasTC = "Rename trusted certificate alias ...";
+    private static final String _STR_renameAliasSK = "Rename secret key alias ...";
     
-    final static private String _STR_copyEntryPK = "Copy private key entry ...";
-    final static private String _STR_copyEntryTC = "Copy trusted certificate entry ...";
-    final static private String _STR_copyEntrySK = "Copy secret key entry ...";
+    private static final String _STR_copyEntryPK = "Copy private key entry ...";
+    private static final String _STR_copyEntryTC = "Copy trusted certificate entry ...";
+    private static final String _STR_copyEntrySK = "Copy secret key entry ...";
     
-    final static private String _STR_changePasswordKeyPK = "Change private key's password ...";
-    final static private String _STR_changePasswordKeySK = "Change secret key's password ...";
+    private static final String _STR_changePasswordKeyPK = "Change private key's password ...";
+    private static final String _STR_changePasswordKeySK = "Change secret key's password ...";
    
     
     // ------

@@ -19,7 +19,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenKprOutJceks extends KTLKprOpenKprOutKPAbs
+public final class KTLKprOpenKprOutJceks extends KTLKprOpenKprOutKPAbs
 {
     // ------
     // PUBLIC

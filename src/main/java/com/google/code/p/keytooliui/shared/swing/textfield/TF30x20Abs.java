@@ -43,12 +43,12 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class TF30x20Abs extends TFAbstract
 {  
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intColumns = 30; // 40; // 300; //40;
-    final static private int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 30; // 40; // 300; //40;
+    private static final int _f_s_intH = 20;
     
-    final static private String _f_s_strDefault = "";
+    private static final String _f_s_strDefault = "";
     
     // ------
     // PUBLIC

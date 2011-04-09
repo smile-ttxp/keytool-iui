@@ -23,9 +23,9 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-final public class PSelBtnTfdStrW10DateBirth extends PSelBtnTfdStrW10
+public final class PSelBtnTfdStrW10DateBirth extends PSelBtnTfdStrW10
 {
-    final static private String _f_s_strLabel = "Date of birth (yyyymmdd):";
+    private static final String _f_s_strLabel = "Date of birth (yyyymmdd):";
     
     // ------
     // PUBLIC

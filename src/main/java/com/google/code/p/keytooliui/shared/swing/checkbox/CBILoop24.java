@@ -33,12 +33,12 @@ import javax.swing.*;
  
 import java.awt.event.*;
  
-final public class CBILoop24 extends CBILoopAbs
+public final class CBILoop24 extends CBILoopAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "reverse24.gif";
+    private static final String _f_s_strIcon = "reverse24.gif";
     
     
     // ------

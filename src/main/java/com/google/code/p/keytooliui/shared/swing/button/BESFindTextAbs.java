@@ -36,9 +36,9 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class BESFindTextAbs extends BEnabledState
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipText = null;
+    private static String _s_strToolTipText = null;
     
     // ------------------
     // STATIC INITIALIZER

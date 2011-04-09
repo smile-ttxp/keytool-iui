@@ -45,7 +45,7 @@ import com.google.code.p.keytooliui.shared.swing.textfield.*;
 
 import java.awt.*;
 
-final public class PSelBtnTfdStrXlsLengthMin extends PSelBtnTfdStrXlsAbs
+public final class PSelBtnTfdStrXlsLengthMin extends PSelBtnTfdStrXlsAbs
 {
     // ------
     // PUBLIC

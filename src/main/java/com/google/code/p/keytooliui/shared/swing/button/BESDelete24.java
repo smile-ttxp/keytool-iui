@@ -3,7 +3,7 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class BESDelete24 extends BESDeleteAbs
+public final class BESDelete24 extends BESDeleteAbs
 {    
 
     // ------

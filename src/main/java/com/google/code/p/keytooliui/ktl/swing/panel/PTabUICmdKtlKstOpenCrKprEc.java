@@ -34,17 +34,17 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAbs 
+public final class PTabUICmdKtlKstOpenCrKprEc extends PTabUICmdKtlKstOpenCrKprAbs 
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Create EC private key entry, with vers. #1 cert";
+    public static final String STR_TITLETASK = "Create EC private key entry, with vers. #1 cert";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strHelpID = "_create_pke_ec_v1c_"; //null;
+    private static String _s_strHelpID = "_create_pke_ec_v1c_"; //null;
     
     // ------------------
     // STATIC INITIALIZER

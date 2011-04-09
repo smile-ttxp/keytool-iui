@@ -30,12 +30,12 @@ import com.google.code.p.keytooliui.shared.awt.awtevent.*;
 
 import java.awt.*;
 
-final public class DEditorSysText extends DEditorAbstract 
+public final class DEditorSysText extends DEditorAbstract 
 {    
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".DEditorSysText" // class name
         ;
@@ -43,9 +43,9 @@ final public class DEditorSysText extends DEditorAbstract
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTitleSuffix = null;
+    private static String _s_strTitleSuffix = null;
     
     // ------------------
     // STATIC INITIALIZER

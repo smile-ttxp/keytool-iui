@@ -3,7 +3,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 
 import java.awt.event.*;
  
-final public class RBTypeSCmsP7s extends RBTypeSigAbs
+public final class RBTypeSCmsP7s extends RBTypeSigAbs
 {    
     // ------
     // PUBLIC

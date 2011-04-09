@@ -40,7 +40,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 import java.awt.*;
 
-final public class PCPMainUIKtl extends PCPMainUIAbs
+public final class PCPMainUIKtl extends PCPMainUIAbs
 {    
     // ------
     // PUBLIC

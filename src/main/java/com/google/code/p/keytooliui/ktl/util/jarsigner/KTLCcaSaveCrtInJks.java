@@ -12,7 +12,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLCcaSaveCrtInJks extends KTLCcaSaveCrtInDMAbs
+public final class KTLCcaSaveCrtInJks extends KTLCcaSaveCrtInDMAbs
 {
     // ------
     // PUBLIC

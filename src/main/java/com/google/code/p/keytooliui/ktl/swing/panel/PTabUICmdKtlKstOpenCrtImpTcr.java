@@ -24,17 +24,17 @@ import com.google.code.p.keytooliui.shared.swing.panel.PSelCbxAbs;
 import net.miginfocom.swing.MigLayout;
 
 
-final public class PTabUICmdKtlKstOpenCrtImpTcr extends PTabUICmdKtlKstOpenCrtAbs
+public final class PTabUICmdKtlKstOpenCrtImpTcr extends PTabUICmdKtlKstOpenCrtAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Import regular certificate file as new trusted certificate entry to keystore";
+    public static final String STR_TITLETASK = "Import regular certificate file as new trusted certificate entry to keystore";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
     
     // ------------------

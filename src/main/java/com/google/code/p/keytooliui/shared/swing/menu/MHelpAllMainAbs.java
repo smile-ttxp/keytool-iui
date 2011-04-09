@@ -54,10 +54,10 @@
 abstract public class MHelpAllMainAbs extends MAbstract
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
-    static private char _s_chrThisMnemo;
+    private static String _s_strText = null;
+    private static char _s_chrThisMnemo;
     
     // ------------------
     // STATIC INITIALIZER

@@ -62,14 +62,14 @@ import org.bouncycastle.asn1.x509.KeyUsage;
 abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpenCrKprAbs implements ChangeListener
 {
      // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
 
-    final static private Font _f_s_fntLabelCrtExtEnabled = new Font("Dialog", Font.BOLD, 12);
+    private static final Font _f_s_fntLabelCrtExtEnabled = new Font("Dialog", Font.BOLD, 12);
 
-    final static private String _f_s_strTextCrtExtEnabled = "ENABLED?";
-    final static private String _f_s_strTextCrtExtCritical = "            - CRITICAL?";
+    private static final String _f_s_strTextCrtExtEnabled = "ENABLED?";
+    private static final String _f_s_strTextCrtExtCritical = "            - CRITICAL?";
 
-    final static private String[] _f_s_strsTextCrtExtKUValue =
+    private static final String[] _f_s_strsTextCrtExtKUValue =
     {
         "            - digitalSignature:",
         "            - nonRepudiation:",
@@ -92,7 +92,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         szOID_EFS_RECOVERY                      1.3.6.1.4.1.311.10.3.4.1
             */
 
-    final static private String[] _f_s_strsTextCrtExtEKUValue =
+    private static final String[] _f_s_strsTextCrtExtEKUValue =
     {
         "            - serverAuth:",
         "            - clientAuth:",
@@ -115,7 +115,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
     //
 
 
-    final static private DERObjectIdentifier[] _f_s_intsCrtExtEKUValue =
+    private static final DERObjectIdentifier[] _f_s_intsCrtExtEKUValue =
     {
         // BC stuff
         KeyPurposeId.id_kp_serverAuth,
@@ -140,7 +140,7 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
 
 
 
-    final static private int[] _f_s_intsCrtExtKUValue =
+    private static final int[] _f_s_intsCrtExtKUValue =
     {
         KeyUsage.digitalSignature,
         KeyUsage.nonRepudiation,
@@ -153,8 +153,8 @@ abstract public class PTabUICmdKtlKstOpenCrKprV3CAbs extends PTabUICmdKtlKstOpen
         KeyUsage.decipherOnly
     };
 
-    final static private String _f_s_strTipCrtExtEnabled = _f_s_strTextCrtExtEnabled;
-    final static private String _f_s_strTipCrtExtCritical = _f_s_strTextCrtExtCritical;
+    private static final String _f_s_strTipCrtExtEnabled = _f_s_strTextCrtExtEnabled;
+    private static final String _f_s_strTipCrtExtCritical = _f_s_strTextCrtExtCritical;
 
     // ------
     // PUBLIC

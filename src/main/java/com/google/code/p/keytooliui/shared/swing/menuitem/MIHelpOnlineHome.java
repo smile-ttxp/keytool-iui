@@ -32,12 +32,12 @@ package com.google.code.p.keytooliui.shared.swing.menuitem;
 import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.ImageIcon;
 
-final public class MIHelpOnlineHome extends MIHelpOnlineAbstract 
+public final class MIHelpOnlineHome extends MIHelpOnlineAbstract 
 {
-    final static private String _F_STR_NAME_ICON = "webcomponent16.gif";
+    private static final String _F_STR_NAME_ICON = "webcomponent16.gif";
     
-    static public String STR_TEXT = null;
-    static public String STR_URL = null;
+    public static String STR_TEXT = null;
+    public static String STR_URL = null;
     
     // ------------------
     // STATIC INITIALIZER

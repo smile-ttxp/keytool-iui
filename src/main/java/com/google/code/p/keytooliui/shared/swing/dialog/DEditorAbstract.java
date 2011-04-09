@@ -46,9 +46,9 @@ abstract public class DEditorAbstract extends DEscapeAbstract implements
 {
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".DEditorAbstract" // class name
         ;
@@ -56,10 +56,10 @@ abstract public class DEditorAbstract extends DEscapeAbstract implements
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strConfirmDeleteAndCloseTitle = null;
-    static private String _s_strConfirmDeleteAndCloseBody = null;
+    private static String _s_strConfirmDeleteAndCloseTitle = null;
+    private static String _s_strConfirmDeleteAndCloseBody = null;
     
     // ------------------
     // STATIC INITIALIZER

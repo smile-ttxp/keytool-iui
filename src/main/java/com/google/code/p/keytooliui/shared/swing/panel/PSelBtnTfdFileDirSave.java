@@ -41,7 +41,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-final public class PSelBtnTfdFileDirSave extends PSelBtnTfdFileDirAbs
+public final class PSelBtnTfdFileDirSave extends PSelBtnTfdFileDirAbs
 {
     // ------
     // PUBLIC

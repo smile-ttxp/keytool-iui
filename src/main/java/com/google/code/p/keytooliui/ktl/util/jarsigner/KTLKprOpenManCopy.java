@@ -50,7 +50,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLKprOpenManCopy extends KTLKprOpenManAbs
+public final class KTLKprOpenManCopy extends KTLKprOpenManAbs
 {
     // ------
     // PUBLIC

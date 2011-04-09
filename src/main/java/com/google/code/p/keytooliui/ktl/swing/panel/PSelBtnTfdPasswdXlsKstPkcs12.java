@@ -31,18 +31,18 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 import java.awt.*;
 
 
-final public class PSelBtnTfdPasswdXlsKstPkcs12 extends PSelBtnTfdPasswdXlsKstAbs
+public final class PSelBtnTfdPasswdXlsKstPkcs12 extends PSelBtnTfdPasswdXlsKstAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_password_keystore_pkcs12";
+    public static final String f_s_strDocPropVal = "select_password_keystore_pkcs12";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     
-    final static private String _f_s_strLabelPrefix = 
+    private static final String _f_s_strLabelPrefix = 
         com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12.f_s_strKeystoreType +
         " " +
         "keystore"; // could be changed by CA Cert as PKCS12 is a certificate

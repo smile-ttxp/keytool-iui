@@ -33,21 +33,21 @@ import java.security.cert.X509Certificate;
 import java.io.*;
 import java.awt.*;
 
-final public class UtilCsrPkcs10
+public final class UtilCsrPkcs10
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilCsrPkcs10";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilCsrPkcs10";
     
-    final static private String _f_s_strLineBeg = "-----BEGIN NEW CERTIFICATE REQUEST-----";
-    final static private String _f_s_strLineEnd = "-----END NEW CERTIFICATE REQUEST-----";
-    final static private int _f_s_intLineLengthMax = 76;
+    private static final String _f_s_strLineBeg = "-----BEGIN NEW CERTIFICATE REQUEST-----";
+    private static final String _f_s_strLineEnd = "-----END NEW CERTIFICATE REQUEST-----";
+    private static final int _f_s_intLineLengthMax = 76;
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilCsrPkcs10._f_s_strClass + "." + "s_showFile(...)";
@@ -99,7 +99,7 @@ final public class UtilCsrPkcs10
         . supported:     "BC"
         . NOT supported: "SunRsaSign"
     **/
-    static public String s_generateCsr(
+    public static String s_generateCsr(
         Frame frmOwner, 
         X509Certificate crt, 
         PrivateKey keyPrivate,

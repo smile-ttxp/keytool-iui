@@ -39,10 +39,10 @@ import java.awt.*;
 abstract public class TBAbs extends JToolBar
 {
     // ----------------------
-    // FINAL STATIC PROTECTED
+    // PROTECTED STATIC FINAL
     
-    final static protected Dimension _f_s_dimSeparator4_ = new Dimension(4, 4);
-    final static protected Dimension _f_s_dimSeparator10_ = new Dimension(10, 10);
+    protected static final Dimension _f_s_dimSeparator4_ = new Dimension(4, 4);
+    protected static final Dimension _f_s_dimSeparator10_ = new Dimension(10, 10);
     
     // ---------
     // PROTECTED

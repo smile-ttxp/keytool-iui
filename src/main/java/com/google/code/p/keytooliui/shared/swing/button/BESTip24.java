@@ -28,17 +28,17 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class BESTip24 extends BEnabledState
+public final class BESTip24 extends BEnabledState
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "tipoftheday24.gif";
+    private static final String _f_s_strImage = "tipoftheday24.gif";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipText = "Usage ...";
+    private static String _s_strToolTipText = "Usage ...";
     
     // ------------------
     // STATIC INITIALIZER

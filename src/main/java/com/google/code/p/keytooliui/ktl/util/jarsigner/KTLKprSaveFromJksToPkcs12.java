@@ -23,7 +23,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprSaveFromJksToPkcs12 extends KTLKprSaveFromJksToAbs
+public final class KTLKprSaveFromJksToPkcs12 extends KTLKprSaveFromJksToAbs
 {
     // ------
     // PUBLIC

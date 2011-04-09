@@ -25,7 +25,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLTcrSaveCrtInUber extends KTLTcrSaveCrtInDMAbs
+public final class KTLTcrSaveCrtInUber extends KTLTcrSaveCrtInDMAbs
 {
     // ------
     // PUBLIC

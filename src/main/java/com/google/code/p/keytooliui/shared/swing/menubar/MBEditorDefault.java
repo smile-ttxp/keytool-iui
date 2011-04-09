@@ -27,7 +27,7 @@ import com.google.code.p.keytooliui.shared.util.eventlistener.*;
 import com.google.code.p.keytooliui.shared.lang.*;
 import com.google.code.p.keytooliui.shared.swing.menu.*;
 
-final public class MBEditorDefault extends MBEditorAbstract
+public final class MBEditorDefault extends MBEditorAbstract
 {
     // ------
     // PUBLIC

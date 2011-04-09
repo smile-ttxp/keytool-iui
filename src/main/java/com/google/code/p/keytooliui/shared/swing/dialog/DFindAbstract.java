@@ -47,17 +47,17 @@ abstract public class DFindAbstract extends DEscapeAbstract implements
     KeyListener // test
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
 
-    static private String _s_strCheckboxTextMatchCase = null;
-    static private String _s_strCheckboxTextWholeWord = null;
+    private static String _s_strCheckboxTextMatchCase = null;
+    private static String _s_strCheckboxTextWholeWord = null;
     
-    static private String _s_strCheckboxTipMatchCase = null;
-    static private String _s_strCheckboxTipWholeWord = null;
-    //static private String _s_strCheckboxTipLists = null;
-    //static private String _s_strCheckboxTipBody = null;
+    private static String _s_strCheckboxTipMatchCase = null;
+    private static String _s_strCheckboxTipWholeWord = null;
+    //private static String _s_strCheckboxTipLists = null;
+    //private static String _s_strCheckboxTipBody = null;
     
-    static private String _s_strLabelTextFindWhat = null;
+    private static String _s_strLabelTextFindWhat = null;
     
     // ------------------
     // STATIC INITIALIZER

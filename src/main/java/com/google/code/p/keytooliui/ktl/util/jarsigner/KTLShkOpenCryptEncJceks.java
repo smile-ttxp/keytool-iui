@@ -21,7 +21,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLShkOpenCryptEncJceks extends KTLShkOpenCryptEncKPAbs
+public final class KTLShkOpenCryptEncJceks extends KTLShkOpenCryptEncKPAbs
 {
     // ------
     // PUBLIC

@@ -33,12 +33,12 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class DPasswordConfirmSave extends DPasswordConfirmAbs
+public final class DPasswordConfirmSave extends DPasswordConfirmAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTitleThis = "create password";
+    private static final String _f_s_strTitleThis = "create password";
 
     // ------
     // PUBLIC

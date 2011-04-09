@@ -30,19 +30,19 @@ import javax.swing.text.*;
 
 import java.awt.*;
 
-final public class DocPageTextSearch
+public final class DocPageTextSearch
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strWordDelimiter = " =.,;:!?\"'(){}[]";
+    private static final String _f_s_strWordDelimiter = " =.,;:!?\"'(){}[]";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strWarningEmptyListBody = null;
-    static private String _s_strWarningTopReachedBody = null;
-    static private String _s_strWarningBottomReachedBody = null;
+    private static String _s_strWarningEmptyListBody = null;
+    private static String _s_strWarningTopReachedBody = null;
+    private static String _s_strWarningBottomReachedBody = null;
     
     
     

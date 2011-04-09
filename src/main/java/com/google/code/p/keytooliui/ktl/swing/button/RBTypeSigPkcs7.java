@@ -6,7 +6,7 @@ import java.awt.event.*;
  
 
 
-final public class RBTypeSigPkcs7 extends RBTypeSigPkcs7Abs
+public final class RBTypeSigPkcs7 extends RBTypeSigPkcs7Abs
 {    
     // ------
     // PUBLIC

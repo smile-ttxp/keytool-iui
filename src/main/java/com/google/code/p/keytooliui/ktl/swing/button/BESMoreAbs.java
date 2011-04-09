@@ -16,9 +16,9 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 abstract public class BESMoreAbs extends BEnabledState
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipText = "View XML description"; //null;
+    private static String _s_strToolTipText = "View XML description"; //null;
     
     // ------------------
     // STATIC INITIALIZER

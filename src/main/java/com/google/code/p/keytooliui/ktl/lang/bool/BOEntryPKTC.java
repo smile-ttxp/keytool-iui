@@ -10,10 +10,10 @@ import com.google.code.p.keytooliui.shared.lang.bool.*;
 public class BOEntryPKTC extends BOAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_IMAGEPK = "entry_pk.gif"; // key16x17.jpg";
-    final static public String STR_IMAGETC = "entry_tc.gif"; //certificate16x17.jpg";
+    public static final String STR_IMAGEPK = "entry_pk.gif"; // key16x17.jpg";
+    public static final String STR_IMAGETC = "entry_tc.gif"; //certificate16x17.jpg";
     
     // ------
     // public

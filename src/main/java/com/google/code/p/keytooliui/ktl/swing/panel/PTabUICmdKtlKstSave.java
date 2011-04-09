@@ -44,27 +44,27 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.button.BESPasswordAbs;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 
-final public class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
+public final class PTabUICmdKtlKstSave extends PTabUICmdKtlAbs
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static public String STR_TITLETASK = "Create keystore without any entries";
+    public static final String STR_TITLETASK = "Create keystore without any entries";
     
-    final static private String _s_strDlgInfoActionBodyPref1 = 
+    private static final String _s_strDlgInfoActionBodyPref1 = 
         "Successfully created an empty keystore of type ";
         
-    final static private String _s_strDlgInfoActionBodyPref2 = 
+    private static final String _s_strDlgInfoActionBodyPref2 = 
         "." +
         "\n\n" +
         "File location:" +
         "\n" + "  ";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
 
     // ------------------
     // STATIC INITIALIZER

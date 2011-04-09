@@ -25,12 +25,12 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 import java.awt.event.*;
 
-final public class BESText2Speech16 extends BESText2SpeechAbs
+public final class BESText2Speech16 extends BESText2SpeechAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "text2speech16.gif"; // tempo
+    private static final String _f_s_strImage = "text2speech16.gif"; // tempo
     
     // ------
     // PUBLIC

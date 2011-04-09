@@ -4,7 +4,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
  
 import java.awt.event.*;
  
-final public class RBTypeCrtPem extends RBTypeCrtAbs
+public final class RBTypeCrtPem extends RBTypeCrtAbs
 {    
     // ------
     // PUBLIC

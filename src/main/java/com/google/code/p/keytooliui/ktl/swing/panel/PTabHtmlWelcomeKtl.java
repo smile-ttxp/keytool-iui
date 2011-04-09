@@ -14,7 +14,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 public class PTabHtmlWelcomeKtl extends PTabAbstract
 {
-    final static public String STR_TITLETASK = "Welcome";
+    public static final String STR_TITLETASK = "Welcome";
     
     public PTabHtmlWelcomeKtl(
             Frame frmOwner

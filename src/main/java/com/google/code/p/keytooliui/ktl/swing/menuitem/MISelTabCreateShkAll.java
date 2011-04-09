@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import com.google.code.p.keytooliui.ktl.lang.bool.BOEntrySK;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 
-final public class MISelTabCreateShkAll extends MISelTabAbs
+public final class MISelTabCreateShkAll extends MISelTabAbs
 {
     public boolean init()
     {

@@ -28,31 +28,31 @@ import javax.swing.*;
 import javax.swing.text.*;
 
 
-final public class METextFontStyleEditorText extends MAbstract 
+public final class METextFontStyleEditorText extends MAbstract 
 {
     /** #############
-        STATIC PUBLIC
+        PUBLIC STATIC
         #############
     **/
     
-    final static public boolean F_S_BLN_BOLD = false;
-    final static public boolean F_S_BLN_ITALIC = false;
-    final static public boolean F_S_BLN_UNDERLINE = false;
+    public static final boolean F_S_BLN_BOLD = false;
+    public static final boolean F_S_BLN_ITALIC = false;
+    public static final boolean F_S_BLN_UNDERLINE = false;
     
     /** ##############
-        STATIC PRIVATE
+        PRIVATE STATIC
         ##############
     **/
     
-    static private java.util.ResourceBundle _s_rbeResources;
+    private static java.util.ResourceBundle _s_rbeResources;
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".METextFontStyleEditorText" // class name
         ;
     
     
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
 
     static
     {

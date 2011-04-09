@@ -36,22 +36,22 @@ import java.util.EventListener;
 public class TBEditorAbstractEventMulticaster extends java.awt.AWTEventMulticaster implements TBEditorAbstractListener
 {
     // --------------------------
-    // STATIC PUBLIC [XX]Listener
+    // PUBLIC STATIC [XX]Listener
     
-    static public TBEditorAbstractListener add(TBEditorAbstractListener pwlA, TBEditorAbstractListener pwlB)
+    public static TBEditorAbstractListener add(TBEditorAbstractListener pwlA, TBEditorAbstractListener pwlB)
 	{
         return (TBEditorAbstractListener) addInternal(pwlA, pwlB);
 	}
   
-	static public TBEditorAbstractListener remove(TBEditorAbstractListener pwlA, TBEditorAbstractListener pwlB)
+	public static TBEditorAbstractListener remove(TBEditorAbstractListener pwlA, TBEditorAbstractListener pwlB)
 	{
         return (TBEditorAbstractListener) removeInternal(pwlA, pwlB);
 	}
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+    protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

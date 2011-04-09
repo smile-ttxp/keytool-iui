@@ -42,7 +42,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenSignUber extends KTLKprOpenSignKPAbs
+public final class KTLKprOpenSignUber extends KTLKprOpenSignKPAbs
 {
     // ------
     // PUBLIC

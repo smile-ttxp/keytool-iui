@@ -38,22 +38,22 @@ import java.util.jar.*;
 import java.io.*;
 import java.awt.*;
 
-final public class S_JarOutputStream
+public final class S_JarOutputStream
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public int f_s_intLengthBytsBuffer = 2048;
+    public static final int f_s_intLengthBytsBuffer = 2048;
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.share.util.jar.S_JarOutputStream.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.share.util.jar.S_JarOutputStream.";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public JarOutputStream s_create(File fle)
+    public static JarOutputStream s_create(File fle)
     {
         String strMethod = _f_s_strClass + "s_create(fle)";
         
@@ -87,7 +87,7 @@ final public class S_JarOutputStream
 		return jos;
     }
     
-    static public JarOutputStream s_createWithManifest(
+    public static JarOutputStream s_createWithManifest(
         String strPathAbs,
         Frame frmOwner
         )
@@ -115,7 +115,7 @@ final public class S_JarOutputStream
 		return jos;
     }
     
-    static public JarOutputStream s_create(String strPathAbs)
+    public static JarOutputStream s_create(String strPathAbs)
     {
         String strMethod = _f_s_strClass + "s_create(strPathAbs)";
         
@@ -149,7 +149,7 @@ final public class S_JarOutputStream
 		return jos;
     }
     
-    static public boolean s_close(JarOutputStream jos)
+    public static boolean s_close(JarOutputStream jos)
     {
         String strMethod = _f_s_strClass + "s_close(jos)";
         
@@ -176,7 +176,7 @@ final public class S_JarOutputStream
     }
     
     
-    static public boolean s_writeEntry(
+    public static boolean s_writeEntry(
         JarOutputStream jos,
         MySignatureFile.Block blk,
         Frame frmOwner
@@ -221,7 +221,7 @@ final public class S_JarOutputStream
          write out the signature file -- the signatureFile 
          object will name itself appropriately
     */    
-    static public boolean s_writeEntry(
+    public static boolean s_writeEntry(
         JarOutputStream jos,
         MySignatureFile sfe,
         Frame frmOwner
@@ -258,7 +258,7 @@ final public class S_JarOutputStream
         return true;
     }
     
-    static public boolean s_writeEntry(
+    public static boolean s_writeEntry(
         JarOutputStream jos,
         JarEntry jey,
         byte[] byts
@@ -267,7 +267,7 @@ final public class S_JarOutputStream
         return S_JarOutputStream.s_writeEntry(jos, jey, byts, (Frame) null);
     }
     
-    static public boolean s_writeEntry(
+    public static boolean s_writeEntry(
         JarOutputStream jos,
         JarEntry jey,
         byte[] byts,
@@ -305,7 +305,7 @@ final public class S_JarOutputStream
     
     
     
-    static public boolean s_writeEntry(
+    public static boolean s_writeEntry(
         JarOutputStream jos,
         JarEntry jey,
         JarFile jfeInput,
@@ -354,7 +354,7 @@ final public class S_JarOutputStream
     }
     
     
-    static public boolean s_writeManifest(
+    public static boolean s_writeManifest(
         JarOutputStream jos,
         Manifest man,
         Frame frmOwner

@@ -33,7 +33,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class PBarContainerSecRtp extends PBarContainerSec 
+public final class PBarContainerSecRtp extends PBarContainerSec 
 { 
     // ------
     // PUBLIC

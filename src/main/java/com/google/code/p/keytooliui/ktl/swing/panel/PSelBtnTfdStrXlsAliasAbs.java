@@ -51,10 +51,10 @@ import java.awt.*;
 abstract public class PSelBtnTfdStrXlsAliasAbs extends PSelBtnTfdStrXlsAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     
-    final static private String _f_s_strLabelSuffix = "alias:";
+    private static final String _f_s_strLabelSuffix = "alias:";
     
     // ------
     // PUBLIC

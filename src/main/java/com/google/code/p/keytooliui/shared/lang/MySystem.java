@@ -33,15 +33,15 @@ import java.util.ResourceBundle;
 public class MySystem
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.lang.MySystem.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.lang.MySystem.";
    
     // --
-    static private boolean _S_BLN_PRINTOUTTRACE = false; // true for developping/debugging
-    static private boolean _S_BLN_PRINTOUTWARNING = true;
-    static private boolean _S_BLN_PRINTOUTERROR = true;
-    static private boolean _S_BLN_PRINTOUTFLAGDEV = false;
+    private static boolean _S_BLN_PRINTOUTTRACE = false; // true for developping/debugging
+    private static boolean _S_BLN_PRINTOUTWARNING = true;
+    private static boolean _S_BLN_PRINTOUTERROR = true;
+    private static boolean _S_BLN_PRINTOUTFLAGDEV = false;
     
     static
     {
@@ -57,16 +57,16 @@ public class MySystem
     }
         
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     
     // beg test
     
-    static private String _STR_PATHABSLOGSESSION = null;
+    private static String _STR_PATHABSLOGSESSION = null;
     
     // should be called by ?main?
     // and used prior to exit
-    static public void s_storePathLogSession(String str)
+    public static void s_storePathLogSession(String str)
     {
         if (str == null)
             return;
@@ -74,14 +74,14 @@ public class MySystem
         MySystem._STR_PATHABSLOGSESSION = str;
     }
     
-    static public String s_getPathLogSession() { return MySystem._STR_PATHABSLOGSESSION; }
+    public static String s_getPathLogSession() { return MySystem._STR_PATHABSLOGSESSION; }
     
     // end test
     
     /**
         JVM: Java Virtual Machine
     **/
-    static public boolean s_checkJvmVersion()
+    public static boolean s_checkJvmVersion()
     {
         String strMethod = _f_s_strClass + "s_checkJvmVersion()";
         
@@ -203,17 +203,17 @@ public class MySystem
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
 
     /**
      * @deprecated Use File.separator instead
      */
-    static public String s_getFileSeparator()
+    public static String s_getFileSeparator()
     {
         return File.separator;
     }
     
-    static public String s_getDateFromTime(long lngTime)
+    public static String s_getDateFromTime(long lngTime)
     {
         final String f_strWhere = _f_s_strClass + "s_getDateFromTime(lngTime)";
         
@@ -232,7 +232,7 @@ public class MySystem
         return dateOut + " " + timeOut;
     }
     
-    static public String s_getDateFromTime(String strTime)
+    public static String s_getDateFromTime(String strTime)
     {
         final String f_strWhere = _f_s_strClass + "s_getDateFromTime(strTime)";
         
@@ -250,12 +250,12 @@ public class MySystem
         EG: 18:35 2000-02-10
     **/
     
-    static public String s_getDateCurrent()
+    public static String s_getDateCurrent()
     {
         return s_getDate(new Date());
     }
     
-    static public String s_getDate(Date dat)
+    public static String s_getDate(Date dat)
     {
         DateFormat dateFormatter = DateFormat.getDateInstance(DateFormat.FULL,
             Locale.getDefault());
@@ -270,26 +270,26 @@ public class MySystem
     }
     
     // used by statics
-    static public void s_printOutFlagDev(String strWhat, String strMessage)
+    public static void s_printOutFlagDev(String strWhat, String strMessage)
     {
         if (_S_BLN_PRINTOUTFLAGDEV)
             _s_printOut("* FLAGDEV", strWhat, strMessage);
     }
     
     // used by statics
-    static public void s_printOutTrace(String strWhat, String strMessage)
+    public static void s_printOutTrace(String strWhat, String strMessage)
     {
         if (_S_BLN_PRINTOUTTRACE)
             _s_printOut("> TRACE", strWhat, strMessage);
     }
     
-    static public void s_printOutWarning(String strWhat, String strMessage)
+    public static void s_printOutWarning(String strWhat, String strMessage)
     {
         if (_S_BLN_PRINTOUTWARNING)
             _s_printOut("! WARNING", strWhat, strMessage);
     }
     
-    static public void s_printOutError(String strWhat, String strMessage)
+    public static void s_printOutError(String strWhat, String strMessage)
     {
         //System.out.println("Thread.currentThread().getName()=" + Thread.currentThread().getName());
         
@@ -304,7 +304,7 @@ public class MySystem
         4) exit
     **/
     
-    static public void s_printOutExit(String strWhat, String strMessage)
+    public static void s_printOutExit(String strWhat, String strMessage)
     {
         // 1) print current error in buffer
         if (_S_BLN_PRINTOUTERROR)
@@ -314,26 +314,26 @@ public class MySystem
     }
     
     // used by non-statics
-    static public void s_printOutFlagDev(Object obj, String strMethod, String strMessage)
+    public static void s_printOutFlagDev(Object obj, String strMethod, String strMessage)
     {
         if (_S_BLN_PRINTOUTFLAGDEV)
             _s_printOut("* FLAGDEV", obj.getClass().getName() + "." + strMethod, strMessage);
     }
     
     // used by non-statics
-    static public void s_printOutTrace(Object obj, String strMethod, String strMessage)
+    public static void s_printOutTrace(Object obj, String strMethod, String strMessage)
     {
         if (_S_BLN_PRINTOUTTRACE)
             _s_printOut("> TRACE", obj.getClass().getName() + "." + strMethod, strMessage);
     }
     
-    static public void s_printOutWarning(Object obj, String strMethod, String strMessage)
+    public static void s_printOutWarning(Object obj, String strMethod, String strMessage)
     {
         if (_S_BLN_PRINTOUTWARNING)
             _s_printOut("! WARNING", obj.getClass().getName() + "." + strMethod, strMessage);
     }
     
-    static public void s_printOutError(Object obj, String strMethod, String strMessage)
+    public static void s_printOutError(Object obj, String strMethod, String strMessage)
     {
         //System.out.println("Thread.currentThread().getName()=" + Thread.currentThread().getName());
         
@@ -349,7 +349,7 @@ public class MySystem
         4) exit
     **/
     
-    static public void s_printOutExit(Object obj, String strMethod, String strMessage)
+    public static void s_printOutExit(Object obj, String strMethod, String strMessage)
     {
         // 1) print current error in buffer
         if (_S_BLN_PRINTOUTERROR)
@@ -359,9 +359,9 @@ public class MySystem
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private int _s_intInstanceCount = 0;
+    private static int _s_intInstanceCount = 0;
     
     // (used by "main" method)
     
@@ -369,19 +369,19 @@ public class MySystem
     // begin resource bundle
     
     // dialog error wrong JVM
-    static private String _s_strDialogErrorJvmBody1 = null;
-    static private String _s_strDialogErrorJvmBody3 = null;
+    private static String _s_strDialogErrorJvmBody1 = null;
+    private static String _s_strDialogErrorJvmBody3 = null;
     
     // dialog error exiting
-    static private String _s_strDialogErrorExitTitle = null;
-    static private String _s_strDialogErrorExitBody = null;
+    private static String _s_strDialogErrorExitTitle = null;
+    private static String _s_strDialogErrorExitBody = null;
     
     
     
-    static private int _S_INT_PRINTOUTCOUNT = 1;
+    private static int _S_INT_PRINTOUTCOUNT = 1;
     
         
-    static private void _s_printOut(String strWhat, String strWhere, String strMessage)
+    private static void _s_printOut(String strWhat, String strWhere, String strMessage)
     {
         String str = "\n" + _S_INT_PRINTOUTCOUNT + " " + strWhat;
         str += " (instance ID: " + _s_intInstanceCount + ")";
@@ -395,7 +395,7 @@ public class MySystem
     /**
         memo: error caught, forcing an exit
     **/
-    static private void _s_printOutExit(String strMessage)
+    private static void _s_printOutExit(String strMessage)
     {
         //2) save all errors in "error.log"
         

@@ -35,9 +35,9 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
  *!!!!!!!!!!!!!!!!!!! SHOULD BE REARRANGED:
  *renamed like superclass
  */
-final public class PSelCmbStrSigAlgoPKAll extends PSelCmbStrAlgoKeyAbs
+public final class PSelCmbStrSigAlgoPKAll extends PSelCmbStrAlgoKeyAbs
 {       
-    final static private String _STR_SUFFIXLABEL = "Private";
+    private static final String _STR_SUFFIXLABEL = "Private";
     
     // ---------
     // PUBLIC   

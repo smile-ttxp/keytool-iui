@@ -38,19 +38,19 @@ import com.google.code.p.keytooliui.shared.swing.menuitem.*;
 abstract public class MHelpOnlineAbstract extends MAbstract 
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
-    static private java.util.ResourceBundle _s_rbeResources;
+    private static java.util.ResourceBundle _s_rbeResources;
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".MHelpOnlineAbstract" // class name
         ;
     
     
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
 
     static
     {

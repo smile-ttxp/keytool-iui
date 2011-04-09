@@ -33,13 +33,13 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 
-final public class PSelCmbItgVersionCert extends PSelCmbItgAbs
+public final class PSelCmbItgVersionCert extends PSelCmbItgAbs
 {   
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     // X509 certificate version
-    final static private String _f_s_strTextLabel = "Certificate version:";
+    private static final String _f_s_strTextLabel = "Certificate version:";
     
     // ------
     // PUBLIC   

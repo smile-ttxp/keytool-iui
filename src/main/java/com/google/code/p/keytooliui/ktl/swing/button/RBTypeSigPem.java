@@ -5,7 +5,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
  
 import java.awt.event.*;
  
-final public class RBTypeSigPem extends RBTypeSigAbs
+public final class RBTypeSigPem extends RBTypeSigAbs
 {    
     // ------
     // PUBLIC

@@ -29,17 +29,17 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 
 
-final public class MHtml extends MAbstract
+public final class MHtml extends MAbstract
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "html16.gif";
+    private static final String _f_s_strIcon = "html16.gif";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTextThis = null;
+    private static String _s_strTextThis = null;
     
     // ------------------
     // STATIC INITIALIZER

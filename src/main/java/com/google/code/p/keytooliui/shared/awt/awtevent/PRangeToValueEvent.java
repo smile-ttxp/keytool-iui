@@ -28,17 +28,17 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 public class PRangeToValueEvent extends java.awt.AWTEvent
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intIdFirst = DEditorAbstractEvent.DEDITORABSTRACTEVENT_LAST + 1;
+    private static final int _f_s_intIdFirst = DEditorAbstractEvent.DEDITORABSTRACTEVENT_LAST + 1;
     
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
     
-    final static public int PRANGETOVALUEEVENT_LAST = _f_s_intIdFirst;
+    public static final int PRANGETOVALUEEVENT_LAST = _f_s_intIdFirst;
     
-    final static public int PRANGETOVALUEEVENT_DEFAULTSWAPPED = _f_s_intIdFirst;
+    public static final int PRANGETOVALUEEVENT_DEFAULTSWAPPED = _f_s_intIdFirst;
      
     // ----------------
     // PUBLIC ACCESSORS

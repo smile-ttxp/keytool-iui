@@ -31,19 +31,19 @@ import com.google.code.p.keytooliui.shared.lang.bool.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-final public class TMEntryKprShowAll extends TMEntryKprAbs
+public final class TMEntryKprShowAll extends TMEntryKprAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public int f_s_intColumnIdAlias = 0;            // see array of integers right below
-    final static public int f_s_intColumnIdIsKeyEntry = 1;       // see array of integers right below
-    final static public int f_s_intColumnIdIsCertEntry = 2;      // see array of integers right below
-    final static public int f_s_intColumnIdIsSelfSignedCert = 3; // see array of integers right below
-    final static public int f_s_intColumnIdIsTrustedCert = 4;    // see array of integers right below
+    public static final int f_s_intColumnIdAlias = 0;            // see array of integers right below
+    public static final int f_s_intColumnIdIsKeyEntry = 1;       // see array of integers right below
+    public static final int f_s_intColumnIdIsCertEntry = 2;      // see array of integers right below
+    public static final int f_s_intColumnIdIsSelfSignedCert = 3; // see array of integers right below
+    public static final int f_s_intColumnIdIsTrustedCert = 4;    // see array of integers right below
     
     // preferred columns width 
-    final static public int[] f_s_intsColW = 
+    public static final int[] f_s_intsColW = 
     { 
         120, // strAlias
         30,  // booKeyEntry
@@ -58,7 +58,7 @@ final public class TMEntryKprShowAll extends TMEntryKprAbs
     }; // sum: ?
     
     
-    final static public String[] f_s_strsColumnNames = new String[TMEntryKprShowAll.f_s_intsColW.length];
+    public static final String[] f_s_strsColumnNames = new String[TMEntryKprShowAll.f_s_intsColW.length];
     
     // ------------------
     // STATIC INITIALIZER

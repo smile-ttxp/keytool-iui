@@ -83,14 +83,14 @@ import java.net.*;
 public class S_Url
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.bugfixes.net.S_Url.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.bugfixes.net.S_Url.";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private boolean _s_blnOperatingSystemWindows = false;
+    private static boolean _s_blnOperatingSystemWindows = false;
     
     // ------------------
     // STATIC INITIALIZER
@@ -103,7 +103,7 @@ public class S_Url
     }
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /* created: june 17, 2003
          Coz bug since JVM from 1.3 to 1.4:
@@ -118,7 +118,7 @@ public class S_Url
     */
         
     // bug still remaining dec 7, 2005
-    static public String s_getFileToString(URL url)
+    public static String s_getFileToString(URL url)
     {
         String strWhere = _f_s_strClass + "s_getFileToString(url)";
         
@@ -134,7 +134,7 @@ public class S_Url
         return strUrl.replaceAll(strCodeSpaceUrl, strCodeSpaceFile);
     }
     
-    static public String s_getToString(URL url)
+    public static String s_getToString(URL url)
     {
         String strWhere = _f_s_strClass + "s_getToString(url)";
         
@@ -171,7 +171,7 @@ public class S_Url
     **/
     
     
-    static public boolean s_sameFileFromEditorPane(URL url1, URL url2)
+    public static boolean s_sameFileFromEditorPane(URL url1, URL url2)
     {
         String strWhere = _f_s_strClass + "s_sameFileFromEditorPane(url1, url2)";
 
@@ -191,7 +191,7 @@ public class S_Url
         return strFile1.endsWith(strFile2);
     }
     
-    static public boolean s_sameFile(URL url1, URL url2)
+    public static boolean s_sameFile(URL url1, URL url2)
     {
         String strWhere = _f_s_strClass + "s_sameFile(url1, url2)";
         
@@ -283,13 +283,13 @@ public class S_Url
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     /**
         returning a copy of the string arg, replacing all slashes or/and backshlashes occurences by '_'
         that the arg may contain
     **/
     
-    static private String _s_getStringReplaced(String str)
+    private static String _s_getStringReplaced(String str)
     {
         String strShrinked = new String(str);
         

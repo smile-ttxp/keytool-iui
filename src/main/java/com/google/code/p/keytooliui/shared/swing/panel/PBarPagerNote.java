@@ -21,7 +21,7 @@
  
 package com.google.code.p.keytooliui.shared.swing.panel;
 
-final public class PBarPagerNote extends PBarPagerAbstract 
+public final class PBarPagerNote extends PBarPagerAbstract 
 {    
     public PBarPagerNote(int intH)
     {

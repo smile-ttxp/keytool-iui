@@ -46,23 +46,23 @@ import java.io.*;
 import java.awt.*;
 import java.util.*;
 
-final public class UtilKstPkcs12 extends UtilKstAbs
+public final class UtilKstPkcs12 extends UtilKstAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strKeystoreType = "PKCS12"; // default type
-    final static public String f_s_strKeystoreProvider = KTLAbs.f_s_strsProviderKstPkcs12RW[0]; // default type
+    public static final String f_s_strKeystoreType = "PKCS12"; // default type
+    public static final String f_s_strKeystoreProvider = KTLAbs.f_s_strsProviderKstPkcs12RW[0]; // default type
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstPkcs12";
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public void s_manageFile(
+    public static void s_manageFile(
         Frame frmParent)
     {
         String strMethod = UtilKstPkcs12._f_s_strClass + "." + "s_manageFile(...)";
@@ -186,7 +186,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     
     // --
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilKstPkcs12._f_s_strClass + "." + "s_showFile(...)";
@@ -281,7 +281,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         UtilKstPkcs12._s_showFile_(frmParent, fleOpenKst, chrsPasswdKst);
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         String strPathAbs, char[] chrsPasswd)
     {
@@ -317,7 +317,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         UtilKstPkcs12._s_showFile_(frmParent, fleOpenKst, chrsPasswd); 
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         String strPathAbs)
     {
@@ -395,7 +395,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     
     // ----
     
-    static protected void _s_showFile_(
+    protected static void _s_showFile_(
         Frame frmParent,
         File fle,
         char[] chrsPasswd)
@@ -471,7 +471,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
     }
     
     
-    static public boolean s_setKeyEntry(
+    public static boolean s_setKeyEntry(
         Frame frmOwner, 
         KeyStore kstOpen,
         String strAliasKpr,
@@ -495,7 +495,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         
         
     **/
-    static public Key s_getKeyProviderAny(
+    public static Key s_getKeyProviderAny(
         Component cmpOwner, 
         KeyStore kseLoaded,
         String strAliasKpr,
@@ -543,7 +543,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         
         
     **/
-    static public Key s_getKeyProviderBc(
+    public static Key s_getKeyProviderBc(
         Component cmpOwner, 
         KeyStore kseLoaded,
         String strAliasKpr
@@ -557,7 +557,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             );
     }
     
-    static public Key s_getKeyProviderSunJsse(
+    public static Key s_getKeyProviderSunJsse(
         Component cmpOwner,
         KeyStore kseLoaded,
         String strAliasKpr,
@@ -572,7 +572,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
             );
     }
     
-    static public KeyStore s_getKeystoreNew(
+    public static KeyStore s_getKeystoreNew(
         Frame frmOwner, 
         String strProviderKst
         )
@@ -592,7 +592,7 @@ final public class UtilKstPkcs12 extends UtilKstAbs
         if code error, exiting
         else if any error, show warning dialog and return false
     **/
-    static public KeyStore s_getKeystoreOpen(
+    public static KeyStore s_getKeystoreOpen(
         Frame frmOwner, 
         
         File fleOpen,

@@ -61,19 +61,19 @@ import com.google.code.p.keytooliui.shared.awt.awteventmulticaster.DFindPageEven
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.util.eventlistener.DFindPageListener;
 
-final public class DFindPage extends DFindAbstract implements DFindPageListener
+public final class DFindPage extends DFindAbstract implements DFindPageListener
 {
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTitle = null;
-    static private String _s_strButtonTextFindNext = null;
-    static private String _s_strButtonTipFindNext = null;
-    static private String _s_strBorderTitleDirection = null;
-    static private String _s_strRadioTextUp = null;
-    static private String _s_strRadioTextDown = null;
-    static private String _s_strRadioTipUp = null;
-    static private String _s_strRadioTipDown = null;
+    private static String _s_strTitle = null;
+    private static String _s_strButtonTextFindNext = null;
+    private static String _s_strButtonTipFindNext = null;
+    private static String _s_strBorderTitleDirection = null;
+    private static String _s_strRadioTextUp = null;
+    private static String _s_strRadioTextDown = null;
+    private static String _s_strRadioTipUp = null;
+    private static String _s_strRadioTipDown = null;
     
     
     // ------------------

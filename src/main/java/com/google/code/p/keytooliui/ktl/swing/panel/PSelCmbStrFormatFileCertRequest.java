@@ -32,12 +32,12 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 
 
-final public class PSelCmbStrFormatFileCertRequest extends PSelCmbStrFormatFileCertAbs
+public final class PSelCmbStrFormatFileCertRequest extends PSelCmbStrFormatFileCertAbs
 {     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTextLabel = "CSR file format:";
+    private static final String _f_s_strTextLabel = "CSR file format:";
     
     // ---------
     // PUBLIC   

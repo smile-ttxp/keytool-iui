@@ -14,12 +14,12 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class PTblEntryTcrShowAll extends PTblEntryTcrAbs 
+public final class PTblEntryTcrShowAll extends PTblEntryTcrAbs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intDeltaW = 0; // using default width assigned in superclass
+    private static final int _f_s_intDeltaW = 0; // using default width assigned in superclass
     
     // ------
     // PUBLIC

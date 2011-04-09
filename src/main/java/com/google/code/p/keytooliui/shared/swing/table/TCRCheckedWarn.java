@@ -34,7 +34,7 @@ import javax.swing.JTable;
 import com.google.code.p.keytooliui.shared.lang.bool.*;
  
  
-final public class TCRCheckedWarn extends TCRCheckedAbs
+public final class TCRCheckedWarn extends TCRCheckedAbs
 {
     // ------
     // PUBLIC

@@ -47,18 +47,18 @@ import net.miginfocom.swing.MigLayout;
 abstract public class PSelAbs extends JPanel
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    //final static public Dimension f_s_dimBoxX = new java.awt.Dimension(1, 1); // new java.awt.Dimension(4,1);
+    //public static final Dimension f_s_dimBoxX = new java.awt.Dimension(1, 1); // new java.awt.Dimension(4,1);
     
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_strClass = "com.google.code.p.keytooliui.shared.swing.panel.PSelAbs.";
+    private static final String _f_strClass = "com.google.code.p.keytooliui.shared.swing.panel.PSelAbs.";
         
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     
    
@@ -67,7 +67,7 @@ abstract public class PSelAbs extends JPanel
         tool used to align a vertical list of panelSelection
     **/
     
-    static public boolean s_alignLabels(Vector<PSelAbs> vecPanels)
+    public static boolean s_alignLabels(Vector<PSelAbs> vecPanels)
     {
         String strMethod = _f_strClass + "s_alignLabels(vecPanels)";
         

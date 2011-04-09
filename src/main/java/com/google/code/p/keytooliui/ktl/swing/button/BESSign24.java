@@ -1,12 +1,12 @@
 package com.google.code.p.keytooliui.ktl.swing.button;
 
 
-final public class BESSign24 extends BESSignAbs
+public final class BESSign24 extends BESSignAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "hammer24.gif"; // tempo
+    private static final String _f_s_strImage = "hammer24.gif"; // tempo
     
     // ------
     // PUBLIC

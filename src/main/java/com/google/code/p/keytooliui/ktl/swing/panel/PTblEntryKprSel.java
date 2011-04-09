@@ -40,12 +40,12 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class PTblEntryKprSel extends PTblEntryKprAbs
+public final class PTblEntryKprSel extends PTblEntryKprAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intDeltaW = 20;
+    private static final int _f_s_intDeltaW = 20;
     
     // ------
     // PUBLIC

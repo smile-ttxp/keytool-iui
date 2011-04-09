@@ -31,11 +31,11 @@ import javax.swing.text.html.*;
 public class S_StyleSheet
 {
     // --------------------
-    // FINAL STATIC PRIVATE 
+    // PRIVATE STATIC FINAL 
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.text.html.stylesheet.S_StyleSheet.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.swing.text.html.stylesheet.S_StyleSheet.";
     
-    final static private String[] _f_s_strsRuleDefault =
+    private static final String[] _f_s_strsRuleDefault =
     {
         //"body {color: green; background-color: Silver}"
         
@@ -108,10 +108,10 @@ public class S_StyleSheet
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     
-    static public boolean s_loadRuleImageBg(StyleSheet sst, FileJar fjrDoc, String strPathAbsoluteJar, String strPathRelativeImage)
+    public static boolean s_loadRuleImageBg(StyleSheet sst, FileJar fjrDoc, String strPathAbsoluteJar, String strPathRelativeImage)
     {
         String f_strMethod = _f_s_strClass + "s_loadRuleImageBg(sst, strPathAbsoluteJar, strPathRelativeImage)";
         
@@ -151,7 +151,7 @@ public class S_StyleSheet
         return true;
     }
     
-    static public StyleSheet s_getDefault()
+    public static StyleSheet s_getDefault()
     {
         StyleSheet sst = new StyleSheet();
         
@@ -163,9 +163,9 @@ public class S_StyleSheet
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private byte[] _s_getBytesFromTemplateIfAny(FileJar fjr, String strPathRelative)
+    private static byte[] _s_getBytesFromTemplateIfAny(FileJar fjr, String strPathRelative)
     {
         String f_strMethod = _f_s_strClass + "_s_getBytesFromTemplateIfAny(fjr, strPathRelative)";
         
@@ -245,7 +245,7 @@ public class S_StyleSheet
         return bytsBuffer;
     }
     
-    static private String _s_getPathAbsoluteImageBg(String strPathAbsoluteJar, String strPathRelativeImage)
+    private static String _s_getPathAbsoluteImageBg(String strPathAbsoluteJar, String strPathRelativeImage)
     {
         String f_strMethod = _f_s_strClass + "_s_getPathAbsoluteImageBg(strPathAbsoluteJar, strPathRelativeImage)";
         
@@ -282,7 +282,7 @@ public class S_StyleSheet
         then writing to temporary file,
         finally returns (temporary file's) absolute path.
     **/
-    static private String _s_getPathAbsoluteImageBgTemp(byte[] bytsBuffer)
+    private static String _s_getPathAbsoluteImageBgTemp(byte[] bytsBuffer)
     {
         String f_strMethod = _f_s_strClass + "_s_getPathAbsoluteImageBgTemp(bytsBuffer)";
         
@@ -321,7 +321,7 @@ public class S_StyleSheet
         x) loading template object (.fjr) from resources in jar file (.rcr) 
         x) return template
     **/
-    static private FileJar _s_loadTemplate(FileJar fjrDoc, String strPathRelativeResTemplate)
+    private static FileJar _s_loadTemplate(FileJar fjrDoc, String strPathRelativeResTemplate)
     {
         String f_strMethod = _f_s_strClass + "_s_loadTemplate(fjrDoc, strPathRelativeResTemplate)";
         

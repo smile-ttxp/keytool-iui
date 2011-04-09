@@ -45,12 +45,12 @@
 
 
 
-final public class BOCheckedCandidateRed extends BOCheckedCandidateAbs
+public final class BOCheckedCandidateRed extends BOCheckedCandidateAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "tick_red9x11.gif";;
+    private static final String _f_s_strIcon = "tick_red9x11.gif";;
     
     // ------
     // PUBLIC

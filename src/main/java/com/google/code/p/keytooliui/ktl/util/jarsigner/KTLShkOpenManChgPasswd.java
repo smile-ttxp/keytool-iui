@@ -50,7 +50,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLShkOpenManChgPasswd extends KTLShkOpenManAbs
+public final class KTLShkOpenManChgPasswd extends KTLShkOpenManAbs
 {
     // ------
     // PUBLIC

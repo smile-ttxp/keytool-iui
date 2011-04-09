@@ -23,7 +23,7 @@ package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 import java.awt.event.ActionListener;
 
-final public class MISelTabCreateKst extends MISelTabAbs
+public final class MISelTabCreateKst extends MISelTabAbs
 {
     public MISelTabCreateKst(ActionListener actListenerParent)
     {

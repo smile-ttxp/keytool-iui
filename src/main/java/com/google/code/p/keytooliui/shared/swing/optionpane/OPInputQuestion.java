@@ -24,7 +24,7 @@ package com.google.code.p.keytooliui.shared.swing.optionpane;
 
 
 
-final public class OPInputQuestion extends OPAbstract
+public final class OPInputQuestion extends OPAbstract
 { 
     // ------
     // PUBLIC

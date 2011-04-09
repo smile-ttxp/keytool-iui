@@ -39,17 +39,17 @@ abstract public class DLoadingAbs extends DEscapeAbstract implements
     Runnable
 {
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
 
-    static public String s_strLabelWait = null;
-    static public ImageIcon s_iinLoading = null;
+    public static String s_strLabelWait = null;
+    public static ImageIcon s_iinLoading = null;
 
 
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
 
-    static private String _s_strTitleSuffix = null;
-	static private String _s_strLabel1 = null;
+    private static String _s_strTitleSuffix = null;
+	private static String _s_strLabel1 = null;
 
 
     // ------------------

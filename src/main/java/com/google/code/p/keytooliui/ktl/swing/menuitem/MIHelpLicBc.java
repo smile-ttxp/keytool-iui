@@ -30,13 +30,13 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.dialog.DViewString;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
-final public class MIHelpLicBc extends MIAbstract implements
+public final class MIHelpLicBc extends MIAbstract implements
         ActionListener
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
 
-    static private String _s_strText = null;
+    private static String _s_strText = null;
 
     // ------------------
     // STATIC INITIALIZER

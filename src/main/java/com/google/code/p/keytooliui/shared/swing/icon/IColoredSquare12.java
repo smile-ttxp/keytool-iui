@@ -25,7 +25,7 @@ package com.google.code.p.keytooliui.shared.swing.icon;
 
 import java.awt.*;
 
-final public class IColoredSquare12 extends IColoredSquareAbs
+public final class IColoredSquare12 extends IColoredSquareAbs
 {
     // ------------------------
     // FINAL PRIVATE STATIC INT

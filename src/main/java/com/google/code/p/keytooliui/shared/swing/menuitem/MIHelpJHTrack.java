@@ -33,12 +33,12 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MIHelpJHTrack extends MIHelpJHAbstract
+public final class MIHelpJHTrack extends MIHelpJHAbstract
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

@@ -38,17 +38,17 @@ import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprAbs 
+public final class PTabUICmdKtlKstOpenCrKprDsa extends PTabUICmdKtlKstOpenCrKprAbs 
 {        
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Create DSA private key entry, with vers. #1 cert";
+    public static final String STR_TITLETASK = "Create DSA private key entry, with vers. #1 cert";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
 
     // ------------------
     // STATIC INITIALIZER

@@ -34,17 +34,17 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileSaveCCms extends PSelBtnTfdFileSaveAbs
+public final class PSelBtnTfdFileSaveCCms extends PSelBtnTfdFileSaveAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_cms_crt_save";
-    final static public String s_strDirNameDefault = "myccms";      // !!! already defined
-    final static public String f_s_strLabel = "CMS Certs-only file:"; // !!! already defined
+    public static final String f_s_strDocPropVal = "select_file_cms_crt_save";
+    public static final String s_strDirNameDefault = "myccms";      // !!! already defined
+    public static final String f_s_strLabel = "CMS Certs-only file:"; // !!! already defined
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
     
     // ------

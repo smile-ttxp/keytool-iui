@@ -27,7 +27,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAbs
+public final class KTLKprSaveFromPkcs12ToPkcs12 extends KTLKprSaveFromPkcs12ToAbs
 {
     // ------
     // PUBLIC

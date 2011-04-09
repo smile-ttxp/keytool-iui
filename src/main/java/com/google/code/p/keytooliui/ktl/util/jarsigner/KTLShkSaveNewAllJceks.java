@@ -47,7 +47,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLShkSaveNewAllJceks extends KTLShkSaveNewAllJAbs
+public final class KTLShkSaveNewAllJceks extends KTLShkSaveNewAllJAbs
 {
     // ------
     // PUBLIC

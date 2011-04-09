@@ -7,12 +7,12 @@ package com.google.code.p.keytooliui.ktl.swing.dialog;
 
 import java.awt.*;
 
-final public class DTblEntryKprOpenKPAny extends DTblEntryKprOpenKPAbs
+public final class DTblEntryKprOpenKPAny extends DTblEntryKprOpenKPAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTitleThisPrefix = "select (RSA or DSA) keypair entry in ";
+    private static final String _f_s_strTitleThisPrefix = "select (RSA or DSA) keypair entry in ";
     
     // ------
     // PUBLIC

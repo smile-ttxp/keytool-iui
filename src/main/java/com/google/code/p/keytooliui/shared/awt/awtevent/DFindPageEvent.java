@@ -28,17 +28,17 @@ public class DFindPageEvent extends java.awt.AWTEvent
     
     
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intIdFirst = DRangeAbstractEvent.DRANGEABSTRACTEVENT_LAST + 1;
+    private static final int _f_s_intIdFirst = DRangeAbstractEvent.DRANGEABSTRACTEVENT_LAST + 1;
     
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
     
-    final static public int DFINDPAGEEVENT_LAST = _f_s_intIdFirst;
+    public static final int DFINDPAGEEVENT_LAST = _f_s_intIdFirst;
 
-    final static public int DFINDPAGEEVENT_FINDNEXT = _f_s_intIdFirst;
+    public static final int DFINDPAGEEVENT_FINDNEXT = _f_s_intIdFirst;
     
     
     // ----------------

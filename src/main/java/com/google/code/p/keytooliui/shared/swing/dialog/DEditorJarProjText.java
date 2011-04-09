@@ -38,9 +38,9 @@ import java.awt.*;
 public class DEditorJarProjText extends DEditorAbstract 
 {    
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".DEditorJarProjText" // class name
         ;
@@ -48,9 +48,9 @@ public class DEditorJarProjText extends DEditorAbstract
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strTitleSuffix = null;
+    private static String _s_strTitleSuffix = null;
     
     // ------------------
     // STATIC INITIALIZER

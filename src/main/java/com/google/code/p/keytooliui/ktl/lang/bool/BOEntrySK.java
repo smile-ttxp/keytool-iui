@@ -10,9 +10,9 @@ import com.google.code.p.keytooliui.shared.lang.bool.*;
 public class BOEntrySK extends BOAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_IMAGE = "entry_sk.gif"; // key16x17.jpg";
+    public static final String STR_IMAGE = "entry_sk.gif"; // key16x17.jpg";
     
     // ------
     // public

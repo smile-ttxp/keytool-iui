@@ -41,24 +41,24 @@ abstract public class AppMainAbs extends AppAbs implements
     ItemListener
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strNameDirLibraries = "lib";
+    public static final String f_s_strNameDirLibraries = "lib";
  
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.AppMainAbs.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.AppMainAbs.";
     
     
     
-    final static public String f_s_strKWLibHelp = "h"; // used in ModMainAbs.java (NetBeans IDE module)
+    public static final String f_s_strKWLibHelp = "h"; // used in ModMainAbs.java (NetBeans IDE module)
     
-    final static public String f_s_strKWLibHelpStandard = "s"; // used in ModMainAbs.java (NetBeans IDE module)
+    public static final String f_s_strKWLibHelpStandard = "s"; // used in ModMainAbs.java (NetBeans IDE module)
     
-    final static private String _f_s_strKWLibHelpStarted = "r";
-    final static private String _f_s_strKWLibHelpExpert = "e";
-    final static private String _f_s_strKWLibHelpForward = "f";
+    private static final String _f_s_strKWLibHelpStarted = "r";
+    private static final String _f_s_strKWLibHelpExpert = "e";
+    private static final String _f_s_strKWLibHelpForward = "f";
     
     
     // ------
@@ -84,7 +84,7 @@ abstract public class AppMainAbs extends AppAbs implements
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /*
         EG: UIKeytool:
@@ -92,7 +92,7 @@ abstract public class AppMainAbs extends AppAbs implements
         shound return:
               "rc[version]xls_hs"
     */
-    static public String s_getNameLibHelpStandardShort()
+    public static String s_getNameLibHelpStandardShort()
     {
         String strAppliNameShort = System.getProperty("_appli.name.short");
 
@@ -116,7 +116,7 @@ abstract public class AppMainAbs extends AppAbs implements
               "rc[version]xls_hr"
               
     */
-    static public String s_getNameLibHelpStartedShort()
+    public static String s_getNameLibHelpStartedShort()
     {
         String strAppliNameShort = System.getProperty("_appli.name.short");
 
@@ -132,7 +132,7 @@ abstract public class AppMainAbs extends AppAbs implements
     }
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
     
     
@@ -143,7 +143,7 @@ abstract public class AppMainAbs extends AppAbs implements
         shound return:
               "rc[version]xls_hx"
     */
-    static protected String _s_getNameLibHelpExpertShort_(String strAppliLibNameShort)
+    protected static String _s_getNameLibHelpExpertShort_(String strAppliLibNameShort)
     {
         String str = _s_getNameLibHelpPrefix(strAppliLibNameShort);   
         str += AppMainAbs._f_s_strKWLibHelpExpert; // help type
@@ -156,7 +156,7 @@ abstract public class AppMainAbs extends AppAbs implements
         shound return:
               "rc[version]xls_hf"
     */
-    static protected String _s_getNameLibHelpForwardShort_(String strAppliLibNameShort)
+    protected static String _s_getNameLibHelpForwardShort_(String strAppliLibNameShort)
     {
         String str = _s_getNameLibHelpPrefix(strAppliLibNameShort);   
         str += AppMainAbs._f_s_strKWLibHelpForward; // help type
@@ -164,13 +164,13 @@ abstract public class AppMainAbs extends AppAbs implements
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     // dialog exit
-    static private String _s_strDlgExitTitle = null;
-    static private String _s_strDlgExitBody = null;
+    private static String _s_strDlgExitTitle = null;
+    private static String _s_strDlgExitBody = null;
     
-    //static private int _s_intThreadExitNowID = MyThreadAbs.f_s_intIdMin - 1; // = "0"
+    //private static int _s_intThreadExitNowID = MyThreadAbs.f_s_intIdMin - 1; // = "0"
     
     
     /*
@@ -179,7 +179,7 @@ abstract public class AppMainAbs extends AppAbs implements
         shound return:
               "rc[version]rcr_h
     */
-    static protected String _s_getNameLibHelpPrefix(String strAppliLibNameShort)
+    protected static String _s_getNameLibHelpPrefix(String strAppliLibNameShort)
     {
         String strMethod = "_s_getNameLibHelpPrefix(strAppliLibNameShort)";
         
@@ -212,7 +212,7 @@ abstract public class AppMainAbs extends AppAbs implements
     // eg: java [appli] -lang fr
     // ==> displays english "exitDialog" texts under english system keyboard
     
-    static private void _s_getDialogProps()
+    private static void _s_getDialogProps()
     {
         String strMethod = _f_s_strClass + "_s_getDialogProps()";
         

@@ -40,12 +40,12 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileSaveAny extends PSelBtnTfdFileSaveAbs 
+public final class PSelBtnTfdFileSaveAny extends PSelBtnTfdFileSaveAbs 
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_any_save";
+    public static final String f_s_strDocPropVal = "select_file_any_save";
     
     // ------
     // PUBLIC

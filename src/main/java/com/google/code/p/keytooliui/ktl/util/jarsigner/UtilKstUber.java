@@ -47,23 +47,23 @@ import java.awt.*;
 import java.util.*;
 
 
-final public class UtilKstUber extends UtilKstAbs
+public final class UtilKstUber extends UtilKstAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strKeystoreType = "UBER"; // default type
-    final static public String f_s_strKeystoreProvider = "BC"; // default type
+    public static final String f_s_strKeystoreType = "UBER"; // default type
+    public static final String f_s_strKeystoreProvider = "BC"; // default type
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber";
 
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public void s_manageFile(
+    public static void s_manageFile(
         Frame frmParent)
     {
         String strMethod = UtilKstUber._f_s_strClass + "." + "s_manageFile(...)";
@@ -195,7 +195,7 @@ final public class UtilKstUber extends UtilKstAbs
     
     // --
     
-    static public void s_showFile(
+    public static void s_showFile(
        
         Frame frmParent)
     {
@@ -300,7 +300,7 @@ final public class UtilKstUber extends UtilKstAbs
         UtilKstUber._s_showFile_(frmParent, fleOpenKst, chrsPasswdKst);
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         String strPathAbs,
         char[] chrsPasswdKst)
@@ -339,7 +339,7 @@ final public class UtilKstUber extends UtilKstAbs
     
     // ----
     
-    static protected void _s_showFile_(
+    protected static void _s_showFile_(
         Frame frmParent,
         File fle,
         char[] chrsPassword)
@@ -413,7 +413,7 @@ final public class UtilKstUber extends UtilKstAbs
     
     
                        
-    static public KeyStore s_getKeystoreOpen(
+    public static KeyStore s_getKeystoreOpen(
         Frame frmOwner, 
         File fleOpen,
         char[] chrsPassword // nil value allowed (eg: verify signed jarred file)
@@ -428,7 +428,7 @@ final public class UtilKstUber extends UtilKstAbs
     }
     
     
-    static public KeyStore s_getKeystoreNew(
+    public static KeyStore s_getKeystoreNew(
         Frame frmOwner
         )
     {
@@ -439,6 +439,6 @@ final public class UtilKstUber extends UtilKstAbs
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
 }

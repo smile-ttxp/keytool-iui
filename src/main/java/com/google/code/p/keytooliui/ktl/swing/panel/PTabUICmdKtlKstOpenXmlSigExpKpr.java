@@ -15,21 +15,21 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXmlSigExpAbs
+public final class PTabUICmdKtlKstOpenXmlSigExpKpr extends PTabUICmdKtlKstOpenXmlSigExpAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Sign XML file with (DSA_SHA1 or RSA_SHA1) private key entry";
+    public static final String STR_TITLETASK = "Sign XML file with (DSA_SHA1 or RSA_SHA1) private key entry";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    //static private String _s_strDlgInfoActionBodyBeg = null;
-    //static private String _s_strDlgInfoActionBodySig = null;
-    //static private String _s_strDlgInfoActionBodyQuery = null;
+    //private static String _s_strDlgInfoActionBodyBeg = null;
+    //private static String _s_strDlgInfoActionBodySig = null;
+    //private static String _s_strDlgInfoActionBodyQuery = null;
     
     // ------------------
     // STATIC INITIALIZER

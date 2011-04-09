@@ -20,7 +20,7 @@ import java.awt.event.*;
 import java.awt.*;
 
 
-final public class MyHelpBroker extends DefaultHelpBroker
+public final class MyHelpBroker extends DefaultHelpBroker
 {
     // ------
     // PUBLIC

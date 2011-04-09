@@ -25,12 +25,12 @@ package com.google.code.p.keytooliui.shared.swing.button;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-final public class BESInteger16 extends BESIntegerAbs
+public final class BESInteger16 extends BESIntegerAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "edit16.gif"; // tempo
+    private static final String _f_s_strImage = "edit16.gif"; // tempo
     
     // ------
     // PUBLIC

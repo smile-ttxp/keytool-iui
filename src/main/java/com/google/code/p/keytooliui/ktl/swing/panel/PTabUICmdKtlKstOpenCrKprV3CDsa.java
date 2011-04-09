@@ -69,18 +69,18 @@ import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrKprV3CAbs
+public final class PTabUICmdKtlKstOpenCrKprV3CDsa extends PTabUICmdKtlKstOpenCrKprV3CAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
 
-    final static public String STR_TITLETASK = "Create DSA private key entry, with vers. #3 cert";
+    public static final String STR_TITLETASK = "Create DSA private key entry, with vers. #3 cert";
 
 
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
 
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
 
     // ------------------
     // STATIC INITIALIZER

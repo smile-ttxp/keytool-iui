@@ -40,13 +40,13 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class PTblEntPKTCShowAll extends PTblEntPKTCAbs 
+public final class PTblEntPKTCShowAll extends PTblEntPKTCAbs 
 {
     // --------------
-    // static private
+    // private static
     
     // not working coz not taking into account length of columns' titles
-    static private int _s_getWidth()
+    private static int _s_getWidth()
     {
         int intVal = 0;
         

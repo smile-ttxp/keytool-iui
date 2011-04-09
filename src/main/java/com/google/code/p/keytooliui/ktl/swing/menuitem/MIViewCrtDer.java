@@ -7,12 +7,12 @@ import java.util.ResourceBundle;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIAbstract;
 
-final public class MIViewCrtDer extends MIAbstract
+public final class MIViewCrtDer extends MIAbstract
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
 
-    static public String STR_TEXT = null;
+    public static String STR_TEXT = null;
 
     // ------------------
     // STATIC INITIALIZER

@@ -31,7 +31,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-final public class DEditorJarProjTextHtml extends DEditorJarProjText implements
+public final class DEditorJarProjTextHtml extends DEditorJarProjText implements
     DEditorJarProjTextHtmlListener
 {    
     // ------

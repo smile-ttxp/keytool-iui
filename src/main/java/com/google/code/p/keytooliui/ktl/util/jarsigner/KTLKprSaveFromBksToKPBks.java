@@ -34,7 +34,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
+public final class KTLKprSaveFromBksToKPBks extends KTLKprSaveFromBksToKPAbs
 {
     // ------
     // PUBLIC

@@ -41,17 +41,17 @@ import javax.swing.*;
 import java.awt.*;
 
 
-final public class PSelBtnTfdFileJarSaveSigned extends PSelBtnTfdFileJarSaveAbs
+public final class PSelBtnTfdFileJarSaveSigned extends PSelBtnTfdFileJarSaveAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC 
+    // PUBLIC STATIC FINAL 
     
-    final static public String f_s_strDocPropVal = "select_file_jar_save_signed";
+    public static final String f_s_strDocPropVal = "select_file_jar_save_signed";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabel = "Signed JAR file:";
+    private static final String _f_s_strLabel = "Signed JAR file:";
     
     // ------
     // PUBLIC

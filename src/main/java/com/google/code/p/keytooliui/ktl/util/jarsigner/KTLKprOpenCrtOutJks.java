@@ -30,7 +30,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenCrtOutJks extends KTLKprOpenCrtOutKPAbs
+public final class KTLKprOpenCrtOutJks extends KTLKprOpenCrtOutKPAbs
 {
     // ------
     // PUBLIC

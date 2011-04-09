@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstUber;
 
-final public class MIToolKstUber extends MIToolKstAbs
+public final class MIToolKstUber extends MIToolKstAbs
 {
     public MIToolKstUber(ActionListener actListenerParent)
     {

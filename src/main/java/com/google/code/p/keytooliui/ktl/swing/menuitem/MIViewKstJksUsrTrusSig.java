@@ -6,12 +6,12 @@ import java.io.File;
 import com.google.code.p.keytooliui.ktl.util.jarsigner.UtilKstJks;
 import com.google.code.p.keytooliui.shared.io.S_OperatingSystem;
 
-final public class MIViewKstJksUsrTrusSig extends MIKstJksCrtAbs
+public final class MIViewKstJksUsrTrusSig extends MIKstJksCrtAbs
 {
     // --------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
 
-    static public String s_strPrefix = "User-level trusted signer";
+    public static String s_strPrefix = "User-level trusted signer";
 
     // ------
     // PUBLIC

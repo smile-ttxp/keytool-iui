@@ -28,12 +28,12 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 import com.google.code.p.keytooliui.shared.swing.menuitem.MIHelpOnlineHome;
 
 
-final public class BESHelpOnlineHome24 extends BESHelpOnlineAbs
+public final class BESHelpOnlineHome24 extends BESHelpOnlineAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _STR_NAME_ICON = "webcomponent24.gif";
+    private static final String _STR_NAME_ICON = "webcomponent24.gif";
     
     // ------
     // PUBLIC

@@ -33,9 +33,9 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 abstract public class BESVerifyAbs extends BEnabledState
 {
 // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipText = "Verify (not JAR) signed file with public key";
+    private static String _s_strToolTipText = "Verify (not JAR) signed file with public key";
     
     // ------------------
     // STATIC INITIALIZER

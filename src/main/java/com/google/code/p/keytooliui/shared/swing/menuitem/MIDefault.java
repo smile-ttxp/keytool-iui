@@ -28,7 +28,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MIDefault extends MIAbstract 
+public final class MIDefault extends MIAbstract 
 {
     
     // ------

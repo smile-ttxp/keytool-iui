@@ -36,22 +36,22 @@ import java.util.EventListener;
 public class EPTextAbsEventMulticaster extends java.awt.AWTEventMulticaster implements EPTextAbsListener
 {
     // --------------------------
-    // STATIC PUBLIC [XX]Listener
+    // PUBLIC STATIC [XX]Listener
     
-    static public EPTextAbsListener add(EPTextAbsListener pwlA, EPTextAbsListener pwlB)
+    public static EPTextAbsListener add(EPTextAbsListener pwlA, EPTextAbsListener pwlB)
 	{
         return (EPTextAbsListener) addInternal(pwlA, pwlB);
 	}
   
-	static public EPTextAbsListener remove(EPTextAbsListener pwlA, EPTextAbsListener pwlB)
+	public static EPTextAbsListener remove(EPTextAbsListener pwlA, EPTextAbsListener pwlB)
 	{
         return (EPTextAbsListener) removeInternal(pwlA, pwlB);
 	}
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+    protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

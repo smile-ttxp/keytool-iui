@@ -36,7 +36,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class PEditorDefaultSys extends PEditorAbstract
+public final class PEditorDefaultSys extends PEditorAbstract
 {    
     // ------
     // PUBLIC
@@ -173,7 +173,7 @@ final public class PEditorDefaultSys extends PEditorAbstract
         super._destroy_();
     }
     
-    static public void main(String[] args)
+    public static void main(String[] args)
     {
         final String f_strWhere = "main(strsArg)";
         

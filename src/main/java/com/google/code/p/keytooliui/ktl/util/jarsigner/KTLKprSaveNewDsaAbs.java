@@ -340,7 +340,7 @@ abstract public class KTLKprSaveNewDsaAbs extends KTLKprSaveNewAbs
         byte[] bytsPublic = keyPublic.getEncoded();
         StringBuffer sbr = new StringBuffer();
          
-        sbr.append("final static private int[] _f_s_intsPubKeyReg =");
+        sbr.append("private static final int[] _f_s_intsPubKeyReg =");
         sbr.append("\n");
         sbr.append("{");
             

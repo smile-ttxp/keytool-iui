@@ -31,21 +31,21 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.*;
 
-final public class PSelBtnTfdRngIntValidityKpr extends PSelBtnTfdRngInt
+public final class PSelBtnTfdRngIntValidityKpr extends PSelBtnTfdRngInt
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_validity_keypair:";
+    public static final String f_s_strDocPropVal = "select_validity_keypair:";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabel = "Validity (days):";
+    private static final String _f_s_strLabel = "Validity (days):";
     
-    static private String _s_strDlgValidityTitle = "select keypair validity";
-    static private String _s_strDlgValidityLabel = "Please enter keypair's validity in days";
-    static private String _s_strDlgValidityTitlePanel = "Current value:";
+    private static String _s_strDlgValidityTitle = "select keypair validity";
+    private static String _s_strDlgValidityLabel = "Please enter keypair's validity in days";
+    private static String _s_strDlgValidityTitlePanel = "Current value:";
 
     // ------
     // PUBLIC

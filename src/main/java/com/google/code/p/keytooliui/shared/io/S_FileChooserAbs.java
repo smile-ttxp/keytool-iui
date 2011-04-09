@@ -42,16 +42,16 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 abstract public class S_FileChooserAbs
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileChooserAbs.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_FileChooserAbs.";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strErrorFileNotFound = null;
-    static private String _s_strErrorWrongExtensionPrefix = null;
-    static private String _s_strErrorWrongExtensionSuffix = null;
+    private static String _s_strErrorFileNotFound = null;
+    private static String _s_strErrorWrongExtensionPrefix = null;
+    private static String _s_strErrorWrongExtensionSuffix = null;
     
     static
     {
@@ -80,9 +80,9 @@ abstract public class S_FileChooserAbs
         }
     } 
     
-    // static private
+    // private static
     
-    static private String _s_getBodyDlgErrorExtension(String[] strsExt, String strExtSource,
+    private static String _s_getBodyDlgErrorExtension(String[] strsExt, String strExtSource,
         String strNameFile)
     {
         String strMethod = S_FileChooserAbs._f_s_strClass + "_s_getBodyDlgErrorExtension(...)";
@@ -108,13 +108,13 @@ abstract public class S_FileChooserAbs
     }
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     
     /**
         creating a new empty directory, returning the respective "File"
     **/
-    static public File s_getNewDirectoryEmpty(
+    public static File s_getNewDirectoryEmpty(
         //String strPathAbsHomeAppli,
         String strDirAppli, // eg: xlb, xls
         String strDirNameDefault, // eg: mydeploys
@@ -147,7 +147,7 @@ abstract public class S_FileChooserAbs
         else
             ==> ask for overwrite
     **/
-    static public File s_getSaveFile(
+    public static File s_getSaveFile(
  
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -272,7 +272,7 @@ abstract public class S_FileChooserAbs
         return fleSave;   
     }
     
-    static public File s_getOpenFile(
+    public static File s_getOpenFile(
 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -325,7 +325,7 @@ abstract public class S_FileChooserAbs
     
     // in a hurry, should be refactored with s_getOpenFile
     
-    static public File s_getOpenDir(
+    public static File s_getOpenDir(
 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText
@@ -374,7 +374,7 @@ abstract public class S_FileChooserAbs
     
     // ----
     
-    static public File s_getOpenFile(
+    public static File s_getOpenFile(
 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText
@@ -421,7 +421,7 @@ abstract public class S_FileChooserAbs
     
     // ----
     
-    static public File s_getSaveFile(
+    public static File s_getSaveFile(
   
         java.awt.Component cmpFrameParent,
         String strApproveButtonText
@@ -466,7 +466,7 @@ abstract public class S_FileChooserAbs
         return fleOpen;   
     }
     
-    static public File s_getOpenFile(
+    public static File s_getOpenFile(
 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -560,7 +560,7 @@ abstract public class S_FileChooserAbs
         
         IMPORTANT: take care about JWS
     **/
-    static public File s_getOpenParentFileRegTarget()
+    public static File s_getOpenParentFileRegTarget()
     {
         String strMethod = _f_s_strClass + "s_getOpenParentFileRegTarget(...)";
         
@@ -637,7 +637,7 @@ abstract public class S_FileChooserAbs
     **/
     
     /** TEMPO IN COMMENTS oct 25, 2003
-    static public File s_getOpenFileRegSource(
+    public static File s_getOpenFileRegSource(
         String strTitleAppli
         )
     {
@@ -743,9 +743,9 @@ abstract public class S_FileChooserAbs
     
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-     static protected File _s_getFileOnlyDir_(
+     protected static File _s_getFileOnlyDir_(
         java.awt.Component cmpFrameParent,
 
         String strTitleSuffix,
@@ -819,7 +819,7 @@ abstract public class S_FileChooserAbs
  
     }
     
-    static protected JFileChooser _s_getFileChooserOnlyFile_(
+    protected static JFileChooser _s_getFileChooserOnlyFile_(
  
         String strTitleSuffix,
         FileFilterExtended ffe
@@ -845,7 +845,7 @@ abstract public class S_FileChooserAbs
     }
     
     
-    static protected JFileChooser _s_getFileChooser_(
+    protected static JFileChooser _s_getFileChooser_(
 
         String strTitleSuffix
         )
@@ -887,7 +887,7 @@ abstract public class S_FileChooserAbs
         else
             ==> ask for overwrite
     **/
-    static protected File _s_getSaveFile_(
+    protected static File _s_getSaveFile_(
 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -1013,7 +1013,7 @@ abstract public class S_FileChooserAbs
         return fleSave;   
     }
     
-    static protected File _s_getSaveFile_(
+    protected static File _s_getSaveFile_(
 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -1123,7 +1123,7 @@ abstract public class S_FileChooserAbs
         then just opening up "user.home" directory
         ==> don't show JWS cache folder
     **/
-    static protected File _s_getOpenFile_(
+    protected static File _s_getOpenFile_(
 
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
@@ -1227,7 +1227,7 @@ abstract public class S_FileChooserAbs
         should not be called under JWS
     **/
     
-    static protected File _s_getFileDirDocProjectNoJws_(
+    protected static File _s_getFileDirDocProjectNoJws_(
         //String strPathAbsHomeAppli, 
         String strDirMain, 
         String strDirSub // nil value NOT allowed
@@ -1394,7 +1394,7 @@ abstract public class S_FileChooserAbs
               . xlb, tpb: myexports
     **/
     
-    static protected File _s_getNewDirectoryEmpty_(
+    protected static File _s_getNewDirectoryEmpty_(
         //String strPathAbsHomeAppli,
         
         String strNameDirSub, // nil value allowed
@@ -1471,14 +1471,14 @@ abstract public class S_FileChooserAbs
     }
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private File _s_fleParentDirLast = null;
+    private static File _s_fleParentDirLast = null;
     
     
    
     
-    static private JFileChooser _s_getFileChooserOnlyFile(
+    private static JFileChooser _s_getFileChooserOnlyFile(
 
         String strTitleSuffix,
         FileFilterExtended ffe

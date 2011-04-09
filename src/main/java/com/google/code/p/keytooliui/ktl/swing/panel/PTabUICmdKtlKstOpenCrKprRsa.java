@@ -34,17 +34,17 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCrKprRsa extends PTabUICmdKtlKstOpenCrKprAbs 
+public final class PTabUICmdKtlKstOpenCrKprRsa extends PTabUICmdKtlKstOpenCrKprAbs 
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Create RSA private key entry, with vers. #1 cert";
+    public static final String STR_TITLETASK = "Create RSA private key entry, with vers. #1 cert";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
     // ------------------
     // STATIC INITIALIZER

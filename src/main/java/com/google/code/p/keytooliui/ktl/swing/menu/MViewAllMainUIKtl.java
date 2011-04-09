@@ -16,7 +16,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MViewAllMainUIKtl extends MViewAllMainUIAbs
+public final class MViewAllMainUIKtl extends MViewAllMainUIAbs
 {
     // ------
     // PUBLIC

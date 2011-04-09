@@ -4,12 +4,12 @@ package com.google.code.p.keytooliui.ktl.swing.button;
  *JOOST requirements: view XML file (button) in directory to be jarred
  */
 
-final public class BESMore16 extends BESMoreAbs
+public final class BESMore16 extends BESMoreAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strImage = "about16.gif";
+    public static final String f_s_strImage = "about16.gif";
     
     // ------
     // PUBLIC

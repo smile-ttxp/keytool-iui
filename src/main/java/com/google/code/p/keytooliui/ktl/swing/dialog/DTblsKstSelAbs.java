@@ -13,7 +13,7 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 abstract public class DTblsKstSelAbs extends DTblsKstAbs 
 {
     // --------------------
-    // final static private
+    // private static final
     
 
     // ------

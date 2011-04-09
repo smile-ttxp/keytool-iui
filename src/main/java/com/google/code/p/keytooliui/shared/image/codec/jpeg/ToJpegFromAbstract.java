@@ -50,24 +50,24 @@ import java.io.*;
 abstract public class ToJpegFromAbstract
 {
     // ----------------------
-    // FINAL STATIC PROTECTED
+    // PROTECTED STATIC FINAL
     
-    final static protected String _f_s_strFileOutSuffix_ = ".jpg";
+    protected static final String _f_s_strFileOutSuffix_ = ".jpg";
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
     // used by subclasses
-    static protected String _s_strDlgFileTitle_ = null;
-    static protected String _s_strDlgFileButtonApproveText_ = null;
-    static protected String _s_strDlgFileButtonApproveTip_ = null;
+    protected static String _s_strDlgFileTitle_ = null;
+    protected static String _s_strDlgFileButtonApproveText_ = null;
+    protected static String _s_strDlgFileButtonApproveTip_ = null;
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     
-    static private String _s_strDlgInfoBody1 = null;
-    static private String _s_strDlgInfoBody2 = null;
+    private static String _s_strDlgInfoBody1 = null;
+    private static String _s_strDlgInfoBody2 = null;
     
     // ------------------
     // STATIC INITIALIZER

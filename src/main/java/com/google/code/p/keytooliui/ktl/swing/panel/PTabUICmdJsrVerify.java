@@ -41,33 +41,33 @@ import com.google.code.p.keytooliui.shared.swing.dialog.DPasswordOpen;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
 import net.miginfocom.swing.MigLayout;
 
-final public class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
+public final class PTabUICmdJsrVerify extends PTabUICmdJsrAbs
 {
-    final static public String STR_TITLETASK = "Verify signed JAR file";
+    public static final String STR_TITLETASK = "Verify signed JAR file";
     
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTextEntrySize               = "Entries' size";
-    final static private String _f_s_strTextEntryDate               = "Entries' date";
-    final static private String _f_s_strTextEntryCertsType          = "Certs type";
-    final static private String _f_s_strTextEntryCertsX509AlgoName  = "Algos name";
-    final static private String _f_s_strTextEntryCertsX509SubjectDN = "Subject DN";
+    private static final String _f_s_strTextEntrySize               = "Entries' size";
+    private static final String _f_s_strTextEntryDate               = "Entries' date";
+    private static final String _f_s_strTextEntryCertsType          = "Certs type";
+    private static final String _f_s_strTextEntryCertsX509AlgoName  = "Algos name";
+    private static final String _f_s_strTextEntryCertsX509SubjectDN = "Subject DN";
     
-    final static private String _f_s_strTipEntrySize = "display size of each entry";
-    final static private String _f_s_strTipEntryDate = "display date of each entry";
-    final static private String _f_s_strTipEntryCertsType = "display entry's certificate(s) type(s)";
-    final static private String _f_s_strTipEntryCertsX509AlgoName = "display entry's certificate(s) of type X509 algorithm name";
-    final static private String _f_s_strTipEntryCertsX509SubjectDN = "display entry's certificate(s) of type X509 subject distinguished name";
+    private static final String _f_s_strTipEntrySize = "display size of each entry";
+    private static final String _f_s_strTipEntryDate = "display date of each entry";
+    private static final String _f_s_strTipEntryCertsType = "display entry's certificate(s) type(s)";
+    private static final String _f_s_strTipEntryCertsX509AlgoName = "display entry's certificate(s) of type X509 algorithm name";
+    private static final String _f_s_strTipEntryCertsX509SubjectDN = "display entry's certificate(s) of type X509 subject distinguished name";
     
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    //static private String _s_strDlgErrorActionBody = null;
+    //private static String _s_strDlgErrorActionBody = null;
     
     // ------------------
     // STATIC INITIALIZER

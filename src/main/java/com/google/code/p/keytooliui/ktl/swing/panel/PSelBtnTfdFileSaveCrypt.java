@@ -34,14 +34,14 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileSaveCrypt extends PSelBtnTfdFileSaveAbs
+public final class PSelBtnTfdFileSaveCrypt extends PSelBtnTfdFileSaveAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_crypt_save";
-    final static public String s_strDirNameDefault = "mycrypts";
-    final static public String f_s_strLabel = "Encrypted data file:"; 
+    public static final String f_s_strDocPropVal = "select_file_crypt_save";
+    public static final String s_strDirNameDefault = "mycrypts";
+    public static final String f_s_strLabel = "Encrypted data file:"; 
     
     // ------
     // PUBLIC

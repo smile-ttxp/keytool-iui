@@ -38,7 +38,7 @@ import java.io.*;
 abstract public class DefaultUserAbstract
 {
     // --------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
     // ---------------
     // ABSTRACT PUBLIC

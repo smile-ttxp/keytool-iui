@@ -41,9 +41,9 @@ abstract public class MChgAlignTabsAbstract extends MChgAlignAbstract
 { 
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

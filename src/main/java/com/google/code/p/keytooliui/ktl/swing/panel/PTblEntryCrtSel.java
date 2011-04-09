@@ -17,12 +17,12 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class PTblEntryCrtSel extends PTblEntryCrtAbs
+public final class PTblEntryCrtSel extends PTblEntryCrtAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intDeltaW = 20;
+    private static final int _f_s_intDeltaW = 20;
     
     // ------
     // PUBLIC

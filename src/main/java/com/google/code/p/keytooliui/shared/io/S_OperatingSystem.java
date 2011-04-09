@@ -28,35 +28,35 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
  **/
 
-final public class S_OperatingSystem
+public final class S_OperatingSystem
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_OperatingSystem.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.S_OperatingSystem.";
     
     // important: use lowercase
-    final static private String _f_s_strOsWindows = "windows";
-    final static private String _f_s_strOsLinux = "linux";
-    final static private String _f_s_strOsMac = "mac";
+    private static final String _f_s_strOsWindows = "windows";
+    private static final String _f_s_strOsLinux = "linux";
+    private static final String _f_s_strOsMac = "mac";
     
     // UNIX-SUN
-    final static private String _f_s_strOsUnixSunOS = "sunos"; // SunOS
+    private static final String _f_s_strOsUnixSunOS = "sunos"; // SunOS
     
     // UNIX-IBM
-    final static private String _f_s_strOsUnixAix = "aix"; // AIX
+    private static final String _f_s_strOsUnixAix = "aix"; // AIX
     
     // UNIX-DEC ?ALPHA?
     
     // UNIX-HP
-    final static private String _f_s_strOsUnixHp_ux = "hp-ux"; // HP-UX
+    private static final String _f_s_strOsUnixHp_ux = "hp-ux"; // HP-UX
     
     // UNIX-SGI
-    final static private String _f_s_strOsUnixIrix = "irix"; // IRIX
+    private static final String _f_s_strOsUnixIrix = "irix"; // IRIX
     
     
     // UNIX-OTHERS
-    final static private String[] _f_s_strsOsUnixOther = 
+    private static final String[] _f_s_strsOsUnixOther = 
     {
         "osf1", // OSF!
         "bsd"   // BSD
@@ -64,14 +64,14 @@ final public class S_OperatingSystem
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strOsName = null;
+    private static String _s_strOsName = null;
 
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public boolean s_isWinPro()
+    public static boolean s_isWinPro()
     {
         String strMethod = _f_s_strClass + "s_isWinPro()";
         
@@ -95,7 +95,7 @@ final public class S_OperatingSystem
     }
     
                 
-    static public boolean s_isWinPub()
+    public static boolean s_isWinPub()
     {
         String strMethod = _f_s_strClass + "s_isWinPub()";
         
@@ -114,7 +114,7 @@ final public class S_OperatingSystem
         return false;
     }
     
-    static public boolean s_isWindows()
+    public static boolean s_isWindows()
     {
         String strMethod = _f_s_strClass + "s_isWindows()";
         
@@ -130,7 +130,7 @@ final public class S_OperatingSystem
         return false;
     }
     
-    static public boolean s_isULinux()
+    public static boolean s_isULinux()
     {
         String strMethod = _f_s_strClass + "s_isULinux()";
         
@@ -146,7 +146,7 @@ final public class S_OperatingSystem
         return false;
     }
     
-    static public boolean s_isMac()
+    public static boolean s_isMac()
     {
         String strMethod = _f_s_strClass + "s_isMac()";
         
@@ -162,7 +162,7 @@ final public class S_OperatingSystem
         return false;
     }
     
-    static public boolean s_isUIbm()
+    public static boolean s_isUIbm()
     {
         String strMethod = _f_s_strClass + "s_isUIbm()";
         
@@ -181,7 +181,7 @@ final public class S_OperatingSystem
         return false;
     }
     
-    static public boolean s_isUHp()
+    public static boolean s_isUHp()
     {
         String strMethod = _f_s_strClass + "s_isUHp()";
         
@@ -200,7 +200,7 @@ final public class S_OperatingSystem
         return false;
     }
     
-    static public boolean s_isUSgi()
+    public static boolean s_isUSgi()
     {
         String strMethod = _f_s_strClass + "s_isUSgi()";
         
@@ -219,7 +219,7 @@ final public class S_OperatingSystem
         return false;
     }
     
-    static public boolean s_isUOther()
+    public static boolean s_isUOther()
     {
         String strMethod = _f_s_strClass + "s_isUOther()";
         
@@ -242,7 +242,7 @@ final public class S_OperatingSystem
     }
     
     
-    static public boolean s_isUSun()
+    public static boolean s_isUSun()
     {
         String strMethod = _f_s_strClass + "s_isUSun()";
         
@@ -264,7 +264,7 @@ final public class S_OperatingSystem
     /*
         meaning all Unix, including linux
     */
-    static public boolean s_isUnix()
+    public static boolean s_isUnix()
     {
         String strMethod = _f_s_strClass + "s_isUnix()";
         

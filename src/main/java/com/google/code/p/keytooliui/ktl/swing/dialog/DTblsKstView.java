@@ -7,10 +7,10 @@ import javax.swing.event.ListSelectionEvent;
 public class DTblsKstView extends DTblsKstViewAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
    
-    final static private String _f_s_strTitleThisPrefix = "view";
-    final static private String _f_s_strTitleThisSuffix = "keystore";
+    private static final String _f_s_strTitleThisPrefix = "view";
+    private static final String _f_s_strTitleThisSuffix = "keystore";
     
     // ------
     // PUBLIC

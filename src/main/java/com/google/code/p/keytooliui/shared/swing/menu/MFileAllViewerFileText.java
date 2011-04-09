@@ -30,7 +30,7 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MFileAllViewerFileText extends MFileAllViewerFileAbs
+public final class MFileAllViewerFileText extends MFileAllViewerFileAbs
 {    
     // ------
     // PUBLIC

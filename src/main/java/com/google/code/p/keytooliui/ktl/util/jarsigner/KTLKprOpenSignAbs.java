@@ -38,24 +38,24 @@ import java.util.jar.*;
 abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignAbs.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignAbs.";
   
-    final static private String _f_s_strDigestAlgoSuffix = "-Digest";
+    private static final String _f_s_strDigestAlgoSuffix = "-Digest";
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     // helper function to update the digest
-    static private BASE64Encoder _s_b64 = new BASE64Encoder();
+    private static BASE64Encoder _s_b64 = new BASE64Encoder();
     
     /**
         if any code error, exit
         else if any error, return nil (calling method should display error dialog) 
     **/
-    static private String _s_updateDigest(MessageDigest mdtMessageDigest, InputStream ism) 
+    private static String _s_updateDigest(MessageDigest mdtMessageDigest, InputStream ism) 
     {
         String strMethod = KTLKprOpenSignAbs._f_s_strClass + "_s_updateDigest(...)";
         
@@ -87,7 +87,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
     
     // get or create the manifest
     // !!!!!! modified feb 4, 2003 !!!!!
-    static private Manifest _s_getManifestFile(JarFile jfeInput) 
+    private static Manifest _s_getManifestFile(JarFile jfeInput) 
     {
         String strMethod = _f_s_strClass + "_s_getManifestFile(...)";
         
@@ -136,7 +136,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
         return manManifest;
     }
     
-    static private Map<String,Attributes> _s_getMapCleanedUpManifest(Manifest manManifest, JarFile jfeInput) 
+    private static Map<String,Attributes> _s_getMapCleanedUpManifest(Manifest manManifest, JarFile jfeInput) 
     {
         String strMethod = _f_s_strClass + "_s_getMapCleanedUpManifest(...)";
         
@@ -162,7 +162,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
  
     // a helper function that can take entries from one jar file and
     // write it to another jar stream
-    static private boolean _s_writeJarEntry(
+    private static boolean _s_writeJarEntry(
         Frame frmOwner, 
   
         JarEntry jey, 
@@ -198,7 +198,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
     // make sure that all the elements are valid. if we do not
     // have a manifest, then we create a new signed JAR manifest
     // file by adding the appropriate headers
-    static private Map<String,Attributes> _s_createEntries(Manifest manManifest, JarFile jfeInput)
+    private static Map<String,Attributes> _s_createEntries(Manifest manManifest, JarFile jfeInput)
     {
         String strMethod = _f_s_strClass + "_s_createEntries(...)";
         
@@ -220,7 +220,7 @@ abstract public class KTLKprOpenSignAbs extends KTLKprOpenAbs
     // appropriate message digests. we store the new entries into
     // the entries Map and return it (we do not compute the digests
     // for those entries in the META-INF directory)
-    static private boolean _s_updateManifestDigest( 
+    private static boolean _s_updateManifestDigest( 
         Manifest manManifest, 
         JarFile jfeInput, 
         MessageDigest mdtMessageDigest, 

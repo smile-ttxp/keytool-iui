@@ -39,9 +39,9 @@ import java.util.*;
 abstract public class KTLKprOpenSigDetOCmsAbs extends KTLKprOpenSigDetAbs
 {
     // --------------------
-    // final static private
+    // private static final
     
-    static private void s_byteArrayToFile(byte[] byts, File fle)
+    private static void s_byteArrayToFile(byte[] byts, File fle)
         throws Exception
     {
         FileOutputStream fos = new FileOutputStream(fle);
@@ -50,7 +50,7 @@ abstract public class KTLKprOpenSigDetOCmsAbs extends KTLKprOpenSigDetAbs
         osm.close();
     }
     
-    static private byte[] _s_streamToByteArray(InputStream ism) 
+    private static byte[] _s_streamToByteArray(InputStream ism) 
         throws Exception 
     {
         if (ism == null) 

@@ -53,10 +53,10 @@ import java.util.*;
 abstract public class KTLShkAbs extends KTLAbs
 {
     // -------------
-    // static public
+    // public static
     
     /* IN PROGRESS, TO BE USED BY keystoreManager 
-     static public boolean s_createKey(
+     public static boolean s_createKey(
         Frame frmOwner,
     
         String strPathAbsOpenKst, // existing keystore
@@ -110,7 +110,7 @@ abstract public class KTLShkAbs extends KTLAbs
     
     
    
-    static protected SecretKey _s_readKey_(File fleOpen, String strSignatureAlgoCandidate)
+    protected static SecretKey _s_readKey_(File fleOpen, String strSignatureAlgoCandidate)
         throws IOException, NoSuchAlgorithmException,
                InvalidKeyException, InvalidKeySpecException
     {
@@ -166,7 +166,7 @@ abstract public class KTLShkAbs extends KTLAbs
     
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
 
     
     /*
@@ -179,7 +179,7 @@ abstract public class KTLShkAbs extends KTLAbs
             PBEWithSHA1AndRC2_40
             PBKDF2WithHmacSHA1 
     */
-    static protected void _writeKey_(SecretKey sky, File fleSave)
+    protected static void _writeKey_(SecretKey sky, File fleSave)
         throws IOException, NoSuchAlgorithmException, InvalidKeySpecException, Exception
     {
         
@@ -249,7 +249,7 @@ abstract public class KTLShkAbs extends KTLAbs
      * uses Cipher directly to show how it can be done without 
      * CipherInputStream and CipherOutputStream.
      **/
-    static protected void _s_decrypt_(
+    protected static void _s_decrypt_(
             SecretKey key, 
             InputStream in, 
             OutputStream out,
@@ -286,7 +286,7 @@ abstract public class KTLShkAbs extends KTLAbs
      * CipherOutputStream to perform the encryption and write bytes at the
      * same time.
      **/
-    static protected void _s_encrypt_(
+    protected static void _s_encrypt_(
             SecretKey sky, 
             InputStream ism, 
             OutputStream osm,

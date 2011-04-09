@@ -38,14 +38,14 @@
  abstract public class RBMIAlignRightAbs extends RBMIAlignAbstract
  { 
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "alignright16.gif"; 
+    private static final String _f_s_strIcon = "alignright16.gif"; 
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

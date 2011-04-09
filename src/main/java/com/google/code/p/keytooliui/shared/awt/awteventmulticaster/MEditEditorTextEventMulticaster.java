@@ -36,22 +36,22 @@ import java.util.EventListener;
 public class MEditEditorTextEventMulticaster extends java.awt.AWTEventMulticaster implements MEditEditorTextListener
 {
     // --------------------------
-    // STATIC PUBLIC [XX]Listener
+    // PUBLIC STATIC [XX]Listener
     
-    static public MEditEditorTextListener add(MEditEditorTextListener pwlA, MEditEditorTextListener pwlB)
+    public static MEditEditorTextListener add(MEditEditorTextListener pwlA, MEditEditorTextListener pwlB)
 	{
         return (MEditEditorTextListener) addInternal(pwlA, pwlB);
 	}
   
-	static public MEditEditorTextListener remove(MEditEditorTextListener pwlA, MEditEditorTextListener pwlB)
+	public static MEditEditorTextListener remove(MEditEditorTextListener pwlA, MEditEditorTextListener pwlB)
 	{
         return (MEditEditorTextListener) removeInternal(pwlA, pwlB);
 	}
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+    protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

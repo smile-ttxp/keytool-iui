@@ -49,10 +49,10 @@ import javax.swing.*;
 abstract public class PCPMainAbs extends JPanel
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intWidth = 1000; // 800; // 680; // 600;
-    final static private int _f_s_intHeight = 800; //600; // 480; //480;
+    private static final int _f_s_intWidth = 1000; // 800; // 680; // 600;
+    private static final int _f_s_intHeight = 800; //600; // 480; //480;
     
     
     // ---------------

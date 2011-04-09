@@ -1,12 +1,12 @@
 package com.google.code.p.keytooliui.ktl.swing.button;
 
 
-final public class BESRenameAlias24 extends BESRenameAliasAbs
+public final class BESRenameAlias24 extends BESRenameAliasAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "about24.gif";
+    private static final String _f_s_strImage = "about24.gif";
     
     // ------
     // PUBLIC

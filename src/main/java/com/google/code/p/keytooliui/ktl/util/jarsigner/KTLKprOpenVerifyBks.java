@@ -32,7 +32,7 @@ import java.awt.*;
 import java.io.*;
 
 
-final public class KTLKprOpenVerifyBks extends KTLKprOpenVerifyAbs
+public final class KTLKprOpenVerifyBks extends KTLKprOpenVerifyAbs
 {    
     // ------
     // PUBLIC

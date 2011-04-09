@@ -2,7 +2,7 @@ package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 import java.awt.event.ActionListener;
 
-final public class MISelTabCreateKprV3CEc extends MISelTabCreateKprAbs
+public final class MISelTabCreateKprV3CEc extends MISelTabCreateKprAbs
 {
     public MISelTabCreateKprV3CEc(ActionListener actListenerParent)
     {

@@ -27,17 +27,17 @@ import com.google.code.p.keytooliui.shared.lang.*;
 
 import java.awt.event.*;
 
-final public class MIPrint extends MIAbstract 
+public final class MIPrint extends MIAbstract 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strIcon = "print16.gif";
+    private static final String _f_s_strIcon = "print16.gif";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strText = null;
+    private static String _s_strText = null;
     
     // ------------------
     // STATIC INITIALIZER

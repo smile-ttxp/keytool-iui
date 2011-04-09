@@ -16,12 +16,12 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class DTblEntryKprOpenPkcs12Rsa extends DTblEntryKprOpenPkcs12Abs 
+public final class DTblEntryKprOpenPkcs12Rsa extends DTblEntryKprOpenPkcs12Abs 
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTitleThis = 
+    private static final String _f_s_strTitleThis = 
         "select RSA keypair entry in ";
     
     // ------

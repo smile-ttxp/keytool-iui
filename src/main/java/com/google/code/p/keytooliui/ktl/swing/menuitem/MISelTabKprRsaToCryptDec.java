@@ -2,7 +2,7 @@ package com.google.code.p.keytooliui.ktl.swing.menuitem;
 
 import java.awt.event.ActionListener;
 
-final public class MISelTabKprRsaToCryptDec extends MISelTabAbs
+public final class MISelTabKprRsaToCryptDec extends MISelTabAbs
 {
     public MISelTabKprRsaToCryptDec(ActionListener actListenerParent)
     {

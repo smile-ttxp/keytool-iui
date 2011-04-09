@@ -54,9 +54,9 @@ import java.awt.*;
 abstract public class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE    
+    // PRIVATE STATIC FINAL    
     
-    final static private String _f_s_strLabelSuffix = "password:";
+    private static final String _f_s_strLabelSuffix = "password:";
 
     // ------
     // public

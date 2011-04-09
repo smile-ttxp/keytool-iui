@@ -40,9 +40,9 @@ import java.awt.*;
 abstract public class PBarPathAbstract extends JPanel 
 {    
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intW = 400;
+    private static final int _f_s_intW = 400;
        
     
     // ------

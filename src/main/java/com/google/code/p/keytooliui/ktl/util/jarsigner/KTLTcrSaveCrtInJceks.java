@@ -25,7 +25,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLTcrSaveCrtInJceks extends KTLTcrSaveCrtInDMAbs
+public final class KTLTcrSaveCrtInJceks extends KTLTcrSaveCrtInDMAbs
 {
     // ------
     // PUBLIC

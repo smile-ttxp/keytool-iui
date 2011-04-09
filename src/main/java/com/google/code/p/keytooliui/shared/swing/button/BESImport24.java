@@ -24,12 +24,12 @@ package com.google.code.p.keytooliui.shared.swing.button;
 
 
 
-final public class BESImport24 extends BESImportAbs
+public final class BESImport24 extends BESImportAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "import24.gif";
+    private static final String _f_s_strImage = "import24.gif";
     
     // ------
     // PUBLIC

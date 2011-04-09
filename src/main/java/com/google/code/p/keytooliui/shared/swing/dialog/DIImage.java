@@ -43,7 +43,7 @@ import javax.swing.border.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class DIImage extends DEscapeAbstract implements
+public final class DIImage extends DEscapeAbstract implements
     ActionListener
 {
     // ------

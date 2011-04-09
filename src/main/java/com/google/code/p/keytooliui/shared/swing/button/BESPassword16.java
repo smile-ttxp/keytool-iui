@@ -3,12 +3,12 @@ package com.google.code.p.keytooliui.shared.swing.button;
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-final public class BESPassword16 extends BESPasswordAbs
+public final class BESPassword16 extends BESPasswordAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "mask16.gif";
+    private static final String _f_s_strImage = "mask16.gif";
     
     // ------
     // PUBLIC

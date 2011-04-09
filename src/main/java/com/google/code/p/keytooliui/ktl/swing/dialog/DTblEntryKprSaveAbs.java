@@ -22,11 +22,11 @@ import java.util.*;
 abstract public class DTblEntryKprSaveAbs extends DTblEntryKprAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabelAliasEnter = "Enter new alias:";
-    final static private String _f_s_strLabelPasswdEnter = "Enter new password:";
-    final static private String _f_s_strLabelPasswdConfirm = "Confirm new password:";
+    private static final String _f_s_strLabelAliasEnter = "Enter new alias:";
+    private static final String _f_s_strLabelPasswdEnter = "Enter new password:";
+    private static final String _f_s_strLabelPasswdConfirm = "Confirm new password:";
     
     // ------
     // PUBLIC

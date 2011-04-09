@@ -33,16 +33,16 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
-final public class MFileAllEditor extends MFileAllAbstract implements
+public final class MFileAllEditor extends MFileAllAbstract implements
     ActionListener,
     MFileAllEditorListener
 {   
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTextFileRecord = null;
-    static private String _s_strTextFileDelete = null;
-    static private String _s_strTextExitSuffix = null;
+    private static String _s_strTextFileRecord = null;
+    private static String _s_strTextFileDelete = null;
+    private static String _s_strTextExitSuffix = null;
     
     // ------------------
     // STATIC INITIALIZER

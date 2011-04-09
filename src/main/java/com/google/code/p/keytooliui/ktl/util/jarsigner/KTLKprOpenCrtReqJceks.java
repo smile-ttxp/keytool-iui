@@ -52,7 +52,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenCrtReqJceks extends KTLKprOpenCrtReqKPAbs
+public final class KTLKprOpenCrtReqJceks extends KTLKprOpenCrtReqKPAbs
 {
     // ------
     // public

@@ -30,22 +30,22 @@ import java.util.EventListener;
 public class PRangeToValueEventMulticaster extends java.awt.AWTEventMulticaster implements PRangeToValueListener
 {
     // -----------------------
-    // STATIC PUBLIC ~Listener
+    // PUBLIC STATIC ~Listener
     
-    static public PRangeToValueListener add(PRangeToValueListener amlA, PRangeToValueListener amlB)
+    public static PRangeToValueListener add(PRangeToValueListener amlA, PRangeToValueListener amlB)
 	{
         return (PRangeToValueListener) addInternal(amlA, amlB);
 	}
   
-	static public PRangeToValueListener remove(PRangeToValueListener aml, PRangeToValueListener amlOld)
+	public static PRangeToValueListener remove(PRangeToValueListener aml, PRangeToValueListener amlOld)
 	{
         return (PRangeToValueListener) removeInternal(aml, amlOld);
 	}
 	
 	// ----------------
-	// STATIC PROTECTED
+	// PROTECTED STATIC
 	
-	static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+	protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

@@ -43,17 +43,17 @@ import com.google.code.p.keytooliui.shared.swing.textfield.*;
 
 import java.awt.*;
 
-final public class PSelBtnTfdStrXlsKeywords extends PSelBtnTfdStrXlsAbs
+public final class PSelBtnTfdStrXlsKeywords extends PSelBtnTfdStrXlsAbs
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_keywords_";
+    public static final String f_s_strDocPropVal = "select_keywords_";
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strLabel = "Contents keywords:";
+    private static final String _f_s_strLabel = "Contents keywords:";
     
     // ------
     // PUBLIC

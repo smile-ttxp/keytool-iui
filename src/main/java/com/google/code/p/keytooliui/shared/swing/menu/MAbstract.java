@@ -43,7 +43,7 @@ abstract public class MAbstract extends JMenu
     // PROTECTED
     
     // tempo
-    static private boolean _s_blnDumpDevInfo = false;
+    private static boolean _s_blnDumpDevInfo = false;
     
     protected MAbstract()
     {

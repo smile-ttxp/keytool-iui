@@ -10,13 +10,13 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 public class DTblsKstSelPKOpen extends DTblsKstSelPKAbs
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
    
-    //final static private String _f_s_strTitleThisSuffix = "keystore";
-    final static private String _STR_BODYBUTTONUSAGE = "Usage:\n  Mouse-click  valid candidate row to select respective entry's alias,\n  next enter respective password,\n  then click \"OK\" button.";
-    final static private String _STR_TEXTLABELALIAS = "Selected entry's alias:";
+    //private static final String _f_s_strTitleThisSuffix = "keystore";
+    private static final String _STR_BODYBUTTONUSAGE = "Usage:\n  Mouse-click  valid candidate row to select respective entry's alias,\n  next enter respective password,\n  then click \"OK\" button.";
+    private static final String _STR_TEXTLABELALIAS = "Selected entry's alias:";
     
-    final static private String _f_s_strLabelPasswdRespective = "Enter respective password:";
+    private static final String _f_s_strLabelPasswdRespective = "Enter respective password:";
     
     // ------
     // public

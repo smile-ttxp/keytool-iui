@@ -35,7 +35,7 @@ import javax.swing.event.*;
 
 import java.awt.event.*;
 
-final public class PRangeToValue extends PRangeAbstract implements
+public final class PRangeToValue extends PRangeAbstract implements
     ChangeListener,
     PRangeToValueListener
 {  

@@ -27,7 +27,7 @@
 
  **/ 
  
- final public class RBMIAlignTopTabsMain extends RBMIAlignTopAbs
+ public final class RBMIAlignTopTabsMain extends RBMIAlignTopAbs
  {     
     // ------
     // PUBLIC

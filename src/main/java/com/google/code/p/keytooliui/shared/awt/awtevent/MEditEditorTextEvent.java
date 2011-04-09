@@ -27,17 +27,17 @@ import com.google.code.p.keytooliui.shared.swing.menu.*;
 public class MEditEditorTextEvent extends java.awt.AWTEvent
 {
     // ------------------------
-    // FINAL STATIC PRIVATE INT
+    // PRIVATE STATIC FINAL INT
     
-    final static private int _f_s_intIdFirst = MFileAllEditorEvent.MFILEALLEDITOREVENT_LAST + 1;
+    private static final int _f_s_intIdFirst = MFileAllEditorEvent.MFILEALLEDITOREVENT_LAST + 1;
     
     // -----------------------
-    // FINAL STATIC PUBLIC INT
+    // PUBLIC STATIC FINAL INT
     
     
-    final static public int MEDITEDITORTEXTEVENT_LAST = _f_s_intIdFirst;
+    public static final int MEDITEDITORTEXTEVENT_LAST = _f_s_intIdFirst;
 
-    final static public int MEDITEDITORTEXTEVENT_INSERTTIME = _f_s_intIdFirst;
+    public static final int MEDITEDITORTEXTEVENT_INSERTTIME = _f_s_intIdFirst;
     
     // ------
     // PUBLIC

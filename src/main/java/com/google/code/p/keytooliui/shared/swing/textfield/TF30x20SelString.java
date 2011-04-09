@@ -30,12 +30,12 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-final public class TF30x20SelString extends TF30x20Abs
+public final class TF30x20SelString extends TF30x20Abs
 {   
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTip = "current string value (not editable textfield)";
+    private static final String _f_s_strTip = "current string value (not editable textfield)";
 
     // ------
     // PUBLIC

@@ -34,22 +34,22 @@ import java.util.jar.*;
     map and extract resources included either in a zip or jar.
 **/
 
-final public class FileJar
+public final class FileJar
     implements Serializable
 {
     // --------------------------
-    // FINAL STATIC PUBLIC STRING
+    // PUBLIC STATIC FINAL STRING
 
-    final static public String f_s_strPathRelShortDocRcrScript = "script"; // script.txt
-    final static public String f_s_strPathRelShortDocJhrHelpset = "helpset"; // helpset.hs
+    public static final String f_s_strPathRelShortDocRcrScript = "script"; // script.txt
+    public static final String f_s_strPathRelShortDocJhrHelpset = "helpset"; // helpset.hs
 
-    final static public String f_s_strFileSeparatorMain = "!/";
-    final static public String f_s_strFileSeparatorSub = "/";
+    public static final String f_s_strFileSeparatorMain = "!/";
+    public static final String f_s_strFileSeparatorSub = "/";
 
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
 
-    final static private String  _f_s_strClass = "com.google.code.p.keytooliui.shared.io.FileJar.";
+    private static final String  _f_s_strClass = "com.google.code.p.keytooliui.shared.io.FileJar.";
 
 
     // ------
@@ -65,7 +65,7 @@ final public class FileJar
 
         IMPORTANT: requires a file name with an extension
     **/
-    static public java.net.URL s_getUrlCloneTemp(String strUrlSource)
+    public static java.net.URL s_getUrlCloneTemp(String strUrlSource)
     {
         String strMethod = _f_s_strClass + "s_getUrlCloneTemp(strUrlSource)";
 
@@ -101,7 +101,7 @@ final public class FileJar
 
         IMPORTANT: requires a file name with an extension
     **/
-    static public java.net.URL s_getUrlCloneTemp(byte[] bytsSource, String strFileSource)
+    public static java.net.URL s_getUrlCloneTemp(byte[] bytsSource, String strFileSource)
     {
         String strMethod = _f_s_strClass + "s_getUrlCloneTemp(bytsSource, strFileSource)";
         
@@ -166,7 +166,7 @@ final public class FileJar
     }
 
 
-    static public boolean s_printContent(String strPathAbsoluteJar)
+    public static boolean s_printContent(String strPathAbsoluteJar)
     {
         String strMethod = _f_s_strClass + "s_printContent(strPathAbsoluteJar)";
 
@@ -204,7 +204,7 @@ final public class FileJar
         used by as an example "importFromFileSystem"
         strParentPathRelative should always start with "public/"
     **/
-    static public boolean s_addResource(
+    public static boolean s_addResource(
         String strPathAbsoluteJar, String strPathRelativeParent, String strFileName, byte[] byts)
     {
         String strMethod = _f_s_strClass + "s_addResource(strPathAbsoluteJar, strPathRelativeParent, strFileName, byts)";
@@ -253,7 +253,7 @@ final public class FileJar
     /**
         moving file, NOT directory
     **/
-    static public boolean s_moveFile(
+    public static boolean s_moveFile(
         String strPathAbsoluteJar, String strParentPathRelativeFrom, String strParentPathRelativeTo, String strFileName)
     {
         String strMethod = _f_s_strClass + "s_moveFile(strPathAbsoluteJar, strParentPathRelativeFrom, strParentPathRelativeTo, strFileName)";
@@ -287,7 +287,7 @@ final public class FileJar
     /**
         renaming file, NOT directory
     **/
-    static public boolean s_renameFile(
+    public static boolean s_renameFile(
         String strPathAbsoluteJar, 
         String strParentPathRelative, 
         String strFileNameCur, 
@@ -323,7 +323,7 @@ final public class FileJar
     /**
         deleting empty directory, NOT file
     **/
-    static public boolean s_deleteDirEmpty(String strPathAbsoluteJar, String strPathRelative)
+    public static boolean s_deleteDirEmpty(String strPathAbsoluteJar, String strPathRelative)
     {
         String strMethod = _f_s_strClass + "s_deleteDirEmpty(strPathAbsoluteJar, strPathRelative)";
 
@@ -355,7 +355,7 @@ final public class FileJar
     /**
         deleting file, NOT directory
     **/
-    static public boolean s_deleteFile(String strPathAbsoluteJar, String strPathRelative)
+    public static boolean s_deleteFile(String strPathAbsoluteJar, String strPathRelative)
     {
         String strMethod = _f_s_strClass + "s_deleteFile(strPathAbsoluteJar, strPathRelative)";
 
@@ -384,7 +384,7 @@ final public class FileJar
         return true;
     }
 
-    static public boolean s_makeDirectory(String strPathAbsoluteJar, String strPathRelative)
+    public static boolean s_makeDirectory(String strPathAbsoluteJar, String strPathRelative)
     {
         String strMethod = _f_s_strClass + "s_makeDirectory(strPathAbsoluteJar, strPathRelative)";
 
@@ -416,7 +416,7 @@ final public class FileJar
     /**
         if any error, exiting
     **/
-    static public boolean s_contains(String strPathAbsoluteJar, String strPathRelative)
+    public static boolean s_contains(String strPathAbsoluteJar, String strPathRelative)
     {
         String strMethod = _f_s_strClass + "s_contains(strPathAbsoluteJar, strPathRelative)";
 
@@ -444,7 +444,7 @@ final public class FileJar
 
         eg, Windows OS, strUrlResource: "jar:file:D:/foo.jar!/subdir/file"
     **/
-    static public byte[] s_getFileResource(String strUrlResource)
+    public static byte[] s_getFileResource(String strUrlResource)
     {
         String strMethod = _f_s_strClass + "s_getFileResource(strUrlResource)";
 
@@ -519,7 +519,7 @@ final public class FileJar
     /**
         if any error, return nil
     **/
-    static public byte[] s_getFileResource(String strPathAbsoluteJar, String strPathRelative)
+    public static byte[] s_getFileResource(String strPathAbsoluteJar, String strPathRelative)
     {
         String strMethod = _f_s_strClass + "s_getFileResource(strPathAbsoluteJar, strPathRelative)";
 
@@ -554,7 +554,7 @@ final public class FileJar
     /**
         if any error, exiting
     **/
-    static public long s_getFileLength(String strPathAbsoluteJar, String strPathRelative)
+    public static long s_getFileLength(String strPathAbsoluteJar, String strPathRelative)
     {
         String strMethod = _f_s_strClass + "s_getFileLength(strPathAbsoluteJar, strPathRelative)";
 
@@ -584,7 +584,7 @@ final public class FileJar
         if any error, returning nil,
         else if no matching entry found, returning new String[0]
     */
-    static public String[] s_getStrsPathRelFileFileSuffixed(
+    public static String[] s_getStrsPathRelFileFileSuffixed(
         String strPathAbsJar,
         String strNameSuffix
         )
@@ -661,7 +661,7 @@ final public class FileJar
         returns list of DIRECTORY children
         if any error, return nil
     **/
-    static public String[] s_getStrsPathRelativeFileDir(String strPathAbsoluteJar)
+    public static String[] s_getStrsPathRelativeFileDir(String strPathAbsoluteJar)
     {
         String strMethod = _f_s_strClass + "s_getStrsPathRelativeFileDir(strPathAbsoluteJar)";
 
@@ -711,7 +711,7 @@ final public class FileJar
 
         MEMO: root folder: ""
     **/
-    static public String[] s_getStrsNameFileFile(String strPathAbsoluteJar, String strPathRelativeParent)
+    public static String[] s_getStrsNameFileFile(String strPathAbsoluteJar, String strPathRelativeParent)
     {
         String strMethod = _f_s_strClass + "s_getStrsNameFileFile(strPathAbsoluteJar, strPathRelativeParent)";
 
@@ -759,7 +759,7 @@ final public class FileJar
 
         MEMO: root folder: ""
     **/
-    static public String[] s_getStrsNameFileAll(String strPathAbsoluteJar, String strPathRelativeParent)
+    public static String[] s_getStrsNameFileAll(String strPathAbsoluteJar, String strPathRelativeParent)
     {
         String strMethod = _f_s_strClass + "s_getStrsNameFileAll(strPathAbsoluteJar, strPathRelativeParent)";
 
@@ -813,7 +813,7 @@ final public class FileJar
 
         MEMO: root folder: ""
     **/
-    static public String[] s_getStrsNameFileDir(String strPathAbsoluteJar, String strPathRelativeParent)
+    public static String[] s_getStrsNameFileDir(String strPathAbsoluteJar, String strPathRelativeParent)
     {
         String strMethod = _f_s_strClass + "s_getStrsNameFileDir(strPathAbsoluteJar, strPathRelativeParent)";
 
@@ -860,7 +860,7 @@ final public class FileJar
         if any error, return nil
     **/
 
-    static public String[] s_getStrsNameFileFile(String strPathAbsoluteJar, String strPathRelativeParent, String[] strsExtension)
+    public static String[] s_getStrsNameFileFile(String strPathAbsoluteJar, String strPathRelativeParent, String[] strsExtension)
     {
         String strMethod = _f_s_strClass + "s_getStrsNameFileFile(strPathAbsoluteJar, strPathRelativeParent, strsExtension)";
 

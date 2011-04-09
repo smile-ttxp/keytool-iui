@@ -45,20 +45,18 @@ import com.google.code.p.keytooliui.shared.lang.MySystem;
 import java.awt.Color;
 
 
-final public class UIKeytool extends AppMainUIAbs
+public final class UIKeytool extends AppMainUIAbs
 {
 
-    final static private String[] _F_STRS_PROPS_REQUIRED =
+    private static final String[] _F_STRS_PROPS_REQUIRED =
     {
         "_appli.title",
         "_appli.version",
         "_appli.name.short",
         "_appli.cache"
     };
-    // --------------------
-    // FINAL STATIC PRIVATE
 
-    final static private String _F_STR_CLASS = "com.google.code.p.keytooliui.ktl.UIKeytool.";
+    private static final String _F_STR_CLASS = "com.google.code.p.keytooliui.ktl.UIKeytool.";
 
     static
     {
@@ -74,11 +72,11 @@ final public class UIKeytool extends AppMainUIAbs
     
     
     // -------------
-    // static public
+    // public static
     
     
     // called by NetBeans module
-    static public UIKeytool s_getInstance()
+    public static UIKeytool s_getInstance()
     {
         return UIKeytool.s_getInstance(
                 new String[0], 
@@ -88,7 +86,7 @@ final public class UIKeytool extends AppMainUIAbs
     }
     
     // called by UIKeytool.main(strsArg)
-    static public UIKeytool s_getInstance(
+    public static UIKeytool s_getInstance(
             String[] strsArg,
             boolean blnShowDialogExitConfirm
             )
@@ -204,17 +202,17 @@ final public class UIKeytool extends AppMainUIAbs
     
     // ----
     
-    static private UIKeytool _s_ktlInstance = null;
+    private static UIKeytool _s_ktlInstance = null;
 
     
     
     // BEG HIDDEN
-    static public boolean S_BLN_FORCELOCALEEN = false; // should be private
+    public static boolean S_BLN_FORCELOCALEEN = false; // should be private
     // END HIDDEN
     
   
 
-    static public void main(String[] strsArg)
+    public static void main(String[] strsArg)
     {
         String strMethod = UIKeytool._F_STR_CLASS + "main(strsArg)";
         
@@ -230,11 +228,11 @@ final public class UIKeytool extends AppMainUIAbs
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
     
     
-    static private boolean _s_setLocale(String[] strsArg)
+    private static boolean _s_setLocale(String[] strsArg)
     {
         // tempo
         if (true)

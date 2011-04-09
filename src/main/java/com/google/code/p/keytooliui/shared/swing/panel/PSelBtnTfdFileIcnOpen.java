@@ -41,7 +41,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-final public class PSelBtnTfdFileIcnOpen extends PSelBtnTfdFileIcnAbs
+public final class PSelBtnTfdFileIcnOpen extends PSelBtnTfdFileIcnAbs
 {
     // ------
     // PUBLIC

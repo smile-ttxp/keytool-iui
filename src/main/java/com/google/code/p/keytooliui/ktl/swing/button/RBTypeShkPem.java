@@ -3,7 +3,7 @@ package com.google.code.p.keytooliui.ktl.swing.button;
 
 import java.awt.event.*;
  
-final public class RBTypeShkPem extends RBTypeShkAbs
+public final class RBTypeShkPem extends RBTypeShkAbs
 {    
     // ------
     // PUBLIC

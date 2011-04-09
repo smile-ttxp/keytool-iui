@@ -43,7 +43,7 @@ import java.security.KeyStoreException;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKstSavePkcs12 extends KTLKstSaveAbs
+public final class KTLKstSavePkcs12 extends KTLKstSaveAbs
 {
     // ------
     // PUBLIC

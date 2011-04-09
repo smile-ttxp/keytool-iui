@@ -14,9 +14,9 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 abstract public class BESSignAbs extends BEnabledState
 {    
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private String _s_strToolTipText = "Sign (not JAR) file with private key";
+    private static String _s_strToolTipText = "Sign (not JAR) file with private key";
     
     // ------------------
     // STATIC INITIALIZER

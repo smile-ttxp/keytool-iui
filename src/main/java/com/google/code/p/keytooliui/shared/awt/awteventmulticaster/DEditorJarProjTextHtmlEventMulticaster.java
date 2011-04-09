@@ -37,22 +37,22 @@ public class DEditorJarProjTextHtmlEventMulticaster extends java.awt.AWTEventMul
     DEditorJarProjTextHtmlListener
 {
     // --------------------------
-    // STATIC PUBLIC [XX]Listener
+    // PUBLIC STATIC [XX]Listener
     
-    static public DEditorJarProjTextHtmlListener add(DEditorJarProjTextHtmlListener pwlA, DEditorJarProjTextHtmlListener pwlB)
+    public static DEditorJarProjTextHtmlListener add(DEditorJarProjTextHtmlListener pwlA, DEditorJarProjTextHtmlListener pwlB)
 	{
         return (DEditorJarProjTextHtmlListener) addInternal(pwlA, pwlB);
 	}
   
-	static public DEditorJarProjTextHtmlListener remove(DEditorJarProjTextHtmlListener pwlA, DEditorJarProjTextHtmlListener pwlB)
+	public static DEditorJarProjTextHtmlListener remove(DEditorJarProjTextHtmlListener pwlA, DEditorJarProjTextHtmlListener pwlB)
 	{
         return (DEditorJarProjTextHtmlListener) removeInternal(pwlA, pwlB);
 	}
     
     // ----------------
-    // STATIC PROTECTED
+    // PROTECTED STATIC
     
-    static protected EventListener addInternal(EventListener elrA, EventListener elrB)
+    protected static EventListener addInternal(EventListener elrA, EventListener elrB)
 	{
 		if (elrA == null) return elrB;
 		if (elrB == null) return elrA;

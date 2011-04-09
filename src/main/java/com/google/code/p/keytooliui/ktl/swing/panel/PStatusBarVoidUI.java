@@ -32,7 +32,7 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 
 
-final public class PStatusBarVoidUI extends JPanel 
+public final class PStatusBarVoidUI extends JPanel 
 {     
     
     

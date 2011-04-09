@@ -28,48 +28,48 @@
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-final public class TMEntryKprSel extends TMEntryKprAbs
+public final class TMEntryKprSel extends TMEntryKprAbs
 {   
     // ----
     
-    final static private int _f_s_intNbRowMore = 1;
+    private static final int _f_s_intNbRowMore = 1;
     
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public int f_s_intColumnIdElligible = 0;
+    public static final int f_s_intColumnIdElligible = 0;
     
-    final static public int f_s_intColumnIdAlias =
+    public static final int f_s_intColumnIdAlias =
         TMEntryKprShowAll.f_s_intColumnIdAlias + 
         TMEntryKprSel._f_s_intNbRowMore; // see array of integers right below
         
-    final static public int f_s_intColumnIdIsKeyEntry = 
+    public static final int f_s_intColumnIdIsKeyEntry = 
         TMEntryKprShowAll.f_s_intColumnIdIsKeyEntry + 
         TMEntryKprSel._f_s_intNbRowMore;
         
-    final static public int f_s_intColumnIdIsCertEntry = 
+    public static final int f_s_intColumnIdIsCertEntry = 
         TMEntryKprShowAll.f_s_intColumnIdIsCertEntry + 
         TMEntryKprSel._f_s_intNbRowMore;
     
-    final static public int f_s_intColumnIdIsSelfSignedCert = 
+    public static final int f_s_intColumnIdIsSelfSignedCert = 
         TMEntryKprShowAll.f_s_intColumnIdIsSelfSignedCert + 
         TMEntryKprSel._f_s_intNbRowMore;
         
-    final static public int f_s_intColumnIdIsTrustedCert = 
+    public static final int f_s_intColumnIdIsTrustedCert = 
         TMEntryKprShowAll.f_s_intColumnIdIsTrustedCert + 
         TMEntryKprSel._f_s_intNbRowMore;
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     // preferred columns width
-    static public int[] s_intsColW = null;
+    public static int[] s_intsColW = null;
     
     // --------------------
-    // FINAL STATIC PRIVATE 
+    // PRIVATE STATIC FINAL 
     
-    static private String[] _s_strsColumnNames = null; 
+    private static String[] _s_strsColumnNames = null; 
     
     // ------------------
     // STATIC INITIALIZER

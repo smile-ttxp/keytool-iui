@@ -27,7 +27,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenSigDetOCmsBks extends KTLKprOpenSigDetOCmsKPAbs
+public final class KTLKprOpenSigDetOCmsBks extends KTLKprOpenSigDetOCmsKPAbs
 {
     // ------
     // PUBLIC

@@ -23,12 +23,12 @@
 package com.google.code.p.keytooliui.shared.swing.button;
 
 
-final public class BESPrint24 extends BESPrintAbstract
+public final class BESPrint24 extends BESPrintAbstract
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strImage = "print24.gif";
+    private static final String _f_s_strImage = "print24.gif";
     
     // ------
     // PUBLIC

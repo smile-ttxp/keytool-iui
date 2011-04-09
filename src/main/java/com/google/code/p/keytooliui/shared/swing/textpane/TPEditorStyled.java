@@ -35,7 +35,7 @@ import java.awt.event.*;
 import java.awt.*;
 import java.util.*;
 
-final public class TPEditorStyled extends TPEditorAbstract 
+public final class TPEditorStyled extends TPEditorAbstract 
 {    
     // ----------------
     // PUBLIC ACCESSORS

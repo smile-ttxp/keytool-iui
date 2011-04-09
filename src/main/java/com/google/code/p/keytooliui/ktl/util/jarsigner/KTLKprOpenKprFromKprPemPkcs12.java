@@ -21,7 +21,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-final public class KTLKprOpenKprFromKprPemPkcs12 extends KTLKprOpenKprFromKprPemAbs
+public final class KTLKprOpenKprFromKprPemPkcs12 extends KTLKprOpenKprFromKprPemAbs
 {
     // ------
     // PUBLIC

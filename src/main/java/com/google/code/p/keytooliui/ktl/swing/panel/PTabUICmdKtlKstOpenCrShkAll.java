@@ -16,17 +16,17 @@ import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkAbs 
+public final class PTabUICmdKtlKstOpenCrShkAll extends PTabUICmdKtlKstOpenCrShkAbs 
 {        
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Create secret key (shared key) entry";
+    public static final String STR_TITLETASK = "Create secret key (shared key) entry";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
 
     // ------------------
     // STATIC INITIALIZER

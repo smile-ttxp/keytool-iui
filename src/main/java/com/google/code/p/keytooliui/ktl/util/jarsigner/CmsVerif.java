@@ -41,9 +41,9 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 public class CmsVerif extends CmsAbs
 {
     // --------------------
-    // final static private
+    // private static final
     
-    final static private String _STR_KST_PROVIDER_BC = "BC";
+    private static final String _STR_KST_PROVIDER_BC = "BC";
     
     // ------
     // public

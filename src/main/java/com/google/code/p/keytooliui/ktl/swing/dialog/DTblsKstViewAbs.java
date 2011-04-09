@@ -41,7 +41,7 @@ import com.google.code.p.keytooliui.shared.util.jarsigner.UtilCrtX509;
 abstract public class DTblsKstViewAbs extends DTblsKstAbs 
 {
     // --------------------
-    // final static private
+    // private static final
     
 
     // ------

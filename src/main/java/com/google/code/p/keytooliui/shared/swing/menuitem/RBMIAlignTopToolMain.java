@@ -27,7 +27,7 @@
 
  **/ 
  
- final public class RBMIAlignTopToolMain extends RBMIAlignTopAbs
+ public final class RBMIAlignTopToolMain extends RBMIAlignTopAbs
  {     
     // ------
     // PUBLIC

@@ -29,7 +29,7 @@ import com.google.code.p.keytooliui.shared.swing.panel.*;
 import java.awt.*;
 
 
-final public class DRangeVsRange extends DRangeAbstract
+public final class DRangeVsRange extends DRangeAbstract
 {
     // ------
     // PUBLIC

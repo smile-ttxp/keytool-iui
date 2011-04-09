@@ -20,7 +20,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenCrtInPkcs12 extends KTLKprOpenCrtInAbs
+public final class KTLKprOpenCrtInPkcs12 extends KTLKprOpenCrtInAbs
 {
     // ------
     // PUBLIC

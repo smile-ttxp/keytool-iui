@@ -47,14 +47,14 @@ import java.io.*;
 abstract public class ChgLocAbstract extends UserChoice
 {
     // -----------------------
-    // FINAL STATIC PUBLIC INT   
+    // PUBLIC STATIC FINAL INT   
     
-    final static public int F_S_INT_TOP = SwingConstants.TOP; // !!!!!!!!!!!!!!!!!!!!!!!!!! REDUNDANT
-    final static public int F_S_INT_LEFT = SwingConstants.LEFT;
-    final static public int F_S_INT_BOTTOM = SwingConstants.BOTTOM;
-    final static public int F_S_INT_RIGHT = SwingConstants.RIGHT;
+    public static final int F_S_INT_TOP = SwingConstants.TOP; // !!!!!!!!!!!!!!!!!!!!!!!!!! REDUNDANT
+    public static final int F_S_INT_LEFT = SwingConstants.LEFT;
+    public static final int F_S_INT_BOTTOM = SwingConstants.BOTTOM;
+    public static final int F_S_INT_RIGHT = SwingConstants.RIGHT;
    
-    final static public int F_S_INT_DEFAULT = ChgLocAbstract.F_S_INT_TOP;
+    public static final int F_S_INT_DEFAULT = ChgLocAbstract.F_S_INT_TOP;
     
     
     // ---------------

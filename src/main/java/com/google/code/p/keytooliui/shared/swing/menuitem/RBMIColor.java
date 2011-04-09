@@ -33,7 +33,7 @@
  import java.awt.*;
  import java.awt.event.*;
  
- final public class RBMIColor extends RBMIAbstract
+ public final class RBMIColor extends RBMIAbstract
  {
     public boolean init() { return true; }
     public void destroy() {}

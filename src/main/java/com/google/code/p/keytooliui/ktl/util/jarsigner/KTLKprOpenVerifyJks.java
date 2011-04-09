@@ -36,7 +36,7 @@ import java.util.*;
 import java.util.zip.*;
 
 
-final public class KTLKprOpenVerifyJks extends KTLKprOpenVerifyAbs
+public final class KTLKprOpenVerifyJks extends KTLKprOpenVerifyAbs
 {    
     // ------
     // PUBLIC

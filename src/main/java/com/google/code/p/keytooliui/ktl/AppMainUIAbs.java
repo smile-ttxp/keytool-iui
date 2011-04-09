@@ -28,15 +28,15 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
     ChangeListener // tabbedPane ==> tab selected
 {
 
-    final static public String F_STR_BUNDLE_DIR =
+    public static final String F_STR_BUNDLE_DIR =
             new String("com.google.code.p.keytooliui." +
             System.getProperty("_appli.name.short") + // ie. "ktl"
             ".bundle");
     
     
     // ----------------------
-    // final static protected
-    final static protected boolean _F_BLN_SET_LAF_SWING_ = true;
+    // protected static final
+    protected static final boolean _F_BLN_SET_LAF_SWING_ = true;
     
     
     // ------

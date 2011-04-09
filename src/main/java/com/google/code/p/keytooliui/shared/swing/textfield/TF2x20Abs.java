@@ -38,10 +38,10 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class TF2x20Abs extends TFAbstract
 {  
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private int _f_s_intColumns = 3; //22; //3;
-    final static private int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 3; //22; //3;
+    private static final int _f_s_intH = 20;
     
     // ---------
     // PROTECTED

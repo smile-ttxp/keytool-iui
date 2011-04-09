@@ -32,22 +32,22 @@ import java.security.cert.X509Certificate;
 import java.io.*;
 import java.awt.*;
 
-final public class UtilCrtX509Pem
+public final class UtilCrtX509Pem
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilCrtX509Pem";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.util.jarsigner.UtilCrtX509Pem";
     
-    final static private String _f_s_strLineBeg = "-----BEGIN CERTIFICATE-----";
-    final static private String _f_s_strLineEnd = "-----END CERTIFICATE-----";
-    final static private int _f_s_intLineLengthMax = 76;
+    private static final String _f_s_strLineBeg = "-----BEGIN CERTIFICATE-----";
+    private static final String _f_s_strLineEnd = "-----END CERTIFICATE-----";
+    private static final int _f_s_intLineLengthMax = 76;
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
  
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent,
         File fle)
     {
@@ -88,7 +88,7 @@ final public class UtilCrtX509Pem
             MySystem.s_printOutExit(strMethod, "failed"); 
     }
     
-    static public void s_showFile(
+    public static void s_showFile(
         Frame frmParent)
     {
         String strMethod = UtilCrtX509Pem._f_s_strClass + "." + "s_showFile(...)";
@@ -116,7 +116,7 @@ final public class UtilCrtX509Pem
         . supported:     "BC"
         . NOT supported: "SunRsaSign"
     **/
-    static public String s_generateCrt(
+    public static String s_generateCrt(
         Frame frmOwner, 
         X509Certificate crt)
     {

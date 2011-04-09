@@ -47,32 +47,32 @@ import java.util.Arrays;
 abstract public class LastUserAbstract extends DefaultUserAbstract
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    //final static private String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.LastUserAbstract.";
+    //private static final String _f_s_strClass = "com.google.code.p.keytooliui.shared.io.LastUserAbstract.";
     
-    final static private String _f_s_strFileConfigLog = "config.prop";
-    final static private String _f_s_strFileSessionLog = "session.log";
+    private static final String _f_s_strFileConfigLog = "config.prop";
+    private static final String _f_s_strFileSessionLog = "session.log";
     
-    final static private String _f_s_strFileConfigBak = "config.bak.prop";
-    final static private String _f_s_strFileSessionBak = "session.bak.log";
+    private static final String _f_s_strFileConfigBak = "config.bak.prop";
+    private static final String _f_s_strFileSessionBak = "session.bak.log";
     
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private boolean _S_BLN_SETSESSIONLOG = true; // default
+    private static boolean _S_BLN_SETSESSIONLOG = true; // default
     
     
     // ----------------------
-    // STATIC PRIVATE BOOLEAN
+    // PRIVATE STATIC BOOLEAN
     
     /*
         done once a time during the session, the first appli (eg: xlb from xlb v/s rcr) has priority
         in order to get all messages in synchro
     */
-    static private boolean _s_blnConfigLogDone = false;
-    static private boolean _s_blnSessionLogDone = false;
+    private static boolean _s_blnConfigLogDone = false;
+    private static boolean _s_blnSessionLogDone = false;
     
     // ------
     // PUBLIC

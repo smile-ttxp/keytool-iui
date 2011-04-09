@@ -71,9 +71,9 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
     ItemListener
 {   
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strSuffixFileDesc = " files";
+    private static final String _f_s_strSuffixFileDesc = " files";
     
     
     // ------

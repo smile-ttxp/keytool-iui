@@ -40,10 +40,10 @@ import javax.swing.*;
 abstract public class TPMainAbs extends JTabbedPane 
 {
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strTextWelcome = null;
-    static private String _s_strTipWelcome = null;
+    private static String _s_strTextWelcome = null;
+    private static String _s_strTipWelcome = null;
     
     // ------------------
     // STATIC INITIALIZER

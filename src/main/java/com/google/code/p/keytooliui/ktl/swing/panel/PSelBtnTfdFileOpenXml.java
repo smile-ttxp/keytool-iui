@@ -34,16 +34,16 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileOpenXml extends PSelBtnTfdFileOpenAbs
+public final class PSelBtnTfdFileOpenXml extends PSelBtnTfdFileOpenAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_xml_open";
-    final static public String s_strDirNameDefault = "myxmls";
+    public static final String f_s_strDocPropVal = "select_file_xml_open";
+    public static final String s_strDirNameDefault = "myxmls";
     
     
-    final static private String STR_LABELSUFFIX = "XML file:"; //(either Signed or Unsigned) 
+    private static final String STR_LABELSUFFIX = "XML file:"; //(either Signed or Unsigned) 
     
     // ------
     // PUBLIC

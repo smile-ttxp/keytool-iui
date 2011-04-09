@@ -26,7 +26,7 @@
  /** 
  **/
  
- final public class LabelCheckTypeJarJhr extends LabelCheckTypeJarAbs
+ public final class LabelCheckTypeJarJhr extends LabelCheckTypeJarAbs
  {
     // ---------
     // PUBLIC

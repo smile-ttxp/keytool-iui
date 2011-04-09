@@ -28,7 +28,7 @@ import java.io.*;
 import java.awt.*;
 
 
-final public class DViewSourceFileTextSys extends DViewSourceFileTextAbs 
+public final class DViewSourceFileTextSys extends DViewSourceFileTextAbs 
 {
     // ------
     // PUBLIC

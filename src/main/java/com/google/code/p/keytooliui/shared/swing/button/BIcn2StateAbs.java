@@ -40,12 +40,12 @@ import java.awt.event.*;
 abstract public class BIcn2StateAbs extends BAbs
 {
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private ImageIcon _s_iin0 = 
+    private static ImageIcon _s_iin0 = 
         com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("circlered11.gif");
         
-    static private ImageIcon _s_iin1 = 
+    private static ImageIcon _s_iin1 = 
         com.google.code.p.keytooliui.shared.swing.imageicon.S_IINShared.s_get("circlegreen11.gif");
        
     // ------

@@ -9,15 +9,15 @@ import java.io.*;
 public class S_FileChooserUI extends S_FileChooserAbs
 {
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.ktl.io.S_FileChooserUI.";
     
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
-    static public File s_getSaveFile(
+    public static File s_getSaveFile(
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String[] strsExtension,
@@ -46,7 +46,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
         return fle;    
     }
     
-    static public File s_getOpenFile(
+    public static File s_getOpenFile(
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String[] strsExtension, // eg: { "jks", "ks" }
@@ -71,7 +71,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
     }
     
     
-    /**static public File s_getOpenFile(
+    /**public static File s_getOpenFile(
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String strExtension, // eg: jks
@@ -108,7 +108,7 @@ public class S_FileChooserUI extends S_FileChooserAbs
         . strApplicationDirName: kst
     
     **/
-    /**static public File s_getSaveFile(
+    /**public static File s_getSaveFile(
         java.awt.Component cmpFrameParent,
         String strApproveButtonText,
         String strExtension,
@@ -139,9 +139,9 @@ public class S_FileChooserUI extends S_FileChooserAbs
     
     
     // ---------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
     
-    static private boolean _s_isAllowed(
+    private static boolean _s_isAllowed(
         java.awt.Component cmpFrameParent, 
         File fle)
     {

@@ -25,10 +25,10 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 abstract public class DTblsKstViewKeyAbs extends DTblsKstView 
 {
     // ---------------------------
-    // final static private String
-    final static private String _f_s_strLabelAliasEnter = "Enter new alias:";
-    final static private String _f_s_strLabelPasswdEnter = "Enter new password:";
-    final static private String _f_s_strLabelPasswdConfirm = "Confirm new password:";
+    // private static final String
+    private static final String _f_s_strLabelAliasEnter = "Enter new alias:";
+    private static final String _f_s_strLabelPasswdEnter = "Enter new password:";
+    private static final String _f_s_strLabelPasswdConfirm = "Confirm new password:";
     
     // ------
     // public

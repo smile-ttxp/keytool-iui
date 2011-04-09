@@ -76,23 +76,23 @@ import java.io.*;
 import java.util.*;
 import java.security.cert.*;
 
-final public class JarSignedSys
+public final class JarSignedSys
 {
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
 
-    static private String _s_strDumpCertOk = null;
-    static private String _s_strDumpCertWrong = null;
-    static private String _s_strDumpCheckOk = null;
-    static private String _s_strDumpCheckWrong = null;
+    private static String _s_strDumpCertOk = null;
+    private static String _s_strDumpCertWrong = null;
+    private static String _s_strDumpCheckOk = null;
+    private static String _s_strDumpCheckWrong = null;
 
-    static private String _s_strDumpMoreNotApplicable = null;
-    static private String _s_strDumpMoreUnknown = null;
+    private static String _s_strDumpMoreNotApplicable = null;
+    private static String _s_strDumpMoreUnknown = null;
 
-    static private String _s_strDialogInitFailedBodyFNF = null;
-    static private String _s_strDialogInitFailedBodyIO = null;
-    static private String _s_strDialogInitFailedBodyZip = null;
-    static private String _s_strDialogInitFailedBodySecurity = null;
+    private static String _s_strDialogInitFailedBodyFNF = null;
+    private static String _s_strDialogInitFailedBodyIO = null;
+    private static String _s_strDialogInitFailedBodyZip = null;
+    private static String _s_strDialogInitFailedBodySecurity = null;
 
     // ------
     // STATIC

@@ -14,21 +14,21 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-final public class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigExpAbs
+public final class PTabUICmdKtlKstOpenSigExpKpr extends PTabUICmdKtlKstOpenSigExpAbs
 {
     // ---------------------------
-    // final static private String
+    // private static final String
     
-    final static public String STR_TITLETASK = "Sign data file with private key entry & save as other detached signature file";
+    public static final String STR_TITLETASK = "Sign data file with private key entry & save as other detached signature file";
     
     // ---------------------
-    // STATIC PRIVATE STRING
+    // PRIVATE STATIC STRING
     
-    static private String _s_strHelpID = null;
+    private static String _s_strHelpID = null;
     
-    //static private String _s_strDlgInfoActionBodyBeg = null;
-    //static private String _s_strDlgInfoActionBodySig = null;
-    //static private String _s_strDlgInfoActionBodyQuery = null;
+    //private static String _s_strDlgInfoActionBodyBeg = null;
+    //private static String _s_strDlgInfoActionBodySig = null;
+    //private static String _s_strDlgInfoActionBodyQuery = null;
     
     // ------------------
     // STATIC INITIALIZER

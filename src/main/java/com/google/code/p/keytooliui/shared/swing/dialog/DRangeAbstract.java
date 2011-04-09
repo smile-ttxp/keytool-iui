@@ -61,26 +61,26 @@ abstract public class DRangeAbstract extends DEscapeAbstract implements
     DRangeAbstractListener
 {
      // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".DRangeAbstract" // class name
         ;
         
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
     
     // --------------
-    // STATIC PRIVATE
+    // PRIVATE STATIC
         
-    static private String _s_strTextButtonReset;
-    static private String _s_strTextButtonCancel;
-    static private String _s_strTextButtonOk;
+    private static String _s_strTextButtonReset;
+    private static String _s_strTextButtonCancel;
+    private static String _s_strTextButtonOk;
     
-    static private String _s_strTipButtonReset;
-    static private String _s_strTipButtonCancel;
-    static private String _s_strTipButtonOk;
+    private static String _s_strTipButtonReset;
+    private static String _s_strTipButtonCancel;
+    private static String _s_strTipButtonOk;
     
     // ------------------
     // STATIC INITIALIZER

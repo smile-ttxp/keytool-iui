@@ -34,17 +34,17 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-final public class PSelBtnTfdFileSaveKpr extends PSelBtnTfdFileSaveAbs
+public final class PSelBtnTfdFileSaveKpr extends PSelBtnTfdFileSaveAbs
 {   
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDocPropVal = "select_file_kpr_save";
-    final static public String s_strDirNameDefault = "mykprs";      // !!! already defined
-    final static public String f_s_strLabel = "Private key file:"; // !!! already defined
+    public static final String f_s_strDocPropVal = "select_file_kpr_save";
+    public static final String s_strDirNameDefault = "mykprs";      // !!! already defined
+    public static final String f_s_strLabel = "Private key file:"; // !!! already defined
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
     
     // ------

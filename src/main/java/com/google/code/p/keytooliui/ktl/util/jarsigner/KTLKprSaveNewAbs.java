@@ -54,16 +54,16 @@ import java.math.*;
 abstract public class KTLKprSaveNewAbs extends KTLKprSaveAbs
 {
     // -----------------------------
-    // final static protected String
+    // protected static final String
     
-    final static protected String _STR_PROVIDER_KPG_ = "BC";
+    protected static final String _STR_PROVIDER_KPG_ = "BC";
     
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTypeSecureRandom = UtilCrtX509.f_s_strDigestAlgoSHA1 + "PRNG";
-    final static private String _f_s_strProviderSecureRandom = KTLAbs.f_s_strProviderKstJks;
+    private static final String _f_s_strTypeSecureRandom = UtilCrtX509.f_s_strDigestAlgoSHA1 + "PRNG";
+    private static final String _f_s_strProviderSecureRandom = KTLAbs.f_s_strProviderKstJks;
     
     
 

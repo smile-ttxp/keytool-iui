@@ -54,9 +54,9 @@ abstract public class PSelBtnTfdFileAbs extends PSelBtnTfdAbs implements
     ItemListener
 {
     // ----------------------
-    // FINAL STATIC PROTECTED
+    // PROTECTED STATIC FINAL
     
-    final static protected String _f_s_strSuffixFileDesc_ = " files";
+    protected static final String _f_s_strSuffixFileDesc_ = " files";
     
     // ------
     // PUBLIC

@@ -31,7 +31,7 @@ import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenVerifyPkcs12 extends KTLKprOpenVerifyAbs
+public final class KTLKprOpenVerifyPkcs12 extends KTLKprOpenVerifyAbs
 {
     // ------
     // PUBLIC

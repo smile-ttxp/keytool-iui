@@ -32,35 +32,35 @@ import java.util.jar.*;
 import java.io.*;
 import java.awt.*;
 
-final public class S_Manifest
+public final class S_Manifest
 {
     // -------------------
-    // FINAL STATIC PUBLIC
+    // PUBLIC STATIC FINAL
     
-    final static public String f_s_strDirParentManifest = "META-INF";
-    final static public String f_s_strPathRelManifest = S_Manifest.f_s_strDirParentManifest + "/MANIFEST.MF";
+    public static final String f_s_strDirParentManifest = "META-INF";
+    public static final String f_s_strPathRelManifest = S_Manifest.f_s_strDirParentManifest + "/MANIFEST.MF";
     
-    final static public String f_s_strKeySpecVend = "Specification-Vendor";
-    final static public String f_s_strKeySpecVers = "Specification-Version";
-    final static public String f_s_strKeyImplVend = "Implementation-Vendor";
-    final static public String f_s_strKeyImplVers = "Implementation-Version";
-    final static public String f_s_strKeyImplVendId = "Implementation-Vendor-Id";
+    public static final String f_s_strKeySpecVend = "Specification-Vendor";
+    public static final String f_s_strKeySpecVers = "Specification-Version";
+    public static final String f_s_strKeyImplVend = "Implementation-Vendor";
+    public static final String f_s_strKeyImplVers = "Implementation-Version";
+    public static final String f_s_strKeyImplVendId = "Implementation-Vendor-Id";
     
     
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strClass = "com.google.code.p.keytooliui.share.util.jar.S_Manifest.";
+    private static final String _f_s_strClass = "com.google.code.p.keytooliui.share.util.jar.S_Manifest.";
   
-    final static private String _f_s_strManifVersion = "1.0";
+    private static final String _f_s_strManifVersion = "1.0";
 
-    final static private String[] _f_s_strsDefaultEntryManifVersion = 
+    private static final String[] _f_s_strsDefaultEntryManifVersion = 
     { 
         Attributes.Name.MANIFEST_VERSION.toString(), 
         S_Manifest._f_s_strManifVersion
     };
     
-    final static private String[] _f_s_strsDefaultEntryManifCreator = 
+    private static final String[] _f_s_strsDefaultEntryManifCreator = 
     { 
         // ----
         // arg #0
@@ -75,13 +75,13 @@ final public class S_Manifest
     };
     
     // -------------
-    // STATIC PUBLIC
+    // PUBLIC STATIC
     
     /* transform manifest in an array of byte
         if any code error, exit
         else if any error, show dialog, then return nil
     */
-    static public byte[] s_toByteArray(
+    public static byte[] s_toByteArray(
         Manifest man,
         Frame frmOwner
         ) 
@@ -117,7 +117,7 @@ final public class S_Manifest
         return baoBuffer.toByteArray();
     }
     
-    static public Manifest s_create(
+    public static Manifest s_create(
         String strSpecVend,
         String strSpecVers,
         String strImplVend,
@@ -160,7 +160,7 @@ final public class S_Manifest
         return man;
     }
     
-    static public Manifest s_create()
+    public static Manifest s_create()
     {
         // create the manifest object
         Manifest man = new Manifest();
@@ -170,7 +170,7 @@ final public class S_Manifest
         return man;
     }
     
-    static public void s_fill(Manifest man)
+    public static void s_fill(Manifest man)
     {
         String strMethod = _f_s_strClass + "s_fill(man)";
         

@@ -27,40 +27,40 @@ import com.google.code.p.keytooliui.shared.lang.*;
 import javax.swing.*;
 import javax.swing.text.*;
 
-final public class METextFontFamilyEditorText extends MAbstract
+public final class METextFontFamilyEditorText extends MAbstract
 { 
     
     // ---------------------------
-    // FINAL STATIC PRIVATE STRING
+    // PRIVATE STATIC FINAL STRING
     
-    final static private String _F_S_STR_DIALOG = new String("Dialog");
-    final static private String _F_S_STR_DIALOGINPUT = new String("DialogInput");
-    final static private String _F_S_STR_MONOSPACED = new String("Monospaced");
-    final static private String _F_S_STR_SERIF = new String("Serif");
-    final static private String _F_S_STR_SANSSERIF = new String("SansSerif"); 
+    private static final String _F_S_STR_DIALOG = new String("Dialog");
+    private static final String _F_S_STR_DIALOGINPUT = new String("DialogInput");
+    private static final String _F_S_STR_MONOSPACED = new String("Monospaced");
+    private static final String _F_S_STR_SERIF = new String("Serif");
+    private static final String _F_S_STR_SANSSERIF = new String("SansSerif"); 
     
     // ---------------------------
-    // FINAL STATIC PUBLIC STRING
+    // PUBLIC STATIC FINAL STRING
     
-     final static public String F_S_STR_DEFAULT = _F_S_STR_DIALOG;
+     public static final String F_S_STR_DEFAULT = _F_S_STR_DIALOG;
     
     /** ################
-        STATIC PROTECTED
+        PROTECTED STATIC
         ################
     **/
     
    
    
     
-    static private java.util.ResourceBundle _s_rbeResources;
+    private static java.util.ResourceBundle _s_rbeResources;
     
-    final static private String _f_s_strBundleFileShort =
+    private static final String _f_s_strBundleFileShort =
         com.google.code.p.keytooliui.shared.Shared.f_s_strBundleDir +
         ".METextFontFamilyEditorText" // class name
         ;
     
     
-    final static private String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
+    private static final String _f_s_strBundleFileLong = _f_s_strBundleFileShort + ".properties";
 
     static
     {

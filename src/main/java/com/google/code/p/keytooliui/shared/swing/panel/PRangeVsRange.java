@@ -37,7 +37,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 
 
-final public class PRangeVsRange extends PRangeAbstract implements
+public final class PRangeVsRange extends PRangeAbstract implements
     ChangeListener
 {
     // ------

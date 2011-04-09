@@ -41,7 +41,7 @@ import java.security.KeyStore;
 import java.awt.*;
 import java.io.*;
 
-final public class KTLKprOpenCrtInJks extends KTLKprOpenCrtInKPAbs
+public final class KTLKprOpenCrtInJks extends KTLKprOpenCrtInKPAbs
 {
     // ------
     // PUBLIC

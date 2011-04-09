@@ -34,9 +34,9 @@ import com.google.code.p.keytooliui.shared.lang.*;
 abstract public class BESStringAbs extends BEnabledState
 {
     // --------------------
-    // FINAL STATIC PRIVATE
+    // PRIVATE STATIC FINAL
     
-    final static private String _f_s_strTip = "click to select string";
+    private static final String _f_s_strTip = "click to select string";
     
     // ---------
     // PROTECTED
