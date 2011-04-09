@@ -1,26 +1,14 @@
 
 package com.google.code.p.keytooliui.ktl.swing.menu;
- 
-/**
 
-**/
+import java.awt.Component;
+import java.awt.event.ActionListener;
+import javax.swing.JMenu;
 
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-
-
 public final class MViewSelTabUIKtl extends MViewSelTabUIAbs
 {
-    // ------
-    // PUBLIC
-    
-    
-    
     public void destroy()
     { 
         for (int i=0; i<super.getComponentCount(); i++)
@@ -42,8 +30,6 @@ public final class MViewSelTabUIKtl extends MViewSelTabUIAbs
     
     public boolean init()
     {
-        //String strMethod = "init()";
-
         for (int i=0; i<super.getComponentCount(); i++)
         {
             Component cmpCur = super.getComponent(i);
@@ -60,186 +46,119 @@ public final class MViewSelTabUIKtl extends MViewSelTabUIAbs
             }
         }
 
-        
-        // --
         return true;
     }
-    
-   
-    
-    public MViewSelTabUIKtl(ActionListener actListenerParent)
+
+
+    public MViewSelTabUIKtl(ActionListener listener)
     {
-        MISelTabAbs itmCreateKst = new MISelTabCreateKst(actListenerParent);
-        MISelTabAbs itmCreateKprV1CDsa = new MISelTabCreateKprDsa(actListenerParent);
-        MISelTabAbs itmCreateKprV1CRsa = new MISelTabCreateKprRsa(actListenerParent);
-        MISelTabAbs itmCreateKprV1CEc = new MISelTabCreateKprEc(actListenerParent);
-        
-        MISelTabAbs itmCreateKprV3CDsa = new MISelTabCreateKprV3CDsa(actListenerParent);
-        MISelTabAbs itmCreateKprV3CRsa = new MISelTabCreateKprV3CRsa(actListenerParent);
-        MISelTabAbs itmCreateKprV3CEc = new MISelTabCreateKprV3CEc(actListenerParent);
-        
-        MISelTabAbs itmCreateShkAll = new MISelTabCreateShkAll(actListenerParent);
-        MISelTabAbs itmKprFromKprKst = new MISelTabKprFromKprKst(actListenerParent); // in other keystore
-        MISelTabAbs itmKprAnyToCsr = new MISelTabKprAnyToCsr(actListenerParent);
-        MISelTabAbs itmTcrToCrt = new MISelTabTcrToCrt(actListenerParent);
-        MISelTabAbs itmKprToKpr = new MISelTabKprToKpr(actListenerParent);
-        
-        MISelTabAbs itmTcrFromCrt = new MISelTabTcrFromCrt(actListenerParent);
-        MISelTabAbs itmTcrFromCCa = new MISelTabTcrFromCCa(actListenerParent);
-        MISelTabAbs itmKprFromKprDer = new MISelTabKprFromKprDer(actListenerParent);
-        MISelTabAbs itmKprFromKprPem = new MISelTabKprFromKprPem(actListenerParent);
-        
-        MISelTabAbs itmKprToCrt = new MISelTabKprToCrt(actListenerParent);
-        MISelTabAbs itmKprToSig = new MISelTabKprToSig(actListenerParent);
-        MISelTabAbs itmCrtToSig = new MISelTabCrtToSig(actListenerParent);
-        
-        MISelTabAbs itmKprToSCms = new MISelTabKprToSCms(actListenerParent);
-        
-                
-        MISelTabAbs itmWelcomeKtl = new MISelTabWelcomeKtl(actListenerParent);
-        
-        MISelTabAbs itmKprToXmlSig = new MISelTabKprToXmlSig(actListenerParent);
-        MISelTabAbs itmKprToJarSig = new MISelTabJarSign(actListenerParent);
-        MISelTabAbs itmCmsToSig = new MISelTabCmsToSig(actListenerParent);
-        MISelTabAbs itmXmlToSig = new MISelTabXmlToSig(actListenerParent);
-        MISelTabAbs itmJarToSig = new MISelTabJarVerify(actListenerParent);
-        
-        MISelTabAbs itmDirToArc = new MISelTabArcDir(actListenerParent);
-        
-        MISelTabAbs itmShkToCryptEnc = new MISelTabShkToCryptEnc(actListenerParent);
-        MISelTabAbs itmShkToCryptDec = new MISelTabShkToCryptDec(actListenerParent);
-        
-        
-        MISelTabAbs itmTcrRsaToCryptEnc = new MISelTabTcrRsaToCryptEnc(actListenerParent);
-        MISelTabAbs itmKprRsaToCryptEnc = new MISelTabKprRsaToCryptEnc(actListenerParent);
-        MISelTabAbs itmKprRsaToCryptDec = new MISelTabKprRsaToCryptDec(actListenerParent);
-        
-        MISelTabAbs itmIOShkOut = new MISelTabIOShkOut(actListenerParent);
-        MISelTabAbs itmIOShkIn = new MISelTabIOShkIn(actListenerParent);
-        
-        MISelTabAbs itmKprAnyFromCrt = new MISelTabKprAnyFromCrt(actListenerParent);
-        
-        
-        JMenu menCreate = new JMenu("Create");
-        JMenu menArchive = new JMenu("Archive");
-        JMenu menSign = new JMenu("Sign");
-        JMenu menVerify = new JMenu("Verify");
-        JMenu menEncrypt = new JMenu("Encrypt");
-        JMenu menDecrypt = new JMenu("Decrypt");
-        JMenu menImport = new JMenu("Import");
-        JMenu menExport = new JMenu("Export");
+        JMenu menuCreate = new JMenu("Create");
+        JMenu menuArchive = new JMenu("Archive");
+        JMenu menuSign = new JMenu("Sign");
+        JMenu menuVerify = new JMenu("Verify");
+        JMenu menuEncrypt = new JMenu("Encrypt");
+        JMenu menuDecrypt = new JMenu("Decrypt");
+        JMenu menuImport = new JMenu("Import");
+        JMenu menuExport = new JMenu("Export");
         
         // welcome
-        add(itmWelcomeKtl);
+        add(new MISelTabWelcomeKtl(listener));
         
         super.addSeparator();
-        add(menCreate);
+        add(menuCreate);
         
         super.addSeparator();
-        add(menArchive);
+        add(menuArchive);
         
         super.addSeparator();
-        add(menSign);
-        add(menVerify);
+        add(menuSign);
+        add(menuVerify);
         
         super.addSeparator();
-        add(menEncrypt);
-        add(menDecrypt);
+        add(menuEncrypt);
+        add(menuDecrypt);
         
         super.addSeparator();
-        add(menImport);
-        add(menExport);
+        add(menuImport);
+        add(menuExport);
         
         
         
         // create
-        menCreate.add(itmCreateKst);
+        menuCreate.add(new MISelTabCreateKst(listener));
         
         JMenu menCreateEntry = new JMenu("Keystore's entry");
-        menCreate.add(menCreateEntry);
-        menCreateEntry.add(itmCreateKprV1CDsa);
-        menCreateEntry.add(itmCreateKprV1CRsa);
-        menCreateEntry.add(itmCreateKprV1CEc);
+        menuCreate.add(menCreateEntry);
+        menCreateEntry.add(new MISelTabCreateKprDsa(listener));
+        menCreateEntry.add(new MISelTabCreateKprRsa(listener));
+        menCreateEntry.add(new MISelTabCreateKprEc(listener));
         
-        menCreateEntry.add(itmCreateKprV3CDsa);
-        menCreateEntry.add(itmCreateKprV3CRsa);
-        menCreateEntry.add(itmCreateKprV3CEc);
+        menCreateEntry.add(new MISelTabCreateKprV3CDsa(listener));
+        menCreateEntry.add(new MISelTabCreateKprV3CRsa(listener));
+        menCreateEntry.add(new MISelTabCreateKprV3CEc(listener));
         
-        menCreateEntry.add(itmCreateShkAll);
+        menCreateEntry.add(new MISelTabCreateShkAll(listener));
         
         // archive
-        menArchive.add(itmDirToArc);
-        
+        menuArchive.add(new MISelTabArcDir(listener));
         
         // sign
-        menSign.add(itmKprToSCms);
-        menSign.add(itmKprToSig);
-        
-        menSign.add(itmKprToXmlSig);
-        menSign.add(itmKprToJarSig);
+        menuSign.add(new MISelTabKprToSCms(listener));
+        menuSign.add(new MISelTabKprToSig(listener));
+        menuSign.add(new MISelTabKprToXmlSig(listener));
+        menuSign.add(new MISelTabJarSign(listener));
         
         // verify
-        menVerify.add(itmCmsToSig);
-        menVerify.add(itmCrtToSig);
-        
-        menVerify.add(itmXmlToSig);
-        menVerify.add(itmJarToSig);
+        menuVerify.add(new MISelTabCmsToSig(listener));
+        menuVerify.add(new MISelTabCrtToSig(listener));
+        menuVerify.add(new MISelTabXmlToSig(listener));
+        menuVerify.add(new MISelTabJarVerify(listener));
         
         // encrypt
-        menEncrypt.add(itmShkToCryptEnc);
-        menEncrypt.add(itmTcrRsaToCryptEnc);
-        menEncrypt.add(itmKprRsaToCryptEnc);
+        menuEncrypt.add(new MISelTabShkToCryptEnc(listener));
+        menuEncrypt.add(new MISelTabTcrRsaToCryptEnc(listener));
+        menuEncrypt.add(new MISelTabKprRsaToCryptEnc(listener));
         
         // decrypt
-        menDecrypt.add(itmShkToCryptDec);
-        menDecrypt.add(itmKprRsaToCryptDec);
+        menuDecrypt.add(new MISelTabShkToCryptDec(listener));
+        menuDecrypt.add(new MISelTabKprRsaToCryptDec(listener));
         
         // import
         JMenu menInEntry = new JMenu("Keystore's entry");
         JMenu menInCrt = new JMenu("Certificate");
-        menImport.add(menInEntry);
-        menImport.add(menInCrt);
+        menuImport.add(menInEntry);
+        menuImport.add(menInCrt);
         
         
-        menInEntry.add(itmIOShkIn);
+        menInEntry.add(new MISelTabIOShkIn(listener));
         
         JMenu menPK = new JMenu("Private key");
         menInEntry.add(menPK);
-        menPK.add(itmKprFromKprDer);
-        menPK.add(itmKprFromKprPem);
-        menPK.add(itmKprFromKprKst);
+        menPK.add(new MISelTabKprFromKprDer(listener));
+        menPK.add(new MISelTabKprFromKprPem(listener));
+        menPK.add(new MISelTabKprFromKprKst(listener));
         
         JMenu menTC = new JMenu("Trusted certificate");
         menInEntry.add(menTC);
-        menTC.add(itmTcrFromCrt);
-        menTC.add(itmTcrFromCCa);
+        menTC.add(new MISelTabTcrFromCrt(listener));
+        menTC.add(new MISelTabTcrFromCCa(listener));
         
         
         
         
-        menInCrt.add(itmKprAnyFromCrt);
+        menInCrt.add(new MISelTabKprAnyFromCrt(listener));
         
         // export
         JMenu menOutEntry = new JMenu("Keystore's entry");
         JMenu menOutCrt = new JMenu("Certificate");
-        menExport.add(menOutEntry);
-        menExport.add(menOutCrt);
+        menuExport.add(menOutEntry);
+        menuExport.add(menOutCrt);
         
-        menOutEntry.add(itmIOShkOut);
-        menOutEntry.add(itmKprToKpr);
-        menOutEntry.add(itmTcrToCrt);
+        menOutEntry.add(new MISelTabIOShkOut(listener));
+        menOutEntry.add(new MISelTabKprToKpr(listener));
+        menOutEntry.add(new MISelTabTcrToCrt(listener));
          
-        menOutCrt.add(itmKprAnyToCsr);
-        menOutCrt.add(itmKprToCrt);
+        menOutCrt.add(new MISelTabKprAnyToCsr(listener));
+        menOutCrt.add(new MISelTabKprToCrt(listener));
     }
-    
-    
-    // -------
-    // PRIVATE
-    
-   
-    
-   
-    
-   
 }
