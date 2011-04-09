@@ -582,7 +582,6 @@ public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener
         TipOnLeafNode mtnPKV3C = new TipOnLeafNode(STR_NODE_KW_PK_V3C);
         mtnEnt.add(mtnPKV3C);
 
-        /* TODO in comments coz conflicts
         // DSA
         mtnChild = new TipOnLeafNode(PCntsMainLeft.STR_NODE_CRENTPKDSA, PTabUICmdKtlKstOpenCrKprV3CDsa.STR_TITLETASK);
         mtnPKV3C.add(mtnChild);
@@ -594,7 +593,6 @@ public class PCntsMainLeft extends PCntsMainAbs implements TreeSelectionListener
         // EC
         mtnChild = new TipOnLeafNode(PCntsMainLeft.STR_NODE_CRENTPKEC, PTabUICmdKtlKstOpenCrKprV3CEc.STR_TITLETASK);
         mtnPKV3C.add(mtnChild);
-        */
         
         
         
