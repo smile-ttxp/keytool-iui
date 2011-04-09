@@ -24,9 +24,6 @@ package com.google.code.p.keytooliui.ktl.swing.label;
  /*
     known subclasses:
     . LabelCheckTypeJarJar   "Jar" Java ARchive
-    . LabelCheckTypeJarRcr   "Rcr" keyTool IUI Project document
-    . LabelCheckTypeJarJhr   "Jhr" keyTool IUI Project JavaHelp document
-    . LabelCheckTypeJarOhr   "Ohr" keyTool IUI Project OracleHelp document
 
  */
 

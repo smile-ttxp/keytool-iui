@@ -32,7 +32,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
             strApproveButtonText,
             strsExtension,
             strDescription/*, // relative to the location of the application
-            com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir, // eg: rcr, xlb, tpb, kst
             strDirNameDefault // eg: myprojects, myexports, mydeploys
             */
         );
@@ -69,73 +68,6 @@ public class S_FileChooserUI extends S_FileChooserAbs
         // ending
         return fle;    
     }
-    
-    
-    /**public static File s_getOpenFile(
-        java.awt.Component cmpFrameParent,
-        String strApproveButtonText,
-        String strExtension, // eg: jks
-        String strDescription, // eg: keystores
-        String strDirNameDefault // eg: mysignedfiles
-        )
-    {
-        String strMethod = _f_s_strClass + "s_getOpenFile(...)";        
-        
-        File fle = S_FileChooserAbs._s_getOpenFile_(
- 
-            cmpFrameParent,
-            strApproveButtonText,
-            strExtension,
-            strDescription//, 
-            //com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir, // eg: rcr, xlb, tpb, kst
-            //strDirNameDefault // eg: myprojects, myexports, mydeploys
-        );
-        
-        if (fle == null)
-            return null;
-        
-        if (! _s_isAllowed(cmpFrameParent, fle))
-            return null;
-    
-        // ending
-        return fle;
-    }**/
-    
-    
-    
-    /**
-        memo:
-        . strApplicationDirName: kst
-    
-    **/
-    /**public static File s_getSaveFile(
-        java.awt.Component cmpFrameParent,
-        String strApproveButtonText,
-        String strExtension,
-        String strDescription, // relative to the location of the application
-        String strDirNameDefault // eg: mysignedfiles
-        )
-    {
-        String strMethod = _f_s_strClass + "s_getSaveFile(...)";
-        
-        File fle = S_FileChooserAbs._s_getSaveFile_(
-            cmpFrameParent,
-            strApproveButtonText,
-            strExtension,
-            strDescription//, // relative to the location of the application
-            //com.google.code.p.keytooliui.ktl.AppMainUIAbs.f_s_strApplicationDir, // eg: rcr, xlb, tpb, kst
-            //strDirNameDefault // eg: myprojects, myexports, mydeploys
-        );
-        
-        if (fle == null)
-            return null;
-        
-        if (! _s_isAllowed(cmpFrameParent, fle))
-            return null;
-    
-        // ending
-        return fle;
-    }**/
     
     
     // ---------

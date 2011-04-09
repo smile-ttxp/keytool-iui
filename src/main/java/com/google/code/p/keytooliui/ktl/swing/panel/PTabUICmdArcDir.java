@@ -41,9 +41,6 @@ import javax.swing.text.Document;
 
 import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarAbs;
 import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJar;
-import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJhr;
-import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarOhr;
-import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarRcr;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
 import com.google.code.p.keytooliui.shared.swing.panel.PSelAbs;
@@ -64,17 +61,6 @@ public final class PTabUICmdArcDir extends PTabUICmdArcAbs
 
 
     private static String _s_strDlgInfoActionBodyOK = null;
-    //private static String _s_strDlgInfoActionBodyQueryRCRPrefix = null;
-
-
-    /*private static String _s_strDlgInfoActionBodyQueryRCRSuffix =
-        " " +
-        com.google.code.p.keytooliui.shared.Shared.f_s_strVersionCurr +
-        "?";
-*/
-
-
-
 
     // ------------------
     // STATIC INITIALIZER
@@ -92,23 +78,10 @@ public final class PTabUICmdArcDir extends PTabUICmdArcAbs
 
         try
         {
-            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort,
-                java.util.Locale.getDefault());
-
+            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, java.util.Locale.getDefault());
 
             _s_strHelpID = rbeResources.getString("helpID");
             _s_strDlgInfoActionBodyOK = rbeResources.getString("dlgInfoActionBodyOK");
-            //_s_strDlgInfoActionBodyQueryRCRPrefix = rbeResources.getString("dlgInfoActionBodyQueryRCR");
-
-
-            /*if (_s_strDlgInfoActionBodyQueryRCRPrefix == null)
-            {
-                MySystem.s_printOutExit(strWhere, "nil _s_strDlgInfoActionBodyQueryRCRPrefix");
-            }
-
-            _s_strDlgInfoActionBodyQueryRCRPrefix += " ";*/
-
-
         }
 
         catch (java.util.MissingResourceException excMissingResource)
@@ -294,39 +267,6 @@ public final class PTabUICmdArcDir extends PTabUICmdArcAbs
         if (evtItem.getStateChange() != ItemEvent.SELECTED)
             return;
 
-        if (evtItem.getSource() instanceof RBTypeJarRcr)
-        {
-            if (super._fssSelectUnsignedJar2Save_ == null)
-                MySystem.s_printOutExit(this, strMethod, "nil super._fssSelectUnsignedJar2Save_");
-
-            if (! super._fssSelectUnsignedJar2Save_.setSelectedTypeFileProjDoc())
-                MySystem.s_printOutExit(this, strMethod, "failed");
-
-            return;
-        }
-
-        if (evtItem.getSource() instanceof RBTypeJarJhr)
-        {
-            if (super._fssSelectUnsignedJar2Save_ == null)
-                MySystem.s_printOutExit(this, strMethod, "nil super._fssSelectUnsignedJar2Save_");
-
-            if (! super._fssSelectUnsignedJar2Save_.setSelectedTypeFileProjHelpSun())
-                MySystem.s_printOutExit(this, strMethod, "failed");
-
-            return;
-        }
-        
-        if (evtItem.getSource() instanceof RBTypeJarOhr)
-        {
-            if (super._fssSelectUnsignedJar2Save_ == null)
-                MySystem.s_printOutExit(this, strMethod, "nil super._fssSelectUnsignedJar2Save_");
-
-            if (! super._fssSelectUnsignedJar2Save_.setSelectedTypeFileProjHelpOracle())
-                MySystem.s_printOutExit(this, strMethod, "failed");
-
-            return;
-        }
-
         if (evtItem.getSource() instanceof RBTypeJarJar)
         {
             if (super._fssSelectUnsignedJar2Save_ == null)
@@ -408,23 +348,6 @@ public final class PTabUICmdArcDir extends PTabUICmdArcAbs
             return;
         }
 
-       
-
-
-        if (strPropVal.compareTo(PSelBtnTfdStrXlsDescription.f_s_strDocPropVal) == 0)
-        {
-            this._strDescription = strText;
-            // MEMO: NO UPDATE COZ THIS ONE IS OPTIONAL!
-            return;
-        }
-        
-        if (strPropVal.compareTo(PSelBtnTfdStrXlsKeywords.f_s_strDocPropVal) == 0)
-        {
-            this._strKeywords = strText;
-            // MEMO: NO UPDATE COZ THIS ONE IS OPTIONAL!
-            return;
-        }
-
         // ------------
         MySystem.s_printOutExit(this, strMethod, "uncaught strPropVal, strPropVal=" + strPropVal);
     }
@@ -466,20 +389,6 @@ public final class PTabUICmdArcDir extends PTabUICmdArcAbs
         {
             this._strPathAbsFileDir2Open = null;
             _updateActionButtonDataChanged_(false);
-            return;
-        }
-
-        if (strPropVal.compareTo(PSelBtnTfdStrXlsDescription.f_s_strDocPropVal) == 0)
-        {
-            this._strDescription = null;
-            // MEMO: NO UPDATE COZ THIS ONE IS OPTIONAL!
-            return;
-        }
-        
-        if (strPropVal.compareTo(PSelBtnTfdStrXlsKeywords.f_s_strDocPropVal) == 0)
-        {
-            this._strKeywords = null;
-            // MEMO: NO UPDATE COZ THIS ONE IS OPTIONAL!
             return;
         }
 
@@ -711,17 +620,8 @@ public final class PTabUICmdArcDir extends PTabUICmdArcAbs
 
     // input
     private String _strPathAbsFileDir2Open = null;
-    // output
-    private String _strDescription = null; // optional
-    private String _strKeywords = null; // optional
-
-    
 
 
-    /**
-        if signed jar is of type RCR, or of type JHR
-        ask for previewing results in RCReader, or in JHReader
-    **/
     private boolean _doneJobShowDialog()
     {
         String strMethod = "_doneJobShowDialog()";
@@ -739,24 +639,10 @@ public final class PTabUICmdArcDir extends PTabUICmdArcAbs
         strBody += super._strPathAbsUnsignedJar2Save_;
 
 
-        // --
-        // NOT REALLY NEEDED !
-        if (super._strPathAbsUnsignedJar2Save_.toLowerCase().endsWith("." +
-            com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectReaderDocument.toLowerCase()))
-        {
-            // show info dialog
-	        OPAbstract.s_showDialogInfo(
-	            super._frmOwner_, strBody);
+        // show info dialog
+        OPAbstract.s_showDialogInfo(super._frmOwner_, strBody);
 
-            // ending
-            return true;
-        }
-
-
-        // statement should never be reached!
-        // ERROR 
         // ending
-        return false;
-
+        return true;
     }
 }

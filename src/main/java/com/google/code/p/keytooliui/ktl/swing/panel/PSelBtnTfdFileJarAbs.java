@@ -58,7 +58,6 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.swing.textfield.*;
 import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.io.*;
 import com.google.code.p.keytooliui.shared.swing.panel.*;
 
 import javax.swing.*;
@@ -67,18 +66,8 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 
-abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
-    ItemListener
+abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements ItemListener
 {   
-    // --------------------
-    // PRIVATE STATIC FINAL
-    
-    private static final String _f_s_strSuffixFileDesc = " files";
-    
-    
-    // ------
-    // PUBLIC
-    
     public void destroy()
     {
         super.destroy();
@@ -98,29 +87,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
                 ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjDoc).destroy();
 
             this._cmpTypeFileJarProjDoc = null;
-        }
-        
-        
-        if (this._cmpTypeFileJarProjHelpSun != null)
-        {
-            if (this._cmpTypeFileJarProjHelpSun instanceof RBTypeJarAbs)
-                ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpSun).destroy();
-                
-            else if (this._cmpTypeFileJarProjHelpSun instanceof LabelCheckTypeJarAbs)
-                ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpSun).destroy();
-
-            this._cmpTypeFileJarProjHelpSun = null;
-        }
-        
-        if (this._cmpTypeFileJarProjHelpOracle != null)
-        {
-            if (this._cmpTypeFileJarProjHelpOracle instanceof RBTypeJarAbs)
-                ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).destroy();
-                
-            else if (this._cmpTypeFileJarProjHelpOracle instanceof LabelCheckTypeJarAbs)
-                ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).destroy();
-
-            this._cmpTypeFileJarProjHelpOracle = null;
         }
         
         if (this._cmpTypeFileJarJar != null)
@@ -160,57 +126,8 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
         
         _reset();
     }
-    
-    
-    
-    public boolean setSelectedTypeFileProjDoc()
-    {
-        String strMethod = "setSelectedTypeFileProjDoc()";
-        
-        if (! _doClick(this._cmpTypeFileJarProjDoc))
-        {
-            MySystem.s_printOutError(this, strMethod, "failed");
-            return false;
-        } 
-        
-        return true;
-    }
-    
-    public boolean setSelectedTypeFileProjHelpSun()
-    {
-        String strMethod = "setSelectedTypeFileProjHelpSun()";
-        
-        // MODIF coz button hidden: march 14, 2003
-        if (this._cmpTypeFileJarProjHelpSun != null)
-        {
-            if (! _doClick(this._cmpTypeFileJarProjHelpSun))
-            {
-                MySystem.s_printOutError(this, strMethod, "failed");
-                return false;
-            }
-        }
-        
-        return true;
-    }
-    
-    
-    // added stuff for OHReader, september 30, 2003
-    public boolean setSelectedTypeFileProjHelpOracle()
-    {
-        String strMethod = "setSelectedTypeFileProjHelpOracle()";
-        
-        if (this._cmpTypeFileJarProjHelpOracle != null)
-        {
-            if (! _doClick(this._cmpTypeFileJarProjHelpOracle))
-            {
-                MySystem.s_printOutError(this, strMethod, "failed");
-                return false;
-            }
-        }
-        
-        return true;
-    }
-    
+
+
     public boolean setSelectedTypeFileApk()
     {
         String strMethod = "setSelectedTypeFileApk()";
@@ -264,39 +181,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
             }
         }
         
-        
-        
-        // MODIF coz button hidden: march 14, 2003
-        if (this._cmpTypeFileJarProjHelpSun != null)
-        {
-            if (this._cmpTypeFileJarProjHelpSun instanceof RBTypeJarAbs)
-            {
-                if (! ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpSun).init())
-                    return false;
-            }
-            
-            else if (this._cmpTypeFileJarProjHelpSun instanceof LabelCheckTypeJarAbs)
-            {
-                if (! ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpSun).init())
-                    return false;
-            } 
-        }
-        
-        if (this._cmpTypeFileJarProjHelpOracle != null)
-        {
-            if (this._cmpTypeFileJarProjHelpOracle instanceof RBTypeJarAbs)
-            {
-                if (! ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).init())
-                    return false;
-            }
-            
-            else if (this._cmpTypeFileJarProjHelpOracle instanceof LabelCheckTypeJarAbs)
-            {
-                if (! ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).init())
-                    return false;
-            } 
-        }
-        
+
         if (this._cmpTypeFileJarJar instanceof RBTypeJarAbs)
         {
             if (! ((RBTypeJarAbs) this._cmpTypeFileJarJar).init())
@@ -388,31 +273,13 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
             blnEnabledButton = true;
         
         if (blnEnabledButton)
-        {
-            /*
-            this._cmpTypeFileJarProjDoc = new RBTypeJarRcr(blnEnabledButton, itmListenerParent);
-            
-            // MODIF coz button hidden: march 14, 2003
-            // reactivated: april 17, 2003
-            this._cmpTypeFileJarProjHelpSun = new RBTypeJarJhr(blnEnabledButton, itmListenerParent);
-            
-            this._cmpTypeFileJarProjHelpOracle = new RBTypeJarOhr(blnEnabledButton, itmListenerParent);
-            */
-            
-            
+        {            
             this._cmpTypeFileJarJar = new RBTypeJarJar(blnEnabledButton, itmListenerParent);  
             
             this._cmpTypeFileJarApk = new RBTypeJarApk(blnEnabledButton, itmListenerParent);    
             
             if (this._cmpTypeFileJarProjDoc != null)
                 ((RBTypeJarAbs) this._cmpTypeFileJarProjDoc).addItemListener(this);
-            
-            // MODIF coz button hidden: march 14, 2003
-            if (this._cmpTypeFileJarProjHelpSun != null)
-                ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpSun).addItemListener(this);
-                
-            if (this._cmpTypeFileJarProjHelpOracle != null)
-                ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).addItemListener(this);
 
             ((RBTypeJarAbs) this._cmpTypeFileJarJar).addItemListener(this);
         }
@@ -420,19 +287,7 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
         else
         {
             this._cmpTypeFileJarJar = new LabelCheckTypeJarJar(true); // checked
-            
-            
             this._cmpTypeFileJarApk = new LabelCheckTypeJarApk(false); // checked
-            
-            /*
-            this._cmpTypeFileJarProjDoc = new LabelCheckTypeJarRcr(false); //  memo: default false
-            
-            // MODIF coz button hidden: march 14, 2003
-            // reactivated: april 17, 2003
-            this._cmpTypeFileJarProjHelpSun = new LabelCheckTypeJarJhr(false); // memo: default false
-            
-            this._cmpTypeFileJarProjHelpOracle = new LabelCheckTypeJarOhr(false); // memo: default false
-             */
         }
     }
     
@@ -520,8 +375,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
     
     
     private JComponent _cmpTypeFileJarProjDoc = null;
-    private JComponent _cmpTypeFileJarProjHelpSun = null;
-    private JComponent _cmpTypeFileJarProjHelpOracle = null;
     private JComponent _cmpTypeFileJarJar = null;
     private JComponent _cmpTypeFileJarApk = null;
     
@@ -612,29 +465,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
     private boolean _addGroup()
     {
         String strMethod = "_addGroup()";
-        
-        // adding radioButtons/labelChecks for selecting in between JAR, and JHR, and RCR files
-        
-        /*if (this._cmpTypeFileJarProjDoc == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil this._cmpTypeFileJarProjDoc");
-            return false;
-        }*/
-        
-        // MODIF coz button may be hidden: march 14, 2003
-        /*if (this._cmpTypeFileJarProjHelpSun == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil this._cmpTypeFileJarProjHelpSun");
-            return false;
-        }*/
-        
-        
-        // idem above
-        /*if (this._cmpTypeFileJarProjHelpOracle == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil this._cmpTypeFileJarProjHelpOracle");
-            return false;
-        }*/
 
         if (this._cmpTypeFileJarJar == null)
         {
@@ -657,13 +487,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
              
             if (this._cmpTypeFileJarProjDoc != null)
                 bgp.add((JRadioButton) this._cmpTypeFileJarProjDoc);
-            
-            // MODIF coz button hidden: march 14, 2003
-            if (this._cmpTypeFileJarProjHelpSun != null)
-                bgp.add((JRadioButton) this._cmpTypeFileJarProjHelpSun);
-                
-            if (this._cmpTypeFileJarProjHelpOracle != null)
-                bgp.add((JRadioButton) this._cmpTypeFileJarProjHelpOracle);
             
             bgp.add((JRadioButton) this._cmpTypeFileJarJar);
             
@@ -693,13 +516,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
         
         if (this._cmpTypeFileJarProjDoc != null)
             pnlTypeFileJar.add(this._cmpTypeFileJarProjDoc);
-        
-        // MODIF coz button hidden: march 14, 2003
-        if (this._cmpTypeFileJarProjHelpSun != null)
-            pnlTypeFileJar.add(this._cmpTypeFileJarProjHelpSun);
-            
-        if (this._cmpTypeFileJarProjHelpOracle != null)
-            pnlTypeFileJar.add(this._cmpTypeFileJarProjHelpOracle);
         
         // --
         if (super._pnl_ == null)
@@ -753,19 +569,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
             {
                 if (this._cmpTypeFileJarProjDoc != lbl)
                     ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjDoc).setChecked(false);
-            }
-            
-            // MODIF coz button hidden: march 14, 2003
-            if (this._cmpTypeFileJarProjHelpSun != null)
-            {
-                if (this._cmpTypeFileJarProjHelpSun != lbl)
-                    ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpSun).setChecked(false);
-            }
-            
-            if (this._cmpTypeFileJarProjHelpOracle != null)
-            {
-                if (this._cmpTypeFileJarProjHelpOracle != lbl)
-                    ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).setChecked(false);
             }
             
             if (this._cmpTypeFileJarJar != lbl)
@@ -835,47 +638,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
         }
         
         // --
-        // MODIF coz button hidden: march 14, 2003
-        if (this._cmpTypeFileJarProjHelpSun != null)
-        {
-            if (this._cmpTypeFileJarProjHelpSun instanceof RBTypeJarAbs)
-            {
-                if (((RBTypeJarAbs) this._cmpTypeFileJarProjHelpSun).isSelected())
-                {
-                    return ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpSun).getFileDesc();
-                }      
-            }
-            
-            else if (this._cmpTypeFileJarProjHelpSun instanceof LabelCheckTypeJarAbs)
-            {
-                if (((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpSun).isChecked())
-                {
-                    return ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpSun).getFileDesc();
-                }      
-            }
-        }
-        
-        // --
-        if (this._cmpTypeFileJarProjHelpOracle != null)
-        {
-            if (this._cmpTypeFileJarProjHelpOracle instanceof RBTypeJarAbs)
-            {
-                if (((RBTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).isSelected())
-                {
-                    return ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).getFileDesc();
-                }      
-            }
-            
-            else if (this._cmpTypeFileJarProjHelpOracle instanceof LabelCheckTypeJarAbs)
-            {
-                if (((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).isChecked())
-                {
-                    return ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).getFileDesc();
-                }      
-            }
-        }
-        
-        // --
         if (this._cmpTypeFileJarJar instanceof RBTypeJarAbs)
         {
             if (((RBTypeJarAbs) this._cmpTypeFileJarJar).isSelected())
@@ -936,47 +698,6 @@ abstract public class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements
                 if (((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjDoc).isChecked())
                 {
                     return ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjDoc).getNamesFileExtension();
-                }      
-            }
-        }
-        
-        // --
-        // MODIF coz button hidden: march 14, 2003
-        if (this._cmpTypeFileJarProjHelpSun != null)
-        {
-            if (this._cmpTypeFileJarProjHelpSun instanceof RBTypeJarAbs)
-            {
-                if (((RBTypeJarAbs) this._cmpTypeFileJarProjHelpSun).isSelected())
-                {
-                    return ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpSun).getNamesFileExtension();
-                }      
-            }
-            
-            else if (this._cmpTypeFileJarProjHelpSun instanceof LabelCheckTypeJarAbs)
-            {
-                if (((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpSun).isChecked())
-                {
-                    return ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpSun).getNamesFileExtension();
-                }      
-            }
-        }
-        
-        // --
-        if (this._cmpTypeFileJarProjHelpOracle != null)
-        {
-            if (this._cmpTypeFileJarProjHelpOracle instanceof RBTypeJarAbs)
-            {
-                if (((RBTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).isSelected())
-                {
-                    return ((RBTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).getNamesFileExtension();
-                }      
-            }
-            
-            else if (this._cmpTypeFileJarProjHelpOracle instanceof LabelCheckTypeJarAbs)
-            {
-                if (((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).isChecked())
-                {
-                    return ((LabelCheckTypeJarAbs) this._cmpTypeFileJarProjHelpOracle).getNamesFileExtension();
                 }      
             }
         }

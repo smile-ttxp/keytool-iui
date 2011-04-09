@@ -22,9 +22,6 @@
 
 package com.google.code.p.keytooliui.ktl.swing.panel;
 
-/**
-**/
-
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemEvent;
@@ -37,9 +34,6 @@ import com.google.code.p.keytooliui.ktl.io.S_FileExtensionUI;
 import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarAbs;
 import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarApk;
 import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJar;
-import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarJhr;
-import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarOhr;
-import com.google.code.p.keytooliui.ktl.swing.button.RBTypeJarRcr;
 import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLAbs;
 import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignAbs;
 import com.google.code.p.keytooliui.ktl.util.jarsigner.KTLKprOpenSignBks;
@@ -66,18 +60,7 @@ public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
 
     private static String _s_strHelpID = null;
 
-
     private static String _s_strDlgInfoActionBodyOK = null;
-    private static String _s_strDlgInfoActionBodyQueryRCRPrefix = null;
-
-
-    private static String _s_strDlgInfoActionBodyQueryRCRSuffix =
-        " " +
-        com.google.code.p.keytooliui.shared.Shared.f_s_strVersionCurr +
-        "?";
-
-
-
 
 
     // ------------------
@@ -96,25 +79,11 @@ public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
 
         try
         {
-            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort,
-                java.util.Locale.getDefault());
-
+            java.util.ResourceBundle rbeResources = java.util.ResourceBundle.getBundle(strBundleFileShort, java.util.Locale.getDefault());
 
             _s_strHelpID = rbeResources.getString("helpID");
             _s_strDlgInfoActionBodyOK = rbeResources.getString("dlgInfoActionBodyOK");
-            _s_strDlgInfoActionBodyQueryRCRPrefix = rbeResources.getString("dlgInfoActionBodyQueryRCR");
-
-
-            if (_s_strDlgInfoActionBodyQueryRCRPrefix == null)
-            {
-                MySystem.s_printOutExit(strWhere, "nil _s_strDlgInfoActionBodyQueryRCRPrefix");
-            }
-
-            _s_strDlgInfoActionBodyQueryRCRPrefix += " ";
-
-
         }
-
         catch (java.util.MissingResourceException excMissingResource)
         {
             excMissingResource.printStackTrace();
@@ -248,10 +217,6 @@ public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         {
             MySystem.s_printOutTrace(this, strMethod, "OK!");
 
-            /* if extension == ".rcr", then show warning-confirm dialog
-               or ".jhr", or ".ohr"
-            */
-
             if (! _doneJobQueryPreviewResults())
                 MySystem.s_printOutExit(this, strMethod, "failed");
         }
@@ -271,39 +236,6 @@ public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
 
         if (evtItem.getStateChange() != ItemEvent.SELECTED)
             return;
-
-        if (evtItem.getSource() instanceof RBTypeJarRcr)
-        {
-            if (super._fssSelectSignedJar_ == null)
-                MySystem.s_printOutExit(this, strMethod, "nil super._fssSelectSignedJar_");
-
-            if (! super._fssSelectSignedJar_.setSelectedTypeFileProjDoc())
-                MySystem.s_printOutExit(this, strMethod, "failed");
-
-            return;
-        }
-
-        if (evtItem.getSource() instanceof RBTypeJarJhr)
-        {
-            if (super._fssSelectSignedJar_ == null)
-                MySystem.s_printOutExit(this, strMethod, "nil super._fssSelectSignedJar_");
-
-            if (! super._fssSelectSignedJar_.setSelectedTypeFileProjHelpSun())
-                MySystem.s_printOutExit(this, strMethod, "failed");
-
-            return;
-        }
-        
-        if (evtItem.getSource() instanceof RBTypeJarOhr)
-        {
-            if (super._fssSelectSignedJar_ == null)
-                MySystem.s_printOutExit(this, strMethod, "nil super._fssSelectSignedJar_");
-
-            if (! super._fssSelectSignedJar_.setSelectedTypeFileProjHelpOracle())
-                MySystem.s_printOutExit(this, strMethod, "failed");
-
-            return;
-        }
         
         if (evtItem.getSource() instanceof RBTypeJarJar)
         {
@@ -817,10 +749,6 @@ public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
     // -------
     // PRIVATE
 
-    private com.google.code.p.keytooliui.shared.AppMainAbs _appReaderPreviewRcr = null;
-
-
-
     // input
     private PSelBtnTfdPasswdXlsAbs _pnlSelectPasswdKst = null;
     private PSelBtnTfdStrXlsSigfile _pnlSelectSigfileBasename = null;
@@ -835,19 +763,11 @@ public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
     private String _strSigfileBasename = null; // optional
 
 
-
-
-    /**
-        if signed jar is of type RCR, or of type JHR
-        ask for previewing results in RCReader, or in JHReader
-    **/
     private boolean _doneJobQueryPreviewResults()
     {
         String strMethod = "_doneJobQueryPreviewResults()";
 
         MySystem.s_printOutFlagDev(this, strMethod, "PENDING: preview in JHReader");
-
-        //boolean blnIsPackageReaderDoc = _isPackageReaderDoc();
 
         if (super._strPathAbsJarSigned_ == null)
         {
@@ -860,119 +780,12 @@ public final class PTabUICmdJsrSign extends PTabUICmdJsrAbs
         strBody += "\n";
         strBody += "  ";
         strBody += super._strPathAbsJarSigned_;
-
-
-        // --
-        // Is not RCR doc
-        if (! super._strPathAbsJarSigned_.toLowerCase().endsWith("." +
-            com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectReaderDocument.toLowerCase()))
-        {
-            // show info dialog
-	        OPAbstract.s_showDialogInfo(
-	            super._frmOwner_, strBody);
-
-            // ending
-            return true;
-        }
-
-        // --
-        // Is RCR doc
-
-    
+        
+        
         // show info dialog
-        OPAbstract.s_showDialogInfo(
-            super._frmOwner_, strBody);
-
+        OPAbstract.s_showDialogInfo(super._frmOwner_, strBody);
+        
         // ending
         return true;
-
-
-       
-        /**else // show warning confirm dialog
-        {
-            String strTitle = super._strTitleAppli_; // + " - " + "confirm";
-
-            strBody += "\n\n";
-            strBody += _s_strDlgInfoActionBodyQueryRCRPrefix;
-
-            strBody += com.google.code.p.keytooliui.rcr.RCReader.f_s_strTitleAppli;
-
-            strBody += _s_strDlgInfoActionBodyQueryRCRSuffix;
-
-            if (! OPAbstract.s_showConfirmDialog(super._frmOwner_, strTitle, strBody))
-                return true;
-
-
-            // check file
-
-            java.io.File fle = new java.io.File(super._strPathAbsJarSigned_);
-
-            if (! fle.exists())
-            {
-                MySystem.s_printOutError(this, strMethod, "! fle.exists(), super._strPathAbsJarSigned_=" + super._strPathAbsJarSigned_);
-                return false;
-            }
-
-            if (! fle.canRead())
-            {
-                MySystem.s_printOutError(this, strMethod, "! fle.canRead(), super._strPathAbsJarSigned_=" + super._strPathAbsJarSigned_);
-                return false;
-            }
-
-            // launch RCReader
-
-            if (this._appReaderPreviewRcr != null)
-            {
-                this._appReaderPreviewRcr.destroy();
-                this._appReaderPreviewRcr = null;
-            }
-
-            try
-            {
-                String[] strs = { super._strPathAbsJarSigned_ };
-
-                this._appReaderPreviewRcr = new com.google.code.p.keytooliui.rcr.RCReader(strs, com.google.code.p.keytooliui.rcr.RCReader.f_s_intModePreview);
-            }
-
-            catch(Exception exc)
-            {
-                exc.printStackTrace();
-                MySystem.s_printOutError(this, strMethod, "exc caught");
-                return false;
-            }
-
-            if (! this._appReaderPreviewRcr.init())
-            {
-                MySystem.s_printOutError(this, strMethod, "failed");
-                return false;
-            }
-
-            if (! this._appReaderPreviewRcr.start())
-            {
-                MySystem.s_printOutError(this, strMethod, "failed");
-                return false;
-            }
-        }**/
-
-
-        // ---
-
-        // ending
-        //return true;
     }
-
-    /**private boolean _isPackageReaderDoc()
-    {
-        try
-        {
-            Class.forName("com.google.code.p.keytooliui.rcr.RCReader");
-        }
-
-        catch(ClassNotFoundException excClassNotFound)
-        {
-            return false;
-        }
-
-        return true;
-    }**/
 }

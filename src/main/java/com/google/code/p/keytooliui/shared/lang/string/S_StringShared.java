@@ -58,35 +58,8 @@ public class S_StringShared
         
         return str;
     }
-    
-    /**
-        EG:
-            strFolderAncestor = "D:\foo1\foo2\foo3"
-            fle.getAbsolutePath() = "D:\foo1\foo2\foo3\foo4\foo5\foo6.gif"
-            
-            ==> strResult = "foo4\foo5\"
-    
-    **/
-    
-    public static String s_getFileRelativeLocation(String strFolderAncestor, java.io.File fle)
-    {
-        String strWhere = S_StringShared._f_s_strClass + "s_getFileRelativeLocation(strFolderAncestor, fle)";
-       
-        String strFolderTarget = fle.getParent();
-        
-        String strResult = S_StringShared._s_getFolderRelativeLocation(strFolderAncestor, strFolderTarget);
-        
-        if (strResult == null)
-        {
-            MySystem.s_printOutError(strWhere, "failed");
-            return null;   
-        }
-        
-        return strResult;
-    }
-    
-    
-    
+
+
     public static String[] s_getArrayFromStringSeparator(String str2Split, String strSeparator)
     {
         String strWhere = S_StringShared._f_s_strClass + "s_getArrayFromStringSeparator(str2Split, strSeparator)";
@@ -174,98 +147,6 @@ public class S_StringShared
     {
         return s_getArrayFromStringSeparator(str, "/");
     }
-    
-    
-    
-    /**
-    transforming a color to a string,
-    EG: input: col = (120, 40, 255)
-    output = String = "120:40:255"
-    
-    IMPORTANT: if nil col, then output = _void_
-    (w/o braces)
-    
-    **/
-    
-    /**
-    public static String s_get(java.awt.Color col)
-    {    
-        if (col == null)
-            return com.google.code.p.keytooliui.shared.Shared.f_s_strValueNil;
-        
-        // no nil
-        String str = "\"";
-            
-        str += col.getRed();
-        str += ":";
-        str += col.getGreen();
-        str += ":";
-        str += col.getBlue();
-            
-        str += "\"";
-        
-        return str;
-    }
-    **/
-    
-    // --------------
-    // PRIVATE STATIC
-    
-    /**
-        EG:
-            strFolderAncestor = "D:\foo1\foo2\foo3"
-            strFolderTarget = "D:\foo1\foo2\foo3\foo4\foo5\foo6\"
-            
-            ==> strResult = "foo4\foo5\foo6\"
-    
-        WARNING: if the same, returning :"", instead of for ex. in Windows: "\"
-    **/
-    
-    private static String _s_getFolderRelativeLocation(String strFolderAncestor, String strFolderTarget)
-    {
-        String strWhere = S_StringShared._f_s_strClass + "_s_getFolderRelativeLocation(strFolderAncestor, strFolderTarget)";
-    
-        if (strFolderAncestor==null || strFolderTarget==null)
-        {
-            MySystem.s_printOutError(strWhere, "nil arg");
-            return null;
-        }
-    
-        if (! strFolderTarget.startsWith(strFolderAncestor))
-        {
-            MySystem.s_printOutError(strWhere, "wrong strFolderTarget: " + strFolderTarget);
-            return null;
-        }
-        
 
-        String strResult = new String("");
-        String strResultSuffix = new String(strFolderTarget);
-        
-        // ??????????????????????? compareTo instead ?????????????????
-        if (! strResultSuffix.equals(strFolderAncestor))
-        {
-            int intIndex = strFolderAncestor.length();
-            intIndex ++;
-		    
-		    try
-		    {
-		        strResultSuffix = strFolderTarget.substring(intIndex);
-	        }
-	        
-	        catch(IndexOutOfBoundsException excIndexOutOfBounds)
-	        {
-	            excIndexOutOfBounds.printStackTrace();
-	            MySystem.s_printOutError(strWhere, "excIndexOutOfBounds caught, strFolderTarget=" + strFolderTarget);
-                return null;
-	        }
-	        
-	        strResult += strResultSuffix;
-        }
-        
-        // modif may 5, 2000
-        // strResult += com.google.code.p.keytooliui.shared.lang.File.separator;
-        
-        return strResult;
-    
-    }
+
 }

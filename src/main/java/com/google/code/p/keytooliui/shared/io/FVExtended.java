@@ -170,27 +170,6 @@ public final class FVExtended extends FileView
     }
 
     /**
-     * Whether the file is hidden or not. This implementation returns
-     * true if the filename starts with a "."
-     *
-     * @see FileView#isHidden
-     */
-    public Boolean isHidden(File f)
-    {
-	    String name = f.getName();
-	    
-	    if(name != null && !name.equals("") && name.charAt(0) == '.')
-	    {
-	        return Boolean.TRUE;
-	    }
-	    
-	    else
-	    {
-	        return Boolean.FALSE;
-	    }
-    }
-
-    /**
      * Whether the directory is traversable or not. Generic implementation
      * returns true for all directories.
      *
@@ -303,45 +282,7 @@ public final class FVExtended extends FileView
 	        MySystem.s_printOutError(this, f_strMethod, "nil iinProjectBuilderTemplate");
 	        return false;
 	    }
-	
-	    // sound effects
-	    for (int i=0; i<S_FileExtension.f_s_strsSndfx.length; i++)
-		{
-		    _putIcon(S_FileExtension.f_s_strsSndfx[i], iinSound);
-		}
-		
-		// image
-		
-		for (int i=0; i<S_FileExtension.f_s_strsImage.length; i++)
-		{
-		    _putIcon(S_FileExtension.f_s_strsImage[i], iinImage);
-		}
-		
-		
-		// html
-		for (int i=0; i<S_FileExtension.f_s_strsPageTextHTML.length; i++)
-		{
-		    _putIcon(S_FileExtension.f_s_strsPageTextHTML[i], iinHtml);
-		}
-		
 
-		
-		// project RCReader document
-		_putIcon(com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectReaderDocument.toLowerCase(), iinProjectReaderDocument);
-	
-		// project RCReader template
-		_putIcon(com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectReaderTemplate.toLowerCase(), iinProjectReaderTemplate);
-	
-
-		// project builder document
-		_putIcon(com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectBuilderDocument.toLowerCase(), iinProjectBuilderDocument);
-		
-		// project builder template
-		_putIcon(com.google.code.p.keytooliui.shared.io.S_FileExtension.f_s_strProjectBuilderTemplate.toLowerCase(), iinProjectBuilderTemplate);
-	
-			
-		// ----
-		
 		return true;
     }
 }

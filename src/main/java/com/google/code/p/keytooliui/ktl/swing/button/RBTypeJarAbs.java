@@ -25,9 +25,6 @@
  
  /**
     known subclasses:
-    . RBTypeJarRcr // keyTool IUI Project Document (rcr)
-    . RBTypeJarJhr // keyTool IUI Project JavaHelp document (jhr)
-    . RBTypeJarOhr // keyTool IUI Project OracleHelp document (ohr)
     . RBTypeJarJar
     
     
@@ -43,12 +40,7 @@
     // ---------
     // PROTECTED
     
-    protected RBTypeJarAbs(
-        boolean blnIsEnabled,
-        ItemListener itmListenerParent,
-        String strDescription,
-        String[] strsExtension
-        )
+    protected RBTypeJarAbs(boolean blnIsEnabled, ItemListener itmListenerParent, String strDescription, String[] strsExtension)
     {
         super(blnIsEnabled, itmListenerParent, strDescription, strsExtension);
     }

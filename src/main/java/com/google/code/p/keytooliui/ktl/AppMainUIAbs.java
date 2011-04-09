@@ -312,13 +312,6 @@ abstract public class AppMainUIAbs extends AppMainAbs implements
     // missing: ??children??.destroy()
     public void destroy()
     {   
-        // temp
-        System.out.println("AppMainUIAbs.destroy()");
-        
-        
-        
-        //com.google.code.p.keytooliui.shared.lang.thread.MyThreadAbs.s_interruptThreadsActive();
-        
         _removeListeners();
         
         super.destroy();

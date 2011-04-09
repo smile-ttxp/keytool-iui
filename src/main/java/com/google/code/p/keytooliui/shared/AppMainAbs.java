@@ -14,7 +14,6 @@ package com.google.code.p.keytooliui.shared;
 **/
 
 
-import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -133,36 +132,8 @@ abstract public class AppMainAbs extends AppAbs implements
     
     // ----------------
     // PROTECTED STATIC
-    
-    
-    
-    
-    /*
-        EG: UIKeytool:
-        strAppliLibNameShort = "xls"
-        shound return:
-              "rc[version]xls_hx"
-    */
-    protected static String _s_getNameLibHelpExpertShort_(String strAppliLibNameShort)
-    {
-        String str = _s_getNameLibHelpPrefix(strAppliLibNameShort);   
-        str += AppMainAbs._f_s_strKWLibHelpExpert; // help type
-        return str;
-    }
-    
-    /*
-        EG: UIKeytool:
-        strAppliLibNameShort = "xls"
-        shound return:
-              "rc[version]xls_hf"
-    */
-    protected static String _s_getNameLibHelpForwardShort_(String strAppliLibNameShort)
-    {
-        String str = _s_getNameLibHelpPrefix(strAppliLibNameShort);   
-        str += AppMainAbs._f_s_strKWLibHelpForward; // help type
-        return str;
-    }
-    
+
+
     // --------------
     // PRIVATE STATIC
     
@@ -640,48 +611,7 @@ abstract public class AppMainAbs extends AppAbs implements
     protected ChgLocAbstract _cltChangerLocToolbar_ = null; // main
     
     protected LastUserAbstract _luaLastUserProjects_ = null;
-    
-    /**
-        a new document/project has been opened, updating JavaHelp's JHEditorPane's StyleSheet
-        vector should contain at least one element: helpStandard
-    **/
-    protected boolean _updateJavaHelpStyleSheets_()
-    {
-        String strMethod = "_updateJavaHelpStyleSheets_()";
-        
-        if (this._vecMyHelpBroker == null)
-        {
-            MySystem.s_printOutError(this, strMethod, "nil this._vecMyHelpBroker");
-            return false;
-        }
-        
-        for (int i=0; i<this._vecMyHelpBroker.size(); i++)
-        {
-            com.google.code.p.keytooliui.shared.help.MyHelpBroker mhbCur = null;
-            
-            try
-            {
-                mhbCur = (com.google.code.p.keytooliui.shared.help.MyHelpBroker) this._vecMyHelpBroker.elementAt(i);
-            }
-            
-            catch(ClassCastException excClassCast)
-            {
-                excClassCast.printStackTrace();
-                MySystem.s_printOutError(this, strMethod, "excClassCast caught");
-                return false;
-            }
-            
-            if (! mhbCur.assignStyleSheet())
-            {
-                MySystem.s_printOutError(this, strMethod, "failed");
-                return false;
-            }
-        }
-        
-        // ending
-        return true;
-    }
-    
+
     protected boolean _createLastUserPreferences_(
         String strVersionAppli,
         java.util.Vector<UserChoice> vecUserChoice)

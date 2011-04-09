@@ -53,22 +53,6 @@ rcr    xlb                       help   appli              rcr      xlb
 
 public class FileLocation
 {
-    // --------------------------
-    // PUBLIC STATIC FINAL STRING
-    
-    // level 1
-    public static final String f_strResource = "res";
     public static final String f_strUser = "usr";
     public static final String f_strDocumentation = "doc";
-    
-    // level 2
-    public static final String f_strResourceHelp = "help";
-    public static final String f_strResourceAppli = "appli";
-    
-     // to be changed
-    public static final String f_strDomain = "rcreader";
-    
-    
-    // level 4
-    public static final String f_strTemp = "tmp";
 }

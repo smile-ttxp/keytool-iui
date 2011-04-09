@@ -44,8 +44,6 @@ public class S_IINShared extends S_IINAbstract
     public static final String f_s_strFileHTML16 = "html16.gif"; // "_fhl16_.gif";
     public static final String f_s_strFileRTF16 = "rtf16.gif";
     public static final String f_s_strFilePDF16 = "pdf15x16.gif";
-    public static final String f_s_strFileAudio16 = "audio16.gif"; // !!! DUMMY ICON
-    public static final String f_s_strFileVideo16 = "video16.gif"; // !!! DUMMY ICON
     
     
     // ----
@@ -59,9 +57,6 @@ public class S_IINShared extends S_IINAbstract
     public static final String f_s_strFileProjJhr16 = "jar16.gif";
     
     
-    public static final String f_s_strAppliJhr16 = "application16.gif";
-    public static final String f_s_strAppliOhr16 = "application16.gif";
-    public static final String f_s_strAppliRcr16 = "application16.gif";
     public static final String f_s_strAppliXlb16 = "application16.gif";
     public static final String f_s_strAppliTpb16 = "application16.gif";
     public static final String f_s_strAppliUIKtl16 = "application16.gif";
