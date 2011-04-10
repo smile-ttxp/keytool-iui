@@ -111,8 +111,7 @@ public abstract class MIHelpAboutAppliAbstract extends MIAbstract
         
         String strMethod = "MIHelpAboutAppliAbstract(...)";
         
-        if (strProductID == null)
-            MySystem.s_printOutExit(this, strMethod, "nil strProductID");
+    
             
         this.addActionListener(new ActionListener()
         {

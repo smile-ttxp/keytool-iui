@@ -410,18 +410,11 @@ public abstract class AppMainUIAbs extends AppMainAbs implements
         }
     }
     
-    // ---------
-    // PROTECTED  
-    
-    //protected ChgLocMainUIAbs _cltChangerLocTabs_ = null; // main
-    //protected UCBooleanAbstract _cltSetVisibleTab_ = null;
-    protected String _strLic_ = null;
+
    
     public AppMainUIAbs(
         boolean blnExitNormally, // memo: should be equals to value of "blnShowDialogExitConfirm""
         boolean blnParentDirReadOnlyAllowed,
-        //String strTitleAppli,
-        //String strAppliNameShort, // eg: "ktl"
         boolean blnShowDialogExitConfirm, 
         boolean blnIsHelpGettingStarted,
         boolean blnInternAllowed
@@ -429,8 +422,6 @@ public abstract class AppMainUIAbs extends AppMainAbs implements
     {
         super(
             blnParentDirReadOnlyAllowed, // MEMO: blnParentDirReadOnlyAllowed
-            //strTitleAppli,
-            //strAppliNameShort, // eg: "ktl"
             blnShowDialogExitConfirm,
             blnIsHelpGettingStarted,
             AppMainUIAbs._F_BLN_SET_LAF_SWING_, // used to fix up JH's toolbar buttons

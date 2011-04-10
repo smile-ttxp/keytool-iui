@@ -8,11 +8,8 @@ public final class MBMainUIKtl extends MBMainUIAbs
 {        
     public MBMainUIKtl(
         java.awt.Component cmpFrameOwner,
-     
-        
         java.awt.event.ActionListener actListenerParent,
-        java.awt.event.ItemListener itmListenerParent,
-        String strLic
+        java.awt.event.ItemListener itmListenerParent
         )
     {
         super(cmpFrameOwner, actListenerParent);
@@ -20,7 +17,7 @@ public final class MBMainUIKtl extends MBMainUIAbs
         super._menView_ = new MViewAllMainUIKtl(actListenerParent);
         
         super._menHelp_ = new MHelpAllMainUIKtl(
-            cmpFrameOwner, actListenerParent, strLic);
+            cmpFrameOwner, actListenerParent);
 
     }
 }

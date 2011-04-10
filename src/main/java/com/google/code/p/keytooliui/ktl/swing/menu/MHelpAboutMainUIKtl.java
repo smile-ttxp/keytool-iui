@@ -33,8 +33,6 @@
     inited, added, and destroyed in superclass
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.swing.menu.*;
 
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 
@@ -45,11 +43,10 @@ public final class MHelpAboutMainUIKtl extends MHelpAboutMainUIAbs
            
     public MHelpAboutMainUIKtl(
         java.awt.Component cmpFrameOwner,
-        java.awt.event.ActionListener actListenerParent,
-        String strLic)
+        java.awt.event.ActionListener actListenerParent)
     {
         super(actListenerParent);
         
-        super._miaAboutAppli_ = new MIHelpAboutAppliUIKtl(cmpFrameOwner, strLic);
+        super._miaAboutAppli_ = new MIHelpAboutAppliUIKtl(cmpFrameOwner);
     }
 }

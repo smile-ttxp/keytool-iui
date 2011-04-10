@@ -38,13 +38,10 @@
 
  public final class FMainUIKtl extends FMainUIAbs
  {
-    // --------------------
-    // PUBLIC STATIC STRING
+
 
     public static String s_strHelpHomeID = null;
 
-    // ------------------
-    // STATIC INITIALIZER
 
     static
     {
@@ -383,9 +380,8 @@
         java.awt.event.WindowListener winListenerParent,
         java.awt.event.ActionListener actListenerParent,
         java.awt.event.ItemListener itmListenerParent,
-        javax.swing.event.ChangeListener chgListenerParent, // tabbedPane
-        String strLic,
-        boolean blnIsReg
+        javax.swing.event.ChangeListener chgListenerParent // tabbedPane
+
         )
     {
         super(
@@ -403,10 +399,8 @@
 
         super._mbmMenuBar_ = new MBMainUIKtl(
             (java.awt.Component) this,
-          
             actListenerParent,
-            itmListenerParent,
-            strLic);
+            itmListenerParent);
 
         super._pcpContentPane_ = new PCPMainUIKtl(
             (java.awt.Frame) this,

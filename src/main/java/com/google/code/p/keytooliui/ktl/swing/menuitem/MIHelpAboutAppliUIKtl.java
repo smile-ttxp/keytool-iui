@@ -48,10 +48,7 @@ public final class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
     // ------
     // PUBLIC
 
-    public MIHelpAboutAppliUIKtl(
-        Component cmpFrameOwner,
-  
-        String strLic)
+    public MIHelpAboutAppliUIKtl(Component cmpFrameOwner)
 
     {
         super(
@@ -61,15 +58,9 @@ public final class MIHelpAboutAppliUIKtl extends MIHelpAboutAppliAbstract
             
             MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
             
-            // ---
-            /*
-                modif june 26, 2003
-                from v1.1 to v1.2: disabling all
-            */
+      
             "", // "Product ID: none", // TEMPO
-            //strLic,
-            
-            // end modif
+    
             
             MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX,
             new PTabHelpAppliAdvancedUI()

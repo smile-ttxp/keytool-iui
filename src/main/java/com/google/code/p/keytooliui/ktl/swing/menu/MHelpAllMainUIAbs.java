@@ -54,6 +54,7 @@ public abstract class MHelpAllMainUIAbs extends MHelpAllMainAbs
     // ------
     // PUBLIC
     
+    @Override
     public boolean init()
     {
         String strMethod = "init()";
@@ -76,6 +77,7 @@ public abstract class MHelpAllMainUIAbs extends MHelpAllMainAbs
     }
     
     
+    @Override
     public void destroy()
     {
         super.destroy();
@@ -90,14 +92,9 @@ public abstract class MHelpAllMainUIAbs extends MHelpAllMainAbs
     // ---------
     // PROTECTED
     
-    protected MHelpAllMainUIAbs(
-        java.awt.Component cmpFrameOwner,
-
-        //javax.help.HelpBroker hbrHelpStandard,
-        String strLic)
+    protected MHelpAllMainUIAbs(java.awt.Component cmpFrameOwner)
     {
         super._matHelpOffline_ = new MHelpOffline(
-            //hbrHelpStandard,
             MHelpAllMainUIAbs._f_s_strTextHelpOfflineSource,
             true // blnDoHelpOnItem
             );

@@ -75,12 +75,9 @@ public final class MHelpAllMainUIKtl extends MHelpAllMainUIAbs
     
     public MHelpAllMainUIKtl(
         java.awt.Component cmpFrameOwner,
-      
-        //javax.help.HelpBroker hbrHelpStandard,
-        java.awt.event.ActionListener actListenerParent,
-        String strLic)
+        java.awt.event.ActionListener actListenerParent)
     {
-        super(cmpFrameOwner, strLic);
+        super(cmpFrameOwner);
 
 
         this._mimHomePage = new MIHelpOnlineHome(cmpFrameOwner);
@@ -88,7 +85,7 @@ public final class MHelpAllMainUIKtl extends MHelpAllMainUIAbs
         // march 14, 2003: in comments coz not cross-platforms
         //super._matHelpOnline_ = new MHelpOnlineUIKtl(cmpFrameOwner, strTitleApplication);
         
-        super._matAbout_ = new MHelpAboutMainUIKtl(cmpFrameOwner, actListenerParent, strLic);
+        super._matAbout_ = new MHelpAboutMainUIKtl(cmpFrameOwner, actListenerParent);
         
         if (super._matHelpOffline_ != null)
            ((MHelpOffline) super._matHelpOffline_).getItemHelpOnItem().setText("Help on active window's task");

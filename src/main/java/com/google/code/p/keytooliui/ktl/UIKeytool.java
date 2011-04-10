@@ -40,7 +40,6 @@ import java.util.*;
 import com.google.code.p.keytooliui.ktl.swing.frame.FMainUIKtl;
 import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 import com.google.code.p.keytooliui.ktl.util.changer.ChgLocMainUIToolKtl;
-import com.google.code.p.keytooliui.ktl.util.jarsigner.ChkRegUIKtl;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import java.awt.Color;
 
@@ -95,8 +94,8 @@ public final class UIKeytool extends AppMainUIAbs
         
         String strMethod = UIKeytool._F_STR_CLASS + "s_getInstance(strsArg)";
         
-        if(UIKeytool._s_ktlInstance != null) 
-            return UIKeytool._s_ktlInstance;
+        if(UIKeytool._INSTANCE != null)
+            return UIKeytool._INSTANCE;
         
       
       
@@ -196,13 +195,13 @@ public final class UIKeytool extends AppMainUIAbs
             return null;
         }
         
-        UIKeytool._s_ktlInstance = ktl;
-        return UIKeytool._s_ktlInstance;
+        UIKeytool._INSTANCE = ktl;
+        return UIKeytool._INSTANCE;
    }
     
     // ----
     
-    private static UIKeytool _s_ktlInstance = null;
+    private static UIKeytool _INSTANCE = null;
 
     
     
@@ -792,27 +791,23 @@ public final class UIKeytool extends AppMainUIAbs
         super(
             blnShowDialogExitConfirm, // this field used for "blnExitNormally"
             false, // MEMO: blnParentDirReadOnlyAllowed
-            //UIKeytool.s_getTitleAppli(),
-            //UIKeytool._F_STR_NAME_SHORT_APPLI, // eg: "ktl"
             blnShowDialogExitConfirm,
             false, // blnIsHelpGettingStarted
             // tmp forcing default english language
             false // ! UIKeytool.S_BLN_FORCELOCALEEN // blnInternAllowed
             );
         
-	    boolean blnIsReg = _chkLic();
+	
         
         // ----
         // construct children
         
         super._fmaFrame_ = new FMainUIKtl(
-            //UIKeytool.s_getTitleAppli(),
             (WindowListener) this,
             (ActionListener) this,
             (ItemListener) this,
-            (ChangeListener) this, // tabbedPane
-            super._strLic_,
-            blnIsReg
+            (ChangeListener) this // tabbedPane
+          
             );
              
         // ----
@@ -851,43 +846,7 @@ public final class UIKeytool extends AppMainUIAbs
         return true;
     }
     
-    /**
-        don't show this package in standard output
-    **/
-    private boolean _chkLic()
-    {
-        String strMethod = "_chkLic()";
-        
-        // ---
-        /*
-            modif june 26, 2003
-            from v1.1 to v1.2: disabling all
-        */
-        
-        if (true)
-        {
-            return false; // unregistered
-        }
-        
-        // end
-        
-        ChkRegUIKtl crg = new ChkRegUIKtl();
-        
-        if (! crg.doJob())
-            MySystem.s_printOutExit(strMethod, "failed");
-       
-        super._strLic_ = crg.getLic();
-        
-        if (super._strLic_ == null)
-            MySystem.s_printOutExit(strMethod, "nil super._strLic_");
-        
-        return crg.isReg();
-    }
-    
-    
-    
-    
-    
+   
     
     
     
