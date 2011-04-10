@@ -265,6 +265,7 @@ public abstract class AppMainUIAbs extends AppMainAbs implements
         }
     }
     
+    @Override
      public boolean init()
     {
         String strMethod = "init()"; 
