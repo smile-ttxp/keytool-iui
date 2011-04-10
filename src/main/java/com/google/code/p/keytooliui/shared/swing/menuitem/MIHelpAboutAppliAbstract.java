@@ -102,7 +102,6 @@ public abstract class MIHelpAboutAppliAbstract extends MIAbstract
         final Component cmpFrameOwner,
     
         final String strDlgBodyVersion,
-        final String strProductID,
         final String strDlgBodyTextThirdParty,
         final PTabHelpAppliAdvancedAbs pnlTabAdvanced // created in subclasses
             )
@@ -127,11 +126,9 @@ public abstract class MIHelpAboutAppliAbstract extends MIAbstract
                 {
                     _dlg = new DHelpAboutAppli(
                         cmpFrameOwner,
-                  
                         MIHelpAboutAppliAbstract.s_strTitlePrefix,
                         strDlgBodyVersion,
                         strDlgBodyCopyright,
-                        strProductID,
                         strDlgBodyTextThirdParty,
                         pnlTabAdvanced
                         );

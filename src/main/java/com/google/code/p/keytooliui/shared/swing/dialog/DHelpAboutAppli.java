@@ -96,16 +96,12 @@ public final class DHelpAboutAppli extends DEscapeAbstract implements ActionList
         super.destroy();
     }
     
-    /*
-        memo: strProductID may be nil, eg: RCReader
-    */
+
     public DHelpAboutAppli( 
         Component cmpFrameOwner,
-      
         String strTitlePrefix,
         String strAppliVersion,
         String strAppliCopyright,
-        String strProductID,
         String strTextThirdParty,
         PTabHelpAppliAdvancedAbs pnlTabAdvanced)
     {
@@ -123,10 +119,8 @@ public final class DHelpAboutAppli extends DEscapeAbstract implements ActionList
     
         this._pnl = new PHelpAboutAppli(
             (ActionListener) this, 
-   
             strAppliVersion,
             strAppliCopyright,
-            strProductID,
             strTextThirdParty,
             pnlTabAdvanced);
         

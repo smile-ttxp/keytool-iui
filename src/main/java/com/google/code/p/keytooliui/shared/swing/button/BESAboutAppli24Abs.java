@@ -43,7 +43,6 @@ public abstract class BESAboutAppli24Abs extends BESAboutAppliAbs
     protected BESAboutAppli24Abs(Component cmpFrameOwner,
   
         String strDlgBodyVersion,
-        String strProductID,
         String strDlgBodyTextThirdParty,
        PTabHelpAppliAdvancedAbs pnlAdvanced
        )
@@ -54,7 +53,6 @@ public abstract class BESAboutAppli24Abs extends BESAboutAppliAbs
         
             
             strDlgBodyVersion,
-            strProductID,
             strDlgBodyTextThirdParty,
             pnlAdvanced
                 );        

@@ -17,8 +17,10 @@
  * OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF OR INABILITY
  * TO USE THE SOFTWARE, EVEN IF KEYTOOL IUI PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
  *
+ *
  */
- 
+
+
  
 package com.google.code.p.keytooliui.ktl.swing.button;
 
@@ -31,21 +33,14 @@ import com.google.code.p.keytooliui.shared.swing.button.*;
 
 public final class BESAboutAppliKtl extends BESAboutAppli24Abs
 {
-
-    
-    // ------
-    // PUBLIC
         
     public BESAboutAppliKtl(
         Component cmpFrameOwner
        )
     {
         super(
-            cmpFrameOwner, 
-     
-            
+            cmpFrameOwner,     
             MIHelpAboutAppliUIKtl.f_s_strDlgBodyVersion,
-            "", // "Product ID: none", // TEMPO
             MIHelpAboutAppliUIKtl.STR_DLG_BODY_SUFFIX,
             new PTabHelpAppliAdvancedUI()
                 );        

@@ -101,11 +101,8 @@ public abstract class BESAboutAppliAbs extends BEnabledState
         
     protected BESAboutAppliAbs(
             String strImage,
-            
             final Component cmpFrameOwner,
-        
             final String strDlgBodyVersion,
-            final String strProductID,
             final String strDlgBodyTextThirdParty,
             final PTabHelpAppliAdvancedAbs pnlTabAdvanced // created in subclasses
             )
@@ -117,8 +114,6 @@ public abstract class BESAboutAppliAbs extends BEnabledState
         if (_s_strToolTipTextPrefix != null)
             setToolTipText(_s_strToolTipTextPrefix + " " + System.getProperty("_appli.title"));
         
-        if (strProductID == null)
-            MySystem.s_printOutExit(this, strMethod, "nil strProductID");
             
         this.addActionListener(new ActionListener()
         {
@@ -138,7 +133,6 @@ public abstract class BESAboutAppliAbs extends BEnabledState
                         MIHelpAboutAppliAbstract.s_strTitlePrefix,
                         strDlgBodyVersion,
                         strDlgBodyCopyright,
-                        strProductID,
                         strDlgBodyTextThirdParty,
                         pnlTabAdvanced
                         );

@@ -126,7 +126,6 @@
  
         String strAppliVersion,
         String strAppliCopyright,
-        String strProductID,
         String strTextThirdParty,
         // additional tabs
         PTabHelpAppliAdvancedAbs pnlTabAdvanced
@@ -149,7 +148,6 @@
         JTabbedPane tpnMid = _createTabbedPaneMid(
             strAppliVersion, strAppliCopyright, 
             PHelpAboutAppli.s_strContactPoints, 
-            strProductID, 
             strTextThirdParty);
         
         if (tpnMid == null)
@@ -234,7 +232,6 @@
         String strAppliVersion,
         String strAppliCopyright,
         String strContactPoints,
-        String strProductID,
         String strTextThirdParty)
     {
         String strMethod = "_createTabbedPaneMid(...)";
@@ -242,7 +239,7 @@
         
         JPanel pnlTabGeneral = _createPanelTabGeneral(
             strAppliVersion, strAppliCopyright, 
-            strContactPoints, strProductID, strTextThirdParty);
+            strContactPoints, strTextThirdParty);
         
         if (pnlTabGeneral == null)
         {
@@ -292,7 +289,6 @@
         String strAppliVersion,
         String strAppliCopyright,
         String strContactPoints,
-        String strProductID,
         String strTextThirdParty)
     {
         String strMethod = "_createPanelTabGeneral(...)";
@@ -300,7 +296,7 @@
         JPanel pnl = new JPanel();
         
         JPanel pnlTop = _createPanelTabGeneralTop(
-            strAppliVersion, strAppliCopyright, strContactPoints, strProductID);
+            strAppliVersion, strAppliCopyright, strContactPoints);
         
         if (pnlTop == null)
         {
@@ -338,13 +334,12 @@
    
         String strAppliVersion,
         String strAppliCopyright,
-        String strContactPoints,
-        String strProductID)
+        String strContactPoints)
     {
         String strMethod = "_createPanelTabGeneralTop(...)";
         
         if (strAppliVersion==null || strAppliCopyright==null || 
-            strContactPoints==null || strProductID==null)
+            strContactPoints==null)
         {
             MySystem.s_printOutError(this, strMethod, "nil arg");
             return null;
@@ -355,19 +350,13 @@
         JPanel pnlAppliTitle = new JPanel();
         JPanel pnlAppliVersion = new JPanel();
         
-        JPanel pnlProductID = null;
-        if (strProductID != null)
-            pnlProductID = new JPanel();
+
         
         JPanel pnlAppliCopyright = new JPanel();
         JPanel pnlContactPoints = new JPanel();
         
         JLabel lblAppliTitle = new JLabel();
         JLabel lblAppliVersion = new JLabel();
-        
-        JLabel lblProductID = null;
-        if (strProductID != null)
-            lblProductID = new JLabel(strProductID);
         
         
         JLabel lblAppliCopyright = new JLabel();
@@ -399,9 +388,7 @@
         // ----
         pnlAppliTitle.add(lblAppliTitle);
         pnlAppliVersion.add(lblAppliVersion);
-        
-        if (pnlProductID != null)
-            pnlProductID.add(lblProductID);
+  
         
         pnlAppliCopyright.add(lblAppliCopyright);
         
@@ -414,9 +401,7 @@
         pnl.add(pnlAppliTitle);
         pnl.add(pnlAppliVersion);
         pnl.add(Box.createVerticalStrut(10));
-        
-        if (pnlProductID != null)
-            pnl.add(pnlProductID);
+    
         
         pnl.add(pnlAppliCopyright);
         pnl.add(pnlContactPoints);
