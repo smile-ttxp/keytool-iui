@@ -168,8 +168,8 @@
 					</jnlp>
 					<sign>
 						<keystore>${project.build.directory}/keytooliui.jks</keystore>
-						<keypass>${keytooliui.storepass}</keypass>
-						<storepass>${keytooliui.keypass}</storepass>
+                                                <storepass>${keytooliui.storepass}</storepass>
+						<keypass>${keytooliui.keypass}</keypass>
 						<storetype>jks</storetype>
 						<alias>ktliui</alias>
 						<validity>3650</validity>
