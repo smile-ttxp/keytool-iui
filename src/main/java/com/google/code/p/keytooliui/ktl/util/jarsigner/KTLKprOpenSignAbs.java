@@ -18,7 +18,6 @@ import com.google.code.p.keytooliui.shared.swing.optionpane.*;
 import com.google.code.p.keytooliui.shared.util.jarsigner.*;
 
 import sun.misc.BASE64Encoder;
-//import sun.security.util.SignatureFile;
 import com.google.code.p.keytooliui.shared.security.util.MySignatureFile;
 import sun.security.util.ManifestDigester;
 
@@ -407,12 +406,6 @@ public abstract class KTLKprOpenSignAbs extends KTLKprOpenAbs
         // ----
         // x) sign JAR
         
-        
-        /*if (true)
-        {
-            MySystem.s_printOutError(this, strMethod, "CODE PENDING !!!!!!!!!!!!");
-            return false;
-        }*/
         
         /** TEMPO*/
         if (! _signJarFile(jfeInput, jos, keyPrivateKpr, crtsX509Unordered))

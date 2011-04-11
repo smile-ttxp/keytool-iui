@@ -141,6 +141,7 @@
 						<argument>-D_appli.title=KeyToolIUI</argument>
 						<argument>-D_appli.version=${project.version}</argument>
 						<argument>-D_appli.name.short=ktl</argument>
+                                                <argument>-D_appli.path=.keytooliui</argument>
 						<argument>-classpath</argument>
 						<classpath />
 						<argument>com.google.code.p.keytooliui.ktl.UIKeytool</argument>

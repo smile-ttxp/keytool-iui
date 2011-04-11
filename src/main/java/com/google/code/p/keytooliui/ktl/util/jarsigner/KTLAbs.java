@@ -429,7 +429,6 @@ public abstract class KTLAbs extends Object
         */
         private static String encodeBASE64(byte[] bytes)
         {
-
               sun.misc.BASE64Encoder b64 = new sun.misc.BASE64Encoder();
               return b64.encode(bytes);
 
