@@ -8,7 +8,7 @@
 
 	<name>KeyTool IUI</name>
 	<url>http://code.google.com/p/keytool-iui/</url>
-    <description>blablabla</description>
+	<description>blablabla</description>
 
 	<licenses>
 		<license>
@@ -141,7 +141,8 @@
 						<argument>-D_appli.title=KeyToolIUI</argument>
 						<argument>-D_appli.version=${project.version}</argument>
 						<argument>-D_appli.name.short=ktl</argument>
-                                                <argument>-D_appli.path=.keytooliui</argument>
+						<argument>-D_appli.path=.keytooliui</argument>
+						<argument>-D_appli.cache=.keytooliui</argument>
 						<argument>-classpath</argument>
 						<classpath />
 						<argument>com.google.code.p.keytooliui.ktl.UIKeytool</argument>
@@ -168,7 +169,7 @@
 					</jnlp>
 					<sign>
 						<keystore>${project.build.directory}/keytooliui.jks</keystore>
-                                                <storepass>${keytooliui.storepass}</storepass>
+						<storepass>${keytooliui.storepass}</storepass>
 						<keypass>${keytooliui.keypass}</keypass>
 						<storetype>jks</storetype>
 						<alias>ktliui</alias>
@@ -230,7 +231,7 @@
 			<classifier>swing</classifier>
 		</dependency>
 
-      <!-- TEST -->
+		<!-- TEST -->
 
 		<dependency>
 			<groupId>junit</groupId>

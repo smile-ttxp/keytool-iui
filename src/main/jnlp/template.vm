@@ -28,7 +28,7 @@
 	<property name="_appli.title" value="KeyToolIUI"/> 
 	<property name="_appli.version" value="${project.version}"/> 
 	<property name="_appli.name.short" value="ktl"/>
-        <property name="_appli.cache" value=".keytooliui"/>
+    <property name="_appli.cache" value=".keytooliui"/>
   </resources>
   <application-desc main-class="$mainClass"/>  
 </jnlp>
