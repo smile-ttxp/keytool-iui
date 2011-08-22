@@ -255,7 +255,7 @@ public abstract class PSelBtnTfdFileJarAbs extends PSelBtnTfdAbs implements Item
         else
             super._btnSelect_ = new BESFileOpen16(this);
         
-        super._tfdCurSelection_ = new TF30x20SelFile(docListenerParent);
+        super._tfdCurSelection_ = new Tfd30x30SelFile(docListenerParent);
         
         
         this._strDirNameDefault = strDirNameDefault;

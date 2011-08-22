@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2002 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -27,40 +27,28 @@
     for use to display the current selection of a string
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
 
 
-public final class TF2x20SelString extends TF2x20Abs
+
+public final class Tfd30x30SelString extends Tfd30x30Abs
 {   
     // --------------------
     // PRIVATE STATIC FINAL
     
     private static final String _f_s_strTip = "current string value (not editable textfield)";
-    private static final String _f_s_strDefault = "";
+
     // ------
     // PUBLIC
     
-    public void setDefault()
+  
+    
+    public Tfd30x30SelString(javax.swing.event.DocumentListener docListenerParent)
     {
-        setText(TF2x20SelString._f_s_strDefault);
+        super(Tfd30x30SelString._f_s_strTip, docListenerParent);
     }
     
-    public boolean isDefault()
+    public Tfd30x30SelString()
     {
-        String strMethod = "isDefault()";
-        
-        if (getText() == null)
-            MySystem.s_printOutExit(this, strMethod, "getText() == null");
-            
-        if (getText().compareTo(TF2x20SelString._f_s_strDefault) == 0)
-            return true;
-            
-        return false;
-    }
-    
-    public TF2x20SelString()
-    {
-        super(TF2x20SelString._f_s_strTip);
-        setDefault(); 
+        this((javax.swing.event.DocumentListener) null);
     }
 }

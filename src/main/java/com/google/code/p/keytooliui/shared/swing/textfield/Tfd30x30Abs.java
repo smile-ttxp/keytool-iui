@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2011 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -23,53 +23,67 @@
  package com.google.code.p.keytooliui.shared.swing.textfield;
 
 /**
-    "PF" means "Password Field"
 
-    . columns = 10
+    FLAG_DEV: not columns=30, columns=40
+
+    known subclasses:
+    . TF30x20SelFile
+    . TF30x20SelString
+    . TF30x20SelUrlRem (remote URL)
+
+    textfield:
+    . columns = 30
     . height = 20
 **/
 
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
-public final class PF10x20 extends PFAbs
+
+public abstract class Tfd30x30Abs extends TFAbstract
 {  
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final int _f_s_intColumns = 10; // 75; // 10;
-    private static final int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 30;
+    private static final int _f_s_intH = 30;
     
-    
-    private static final String _f_s_strTip = "current password value (not editable textfield)";
     private static final String _f_s_strDefault = "";
     
     // ------
     // PUBLIC
     
-    public void setDefault()
-    {
-        setText(PF10x20._f_s_strDefault);
-    }
-    
     public boolean isDefault()
     {
         String strMethod = "isDefault()";
         
-        if (getPassword() == null)
-            MySystem.s_printOutExit(this, strMethod, "getPassword() == null");
+        if (getText() == null)
+            MySystem.s_printOutExit(this, strMethod, "getText() == null");
             
-        String str = new String(getPassword());
-            
-        if (str.compareTo(PF10x20._f_s_strDefault) == 0)
+        if (getText().compareTo(Tfd30x30Abs._f_s_strDefault) == 0)
             return true;
             
         return false;
     }
     
-    public PF10x20(javax.swing.event.DocumentListener docListenerParent)
+    public void setDefault()
     {
-        super(PF10x20._f_s_strTip, PF10x20._f_s_intColumns, PF10x20._f_s_intH, docListenerParent);
-        setDefault(); 
+        setText(Tfd30x30Abs._f_s_strDefault);
     }
+    
+    // ---------
+    // PROTECTED
+    
+    // 
+    
+    protected Tfd30x30Abs(String strTip, javax.swing.event.DocumentListener docListenerParent)
+    {
+        super(strTip, Tfd30x30Abs._f_s_intColumns, Tfd30x30Abs._f_s_intH, docListenerParent);
+        setDefault();
+    }
+    
+    /*protected Tfd30x30Abs(String strTip)
+    {
+        this(strTip, (javax.swing.event.DocumentListener) null);
+    }*/
 }

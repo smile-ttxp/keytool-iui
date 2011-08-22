@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2002 RagingCat Project.
+ * Copyright (c)  2001-2011 RagingCat Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *

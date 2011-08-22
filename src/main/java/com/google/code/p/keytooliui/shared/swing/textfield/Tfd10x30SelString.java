@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2002 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -30,7 +30,7 @@
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-public final class TF10x20SelString extends TF10x20Abs
+public final class Tfd10x30SelString extends Tfd10x30Abs
 {   
     // --------------------
     // PRIVATE STATIC FINAL
@@ -42,7 +42,7 @@ public final class TF10x20SelString extends TF10x20Abs
     
     public void setDefault()
     {
-        setText(TF10x20SelString._f_s_strDefault);
+        setText(Tfd10x30SelString._f_s_strDefault);
     }
     
     public boolean isDefault()
@@ -52,20 +52,20 @@ public final class TF10x20SelString extends TF10x20Abs
         if (getText() == null)
             MySystem.s_printOutExit(this, strMethod, "getText() == null");
             
-        if (getText().compareTo(TF10x20SelString._f_s_strDefault) == 0)
+        if (getText().compareTo(Tfd10x30SelString._f_s_strDefault) == 0)
             return true;
             
         return false;
     }
     
     
-    public TF10x20SelString(javax.swing.event.DocumentListener docListenerParent)
+    public Tfd10x30SelString(javax.swing.event.DocumentListener docListenerParent)
     {
-        super(TF10x20SelString._f_s_strTip, docListenerParent);
+        super(Tfd10x30SelString._f_s_strTip, docListenerParent);
         setDefault(); 
     }
     
-    public TF10x20SelString()
+    public Tfd10x30SelString()
     {
         this((javax.swing.event.DocumentListener) null);
     }

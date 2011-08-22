@@ -42,7 +42,7 @@ import javax.swing.JComboBox;
 
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
-import com.google.code.p.keytooliui.shared.swing.textfield.TF2x20SelString;
+import com.google.code.p.keytooliui.shared.swing.textfield.Tfd3x30SelString;
 
 public final class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs 
 {
@@ -178,7 +178,7 @@ public final class PSelBtnTfdStrXlsCbxGender extends PSelBtnTfdStrXlsCbxAbs
             frmParent, 
       
             strLabel, 
-            new TF2x20SelString(),
+            new Tfd3x30SelString(),
             objDocPropValue,
             blnFieldRequired,
             PSelBtnTfdStrXlsCbxGender._f_s_strsList

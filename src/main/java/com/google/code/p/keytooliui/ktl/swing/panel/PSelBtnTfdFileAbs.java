@@ -127,7 +127,7 @@ public abstract class PSelBtnTfdFileAbs extends PSelBtnTfdAbs implements
             blnFieldRequired
             );
             
-        super._tfdCurSelection_ = new TF30x20SelFile(docListenerParent);
+        super._tfdCurSelection_ = new Tfd30x30SelFile(docListenerParent);
         
     }
 }

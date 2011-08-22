@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2011 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -24,30 +24,28 @@
 
 /**
     known subclasses:
-    . TF2x20SelString
+    . TF20x20SelString
 
-    textfield:
-    . columns = 2
-    . height = 20
+
 **/
 
 
-import com.google.code.p.keytooliui.shared.lang.*;
 
 
-public abstract class TF2x20Abs extends TFAbstract
+
+public abstract class Tfd20x30Abs extends TFAbstract
 {  
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final int _f_s_intColumns = 3; //22; //3;
-    private static final int _f_s_intH = 20;
+    private static final int _f_s_intColumns = 20; // 150; //20;
+    private static final int _f_s_intH = 30;
     
     // ---------
     // PROTECTED
     
-    protected TF2x20Abs(String strTip)
+    protected Tfd20x30Abs(String strTip, javax.swing.event.DocumentListener docListenerParent)
     {
-        super(strTip, TF2x20Abs._f_s_intColumns, TF2x20Abs._f_s_intH);
+        super(strTip, _f_s_intColumns, _f_s_intH, docListenerParent);
     }
 }

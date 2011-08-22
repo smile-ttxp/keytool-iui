@@ -76,7 +76,7 @@ public abstract class PSelBtnTfdStrXlsAliasAbs extends PSelBtnTfdStrXlsAbs
             frmParent, 
     
             strLabelPrefix + " " + PSelBtnTfdStrXlsAliasAbs._f_s_strLabelSuffix, 
-            new TF10x20SelString(),
+            new Tfd10x30SelString(),
             objDocPropValue,
             false // blnFieldRequired
             );

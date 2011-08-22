@@ -65,7 +65,7 @@ public final class PSelBtnTfdUrlRem extends PSelBtnTfdStrWAbs
             frmParent, 
         
             strLabel, 
-            new TF30x20SelUrlRem(docListenerParent), 
+            new Tfd30x30SelUrlRem(docListenerParent), 
             objDocPropValue,
             blnFieldRequired
             );

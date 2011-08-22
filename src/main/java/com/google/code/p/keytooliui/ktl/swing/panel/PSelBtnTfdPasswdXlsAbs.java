@@ -137,7 +137,7 @@ public abstract class PSelBtnTfdPasswdXlsAbs extends PSelBtnTfdAbs
             intModePassword
             );
             
-        super._tfdCurSelection_ = new PF10x20(docListenerParent);
+        super._tfdCurSelection_ = new PF10x30(docListenerParent);
         
         String strMethod = "PSelBtnTfdPasswdXlsAbs(...)";
         

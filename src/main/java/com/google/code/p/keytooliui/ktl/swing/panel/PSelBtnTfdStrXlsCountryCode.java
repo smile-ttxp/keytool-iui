@@ -45,7 +45,7 @@ import javax.swing.event.DocumentListener;
 import com.google.code.p.keytooliui.ktl.util.filter.StringFilterUI;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import com.google.code.p.keytooliui.shared.swing.optionpane.OPAbstract;
-import com.google.code.p.keytooliui.shared.swing.textfield.TF2x20SelString;
+import com.google.code.p.keytooliui.shared.swing.textfield.Tfd3x30SelString;
 
 public final class PSelBtnTfdStrXlsCountryCode extends PSelBtnTfdStrXlsCbxAbs 
 {
@@ -160,7 +160,7 @@ public final class PSelBtnTfdStrXlsCountryCode extends PSelBtnTfdStrXlsCbxAbs
     
     public PSelBtnTfdStrXlsCountryCode(DocumentListener docListenerParent, Frame frmParent, String strLabel, Object objDocPropValue, boolean blnFieldRequired)
     {
-        super(docListenerParent, frmParent, strLabel, new TF2x20SelString(), objDocPropValue, blnFieldRequired, countries);
+        super(docListenerParent, frmParent, strLabel, new Tfd3x30SelString(), objDocPropValue, blnFieldRequired, countries);
     }
     
    

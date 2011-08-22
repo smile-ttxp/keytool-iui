@@ -33,21 +33,11 @@ package com.google.code.p.keytooliui.ktl.swing.panel;
 
 
 
-import com.google.code.p.keytooliui.ktl.io.*;
-import com.google.code.p.keytooliui.ktl.swing.button.*;
 
 import com.google.code.p.keytooliui.shared.swing.button.*;
-import com.google.code.p.keytooliui.shared.swing.optionpane.*;
-import com.google.code.p.keytooliui.shared.swing.textfield.*;
-import com.google.code.p.keytooliui.shared.lang.*;
-import com.google.code.p.keytooliui.shared.io.*;
-import com.google.code.p.keytooliui.shared.swing.panel.*;
 
-import javax.swing.*;
 
-import java.awt.event.*;
 import java.awt.*;
-import java.io.*;
 
 public abstract class PSelBtnTfdFileSaveAbs extends PSelBtnTfdFileAbs
 {

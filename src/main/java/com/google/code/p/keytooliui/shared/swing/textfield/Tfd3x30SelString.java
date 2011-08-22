@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2011 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -23,32 +23,44 @@
  package com.google.code.p.keytooliui.shared.swing.textfield;
 
 /**
-    known subclasses:
-    . TF10x20SelString
-    . TF10x20SelInt
-
     textfield:
-    . columns = 10
-    . height = 20
+    for use to display the current selection of a string
 **/
-
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-public abstract class TF10x20Abs extends TFAbstract
-{  
+public final class Tfd3x30SelString extends Tfd3x30Abs
+{   
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final int _f_s_intColumns = 10; // 75; //10;
-    private static final int _f_s_intH = 20;
+    private static final String _f_s_strTip = "current string value (not editable textfield)";
+    private static final String _f_s_strDefault = "";
+    // ------
+    // PUBLIC
     
-    // ---------
-    // PROTECTED
-    
-    protected TF10x20Abs(String strTip, javax.swing.event.DocumentListener docListenerParent)
+    public void setDefault()
     {
-        super(strTip, TF10x20Abs._f_s_intColumns, TF10x20Abs._f_s_intH, docListenerParent);
+        setText(Tfd3x30SelString._f_s_strDefault);
+    }
+    
+    public boolean isDefault()
+    {
+        String strMethod = "isDefault()";
+        
+        if (getText() == null)
+            MySystem.s_printOutExit(this, strMethod, "getText() == null");
+            
+        if (getText().compareTo(Tfd3x30SelString._f_s_strDefault) == 0)
+            return true;
+            
+        return false;
+    }
+    
+    public Tfd3x30SelString()
+    {
+        super(Tfd3x30SelString._f_s_strTip);
+        setDefault(); 
     }
 }

@@ -206,7 +206,7 @@ public class PSelBtnTfdRngInt extends PSelBtnTfdAbs implements
         String strMethod = "PSelBtnTfdRngInt(...)";
         
         super._btnSelect_ = new BESInteger16(this);
-        super._tfdCurSelection_ = new TF4x20SelInt(docListenerParent);
+        super._tfdCurSelection_ = new Tfd4x30SelInt(docListenerParent);
         
         
         

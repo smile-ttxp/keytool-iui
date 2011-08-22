@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2007 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -67,7 +67,7 @@ public final class PSelBtnTfdStrXlsDescription extends PSelBtnTfdStrXlsAbs
             frmParent, 
  
             PSelBtnTfdStrXlsDescription._f_s_strLabel,
-            new TF30x20SelString(),
+            new Tfd30x30SelString(),
             PSelBtnTfdStrXlsDescription.f_s_strDocPropVal, 
             false // blnFieldRequired
             );

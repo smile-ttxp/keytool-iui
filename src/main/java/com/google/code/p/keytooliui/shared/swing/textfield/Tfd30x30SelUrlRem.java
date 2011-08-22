@@ -23,28 +23,25 @@
  package com.google.code.p.keytooliui.shared.swing.textfield;
 
 /**
-    known subclasses:
-    . TF4x20SelString
-
     textfield:
-    . columns = 4
-    . height = 20
+    for use to display the current selection of remote URL, eg: http://www.foo.com
 **/
 
+import com.google.code.p.keytooliui.shared.lang.*;
 
-public abstract class TF4x20Abs extends TFAbstract
-{  
+
+public final class Tfd30x30SelUrlRem extends Tfd30x30Abs
+{   
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final int _f_s_intColumns = 4; //30; //4;
-    private static final int _f_s_intH = 20;
+    private static final String _f_s_strTip = "current remote URL selection (not editable textfield)";
+
+    // ------
+    // PUBLIC
     
-    // ---------
-    // PROTECTED
-    
-    protected TF4x20Abs(String strTip, javax.swing.event.DocumentListener docListenerParent)
+    public Tfd30x30SelUrlRem(javax.swing.event.DocumentListener docListenerParent)
     {
-        super(strTip, TF4x20Abs._f_s_intColumns, TF4x20Abs._f_s_intH, docListenerParent);
+        super(Tfd30x30SelUrlRem._f_s_strTip, docListenerParent);
     }
 }

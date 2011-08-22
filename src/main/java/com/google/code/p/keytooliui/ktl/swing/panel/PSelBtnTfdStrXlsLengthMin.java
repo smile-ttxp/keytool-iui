@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2007 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -65,7 +65,7 @@ public final class PSelBtnTfdStrXlsLengthMin extends PSelBtnTfdStrXlsAbs
             frmParent, 
        
             strLabel,
-            new TF10x20SelString(),
+            new Tfd10x30SelString(),
             objDocPropValue, 
             blnFieldRequired
             );

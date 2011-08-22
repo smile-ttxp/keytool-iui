@@ -55,6 +55,6 @@ public class PSelBtnTfdStrW10 extends PSelBtnTfdStrWAbs
         )
     {
         super(
-            frmParent,  strLabel, new TF10x20SelString(docListenerParent), objDocPropValue, blnFieldRequired);
+            frmParent,  strLabel, new Tfd10x30SelString(docListenerParent), objDocPropValue, blnFieldRequired);
     }
 }

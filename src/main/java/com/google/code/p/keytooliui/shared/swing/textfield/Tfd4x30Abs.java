@@ -23,45 +23,25 @@
  package com.google.code.p.keytooliui.shared.swing.textfield;
 
 /**
-    textfield:
-    for use to display the current selection of a integer
+    known subclasses:
+    . TF4x20SelString
+
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
 
-
-public final class TF10x20SelInt extends TF10x20Abs
-{   
+public abstract class Tfd4x30Abs extends TFAbstract
+{  
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final String _f_s_strTip = "current integer value (not editable textfield)";
-    private static final String _f_s_strDefault = "";
-    // ------
-    // PUBLIC
+    private static final int _f_s_intColumns = 4; //30; //4;
+    private static final int _f_s_intH = 30;
     
-    public void setDefault()
-    {
-        setText(_f_s_strDefault);
-    }
+    // ---------
+    // PROTECTED
     
-    public boolean isDefault()
+    protected Tfd4x30Abs(String strTip, javax.swing.event.DocumentListener docListenerParent)
     {
-        String strMethod = "isDefault()";
-        
-        if (getText() == null)
-            MySystem.s_printOutExit(this, strMethod, "getText() == null");
-            
-        if (getText().compareTo(_f_s_strDefault) == 0)
-            return true;
-            
-        return false;
-    }
-    
-    public TF10x20SelInt( javax.swing.event.DocumentListener docListenerParent)
-    {
-        super(_f_s_strTip, docListenerParent);
-        setDefault();
-       
+        super(strTip, Tfd4x30Abs._f_s_intColumns, Tfd4x30Abs._f_s_intH, docListenerParent);
     }
 }

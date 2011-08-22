@@ -36,7 +36,6 @@
 **/
 
 
-import com.google.code.p.keytooliui.shared.lang.*;
 
 import javax.swing.*;
 import javax.swing.event.*;

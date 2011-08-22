@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2002 keyTool IUI Project.
+ * Copyright (c) 2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -23,32 +23,27 @@
  package com.google.code.p.keytooliui.shared.swing.textfield;
 
 /**
-    textfield:
-    for use to display the current selection of a string
+    known subclasses:
+    . TF10x20SelString
+    . TF10x20SelInt
+
+
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
 
-
-public final class TF30x20SelString extends TF30x20Abs
-{   
+public abstract class Tfd10x30Abs extends TFAbstract
+{  
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final String _f_s_strTip = "current string value (not editable textfield)";
-
-    // ------
-    // PUBLIC
+    private static final int _f_s_intColumns = 10; // 75; //10;
+    private static final int _f_s_intH = 30;
     
-  
+    // ---------
+    // PROTECTED
     
-    public TF30x20SelString(javax.swing.event.DocumentListener docListenerParent)
+    protected Tfd10x30Abs(String strTip, javax.swing.event.DocumentListener docListenerParent)
     {
-        super(TF30x20SelString._f_s_strTip, docListenerParent);
-    }
-    
-    public TF30x20SelString()
-    {
-        this((javax.swing.event.DocumentListener) null);
+        super(strTip, Tfd10x30Abs._f_s_intColumns, Tfd10x30Abs._f_s_intH, docListenerParent);
     }
 }

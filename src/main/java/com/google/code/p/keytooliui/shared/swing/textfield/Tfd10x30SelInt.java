@@ -24,24 +24,44 @@
 
 /**
     textfield:
-    for use to display the current selection of remote URL, eg: http://www.foo.com
+    for use to display the current selection of a integer
 **/
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-public final class TF30x20SelUrlRem extends TF30x20Abs
+public final class Tfd10x30SelInt extends Tfd10x30Abs
 {   
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final String _f_s_strTip = "current remote URL selection (not editable textfield)";
-
+    private static final String _f_s_strTip = "current integer value (not editable textfield)";
+    private static final String _f_s_strDefault = "";
     // ------
     // PUBLIC
     
-    public TF30x20SelUrlRem(javax.swing.event.DocumentListener docListenerParent)
+    public void setDefault()
     {
-        super(TF30x20SelUrlRem._f_s_strTip, docListenerParent);
+        setText(_f_s_strDefault);
+    }
+    
+    public boolean isDefault()
+    {
+        String strMethod = "isDefault()";
+        
+        if (getText() == null)
+            MySystem.s_printOutExit(this, strMethod, "getText() == null");
+            
+        if (getText().compareTo(_f_s_strDefault) == 0)
+            return true;
+            
+        return false;
+    }
+    
+    public Tfd10x30SelInt( javax.swing.event.DocumentListener docListenerParent)
+    {
+        super(_f_s_strTip, docListenerParent);
+        setDefault();
+       
     }
 }

@@ -58,7 +58,7 @@ public final class PSelBtnTfdStrW30 extends PSelBtnTfdStrWAbs
             frmParent, 
       
             strLabel, 
-            new TF30x20SelString(docListenerParent), 
+            new Tfd30x30SelString(docListenerParent), 
             objDocPropValue,
             blnFieldRequired
             );

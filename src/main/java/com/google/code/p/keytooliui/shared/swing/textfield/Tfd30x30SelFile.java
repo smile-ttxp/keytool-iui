@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2002 keyTool IUI Project.
+ * Copyright (c) 2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -24,44 +24,22 @@
 
 /**
     textfield:
-    for use to display the current selection of a integer
+    for use to display the current selection of an absolute file path (user's system)
 **/
 
-import com.google.code.p.keytooliui.shared.lang.*;
 
-
-public final class TF4x20SelInt extends TF4x20Abs
+public final class Tfd30x30SelFile extends Tfd30x30Abs
 {   
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final String _f_s_strTip = "current integer value (not editable textfield)";
-    private static final String _f_s_strDefault = "";
+    private static final String _f_s_strTip = "current file path selection (not editable textfield)";
+
     // ------
     // PUBLIC
     
-    public void setDefault()
+    public Tfd30x30SelFile(javax.swing.event.DocumentListener docListenerParent)
     {
-        setText(TF4x20SelInt._f_s_strDefault);
-    }
-    
-    public boolean isDefault()
-    {
-        String strMethod = "isDefault()";
-        
-        if (getText() == null)
-            MySystem.s_printOutExit(this, strMethod, "getText() == null");
-            
-        if (getText().compareTo(TF4x20SelInt._f_s_strDefault) == 0)
-            return true;
-            
-        return false;
-    }
-    
-    public TF4x20SelInt(javax.swing.event.DocumentListener docListenerParent)
-    {
-        super(TF4x20SelInt._f_s_strTip, docListenerParent);
-        setDefault();
-       
+        super(Tfd30x30SelFile._f_s_strTip, docListenerParent);
     }
 }

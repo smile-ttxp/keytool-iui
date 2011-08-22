@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2001-2002 keyTool IUI Project.
+ * Copyright (c)  2001-2011 keyTool IUI Project.
  * LGPL License.
  * http://code.google.com/p/keytool-iui/
  *
@@ -23,35 +23,27 @@
  package com.google.code.p.keytooliui.shared.swing.textfield;
 
 /**
-
-    FLAG_DEV: not columns=30, columns=40
-
-    known subclasses:
-    . TF30x20SelFile
-    . TF30x20SelString
-    . TF30x20SelUrlRem (remote URL)
-
     textfield:
-    . columns = 30
-    . height = 20
+    for use to display the current selection of a integer
 **/
-
 
 import com.google.code.p.keytooliui.shared.lang.*;
 
 
-public abstract class TF30x20Abs extends TFAbstract
-{  
+public final class Tfd4x30SelInt extends Tfd4x30Abs
+{   
     // --------------------
     // PRIVATE STATIC FINAL
     
-    private static final int _f_s_intColumns = 30; // 40; // 300; //40;
-    private static final int _f_s_intH = 20;
-    
+    private static final String _f_s_strTip = "current integer value (not editable textfield)";
     private static final String _f_s_strDefault = "";
-    
     // ------
     // PUBLIC
+    
+    public void setDefault()
+    {
+        setText(Tfd4x30SelInt._f_s_strDefault);
+    }
     
     public boolean isDefault()
     {
@@ -60,30 +52,16 @@ public abstract class TF30x20Abs extends TFAbstract
         if (getText() == null)
             MySystem.s_printOutExit(this, strMethod, "getText() == null");
             
-        if (getText().compareTo(TF30x20Abs._f_s_strDefault) == 0)
+        if (getText().compareTo(Tfd4x30SelInt._f_s_strDefault) == 0)
             return true;
             
         return false;
     }
     
-    public void setDefault()
+    public Tfd4x30SelInt(javax.swing.event.DocumentListener docListenerParent)
     {
-        setText(TF30x20Abs._f_s_strDefault);
-    }
-    
-    // ---------
-    // PROTECTED
-    
-    // 
-    
-    protected TF30x20Abs(String strTip, javax.swing.event.DocumentListener docListenerParent)
-    {
-        super(strTip, TF30x20Abs._f_s_intColumns, TF30x20Abs._f_s_intH, docListenerParent);
+        super(Tfd4x30SelInt._f_s_strTip, docListenerParent);
         setDefault();
+       
     }
-    
-    /*protected TF30x20Abs(String strTip)
-    {
-        this(strTip, (javax.swing.event.DocumentListener) null);
-    }*/
 }
