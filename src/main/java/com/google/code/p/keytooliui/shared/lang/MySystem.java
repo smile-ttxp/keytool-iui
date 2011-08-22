@@ -88,9 +88,9 @@ public class MySystem
         // changes coz cannot assign a JVM download in JWS like for example v:1.4.2, just supports handling of eg: v:1.4
         // ==> adding a warning
         
-        final String[] f_strsJavaVersionError = { "1.0", "1.1", "1.2", "1.3", "1.4", "1.5" };
+        final String[] f_strsJavaVersionError = { "1.0", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6" };
         //final String[] f_strsJavaVersionWarning = { "1.4.0", "1.4.1" };
-        final String[] f_strsJavaVersionOk = { "1.6.0" };
+        final String[] f_strsJavaVersionOk = { "1.7.0" };
         
         // --
  

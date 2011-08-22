@@ -42,10 +42,35 @@ import com.google.code.p.keytooliui.ktl.swing.menuitem.*;
 import com.google.code.p.keytooliui.ktl.util.changer.ChgLocMainUIToolKtl;
 import com.google.code.p.keytooliui.shared.lang.MySystem;
 import java.awt.Color;
+import javax.swing.UIManager.LookAndFeelInfo;
 
 
 public final class UIKeytool extends AppMainUIAbs
 {
+    static
+    {
+        try
+        {
+
+            
+            for (LookAndFeelInfo lafInfo: UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(lafInfo.getName()))
+                {
+                   // TODO: in comments coz troubleshooting with JCheckBoxMenuItem
+                   UIManager.setLookAndFeel(lafInfo.getClassName());
+                    
+                   break;
+                }
+            }
+        }
+        catch (Exception exc)
+        {
+            //UIKeytool._LOGGER.warning(exc.getMessage() + "\n ignoring");
+        }
+
+    }
+    
 
     private static final String[] _F_STRS_PROPS_REQUIRED =
     {
@@ -105,7 +130,7 @@ public final class UIKeytool extends AppMainUIAbs
         // ----
         try
         {
-            if (AppMainUIAbs._F_BLN_SET_LAF_SWING_)
+            /*if (AppMainUIAbs._F_BLN_SET_LAF_SWING_)
             {
                 UIManager.put("swing.boldMetal", Boolean.FALSE);
                 UIManager.put("TitledBorder.font", UIManager.getFont("TitledBorder.font").deriveFont(Font.BOLD));
@@ -119,7 +144,9 @@ public final class UIKeytool extends AppMainUIAbs
             else
             {
 	            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            }
+            }*/
+            
+     
            
         }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="$jnlpspec" codebase="http://www.fuin.org/keytool-iui" href="$outputFile">
+<jnlp spec="$jnlpspec" codebase="http://yellowcat1.free.fr" href="$outputFile">
   <information>
 #if($project.Name)
     <title>$project.Name</title>

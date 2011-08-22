@@ -334,10 +334,12 @@ public abstract class AppMainUIAbs extends AppMainAbs implements
     }
     
     // catching main tabs selections
+    @Override
     public void stateChanged(ChangeEvent evtChange)
     {
     }
     
+    @Override
     public void itemStateChanged(ItemEvent evtItem) 
     {
         String strMethod = "itemStateChanged(evtItem)";
